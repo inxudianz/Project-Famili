@@ -11,6 +11,7 @@
             <connections>
                 <outlet property="apiCount" destination="yCj-tR-IUL" id="TvO-ec-7rI"/>
                 <outlet property="changeLabelButton" destination="xAl-sT-OMT" id="LfR-2O-55c"/>
+                <outlet property="circular" destination="yon-wK-jzs" id="Ba7-K5-r0I"/>
                 <outlet property="indicator" destination="AZi-TV-AAH" id="jMN-y6-qk4"/>
                 <outlet property="label" destination="c78-mM-uvs" id="2lq-R8-gGE"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -68,10 +69,14 @@
                         <userDefinedRuntimeAttribute type="number" keyPath="style">
                             <integer key="value" value="1"/>
                         </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="string" keyPath="progressInfo" value="200%"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="progressInfo" value="20%"/>
                         <userDefinedRuntimeAttribute type="number" keyPath="radius">
                             <real key="value" value="60"/>
                         </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="value">
+                            <real key="value" value="1000"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="string" keyPath="progressDesc" value="Status"/>
                     </userDefinedRuntimeAttributes>
                 </view>
             </subviews>

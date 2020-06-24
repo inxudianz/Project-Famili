@@ -16,6 +16,7 @@ class HomeViewController: MasterViewController, HomeViewProtocol {
     @IBOutlet weak var changeLabelButton: UIButton!
     @IBOutlet weak var apiCount: UILabel!
     @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var circular: CircularProgressView!
     @IBOutlet weak var indicator: UIActivityIndicatorView!
         
     // MARK: - Property
