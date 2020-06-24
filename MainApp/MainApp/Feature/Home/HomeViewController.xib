@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="MainApp" customModuleProvider="target">
+            <connections>
+                <outlet property="apiCount" destination="yCj-tR-IUL" id="TvO-ec-7rI"/>
+                <outlet property="changeLabelButton" destination="xAl-sT-OMT" id="LfR-2O-55c"/>
+                <outlet property="indicator" destination="AZi-TV-AAH" id="jMN-y6-qk4"/>
+                <outlet property="label" destination="c78-mM-uvs" id="2lq-R8-gGE"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Bf-su-bPf">
+                    <rect key="frame" x="302" y="98" width="92" height="30"/>
+                    <state key="normal" title="GOTODETAIL"/>
+                    <connections>
+                        <action selector="detail:" destination="-1" eventType="touchUpInside" id="K31-Du-QUW"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="API Called" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KSb-LT-BGp">
+                    <rect key="frame" x="168" y="182" width="78" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yCj-tR-IUL" userLabel="Count">
+                    <rect key="frame" x="186" y="235" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c78-mM-uvs">
+                    <rect key="frame" x="186" y="410" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="AZi-TV-AAH">
+                    <rect key="frame" x="197" y="439" width="20" height="20"/>
+                </activityIndicatorView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xAl-sT-OMT">
+                    <rect key="frame" x="180.5" y="490" width="53" height="30"/>
+                    <state key="normal" title="Call API"/>
+                    <connections>
+                        <action selector="changeLang:" destination="-1" eventType="touchUpInside" id="MO4-qf-Ugy"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yon-wK-jzs" customClass="CircularProgressView" customModule="Component">
+                    <rect key="frame" x="112" y="604" width="191" height="172"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="trailingColor">
+                            <color key="value" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="progressColor">
+                            <color key="value" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="style">
+                            <integer key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="string" keyPath="progressInfo" value="200%"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                            <real key="value" value="60"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="c78-mM-uvs" firstAttribute="top" secondItem="yCj-tR-IUL" secondAttribute="bottom" constant="154" id="2nP-yu-MOj"/>
+                <constraint firstItem="yCj-tR-IUL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="186" id="2xa-MZ-WwE"/>
+                <constraint firstItem="xAl-sT-OMT" firstAttribute="top" secondItem="AZi-TV-AAH" secondAttribute="bottom" constant="31" id="8kO-ek-ErV"/>
+                <constraint firstItem="1Bf-su-bPf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="302" id="9S2-GI-2EG"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="yCj-tR-IUL" secondAttribute="trailing" constant="186" id="Jav-uR-yvb"/>
+                <constraint firstItem="AZi-TV-AAH" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="KhL-Ai-4is"/>
+                <constraint firstItem="yCj-tR-IUL" firstAttribute="top" secondItem="KSb-LT-BGp" secondAttribute="bottom" constant="32" id="KzD-tQ-hDf"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="KSb-LT-BGp" secondAttribute="trailing" constant="168" id="TCZ-JA-f0U"/>
+                <constraint firstItem="AZi-TV-AAH" firstAttribute="top" secondItem="c78-mM-uvs" secondAttribute="bottom" constant="8" id="Wth-yZ-Apd"/>
+                <constraint firstItem="1Bf-su-bPf" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="54" id="dt3-Zp-XPn"/>
+                <constraint firstItem="KSb-LT-BGp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="168" id="i7C-wN-I52"/>
+                <constraint firstItem="c78-mM-uvs" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="oVa-rC-P1z"/>
+                <constraint firstItem="KSb-LT-BGp" firstAttribute="top" secondItem="1Bf-su-bPf" secondAttribute="bottom" constant="54" id="r9Z-vh-M7U"/>
+                <constraint firstItem="xAl-sT-OMT" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="uc9-X2-xeD"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="1Bf-su-bPf" secondAttribute="trailing" constant="20" id="ud2-xW-YHg"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="93.75"/>
+        </view>
+    </objects>
+</document>
