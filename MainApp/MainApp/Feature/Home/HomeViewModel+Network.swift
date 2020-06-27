@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension HomeViewModel: SampleNetworkProtocol {
+extension HomeViewModel: SampleNetworkDelegate {
     func didSuccessRetrieveID(response: SampleResponse) {
         view?.updateView(text: response.name!)
         Log.info(message: response)

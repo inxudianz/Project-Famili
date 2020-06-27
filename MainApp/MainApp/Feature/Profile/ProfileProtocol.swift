@@ -10,7 +10,7 @@ import Foundation
 
 protocol ProfileViewModelProtocol: class {
     var view: ProfileViewProtocol? { get set }
-    var coordinator: ProfileCoordinator? { get set }
+    var coordinator: ProfileCoordinatorProtocol? { get set }
     
     func navigateToDetail()
 }

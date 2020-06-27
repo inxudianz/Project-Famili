@@ -8,7 +8,6 @@ workspace 'Project-Famili'
 def mainModule
   pod "Firebase/Auth"
   pod "Firebase/Analytics"
-  pod "Firebase/InAppMessaging"
   pod "Firebase/Messaging"
   pod "Alamofire"
   pod "RxSwift"

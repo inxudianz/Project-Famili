@@ -12,7 +12,7 @@ class ProfileViewModel: ProfileViewModelProtocol {
     
     weak var view: ProfileViewProtocol?
     
-    weak var coordinator: ProfileCoordinator?
+    weak var coordinator: ProfileCoordinatorProtocol?
     
     func navigateToDetail() {
         coordinator?.navigateDetail()

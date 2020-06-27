@@ -11,9 +11,9 @@ import Component
 import RxSwift
 
 class HomeViewModel: HomeViewModelProtocol{
-    weak var coordinator: HomeCoordinator?
+    weak var coordinator: HomeCoordinatorProtocol?
     weak var view: HomeViewProtocol?
-    var network: SampleProtocol?
+    var network: SampleNetworkProtocol?
     var apiLabel = BehaviorSubject<String>(value: "Home")
     var disposeBag = DisposeBag()
     

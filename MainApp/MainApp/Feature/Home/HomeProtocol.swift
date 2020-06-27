@@ -11,7 +11,8 @@ import RxSwift
 
 protocol HomeViewModelProtocol: class {
     var view: HomeViewProtocol? { get set }
-    var coordinator: HomeCoordinator? { get set }
+    var coordinator: HomeCoordinatorProtocol? { get set }
+    var network: SampleNetworkProtocol? { get set }
     var disposeBag: DisposeBag { get set }
     
     func navigateToDetail()

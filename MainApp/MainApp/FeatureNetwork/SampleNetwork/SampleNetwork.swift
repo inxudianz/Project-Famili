@@ -9,21 +9,21 @@
 import Foundation
 import RxSwift
 
-protocol SampleNetworkProtocol: class {
+protocol SampleNetworkDelegate: class {
     func didSuccessRetrieveID(response: SampleResponse)
     func didFailedRetrieveID(error: Error)
 }
 
-protocol SampleProtocol {
-    var sampleNetworkDelegate: SampleNetworkProtocol? { get set }
+protocol SampleNetworkProtocol {
+    var sampleNetworkDelegate: SampleNetworkDelegate? { get set }
     
     func retrieveID()
     func retrieveIDObservable() -> Observable<SampleResponse>
 }
 
-class SampleNetwork: SampleProtocol {
+class SampleNetwork: SampleNetworkProtocol {
     
-    weak var sampleNetworkDelegate: SampleNetworkProtocol?
+    weak var sampleNetworkDelegate: SampleNetworkDelegate?
     
     private var networkService: NetworkService
     

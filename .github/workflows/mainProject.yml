@@ -2,18 +2,30 @@ name: Swift
 
 on:
   push:
-    branches: [ master ]
+    branches:
+    - develop
+    - feature/*
+    - bugfix/*
+    - component/*
+    
   pull_request:
     branches: [ master ]
 
 jobs:
   build:
-
+  
     runs-on: macos-latest
-
+    
+    strategy:
+      matrix:
+      destination: ['name=iPhone 8,OS=13.5']
     steps:
+    - name: Checkout
     - uses: actions/checkout@v2
-    - name: Build
-      run: swift build -v
-    - name: Run tests
-      run: swift test -v
+    - name: Dependencies
+      run: |
+        exec pod install
+    - name: Xcode build
+      run: xcodebuild -workspace Project-Famili.xcworkspace -scheme MainApp -sdk iphonesimulator -destination "${destination}"
+    - name: Xcode tests
+      run: xcodebuild test -workspace Project-Famili.xcworkspace -scheme MainApp test-without-building -sdk iphonesimulator -destination "${destination}"

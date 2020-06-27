@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProfileCoordinator: Coordinator {
+class ProfileCoordinator: ProfileCoordinatorProtocol {
     weak var parentCoordinator: AppCoordinator?
     var childCoordinators: [Coordinator] = [Coordinator]()
     

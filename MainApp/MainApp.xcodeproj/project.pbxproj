@@ -13,6 +13,8 @@
 		920A35082499D63F00F2EABB /* CoordinatorState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920A35072499D63F00F2EABB /* CoordinatorState.swift */; };
 		920A3585249B14F600F2EABB /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920A3584249B14F600F2EABB /* NetworkError.swift */; };
 		920A35B1249B4D0900F2EABB /* HomeViewModel+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920A35B0249B4D0900F2EABB /* HomeViewModel+Network.swift */; };
+		920C3F6524A7D00800AF75AE /* HomeCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C3F6424A7D00800AF75AE /* HomeCoordinatorProtocol.swift */; };
+		920C3F6724A7D23900AF75AE /* ProfileCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C3F6624A7D23900AF75AE /* ProfileCoordinatorProtocol.swift */; };
 		92913BCE248D0B8A002D961D /* EmptyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92913BCD248D0B8A002D961D /* EmptyResponse.swift */; };
 		92913BEA248D13A3002D961D /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92913BE9248D13A3002D961D /* NetworkService.swift */; };
 		92B90E502486BB1E00C59DDF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 92B90E522486BB1E00C59DDF /* Localizable.strings */; };
@@ -34,7 +36,6 @@
 		92D79E8E2483E534004C4701 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D79E8D2483E534004C4701 /* ViewController.swift */; };
 		92D79E932483E535004C4701 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92D79E922483E535004C4701 /* Assets.xcassets */; };
 		92D79E962483E535004C4701 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92D79E942483E535004C4701 /* LaunchScreen.storyboard */; };
-		92D79EA12483E535004C4701 /* MainAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D79EA02483E535004C4701 /* MainAppTests.swift */; };
 		92D79F072483E873004C4701 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D79F052483E873004C4701 /* HomeViewController.swift */; };
 		92D79F082483E873004C4701 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92D79F062483E873004C4701 /* HomeViewController.xib */; };
 		92D79F0A2483E87D004C4701 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D79F092483E87D004C4701 /* HomeViewModel.swift */; };
@@ -110,6 +111,8 @@
 		920A35072499D63F00F2EABB /* CoordinatorState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorState.swift; sourceTree = "<group>"; };
 		920A3584249B14F600F2EABB /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		920A35B0249B4D0900F2EABB /* HomeViewModel+Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewModel+Network.swift"; sourceTree = "<group>"; };
+		920C3F6424A7D00800AF75AE /* HomeCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		920C3F6624A7D23900AF75AE /* ProfileCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinatorProtocol.swift; sourceTree = "<group>"; };
 		92913BB8248D07C8002D961D /* Component.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Component.xcodeproj; path = ../Component/Component.xcodeproj; sourceTree = "<group>"; };
 		92913BCD248D0B8A002D961D /* EmptyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyResponse.swift; sourceTree = "<group>"; };
 		92913BE9248D13A3002D961D /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
@@ -137,7 +140,6 @@
 		92D79E952483E535004C4701 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		92D79E972483E535004C4701 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92D79E9C2483E535004C4701 /* MainAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MainAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		92D79EA02483E535004C4701 /* MainAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAppTests.swift; sourceTree = "<group>"; };
 		92D79EA22483E535004C4701 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92D79F052483E873004C4701 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		92D79F062483E873004C4701 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
@@ -395,7 +397,6 @@
 				92053BE024A1F82600AF938C /* Network */,
 				92053BDF24A1F82000AF938C /* Coordinator */,
 				92053BDC24A1F81B00AF938C /* Feature */,
-				92D79EA02483E535004C4701 /* MainAppTests.swift */,
 				92D79EA22483E535004C4701 /* Info.plist */,
 			);
 			path = MainAppTests;
@@ -458,6 +459,7 @@
 			isa = PBXGroup;
 			children = (
 				92D79F2824841936004C4701 /* HomeCoordinator.swift */,
+				920C3F6424A7D00800AF75AE /* HomeCoordinatorProtocol.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -495,6 +497,7 @@
 			isa = PBXGroup;
 			children = (
 				92D79F3A2484DB61004C4701 /* ProfileCoordinator.swift */,
+				920C3F6624A7D23900AF75AE /* ProfileCoordinatorProtocol.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -544,7 +547,6 @@
 				92D79E842483E534004C4701 /* Resources */,
 				92D79F1E2483F35E004C4701 /* Embed Frameworks */,
 				B0850ECFC788B5219A15B095 /* [CP] Embed Pods Frameworks */,
-				915777DF51EDE50CDE3A3656 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -684,23 +686,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		915777DF51EDE50CDE3A3656 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MainApp/Pods-MainApp-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MainApp/Pods-MainApp-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MainApp/Pods-MainApp-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		9ED6F66CD0810BB2E0305C01 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -769,6 +754,7 @@
 				92D79F5024852CC2004C4701 /* Log.swift in Sources */,
 				92D79F0E2483E88C004C4701 /* HomeDetailViewController.swift in Sources */,
 				92D79F3E2484DB7F004C4701 /* ProfileProtocol.swift in Sources */,
+				920C3F6724A7D23900AF75AE /* ProfileCoordinatorProtocol.swift in Sources */,
 				92913BEA248D13A3002D961D /* NetworkService.swift in Sources */,
 				920A35062499D61E00F2EABB /* Coordinator.swift in Sources */,
 				92D79F3124842E49004C4701 /* HomeNetwork.swift in Sources */,
@@ -787,6 +773,7 @@
 				92C77CA3249754AD004C1D86 /* HTTPTask.swift in Sources */,
 				92C77C63249718CE004C1D86 /* SamplePath.swift in Sources */,
 				92D79F2624841755004C4701 /* AppCoordinator.swift in Sources */,
+				920C3F6524A7D00800AF75AE /* HomeCoordinatorProtocol.swift in Sources */,
 				920A35082499D63F00F2EABB /* CoordinatorState.swift in Sources */,
 				92C77C0124937E4F004C1D86 /* MainApp+NavigationBar.swift in Sources */,
 				920A35B1249B4D0900F2EABB /* HomeViewModel+Network.swift in Sources */,
@@ -813,7 +800,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				92053BE224A1F83A00AF938C /* HomeTests.swift in Sources */,
-				92D79EA12483E535004C4701 /* MainAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

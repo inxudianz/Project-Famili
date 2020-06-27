@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeCoordinator: Coordinator {
+class HomeCoordinator: HomeCoordinatorProtocol {
     weak var parentCoordinator: AppCoordinator?
     var childCoordinators: [Coordinator] = [Coordinator]()
     
