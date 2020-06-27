@@ -22,7 +22,7 @@ jobs:
     
     strategy:
       matrix:
-      destination: ['name=iPhone 8,OS=13.5']
+        destination: ['name=iPhone 8,OS=13.5']
     steps:
     - uses: actions/checkout@v2
     - name: Dependencies

@@ -15,7 +15,7 @@ How to use:
 * Using XIB
    * Drag and drop
 * Programatically
-   * Init something
+   * Init something more
 */
 @IBDesignable public class CircularProgressView: UIView {
     
