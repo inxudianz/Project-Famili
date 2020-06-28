@@ -9,23 +9,24 @@ on:
     - component/*
     
   pull_request:
-    branches: [ master ]
+    branches:
+    - develop
+    - feature/*
+    - bugfix/*
+    - component/*
 
 jobs:
   build:
   
     runs-on: macos-latest
-    
-    strategy:
-      matrix:
-      destination: ['name=iPhone 8,OS=13.5']
     steps:
-    - name: Checkout
     - uses: actions/checkout@v2
     - name: Dependencies
       run: |
         exec pod install
     - name: Xcode build
-      run: xcodebuild -workspace Project-Famili.xcworkspace -scheme MainApp -sdk iphonesimulator -destination "${destination}"
+      run: |
+        xcodebuild -workspace Project-Famili.xcworkspace -scheme MainApp -sdk iphonesimulator -destination "name=iPhone 8,OS=13.5'"
     - name: Xcode tests
-      run: xcodebuild test -workspace Project-Famili.xcworkspace -scheme MainApp test-without-building -sdk iphonesimulator -destination "${destination}"
+      run: |
+        xcodebuild test -workspace Project-Famili.xcworkspace -scheme MainApp test-without-building -sdk iphonesimulator -destination "platform = iOS Simulator, name = iPhone 8, OS = 13.5'"
