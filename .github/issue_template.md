@@ -1,6 +1,6 @@
 ## Issue
  
-I am **\*Requesting feature/Report bug\***
+I want to **\*Request feature/Report bug\***
 
 - **Current behavior**
 
