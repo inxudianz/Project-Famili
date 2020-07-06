@@ -1,6 +1,8 @@
-## Issue
+{{Description of feature/bugfix here}}
+
+[PFXXX-XXXX] \<Issue Title\>
  
-I want to **\*Request feature/Report bug\***
+I want to **\<request feature/report bug\>**
 
 - **Current behavior**
 
