@@ -1,4 +1,8 @@
-### Template To Do
+{{Description of feature/bugfix here}}
+
+[PFXXX-XXXX] \<Issue title\>
+
+
 Please make sure that you incorporate these in your pull request:
 - [ ] Summary of the changes you made
 - [ ] Link to Trello backlog
@@ -7,10 +11,6 @@ Please make sure that you incorporate these in your pull request:
 - [ ] *(Optional)* Screenshot of the testing result
 
 ***
-## Pull Request
-### Status
-**READY/IN DEVELOPMENT/HOLD**
-
 ### Description
 A few sentences describing the overall goals of the pull request's commits.
 
@@ -25,7 +25,6 @@ other_pr_master | [link]()
 ### Todos
 - [ ] Tests
 - [ ] Documentation
-
 
 ### Deploy Notes
 Notes regarding deployment the contained body of work. These should note any
