@@ -8,7 +8,9 @@
 
 import Foundation
 
+/// Consist of TabBar and NavBar
 protocol BuildConfiguration {}
+/// Build the app using tab bar
 enum TabBar: BuildConfiguration {}
+/// Build the app using nav bar
 enum NavBar: BuildConfiguration {}
-enum None: BuildConfiguration {}

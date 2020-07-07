@@ -9,15 +9,8 @@
 import Foundation
 import UIKit
 
+/// List of all app epic screen
 enum CoordinatorFeature: String {
     case home
     case profile
-}
-
-extension CoordinatorFeature {
-    static func identify(features: [String: Any]) {
-        for feature in features {
-            
-        }
-    }
 }

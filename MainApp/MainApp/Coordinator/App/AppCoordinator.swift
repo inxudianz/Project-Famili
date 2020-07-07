@@ -7,9 +7,16 @@
 //
 
 import UIKit
-import Component
 
+/** Coordinator that builds the app
+ 
+ When using AppCoordinator, you have to specify the build configuration
+ BuildConfiguration currently consist of :
+    - **TabBar** = to display the app with tab bar
+    - **NavBar** = to display the app with nav bar
+ */
 class AppCoordinator<build: BuildConfiguration>: Coordinator {
+    // MARK: - Property
     weak var parentCoordinator: Coordinator?
     var childCoordinators: [Coordinator] = [Coordinator]()
     
@@ -17,12 +24,12 @@ class AppCoordinator<build: BuildConfiguration>: Coordinator {
     var tabBarViewController: UITabBarController?
     
     let window: UIWindow?
-    
     let coordinatorId: [String:Coordinator] = [
         "home" : HomeCoordinator(navigationController: UINavigationController()),
         "profile" : ProfileCoordinator(navigationController: UINavigationController())
     ]
     
+    // MARK: - Initializer
     init(window: UIWindow?) {
         self.window = window
         self.parentCoordinator = self
@@ -30,6 +37,7 @@ class AppCoordinator<build: BuildConfiguration>: Coordinator {
         tabBarViewController = UITabBarController()
     }
     
+    // MARK: - Function
     func start() {
         window?.makeKeyAndVisible()
     }
