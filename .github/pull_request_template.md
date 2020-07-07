@@ -1,4 +1,4 @@
-[W/B/T][PFXXX-XXXX] \<PR Title\>
+*Put this in the title* \[W/B/T]\[PFXXX-XXXX\] \<PR Title\>
 
 Please make sure that you incorporate these in your pull request:
 - [ ] Summary of the changes you made
