@@ -1,6 +1,8 @@
 *Put this in the title*
 \[W/B/T]\[PFXXX-XXXX\] \<PR Title\>
 
+Solving Issue #*NUMBER*
+
 ***
 ## Description
 A few sentences describing the overall goals of the pull request's commits.
