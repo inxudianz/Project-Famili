@@ -1,4 +1,5 @@
-*Put this in the title*
+*Put this in the title based on git convention*
+
 \[PFXXX-XXXX\] \<PR Title\>
 
 ***
