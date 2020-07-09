@@ -21,6 +21,7 @@ class HomeViewModel: HomeViewModelProtocol{
         self.network = SampleNetwork()
         self.network?.sampleNetworkDelegate = self
     }
+    
     func navigateToDetail() {
         coordinator?.getDetail({ (state, data) in
             switch state {
@@ -48,19 +49,20 @@ class HomeViewModel: HomeViewModelProtocol{
     func updateLabelObservable() {
         view?.updateView(text: "Loading")
         view?.showLoading()
-        network?.retrieveIDObservable().subscribe({ (event) in
+        network?.retrieveIDObservable().subscribe({ [weak self] (event) in
             switch event {
             case .next(let result):
-                self.view?.updateView(text: result.name ?? "")
-                self.apiLabel.onNext("API Called")
+                self?.view?.updateView(text: result.name ?? "")
+                self?.apiLabel.onNext("API Called")
                 Log.debug(message: result)
             case .error:
-                self.view?.updateView(text: "Error")
+                self?.view?.updateView(text: "Error")
                 Log.error(message: "Error")
             case .completed:
-                self.view?.dismissLoading()
+                self?.view?.dismissLoading()
                 Log.progress(message: "Completed")
             }
-            })
+            self?.view?.dismissLoading()
+            }).disposed(by: disposeBag)
     }
 }

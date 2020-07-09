@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 import RxSwift
 
-class NetworkService {
+struct NetworkService {
     
     func request<T: NetworkType, R: Codable>(_ type: T, _ responseType: R.Type, completion: @escaping (Result<R, AFError>) -> Void ) {
         let combinedURL = type.baseURL.absoluteString + type.path
