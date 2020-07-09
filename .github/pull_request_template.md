@@ -1,8 +1,5 @@
-*Put this in the title based on git convention*
+[PFXXX-XXXX] <PR Title>
 
-\[PFXXX-XXXX\] \<PR Title\>
-
-***
 ## Description
 A few sentences describing the overall goals of the pull request's commits.
 
