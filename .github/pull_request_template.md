@@ -1,15 +1,5 @@
----
-name: Bugfix issue template
-about: Template for bugfix related issue.
-title: "[PFBFX-XXXX] Title"
-labels: feature
-assignees: ''
-
----
 *Put this in the title*
 \[W/B/T]\[PFXXX-XXXX\] \<PR Title\>
-
-Solving Issue #*NUMBER*
 
 ***
 ## Description
