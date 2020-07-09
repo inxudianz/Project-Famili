@@ -1,5 +1,5 @@
 *Put this in the title*
-\[W/B/T]\[PFXXX-XXXX\] \<PR Title\>
+\[PFXXX-XXXX\] \<PR Title\>
 
 ***
 ## Description
