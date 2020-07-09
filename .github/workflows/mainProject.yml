@@ -26,7 +26,7 @@ jobs:
         exec pod install
     - name: Xcode build
       run: |
-        xcodebuild -workspace Project-Famili.xcworkspace -scheme MainApp -sdk iphonesimulator -destination "platform = iOS Simulator, name = iPhone 8, OS = 13.5"
+        xcodebuild -workspace Project-Famili.xcworkspace -scheme MainApp -sdk iphonesimulator -destination "name=iPhone 8,OS=13.5"
     - name: Xcode tests
       run: |
-        xcodebuild test -workspace Project-Famili.xcworkspace -scheme MainApp test-without-building -sdk iphonesimulator -destination "platform = iOS Simulator, name = iPhone 8, OS = 13.5"
+        xcodebuild test -workspace Project-Famili.xcworkspace -scheme MainApp test-without-building -sdk iphonesimulator -destination "name=iPhone 8,OS=13.5"
