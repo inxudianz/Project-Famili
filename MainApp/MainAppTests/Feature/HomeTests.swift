@@ -70,9 +70,11 @@ class HomeViewMock: HomeViewProtocol {
 }
 
 class HomeCoordinatorMock: HomeCoordinatorProtocol {
+    var parentCoordinator: Coordinator?
+
     var childCoordinators: [Coordinator] = []
     
-    var navigationController: UINavigationController = UINavigationController()
+    var navigationController: UINavigationController? = UINavigationController()
     
     var isStarted = false
     func start() {

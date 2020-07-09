@@ -9,10 +9,10 @@
 import UIKit
 
 class ProfileCoordinator: ProfileCoordinatorProtocol {
-    weak var parentCoordinator: AppCoordinator?
+    weak var parentCoordinator: Coordinator?
     var childCoordinators: [Coordinator] = [Coordinator]()
     
-    var navigationController: UINavigationController
+    var navigationController: UINavigationController?
     
     required init(navigationController: UINavigationController) {
         self.navigationController = navigationController
@@ -25,11 +25,7 @@ class ProfileCoordinator: ProfileCoordinatorProtocol {
         vm.coordinator = self
         vc.viewModel = vm
         vm.view = vc
-        navigationController.pushViewController(vc, animated: false)
-    }
-    
-    func stop() {
-        
+        navigationController?.pushViewController(vc, animated: false)
     }
     
     func navigateDetail() {
@@ -38,7 +34,7 @@ class ProfileCoordinator: ProfileCoordinatorProtocol {
         vm.coordinator = self
         vc.viewModel = vm
         vm.view = vc
-        navigationController.pushViewController(vc, animated: true)
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     

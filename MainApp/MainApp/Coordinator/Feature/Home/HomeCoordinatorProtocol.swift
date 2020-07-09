@@ -10,5 +10,4 @@ import Foundation
 
 protocol HomeCoordinatorProtocol: Coordinator {
     func getDetail(_ completion: CoordinatorCompletion?)
-    
 }
