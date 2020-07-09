@@ -10,4 +10,5 @@ import Foundation
 
 enum BasePath: String {
     case mock = #"http://0.0.0.0:30000/"#
+    case endpoint = #"endpointURL"#
 }

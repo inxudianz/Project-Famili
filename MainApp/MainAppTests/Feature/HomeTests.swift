@@ -12,37 +12,6 @@ import RxSwift
 
 @testable import MainApp
 
-class HomeViewModelMock: HomeViewModelProtocol {
-    var view: HomeViewProtocol?
-    
-    var coordinator: HomeCoordinatorProtocol?
-    var network: SampleNetworkProtocol?
-    
-    var disposeBag: DisposeBag = DisposeBag()
-    
-    var isNavigateToDetail = false
-    func navigateToDetail() {
-        isNavigateToDetail = true
-    }
-    
-    var isViewLoaded = false
-    func viewDidLoad() {
-        isViewLoaded = true
-    }
-    
-    var isUpdateLabel = false
-    func updateLabel() {
-        isUpdateLabel = true
-    }
-    
-    var isUpdateLabelObservable = false
-    func updateLabelObservable() {
-        isUpdateLabelObservable = true
-    }
-    
-    
-}
-
 class HomeViewMock: HomeViewProtocol {
     var viewModel: HomeViewModelProtocol?
     
@@ -95,8 +64,9 @@ class HomeCoordinatorMock: HomeCoordinatorProtocol {
 
 class SampleNetworkMock: SampleNetworkProtocol {
     var sampleNetworkDelegate: SampleNetworkDelegate?
-    
+        
     var isIDRetrieved = false
+    
     func retrieveID() {
         isIDRetrieved = true
     }
@@ -118,7 +88,7 @@ class HomeTests: QuickSpec {
     override func spec() {
         describe("ViewModel") {
             
-            var sut: HomeViewModelMock!
+            var sut: HomeViewModel!
             var view: HomeViewMock!
             var coordinator: HomeCoordinatorMock!
             var network: SampleNetworkMock!
@@ -128,7 +98,7 @@ class HomeTests: QuickSpec {
                 coordinator = HomeCoordinatorMock()
                 network = SampleNetworkMock()
                 
-                sut = HomeViewModelMock()
+                sut = HomeViewModel()
                 sut?.view = view
                 sut?.coordinator = coordinator
                 sut?.network = network
@@ -137,47 +107,14 @@ class HomeTests: QuickSpec {
             context("Function ViewDidLoad is called") {
                 it("Without error") {
                     sut.viewDidLoad()
-                    expect(sut.isViewLoaded).to(beTrue())
+                    expect(view.isSetNavigationTitle).to(beTrue())
                 }
             }
                 
             context("Function navigateToDetail is called") {
                 it("Without error") {
                     sut.navigateToDetail()
-                    expect(sut.isNavigateToDetail).to(beTrue())
-                }
-            }
-        }
-        
-        describe("Coordinator") {
-            
-            var sut: HomeCoordinatorMock!
-            let navigation = UINavigationController()
-            
-            beforeEach {
-                sut = HomeCoordinatorMock()
-                sut.navigationController = navigation
-            }
-            
-            context("Function navigateToDetail is called") {
-                it("Without error") {
-                    sut.getDetail()
-                    expect(sut.isGetDetail).to(beTrue())
-                }
-            }
-        }
-        
-        describe("Network") {
-            var sut: SampleNetworkMock!
-            
-            beforeEach {
-                sut = SampleNetworkMock()
-            }
-            
-            context("Function retrieveID is called") {
-                it("Without error") {
-                    sut.retrieveID()
-                    expect(sut.isIDRetrieved).to(beTrue())
+                    expect(coordinator.isGetDetail).to(beTrue())
                 }
             }
         }

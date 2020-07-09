@@ -14,7 +14,6 @@
 		92053BE224A1F83A00AF938C /* HomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92053BE124A1F83A00AF938C /* HomeTests.swift */; };
 		920A35062499D61E00F2EABB /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920A35052499D61E00F2EABB /* Coordinator.swift */; };
 		920A35082499D63F00F2EABB /* CoordinatorState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920A35072499D63F00F2EABB /* CoordinatorState.swift */; };
-		920A3585249B14F600F2EABB /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920A3584249B14F600F2EABB /* NetworkError.swift */; };
 		920A35B1249B4D0900F2EABB /* HomeViewModel+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920A35B0249B4D0900F2EABB /* HomeViewModel+Network.swift */; };
 		920C3F6524A7D00800AF75AE /* HomeCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C3F6424A7D00800AF75AE /* HomeCoordinatorProtocol.swift */; };
 		920C3F6724A7D23900AF75AE /* ProfileCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C3F6624A7D23900AF75AE /* ProfileCoordinatorProtocol.swift */; };
@@ -115,7 +114,6 @@
 		92053BE124A1F83A00AF938C /* HomeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTests.swift; sourceTree = "<group>"; };
 		920A35052499D61E00F2EABB /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		920A35072499D63F00F2EABB /* CoordinatorState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorState.swift; sourceTree = "<group>"; };
-		920A3584249B14F600F2EABB /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		920A35B0249B4D0900F2EABB /* HomeViewModel+Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewModel+Network.swift"; sourceTree = "<group>"; };
 		920C3F6424A7D00800AF75AE /* HomeCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinatorProtocol.swift; sourceTree = "<group>"; };
 		920C3F6624A7D23900AF75AE /* ProfileCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinatorProtocol.swift; sourceTree = "<group>"; };
@@ -320,7 +318,6 @@
 				92C77C9C249744B7004C1D86 /* Service */,
 				92C77C5C24971757004C1D86 /* Path */,
 				92913BC2248D0A64002D961D /* Codable */,
-				920A3584249B14F600F2EABB /* NetworkError.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -817,7 +814,6 @@
 				92D79F3B2484DB61004C4701 /* ProfileCoordinator.swift in Sources */,
 				92D79F4C24850166004C4701 /* ProfileDetailViewController.swift in Sources */,
 				92D79F072483E873004C4701 /* HomeViewController.swift in Sources */,
-				920A3585249B14F600F2EABB /* NetworkError.swift in Sources */,
 				92C77CA124974A83004C1D86 /* SampleNetwork.swift in Sources */,
 				92C77C9E249744CC004C1D86 /* SampleService.swift in Sources */,
 			);

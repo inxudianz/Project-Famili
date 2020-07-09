@@ -8,6 +8,12 @@
 
 import Foundation
 
-func undefined<T>(message: String) -> T {
-    fatalError("Yet to be implemented \n message: \(message)")
+struct Undefined {
+    static func softError(message: String) {
+        Log.error(message: message)
+    }
+    
+    static func hardError<T>(message: String) -> T {
+        fatalError("Yet to be implemented \n message: \(message)")
+    }
 }
