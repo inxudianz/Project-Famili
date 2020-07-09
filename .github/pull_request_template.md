@@ -2,36 +2,36 @@
 \[W/B/T]\[PFXXX-XXXX\] \<PR Title\>
 
 ***
-### Description
+## Description
 A few sentences describing the overall goals of the pull request's commits.
 
-### Related Links
+## Related Links
 List related PRs against other branches:
 
 List | link
 ------ | ------
 User Story | [link]()
 Figma | [link]()
-Issue | [<Issue Number>]()
+Issue | [link]()
 
-### Todos
+## Todos
 - [ ] UI
 - [ ] Coordinator
 - [ ] Network
 - [ ] Tests
 - [ ] Documentation
 
-### Screenshot / Video
+## Screenshot / Video
 Screenshot consisting of changes made on this branch.
 
-## UI Changes
+### UI Changes
 UI related changes will be shown here (can be either screenshot or video format)
 
-## Network Status
+### Network Status
 Network related changes will be shown here (screenshot of request status)
 
-## Test Coverage
+### Test Coverage
 Test coverage result for designated changes will be shown here (screenshot of coverage)
 
-### Notes
+## Notes
 Additional notes that you have either technical debt, blocker, etc.
