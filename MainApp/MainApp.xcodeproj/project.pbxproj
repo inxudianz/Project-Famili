@@ -221,10 +221,18 @@
 		9201315324B4E3E5002303D0 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
-				92D79F392484DB55004C4701 /* Profile */,
-				92D79F2724841927004C4701 /* Home */,
+				9201353124B77877002303D0 /* Sample */,
 			);
 			path = Feature;
+			sourceTree = "<group>";
+		};
+		9201353124B77877002303D0 /* Sample */ = {
+			isa = PBXGroup;
+			children = (
+				92D79F2724841927004C4701 /* Home */,
+				92D79F392484DB55004C4701 /* Profile */,
+			);
+			path = Sample;
 			sourceTree = "<group>";
 		};
 		92053BDC24A1F81B00AF938C /* Feature */ = {
