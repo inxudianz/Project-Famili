@@ -221,16 +221,16 @@
 		9201315324B4E3E5002303D0 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
-				9201353124B77877002303D0 /* Sample */,
+				92D79F392484DB55004C4701 /* Profile */,
+				92D79F2724841927004C4701 /* Home */,
 			);
 			path = Feature;
 			sourceTree = "<group>";
 		};
-		9201353124B77877002303D0 /* Sample */ = {
+		9201353324B77B6D002303D0 /* Sample */ = {
 			isa = PBXGroup;
 			children = (
-				92D79F2724841927004C4701 /* Home */,
-				92D79F392484DB55004C4701 /* Profile */,
+				92D79F342484DAF1004C4701 /* Home */,
 			);
 			path = Sample;
 			sourceTree = "<group>";
@@ -446,8 +446,8 @@
 		92D79ED72483E67B004C4701 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				9201353324B77B6D002303D0 /* Sample */,
 				92D79F3C2484DB6D004C4701 /* Profile */,
-				92D79F342484DAF1004C4701 /* Home */,
 			);
 			path = Feature;
 			sourceTree = "<group>";
