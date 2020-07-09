@@ -1,46 +1,37 @@
-*Put this in the title* \[W/B/T]\[PFXXX-XXXX\] \<PR Title\>
-
-Please make sure that you incorporate these in your pull request:
-- [ ] Summary of the changes you made
-- [ ] Link to Trello backlog
-- [ ] Link to the issue you are resolving
-- [ ] *(Optional)* Screenshot of the UI
-- [ ] *(Optional)* Screenshot of the testing result
+*Put this in the title*
+\[W/B/T]\[PFXXX-XXXX\] \<PR Title\>
 
 ***
 ### Description
 A few sentences describing the overall goals of the pull request's commits.
 
-### Related Pull Requests (PRs)
+### Related Links
 List related PRs against other branches:
 
-branch | PR
+List | link
 ------ | ------
-other_pr_production | [link]()
-other_pr_master | [link]()
+User Story | [link]()
+Figma | [link]()
+Issue | [<Issue Number>]()
 
 ### Todos
+- [ ] UI
+- [ ] Coordinator
+- [ ] Network
 - [ ] Tests
 - [ ] Documentation
 
-### Deploy Notes
-Notes regarding deployment the contained body of work. These should note any
-db migrations, etc.
+### Screenshot / Video
+Screenshot consisting of changes made on this branch.
 
-### Steps to Test or Reproduce
-Outline the steps to test or reproduce the PR here.
+## UI Changes
+UI related changes will be shown here (can be either screenshot or video format)
 
-```sh
-git pull --prune
-git checkout <feature_branch>
-bundle; script/server
-```
+## Network Status
+Network related changes will be shown here (screenshot of request status)
 
-1. 
+## Test Coverage
+Test coverage result for designated changes will be shown here (screenshot of coverage)
 
-## Impacted Areas in Application
-List general components of the application that this PR will affect:
-
-* 
-
-Closes issue **#[ISSUE NUMBER]**
+### Notes
+Additional notes that you have either technical debt, blocker, etc.
