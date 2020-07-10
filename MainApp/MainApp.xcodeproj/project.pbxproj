@@ -230,6 +230,7 @@
 		9201353324B77B6D002303D0 /* Sample */ = {
 			isa = PBXGroup;
 			children = (
+				92D79F3C2484DB6D004C4701 /* Profile */,
 				92D79F342484DAF1004C4701 /* Home */,
 			);
 			path = Sample;
@@ -447,7 +448,6 @@
 			isa = PBXGroup;
 			children = (
 				9201353324B77B6D002303D0 /* Sample */,
-				92D79F3C2484DB6D004C4701 /* Profile */,
 			);
 			path = Feature;
 			sourceTree = "<group>";
