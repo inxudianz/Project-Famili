@@ -68,7 +68,6 @@ class HomeViewController: MasterViewController, HomeViewProtocol {
     }
     
     func showLoading() {
-        asd
         changeLabelButton.isEnabled = false
         indicator.startAnimating()
         indicator.isHidden = false
