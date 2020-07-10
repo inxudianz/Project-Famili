@@ -29,25 +29,11 @@ class AppCoordinator<build: BuildConfiguration>: Coordinator {
         "profile" : ProfileCoordinator(navigationController: UINavigationController())
     ]
     
-    init(windoe: UIWindow?) {
-        self.window = windoe
-        self.parentCoordinator = self
-        print("asd")
-        print("bcs")
-    }
-    
     // MARK: - Initializer
     init(window: UIWindow?) {
         self.window = window
         self.parentCoordinator = self
-        print("dsa")
         navigationController = UINavigationController()
-        print("sa")
-        if let test = parentCoordinator {
-            print("sss")
-        } else {
-            print("ddd")
-        }
         tabBarViewController = UITabBarController()
     }
     
