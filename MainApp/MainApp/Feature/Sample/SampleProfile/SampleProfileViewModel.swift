@@ -8,11 +8,11 @@
 
 import Foundation
 
-class ProfileViewModel: ProfileViewModelProtocol {
+class SampleProfileViewModel: SampleProfileViewModelProtocol {
     
-    weak var view: ProfileViewProtocol?
+    weak var view: SampleProfileViewProtocol?
     
-    weak var coordinator: ProfileCoordinatorProtocol?
+    weak var coordinator: SampleProfileCoordinatorProtocol?
     
     func navigateToDetail() {
         coordinator?.navigateDetail()

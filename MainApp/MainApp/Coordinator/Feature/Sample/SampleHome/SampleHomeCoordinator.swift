@@ -1,14 +1,14 @@
 //
-//  ProfileCoordinator.swift
+//  HomeCoordinator.swift
 //  MainApp
 //
-//  Created by William Inx on 01/06/20.
+//  Created by William Inx on 31/05/20.
 //  Copyright © 2020 William Inx. All rights reserved.
 //
 
 import UIKit
 
-class ProfileCoordinator: ProfileCoordinatorProtocol {
+class SampleHomeCoordinator: SampleHomeCoordinatorProtocol {
     weak var parentCoordinator: Coordinator?
     var childCoordinators: [Coordinator] = [Coordinator]()
     
@@ -19,23 +19,22 @@ class ProfileCoordinator: ProfileCoordinatorProtocol {
     }
     
     func start() {
-        let vc = ProfileViewController()
-        let vm = ProfileViewModel()
-        vc.tabBarItem = UITabBarItem(tabBarSystemItem: .downloads, tag: 1)
+        let vc = SampleHomeViewController()
+        let vm = SampleHomeViewModel()
+        vc.navigationItem.configure()
+        vc.tabBarItem = UITabBarItem(tabBarSystemItem: .mostRecent, tag: 0)
         vm.coordinator = self
-        vc.viewModel = vm
         vm.view = vc
+        vc.viewModel = vm
         navigationController?.pushViewController(vc, animated: false)
     }
     
-    func navigateDetail() {
-        let vc = ProfileDetailViewController()
-        let vm = ProfileDetailViewModel()
+    func getDetail(_ completion: CoordinatorCompletion? = nil) {
+        let vc = SampleHomeDetailViewController()
+        let vm = SampleHomeDetailViewModel()
         vm.coordinator = self
-        vc.viewModel = vm
         vm.view = vc
+        vc.viewModel = vm
         navigationController?.pushViewController(vc, animated: true)
     }
-    
-    
 }

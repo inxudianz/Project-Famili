@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol HomeCoordinatorProtocol: Coordinator {
+protocol SampleHomeCoordinatorProtocol: Coordinator {
     func getDetail(_ completion: CoordinatorCompletion?)
 }

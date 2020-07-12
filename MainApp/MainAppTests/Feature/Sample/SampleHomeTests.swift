@@ -12,8 +12,8 @@ import RxSwift
 
 @testable import MainApp
 
-class HomeViewMock: HomeViewProtocol {
-    var viewModel: HomeViewModelProtocol?
+class SampleHomeViewMock: SampleHomeViewProtocol {
+    var viewModel: SampleHomeViewModelProtocol?
     
     var isUpdateView = false
     func updateView(text: String) {
@@ -38,7 +38,7 @@ class HomeViewMock: HomeViewProtocol {
     
 }
 
-class HomeCoordinatorMock: HomeCoordinatorProtocol {
+class HomeCoordinatorMock: SampleHomeCoordinatorProtocol {
     var parentCoordinator: Coordinator?
 
     var childCoordinators: [Coordinator] = []
@@ -88,17 +88,17 @@ class HomeTests: QuickSpec {
     override func spec() {
         describe("ViewModel") {
             
-            var sut: HomeViewModel!
-            var view: HomeViewMock!
+            var sut: SampleHomeViewModel!
+            var view: SampleHomeViewMock!
             var coordinator: HomeCoordinatorMock!
             var network: SampleNetworkMock!
             
             beforeEach {
-                view = HomeViewMock()
+                view = SampleHomeViewMock()
                 coordinator = HomeCoordinatorMock()
                 network = SampleNetworkMock()
                 
-                sut = HomeViewModel()
+                sut = SampleHomeViewModel()
                 sut?.view = view
                 sut?.coordinator = coordinator
                 sut?.network = network

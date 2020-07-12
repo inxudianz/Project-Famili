@@ -9,8 +9,8 @@
 import UIKit
 import Component
 
-class ProfileDetailViewController: MasterViewController, ProfileDetailViewProtocol {
-    var viewModel: ProfileDetailViewModelProtocol?
+class SampleProfileDetailViewController: MasterViewController, SampleProfileDetailViewProtocol {
+    var viewModel: SampleProfileDetailViewModelProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -8,10 +8,10 @@
 
 import Foundation
 
-class HomeDetailViewModel: HomeDetailViewModelProtocol {
-    weak var coordinator: HomeCoordinator?
+class SampleHomeDetailViewModel: SampleHomeDetailViewModelProtocol {
+    weak var coordinator: SampleHomeCoordinator?
     
-    weak var view: HomeDetailViewProtocol?
+    weak var view: SampleHomeDetailViewProtocol?
         
     func viewDidDisappear() {
         
