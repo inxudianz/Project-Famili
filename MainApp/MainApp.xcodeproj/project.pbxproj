@@ -11,7 +11,7 @@
 		9201314F24B4E368002303D0 /* Appcoordinator+BuildConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9201314E24B4E368002303D0 /* Appcoordinator+BuildConfiguration.swift */; };
 		9201315124B4E3BC002303D0 /* BuildConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9201315024B4E3BC002303D0 /* BuildConfiguration.swift */; };
 		920539BB249BA31300AF938C /* Undefined.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920539BA249BA31300AF938C /* Undefined.swift */; };
-		92053BE224A1F83A00AF938C /* HomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92053BE124A1F83A00AF938C /* HomeTests.swift */; };
+		92053BE224A1F83A00AF938C /* SampleHomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92053BE124A1F83A00AF938C /* SampleHomeTests.swift */; };
 		920A35062499D61E00F2EABB /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920A35052499D61E00F2EABB /* Coordinator.swift */; };
 		920A35082499D63F00F2EABB /* CoordinatorState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920A35072499D63F00F2EABB /* CoordinatorState.swift */; };
 		920A35B1249B4D0900F2EABB /* SampleHomeViewModel+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920A35B0249B4D0900F2EABB /* SampleHomeViewModel+Network.swift */; };
@@ -111,7 +111,7 @@
 		9201314E24B4E368002303D0 /* Appcoordinator+BuildConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Appcoordinator+BuildConfiguration.swift"; sourceTree = "<group>"; };
 		9201315024B4E3BC002303D0 /* BuildConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildConfiguration.swift; sourceTree = "<group>"; };
 		920539BA249BA31300AF938C /* Undefined.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Undefined.swift; sourceTree = "<group>"; };
-		92053BE124A1F83A00AF938C /* HomeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTests.swift; sourceTree = "<group>"; };
+		92053BE124A1F83A00AF938C /* SampleHomeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleHomeTests.swift; sourceTree = "<group>"; };
 		920A35052499D61E00F2EABB /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		920A35072499D63F00F2EABB /* CoordinatorState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorState.swift; sourceTree = "<group>"; };
 		920A35B0249B4D0900F2EABB /* SampleHomeViewModel+Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SampleHomeViewModel+Network.swift"; sourceTree = "<group>"; };
@@ -238,7 +238,7 @@
 		92053BDC24A1F81B00AF938C /* Feature */ = {
 			isa = PBXGroup;
 			children = (
-				92053BE124A1F83A00AF938C /* HomeTests.swift */,
+				923245D524BB370300FDFC3E /* Sample */,
 			);
 			path = Feature;
 			sourceTree = "<group>";
@@ -262,6 +262,14 @@
 			children = (
 				92D79F2724841927004C4701 /* SampleHome */,
 				92D79F392484DB55004C4701 /* SampleProfile */,
+			);
+			path = Sample;
+			sourceTree = "<group>";
+		};
+		923245D524BB370300FDFC3E /* Sample */ = {
+			isa = PBXGroup;
+			children = (
+				92053BE124A1F83A00AF938C /* SampleHomeTests.swift */,
 			);
 			path = Sample;
 			sourceTree = "<group>";
@@ -839,7 +847,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92053BE224A1F83A00AF938C /* HomeTests.swift in Sources */,
+				92053BE224A1F83A00AF938C /* SampleHomeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
