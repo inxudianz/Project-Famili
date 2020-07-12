@@ -53,14 +53,14 @@
 		92D79F3324842E7A004C4701 /* HomeDetailProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D79F3224842E7A004C4701 /* HomeDetailProtocol.swift */; };
 		92D79F382484DB3E004C4701 /* ProfileNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D79F372484DB3E004C4701 /* ProfileNetwork.swift */; };
 		92D79F3B2484DB61004C4701 /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D79F3A2484DB61004C4701 /* ProfileCoordinator.swift */; };
-		92D79F3E2484DB7F004C4701 /* ProfileProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D79F3D2484DB7F004C4701 /* ProfileProtocol.swift */; };
-		92D79F402484DB87004C4701 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D79F3F2484DB87004C4701 /* ProfileViewModel.swift */; };
+		92D79F3E2484DB7F004C4701 /* SampleProfileProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D79F3D2484DB7F004C4701 /* SampleProfileProtocol.swift */; };
+		92D79F402484DB87004C4701 /* SampleProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D79F3F2484DB87004C4701 /* SampleProfileViewModel.swift */; };
 		92D79F432484DB93004C4701 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D79F412484DB93004C4701 /* ProfileViewController.swift */; };
-		92D79F442484DB93004C4701 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92D79F422484DB93004C4701 /* ProfileViewController.xib */; };
-		92D79F4724850153004C4701 /* ProfileDetailProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D79F4624850153004C4701 /* ProfileDetailProtocol.swift */; };
-		92D79F492485015C004C4701 /* ProfileDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D79F482485015C004C4701 /* ProfileDetailViewModel.swift */; };
-		92D79F4C24850166004C4701 /* ProfileDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D79F4A24850166004C4701 /* ProfileDetailViewController.swift */; };
-		92D79F4D24850166004C4701 /* ProfileDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92D79F4B24850166004C4701 /* ProfileDetailViewController.xib */; };
+		92D79F442484DB93004C4701 /* SampleProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92D79F422484DB93004C4701 /* SampleProfileViewController.xib */; };
+		92D79F4724850153004C4701 /* SampleProfileDetailProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D79F4624850153004C4701 /* SampleProfileDetailProtocol.swift */; };
+		92D79F492485015C004C4701 /* SampleProfileDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D79F482485015C004C4701 /* SampleProfileDetailViewModel.swift */; };
+		92D79F4C24850166004C4701 /* SampleProfileDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D79F4A24850166004C4701 /* SampleProfileDetailViewController.swift */; };
+		92D79F4D24850166004C4701 /* SampleProfileDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92D79F4B24850166004C4701 /* SampleProfileDetailViewController.xib */; };
 		92D79F5024852CC2004C4701 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D79F4F24852CC2004C4701 /* Log.swift */; };
 		9D2C8C6C95637BB845218937 /* Pods_MainAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3304A088087BD629641C29A2 /* Pods_MainAppTests.framework */; };
 		EDEADF9DEA3999ED2C0252E7 /* Pods_MainApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B48764ED1D23C52D13F00E17 /* Pods_MainApp.framework */; };
@@ -159,14 +159,14 @@
 		92D79F3224842E7A004C4701 /* HomeDetailProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailProtocol.swift; sourceTree = "<group>"; };
 		92D79F372484DB3E004C4701 /* ProfileNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNetwork.swift; sourceTree = "<group>"; };
 		92D79F3A2484DB61004C4701 /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
-		92D79F3D2484DB7F004C4701 /* ProfileProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileProtocol.swift; sourceTree = "<group>"; };
-		92D79F3F2484DB87004C4701 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		92D79F3D2484DB7F004C4701 /* SampleProfileProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleProfileProtocol.swift; sourceTree = "<group>"; };
+		92D79F3F2484DB87004C4701 /* SampleProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleProfileViewModel.swift; sourceTree = "<group>"; };
 		92D79F412484DB93004C4701 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		92D79F422484DB93004C4701 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
-		92D79F4624850153004C4701 /* ProfileDetailProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailProtocol.swift; sourceTree = "<group>"; };
-		92D79F482485015C004C4701 /* ProfileDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailViewModel.swift; sourceTree = "<group>"; };
-		92D79F4A24850166004C4701 /* ProfileDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailViewController.swift; sourceTree = "<group>"; };
-		92D79F4B24850166004C4701 /* ProfileDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileDetailViewController.xib; sourceTree = "<group>"; };
+		92D79F422484DB93004C4701 /* SampleProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SampleProfileViewController.xib; sourceTree = "<group>"; };
+		92D79F4624850153004C4701 /* SampleProfileDetailProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleProfileDetailProtocol.swift; sourceTree = "<group>"; };
+		92D79F482485015C004C4701 /* SampleProfileDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleProfileDetailViewModel.swift; sourceTree = "<group>"; };
+		92D79F4A24850166004C4701 /* SampleProfileDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleProfileDetailViewController.swift; sourceTree = "<group>"; };
+		92D79F4B24850166004C4701 /* SampleProfileDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SampleProfileDetailViewController.xib; sourceTree = "<group>"; };
 		92D79F4F24852CC2004C4701 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		AE2BE8FE29B4275EF2FB889F /* Pods-MainAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MainAppTests.debug.xcconfig"; path = "Target Support Files/Pods-MainAppTests/Pods-MainAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B48764ED1D23C52D13F00E17 /* Pods_MainApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MainApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -221,7 +221,7 @@
 		9201315324B4E3E5002303D0 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
-				92D79F392484DB55004C4701 /* Profile */,
+				923245CE24BB306A00FDFC3E /* Sample */,
 				92D79F2724841927004C4701 /* Home */,
 			);
 			path = Feature;
@@ -256,6 +256,14 @@
 			children = (
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		923245CE24BB306A00FDFC3E /* Sample */ = {
+			isa = PBXGroup;
+			children = (
+				92D79F392484DB55004C4701 /* Profile */,
+			);
+			path = Sample;
 			sourceTree = "<group>";
 		};
 		92913BB9248D07C8002D961D /* Products */ = {
@@ -535,24 +543,24 @@
 		92D79F3C2484DB6D004C4701 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				92D79F4524850145004C4701 /* ProfileDetail */,
-				92D79F3D2484DB7F004C4701 /* ProfileProtocol.swift */,
-				92D79F3F2484DB87004C4701 /* ProfileViewModel.swift */,
+				92D79F4524850145004C4701 /* SampleProfileDetail */,
+				92D79F3D2484DB7F004C4701 /* SampleProfileProtocol.swift */,
+				92D79F3F2484DB87004C4701 /* SampleProfileViewModel.swift */,
 				92D79F412484DB93004C4701 /* ProfileViewController.swift */,
-				92D79F422484DB93004C4701 /* ProfileViewController.xib */,
+				92D79F422484DB93004C4701 /* SampleProfileViewController.xib */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
 		};
-		92D79F4524850145004C4701 /* ProfileDetail */ = {
+		92D79F4524850145004C4701 /* SampleProfileDetail */ = {
 			isa = PBXGroup;
 			children = (
-				92D79F4624850153004C4701 /* ProfileDetailProtocol.swift */,
-				92D79F482485015C004C4701 /* ProfileDetailViewModel.swift */,
-				92D79F4A24850166004C4701 /* ProfileDetailViewController.swift */,
-				92D79F4B24850166004C4701 /* ProfileDetailViewController.xib */,
+				92D79F4624850153004C4701 /* SampleProfileDetailProtocol.swift */,
+				92D79F482485015C004C4701 /* SampleProfileDetailViewModel.swift */,
+				92D79F4A24850166004C4701 /* SampleProfileDetailViewController.swift */,
+				92D79F4B24850166004C4701 /* SampleProfileDetailViewController.xib */,
 			);
-			path = ProfileDetail;
+			path = SampleProfileDetail;
 			sourceTree = "<group>";
 		};
 		92D79F4E24852CB7004C4701 /* Debug */ = {
@@ -678,9 +686,9 @@
 				92D79E932483E535004C4701 /* Assets.xcassets in Resources */,
 				92D79F0F2483E88C004C4701 /* HomeDetailViewController.xib in Resources */,
 				92B90E502486BB1E00C59DDF /* Localizable.strings in Resources */,
-				92D79F442484DB93004C4701 /* ProfileViewController.xib in Resources */,
+				92D79F442484DB93004C4701 /* SampleProfileViewController.xib in Resources */,
 				92D79F082483E873004C4701 /* HomeViewController.xib in Resources */,
-				92D79F4D24850166004C4701 /* ProfileDetailViewController.xib in Resources */,
+				92D79F4D24850166004C4701 /* SampleProfileDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -784,7 +792,7 @@
 				92012F0824B30D1F002303D0 /* AppCoordinator+FeatureCoordinator.swift in Sources */,
 				92D79F5024852CC2004C4701 /* Log.swift in Sources */,
 				92D79F0E2483E88C004C4701 /* HomeDetailViewController.swift in Sources */,
-				92D79F3E2484DB7F004C4701 /* ProfileProtocol.swift in Sources */,
+				92D79F3E2484DB7F004C4701 /* SampleProfileProtocol.swift in Sources */,
 				920C3F6724A7D23900AF75AE /* ProfileCoordinatorProtocol.swift in Sources */,
 				9201315124B4E3BC002303D0 /* BuildConfiguration.swift in Sources */,
 				92913BEA248D13A3002D961D /* NetworkService.swift in Sources */,
@@ -801,7 +809,7 @@
 				92D79F3324842E7A004C4701 /* HomeDetailProtocol.swift in Sources */,
 				92D79E8C2483E534004C4701 /* SceneDelegate.swift in Sources */,
 				92913BCE248D0B8A002D961D /* EmptyResponse.swift in Sources */,
-				92D79F492485015C004C4701 /* ProfileDetailViewModel.swift in Sources */,
+				92D79F492485015C004C4701 /* SampleProfileDetailViewModel.swift in Sources */,
 				92C77CA3249754AD004C1D86 /* HTTPTask.swift in Sources */,
 				92C77C63249718CE004C1D86 /* SamplePath.swift in Sources */,
 				92D79F2624841755004C4701 /* AppCoordinator.swift in Sources */,
@@ -812,15 +820,15 @@
 				92D79F382484DB3E004C4701 /* ProfileNetwork.swift in Sources */,
 				92B90E582486C72700C59DDF /* MainApp+String.swift in Sources */,
 				92D79F2924841936004C4701 /* HomeCoordinator.swift in Sources */,
-				92D79F402484DB87004C4701 /* ProfileViewModel.swift in Sources */,
+				92D79F402484DB87004C4701 /* SampleProfileViewModel.swift in Sources */,
 				9201314F24B4E368002303D0 /* Appcoordinator+BuildConfiguration.swift in Sources */,
 				92C77BF82493798F004C1D86 /* SampleModel.swift in Sources */,
 				92C77BFC2493799B004C1D86 /* SampleResponse.swift in Sources */,
 				92C77C6824971985004C1D86 /* NetworkType.swift in Sources */,
 				92D79F0A2483E87D004C4701 /* HomeViewModel.swift in Sources */,
-				92D79F4724850153004C4701 /* ProfileDetailProtocol.swift in Sources */,
+				92D79F4724850153004C4701 /* SampleProfileDetailProtocol.swift in Sources */,
 				92D79F3B2484DB61004C4701 /* ProfileCoordinator.swift in Sources */,
-				92D79F4C24850166004C4701 /* ProfileDetailViewController.swift in Sources */,
+				92D79F4C24850166004C4701 /* SampleProfileDetailViewController.swift in Sources */,
 				92D79F072483E873004C4701 /* HomeViewController.swift in Sources */,
 				92C77CA124974A83004C1D86 /* SampleNetwork.swift in Sources */,
 				92C77C9E249744CC004C1D86 /* SampleService.swift in Sources */,

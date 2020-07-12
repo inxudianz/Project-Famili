@@ -8,9 +8,9 @@
 
 import Foundation
 
-class ProfileDetailViewModel: ProfileDetailViewModelProtocol {
-    weak var coordinator: ProfileCoordinator?
+class SampleProfileDetailViewModel: SampleProfileDetailViewModelProtocol {
+    weak var coordinator: SampleProfileCoordinator?
     
-    weak var view: ProfileDetailViewProtocol?
+    weak var view: SampleProfileDetailViewProtocol?
     
 }

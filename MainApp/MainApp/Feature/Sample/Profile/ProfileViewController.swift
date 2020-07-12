@@ -9,8 +9,8 @@
 import UIKit
 import Component
 
-class ProfileViewController: MasterViewController, ProfileViewProtocol {
-    var viewModel: ProfileViewModelProtocol?
+class SampleProfileViewController: MasterViewController, SampleProfileViewProtocol {
+    var viewModel: SampleProfileViewModelProtocol?
     
     @IBAction func next(_ sender: Any) {
         viewModel?.navigateToDetail()

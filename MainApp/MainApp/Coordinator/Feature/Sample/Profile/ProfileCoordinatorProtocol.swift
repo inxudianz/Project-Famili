@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol ProfileCoordinatorProtocol: Coordinator {
+protocol SampleProfileCoordinatorProtocol: Coordinator {
     func navigateDetail()
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProfileCoordinator: ProfileCoordinatorProtocol {
+class SampleProfileCoordinator: SampleProfileCoordinatorProtocol {
     weak var parentCoordinator: Coordinator?
     var childCoordinators: [Coordinator] = [Coordinator]()
     
@@ -19,8 +19,8 @@ class ProfileCoordinator: ProfileCoordinatorProtocol {
     }
     
     func start() {
-        let vc = ProfileViewController()
-        let vm = ProfileViewModel()
+        let vc = SampleProfileViewController()
+        let vm = SampleProfileViewModel()
         vc.tabBarItem = UITabBarItem(tabBarSystemItem: .downloads, tag: 1)
         vm.coordinator = self
         vc.viewModel = vm
@@ -29,8 +29,8 @@ class ProfileCoordinator: ProfileCoordinatorProtocol {
     }
     
     func navigateDetail() {
-        let vc = ProfileDetailViewController()
-        let vm = ProfileDetailViewModel()
+        let vc = SampleProfileDetailViewController()
+        let vm = SampleProfileDetailViewModel()
         vm.coordinator = self
         vc.viewModel = vm
         vm.view = vc
