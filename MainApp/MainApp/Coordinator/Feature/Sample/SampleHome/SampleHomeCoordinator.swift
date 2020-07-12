@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeCoordinator: HomeCoordinatorProtocol {
+class SampleHomeCoordinator: SampleHomeCoordinatorProtocol {
     weak var parentCoordinator: Coordinator?
     var childCoordinators: [Coordinator] = [Coordinator]()
     
@@ -19,8 +19,8 @@ class HomeCoordinator: HomeCoordinatorProtocol {
     }
     
     func start() {
-        let vc = HomeViewController()
-        let vm = HomeViewModel()
+        let vc = SampleHomeViewController()
+        let vm = SampleHomeViewModel()
         vc.navigationItem.configure()
         vc.tabBarItem = UITabBarItem(tabBarSystemItem: .mostRecent, tag: 0)
         vm.coordinator = self
@@ -30,8 +30,8 @@ class HomeCoordinator: HomeCoordinatorProtocol {
     }
     
     func getDetail(_ completion: CoordinatorCompletion? = nil) {
-        let vc = HomeDetailViewController()
-        let vm = HomeDetailViewModel()
+        let vc = SampleHomeDetailViewController()
+        let vm = SampleHomeDetailViewModel()
         vm.coordinator = self
         vm.view = vc
         vc.viewModel = vm

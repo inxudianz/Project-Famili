@@ -25,7 +25,7 @@ class AppCoordinator<build: BuildConfiguration>: Coordinator {
     
     let window: UIWindow?
     let coordinatorId: [String:Coordinator] = [
-        "home" : HomeCoordinator(navigationController: UINavigationController()),
+        "sampleHome" : SampleHomeCoordinator(navigationController: UINavigationController()),
         "sampleProfile" : SampleProfileCoordinator(navigationController: UINavigationController())
     ]
     

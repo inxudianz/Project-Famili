@@ -11,7 +11,7 @@ import Component
 import RxSwift
 import RxCocoa
 
-class HomeViewController: MasterViewController, HomeViewProtocol {
+class SampleHomeViewController: MasterViewController, SampleHomeViewProtocol {
     // MARK: - Outlet
     @IBOutlet weak var changeLabelButton: UIButton!
     @IBOutlet weak var apiCount: UILabel!
@@ -20,7 +20,7 @@ class HomeViewController: MasterViewController, HomeViewProtocol {
     @IBOutlet weak var indicator: UIActivityIndicatorView!
         
     // MARK: - Property
-    var viewModel: HomeViewModelProtocol?
+    var viewModel: SampleHomeViewModelProtocol?
     var apiCalled = 0
     
     // MARK: - IBAction
@@ -35,7 +35,7 @@ class HomeViewController: MasterViewController, HomeViewProtocol {
     
     // MARK: - Initializer
     init() {
-        super.init(nibName: String(describing: HomeViewController.self), bundle: Bundle(for: HomeViewController.self))
+        super.init(nibName: String(describing: SampleHomeViewController.self), bundle: Bundle(for: SampleHomeViewController.self))
     }
     
     required init?(coder: NSCoder) {

@@ -9,17 +9,17 @@
 import UIKit
 import Component
 
-class HomeDetailViewController: MasterViewController, HomeDetailViewProtocol{
+class SampleHomeDetailViewController: MasterViewController, SampleHomeDetailViewProtocol{
     
-    var viewModel:HomeDetailViewModelProtocol?
+    var viewModel: SampleHomeDetailViewModelProtocol?
     
     @IBAction func updateLabel(_ sender: UIButton) {
         //let num = Int.random(in: 1...10)
     }
     
     init() {
-        let nibName = "HomeDetailViewController"
-        super.init(nibName: nibName, bundle: Bundle(for: HomeDetailViewController.self))
+        let nibName = "SampleHomeDetailViewController"
+        super.init(nibName: nibName, bundle: Bundle(for: SampleHomeDetailViewController.self))
     }
     
     required init?(coder: NSCoder) {

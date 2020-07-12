@@ -9,9 +9,9 @@
 import Foundation
 import RxSwift
 
-protocol HomeViewModelProtocol: class {
-    var view: HomeViewProtocol? { get set }
-    var coordinator: HomeCoordinatorProtocol? { get set }
+protocol SampleHomeViewModelProtocol: class {
+    var view: SampleHomeViewProtocol? { get set }
+    var coordinator: SampleHomeCoordinatorProtocol? { get set }
     var network: SampleNetworkProtocol? { get set }
     var disposeBag: DisposeBag { get set }
     
@@ -21,8 +21,8 @@ protocol HomeViewModelProtocol: class {
     func updateLabelObservable()
 }
 
-protocol HomeViewProtocol: class {
-    var viewModel: HomeViewModelProtocol? { get set }
+protocol SampleHomeViewProtocol: class {
+    var viewModel: SampleHomeViewModelProtocol? { get set }
     func updateView(text: String)
     func showLoading()
     func dismissLoading()

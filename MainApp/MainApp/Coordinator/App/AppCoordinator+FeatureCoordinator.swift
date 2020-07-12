@@ -11,6 +11,6 @@ import UIKit
 
 /// List of all app epic screen
 enum CoordinatorFeature: String {
-    case home
+    case sampleHome
     case sampleProfile
 }
