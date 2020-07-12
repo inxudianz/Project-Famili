@@ -16,7 +16,7 @@
 		920A35082499D63F00F2EABB /* CoordinatorState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920A35072499D63F00F2EABB /* CoordinatorState.swift */; };
 		920A35B1249B4D0900F2EABB /* HomeViewModel+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920A35B0249B4D0900F2EABB /* HomeViewModel+Network.swift */; };
 		920C3F6524A7D00800AF75AE /* HomeCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C3F6424A7D00800AF75AE /* HomeCoordinatorProtocol.swift */; };
-		920C3F6724A7D23900AF75AE /* ProfileCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C3F6624A7D23900AF75AE /* ProfileCoordinatorProtocol.swift */; };
+		920C3F6724A7D23900AF75AE /* SampleProfileCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C3F6624A7D23900AF75AE /* SampleProfileCoordinatorProtocol.swift */; };
 		92913BCE248D0B8A002D961D /* EmptyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92913BCD248D0B8A002D961D /* EmptyResponse.swift */; };
 		92913BEA248D13A3002D961D /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92913BE9248D13A3002D961D /* NetworkService.swift */; };
 		92B90E502486BB1E00C59DDF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 92B90E522486BB1E00C59DDF /* Localizable.strings */; };
@@ -52,10 +52,10 @@
 		92D79F3124842E49004C4701 /* HomeNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D79F3024842E49004C4701 /* HomeNetwork.swift */; };
 		92D79F3324842E7A004C4701 /* HomeDetailProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D79F3224842E7A004C4701 /* HomeDetailProtocol.swift */; };
 		92D79F382484DB3E004C4701 /* ProfileNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D79F372484DB3E004C4701 /* ProfileNetwork.swift */; };
-		92D79F3B2484DB61004C4701 /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D79F3A2484DB61004C4701 /* ProfileCoordinator.swift */; };
+		92D79F3B2484DB61004C4701 /* SampleProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D79F3A2484DB61004C4701 /* SampleProfileCoordinator.swift */; };
 		92D79F3E2484DB7F004C4701 /* SampleProfileProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D79F3D2484DB7F004C4701 /* SampleProfileProtocol.swift */; };
 		92D79F402484DB87004C4701 /* SampleProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D79F3F2484DB87004C4701 /* SampleProfileViewModel.swift */; };
-		92D79F432484DB93004C4701 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D79F412484DB93004C4701 /* ProfileViewController.swift */; };
+		92D79F432484DB93004C4701 /* SampleProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D79F412484DB93004C4701 /* SampleProfileViewController.swift */; };
 		92D79F442484DB93004C4701 /* SampleProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92D79F422484DB93004C4701 /* SampleProfileViewController.xib */; };
 		92D79F4724850153004C4701 /* SampleProfileDetailProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D79F4624850153004C4701 /* SampleProfileDetailProtocol.swift */; };
 		92D79F492485015C004C4701 /* SampleProfileDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D79F482485015C004C4701 /* SampleProfileDetailViewModel.swift */; };
@@ -116,7 +116,7 @@
 		920A35072499D63F00F2EABB /* CoordinatorState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorState.swift; sourceTree = "<group>"; };
 		920A35B0249B4D0900F2EABB /* HomeViewModel+Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewModel+Network.swift"; sourceTree = "<group>"; };
 		920C3F6424A7D00800AF75AE /* HomeCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinatorProtocol.swift; sourceTree = "<group>"; };
-		920C3F6624A7D23900AF75AE /* ProfileCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		920C3F6624A7D23900AF75AE /* SampleProfileCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleProfileCoordinatorProtocol.swift; sourceTree = "<group>"; };
 		92913BB8248D07C8002D961D /* Component.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Component.xcodeproj; path = ../Component/Component.xcodeproj; sourceTree = "<group>"; };
 		92913BCD248D0B8A002D961D /* EmptyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyResponse.swift; sourceTree = "<group>"; };
 		92913BE9248D13A3002D961D /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
@@ -158,10 +158,10 @@
 		92D79F3024842E49004C4701 /* HomeNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNetwork.swift; sourceTree = "<group>"; };
 		92D79F3224842E7A004C4701 /* HomeDetailProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailProtocol.swift; sourceTree = "<group>"; };
 		92D79F372484DB3E004C4701 /* ProfileNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNetwork.swift; sourceTree = "<group>"; };
-		92D79F3A2484DB61004C4701 /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
+		92D79F3A2484DB61004C4701 /* SampleProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleProfileCoordinator.swift; sourceTree = "<group>"; };
 		92D79F3D2484DB7F004C4701 /* SampleProfileProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleProfileProtocol.swift; sourceTree = "<group>"; };
 		92D79F3F2484DB87004C4701 /* SampleProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleProfileViewModel.swift; sourceTree = "<group>"; };
-		92D79F412484DB93004C4701 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		92D79F412484DB93004C4701 /* SampleProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleProfileViewController.swift; sourceTree = "<group>"; };
 		92D79F422484DB93004C4701 /* SampleProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SampleProfileViewController.xib; sourceTree = "<group>"; };
 		92D79F4624850153004C4701 /* SampleProfileDetailProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleProfileDetailProtocol.swift; sourceTree = "<group>"; };
 		92D79F482485015C004C4701 /* SampleProfileDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleProfileDetailViewModel.swift; sourceTree = "<group>"; };
@@ -261,7 +261,7 @@
 		923245CE24BB306A00FDFC3E /* Sample */ = {
 			isa = PBXGroup;
 			children = (
-				92D79F392484DB55004C4701 /* Profile */,
+				92D79F392484DB55004C4701 /* SampleProfile */,
 			);
 			path = Sample;
 			sourceTree = "<group>";
@@ -531,13 +531,13 @@
 			path = ProfileNetwork;
 			sourceTree = "<group>";
 		};
-		92D79F392484DB55004C4701 /* Profile */ = {
+		92D79F392484DB55004C4701 /* SampleProfile */ = {
 			isa = PBXGroup;
 			children = (
-				92D79F3A2484DB61004C4701 /* ProfileCoordinator.swift */,
-				920C3F6624A7D23900AF75AE /* ProfileCoordinatorProtocol.swift */,
+				92D79F3A2484DB61004C4701 /* SampleProfileCoordinator.swift */,
+				920C3F6624A7D23900AF75AE /* SampleProfileCoordinatorProtocol.swift */,
 			);
-			path = Profile;
+			path = SampleProfile;
 			sourceTree = "<group>";
 		};
 		92D79F3C2484DB6D004C4701 /* Profile */ = {
@@ -546,7 +546,7 @@
 				92D79F4524850145004C4701 /* SampleProfileDetail */,
 				92D79F3D2484DB7F004C4701 /* SampleProfileProtocol.swift */,
 				92D79F3F2484DB87004C4701 /* SampleProfileViewModel.swift */,
-				92D79F412484DB93004C4701 /* ProfileViewController.swift */,
+				92D79F412484DB93004C4701 /* SampleProfileViewController.swift */,
 				92D79F422484DB93004C4701 /* SampleProfileViewController.xib */,
 			);
 			path = Profile;
@@ -793,7 +793,7 @@
 				92D79F5024852CC2004C4701 /* Log.swift in Sources */,
 				92D79F0E2483E88C004C4701 /* HomeDetailViewController.swift in Sources */,
 				92D79F3E2484DB7F004C4701 /* SampleProfileProtocol.swift in Sources */,
-				920C3F6724A7D23900AF75AE /* ProfileCoordinatorProtocol.swift in Sources */,
+				920C3F6724A7D23900AF75AE /* SampleProfileCoordinatorProtocol.swift in Sources */,
 				9201315124B4E3BC002303D0 /* BuildConfiguration.swift in Sources */,
 				92913BEA248D13A3002D961D /* NetworkService.swift in Sources */,
 				920A35062499D61E00F2EABB /* Coordinator.swift in Sources */,
@@ -802,7 +802,7 @@
 				92D79E8E2483E534004C4701 /* ViewController.swift in Sources */,
 				92C77BFE24937CFC004C1D86 /* MainApp+NavigationItem.swift in Sources */,
 				920539BB249BA31300AF938C /* Undefined.swift in Sources */,
-				92D79F432484DB93004C4701 /* ProfileViewController.swift in Sources */,
+				92D79F432484DB93004C4701 /* SampleProfileViewController.swift in Sources */,
 				92D79E8A2483E534004C4701 /* AppDelegate.swift in Sources */,
 				92D79F112483E89A004C4701 /* HomeDetailViewModel.swift in Sources */,
 				92C77CA5249760DF004C1D86 /* AppContext.swift in Sources */,
@@ -827,7 +827,7 @@
 				92C77C6824971985004C1D86 /* NetworkType.swift in Sources */,
 				92D79F0A2483E87D004C4701 /* HomeViewModel.swift in Sources */,
 				92D79F4724850153004C4701 /* SampleProfileDetailProtocol.swift in Sources */,
-				92D79F3B2484DB61004C4701 /* ProfileCoordinator.swift in Sources */,
+				92D79F3B2484DB61004C4701 /* SampleProfileCoordinator.swift in Sources */,
 				92D79F4C24850166004C4701 /* SampleProfileDetailViewController.swift in Sources */,
 				92D79F072483E873004C4701 /* HomeViewController.swift in Sources */,
 				92C77CA124974A83004C1D86 /* SampleNetwork.swift in Sources */,
