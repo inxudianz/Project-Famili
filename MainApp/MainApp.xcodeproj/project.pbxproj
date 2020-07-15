@@ -35,8 +35,7 @@
 		92C77CA5249760DF004C1D86 /* AppContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C77CA4249760DF004C1D86 /* AppContext.swift */; };
 		92D79E8A2483E534004C4701 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D79E892483E534004C4701 /* AppDelegate.swift */; };
 		92D79E8C2483E534004C4701 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D79E8B2483E534004C4701 /* SceneDelegate.swift */; };
-		92D79E8E2483E534004C4701 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D79E8D2483E534004C4701 /* ViewController.swift */; };
-		92D79E932483E535004C4701 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92D79E922483E535004C4701 /* Assets.xcassets */; };
+		92D79E932483E535004C4701 /* Main.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92D79E922483E535004C4701 /* Main.xcassets */; };
 		92D79E962483E535004C4701 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92D79E942483E535004C4701 /* LaunchScreen.storyboard */; };
 		92D79F072483E873004C4701 /* SampleHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D79F052483E873004C4701 /* SampleHomeViewController.swift */; };
 		92D79F082483E873004C4701 /* SampleHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92D79F062483E873004C4701 /* SampleHomeViewController.xib */; };
@@ -139,8 +138,7 @@
 		92D79E862483E534004C4701 /* MainApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MainApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92D79E892483E534004C4701 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92D79E8B2483E534004C4701 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		92D79E8D2483E534004C4701 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		92D79E922483E535004C4701 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		92D79E922483E535004C4701 /* Main.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Main.xcassets; sourceTree = "<group>"; };
 		92D79E952483E535004C4701 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		92D79E972483E535004C4701 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92D79E9C2483E535004C4701 /* MainAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MainAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -431,8 +429,7 @@
 				92D79F4E24852CB7004C4701 /* Debug */,
 				92D79E892483E534004C4701 /* AppDelegate.swift */,
 				92D79E8B2483E534004C4701 /* SceneDelegate.swift */,
-				92D79E8D2483E534004C4701 /* ViewController.swift */,
-				92D79E922483E535004C4701 /* Assets.xcassets */,
+				92D79E922483E535004C4701 /* Main.xcassets */,
 				92D79E942483E535004C4701 /* LaunchScreen.storyboard */,
 				92D79E972483E535004C4701 /* Info.plist */,
 			);
@@ -691,7 +688,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				92D79E962483E535004C4701 /* LaunchScreen.storyboard in Resources */,
-				92D79E932483E535004C4701 /* Assets.xcassets in Resources */,
+				92D79E932483E535004C4701 /* Main.xcassets in Resources */,
 				92D79F0F2483E88C004C4701 /* SampleHomeDetailViewController.xib in Resources */,
 				92B90E502486BB1E00C59DDF /* Localizable.strings in Resources */,
 				92D79F442484DB93004C4701 /* SampleProfileViewController.xib in Resources */,
@@ -807,7 +804,6 @@
 				920A35062499D61E00F2EABB /* Coordinator.swift in Sources */,
 				92D79F3124842E49004C4701 /* HomeNetwork.swift in Sources */,
 				92C77C5E24971765004C1D86 /* BasePath.swift in Sources */,
-				92D79E8E2483E534004C4701 /* ViewController.swift in Sources */,
 				92C77BFE24937CFC004C1D86 /* MainApp+NavigationItem.swift in Sources */,
 				920539BB249BA31300AF938C /* Undefined.swift in Sources */,
 				92D79F432484DB93004C4701 /* SampleProfileViewController.swift in Sources */,
