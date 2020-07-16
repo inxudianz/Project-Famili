@@ -24,9 +24,11 @@ class AppCoordinator<build: BuildConfiguration>: Coordinator {
     var tabBarViewController: UITabBarController?
     
     let window: UIWindow?
+    
+    // MARK: - Coordinator ID
     let coordinatorId: [String:Coordinator] = [
         "sampleHome" : SampleHomeCoordinator(navigationController: UINavigationController()),
-        "sampleProfile" : SampleProfileCoordinator(navigationController: UINavigationController())
+        "sampleProfile" : SampleProfileCoordinator(navigationController: UINavigationController()),
     ]
     
     // MARK: - Initializer
@@ -41,5 +43,4 @@ class AppCoordinator<build: BuildConfiguration>: Coordinator {
     func start() {
         window?.makeKeyAndVisible()
     }
-
 }

@@ -219,6 +219,9 @@
 		9201315324B4E3E5002303D0 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				923249A424C03FFC00FDFC3E /* Home */,
+				923249A224C03FEF00FDFC3E /* Profile */,
+				9232499624C03F0100FDFC3E /* Auth */,
 				923245CE24BB306A00FDFC3E /* Sample */,
 			);
 			path = Feature;
@@ -236,6 +239,9 @@
 		92053BDC24A1F81B00AF938C /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				923249AF24C0408500FDFC3E /* Auth */,
+				923249AE24C0408000FDFC3E /* Profile */,
+				923249AD24C0407B00FDFC3E /* Home */,
 				923245D524BB370300FDFC3E /* Sample */,
 			);
 			path = Feature;
@@ -286,6 +292,121 @@
 			children = (
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		9232499624C03F0100FDFC3E /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		923249A124C03FEA00FDFC3E /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				923249AC24C0407100FDFC3E /* Resources */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		923249A224C03FEF00FDFC3E /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		923249A324C03FF600FDFC3E /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				923249AB24C0406B00FDFC3E /* Resources */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		923249A424C03FFC00FDFC3E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		923249A524C0400000FDFC3E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				923249AA24C0406500FDFC3E /* Resources */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		923249A624C0401500FDFC3E /* AuthNetwork */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AuthNetwork;
+			sourceTree = "<group>";
+		};
+		923249A724C0403F00FDFC3E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		923249A824C0404300FDFC3E /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		923249A924C0404700FDFC3E /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		923249AA24C0406500FDFC3E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		923249AB24C0406B00FDFC3E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		923249AC24C0407100FDFC3E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		923249AD24C0407B00FDFC3E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		923249AE24C0408000FDFC3E /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		923249AF24C0408500FDFC3E /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Auth;
 			sourceTree = "<group>";
 		};
 		92913BB9248D07C8002D961D /* Products */ = {
@@ -382,6 +503,9 @@
 		92C77C5F2497181F004C1D86 /* FeaturePath */ = {
 			isa = PBXGroup;
 			children = (
+				923249A924C0404700FDFC3E /* Auth */,
+				923249A824C0404300FDFC3E /* Profile */,
+				923249A724C0403F00FDFC3E /* Home */,
 				92C77C6424971920004C1D86 /* Sample */,
 			);
 			path = FeaturePath;
@@ -466,9 +590,10 @@
 		92D79ED12483E569004C4701 /* FeatureNetwork */ = {
 			isa = PBXGroup;
 			children = (
-				92C77C9F24974A77004C1D86 /* SampleNetwork */,
+				923249A624C0401500FDFC3E /* AuthNetwork */,
 				92D79F362484DB2E004C4701 /* ProfileNetwork */,
 				92D79F352484DB10004C4701 /* HomeNetwork */,
+				92C77C9F24974A77004C1D86 /* SampleNetwork */,
 			);
 			path = FeatureNetwork;
 			sourceTree = "<group>";
@@ -476,6 +601,9 @@
 		92D79ED72483E67B004C4701 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				923249A524C0400000FDFC3E /* Home */,
+				923249A324C03FF600FDFC3E /* Profile */,
+				923249A124C03FEA00FDFC3E /* Auth */,
 				9201353324B77B6D002303D0 /* Sample */,
 			);
 			path = Feature;
