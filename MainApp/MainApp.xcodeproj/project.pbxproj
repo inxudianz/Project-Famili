@@ -116,6 +116,7 @@
 		920A35B0249B4D0900F2EABB /* SampleHomeViewModel+Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SampleHomeViewModel+Network.swift"; sourceTree = "<group>"; };
 		920C3F6424A7D00800AF75AE /* SampleHomeCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleHomeCoordinatorProtocol.swift; sourceTree = "<group>"; };
 		920C3F6624A7D23900AF75AE /* SampleProfileCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleProfileCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		92324BAE24C6D5E000FDFC3E /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		92913BB8248D07C8002D961D /* Component.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Component.xcodeproj; path = ../Component/Component.xcodeproj; sourceTree = "<group>"; };
 		92913BCD248D0B8A002D961D /* EmptyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyResponse.swift; sourceTree = "<group>"; };
 		92913BE9248D13A3002D961D /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
@@ -409,6 +410,14 @@
 			path = Auth;
 			sourceTree = "<group>";
 		};
+		92324BAB24C6D03F00FDFC3E /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				92324BAE24C6D5E000FDFC3E /* Debug.xcconfig */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
 		92913BB9248D07C8002D961D /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -559,6 +568,7 @@
 		92D79E882483E534004C4701 /* MainApp */ = {
 			isa = PBXGroup;
 			children = (
+				92324BAB24C6D03F00FDFC3E /* Config */,
 				92D79F2224841710004C4701 /* Coordinator */,
 				92D79ED72483E67B004C4701 /* Feature */,
 				92D79ED12483E569004C4701 /* FeatureNetwork */,
