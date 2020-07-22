@@ -17,25 +17,27 @@ struct NetworkService {
         switch type.task {
         case .plainRequest:
             let request = AF.request(combinedURL, method: type.method, headers: type.headers)
-            request.responseDecodable(of: responseType) { (response) in
-                switch response.result {
-                case .success(let result):
-                    // TODO: - Success with error response
-                    // TODO: - Handling error type and status code
-                    completion(.success(result))
-                case .failure(let error):
-                    completion(.failure(error))
-                }
+            request
+                .validate()
+                .responseDecodable(of: responseType) { (response) in
+                    switch response.result {
+                    case .success(let result):
+                        completion(.success(result))
+                    case .failure(let error):
+                        completion(.failure(error))
+                    }
             }
         case .parameterRequest(let parameters):
             let request = AF.request(combinedURL, method: type.method, parameters: parameters, encoder: JSONParameterEncoder.default, headers: type.headers)
-            request.responseDecodable(of: responseType) { (response) in
-                switch response.result {
-                case .success(let result):
-                    completion(.success(result))
-                case .failure(let error):
-                    completion(.failure(error))
-                }
+            request
+                .validate()
+                .responseDecodable(of: responseType) { (response) in
+                    switch response.result {
+                    case .success(let result):
+                        completion(.success(result))
+                    case .failure(let error):
+                        completion(.failure(error))
+                    }
             }
         }
     }
@@ -47,27 +49,29 @@ struct NetworkService {
             switch type.task {
             case .plainRequest:
                 let request = AF.request(combinedURL, method: type.method, headers: type.headers)
-                request.responseDecodable(of: responseType) { (response) in
-                    switch response.result {
-                    case .success(let result):
-                        // TODO: - Success with error response
-                        // TODO: - Handling error type and status code
-                        observer.onNext(result)
-                    case .failure(let error):
-                        observer.onError(error)
-                    }
-                    observer.onCompleted()
+                request
+                    .validate()
+                    .responseDecodable(of: responseType) { (response) in
+                        switch response.result {
+                        case .success(let result):
+                            observer.onNext(result)
+                        case .failure(let error):
+                            observer.onError(error)
+                        }
+                        observer.onCompleted()
                 }
             case .parameterRequest(let parameters):
                 let request = AF.request(combinedURL, method: type.method, parameters: parameters, encoder: JSONParameterEncoder.default, headers: type.headers)
-                request.responseDecodable(of: responseType) { (response) in
-                    switch response.result {
-                    case .success(let result):
-                        observer.onNext(result)
-                    case .failure(let error):
-                        observer.onError(error)
-                    }
-                    observer.onCompleted()
+                request
+                    .validate()
+                    .responseDecodable(of: responseType) { (response) in
+                        switch response.result {
+                        case .success(let result):
+                            observer.onNext(result)
+                        case .failure(let error):
+                            observer.onError(error)
+                        }
+                        observer.onCompleted()
                 }
             }
             return Disposables.create()
