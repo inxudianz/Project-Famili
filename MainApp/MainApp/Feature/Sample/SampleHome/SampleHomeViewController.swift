@@ -47,7 +47,6 @@ class SampleHomeViewController: MasterViewController, SampleHomeViewProtocol {
         indicator.isHidden = true
         setupRx()
         viewModel?.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
     
     // MARK: - Method

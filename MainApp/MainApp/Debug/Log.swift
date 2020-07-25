@@ -9,7 +9,6 @@
 import Foundation
 
 final class Log {
-    
     enum LogEvent: String{
         case error = "[‼️]"
         case info = "[📌]"
@@ -42,7 +41,7 @@ final class Log {
                 |🟥| [\#(sourceFileName(filePath: fileName))]
                 |🟥| Message:
                 |🟥| [\#(message)]
-                
+
                 """#
             )
         }
