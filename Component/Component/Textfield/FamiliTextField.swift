@@ -6,4 +6,35 @@
 //  Copyright © 2020 William Inx. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+@IBDesignable public class FamiliTextField: UITextField {
+    
+    @IBInspectable var borderColor: UIColor? {
+        didSet {
+            self.layer.borderColor = borderColor?.cgColor
+        }
+    }
+    
+    public override init(frame: CGRect) {
+        self.borderColor = UIColor(hex: FamiliTextFieldConstant.BorderColor.normal.rawValue)
+        super.init(frame: frame)
+        setupTextField()
+    }
+    
+    required init?(coder: NSCoder) {
+        self.borderColor = UIColor(hex: FamiliTextFieldConstant.BorderColor.normal.rawValue)
+        super.init(coder: coder)
+        setupTextField()
+    }
+    
+    public override func prepareForInterfaceBuilder() {
+        super.prepareForInterfaceBuilder()
+        self.setupTextField()
+    }
+    
+    private func setupTextField() {
+        self.backgroundColor = UIColor(hex: FamiliTextFieldConstant.CommonColor.background.rawValue)
+    }
+    
+}
