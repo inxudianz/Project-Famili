@@ -11,7 +11,6 @@ import UIKit
 class InitialScreenCoordinator: InitialScreenCoordinatorProtocol {
     weak var parentCoordinator: Coordinator?
     var childCoordinators: [Coordinator] = [Coordinator]()
-    
     var navigationController: UINavigationController?
     
     required init(navigationController: UINavigationController) {

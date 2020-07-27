@@ -225,6 +225,13 @@
 				8A76A33324CEB3EB00F02AD9 /* InitialScreenViewController.xib */,
 				8A76A33C24CECB7300F02AD9 /* InitialScreenViewModel.swift */,
 				8A76A33E24CECBAE00F02AD9 /* InitialScreenProtocol.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		8A76A34724CEF60200F02AD9 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
 				8A76A34024CECC1E00F02AD9 /* InitialScreenCoordinatorProtocol.swift */,
 				8A76A34324CED46F00F02AD9 /* InitialScreenCoordinator.swift */,
 			);
@@ -245,6 +252,7 @@
 		9201315324B4E3E5002303D0 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				8A76A34724CEF60200F02AD9 /* Splash */,
 				923249A424C03FFC00FDFC3E /* Home */,
 				923249A224C03FEF00FDFC3E /* Profile */,
 				9232499624C03F0100FDFC3E /* Auth */,

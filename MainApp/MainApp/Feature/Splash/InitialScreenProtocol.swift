@@ -11,7 +11,7 @@ import Foundation
 protocol InitialScreenViewModelProtocol: class {
     var view: InitialScreenViewProtocol? { get set }
     var coordinator: InitialScreenCoordinatorProtocol? { get set }
-    
+
     func gotoLogin()
 }
 

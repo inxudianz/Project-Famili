@@ -9,9 +9,7 @@
 import Foundation
 
 class InitialScreenViewModel: InitialScreenViewModelProtocol {
-    
     weak var view: InitialScreenViewProtocol?
-    
     weak var coordinator: InitialScreenCoordinatorProtocol?
     
     func gotoLogin() {
