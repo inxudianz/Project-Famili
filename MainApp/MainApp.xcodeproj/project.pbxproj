@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A76A33424CEB3EB00F02AD9 /* InitialScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A76A33224CEB3EB00F02AD9 /* InitialScreenViewController.swift */; };
+		8A76A33524CEB3EB00F02AD9 /* InitialScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A76A33324CEB3EB00F02AD9 /* InitialScreenViewController.xib */; };
 		92012F0824B30D1F002303D0 /* AppCoordinator+FeatureCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92012F0724B30D1F002303D0 /* AppCoordinator+FeatureCoordinator.swift */; };
 		9201314F24B4E368002303D0 /* Appcoordinator+BuildConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9201314E24B4E368002303D0 /* Appcoordinator+BuildConfiguration.swift */; };
 		9201315124B4E3BC002303D0 /* BuildConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9201315024B4E3BC002303D0 /* BuildConfiguration.swift */; };
@@ -106,6 +108,8 @@
 /* Begin PBXFileReference section */
 		3304A088087BD629641C29A2 /* Pods_MainAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MainAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		890F374CBAEFBDEFACC50A10 /* Pods-MainApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MainApp.debug.xcconfig"; path = "Target Support Files/Pods-MainApp/Pods-MainApp.debug.xcconfig"; sourceTree = "<group>"; };
+		8A76A33224CEB3EB00F02AD9 /* InitialScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialScreenViewController.swift; sourceTree = "<group>"; };
+		8A76A33324CEB3EB00F02AD9 /* InitialScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InitialScreenViewController.xib; sourceTree = "<group>"; };
 		92012F0724B30D1F002303D0 /* AppCoordinator+FeatureCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppCoordinator+FeatureCoordinator.swift"; sourceTree = "<group>"; };
 		9201314E24B4E368002303D0 /* Appcoordinator+BuildConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Appcoordinator+BuildConfiguration.swift"; sourceTree = "<group>"; };
 		9201315024B4E3BC002303D0 /* BuildConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildConfiguration.swift; sourceTree = "<group>"; };
@@ -204,6 +208,15 @@
 			);
 			name = Pods;
 			path = ../Pods;
+			sourceTree = "<group>";
+		};
+		8A76A33124CEB15800F02AD9 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				8A76A33224CEB3EB00F02AD9 /* InitialScreenViewController.swift */,
+				8A76A33324CEB3EB00F02AD9 /* InitialScreenViewController.xib */,
+			);
+			path = Splash;
 			sourceTree = "<group>";
 		};
 		9201315224B4E3CC002303D0 /* App */ = {
@@ -611,6 +624,7 @@
 		92D79ED72483E67B004C4701 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				8A76A33124CEB15800F02AD9 /* Splash */,
 				923249A524C0400000FDFC3E /* Home */,
 				923249A324C03FF600FDFC3E /* Profile */,
 				923249A124C03FEA00FDFC3E /* Auth */,
@@ -842,6 +856,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				92D79E962483E535004C4701 /* LaunchScreen.storyboard in Resources */,
+				8A76A33524CEB3EB00F02AD9 /* InitialScreenViewController.xib in Resources */,
 				92D79E932483E535004C4701 /* Main.xcassets in Resources */,
 				92D79F0F2483E88C004C4701 /* SampleHomeDetailViewController.xib in Resources */,
 				92B90E502486BB1E00C59DDF /* Localizable.strings in Resources */,
@@ -983,6 +998,7 @@
 				92C77BF82493798F004C1D86 /* SampleModel.swift in Sources */,
 				92C77BFC2493799B004C1D86 /* SampleResponse.swift in Sources */,
 				92C77C6824971985004C1D86 /* NetworkType.swift in Sources */,
+				8A76A33424CEB3EB00F02AD9 /* InitialScreenViewController.swift in Sources */,
 				92D79F0A2483E87D004C4701 /* SampleHomeViewModel.swift in Sources */,
 				92D79F4724850153004C4701 /* SampleProfileDetailProtocol.swift in Sources */,
 				92D79F3B2484DB61004C4701 /* SampleProfileCoordinator.swift in Sources */,
