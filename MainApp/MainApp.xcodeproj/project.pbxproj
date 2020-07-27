@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		8A76A33424CEB3EB00F02AD9 /* InitialScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A76A33224CEB3EB00F02AD9 /* InitialScreenViewController.swift */; };
 		8A76A33524CEB3EB00F02AD9 /* InitialScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A76A33324CEB3EB00F02AD9 /* InitialScreenViewController.xib */; };
+		8A76A33D24CECB7300F02AD9 /* InitialScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A76A33C24CECB7300F02AD9 /* InitialScreenViewModel.swift */; };
+		8A76A33F24CECBAE00F02AD9 /* InitialScreenProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A76A33E24CECBAE00F02AD9 /* InitialScreenProtocol.swift */; };
+		8A76A34124CECC1E00F02AD9 /* InitialScreenCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A76A34024CECC1E00F02AD9 /* InitialScreenCoordinatorProtocol.swift */; };
+		8A76A34424CED46F00F02AD9 /* InitialScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A76A34324CED46F00F02AD9 /* InitialScreenCoordinator.swift */; };
 		92012F0824B30D1F002303D0 /* AppCoordinator+FeatureCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92012F0724B30D1F002303D0 /* AppCoordinator+FeatureCoordinator.swift */; };
 		9201314F24B4E368002303D0 /* Appcoordinator+BuildConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9201314E24B4E368002303D0 /* Appcoordinator+BuildConfiguration.swift */; };
 		9201315124B4E3BC002303D0 /* BuildConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9201315024B4E3BC002303D0 /* BuildConfiguration.swift */; };
@@ -110,6 +114,10 @@
 		890F374CBAEFBDEFACC50A10 /* Pods-MainApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MainApp.debug.xcconfig"; path = "Target Support Files/Pods-MainApp/Pods-MainApp.debug.xcconfig"; sourceTree = "<group>"; };
 		8A76A33224CEB3EB00F02AD9 /* InitialScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialScreenViewController.swift; sourceTree = "<group>"; };
 		8A76A33324CEB3EB00F02AD9 /* InitialScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InitialScreenViewController.xib; sourceTree = "<group>"; };
+		8A76A33C24CECB7300F02AD9 /* InitialScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialScreenViewModel.swift; sourceTree = "<group>"; };
+		8A76A33E24CECBAE00F02AD9 /* InitialScreenProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialScreenProtocol.swift; sourceTree = "<group>"; };
+		8A76A34024CECC1E00F02AD9 /* InitialScreenCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialScreenCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		8A76A34324CED46F00F02AD9 /* InitialScreenCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialScreenCoordinator.swift; sourceTree = "<group>"; };
 		92012F0724B30D1F002303D0 /* AppCoordinator+FeatureCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppCoordinator+FeatureCoordinator.swift"; sourceTree = "<group>"; };
 		9201314E24B4E368002303D0 /* Appcoordinator+BuildConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Appcoordinator+BuildConfiguration.swift"; sourceTree = "<group>"; };
 		9201315024B4E3BC002303D0 /* BuildConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildConfiguration.swift; sourceTree = "<group>"; };
@@ -215,6 +223,10 @@
 			children = (
 				8A76A33224CEB3EB00F02AD9 /* InitialScreenViewController.swift */,
 				8A76A33324CEB3EB00F02AD9 /* InitialScreenViewController.xib */,
+				8A76A33C24CECB7300F02AD9 /* InitialScreenViewModel.swift */,
+				8A76A33E24CECBAE00F02AD9 /* InitialScreenProtocol.swift */,
+				8A76A34024CECC1E00F02AD9 /* InitialScreenCoordinatorProtocol.swift */,
+				8A76A34324CED46F00F02AD9 /* InitialScreenCoordinator.swift */,
 			);
 			path = Splash;
 			sourceTree = "<group>";
@@ -972,12 +984,14 @@
 				92913BEA248D13A3002D961D /* NetworkService.swift in Sources */,
 				920A35062499D61E00F2EABB /* Coordinator.swift in Sources */,
 				92D79F3124842E49004C4701 /* HomeNetwork.swift in Sources */,
+				8A76A34424CED46F00F02AD9 /* InitialScreenCoordinator.swift in Sources */,
 				92C77C5E24971765004C1D86 /* BasePath.swift in Sources */,
 				92C77BFE24937CFC004C1D86 /* MainApp+NavigationItem.swift in Sources */,
 				920539BB249BA31300AF938C /* Undefined.swift in Sources */,
 				92D79F432484DB93004C4701 /* SampleProfileViewController.swift in Sources */,
 				92D79E8A2483E534004C4701 /* AppDelegate.swift in Sources */,
 				92D79F112483E89A004C4701 /* SampleHomeDetailViewModel.swift in Sources */,
+				8A76A34124CECC1E00F02AD9 /* InitialScreenCoordinatorProtocol.swift in Sources */,
 				92C77CA5249760DF004C1D86 /* AppContext.swift in Sources */,
 				92D79F3324842E7A004C4701 /* SampleHomeDetailProtocol.swift in Sources */,
 				92D79E8C2483E534004C4701 /* SceneDelegate.swift in Sources */,
@@ -1000,10 +1014,12 @@
 				92C77C6824971985004C1D86 /* NetworkType.swift in Sources */,
 				8A76A33424CEB3EB00F02AD9 /* InitialScreenViewController.swift in Sources */,
 				92D79F0A2483E87D004C4701 /* SampleHomeViewModel.swift in Sources */,
+				8A76A33D24CECB7300F02AD9 /* InitialScreenViewModel.swift in Sources */,
 				92D79F4724850153004C4701 /* SampleProfileDetailProtocol.swift in Sources */,
 				92D79F3B2484DB61004C4701 /* SampleProfileCoordinator.swift in Sources */,
 				92D79F4C24850166004C4701 /* SampleProfileDetailViewController.swift in Sources */,
 				92D79F072483E873004C4701 /* SampleHomeViewController.swift in Sources */,
+				8A76A33F24CECBAE00F02AD9 /* InitialScreenProtocol.swift in Sources */,
 				92C77CA124974A83004C1D86 /* SampleNetwork.swift in Sources */,
 				92C77C9E249744CC004C1D86 /* SampleService.swift in Sources */,
 			);
