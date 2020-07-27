@@ -35,6 +35,8 @@ import UIKit
     
     private func setupTextField() {
         self.backgroundColor = UIColor(hex: FamiliTextFieldConstant.CommonColor.background.rawValue)
+        self.layer.cornerRadius = CGFloat(FamiliTextFieldConstant.CommonValue.cornerRadius.rawValue)
+        self.layer.borderWidth = CGFloat(FamiliTextFieldConstant.CommonValue.borderSize.rawValue)
     }
     
 }

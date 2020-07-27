@@ -19,4 +19,9 @@ enum FamiliTextFieldConstant {
         case background = "#F6F6F6FF"
         case placeholder = "#BDBDBDFF"
     }
+    
+    enum CommonValue: Int {
+        case borderSize = 1
+        case cornerRadius = 8
+    }
 }
