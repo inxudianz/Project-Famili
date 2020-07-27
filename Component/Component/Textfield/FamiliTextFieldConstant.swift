@@ -20,8 +20,12 @@ enum FamiliTextFieldConstant {
         case placeholder = "#BDBDBDFF"
     }
     
-    enum CommonValue: Int {
-        case borderSize = 1
-        case cornerRadius = 8
+    enum CommonValue {
+        static let borderSize = 1
+        static let cornerRadius = 8
+        static let height = 50
+        static let fontSize = 16
+        static let fontFamily = "Inter-Medium"
+        static let textLeading = 16
     }
 }
