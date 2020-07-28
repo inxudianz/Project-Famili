@@ -8,7 +8,7 @@
 
 import UIKit
 
-/** A Button progress bar
+/** Famili Button Template
 
 Create button with predefined style.
 How to use:
@@ -29,55 +29,41 @@ How to use:
         case noBackground = 4
     }
     
-    /// Style preset for the circle
-    @IBInspectable var style: Int = 0 {
+    /// Style preset for the button
+    @IBInspectable var style: Int {
         didSet {
             setStyle()
         }
     }
-    
-    /// View for Button
-    private var button = UIButton()
     
     //MARK: - Initialization
     /// Default init value with 0 and empty string
     override init(frame: CGRect) {
         self.style = 1
         super.init(frame: frame)
-        setupView()
+        self.setupView()
     }
     
     /// Default init value with 0 and empty string
     required init?(coder: NSCoder) {
         self.style = 1
         super.init(coder: coder)
-        setupView()
+        self.setupView()
     }
     
-    /** Programmatically initialize the circle
+    /** Programmatically initialize the button
             
-    Provide parameters required for the circle such as color, style, textDescription, initial value and the frame
+    Provide parameters required for the button such as style & title
             
     - parameters:
-        - color: A tuple containing color for both trailing and progress as UIColor
-        - style: A style corresponding the enum CircularProgressStyle for both the circle and the label
-        - textDescription: A string that will be displayed under the circle value
-        - initialValue: A initial value between 0 - 1 for the circle
-        - frame: A frame required for creating the circle view
+        - style: A style corresponding the enum ButtonStyle
+
      */
-//    init(color: (trailing: UIColor, progress: UIColor) = (.gray, .green),
-//         style: CircularProgressStyle = .normal,
-//         textDescription: String = "",
-//         initialValue: CGFloat = 0,
-//         frame: CGRect) {
-//        self.trailingColor = color.trailing
-//        self.progressColor = color.progress
-//        self.style = style.rawValue
-//        self.progressDesc = textDescription
-//        self.radius = 0
-//        super.init(frame: frame)
-//        setupView()
-//    }
+    init(style: ButtonStyle = .primary) {
+        self.style = style.rawValue
+        super.init(frame: .zero)
+        setupView()
+    }
     
     //MARK: - Interface Builder
     /// Update display for usage in Interface Builder
@@ -88,11 +74,12 @@ How to use:
     
     /// Setup the view
     private func setupView() {
-        setStyle()
-        button.addSubview(button)
+        let height = 51
+        self.frame.size.height = CGFloat(height)
+        self.setStyle()
     }
     
-    /// Set the style and also call sizeToFit() so that text frame will be adjusted
+    /// Set the style button
     private func setStyle() {
         if let style = ButtonStyle(rawValue: self.style) {
             switch style {
@@ -108,34 +95,38 @@ How to use:
         }
     }
     
+    /// Set primary view
     private func setViewPrimary() {
-        button.backgroundColor = #colorLiteral(red: 0, green: 0.7647058824, blue: 1, alpha: 1)
-        button.titleLabel?.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        self.backgroundColor = #colorLiteral(red: 0, green: 0.7647058824, blue: 1, alpha: 1)
+        self.tintColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         setComponentButton()
     }
     
+    /// Set secondary view
     private func setViewSecondary() {
-        button.backgroundColor = #colorLiteral(red: 0.9647058824, green: 0.9647058824, blue: 0.9647058824, alpha: 1)
-        button.titleLabel?.textColor = #colorLiteral(red: 0, green: 0.7647058824, blue: 1, alpha: 1)
+        self.backgroundColor = #colorLiteral(red: 0.9647058824, green: 0.9647058824, blue: 0.9647058824, alpha: 1)
+        self.tintColor = #colorLiteral(red: 0, green: 0.7647058824, blue: 1, alpha: 1)
         setComponentButton()
     }
     
+    /// Set disable view and set user interaction to false
     private func setViewDisabled() {
-        button.backgroundColor = #colorLiteral(red: 0.9647058824, green: 0.9647058824, blue: 0.9647058824, alpha: 1)
-        button.titleLabel?.textColor = #colorLiteral(red: 0.7411764706, green: 0.7411764706, blue: 0.7411764706, alpha: 1)
-        button.isUserInteractionEnabled = false
+        self.backgroundColor = #colorLiteral(red: 0.9647058824, green: 0.9647058824, blue: 0.9647058824, alpha: 1)
+        self.tintColor = #colorLiteral(red: 0.7411764706, green: 0.7411764706, blue: 0.7411764706, alpha: 1)
+        self.isUserInteractionEnabled = false
         setComponentButton()
     }
     
+    /// set no background view
     private func setViewNoBackground() {
-        button.titleLabel?.textColor = #colorLiteral(red: 0, green: 0.7647058824, blue: 1, alpha: 1)
-        button.titleLabel?.font = .systemFont(ofSize: 16)
+        self.tintColor = #colorLiteral(red: 0, green: 0.7647058824, blue: 1, alpha: 1)
+        self.titleLabel?.font = .systemFont(ofSize: 16)
     }
     
+    /// set component button
     private func setComponentButton() {
-        button.titleLabel?.text = "Button"
-        button.titleLabel?.font = .systemFont(ofSize: 16)
-        button.layer.cornerRadius = 10
-        button.layer.masksToBounds = true
+        self.titleLabel?.font = .systemFont(ofSize: 16)
+        self.layer.cornerRadius = 10
+        self.layer.masksToBounds = true
     }
 }
