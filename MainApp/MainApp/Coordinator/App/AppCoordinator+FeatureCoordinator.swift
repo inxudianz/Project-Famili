@@ -13,4 +13,7 @@ import UIKit
 enum CoordinatorFeature: String {
     case sampleHome
     case sampleProfile
+    case home
+    case profile
+    case auth
 }
