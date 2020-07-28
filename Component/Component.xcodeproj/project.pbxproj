@@ -14,6 +14,7 @@
 		92D79EC62483E553004C4701 /* Component.h in Headers */ = {isa = PBXBuildFile; fileRef = 92D79EB82483E553004C4701 /* Component.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		92D79F032483E85F004C4701 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D79F012483E85F004C4701 /* MasterViewController.swift */; };
 		92D79F042483E85F004C4701 /* MasterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92D79F022483E85F004C4701 /* MasterViewController.xib */; };
+		F558FB7A24CEC566001F54F5 /* FamiliButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F558FB7924CEC566001F54F5 /* FamiliButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		92D79F012483E85F004C4701 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		92D79F022483E85F004C4701 /* MasterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MasterViewController.xib; sourceTree = "<group>"; };
 		92D79F162483E98D004C4701 /* Coordinator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Coordinator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F558FB7924CEC566001F54F5 /* FamiliButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamiliButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 		92C77C0224937E7B004C1D86 /* Button */ = {
 			isa = PBXGroup;
 			children = (
+				F558FB7824CEC543001F54F5 /* FamiliButton */,
 				92C77C0324937E82004C1D86 /* DualButton */,
 			);
 			path = Button;
@@ -154,6 +157,14 @@
 			children = (
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		F558FB7824CEC543001F54F5 /* FamiliButton */ = {
+			isa = PBXGroup;
+			children = (
+				F558FB7924CEC566001F54F5 /* FamiliButton.swift */,
+			);
+			path = FamiliButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,6 +281,7 @@
 				92D79F032483E85F004C4701 /* MasterViewController.swift in Sources */,
 				92C77C0A249383CB004C1D86 /* CircularProgressView.swift in Sources */,
 				92C77C0524937EA1004C1D86 /* DualButton.swift in Sources */,
+				F558FB7A24CEC566001F54F5 /* FamiliButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
