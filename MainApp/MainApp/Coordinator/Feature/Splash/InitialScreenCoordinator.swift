@@ -28,6 +28,11 @@ class InitialScreenCoordinator: InitialScreenCoordinatorProtocol {
     }
     
     func gotoLogin() {
-        //blom ada ee eenya
+//        let vc = LoginViewController()
+//        let vm = LoginViewModel()
+//        vm.coordinator = self
+//        vm.view = vc
+//        vc.viewModel = vm
+//        navigationController?.pushViewController(vc, animated: true)
     }
 }
