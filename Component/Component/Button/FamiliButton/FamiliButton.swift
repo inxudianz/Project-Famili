@@ -96,21 +96,21 @@ How to use:
     }
     
     /// Set primary view
-    private func setViewPrimary() {
+    func setViewPrimary() {
         self.backgroundColor = #colorLiteral(red: 0, green: 0.7647058824, blue: 1, alpha: 1)
         self.tintColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         setComponentButton()
     }
     
     /// Set secondary view
-    private func setViewSecondary() {
+    func setViewSecondary() {
         self.backgroundColor = #colorLiteral(red: 0.9647058824, green: 0.9647058824, blue: 0.9647058824, alpha: 1)
         self.tintColor = #colorLiteral(red: 0, green: 0.7647058824, blue: 1, alpha: 1)
         setComponentButton()
     }
     
     /// Set disable view and set user interaction to false
-    private func setViewDisabled() {
+    func setViewDisabled() {
         self.backgroundColor = #colorLiteral(red: 0.9647058824, green: 0.9647058824, blue: 0.9647058824, alpha: 1)
         self.tintColor = #colorLiteral(red: 0.7411764706, green: 0.7411764706, blue: 0.7411764706, alpha: 1)
         self.isUserInteractionEnabled = false
@@ -118,7 +118,7 @@ How to use:
     }
     
     /// set no background view
-    private func setViewNoBackground() {
+    func setViewNoBackground() {
         self.tintColor = #colorLiteral(red: 0, green: 0.7647058824, blue: 1, alpha: 1)
         self.titleLabel?.font = .systemFont(ofSize: 16)
     }
