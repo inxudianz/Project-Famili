@@ -96,21 +96,21 @@ How to use:
     }
     
     /// Set primary view
-    func setViewPrimary() {
+    private func setViewPrimary() {
         self.backgroundColor = #colorLiteral(red: 0, green: 0.7647058824, blue: 1, alpha: 1)
         self.tintColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         setComponentButton()
     }
     
     /// Set secondary view
-    func setViewSecondary() {
+    private func setViewSecondary() {
         self.backgroundColor = #colorLiteral(red: 0.9647058824, green: 0.9647058824, blue: 0.9647058824, alpha: 1)
         self.tintColor = #colorLiteral(red: 0, green: 0.7647058824, blue: 1, alpha: 1)
         setComponentButton()
     }
     
     /// Set disable view and set user interaction to false
-    func setViewDisabled() {
+    private func setViewDisabled() {
         self.backgroundColor = #colorLiteral(red: 0.9647058824, green: 0.9647058824, blue: 0.9647058824, alpha: 1)
         self.tintColor = #colorLiteral(red: 0.7411764706, green: 0.7411764706, blue: 0.7411764706, alpha: 1)
         self.isUserInteractionEnabled = false
@@ -118,7 +118,7 @@ How to use:
     }
     
     /// set no background view
-    func setViewNoBackground() {
+    private func setViewNoBackground() {
         self.tintColor = #colorLiteral(red: 0, green: 0.7647058824, blue: 1, alpha: 1)
         self.titleLabel?.font = .systemFont(ofSize: 16)
     }
@@ -128,6 +128,17 @@ How to use:
         self.titleLabel?.font = .systemFont(ofSize: 16)
         self.layer.cornerRadius = 10
         self.layer.masksToBounds = true
+    }
+    
+    /// to set button enable or disable
+    func setButtonDisable(type: ButtonStyle, isDisable: Bool) {
+        if isDisable == false && type.rawValue == 1 {
+            setViewPrimary()
+        } else if isDisable == false && type.rawValue == 2 {
+            setViewSecondary()
+        } else if isDisable == true && (type.rawValue == 1 || type.rawValue == 2) {
+            setViewDisabled()
+        }
     }
 }
 
