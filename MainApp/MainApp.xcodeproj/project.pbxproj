@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E13ABB324D29384005AF3BD /* ProfileAsset.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E13ABB224D29384005AF3BD /* ProfileAsset.xcassets */; };
+		1EBF012A24D0A65F0098C24A /* ProfileLandingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBF012924D0A65F0098C24A /* ProfileLandingController.swift */; };
+		1EBF012C24D0A6A00098C24A /* ProfileLandingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBF012B24D0A6A00098C24A /* ProfileLandingViewModel.swift */; };
+		1EBF012E24D0A6B00098C24A /* ProfileLandingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBF012D24D0A6B00098C24A /* ProfileLandingProtocol.swift */; };
+		1EBF013424D0A7690098C24A /* ProfileLandingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBF013024D0A7690098C24A /* ProfileLandingCoordinator.swift */; };
+		1EBF013524D0A7690098C24A /* ProfileLandingCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBF013324D0A7690098C24A /* ProfileLandingCoordinatorProtocol.swift */; };
+		1EBF013A24D1D10E0098C24A /* ProfileLandingController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EBF012324D0A6130098C24A /* ProfileLandingController.xib */; };
+		1EBF014A24D1E5450098C24A /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBF014924D1E5450098C24A /* CustomTableViewCell.swift */; };
+		1EBF014C24D1E5510098C24A /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EBF014B24D1E5510098C24A /* CustomTableViewCell.xib */; };
 		92012F0824B30D1F002303D0 /* AppCoordinator+FeatureCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92012F0724B30D1F002303D0 /* AppCoordinator+FeatureCoordinator.swift */; };
 		9201314F24B4E368002303D0 /* Appcoordinator+BuildConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9201314E24B4E368002303D0 /* Appcoordinator+BuildConfiguration.swift */; };
 		9201315124B4E3BC002303D0 /* BuildConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9201315024B4E3BC002303D0 /* BuildConfiguration.swift */; };
@@ -104,6 +113,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1E13ABB224D29384005AF3BD /* ProfileAsset.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ProfileAsset.xcassets; sourceTree = "<group>"; };
+		1EBF012324D0A6130098C24A /* ProfileLandingController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileLandingController.xib; sourceTree = "<group>"; };
+		1EBF012924D0A65F0098C24A /* ProfileLandingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileLandingController.swift; sourceTree = "<group>"; };
+		1EBF012B24D0A6A00098C24A /* ProfileLandingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileLandingViewModel.swift; sourceTree = "<group>"; };
+		1EBF012D24D0A6B00098C24A /* ProfileLandingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileLandingProtocol.swift; sourceTree = "<group>"; };
+		1EBF013024D0A7690098C24A /* ProfileLandingCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileLandingCoordinator.swift; sourceTree = "<group>"; };
+		1EBF013324D0A7690098C24A /* ProfileLandingCoordinatorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileLandingCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		1EBF014924D1E5450098C24A /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		1EBF014B24D1E5510098C24A /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
 		3304A088087BD629641C29A2 /* Pods_MainAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MainAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		890F374CBAEFBDEFACC50A10 /* Pods-MainApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MainApp.debug.xcconfig"; path = "Target Support Files/Pods-MainApp/Pods-MainApp.debug.xcconfig"; sourceTree = "<group>"; };
 		92012F0724B30D1F002303D0 /* AppCoordinator+FeatureCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppCoordinator+FeatureCoordinator.swift"; sourceTree = "<group>"; };
@@ -313,6 +331,8 @@
 		923249A224C03FEF00FDFC3E /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				1EBF013024D0A7690098C24A /* ProfileLandingCoordinator.swift */,
+				1EBF013324D0A7690098C24A /* ProfileLandingCoordinatorProtocol.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -320,6 +340,12 @@
 		923249A324C03FF600FDFC3E /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				1EBF012324D0A6130098C24A /* ProfileLandingController.xib */,
+				1EBF012924D0A65F0098C24A /* ProfileLandingController.swift */,
+				1EBF012B24D0A6A00098C24A /* ProfileLandingViewModel.swift */,
+				1EBF012D24D0A6B00098C24A /* ProfileLandingProtocol.swift */,
+				1EBF014924D1E5450098C24A /* CustomTableViewCell.swift */,
+				1EBF014B24D1E5510098C24A /* CustomTableViewCell.xib */,
 				923249AB24C0406B00FDFC3E /* Resources */,
 			);
 			path = Profile;
@@ -378,6 +404,7 @@
 		923249AB24C0406B00FDFC3E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1E13ABB224D29384005AF3BD /* ProfileAsset.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -843,11 +870,14 @@
 			files = (
 				92D79E962483E535004C4701 /* LaunchScreen.storyboard in Resources */,
 				92D79E932483E535004C4701 /* Main.xcassets in Resources */,
+				1E13ABB324D29384005AF3BD /* ProfileAsset.xcassets in Resources */,
 				92D79F0F2483E88C004C4701 /* SampleHomeDetailViewController.xib in Resources */,
 				92B90E502486BB1E00C59DDF /* Localizable.strings in Resources */,
 				92D79F442484DB93004C4701 /* SampleProfileViewController.xib in Resources */,
 				92D79F082483E873004C4701 /* SampleHomeViewController.xib in Resources */,
 				92D79F4D24850166004C4701 /* SampleProfileDetailViewController.xib in Resources */,
+				1EBF014C24D1E5510098C24A /* CustomTableViewCell.xib in Resources */,
+				1EBF013A24D1D10E0098C24A /* ProfileLandingController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -962,11 +992,15 @@
 				920539BB249BA31300AF938C /* Undefined.swift in Sources */,
 				92D79F432484DB93004C4701 /* SampleProfileViewController.swift in Sources */,
 				92D79E8A2483E534004C4701 /* AppDelegate.swift in Sources */,
+				1EBF012E24D0A6B00098C24A /* ProfileLandingProtocol.swift in Sources */,
+				1EBF012A24D0A65F0098C24A /* ProfileLandingController.swift in Sources */,
 				92D79F112483E89A004C4701 /* SampleHomeDetailViewModel.swift in Sources */,
 				92C77CA5249760DF004C1D86 /* AppContext.swift in Sources */,
 				92D79F3324842E7A004C4701 /* SampleHomeDetailProtocol.swift in Sources */,
 				92D79E8C2483E534004C4701 /* SceneDelegate.swift in Sources */,
 				92913BCE248D0B8A002D961D /* EmptyResponse.swift in Sources */,
+				1EBF013524D0A7690098C24A /* ProfileLandingCoordinatorProtocol.swift in Sources */,
+				1EBF012C24D0A6A00098C24A /* ProfileLandingViewModel.swift in Sources */,
 				92D79F492485015C004C4701 /* SampleProfileDetailViewModel.swift in Sources */,
 				92C77CA3249754AD004C1D86 /* HTTPTask.swift in Sources */,
 				92C77C63249718CE004C1D86 /* SamplePath.swift in Sources */,
@@ -978,6 +1012,7 @@
 				92D79F382484DB3E004C4701 /* ProfileNetwork.swift in Sources */,
 				92B90E582486C72700C59DDF /* MainApp+String.swift in Sources */,
 				92D79F2924841936004C4701 /* SampleHomeCoordinator.swift in Sources */,
+				1EBF014A24D1E5450098C24A /* CustomTableViewCell.swift in Sources */,
 				92D79F402484DB87004C4701 /* SampleProfileViewModel.swift in Sources */,
 				9201314F24B4E368002303D0 /* Appcoordinator+BuildConfiguration.swift in Sources */,
 				92C77BF82493798F004C1D86 /* SampleModel.swift in Sources */,
@@ -987,6 +1022,7 @@
 				92D79F4724850153004C4701 /* SampleProfileDetailProtocol.swift in Sources */,
 				92D79F3B2484DB61004C4701 /* SampleProfileCoordinator.swift in Sources */,
 				92D79F4C24850166004C4701 /* SampleProfileDetailViewController.swift in Sources */,
+				1EBF013424D0A7690098C24A /* ProfileLandingCoordinator.swift in Sources */,
 				92D79F072483E873004C4701 /* SampleHomeViewController.swift in Sources */,
 				92C77CA124974A83004C1D86 /* SampleNetwork.swift in Sources */,
 				92C77C9E249744CC004C1D86 /* SampleService.swift in Sources */,
@@ -1155,7 +1191,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WPQ9HAVPNV;
+				DEVELOPMENT_TEAM = U795CJ74H6;
 				INFOPLIST_FILE = MainApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1174,7 +1210,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WPQ9HAVPNV;
+				DEVELOPMENT_TEAM = U795CJ74H6;
 				INFOPLIST_FILE = MainApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
