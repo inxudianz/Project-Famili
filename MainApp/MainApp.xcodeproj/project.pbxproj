@@ -26,6 +26,9 @@
 		9227A24824CFE479004F7952 /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9227A23F24CFE46E004F7952 /* Inter-Regular.ttf */; };
 		9227A24924CFE479004F7952 /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9227A23C24CFE46E004F7952 /* Inter-SemiBold.ttf */; };
 		9227A24A24CFE479004F7952 /* Inter-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9227A23B24CFE46E004F7952 /* Inter-Thin.ttf */; };
+
+		9227A2D524D28A0C004F7952 /* AppCoordinator+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9227A2D424D28A0C004F7952 /* AppCoordinator+Firebase.swift */; };
+		9227A34124D293D5004F7952 /* FirebaseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9227A34024D293D5004F7952 /* FirebaseHandler.swift */; };
 		92913BCE248D0B8A002D961D /* EmptyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92913BCD248D0B8A002D961D /* EmptyResponse.swift */; };
 		92913BEA248D13A3002D961D /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92913BE9248D13A3002D961D /* NetworkService.swift */; };
 		92B90E502486BB1E00C59DDF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 92B90E522486BB1E00C59DDF /* Localizable.strings */; };
@@ -134,6 +137,8 @@
 		9227A23F24CFE46E004F7952 /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
 		9227A24024CFE46E004F7952 /* Inter-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraBold.ttf"; sourceTree = "<group>"; };
 		9227A24124CFE46E004F7952 /* Inter-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraLight.ttf"; sourceTree = "<group>"; };
+		9227A2D424D28A0C004F7952 /* AppCoordinator+Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppCoordinator+Firebase.swift"; sourceTree = "<group>"; };
+		9227A34024D293D5004F7952 /* FirebaseHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseHandler.swift; sourceTree = "<group>"; };
 		92324BAE24C6D5E000FDFC3E /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		92913BB8248D07C8002D961D /* Component.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Component.xcodeproj; path = ../Component/Component.xcodeproj; sourceTree = "<group>"; };
 		92913BCD248D0B8A002D961D /* EmptyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyResponse.swift; sourceTree = "<group>"; };
@@ -280,6 +285,14 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		9227A33F24D293BE004F7952 /* Handler */ = {
+			isa = PBXGroup;
+			children = (
+				9227A34024D293D5004F7952 /* FirebaseHandler.swift */,
+			);
+			path = Handler;
+			sourceTree = "<group>";
+		};
 		923245CE24BB306A00FDFC3E /* Sample */ = {
 			isa = PBXGroup;
 			children = (
@@ -300,6 +313,10 @@
 		9232499224C03DF500FDFC3E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9227A33F24D293BE004F7952 /* Handler */,
+				92D79E892483E534004C4701 /* AppDelegate.swift */,
+				92D79E8B2483E534004C4701 /* SceneDelegate.swift */,
+				92D79E972483E535004C4701 /* Info.plist */,
 				9232499524C03E0A00FDFC3E /* Fonts */,
 				92D79E922483E535004C4701 /* Main.xcassets */,
 			);
@@ -1019,6 +1036,7 @@
 				92C77BF82493798F004C1D86 /* SampleModel.swift in Sources */,
 				92C77BFC2493799B004C1D86 /* SampleResponse.swift in Sources */,
 				92C77C6824971985004C1D86 /* NetworkType.swift in Sources */,
+				9227A34124D293D5004F7952 /* FirebaseHandler.swift in Sources */,
 				92D79F0A2483E87D004C4701 /* SampleHomeViewModel.swift in Sources */,
 				92D79F4724850153004C4701 /* SampleProfileDetailProtocol.swift in Sources */,
 				92D79F3B2484DB61004C4701 /* SampleProfileCoordinator.swift in Sources */,
@@ -1192,7 +1210,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WPQ9HAVPNV;
-				INFOPLIST_FILE = MainApp/Info.plist;
+				INFOPLIST_FILE = MainApp/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1211,7 +1229,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WPQ9HAVPNV;
-				INFOPLIST_FILE = MainApp/Info.plist;
+				INFOPLIST_FILE = MainApp/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
