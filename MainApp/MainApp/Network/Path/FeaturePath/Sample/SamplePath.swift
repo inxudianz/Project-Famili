@@ -9,6 +9,5 @@
 import Foundation
 
 enum SamplePath: String {
-    case sample = "login/v1/"
-    case test = "test/v1/"
+    case sample = "sample/v1/"
 }

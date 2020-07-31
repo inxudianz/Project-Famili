@@ -20,7 +20,7 @@ struct SampleData: Encodable {
 extension SampleService: NetworkType {
     
     var baseURL: URL {
-        return URL(string: BasePath.mock.rawValue)!
+        return URL(string: BasePath.endpoint.rawValue)!
     }
     
     var path: String {
@@ -28,7 +28,7 @@ extension SampleService: NetworkType {
         case .sampleRequest:
             return SamplePath.sample.rawValue + SampleSubPath.information.rawValue
         case .testRequest:
-            return SamplePath.test.rawValue + SampleSubPath.information.rawValue
+            return SamplePath.sample.rawValue + SampleSubPath.test.rawValue
         }
     }
     

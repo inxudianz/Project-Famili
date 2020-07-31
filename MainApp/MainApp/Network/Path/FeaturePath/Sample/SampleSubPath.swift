@@ -10,4 +10,5 @@ import Foundation
 
 enum SampleSubPath: String {
     case information = "information"
+    case test = "test"
 }
