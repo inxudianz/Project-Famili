@@ -29,7 +29,7 @@ class SampleHomeViewController: MasterViewController, SampleHomeViewProtocol {
     }
     
     @IBAction func changeLang(_ sender: Any) {
-        viewModel?.updateLabelObservable()
+        viewModel?.updateLabel()
     }
     
     

@@ -9,6 +9,22 @@
 import Foundation
 
 extension SampleHomeViewModel: SampleNetworkDelegate {
+    func didSuccessSampleGet(response: TestResponse) {
+        Log.info(message: response)
+    }
+    
+    func didFailedSampleGet(error: Error) {
+        Log.info(message: error.localizedDescription)
+    }
+    
+    func didSuccessSamplePost() {
+        Log.info(message: "Success Post")
+    }
+    
+    func didFailedSamplePost(error: Error) {
+        Log.info(message: "Failed Post " + error.localizedDescription)
+    }
+    
     func didSuccessRetrieveID(response: SampleResponse) {
         view?.updateView(text: response.name!)
         Log.info(message: response)

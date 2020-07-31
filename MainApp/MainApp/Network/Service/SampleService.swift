@@ -11,7 +11,8 @@ import Alamofire
 
 enum SampleService {
     case sampleRequest
-    case testRequest(data: SampleModel.Test)
+    case testRequest
+    case getTestRequest
 }
 
 struct SampleData: Encodable {
@@ -20,30 +21,33 @@ struct SampleData: Encodable {
 extension SampleService: NetworkType {
     
     var baseURL: URL {
-        return URL(string: BasePath.endpoint.rawValue)!
+        return URL(string: BasePath.mock.rawValue)!
     }
     
     var path: String {
         switch self {
         case .sampleRequest:
             return SamplePath.sample.rawValue + SampleSubPath.information.rawValue
-        case .testRequest:
-            return SamplePath.sample.rawValue + SampleSubPath.test.rawValue
+        case .testRequest,
+             .getTestRequest:
+            return SamplePath.sample.rawValue + SampleSubPath.test.rawValue + BasePath.Suffix.json.rawValue
         }
     }
     
     var method: HTTPMethod {
         switch self {
-        case .sampleRequest:
+        case .sampleRequest,
+             .getTestRequest:
             return .get
         case .testRequest:
-            return .post
+            return .put
         }
     }
     
     var task: HTTPTask {
         switch self {
-        case .sampleRequest:
+        case .sampleRequest,
+             .getTestRequest:
             return .plainRequest
         case .testRequest:
             return .parameterRequest

@@ -14,5 +14,7 @@ struct SampleResponse: Codable {
 }
 
 struct TestResponse: Codable {
-    let result: String?
+    let name: String?
+    let age: Int?
+    let desc: String?
 }

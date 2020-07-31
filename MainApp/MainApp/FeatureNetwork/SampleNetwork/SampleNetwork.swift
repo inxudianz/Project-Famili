@@ -12,6 +12,12 @@ import RxSwift
 protocol SampleNetworkDelegate: class {
     func didSuccessRetrieveID(response: SampleResponse)
     func didFailedRetrieveID(error: Error)
+    
+    func didSuccessSamplePost()
+    func didFailedSamplePost(error: Error)
+    
+    func didSuccessSampleGet(response: TestResponse)
+    func didFailedSampleGet(error: Error)
 }
 
 protocol SampleNetworkProtocol {
@@ -19,6 +25,8 @@ protocol SampleNetworkProtocol {
     
     func retrieveID()
     func retrieveIDObservable() -> Observable<SampleResponse>
+    func samplePost()
+    func sampleGet()
 }
 
 class SampleNetwork: SampleNetworkProtocol {
@@ -44,6 +52,29 @@ class SampleNetwork: SampleNetworkProtocol {
     
     func retrieveIDObservable() -> Observable<SampleResponse> {
         return networkService.requestObservable(SampleService.sampleRequest, EmptyModel(), SampleResponse.self)
+    }
+    
+    func samplePost() {
+        let sampleModelTest = SampleModel.Test(name: "Will", age: 21, desc: "a human")
+        networkService.request(SampleService.testRequest, sampleModelTest, EmptyResponse.self) { [weak self] (result) in
+            switch result {
+            case .success:
+                self?.sampleNetworkDelegate?.didSuccessSamplePost()
+            case .failure(let error):
+                self?.sampleNetworkDelegate?.didFailedSamplePost(error: error)
+            }
+        }
+    }
+    
+    func sampleGet() {
+        networkService.request(SampleService.getTestRequest, EmptyModel(), TestResponse.self) { [weak self] (result) in
+            switch result {
+            case .success(let response):
+                self?.sampleNetworkDelegate?.didSuccessSampleGet(response: response)
+            case .failure(let error):
+                self?.sampleNetworkDelegate?.didFailedSampleGet(error: error)
+            }
+        }
     }
     
 }
