@@ -11,6 +11,11 @@ import Alamofire
 
 enum SampleService {
     case sampleRequest
+    case testRequest(data: SampleModel.Test)
+}
+
+struct SampleData: Encodable {
+    let test: SampleModel.Test
 }
 extension SampleService: NetworkType {
     
@@ -22,6 +27,8 @@ extension SampleService: NetworkType {
         switch self {
         case .sampleRequest:
             return SamplePath.sample.rawValue + SampleSubPath.information.rawValue
+        case .testRequest:
+            return SamplePath.test.rawValue + SampleSubPath.information.rawValue
         }
     }
     
@@ -29,6 +36,8 @@ extension SampleService: NetworkType {
         switch self {
         case .sampleRequest:
             return .get
+        case .testRequest:
+            return .post
         }
     }
     
@@ -36,11 +45,9 @@ extension SampleService: NetworkType {
         switch self {
         case .sampleRequest:
             return .plainRequest
+        case .testRequest:
+            return .parameterRequest
         }
-    }
-    
-    var parameters: NetworkParameters {
-        return [:]
     }
     
     var headers: HTTPHeaders {

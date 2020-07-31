@@ -12,7 +12,10 @@ import RxSwift
 
 struct NetworkService {
     
-    func request<T: NetworkType, R: Codable>(_ type: T, _ responseType: R.Type, completion: @escaping (Result<R, AFError>) -> Void ) {
+    func request<T: NetworkType, R: Decodable, E: Encodable>(_ type: T,
+                                                             _ entities: E,
+                                                             _ responseType: R.Type,
+                                                             completion: @escaping (Result<R, AFError>) -> Void ) {
         let combinedURL = type.baseURL.absoluteString + type.path
         switch type.task {
         case .plainRequest:
@@ -27,8 +30,8 @@ struct NetworkService {
                         completion(.failure(error))
                     }
             }
-        case .parameterRequest(let parameters):
-            let request = AF.request(combinedURL, method: type.method, parameters: parameters, encoder: JSONParameterEncoder.default, headers: type.headers)
+        case .parameterRequest:
+            let request = AF.request(combinedURL, method: type.method, parameters: entities, encoder: JSONParameterEncoder.default, headers: type.headers)
             request
                 .validate()
                 .responseDecodable(of: responseType) { (response) in
@@ -43,7 +46,9 @@ struct NetworkService {
     }
     
     @discardableResult
-    func requestObservable<T: NetworkType, R: Codable>(_ type: T, _ responseType: R.Type) -> Observable<R> {
+    func requestObservable<T: NetworkType, R: Decodable, E: Encodable>(_ type: T,
+                                                                       _ entities: E,
+                                                                       _ responseType: R.Type) -> Observable<R> {
         let combinedURL = type.baseURL.absoluteString + type.path
         return Observable.create { (observer) -> Disposable in
             switch type.task {
@@ -60,8 +65,8 @@ struct NetworkService {
                         }
                         observer.onCompleted()
                 }
-            case .parameterRequest(let parameters):
-                let request = AF.request(combinedURL, method: type.method, parameters: parameters, encoder: JSONParameterEncoder.default, headers: type.headers)
+            case .parameterRequest:
+                let request = AF.request(combinedURL, method: type.method, parameters: entities, encoder: JSONParameterEncoder.default, headers: type.headers)
                 request
                     .validate()
                     .responseDecodable(of: responseType) { (response) in

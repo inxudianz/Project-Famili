@@ -10,5 +10,5 @@ import Foundation
 
 enum HTTPTask {
     case plainRequest
-    case parameterRequest(parameter: NetworkParameters)
+    case parameterRequest
 }
