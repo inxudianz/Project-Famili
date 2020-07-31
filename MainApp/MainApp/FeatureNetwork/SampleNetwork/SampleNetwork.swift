@@ -32,7 +32,7 @@ class SampleNetwork: SampleNetworkProtocol {
     }
     
     func retrieveID() {
-        networkService.request(SampleService.sampleRequest, SampleResponse.self) { [weak self] (result) in
+        networkService.request(SampleService.sampleRequest, EmptyModel(), SampleResponse.self) { [weak self] (result) in
             switch result {
             case .success(let response):
                 self?.sampleNetworkDelegate?.didSuccessRetrieveID(response: response)
@@ -43,7 +43,7 @@ class SampleNetwork: SampleNetworkProtocol {
     }
     
     func retrieveIDObservable() -> Observable<SampleResponse> {
-        return networkService.requestObservable(SampleService.sampleRequest, SampleResponse.self)
+        return networkService.requestObservable(SampleService.sampleRequest, EmptyModel(), SampleResponse.self)
     }
     
 }

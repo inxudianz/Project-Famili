@@ -12,3 +12,7 @@ struct SampleResponse: Codable {
     var name: String?
     var id: Int?
 }
+
+struct TestResponse: Codable {
+    let result: String?
+}
