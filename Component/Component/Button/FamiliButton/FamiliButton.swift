@@ -22,7 +22,7 @@ How to use:
     
     //MARK: - Property
     /// Style available for famili Button
-    enum ButtonStyle: Int {
+    public enum ButtonStyle: Int {
         case primary = 1
         case secondary = 2
         case disabled = 3
@@ -131,7 +131,7 @@ How to use:
     }
     
     /// to set button enable or disable
-    func setButtonDisable(type: ButtonStyle, isDisable: Bool) {
+    public func setButtonDisable(type: ButtonStyle, isDisable: Bool) {
         if isDisable == false && type.rawValue == 1 {
             setViewPrimary()
         } else if isDisable == false && type.rawValue == 2 {
