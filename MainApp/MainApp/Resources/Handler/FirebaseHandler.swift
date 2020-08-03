@@ -22,5 +22,18 @@ class FirebaseHandler {
                 completion(result, error)
             }
         }
+        
+        @discardableResult
+        public static func addListener(completion: @escaping AuthStateDidChangeListenerBlock) -> AuthStateDidChangeListenerHandle {
+            let handler = Auth.auth().addStateDidChangeListener { (auth, user) in
+                completion(auth, user)
+            }
+            
+            return handler
+        }
+        
+        public static func removeListener(handler: AuthStateDidChangeListenerHandle) {
+            Auth.auth().removeStateDidChangeListener(handler)
+        }
     }
 }
