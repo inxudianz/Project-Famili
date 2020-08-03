@@ -12,6 +12,7 @@ def mainModule
   pod "Alamofire"
   pod "RxSwift"
   pod "RxCocoa"
+  pod "GoogleSignIn"
 end
 
 # Target
