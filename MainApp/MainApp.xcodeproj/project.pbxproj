@@ -26,8 +26,6 @@
 		9227A24824CFE479004F7952 /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9227A23F24CFE46E004F7952 /* Inter-Regular.ttf */; };
 		9227A24924CFE479004F7952 /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9227A23C24CFE46E004F7952 /* Inter-SemiBold.ttf */; };
 		9227A24A24CFE479004F7952 /* Inter-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9227A23B24CFE46E004F7952 /* Inter-Thin.ttf */; };
-
-		9227A2D524D28A0C004F7952 /* AppCoordinator+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9227A2D424D28A0C004F7952 /* AppCoordinator+Firebase.swift */; };
 		9227A34124D293D5004F7952 /* FirebaseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9227A34024D293D5004F7952 /* FirebaseHandler.swift */; };
 		9227A36124D42937004F7952 /* EmptyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9227A36024D42937004F7952 /* EmptyModel.swift */; };
 		92913BCE248D0B8A002D961D /* EmptyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92913BCD248D0B8A002D961D /* EmptyResponse.swift */; };
@@ -138,7 +136,6 @@
 		9227A23F24CFE46E004F7952 /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
 		9227A24024CFE46E004F7952 /* Inter-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraBold.ttf"; sourceTree = "<group>"; };
 		9227A24124CFE46E004F7952 /* Inter-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraLight.ttf"; sourceTree = "<group>"; };
-		9227A2D424D28A0C004F7952 /* AppCoordinator+Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppCoordinator+Firebase.swift"; sourceTree = "<group>"; };
 		9227A34024D293D5004F7952 /* FirebaseHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseHandler.swift; sourceTree = "<group>"; };
 		9227A36024D42937004F7952 /* EmptyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyModel.swift; sourceTree = "<group>"; };
 		92324BAE24C6D5E000FDFC3E /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
@@ -316,10 +313,10 @@
 			isa = PBXGroup;
 			children = (
 				9227A33F24D293BE004F7952 /* Handler */,
+				9232499524C03E0A00FDFC3E /* Fonts */,
 				92D79E892483E534004C4701 /* AppDelegate.swift */,
 				92D79E8B2483E534004C4701 /* SceneDelegate.swift */,
 				92D79E972483E535004C4701 /* Info.plist */,
-				9232499524C03E0A00FDFC3E /* Fonts */,
 				92D79E922483E535004C4701 /* Main.xcassets */,
 			);
 			path = Resources;
@@ -625,10 +622,7 @@
 				92B90E4C2486BA8F00C59DDF /* Localization */,
 				92D79F4E24852CB7004C4701 /* Debug */,
 				9232499224C03DF500FDFC3E /* Resources */,
-				92D79E892483E534004C4701 /* AppDelegate.swift */,
-				92D79E8B2483E534004C4701 /* SceneDelegate.swift */,
 				92D79E942483E535004C4701 /* LaunchScreen.storyboard */,
-				92D79E972483E535004C4701 /* Info.plist */,
 			);
 			path = MainApp;
 			sourceTree = "<group>";
