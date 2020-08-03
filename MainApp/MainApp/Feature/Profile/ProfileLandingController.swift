@@ -20,7 +20,7 @@ class ProfileLandingController: MasterViewController, ProfileLandingViewProtocol
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.tableViewSettings.register(CustomTableViewCell.self, forCellReuseIdentifier: "customCell")
+        
         self.tableViewSettings.delegate = self
         self.tableViewSettings.dataSource = self
         
@@ -84,5 +84,12 @@ class ProfileLandingController: MasterViewController, ProfileLandingViewProtocol
             cell.cellContent(cellImage: "", cellText: "")
         }
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 0 {
+            if indexPath.row == 0 { viewModel?.navigateToEditProfile() }
+        }
+       
     }
 }

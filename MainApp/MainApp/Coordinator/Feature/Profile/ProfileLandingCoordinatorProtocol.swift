@@ -9,5 +9,5 @@
 import Foundation
 
 protocol ProfileLandingCoordinatorProtocol: Coordinator {
-    func getProfile()
+    func getEditProfile()
 }

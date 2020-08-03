@@ -22,6 +22,6 @@ class ProfileLandingViewModel: ProfileLandingViewModelProtocol {
     weak var coordinator: ProfileLandingCoordinatorProtocol?
     
     func navigateToEditProfile() {
-        coordinator?.getProfile()
+        coordinator?.getEditProfile()
     }
 }
