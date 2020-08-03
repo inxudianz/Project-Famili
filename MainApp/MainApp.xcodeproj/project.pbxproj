@@ -28,6 +28,7 @@
 		9227A24A24CFE479004F7952 /* Inter-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9227A23B24CFE46E004F7952 /* Inter-Thin.ttf */; };
 		9227A34124D293D5004F7952 /* FirebaseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9227A34024D293D5004F7952 /* FirebaseHandler.swift */; };
 		9227A36124D42937004F7952 /* EmptyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9227A36024D42937004F7952 /* EmptyModel.swift */; };
+		9227A38424D7B3D0004F7952 /* AppCoordinator+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9227A38324D7B3D0004F7952 /* AppCoordinator+Firebase.swift */; };
 		92913BCE248D0B8A002D961D /* EmptyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92913BCD248D0B8A002D961D /* EmptyResponse.swift */; };
 		92913BEA248D13A3002D961D /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92913BE9248D13A3002D961D /* NetworkService.swift */; };
 		92B90E502486BB1E00C59DDF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 92B90E522486BB1E00C59DDF /* Localizable.strings */; };
@@ -138,6 +139,7 @@
 		9227A24124CFE46E004F7952 /* Inter-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraLight.ttf"; sourceTree = "<group>"; };
 		9227A34024D293D5004F7952 /* FirebaseHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseHandler.swift; sourceTree = "<group>"; };
 		9227A36024D42937004F7952 /* EmptyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyModel.swift; sourceTree = "<group>"; };
+		9227A38324D7B3D0004F7952 /* AppCoordinator+Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppCoordinator+Firebase.swift"; sourceTree = "<group>"; };
 		92324BAE24C6D5E000FDFC3E /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		92913BB8248D07C8002D961D /* Component.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Component.xcodeproj; path = ../Component/Component.xcodeproj; sourceTree = "<group>"; };
 		92913BCD248D0B8A002D961D /* EmptyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyResponse.swift; sourceTree = "<group>"; };
@@ -235,6 +237,7 @@
 				9201314E24B4E368002303D0 /* Appcoordinator+BuildConfiguration.swift */,
 				9201315024B4E3BC002303D0 /* BuildConfiguration.swift */,
 				92012F0724B30D1F002303D0 /* AppCoordinator+FeatureCoordinator.swift */,
+				9227A38324D7B3D0004F7952 /* AppCoordinator+Firebase.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -1035,6 +1038,7 @@
 				92C77BFC2493799B004C1D86 /* SampleResponse.swift in Sources */,
 				92C77C6824971985004C1D86 /* NetworkType.swift in Sources */,
 				9227A34124D293D5004F7952 /* FirebaseHandler.swift in Sources */,
+				9227A38424D7B3D0004F7952 /* AppCoordinator+Firebase.swift in Sources */,
 				92D79F0A2483E87D004C4701 /* SampleHomeViewModel.swift in Sources */,
 				92D79F4724850153004C4701 /* SampleProfileDetailProtocol.swift in Sources */,
 				92D79F3B2484DB61004C4701 /* SampleProfileCoordinator.swift in Sources */,
