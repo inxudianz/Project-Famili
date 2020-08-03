@@ -43,7 +43,7 @@ class SampleHomeViewModel: SampleHomeViewModelProtocol{
     }
     
     func updateLabel() {
-        network?.retrieveID()
+        network?.sampleGet()
     }
     
     func updateLabelObservable() {

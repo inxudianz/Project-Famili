@@ -41,6 +41,7 @@ class AppCoordinator<build: BuildConfiguration>: Coordinator {
     
     // MARK: - Function
     func start() {
+        //initializeFirebase()
         window?.makeKeyAndVisible()
     }
 }
