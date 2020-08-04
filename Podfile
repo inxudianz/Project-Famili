@@ -13,6 +13,7 @@ def mainModule
   pod "RxSwift"
   pod "RxCocoa"
   pod "GoogleSignIn"
+  pod "FBSDKLoginKit"
 end
 
 # Target
