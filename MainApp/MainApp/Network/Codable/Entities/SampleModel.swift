@@ -8,6 +8,10 @@
 
 import Foundation
 
-struct SampleModel: Codable {
-    
+struct SampleModel: Encodable {
+    struct Test: Encodable {
+        let name: String?
+        let age: Int?
+        let desc: String?
+    }
 }

@@ -81,7 +81,15 @@ class SampleNetworkMock: SampleNetworkProtocol {
         return returnValue
     }
     
+    var isSamplePost = false
+    func samplePost() {
+        isSamplePost = true
+    }
     
+    var isSampleGet = false
+    func sampleGet() {
+        isSampleGet = true
+    }
 }
 
 class HomeTests: QuickSpec {
