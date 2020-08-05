@@ -15,9 +15,6 @@ enum SampleService {
     case getTestRequest
 }
 
-struct SampleData: Encodable {
-    let test: SampleModel.Test
-}
 extension SampleService: NetworkType {
     
     var baseURL: URL {
