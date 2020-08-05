@@ -24,6 +24,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 .start()
         }
     }
+    
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+        guard let url = URLContexts.first?.url else { return }
+        
+        FacebookSDKHandler.openURLContext(url: url)
+    }
 
     func sceneDidDisconnect(_ scene: UIScene) {}
 

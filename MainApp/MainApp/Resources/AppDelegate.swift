@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import FBSDKCoreKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        FacebookSDKHandler.launch(application: application, launchOptions: launchOptions)
         return true
     }
 
@@ -24,10 +26,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     @available(iOS 9.0, *)
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-        return GoogleSignInHandler.handleURL(url: url)
+        GoogleSDKHandler.Authentication.handleURL(url: url)
+        FacebookSDKHandler.handleURL(app: app, options: options, url: url)
+        return true
     }
     
     func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
-        return GoogleSignInHandler.handleURL(url: url)
+        GoogleSDKHandler.Authentication.handleURL(url: url)
+        return true
     }
 }
+    

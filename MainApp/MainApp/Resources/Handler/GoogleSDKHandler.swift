@@ -9,20 +9,31 @@
 import UIKit
 import GoogleSignIn
 
-class GoogleSignInHandler: NSObject {
-    public static func handleURL(url: URL) -> Bool {
-        return GIDSignIn.sharedInstance().handle(url)
+class GoogleSDKHandler {
+    // MARK: - Component
+    class Component {
+        public static func button() -> GIDSignInButton {
+            let googleButton = GIDSignInButton()
+            return googleButton
+        }
     }
     
-    public static func present(vc: UIViewController, isSigning: Bool = false) {
-        GIDSignIn.sharedInstance()?.presentingViewController = vc
-        if isSigning {
-            GIDSignIn.sharedInstance().signIn()
+    // MARK: - Authentication
+    class Authentication: NSObject {
+        public static func handleURL(url: URL) {
+            GIDSignIn.sharedInstance().handle(url)
+        }
+        
+        public static func present(vc: UIViewController, isSigning: Bool = false) {
+            GIDSignIn.sharedInstance()?.presentingViewController = vc
+            if isSigning {
+                GIDSignIn.sharedInstance().signIn()
+            }
         }
     }
 }
 
-extension GoogleSignInHandler: GIDSignInDelegate {
+extension GoogleSDKHandler.Authentication: GIDSignInDelegate {
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         if let error = error {
             Log.error(message: error.localizedDescription)
@@ -32,7 +43,6 @@ extension GoogleSignInHandler: GIDSignInDelegate {
         guard let authentication = user.authentication else { return }
         
         let credential = FirebaseHandler.getGoogleCredential(idToken: authentication.idToken, accessToken: authentication.accessToken)
-        
         
     }
     

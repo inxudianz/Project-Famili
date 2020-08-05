@@ -12,5 +12,7 @@ import GoogleSignIn
 extension AppCoordinator {
     func createGoogleInstance() {
         GIDSignIn.sharedInstance().clientID = FirebaseHandler.getClientID()
+        weak var googleSignInDelegate: GoogleSDKHandler.Authentication?
+        GIDSignIn.sharedInstance().delegate = googleSignInDelegate
     }
 }

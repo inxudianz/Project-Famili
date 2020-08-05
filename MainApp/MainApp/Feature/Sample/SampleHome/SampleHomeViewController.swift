@@ -47,6 +47,7 @@ class SampleHomeViewController: MasterViewController, SampleHomeViewProtocol {
         indicator.isHidden = true
         setupRx()
         viewModel?.viewDidLoad()
+        createButton()
     }
     
     // MARK: - Method
@@ -80,6 +81,16 @@ class SampleHomeViewController: MasterViewController, SampleHomeViewProtocol {
     
     func setNavigationTitle(title: String) {
         navigationItem.title = title + " | Random: " +  String(Int.random(in: 1...10))
+    }
+    
+    func createButton() {
+        let button = FacebookSDKHandler.Component.button()
+        let button2 = GoogleSDKHandler.Component.button()
+        button.center = view.center
+        button2.center = view.center
+        
+        GoogleSDKHandler.Authentication.present(vc: self, isSigning: true)
+        view.addSubview(button2)
     }
 }
 
