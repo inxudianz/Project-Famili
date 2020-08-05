@@ -47,7 +47,7 @@ class SampleHomeViewController: MasterViewController, SampleHomeViewProtocol {
         indicator.isHidden = true
         setupRx()
         viewModel?.viewDidLoad()
-        createButton()
+        //createButton()
     }
     
     // MARK: - Method
