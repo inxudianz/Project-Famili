@@ -19,6 +19,12 @@
 		8A7D861D24D02BCE00C87610 /* LoginProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7D861C24D02BCE00C87610 /* LoginProtocol.swift */; };
 		8A7D862024D02C2800C87610 /* LoginCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7D861F24D02C2800C87610 /* LoginCoordinatorProtocol.swift */; };
 		8A7D862224D02D7D00C87610 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7D862124D02D7D00C87610 /* LoginCoordinator.swift */; };
+		8AA7014C24DBE89F00EEAADE /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA7014B24DBE89F00EEAADE /* LoginModel.swift */; };
+		8AA7015024DBE8DF00EEAADE /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA7014F24DBE8DF00EEAADE /* LoginResponse.swift */; };
+		8AA7015224DBEA9A00EEAADE /* LoginPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA7015124DBEA9A00EEAADE /* LoginPath.swift */; };
+		8AA7015424DBEADE00EEAADE /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA7015324DBEADE00EEAADE /* LoginService.swift */; };
+		8AA7015624DBEDD100EEAADE /* LoginSubPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA7015524DBEDD100EEAADE /* LoginSubPath.swift */; };
+		8AA7015924DBEFD200EEAADE /* LoginNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA7015824DBEFD200EEAADE /* LoginNetwork.swift */; };
 		92012F0824B30D1F002303D0 /* AppCoordinator+FeatureCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92012F0724B30D1F002303D0 /* AppCoordinator+FeatureCoordinator.swift */; };
 		9201314F24B4E368002303D0 /* Appcoordinator+BuildConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9201314E24B4E368002303D0 /* Appcoordinator+BuildConfiguration.swift */; };
 		9201315124B4E3BC002303D0 /* BuildConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9201315024B4E3BC002303D0 /* BuildConfiguration.swift */; };
@@ -142,6 +148,12 @@
 		8A7D861C24D02BCE00C87610 /* LoginProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProtocol.swift; sourceTree = "<group>"; };
 		8A7D861F24D02C2800C87610 /* LoginCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinatorProtocol.swift; sourceTree = "<group>"; };
 		8A7D862124D02D7D00C87610 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		8AA7014B24DBE89F00EEAADE /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		8AA7014F24DBE8DF00EEAADE /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		8AA7015124DBEA9A00EEAADE /* LoginPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPath.swift; sourceTree = "<group>"; };
+		8AA7015324DBEADE00EEAADE /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		8AA7015524DBEDD100EEAADE /* LoginSubPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSubPath.swift; sourceTree = "<group>"; };
+		8AA7015824DBEFD200EEAADE /* LoginNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginNetwork.swift; sourceTree = "<group>"; };
 		92012F0724B30D1F002303D0 /* AppCoordinator+FeatureCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppCoordinator+FeatureCoordinator.swift"; sourceTree = "<group>"; };
 		9201314E24B4E368002303D0 /* Appcoordinator+BuildConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Appcoordinator+BuildConfiguration.swift"; sourceTree = "<group>"; };
 		9201315024B4E3BC002303D0 /* BuildConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildConfiguration.swift; sourceTree = "<group>"; };
@@ -561,6 +573,7 @@
 			children = (
 				92913BCD248D0B8A002D961D /* EmptyResponse.swift */,
 				92C77BFB2493799B004C1D86 /* SampleResponse.swift */,
+				8AA7014F24DBE8DF00EEAADE /* LoginResponse.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -570,6 +583,7 @@
 			children = (
 				92C77BF72493798F004C1D86 /* SampleModel.swift */,
 				9227A36024D42937004F7952 /* EmptyModel.swift */,
+				8AA7014B24DBE89F00EEAADE /* LoginModel.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -638,6 +652,8 @@
 			children = (
 				92C77C62249718CE004C1D86 /* SamplePath.swift */,
 				92C77C652497192F004C1D86 /* SampleSubPath.swift */,
+				8AA7015124DBEA9A00EEAADE /* LoginPath.swift */,
+				8AA7015524DBEDD100EEAADE /* LoginSubPath.swift */,
 			);
 			path = Sample;
 			sourceTree = "<group>";
@@ -646,6 +662,7 @@
 			isa = PBXGroup;
 			children = (
 				92C77C9D249744CC004C1D86 /* SampleService.swift */,
+				8AA7015324DBEADE00EEAADE /* LoginService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -654,6 +671,7 @@
 			isa = PBXGroup;
 			children = (
 				92C77CA024974A83004C1D86 /* SampleNetwork.swift */,
+				8AA7015824DBEFD200EEAADE /* LoginNetwork.swift */,
 			);
 			path = SampleNetwork;
 			sourceTree = "<group>";
@@ -1078,6 +1096,7 @@
 				8A7D862224D02D7D00C87610 /* LoginCoordinator.swift in Sources */,
 				920C3F6724A7D23900AF75AE /* SampleProfileCoordinatorProtocol.swift in Sources */,
 				9201315124B4E3BC002303D0 /* BuildConfiguration.swift in Sources */,
+				8AA7015624DBEDD100EEAADE /* LoginSubPath.swift in Sources */,
 				92913BEA248D13A3002D961D /* NetworkService.swift in Sources */,
 				920A35062499D61E00F2EABB /* Coordinator.swift in Sources */,
 				92D79F3124842E49004C4701 /* HomeNetwork.swift in Sources */,
@@ -1092,14 +1111,17 @@
 				8A76A34124CECC1E00F02AD9 /* InitialScreenCoordinatorProtocol.swift in Sources */,
 				92C77CA5249760DF004C1D86 /* AppContext.swift in Sources */,
 				92D79F3324842E7A004C4701 /* SampleHomeDetailProtocol.swift in Sources */,
+				8AA7014C24DBE89F00EEAADE /* LoginModel.swift in Sources */,
 				92D79E8C2483E534004C4701 /* SceneDelegate.swift in Sources */,
 				92913BCE248D0B8A002D961D /* EmptyResponse.swift in Sources */,
 				92D79F492485015C004C4701 /* SampleProfileDetailViewModel.swift in Sources */,
+				8AA7015924DBEFD200EEAADE /* LoginNetwork.swift in Sources */,
 				92C77CA3249754AD004C1D86 /* HTTPTask.swift in Sources */,
 				92C77C63249718CE004C1D86 /* SamplePath.swift in Sources */,
 				92D79F2624841755004C4701 /* AppCoordinator.swift in Sources */,
 				920C3F6524A7D00800AF75AE /* SampleHomeCoordinatorProtocol.swift in Sources */,
 				920A35082499D63F00F2EABB /* CoordinatorState.swift in Sources */,
+				8AA7015424DBEADE00EEAADE /* LoginService.swift in Sources */,
 				92C77C0124937E4F004C1D86 /* MainApp+NavigationBar.swift in Sources */,
 				920A35B1249B4D0900F2EABB /* SampleHomeViewModel+Network.swift in Sources */,
 				92D79F382484DB3E004C4701 /* ProfileNetwork.swift in Sources */,
@@ -1113,8 +1135,10 @@
 				92C77C6824971985004C1D86 /* NetworkType.swift in Sources */,
 				8A76A33424CEB3EB00F02AD9 /* InitialScreenViewController.swift in Sources */,
 				8A7D861D24D02BCE00C87610 /* LoginProtocol.swift in Sources */,
+				8AA7015024DBE8DF00EEAADE /* LoginResponse.swift in Sources */,
 				9227A34124D293D5004F7952 /* FirebaseHandler.swift in Sources */,
 				9227A38424D7B3D0004F7952 /* AppCoordinator+Firebase.swift in Sources */,
+				8AA7015224DBEA9A00EEAADE /* LoginPath.swift in Sources */,
 				92D79F0A2483E87D004C4701 /* SampleHomeViewModel.swift in Sources */,
 				8A76A33D24CECB7300F02AD9 /* InitialScreenViewModel.swift in Sources */,
 				92D79F4724850153004C4701 /* SampleProfileDetailProtocol.swift in Sources */,
