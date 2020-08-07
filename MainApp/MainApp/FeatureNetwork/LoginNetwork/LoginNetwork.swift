@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import RxSwift
 
 protocol LoginNetworkDelegate: class {
     func didSuccessLogin(response: LoginResponse)

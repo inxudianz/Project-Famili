@@ -306,6 +306,14 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		8AA7015C24DD3B4600EEAADE /* LoginNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				8AA7015824DBEFD200EEAADE /* LoginNetwork.swift */,
+			);
+			path = LoginNetwork;
+			sourceTree = "<group>";
+		};
 		9201315224B4E3CC002303D0 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -488,6 +496,8 @@
 		923249A924C0404700FDFC3E /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				8AA7015124DBEA9A00EEAADE /* LoginPath.swift */,
+				8AA7015524DBEDD100EEAADE /* LoginSubPath.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -652,8 +662,6 @@
 			children = (
 				92C77C62249718CE004C1D86 /* SamplePath.swift */,
 				92C77C652497192F004C1D86 /* SampleSubPath.swift */,
-				8AA7015124DBEA9A00EEAADE /* LoginPath.swift */,
-				8AA7015524DBEDD100EEAADE /* LoginSubPath.swift */,
 			);
 			path = Sample;
 			sourceTree = "<group>";
@@ -671,7 +679,6 @@
 			isa = PBXGroup;
 			children = (
 				92C77CA024974A83004C1D86 /* SampleNetwork.swift */,
-				8AA7015824DBEFD200EEAADE /* LoginNetwork.swift */,
 			);
 			path = SampleNetwork;
 			sourceTree = "<group>";
@@ -728,6 +735,7 @@
 		92D79ED12483E569004C4701 /* FeatureNetwork */ = {
 			isa = PBXGroup;
 			children = (
+				8AA7015C24DD3B4600EEAADE /* LoginNetwork */,
 				923249A624C0401500FDFC3E /* AuthNetwork */,
 				92D79F362484DB2E004C4701 /* ProfileNetwork */,
 				92D79F352484DB10004C4701 /* HomeNetwork */,

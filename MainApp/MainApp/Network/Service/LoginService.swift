@@ -39,7 +39,7 @@ extension LoginService: NetworkType {
     var task: HTTPTask {
         switch self {
         case .loginRequest:
-            return .plainRequest
+            return .parameterRequest
         }
     }
     
