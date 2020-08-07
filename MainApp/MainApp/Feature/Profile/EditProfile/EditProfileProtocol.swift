@@ -10,7 +10,7 @@ import Foundation
 
 protocol EditProfileViewModelProtocol: class {
     var view: EditProfileProtocol? { get set }
-    var coordinator: EditProfileCoordinatorProtocol? { get set }
+    var coordinator: ProfileCoordinatorProtocol? { get set }
     
     func navigateToProfile()
 }

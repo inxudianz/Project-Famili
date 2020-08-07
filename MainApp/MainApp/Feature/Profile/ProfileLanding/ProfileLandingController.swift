@@ -11,20 +11,29 @@ import Component
 
 class ProfileLandingController: MasterViewController, ProfileLandingViewProtocol, UITableViewDelegate, UITableViewDataSource {
     
+    enum Sections: String {
+        case Account = "Account"
+        case General = "General"
+    }
+    
     var viewModel: ProfileLandingViewModelProtocol?
  
+    @IBOutlet var phoneNumberIcon: UIImageView!
     @IBOutlet weak var phoneNumberLabel: UILabel!
+    
+    @IBOutlet var emailIcon: UIImageView!
     @IBOutlet weak var emailLabel: UILabel!
     
     @IBOutlet weak var tableViewSettings: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setupView()
         
         self.tableViewSettings.delegate = self
         self.tableViewSettings.dataSource = self
         
-        let nib = UINib(nibName: "CustomTableViewCell", bundle: Bundle(for: CustomTableViewCell.self))
+        let nib = UINib(nibName: "ProfileLandingCell", bundle: Bundle(for: ProfileLandingCell.self))
         self.tableViewSettings.register(nib, forCellReuseIdentifier: "customCell")
     }
     
@@ -35,9 +44,9 @@ class ProfileLandingController: MasterViewController, ProfileLandingViewProtocol
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
         case 0:
-            return "Account"
+            return Sections.Account.rawValue
         case 1:
-            return "General"
+            return Sections.General.rawValue
         default:
             return ""
         }
@@ -46,8 +55,10 @@ class ProfileLandingController: MasterViewController, ProfileLandingViewProtocol
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 0:
+            // Account section
             return 2
         case 1:
+            // General section
             return 3
         default:
             return 0
@@ -55,10 +66,10 @@ class ProfileLandingController: MasterViewController, ProfileLandingViewProtocol
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableViewSettings.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as! CustomTableViewCell
+        let cell = tableViewSettings.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as! ProfileLandingCell
 
         switch indexPath.section {
-        // First section
+        // Account section
         case 0:
             switch indexPath.row {
             case 0:
@@ -66,9 +77,9 @@ class ProfileLandingController: MasterViewController, ProfileLandingViewProtocol
             case 1:
                 cell.cellContent(cellImage: "Help", cellText: "Help Center")
             default:
-                cell.cellContent(cellImage: "", cellText: "")
+                break
             }
-        // Second section
+        // General section
         case 1:
             switch indexPath.row {
             case 0:
@@ -81,15 +92,33 @@ class ProfileLandingController: MasterViewController, ProfileLandingViewProtocol
                 cell.cellContent(cellImage: "", cellText: "")
             }
         default:
-            cell.cellContent(cellImage: "", cellText: "")
+            break
         }
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.section == 0 {
-            if indexPath.row == 0 { viewModel?.navigateToEditProfile() }
+        switch indexPath.section {
+        case 0:
+            switch indexPath.row {
+            case 0:
+                viewModel?.navigateToEditProfile()
+            default:
+                break
+            }
+        default:
+            break
         }
-       
+    }
+    
+    func setupView() {
+        self.phoneNumberIcon.image = UIImage(named: "Call")
+        self.emailIcon.image = UIImage(named: "Mail")
+    }
+    
+    func updateView(name: String, phone: String, email: String) {
+        self.navigationItem.title? += name
+        self.phoneNumberLabel.text = phone
+        self.emailLabel.text = email
     }
 }

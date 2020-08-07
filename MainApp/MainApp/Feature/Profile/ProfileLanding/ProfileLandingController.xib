@@ -9,7 +9,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileLandingController" customModule="MainApp" customModuleProvider="target">
             <connections>
+                <outlet property="emailIcon" destination="sKj-MD-w4Y" id="g0u-br-9wo"/>
                 <outlet property="emailLabel" destination="9Xv-9N-vkg" id="BMu-5H-stj"/>
+                <outlet property="phoneNumberIcon" destination="h1w-pu-M2t" id="kbS-9M-K8B"/>
                 <outlet property="phoneNumberLabel" destination="OX7-pe-MOU" id="GWd-bD-GDY"/>
                 <outlet property="tableViewSettings" destination="Rsf-9G-BJV" id="Avw-Of-m6P"/>
                 <outlet property="view" destination="iN0-l3-epB" id="RhR-3Y-cVc"/>
@@ -43,7 +45,7 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Rsf-9G-BJV">
-                    <rect key="frame" x="87" y="240" width="240" height="511"/>
+                    <rect key="frame" x="31" y="240" width="352" height="511"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </tableView>

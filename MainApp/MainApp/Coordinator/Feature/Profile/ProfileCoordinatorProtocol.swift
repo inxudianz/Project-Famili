@@ -1,5 +1,5 @@
 //
-//  ProfileLandingCoordinatorProtocol.swift
+//  ProfileCoordinatorProtocol.swift
 //  MainApp
 //
 //  Created by Owen Prasetya on 29/07/20.
@@ -8,6 +8,8 @@
 
 import Foundation
 
-protocol ProfileLandingCoordinatorProtocol: Coordinator {
+protocol ProfileCoordinatorProtocol: Coordinator {
     func getEditProfile()
+    
+    func saveEditProfile()
 }

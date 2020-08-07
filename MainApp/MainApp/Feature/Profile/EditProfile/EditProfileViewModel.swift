@@ -12,11 +12,9 @@ class EditProfileViewModel: EditProfileViewModelProtocol {
     
     weak var view: EditProfileProtocol?
     
-    weak var coordinator: EditProfileCoordinatorProtocol?
+    weak var coordinator: ProfileCoordinatorProtocol?
     
     func navigateToProfile() {
         coordinator?.saveEditProfile()
     }
-    
-    
 }
