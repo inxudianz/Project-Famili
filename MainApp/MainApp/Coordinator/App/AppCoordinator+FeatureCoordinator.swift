@@ -16,4 +16,5 @@ enum CoordinatorFeature: String {
     case home
     case profile
     case auth
+    case register
 }

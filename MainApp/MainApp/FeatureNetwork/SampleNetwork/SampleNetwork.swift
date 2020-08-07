@@ -76,5 +76,10 @@ class SampleNetwork: SampleNetworkProtocol {
             }
         }
     }
-    
 }
+
+//1. entities dan response
+//2. path
+//3. service
+//4. network
+//5. feature network
