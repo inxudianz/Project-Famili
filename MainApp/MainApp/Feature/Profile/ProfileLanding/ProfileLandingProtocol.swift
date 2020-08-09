@@ -11,7 +11,7 @@ import Foundation
 protocol ProfileLandingViewModelProtocol: class {
     var view: ProfileLandingViewProtocol? { get set }
     var coordinator: ProfileCoordinatorProtocol? { get set }
-    var network: ProfileLandingNetworkProtocol? { get set }
+    var network: ProfileNetworkProtocol? { get set }
     
     func navigateToEditProfile()
     func navigateToHelp()
@@ -19,7 +19,6 @@ protocol ProfileLandingViewModelProtocol: class {
     
     func getProfile()
     func updateProfileDataLabel()
-    
 }
 
 protocol ProfileLandingViewProtocol: class {

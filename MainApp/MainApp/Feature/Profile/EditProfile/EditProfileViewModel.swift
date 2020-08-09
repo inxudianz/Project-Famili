@@ -18,3 +18,22 @@ class EditProfileViewModel: EditProfileViewModelProtocol {
         coordinator?.saveEditProfile()
     }
 }
+
+extension EditProfileViewModel: ProfileNetworkDelegate {
+    
+    func didSuccessRetrieveProfile(response: GetProfileResponse) {
+        Log.info(message: response)
+    }
+    
+    func didFailedRetrieveProfile(error: Error) {
+        Log.info(message: "Error retrieving Profile")
+    }
+    
+    func didSuccessEditProfile(response: EditProfileResponse) {
+        Log.info(message: response)
+    }
+    
+    func didFailedEditProfile(error: Error) {
+        Log.info(message: "Error edit profile")
+    }
+}

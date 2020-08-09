@@ -14,7 +14,7 @@ class ProfileLandingViewModel: ProfileLandingViewModelProtocol {
     
     weak var coordinator: ProfileCoordinatorProtocol?
     
-    var network: ProfileLandingNetworkProtocol?
+    var network: ProfileNetworkProtocol?
     
     func navigateToEditProfile() {
         coordinator?.getEditProfile()
@@ -37,12 +37,22 @@ class ProfileLandingViewModel: ProfileLandingViewModelProtocol {
        }
 }
 
-extension ProfileLandingViewModel: ProfileLandingNetworkDelegate {
+extension ProfileLandingViewModel: ProfileNetworkDelegate {
+    
     func didSuccessRetrieveProfile(response: GetProfileResponse) {
         Log.info(message: response)
+        updateProfileDataLabel()
     }
     
     func didFailedRetrieveProfile(error: Error) {
         Log.info(message: "Error retrieving Profile")
+    }
+    
+    func didSuccessEditProfile(response: EditProfileResponse) {
+        Log.info(message: response)
+    }
+    
+    func didFailedEditProfile(error: Error) {
+        Log.info(message: "Error edit profile")
     }
 }
