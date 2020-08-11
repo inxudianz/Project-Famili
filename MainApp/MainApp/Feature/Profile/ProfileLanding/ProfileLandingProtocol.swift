@@ -12,6 +12,7 @@ protocol ProfileLandingViewModelProtocol: class {
     var view: ProfileLandingViewProtocol? { get set }
     var coordinator: ProfileCoordinatorProtocol? { get set }
     var network: ProfileNetworkProtocol? { get set }
+    var tableViewSection: [ProfileTableViewSectionProtocol]? { get set }
     
     func navigateToEditProfile()
     func navigateToHelp()

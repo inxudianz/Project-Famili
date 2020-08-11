@@ -7,14 +7,17 @@
 //
 
 import Foundation
+import UIKit
 
-class ProfileLandingViewModel: ProfileLandingViewModelProtocol {
-    
+class ProfileLandingViewModel: NSObject, ProfileLandingViewModelProtocol {
+
     weak var view: ProfileLandingViewProtocol?
     
     weak var coordinator: ProfileCoordinatorProtocol?
     
     var network: ProfileNetworkProtocol?
+    
+    var tableViewSection: [ProfileTableViewSectionProtocol]? = [AccountSectionModel(), GeneralSectionModel()]
     
     func navigateToEditProfile() {
         coordinator?.getEditProfile()
@@ -33,8 +36,31 @@ class ProfileLandingViewModel: ProfileLandingViewModelProtocol {
     }
     
     func updateProfileDataLabel() {
+        // Take response and put the name, phone, and email
         view?.updateView(name: "asa", phone: "012931039", email: "aaa@gmail.com")
        }
+}
+
+extension ProfileLandingViewModel: UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return tableViewSection!.count
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return tableViewSection![section].sectionCell.count
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return tableViewSection![section].sectionName
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "profileLandingCell") as! ProfileLandingCell
+        let rowInSection = tableViewSection![indexPath.section].sectionCell[indexPath.row]
+        cell.cellContent(cellImage: rowInSection, cellText: rowInSection)
+        return cell
+    }
 }
 
 extension ProfileLandingViewModel: ProfileNetworkDelegate {

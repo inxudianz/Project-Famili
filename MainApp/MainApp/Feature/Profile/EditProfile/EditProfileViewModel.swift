@@ -14,6 +14,12 @@ class EditProfileViewModel: EditProfileViewModelProtocol {
     
     weak var coordinator: ProfileCoordinatorProtocol?
     
+    var network: ProfileNetworkProtocol?
+    
+    func saveNewProfile() {
+        network?.profileEditPost()
+    }
+    
     func navigateToProfile() {
         coordinator?.saveEditProfile()
     }

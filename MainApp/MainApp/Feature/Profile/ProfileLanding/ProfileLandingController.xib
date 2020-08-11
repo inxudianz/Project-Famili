@@ -7,14 +7,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileLandingController" customModule="MainApp" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileLandingController" customModule="MainApp">
             <connections>
-                <outlet property="emailIcon" destination="sKj-MD-w4Y" id="g0u-br-9wo"/>
-                <outlet property="emailLabel" destination="9Xv-9N-vkg" id="BMu-5H-stj"/>
-                <outlet property="phoneNumberIcon" destination="h1w-pu-M2t" id="kbS-9M-K8B"/>
-                <outlet property="phoneNumberLabel" destination="OX7-pe-MOU" id="GWd-bD-GDY"/>
-                <outlet property="tableViewSettings" destination="Rsf-9G-BJV" id="Avw-Of-m6P"/>
-                <outlet property="view" destination="iN0-l3-epB" id="RhR-3Y-cVc"/>
+                <outlet property="emailIcon" destination="sKj-MD-w4Y" id="Tib-RQ-B3q"/>
+                <outlet property="emailLabel" destination="9Xv-9N-vkg" id="CFd-vC-JKH"/>
+                <outlet property="phoneIcon" destination="h1w-pu-M2t" id="fo8-wo-gls"/>
+                <outlet property="phoneNumberLabel" destination="OX7-pe-MOU" id="7p8-3S-yM7"/>
+                <outlet property="profileTableView" destination="Rsf-9G-BJV" id="LAO-3t-nQ3"/>
+                <outlet property="view" destination="iN0-l3-epB" id="Uf0-O4-hJV"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

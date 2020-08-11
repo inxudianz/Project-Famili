@@ -22,7 +22,7 @@ protocol ProfileNetworkProtocol {
     var profileNetworkDelegate: ProfileNetworkDelegate? { get set }
     
     func profileGet()
-    func editProfilePost()
+    func profileEditPost()
 }
 
 class ProfileLandingNetwork: ProfileNetworkProtocol {
@@ -46,7 +46,7 @@ class ProfileLandingNetwork: ProfileNetworkProtocol {
         }
     }
     
-    func editProfilePost() {
+    func profileEditPost() {
         // Get the edited profile from controller to update to database
         let profileModel = ProfileModel.Profile(name: "AAA", phoneNumber: "081230129310", email: "aaa@gmail.com")
         networkService.request(ProfileService.saveProfileRequest, profileModel, EditProfileResponse.self) { [weak self] (result) in

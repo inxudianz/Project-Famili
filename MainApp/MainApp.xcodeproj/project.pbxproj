@@ -24,6 +24,9 @@
 		1EBF013424D0A7690098C24A /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBF013024D0A7690098C24A /* ProfileCoordinator.swift */; };
 		1EBF013524D0A7690098C24A /* ProfileCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBF013324D0A7690098C24A /* ProfileCoordinatorProtocol.swift */; };
 		1EBF014A24D1E5450098C24A /* ProfileLandingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBF014924D1E5450098C24A /* ProfileLandingCell.swift */; };
+		1EC5105624E2A87B00A00759 /* ProfileLandingController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EBF012324D0A6130098C24A /* ProfileLandingController.xib */; };
+		1EC5105924E2A8A400A00759 /* ProfileLandingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EBF014B24D1E5510098C24A /* ProfileLandingCell.xib */; };
+		1EC5105B24E31EFF00A00759 /* ProfileTableViewSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC5105A24E31EFF00A00759 /* ProfileTableViewSection.swift */; };
 		92012F0824B30D1F002303D0 /* AppCoordinator+FeatureCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92012F0724B30D1F002303D0 /* AppCoordinator+FeatureCoordinator.swift */; };
 		9201314F24B4E368002303D0 /* Appcoordinator+BuildConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9201314E24B4E368002303D0 /* Appcoordinator+BuildConfiguration.swift */; };
 		9201315124B4E3BC002303D0 /* BuildConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9201315024B4E3BC002303D0 /* BuildConfiguration.swift */; };
@@ -152,6 +155,7 @@
 		1EBF013324D0A7690098C24A /* ProfileCoordinatorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileCoordinatorProtocol.swift; sourceTree = "<group>"; };
 		1EBF014924D1E5450098C24A /* ProfileLandingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileLandingCell.swift; sourceTree = "<group>"; };
 		1EBF014B24D1E5510098C24A /* ProfileLandingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileLandingCell.xib; sourceTree = "<group>"; };
+		1EC5105A24E31EFF00A00759 /* ProfileTableViewSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewSection.swift; sourceTree = "<group>"; };
 		3304A088087BD629641C29A2 /* Pods_MainAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MainAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		890F374CBAEFBDEFACC50A10 /* Pods-MainApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MainApp.debug.xcconfig"; path = "Target Support Files/Pods-MainApp/Pods-MainApp.debug.xcconfig"; sourceTree = "<group>"; };
 		92012F0724B30D1F002303D0 /* AppCoordinator+FeatureCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppCoordinator+FeatureCoordinator.swift"; sourceTree = "<group>"; };
@@ -261,6 +265,7 @@
 				1EBF012924D0A65F0098C24A /* ProfileLandingController.swift */,
 				1EBF012B24D0A6A00098C24A /* ProfileLandingViewModel.swift */,
 				1EBF012D24D0A6B00098C24A /* ProfileLandingProtocol.swift */,
+				1EC5105A24E31EFF00A00759 /* ProfileTableViewSection.swift */,
 				1EB0167C24DC7DCF00C76109 /* ProfileLandingCell */,
 			);
 			path = ProfileLanding;
@@ -969,10 +974,12 @@
 				1E13ABB324D29384005AF3BD /* ProfileAsset.xcassets in Resources */,
 				1E44DC5624D8560400025AE8 /* EditProfileController.xib in Resources */,
 				92D79F0F2483E88C004C4701 /* SampleHomeDetailViewController.xib in Resources */,
+				1EC5105924E2A8A400A00759 /* ProfileLandingCell.xib in Resources */,
 				9227A24924CFE479004F7952 /* Inter-SemiBold.ttf in Resources */,
 				9227A24324CFE479004F7952 /* Inter-Bold.ttf in Resources */,
 				92B90E502486BB1E00C59DDF /* Localizable.strings in Resources */,
 				9227A24424CFE479004F7952 /* Inter-ExtraBold.ttf in Resources */,
+				1EC5105624E2A87B00A00759 /* ProfileLandingController.xib in Resources */,
 				9227A24824CFE479004F7952 /* Inter-Regular.ttf in Resources */,
 				92D79F442484DB93004C4701 /* SampleProfileViewController.xib in Resources */,
 				92D79F082483E873004C4701 /* SampleHomeViewController.xib in Resources */,
@@ -1119,6 +1126,7 @@
 				92D79F2624841755004C4701 /* AppCoordinator.swift in Sources */,
 				920C3F6524A7D00800AF75AE /* SampleHomeCoordinatorProtocol.swift in Sources */,
 				920A35082499D63F00F2EABB /* CoordinatorState.swift in Sources */,
+				1EC5105B24E31EFF00A00759 /* ProfileTableViewSection.swift in Sources */,
 				92C77C0124937E4F004C1D86 /* MainApp+NavigationBar.swift in Sources */,
 				920A35B1249B4D0900F2EABB /* SampleHomeViewModel+Network.swift in Sources */,
 				92D79F382484DB3E004C4701 /* ProfileNetwork.swift in Sources */,

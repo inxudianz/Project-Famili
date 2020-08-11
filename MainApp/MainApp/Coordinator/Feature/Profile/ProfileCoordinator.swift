@@ -10,8 +10,7 @@ import UIKit
 
 class ProfileCoordinator: ProfileCoordinatorProtocol {
     
-    var parentCoordinator: Coordinator?
-    
+    weak var parentCoordinator: Coordinator?
     var childCoordinators: [Coordinator] = [Coordinator]()
     
     var navigationController: UINavigationController?
@@ -23,7 +22,6 @@ class ProfileCoordinator: ProfileCoordinatorProtocol {
     func start() {
         let vc = ProfileLandingController()
         let vm = ProfileLandingViewModel()
-        vc.navigationItem.configure()
         vc.navigationController?.navigationBar.prefersLargeTitles = true
         vc.navigationItem.largeTitleDisplayMode = .always
         vc.navigationItem.title = ProfileCoordinatorConstant.Title.normal.rawValue
@@ -37,6 +35,7 @@ class ProfileCoordinator: ProfileCoordinatorProtocol {
     func getEditProfile() {
         let vc = EditProfileController()
         let vm = EditProfileViewModel()
+        vm.coordinator = self
         vm.view = vc
         vc.viewModel = vm
         navigationController?.pushViewController(vc, animated: false)
@@ -45,6 +44,7 @@ class ProfileCoordinator: ProfileCoordinatorProtocol {
     func saveEditProfile() {
         let vc = ProfileLandingController()
         let vm = ProfileLandingViewModel()
+        vm.coordinator = self
         vm.view = vc
         vc.viewModel = vm
         navigationController?.pushViewController(vc, animated: false)
