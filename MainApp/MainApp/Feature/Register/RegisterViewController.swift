@@ -38,10 +38,14 @@ class RegisterViewController: UIViewController {
         super.viewDidLoad()
         setInitialView()
         setTextField()
-        service?.register(name: "test", phone: "123", email: "test@gmail.com", password: "test123")
     }
     
-    @IBAction func actionButtonRegister(_ sender: Any) {}
+    @IBAction func actionButtonRegister(_ sender: Any) {
+        let popUpVC = RegisterPopUpViewController(nibName: "RegisterPopUpViewController", bundle: nil)
+        popUpVC.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
+        popUpVC.typeResponse = .success
+        present(popUpVC, animated: true)
+    }
     
     @IBAction func actionButtonLoginHere(_ sender: Any) {}
     

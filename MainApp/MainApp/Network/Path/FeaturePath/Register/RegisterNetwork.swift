@@ -30,7 +30,8 @@ class RegisterNetwork: RegisterNetworkProtocol {
     }
     
     func register(name: String, phone: String, email: String, password: String) {
-        networkService.request(RegisterService.registerRequest, RegisterModel(name: name, phone: phone, email: email, password: password), RegisterResponse.self) { [weak self] (result) in
+        let registerModel = RegisterModel(name: name, phone: phone, email: email, password: password)
+        networkService.request(RegisterService.registerRequest, registerModel, RegisterResponse.self) { [weak self] (result) in
             switch result {
             case .success(let response):
                 self?.registerNetworkDelegate?.didSuccessRegister(response: response)

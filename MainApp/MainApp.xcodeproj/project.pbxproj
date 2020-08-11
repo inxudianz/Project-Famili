@@ -87,6 +87,9 @@
 		F5758BDC24DFA76C007E2517 /* RegisterPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5758BDB24DFA76C007E2517 /* RegisterPath.swift */; };
 		F5758BDE24DFA7D8007E2517 /* RegisterNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5758BDD24DFA7D8007E2517 /* RegisterNetwork.swift */; };
 		F595D9EA24E27E4A006DD353 /* Register.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F595D9E924E27E4A006DD353 /* Register.xcassets */; };
+		F595D9EC24E280CA006DD353 /* RegisterViewModel+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = F595D9EB24E280CA006DD353 /* RegisterViewModel+Network.swift */; };
+		F595D9F124E28286006DD353 /* RegisterPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F595D9EF24E28286006DD353 /* RegisterPopUpViewController.swift */; };
+		F595D9F224E28286006DD353 /* RegisterPopUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F595D9F024E28286006DD353 /* RegisterPopUpViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -218,6 +221,9 @@
 		F5758BDB24DFA76C007E2517 /* RegisterPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPath.swift; sourceTree = "<group>"; };
 		F5758BDD24DFA7D8007E2517 /* RegisterNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegisterNetwork.swift; path = MainApp/Network/Path/FeaturePath/Register/RegisterNetwork.swift; sourceTree = SOURCE_ROOT; };
 		F595D9E924E27E4A006DD353 /* Register.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Register.xcassets; sourceTree = "<group>"; };
+		F595D9EB24E280CA006DD353 /* RegisterViewModel+Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RegisterViewModel+Network.swift"; sourceTree = "<group>"; };
+		F595D9EF24E28286006DD353 /* RegisterPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPopUpViewController.swift; sourceTree = "<group>"; };
+		F595D9F024E28286006DD353 /* RegisterPopUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterPopUpViewController.xib; sourceTree = "<group>"; };
 		FD3077CE7FF8C7A3449D06CF /* Pods-MainAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MainAppTests.release.xcconfig"; path = "Target Support Files/Pods-MainAppTests/Pods-MainAppTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -814,6 +820,9 @@
 				F5293EA924D9941F00CA7E87 /* RegisterViewController.xib */,
 				F5293EAD24D9AA8000CA7E87 /* RegisterProtocol.swift */,
 				F5293EAF24D9AA8F00CA7E87 /* RegisterViewModel.swift */,
+				F595D9EB24E280CA006DD353 /* RegisterViewModel+Network.swift */,
+				F595D9EF24E28286006DD353 /* RegisterPopUpViewController.swift */,
+				F595D9F024E28286006DD353 /* RegisterPopUpViewController.xib */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -966,6 +975,7 @@
 				92D79F082483E873004C4701 /* SampleHomeViewController.xib in Resources */,
 				9227A24524CFE479004F7952 /* Inter-ExtraLight.ttf in Resources */,
 				92D79F4D24850166004C4701 /* SampleProfileDetailViewController.xib in Resources */,
+				F595D9F224E28286006DD353 /* RegisterPopUpViewController.xib in Resources */,
 				9227A24A24CFE479004F7952 /* Inter-Thin.ttf in Resources */,
 				9227A24724CFE479004F7952 /* Inter-Medium.ttf in Resources */,
 				9227A24624CFE479004F7952 /* Inter-Light.ttf in Resources */,
@@ -1087,6 +1097,7 @@
 				F5758BDC24DFA76C007E2517 /* RegisterPath.swift in Sources */,
 				92C77BFE24937CFC004C1D86 /* MainApp+NavigationItem.swift in Sources */,
 				920539BB249BA31300AF938C /* Undefined.swift in Sources */,
+				F595D9F124E28286006DD353 /* RegisterPopUpViewController.swift in Sources */,
 				92D79F432484DB93004C4701 /* SampleProfileViewController.swift in Sources */,
 				92D79E8A2483E534004C4701 /* AppDelegate.swift in Sources */,
 				92D79F112483E89A004C4701 /* SampleHomeDetailViewModel.swift in Sources */,
@@ -1103,6 +1114,7 @@
 				F5293EAA24D9941F00CA7E87 /* RegisterViewController.swift in Sources */,
 				F5293EB424D9AB6700CA7E87 /* RegisterCoordinator.swift in Sources */,
 				920A35082499D63F00F2EABB /* CoordinatorState.swift in Sources */,
+				F595D9EC24E280CA006DD353 /* RegisterViewModel+Network.swift in Sources */,
 				92C77C0124937E4F004C1D86 /* MainApp+NavigationBar.swift in Sources */,
 				920A35B1249B4D0900F2EABB /* SampleHomeViewModel+Network.swift in Sources */,
 				92D79F382484DB3E004C4701 /* ProfileNetwork.swift in Sources */,
