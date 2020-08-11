@@ -30,32 +30,24 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var btnSignUpGoogle: UIButton!
     @IBOutlet weak var btnSignUpFB: UIButton!
     
-    
     @IBOutlet weak var buttonRegister: FamiliButton!
+    
+    var service: RegisterNetwork?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setInitialView()
         setTextField()
+        service?.register(name: "test", phone: "123", email: "test@gmail.com", password: "test123")
     }
     
-    @IBAction func actionButtonRegister(_ sender: Any) {
-        
-    }
+    @IBAction func actionButtonRegister(_ sender: Any) {}
     
-    @IBAction func actionButtonLoginHere(_ sender: Any) {
-        
-    }
+    @IBAction func actionButtonLoginHere(_ sender: Any) {}
     
+    @IBAction func actionSignUpWithGoogle(_ sender: Any) {}
     
-    @IBAction func actionSignUpWithGoogle(_ sender: Any) {
-    
-    }
-    
-    @IBAction func actionSignUpWithFB(_ sender: Any) {
-        
-    }
-    
+    @IBAction func actionSignUpWithFB(_ sender: Any) {}
     
     
     func setInitialView() {
@@ -112,13 +104,14 @@ extension RegisterViewController: UITextFieldDelegate {
         
         if tfName.text != "" && tfPhone.text != "" && tfEmail.text != "" && tfPassword.text != "" && tfConfirmPassword.text != "" && labelError.text == "" {
             buttonRegister.setButtonDisable(type: FamiliButton.ButtonStyle(rawValue: 1)!, isDisable: false)
+            buttonRegister.isUserInteractionEnabled = true
         } else {
             buttonRegister.setButtonDisable(type: FamiliButton.ButtonStyle(rawValue: 1)!, isDisable: true)
         }
     }
     
     private func checkPhone(phone: String) {
-        if isValidPhone(phone) {
+        if viewModel?.isValidPhone(phone) == true {
             viewLabelError.isHidden = true
             labelError.text = ""
             tfPhone.layer.borderColor = #colorLiteral(red: 0.9098039216, green: 0.9098039216, blue: 0.9098039216, alpha: 1)
@@ -130,7 +123,7 @@ extension RegisterViewController: UITextFieldDelegate {
     }
     
     private func checkEmail(email: String) {
-        if isValidEmail(email) {
+        if viewModel?.isValidEmail(email) == true {
             viewLabelError.isHidden = true
             labelError.text = ""
             tfEmail.layer.borderColor = #colorLiteral(red: 0.9098039216, green: 0.9098039216, blue: 0.9098039216, alpha: 1)
@@ -163,26 +156,6 @@ extension RegisterViewController: UITextFieldDelegate {
             labelError.text = "Password does't match"
             tfConfirmPassword.layer.borderColor = #colorLiteral(red: 1, green: 0.05882352941, blue: 0, alpha: 1)
         }
-    }
-    
-    private func isValidPhone(_ phone: String) -> Bool {
-        let phoneRegex = "^[0-9+]{0,1}+[0-9]{5,16}$"
-        let phoneTest = NSPredicate(format: "SELF MATCHES %@", phoneRegex)
-        return phoneTest.evaluate(with: phone)
-    }
-    
-    private func isValidEmail(_ email: String) -> Bool {
-        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-        
-        let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
-        return emailPred.evaluate(with: email)
-    }
-    
-    private func isValidPassword(_ password: String) -> Bool {
-        let PasswordRegEx = "^(?=.*[A-Z].*[A-Z])(?=.*[!@#$&*])(?=.*[0-9].*[0-9])(?=.*[a-z].*[a-z].*[a-z]).{8}$"
-        
-        let passwordPred = NSPredicate(format:"SELF MATCHES %@", PasswordRegEx)
-        return passwordPred.evaluate(with: password)
     }
 
 }

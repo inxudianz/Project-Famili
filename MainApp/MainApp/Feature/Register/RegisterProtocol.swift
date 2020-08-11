@@ -11,6 +11,10 @@ import Foundation
 protocol RegisterViewModelProtocol: class {
     var view: RegisterViewProtocol? { get set }
     var coordinator: RegisterCoordinatorProtocol? { get set }
+    
+    func isValidPhone(_ phone: String) -> Bool
+    func isValidEmail(_ email: String) -> Bool
+    func isValidPassword(_ password: String) -> Bool
 }
 
 protocol RegisterViewProtocol: class {

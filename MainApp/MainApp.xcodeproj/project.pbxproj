@@ -81,6 +81,12 @@
 		F5293EB024D9AA8F00CA7E87 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5293EAF24D9AA8F00CA7E87 /* RegisterViewModel.swift */; };
 		F5293EB424D9AB6700CA7E87 /* RegisterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5293EB324D9AB6700CA7E87 /* RegisterCoordinator.swift */; };
 		F5293EB624D9AB7E00CA7E87 /* RegisterCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5293EB524D9AB7E00CA7E87 /* RegisterCoordinatorProtocol.swift */; };
+		F5758BD124DFA1F2007E2517 /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5758BD024DFA1F2007E2517 /* RegisterModel.swift */; };
+		F5758BD524DFA258007E2517 /* RegisterResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5758BD424DFA258007E2517 /* RegisterResponse.swift */; };
+		F5758BDA24DFA385007E2517 /* RegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5758BD924DFA385007E2517 /* RegisterService.swift */; };
+		F5758BDC24DFA76C007E2517 /* RegisterPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5758BDB24DFA76C007E2517 /* RegisterPath.swift */; };
+		F5758BDE24DFA7D8007E2517 /* RegisterNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5758BDD24DFA7D8007E2517 /* RegisterNetwork.swift */; };
+		F595D9EA24E27E4A006DD353 /* Register.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F595D9E924E27E4A006DD353 /* Register.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -206,6 +212,12 @@
 		F5293EAF24D9AA8F00CA7E87 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		F5293EB324D9AB6700CA7E87 /* RegisterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCoordinator.swift; sourceTree = "<group>"; };
 		F5293EB524D9AB7E00CA7E87 /* RegisterCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		F5758BD024DFA1F2007E2517 /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
+		F5758BD424DFA258007E2517 /* RegisterResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterResponse.swift; sourceTree = "<group>"; };
+		F5758BD924DFA385007E2517 /* RegisterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterService.swift; sourceTree = "<group>"; };
+		F5758BDB24DFA76C007E2517 /* RegisterPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPath.swift; sourceTree = "<group>"; };
+		F5758BDD24DFA7D8007E2517 /* RegisterNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegisterNetwork.swift; path = MainApp/Network/Path/FeaturePath/Register/RegisterNetwork.swift; sourceTree = SOURCE_ROOT; };
+		F595D9E924E27E4A006DD353 /* Register.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Register.xcassets; sourceTree = "<group>"; };
 		FD3077CE7FF8C7A3449D06CF /* Pods-MainAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MainAppTests.release.xcconfig"; path = "Target Support Files/Pods-MainAppTests/Pods-MainAppTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -402,6 +414,7 @@
 		923249A624C0401500FDFC3E /* AuthNetwork */ = {
 			isa = PBXGroup;
 			children = (
+				F5758BDD24DFA7D8007E2517 /* RegisterNetwork.swift */,
 			);
 			path = AuthNetwork;
 			sourceTree = "<group>";
@@ -508,6 +521,7 @@
 			children = (
 				92913BCD248D0B8A002D961D /* EmptyResponse.swift */,
 				92C77BFB2493799B004C1D86 /* SampleResponse.swift */,
+				F5758BD424DFA258007E2517 /* RegisterResponse.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -517,6 +531,7 @@
 			children = (
 				92C77BF72493798F004C1D86 /* SampleModel.swift */,
 				9227A36024D42937004F7952 /* EmptyModel.swift */,
+				F5758BD024DFA1F2007E2517 /* RegisterModel.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -572,6 +587,7 @@
 		92C77C5F2497181F004C1D86 /* FeaturePath */ = {
 			isa = PBXGroup;
 			children = (
+				F5758BD624DFA2DD007E2517 /* Register */,
 				923249A924C0404700FDFC3E /* Auth */,
 				923249A824C0404300FDFC3E /* Profile */,
 				923249A724C0403F00FDFC3E /* Home */,
@@ -593,6 +609,7 @@
 			isa = PBXGroup;
 			children = (
 				92C77C9D249744CC004C1D86 /* SampleService.swift */,
+				F5758BD924DFA385007E2517 /* RegisterService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -792,6 +809,7 @@
 		F5293EA524D993E700CA7E87 /* Register */ = {
 			isa = PBXGroup;
 			children = (
+				F595D9E624E27E2E006DD353 /* Resources */,
 				F5293EA824D9941F00CA7E87 /* RegisterViewController.swift */,
 				F5293EA924D9941F00CA7E87 /* RegisterViewController.xib */,
 				F5293EAD24D9AA8000CA7E87 /* RegisterProtocol.swift */,
@@ -807,6 +825,22 @@
 				F5293EB524D9AB7E00CA7E87 /* RegisterCoordinatorProtocol.swift */,
 			);
 			path = Register;
+			sourceTree = "<group>";
+		};
+		F5758BD624DFA2DD007E2517 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				F5758BDB24DFA76C007E2517 /* RegisterPath.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		F595D9E624E27E2E006DD353 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F595D9E924E27E4A006DD353 /* Register.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -923,6 +957,7 @@
 				92D79E932483E535004C4701 /* Main.xcassets in Resources */,
 				92D79F0F2483E88C004C4701 /* SampleHomeDetailViewController.xib in Resources */,
 				9227A24924CFE479004F7952 /* Inter-SemiBold.ttf in Resources */,
+				F595D9EA24E27E4A006DD353 /* Register.xcassets in Resources */,
 				9227A24324CFE479004F7952 /* Inter-Bold.ttf in Resources */,
 				92B90E502486BB1E00C59DDF /* Localizable.strings in Resources */,
 				9227A24424CFE479004F7952 /* Inter-ExtraBold.ttf in Resources */,
@@ -1043,11 +1078,13 @@
 				92D79F3E2484DB7F004C4701 /* SampleProfileProtocol.swift in Sources */,
 				920C3F6724A7D23900AF75AE /* SampleProfileCoordinatorProtocol.swift in Sources */,
 				9201315124B4E3BC002303D0 /* BuildConfiguration.swift in Sources */,
+				F5758BD524DFA258007E2517 /* RegisterResponse.swift in Sources */,
 				92913BEA248D13A3002D961D /* NetworkService.swift in Sources */,
 				920A35062499D61E00F2EABB /* Coordinator.swift in Sources */,
 				92D79F3124842E49004C4701 /* HomeNetwork.swift in Sources */,
 				9227A36124D42937004F7952 /* EmptyModel.swift in Sources */,
 				92C77C5E24971765004C1D86 /* BasePath.swift in Sources */,
+				F5758BDC24DFA76C007E2517 /* RegisterPath.swift in Sources */,
 				92C77BFE24937CFC004C1D86 /* MainApp+NavigationItem.swift in Sources */,
 				920539BB249BA31300AF938C /* Undefined.swift in Sources */,
 				92D79F432484DB93004C4701 /* SampleProfileViewController.swift in Sources */,
@@ -1078,13 +1115,16 @@
 				92C77C6824971985004C1D86 /* NetworkType.swift in Sources */,
 				9227A34124D293D5004F7952 /* FirebaseHandler.swift in Sources */,
 				9227A38424D7B3D0004F7952 /* AppCoordinator+Firebase.swift in Sources */,
+				F5758BD124DFA1F2007E2517 /* RegisterModel.swift in Sources */,
 				92D79F0A2483E87D004C4701 /* SampleHomeViewModel.swift in Sources */,
+				F5758BDE24DFA7D8007E2517 /* RegisterNetwork.swift in Sources */,
 				92D79F4724850153004C4701 /* SampleProfileDetailProtocol.swift in Sources */,
 				92D79F3B2484DB61004C4701 /* SampleProfileCoordinator.swift in Sources */,
 				92D79F4C24850166004C4701 /* SampleProfileDetailViewController.swift in Sources */,
 				92D79F072483E873004C4701 /* SampleHomeViewController.swift in Sources */,
 				92C77CA124974A83004C1D86 /* SampleNetwork.swift in Sources */,
 				F5293EAE24D9AA8000CA7E87 /* RegisterProtocol.swift in Sources */,
+				F5758BDA24DFA385007E2517 /* RegisterService.swift in Sources */,
 				92C77C9E249744CC004C1D86 /* SampleService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
