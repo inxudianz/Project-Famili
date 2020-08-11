@@ -104,10 +104,10 @@
 		F5758BDA24DFA385007E2517 /* RegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5758BD924DFA385007E2517 /* RegisterService.swift */; };
 		F5758BDC24DFA76C007E2517 /* RegisterPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5758BDB24DFA76C007E2517 /* RegisterPath.swift */; };
 		F5758BDE24DFA7D8007E2517 /* RegisterNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5758BDD24DFA7D8007E2517 /* RegisterNetwork.swift */; };
-		F595D9EA24E27E4A006DD353 /* Register.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F595D9E924E27E4A006DD353 /* Register.xcassets */; };
 		F595D9EC24E280CA006DD353 /* RegisterViewModel+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = F595D9EB24E280CA006DD353 /* RegisterViewModel+Network.swift */; };
 		F595D9F124E28286006DD353 /* RegisterPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F595D9EF24E28286006DD353 /* RegisterPopUpViewController.swift */; };
 		F595D9F224E28286006DD353 /* RegisterPopUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F595D9F024E28286006DD353 /* RegisterPopUpViewController.xib */; };
+		F5C44BA324E2B29000ACA1A1 /* Register.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5C44BA224E2B29000ACA1A1 /* Register.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -256,10 +256,10 @@
 		F5758BD924DFA385007E2517 /* RegisterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterService.swift; sourceTree = "<group>"; };
 		F5758BDB24DFA76C007E2517 /* RegisterPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPath.swift; sourceTree = "<group>"; };
 		F5758BDD24DFA7D8007E2517 /* RegisterNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegisterNetwork.swift; path = MainApp/Network/Path/FeaturePath/Register/RegisterNetwork.swift; sourceTree = SOURCE_ROOT; };
-		F595D9E924E27E4A006DD353 /* Register.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Register.xcassets; sourceTree = "<group>"; };
 		F595D9EB24E280CA006DD353 /* RegisterViewModel+Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RegisterViewModel+Network.swift"; sourceTree = "<group>"; };
 		F595D9EF24E28286006DD353 /* RegisterPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPopUpViewController.swift; sourceTree = "<group>"; };
 		F595D9F024E28286006DD353 /* RegisterPopUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterPopUpViewController.xib; sourceTree = "<group>"; };
+		F5C44BA224E2B29000ACA1A1 /* Register.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Register.xcassets; path = MainApp/Feature/Register/Register.xcassets; sourceTree = SOURCE_ROOT; };
 		FD3077CE7FF8C7A3449D06CF /* Pods-MainAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MainAppTests.release.xcconfig"; path = "Target Support Files/Pods-MainAppTests/Pods-MainAppTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -941,7 +941,7 @@
 		F595D9E624E27E2E006DD353 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				F595D9E924E27E4A006DD353 /* Register.xcassets */,
+				F5C44BA224E2B29000ACA1A1 /* Register.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -1060,8 +1060,8 @@
 				8A76A33524CEB3EB00F02AD9 /* InitialScreenViewController.xib in Resources */,
 				92D79E932483E535004C4701 /* Main.xcassets in Resources */,
 				92D79F0F2483E88C004C4701 /* SampleHomeDetailViewController.xib in Resources */,
+				F5C44BA324E2B29000ACA1A1 /* Register.xcassets in Resources */,
 				9227A24924CFE479004F7952 /* Inter-SemiBold.ttf in Resources */,
-				F595D9EA24E27E4A006DD353 /* Register.xcassets in Resources */,
 				9227A24324CFE479004F7952 /* Inter-Bold.ttf in Resources */,
 				92B90E502486BB1E00C59DDF /* Localizable.strings in Resources */,
 				9227A24424CFE479004F7952 /* Inter-ExtraBold.ttf in Resources */,
