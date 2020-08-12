@@ -40,6 +40,10 @@ class ProfileCoordinator: ProfileCoordinatorProtocol {
         navigationController?.pushViewController(vc, animated: true)
     }
     
+    func saveEditProfile() {
+        navigationController?.popViewController(animated: true)
+    }
+    
     func navigateToHelpScreen() {
         Log.info(message: "Upcoming")
     }

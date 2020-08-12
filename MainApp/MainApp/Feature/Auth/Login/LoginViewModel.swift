@@ -11,8 +11,14 @@ import Foundation
 class LoginViewModel: LoginViewModelProtocol {
     weak var view: LoginViewProtocol?
     weak var coordinator: AuthCoordinatorProtocol?
+    var network: AuthNetworkProtocol?
     
-    func gotoHome() {
-        coordinator?.navigateToHome()
+    init() {
+        self.network?.authLoginDelegate = self
+    }
+    
+    func login(email: String, password: String) {
+        let data = AuthModel.Login(email: email, password: password)
+        network?.login(data: data)
     }
 }

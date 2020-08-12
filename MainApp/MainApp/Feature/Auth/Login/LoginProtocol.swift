@@ -11,8 +11,9 @@ import Foundation
 protocol LoginViewModelProtocol: class {
     var view: LoginViewProtocol? { get set }
     var coordinator: AuthCoordinatorProtocol? { get set }
-
-    func gotoHome()
+    var network: AuthNetworkProtocol? { get set }
+    
+    func login(email: String, password: String)
 }
 
 protocol LoginViewProtocol: class {

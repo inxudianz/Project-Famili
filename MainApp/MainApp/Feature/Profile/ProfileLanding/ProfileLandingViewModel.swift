@@ -20,7 +20,7 @@ class ProfileLandingViewModel: NSObject, ProfileLandingViewModelProtocol {
     var tableViewSection: [ProfileTableViewSectionProtocol]? = [AccountSectionModel(), GeneralSectionModel()]
     
     func navigateToEditProfile() {
-        coordinator?.getEditProfile()
+        coordinator?.navigateToEditProfile()
     }
     
     func navigateToHelp() {
