@@ -9,32 +9,38 @@
 import Foundation
 import Alamofire
 
-enum RegisterService {
-    case registerRequest
+enum AuthService {
+    case register
+    case login
 }
 
-extension RegisterService: NetworkType {
+extension AuthService: NetworkType {
     var baseURL: URL {
         return URL(string: BasePath.mock.rawValue)!
     }
     
     var path: String {
         switch self {
-        case .registerRequest:
+        case .register:
             return AuthPath.auth.rawValue + RegisterSubPath.register.rawValue
+        case .login:
+            return AuthPath.auth.rawValue + LoginSubPath.login.rawValue
         }
     }
     
     var method: HTTPMethod {
         switch self {
-        case .registerRequest:
+        case .register:
             return .put
+        case .login:
+            return .post
         }
     }
     
     var task: HTTPTask {
         switch self {
-        case .registerRequest:
+        case .register,
+             .login:
             return .parameterRequest
         }
     }
@@ -42,5 +48,4 @@ extension RegisterService: NetworkType {
     var headers: HTTPHeaders {
         return .default
     }
-    
 }

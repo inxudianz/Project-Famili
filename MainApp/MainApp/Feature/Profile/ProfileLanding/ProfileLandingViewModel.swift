@@ -63,7 +63,7 @@ extension ProfileLandingViewModel: UITableViewDataSource {
     }
 }
 
-extension ProfileLandingViewModel: ProfileNetworkDelegate {
+extension ProfileLandingViewModel: RetrieveProfileDelegate {
     
     func didSuccessRetrieveProfile(response: ProfileResponse.GetProfileResponse) {
         Log.info(message: response)
@@ -72,13 +72,5 @@ extension ProfileLandingViewModel: ProfileNetworkDelegate {
     
     func didFailedRetrieveProfile(error: Error) {
         Log.info(message: "Error retrieving Profile")
-    }
-    
-    func didSuccessEditProfile(response: ProfileResponse.EditProfileResponse) {
-        Log.info(message: response)
-    }
-    
-    func didFailedEditProfile(error: Error) {
-        Log.info(message: "Error edit profile")
     }
 }

@@ -16,8 +16,8 @@ class EditProfileViewModel: EditProfileViewModelProtocol {
     
     var network: ProfileNetworkProtocol?
     
-    func saveNewProfile() {
-        network?.profileEditPost()
+    func saveNewProfile(data: ProfileModel.Profile) {
+        network?.profileEditPost(data: data)
     }
     
     func navigateToProfile() {
@@ -25,16 +25,7 @@ class EditProfileViewModel: EditProfileViewModelProtocol {
     }
 }
 
-extension EditProfileViewModel: ProfileNetworkDelegate {
-    
-    func didSuccessRetrieveProfile(response: ProfileResponse.GetProfileResponse) {
-        Log.info(message: response)
-    }
-    
-    func didFailedRetrieveProfile(error: Error) {
-        Log.info(message: "Error retrieving Profile")
-    }
-    
+extension EditProfileViewModel: EditProfileDelegate {
     func didSuccessEditProfile(response: ProfileResponse.EditProfileResponse) {
         Log.info(message: response)
     }

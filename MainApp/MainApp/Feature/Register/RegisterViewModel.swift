@@ -11,7 +11,7 @@ import Foundation
 class RegisterViewModel: RegisterViewModelProtocol {
     weak var view: RegisterViewProtocol?
     weak var coordinator: RegisterCoordinatorProtocol?
-    var network: RegisterNetworkProtocol?
+    var network: AuthNetworkProtocol?
     
     func isValidPhone(_ phone: String) -> Bool {
         let phoneRegex = "^[0-9+]{0,1}+[0-9]{5,16}$"

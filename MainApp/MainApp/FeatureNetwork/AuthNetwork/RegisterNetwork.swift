@@ -8,8 +8,7 @@
 import Foundation
 
 protocol RegisterNetworkDelegate: class {
-    func didSuccessRegister(response: AuthResponse.Register)
-    func didFailedRegister(error: Error)
+
 }
 
 protocol RegisterNetworkProtocol {
@@ -27,15 +26,5 @@ class RegisterNetwork: RegisterNetworkProtocol {
         self.networkService = NetworkService()
     }
     
-    func register(name: String, phone: String, email: String, password: String) {
-        let registerModel = AuthModel.Register(name: name, phone: phone, email: email, password: password)
-        networkService.request(RegisterService.registerRequest, registerModel, AuthResponse.Register.self) { [weak self] (result) in
-            switch result {
-            case .success(let response):
-                self?.registerNetworkDelegate?.didSuccessRegister(response: response)
-            case .failure(let error):
-                self?.registerNetworkDelegate?.didFailedRegister(error: error)
-            }
-        }
-    }
+
 }

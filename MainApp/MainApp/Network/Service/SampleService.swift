@@ -16,7 +16,6 @@ enum SampleService {
 }
 
 extension SampleService: NetworkType {
-    
     var baseURL: URL {
         return URL(string: BasePath.mock.rawValue)!
     }
@@ -54,5 +53,4 @@ extension SampleService: NetworkType {
     var headers: HTTPHeaders {
         return .default
     }
-    
 }

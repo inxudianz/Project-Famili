@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension RegisterViewModel: RegisterNetworkDelegate {
+extension RegisterViewModel: AuthRegisterDelegate {
     func didSuccessRegister(response: AuthResponse.Register) {
         Log.info(message: response)
     }

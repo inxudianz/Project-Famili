@@ -31,9 +31,7 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var btnSignUpFB: UIButton!
     
     @IBOutlet weak var buttonRegister: FamiliButton!
-    
-    var service: RegisterNetwork?
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         setInitialView()

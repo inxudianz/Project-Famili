@@ -8,26 +8,17 @@
 
 import Foundation
 
-protocol ProfileNetworkDelegate: class {
-    
-    func didSuccessRetrieveProfile(response: ProfileResponse.GetProfileResponse)
-    func didFailedRetrieveProfile(error: Error)
-    
-    func didSuccessEditProfile(response: ProfileResponse.EditProfileResponse)
-    func didFailedEditProfile(error: Error)
-}
-
 protocol ProfileNetworkProtocol {
-    
-    var profileNetworkDelegate: ProfileNetworkDelegate? { get set }
+    var retrieveProfileDelegate: RetrieveProfileDelegate? { get set }
+    var editProfileDelegate: EditProfileDelegate? { get set }
     
     func profileGet()
-    func profileEditPost()
+    func profileEditPost(data: ProfileModel.Profile)
 }
 
 class ProfileLandingNetwork: ProfileNetworkProtocol {
-    
-    weak var profileNetworkDelegate: ProfileNetworkDelegate?
+    weak var retrieveProfileDelegate: RetrieveProfileDelegate?
+    weak var editProfileDelegate: EditProfileDelegate?
     
     private var networkService: NetworkService
     
@@ -36,26 +27,29 @@ class ProfileLandingNetwork: ProfileNetworkProtocol {
     }
     
     func profileGet() {
-        networkService.request(ProfileService.getProfileRequest, EmptyModel(), ProfileResponse.GetProfileResponse.self) { [weak self] (result) in
-            switch result {
-            case .success(let response):
-                self?.profileNetworkDelegate?.didSuccessRetrieveProfile(response: response)
-            case .failure(let error):
-                self?.profileNetworkDelegate?.didFailedRetrieveProfile(error: error)
-            }
+        networkService.request(ProfileService.getProfileRequest,
+                               EmptyModel(),
+                               ProfileResponse.GetProfileResponse.self) { [weak self] (result) in
+                                switch result {
+                                case .success(let response):
+                                    self?.retrieveProfileDelegate?.didSuccessRetrieveProfile(response: response)
+                                case .failure(let error):
+                                    self?.retrieveProfileDelegate?.didFailedRetrieveProfile(error: error)
+                                }
         }
     }
     
-    func profileEditPost() {
+    func profileEditPost(data: ProfileModel.Profile) {
         // Get the edited profile from controller to update to database
-        let profileModel = ProfileModel.Profile(name: "AAA", phoneNumber: "081230129310", email: "aaa@gmail.com")
-        networkService.request(ProfileService.saveProfileRequest, profileModel, ProfileResponse.EditProfileResponse.self) { [weak self] (result) in
-            switch result {
-            case .success(let response):
-                self?.profileNetworkDelegate?.didSuccessEditProfile(response: response)
-            case .failure(let error):
-                self?.profileNetworkDelegate?.didFailedEditProfile(error: error)
-            }
+        networkService.request(ProfileService.saveProfileRequest,
+                               data,
+                               ProfileResponse.EditProfileResponse.self) { [weak self] (result) in
+                                switch result {
+                                case .success(let response):
+                                    self?.editProfileDelegate?.didSuccessEditProfile(response: response)
+                                case .failure(let error):
+                                    self?.editProfileDelegate?.didFailedEditProfile(error: error)
+                                }
         }
     }
 }
