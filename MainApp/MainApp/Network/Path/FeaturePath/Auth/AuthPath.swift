@@ -8,6 +8,6 @@
 
 import Foundation
 
-enum LoginPath: String {
-    case login = "auth/v1/"
+enum AuthPath: String {
+    case auth = "auth/v1/"
 }

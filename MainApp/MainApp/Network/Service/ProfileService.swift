@@ -14,10 +14,6 @@ enum ProfileService {
     case saveProfileRequest
 }
 
-struct ProfileData: Encodable {
-    let data: ProfileModel.Profile
-}
-
 extension ProfileService: NetworkType {
     var baseURL: URL {
         return URL(string: BasePath.mock.rawValue)!
@@ -53,6 +49,4 @@ extension ProfileService: NetworkType {
     var headers: HTTPHeaders {
         return .default
     }
-    
-    
 }

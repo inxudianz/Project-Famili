@@ -13,11 +13,7 @@ enum RegisterService {
     case registerRequest
 }
 
-struct RegisterData: Encodable {
-    let register: RegisterModel
-}
 extension RegisterService: NetworkType {
-    
     var baseURL: URL {
         return URL(string: BasePath.mock.rawValue)!
     }
@@ -25,7 +21,7 @@ extension RegisterService: NetworkType {
     var path: String {
         switch self {
         case .registerRequest:
-            return RegisterPath.register.rawValue
+            return AuthPath.auth.rawValue + RegisterSubPath.register.rawValue
         }
     }
     

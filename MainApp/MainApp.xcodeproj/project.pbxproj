@@ -41,7 +41,7 @@
 		8A7D862224D02D7D00C87610 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7D862124D02D7D00C87610 /* LoginCoordinator.swift */; };
 		8AA7014C24DBE89F00EEAADE /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA7014B24DBE89F00EEAADE /* LoginModel.swift */; };
 		8AA7015024DBE8DF00EEAADE /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA7014F24DBE8DF00EEAADE /* LoginResponse.swift */; };
-		8AA7015224DBEA9A00EEAADE /* LoginPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA7015124DBEA9A00EEAADE /* LoginPath.swift */; };
+		8AA7015224DBEA9A00EEAADE /* AuthPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA7015124DBEA9A00EEAADE /* AuthPath.swift */; };
 		8AA7015424DBEADE00EEAADE /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA7015324DBEADE00EEAADE /* LoginService.swift */; };
 		8AA7015624DBEDD100EEAADE /* LoginSubPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA7015524DBEDD100EEAADE /* LoginSubPath.swift */; };
 		8AA7015924DBEFD200EEAADE /* LoginNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA7015824DBEFD200EEAADE /* LoginNetwork.swift */; };
@@ -54,7 +54,8 @@
 		920A35082499D63F00F2EABB /* CoordinatorState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920A35072499D63F00F2EABB /* CoordinatorState.swift */; };
 		920A35B1249B4D0900F2EABB /* SampleHomeViewModel+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920A35B0249B4D0900F2EABB /* SampleHomeViewModel+Network.swift */; };
 		920C23C524DAA37F00047D14 /* FacebookSDKHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C23C424DAA37F00047D14 /* FacebookSDKHandler.swift */; };
-		920C23C724DAB1DD00047D14 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 920C23C624DAB1DD00047D14 /* GoogleService-Info.plist */; };
+		920C25CD24E3A03000047D14 /* RegisterSubPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C25CC24E3A03000047D14 /* RegisterSubPath.swift */; };
+		920C25CF24E3A19D00047D14 /* RegisterNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C25CE24E3A19D00047D14 /* RegisterNetwork.swift */; };
 		920C3F6524A7D00800AF75AE /* SampleHomeCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C3F6424A7D00800AF75AE /* SampleHomeCoordinatorProtocol.swift */; };
 		920C3F6724A7D23900AF75AE /* SampleProfileCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C3F6624A7D23900AF75AE /* SampleProfileCoordinatorProtocol.swift */; };
 		9227A24224CFE474004F7952 /* Inter-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9227A23A24CFE46E004F7952 /* Inter-Black.ttf */; };
@@ -126,8 +127,6 @@
 		F5758BD124DFA1F2007E2517 /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5758BD024DFA1F2007E2517 /* RegisterModel.swift */; };
 		F5758BD524DFA258007E2517 /* RegisterResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5758BD424DFA258007E2517 /* RegisterResponse.swift */; };
 		F5758BDA24DFA385007E2517 /* RegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5758BD924DFA385007E2517 /* RegisterService.swift */; };
-		F5758BDC24DFA76C007E2517 /* RegisterPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5758BDB24DFA76C007E2517 /* RegisterPath.swift */; };
-		F5758BDE24DFA7D8007E2517 /* RegisterNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5758BDD24DFA7D8007E2517 /* RegisterNetwork.swift */; };
 		F595D9EC24E280CA006DD353 /* RegisterViewModel+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = F595D9EB24E280CA006DD353 /* RegisterViewModel+Network.swift */; };
 		F595D9F124E28286006DD353 /* RegisterPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F595D9EF24E28286006DD353 /* RegisterPopUpViewController.swift */; };
 		F595D9F224E28286006DD353 /* RegisterPopUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F595D9F024E28286006DD353 /* RegisterPopUpViewController.xib */; };
@@ -209,7 +208,7 @@
 		8A7D862124D02D7D00C87610 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		8AA7014B24DBE89F00EEAADE /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		8AA7014F24DBE8DF00EEAADE /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
-		8AA7015124DBEA9A00EEAADE /* LoginPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPath.swift; sourceTree = "<group>"; };
+		8AA7015124DBEA9A00EEAADE /* AuthPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPath.swift; sourceTree = "<group>"; };
 		8AA7015324DBEADE00EEAADE /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		8AA7015524DBEDD100EEAADE /* LoginSubPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSubPath.swift; sourceTree = "<group>"; };
 		8AA7015824DBEFD200EEAADE /* LoginNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginNetwork.swift; sourceTree = "<group>"; };
@@ -223,6 +222,8 @@
 		920A35B0249B4D0900F2EABB /* SampleHomeViewModel+Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SampleHomeViewModel+Network.swift"; sourceTree = "<group>"; };
 		920C23C424DAA37F00047D14 /* FacebookSDKHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookSDKHandler.swift; sourceTree = "<group>"; };
 		920C23C624DAB1DD00047D14 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		920C25CC24E3A03000047D14 /* RegisterSubPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterSubPath.swift; sourceTree = "<group>"; };
+		920C25CE24E3A19D00047D14 /* RegisterNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterNetwork.swift; sourceTree = "<group>"; };
 		920C3F6424A7D00800AF75AE /* SampleHomeCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleHomeCoordinatorProtocol.swift; sourceTree = "<group>"; };
 		920C3F6624A7D23900AF75AE /* SampleProfileCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleProfileCoordinatorProtocol.swift; sourceTree = "<group>"; };
 		9227A23924CFE46E004F7952 /* Inter-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Light.ttf"; sourceTree = "<group>"; };
@@ -302,8 +303,6 @@
 		F5758BD024DFA1F2007E2517 /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
 		F5758BD424DFA258007E2517 /* RegisterResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterResponse.swift; sourceTree = "<group>"; };
 		F5758BD924DFA385007E2517 /* RegisterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterService.swift; sourceTree = "<group>"; };
-		F5758BDB24DFA76C007E2517 /* RegisterPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPath.swift; sourceTree = "<group>"; };
-		F5758BDD24DFA7D8007E2517 /* RegisterNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegisterNetwork.swift; path = MainApp/Network/Path/FeaturePath/Register/RegisterNetwork.swift; sourceTree = SOURCE_ROOT; };
 		F595D9EB24E280CA006DD353 /* RegisterViewModel+Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RegisterViewModel+Network.swift"; sourceTree = "<group>"; };
 		F595D9EF24E28286006DD353 /* RegisterPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPopUpViewController.swift; sourceTree = "<group>"; };
 		F595D9F024E28286006DD353 /* RegisterPopUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterPopUpViewController.xib; sourceTree = "<group>"; };
@@ -415,14 +414,6 @@
 				8A7D862124D02D7D00C87610 /* LoginCoordinator.swift */,
 			);
 			path = Login;
-			sourceTree = "<group>";
-		};
-		8AA7015C24DD3B4600EEAADE /* LoginNetwork */ = {
-			isa = PBXGroup;
-			children = (
-				8AA7015824DBEFD200EEAADE /* LoginNetwork.swift */,
-			);
-			path = LoginNetwork;
 			sourceTree = "<group>";
 		};
 		9201315224B4E3CC002303D0 /* App */ = {
@@ -596,7 +587,8 @@
 		923249A624C0401500FDFC3E /* AuthNetwork */ = {
 			isa = PBXGroup;
 			children = (
-				F5758BDD24DFA7D8007E2517 /* RegisterNetwork.swift */,
+				8AA7015824DBEFD200EEAADE /* LoginNetwork.swift */,
+				920C25CE24E3A19D00047D14 /* RegisterNetwork.swift */,
 			);
 			path = AuthNetwork;
 			sourceTree = "<group>";
@@ -620,8 +612,9 @@
 		923249A924C0404700FDFC3E /* Auth */ = {
 			isa = PBXGroup;
 			children = (
-				8AA7015124DBEA9A00EEAADE /* LoginPath.swift */,
+				8AA7015124DBEA9A00EEAADE /* AuthPath.swift */,
 				8AA7015524DBEDD100EEAADE /* LoginSubPath.swift */,
+				920C25CC24E3A03000047D14 /* RegisterSubPath.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -778,7 +771,6 @@
 		92C77C5F2497181F004C1D86 /* FeaturePath */ = {
 			isa = PBXGroup;
 			children = (
-				F5758BD624DFA2DD007E2517 /* Register */,
 				923249A924C0404700FDFC3E /* Auth */,
 				923249A824C0404300FDFC3E /* Profile */,
 				923249A724C0403F00FDFC3E /* Home */,
@@ -867,7 +859,6 @@
 		92D79ED12483E569004C4701 /* FeatureNetwork */ = {
 			isa = PBXGroup;
 			children = (
-				8AA7015C24DD3B4600EEAADE /* LoginNetwork */,
 				923249A624C0401500FDFC3E /* AuthNetwork */,
 				92D79F362484DB2E004C4701 /* ProfileNetwork */,
 				92D79F352484DB10004C4701 /* HomeNetwork */,
@@ -1022,14 +1013,6 @@
 			children = (
 				F5293EB324D9AB6700CA7E87 /* RegisterCoordinator.swift */,
 				F5293EB524D9AB7E00CA7E87 /* RegisterCoordinatorProtocol.swift */,
-			);
-			path = Register;
-			sourceTree = "<group>";
-		};
-		F5758BD624DFA2DD007E2517 /* Register */ = {
-			isa = PBXGroup;
-			children = (
-				F5758BDB24DFA76C007E2517 /* RegisterPath.swift */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -1315,7 +1298,6 @@
 				8A76A34424CED46F00F02AD9 /* InitialScreenCoordinator.swift in Sources */,
 				9227A36124D42937004F7952 /* EmptyModel.swift in Sources */,
 				92C77C5E24971765004C1D86 /* BasePath.swift in Sources */,
-				F5758BDC24DFA76C007E2517 /* RegisterPath.swift in Sources */,
 				92C77BFE24937CFC004C1D86 /* MainApp+NavigationItem.swift in Sources */,
 				920539BB249BA31300AF938C /* Undefined.swift in Sources */,
 				F595D9F124E28286006DD353 /* RegisterPopUpViewController.swift in Sources */,
@@ -1334,6 +1316,7 @@
 				8AA7014C24DBE89F00EEAADE /* LoginModel.swift in Sources */,
 				92D79E8C2483E534004C4701 /* SceneDelegate.swift in Sources */,
 				1EB0168624DC860300C76109 /* ProfilePath.swift in Sources */,
+				920C25CD24E3A03000047D14 /* RegisterSubPath.swift in Sources */,
 				92913BCE248D0B8A002D961D /* EmptyResponse.swift in Sources */,
 				1EBF013524D0A7690098C24A /* ProfileCoordinatorProtocol.swift in Sources */,
 				1EBF012C24D0A6A00098C24A /* ProfileLandingViewModel.swift in Sources */,
@@ -1348,6 +1331,7 @@
 				F5293EB424D9AB6700CA7E87 /* RegisterCoordinator.swift in Sources */,
 				920A35082499D63F00F2EABB /* CoordinatorState.swift in Sources */,
 				F595D9EC24E280CA006DD353 /* RegisterViewModel+Network.swift in Sources */,
+				920C25CF24E3A19D00047D14 /* RegisterNetwork.swift in Sources */,
 				1EC5105B24E31EFF00A00759 /* ProfileTableViewSection.swift in Sources */,
 				8AA7015424DBEADE00EEAADE /* LoginService.swift in Sources */,
 				92C77C0124937E4F004C1D86 /* MainApp+NavigationBar.swift in Sources */,
@@ -1371,8 +1355,7 @@
 				9227A64124D7F230004F7952 /* GoogleSDKHandler.swift in Sources */,
 				9227A38424D7B3D0004F7952 /* AppCoordinator+Firebase.swift in Sources */,
 				F5758BD124DFA1F2007E2517 /* RegisterModel.swift in Sources */,
-				F5758BDE24DFA7D8007E2517 /* RegisterNetwork.swift in Sources */,
-				8AA7015224DBEA9A00EEAADE /* LoginPath.swift in Sources */,
+				8AA7015224DBEA9A00EEAADE /* AuthPath.swift in Sources */,
 				92D79F0A2483E87D004C4701 /* SampleHomeViewModel.swift in Sources */,
 				8A76A33D24CECB7300F02AD9 /* InitialScreenViewModel.swift in Sources */,
 				92D79F4724850153004C4701 /* SampleProfileDetailProtocol.swift in Sources */,
