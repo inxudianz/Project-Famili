@@ -10,4 +10,8 @@ import Foundation
 
 protocol ProfileCoordinatorProtocol: Coordinator {
     func navigateToEditProfile()
+    func navigateToHelpScreen()
+    func navigateToTOS()
+    func navigateToPrivacyPolicy()
+    func navigateToRate()
 }

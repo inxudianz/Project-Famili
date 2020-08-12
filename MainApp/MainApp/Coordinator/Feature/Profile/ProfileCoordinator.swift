@@ -39,4 +39,20 @@ class ProfileCoordinator: ProfileCoordinatorProtocol {
         vc.viewModel = vm
         navigationController?.pushViewController(vc, animated: true)
     }
+    
+    func navigateToHelpScreen() {
+        Log.info(message: "Upcoming")
+    }
+    
+    func navigateToTOS() {
+        Log.info(message: "Upcoming")
+    }
+    
+    func navigateToPrivacyPolicy() {
+        Log.info(message: "Upcoming")
+    }
+    
+    func navigateToRate() {
+        Log.info(message: "Upcoming")
+    }
 }
