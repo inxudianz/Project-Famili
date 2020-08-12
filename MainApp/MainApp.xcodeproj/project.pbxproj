@@ -58,8 +58,9 @@
 		920C25FB24E3B7C800047D14 /* SampleNetwork+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C25FA24E3B7C800047D14 /* SampleNetwork+Delegate.swift */; };
 		920C262124E3BC1600047D14 /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C262024E3BC1600047D14 /* AuthCoordinator.swift */; };
 		920C262324E3BC2600047D14 /* AuthCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C262224E3BC2600047D14 /* AuthCoordinatorProtocol.swift */; };
-		920C276C24E414AF00047D14 /* Auth.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 920C276B24E414AF00047D14 /* Auth.xcassets */; };
 		920C276F24E4192E00047D14 /* LoginViewModel+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C276E24E4192E00047D14 /* LoginViewModel+Network.swift */; };
+		920C277324E419D500047D14 /* Auth.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 920C277224E419D500047D14 /* Auth.xcassets */; };
+		920C277524E41BAE00047D14 /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C277424E41BAE00047D14 /* FontManager.swift */; };
 		920C3F6524A7D00800AF75AE /* SampleHomeCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C3F6424A7D00800AF75AE /* SampleHomeCoordinatorProtocol.swift */; };
 		920C3F6724A7D23900AF75AE /* SampleProfileCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C3F6624A7D23900AF75AE /* SampleProfileCoordinatorProtocol.swift */; };
 		9227A24224CFE474004F7952 /* Inter-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9227A23A24CFE46E004F7952 /* Inter-Black.ttf */; };
@@ -225,8 +226,9 @@
 		920C25FA24E3B7C800047D14 /* SampleNetwork+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SampleNetwork+Delegate.swift"; sourceTree = "<group>"; };
 		920C262024E3BC1600047D14 /* AuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinator.swift; sourceTree = "<group>"; };
 		920C262224E3BC2600047D14 /* AuthCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinatorProtocol.swift; sourceTree = "<group>"; };
-		920C276B24E414AF00047D14 /* Auth.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Auth.xcassets; sourceTree = "<group>"; };
 		920C276E24E4192E00047D14 /* LoginViewModel+Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewModel+Network.swift"; sourceTree = "<group>"; };
+		920C277224E419D500047D14 /* Auth.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Auth.xcassets; path = MainApp/Feature/Auth/Register/Auth.xcassets; sourceTree = SOURCE_ROOT; };
+		920C277424E41BAE00047D14 /* FontManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
 		920C3F6424A7D00800AF75AE /* SampleHomeCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleHomeCoordinatorProtocol.swift; sourceTree = "<group>"; };
 		920C3F6624A7D23900AF75AE /* SampleProfileCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleProfileCoordinatorProtocol.swift; sourceTree = "<group>"; };
 		9227A23924CFE46E004F7952 /* Inter-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Light.ttf"; sourceTree = "<group>"; };
@@ -470,6 +472,7 @@
 				9227A34024D293D5004F7952 /* FirebaseHandler.swift */,
 				9227A64024D7F230004F7952 /* GoogleSDKHandler.swift */,
 				920C23C424DAA37F00047D14 /* FacebookSDKHandler.swift */,
+				920C277424E41BAE00047D14 /* FontManager.swift */,
 			);
 			path = Handler;
 			sourceTree = "<group>";
@@ -621,7 +624,7 @@
 		923249AC24C0407100FDFC3E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				920C276B24E414AF00047D14 /* Auth.xcassets */,
+				920C277224E419D500047D14 /* Auth.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -979,7 +982,6 @@
 		F5293EA524D993E700CA7E87 /* Register */ = {
 			isa = PBXGroup;
 			children = (
-				F595D9E624E27E2E006DD353 /* Resources */,
 				F5293EA824D9941F00CA7E87 /* RegisterViewController.swift */,
 				F5293EA924D9941F00CA7E87 /* RegisterViewController.xib */,
 				F5293EAD24D9AA8000CA7E87 /* RegisterProtocol.swift */,
@@ -989,13 +991,6 @@
 				F595D9F024E28286006DD353 /* RegisterPopUpViewController.xib */,
 			);
 			path = Register;
-			sourceTree = "<group>";
-		};
-		F595D9E624E27E2E006DD353 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1125,6 +1120,7 @@
 				9227A24824CFE479004F7952 /* Inter-Regular.ttf in Resources */,
 				92D79F442484DB93004C4701 /* SampleProfileViewController.xib in Resources */,
 				92D79F082483E873004C4701 /* SampleHomeViewController.xib in Resources */,
+				920C277324E419D500047D14 /* Auth.xcassets in Resources */,
 				9227A24524CFE479004F7952 /* Inter-ExtraLight.ttf in Resources */,
 				92D79F4D24850166004C4701 /* SampleProfileDetailViewController.xib in Resources */,
 				F595D9F224E28286006DD353 /* RegisterPopUpViewController.xib in Resources */,
@@ -1133,7 +1129,6 @@
 				9227A24624CFE479004F7952 /* Inter-Light.ttf in Resources */,
 				F5293EAB24D9941F00CA7E87 /* RegisterViewController.xib in Resources */,
 				9227A24224CFE474004F7952 /* Inter-Black.ttf in Resources */,
-				920C276C24E414AF00047D14 /* Auth.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1323,6 +1318,7 @@
 				8A76A33424CEB3EB00F02AD9 /* InitialScreenViewController.swift in Sources */,
 				8A7D861D24D02BCE00C87610 /* LoginProtocol.swift in Sources */,
 				8AA7015024DBE8DF00EEAADE /* LoginResponse.swift in Sources */,
+				920C277524E41BAE00047D14 /* FontManager.swift in Sources */,
 				9227A34124D293D5004F7952 /* FirebaseHandler.swift in Sources */,
 				9227A64124D7F230004F7952 /* GoogleSDKHandler.swift in Sources */,
 				9227A38424D7B3D0004F7952 /* AppCoordinator+Firebase.swift in Sources */,
