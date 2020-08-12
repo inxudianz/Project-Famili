@@ -76,5 +76,4 @@ class SampleNetwork: SampleNetworkProtocol {
             }
         }
     }
-    
 }
