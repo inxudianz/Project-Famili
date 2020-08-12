@@ -10,6 +10,7 @@ import UIKit
 
 class InitialScreenCoordinator: InitialScreenCoordinatorProtocol {
     weak var parentCoordinator: Coordinator?
+    
     var childCoordinators: [Coordinator] = [Coordinator]()
     var navigationController: UINavigationController?
     
@@ -20,18 +21,17 @@ class InitialScreenCoordinator: InitialScreenCoordinatorProtocol {
     func start() {
         let vc = InitialScreenViewController()
         let vm = InitialScreenViewModel()
-        vc.navigationItem.configure()
         vm.coordinator = self
         vm.view = vc
         vc.viewModel = vm
         navigationController?.pushViewController(vc, animated: false)
     }
     
-    func gotoLogin() {
-        let loginCoordinator = LoginCoordinator(navigationController: UINavigationController())
-        loginCoordinator.navigationController = navigationController
-        loginCoordinator.parentCoordinator = self
-        childCoordinators.append(loginCoordinator)
-        loginCoordinator.start()
+    func navigateToAuth() {
+        let authCoordinator = AuthCoordinator(navigationController: UINavigationController(),isRegistered: AppContext.Splash.isRegistered)
+        authCoordinator.navigationController = navigationController
+        authCoordinator.parentCoordinator = self
+        childCoordinators.append(authCoordinator)
+        authCoordinator.start()
     }
 }

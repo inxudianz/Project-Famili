@@ -9,7 +9,7 @@
 import Foundation
 
 enum ProfileCoordinatorConstant {
-    enum Title:String {
+    enum Title: String {
         case normal = "Welcome"
     }
 }

@@ -9,7 +9,7 @@
 import UIKit
 import Component
 
-class RegisterViewController: UIViewController {
+class RegisterViewController: UIViewController, RegisterViewProtocol {
     
     var viewModel: RegisterViewModelProtocol?
     

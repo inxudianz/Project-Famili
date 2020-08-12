@@ -8,3 +8,15 @@
 
 import Foundation
 
+struct AppContext {
+    struct Splash {
+        static var isRegistered: Bool {
+            get {
+                return UserDefaults.standard.bool(forKey: "isRegistered")
+            }
+            set {
+                UserDefaults.standard.set(newValue, forKey: "isRegistered")
+            }
+        }
+    }
+}

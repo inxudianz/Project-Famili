@@ -10,9 +10,9 @@ import Foundation
 
 class LoginViewModel: LoginViewModelProtocol {
     weak var view: LoginViewProtocol?
-    weak var coordinator: LoginCoordinatorProtocol?
+    weak var coordinator: AuthCoordinatorProtocol?
     
     func gotoHome() {
-        coordinator?.gotoHome()
+        coordinator?.navigateToHome()
     }
 }

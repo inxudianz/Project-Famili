@@ -9,7 +9,5 @@
 import Foundation
 
 protocol ProfileCoordinatorProtocol: Coordinator {
-    func getEditProfile()
-    
-    func saveEditProfile()
+    func navigateToEditProfile()
 }

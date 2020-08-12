@@ -10,7 +10,7 @@ import Foundation
 
 protocol LoginViewModelProtocol: class {
     var view: LoginViewProtocol? { get set }
-    var coordinator: LoginCoordinatorProtocol? { get set }
+    var coordinator: AuthCoordinatorProtocol? { get set }
 
     func gotoHome()
 }

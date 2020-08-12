@@ -10,7 +10,7 @@ import Foundation
 
 class RegisterViewModel: RegisterViewModelProtocol {
     weak var view: RegisterViewProtocol?
-    weak var coordinator: RegisterCoordinatorProtocol?
+    weak var coordinator: AuthCoordinatorProtocol?
     var network: AuthNetworkProtocol?
     
     func isValidPhone(_ phone: String) -> Bool {

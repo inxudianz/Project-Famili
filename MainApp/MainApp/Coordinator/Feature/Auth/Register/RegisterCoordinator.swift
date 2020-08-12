@@ -22,7 +22,7 @@ class RegisterCoordinator: RegisterCoordinatorProtocol {
         let vc = RegisterViewController()
         let vm = RegisterViewModel()
         vm.coordinator = self
-        vm.view = vc as? RegisterViewProtocol
+        vm.view = vc
         vc.viewModel = vm
         navigationController?.pushViewController(vc, animated: false)
     }

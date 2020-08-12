@@ -29,7 +29,10 @@ class AppCoordinator<build: BuildConfiguration>: Coordinator {
     let coordinatorId: [String:Coordinator] = [
         "sampleHome" : SampleHomeCoordinator(navigationController: UINavigationController()),
         "sampleProfile" : SampleProfileCoordinator(navigationController: UINavigationController()),
-        "register" : RegisterCoordinator(navigationController: UINavigationController()),
+        "splash" : InitialScreenCoordinator(navigationController: UINavigationController()),
+        "profile" : ProfileCoordinator(navigationController: UINavigationController()),
+        "login" : AuthCoordinator(navigationController: UINavigationController(), isRegistered: true),
+        "register" : AuthCoordinator(navigationController: UINavigationController(), isRegistered: false),
     ]
     
     // MARK: - Initializer
