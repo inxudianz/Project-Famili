@@ -53,6 +53,8 @@
 		920A35062499D61E00F2EABB /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920A35052499D61E00F2EABB /* Coordinator.swift */; };
 		920A35082499D63F00F2EABB /* CoordinatorState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920A35072499D63F00F2EABB /* CoordinatorState.swift */; };
 		920A35B1249B4D0900F2EABB /* SampleHomeViewModel+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920A35B0249B4D0900F2EABB /* SampleHomeViewModel+Network.swift */; };
+		920C23C524DAA37F00047D14 /* FacebookSDKHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C23C424DAA37F00047D14 /* FacebookSDKHandler.swift */; };
+		920C23C724DAB1DD00047D14 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 920C23C624DAB1DD00047D14 /* GoogleService-Info.plist */; };
 		920C3F6524A7D00800AF75AE /* SampleHomeCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C3F6424A7D00800AF75AE /* SampleHomeCoordinatorProtocol.swift */; };
 		920C3F6724A7D23900AF75AE /* SampleProfileCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C3F6624A7D23900AF75AE /* SampleProfileCoordinatorProtocol.swift */; };
 		9227A24224CFE474004F7952 /* Inter-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9227A23A24CFE46E004F7952 /* Inter-Black.ttf */; };
@@ -67,6 +69,8 @@
 		9227A34124D293D5004F7952 /* FirebaseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9227A34024D293D5004F7952 /* FirebaseHandler.swift */; };
 		9227A36124D42937004F7952 /* EmptyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9227A36024D42937004F7952 /* EmptyModel.swift */; };
 		9227A38424D7B3D0004F7952 /* AppCoordinator+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9227A38324D7B3D0004F7952 /* AppCoordinator+Firebase.swift */; };
+		9227A64124D7F230004F7952 /* GoogleSDKHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9227A64024D7F230004F7952 /* GoogleSDKHandler.swift */; };
+		9227A74424D9509E004F7952 /* AppCoordinator+GoogleSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9227A74324D9509E004F7952 /* AppCoordinator+GoogleSDK.swift */; };
 		92913BCE248D0B8A002D961D /* EmptyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92913BCD248D0B8A002D961D /* EmptyResponse.swift */; };
 		92913BEA248D13A3002D961D /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92913BE9248D13A3002D961D /* NetworkService.swift */; };
 		92B90E502486BB1E00C59DDF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 92B90E522486BB1E00C59DDF /* Localizable.strings */; };
@@ -217,6 +221,8 @@
 		920A35052499D61E00F2EABB /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		920A35072499D63F00F2EABB /* CoordinatorState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorState.swift; sourceTree = "<group>"; };
 		920A35B0249B4D0900F2EABB /* SampleHomeViewModel+Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SampleHomeViewModel+Network.swift"; sourceTree = "<group>"; };
+		920C23C424DAA37F00047D14 /* FacebookSDKHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookSDKHandler.swift; sourceTree = "<group>"; };
+		920C23C624DAB1DD00047D14 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		920C3F6424A7D00800AF75AE /* SampleHomeCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleHomeCoordinatorProtocol.swift; sourceTree = "<group>"; };
 		920C3F6624A7D23900AF75AE /* SampleProfileCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleProfileCoordinatorProtocol.swift; sourceTree = "<group>"; };
 		9227A23924CFE46E004F7952 /* Inter-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Light.ttf"; sourceTree = "<group>"; };
@@ -231,6 +237,8 @@
 		9227A34024D293D5004F7952 /* FirebaseHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseHandler.swift; sourceTree = "<group>"; };
 		9227A36024D42937004F7952 /* EmptyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyModel.swift; sourceTree = "<group>"; };
 		9227A38324D7B3D0004F7952 /* AppCoordinator+Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppCoordinator+Firebase.swift"; sourceTree = "<group>"; };
+		9227A64024D7F230004F7952 /* GoogleSDKHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSDKHandler.swift; sourceTree = "<group>"; };
+		9227A74324D9509E004F7952 /* AppCoordinator+GoogleSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppCoordinator+GoogleSDK.swift"; sourceTree = "<group>"; };
 		92324BAE24C6D5E000FDFC3E /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		92913BB8248D07C8002D961D /* Component.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Component.xcodeproj; path = ../Component/Component.xcodeproj; sourceTree = "<group>"; };
 		92913BCD248D0B8A002D961D /* EmptyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyResponse.swift; sourceTree = "<group>"; };
@@ -425,6 +433,7 @@
 				9201315024B4E3BC002303D0 /* BuildConfiguration.swift */,
 				92012F0724B30D1F002303D0 /* AppCoordinator+FeatureCoordinator.swift */,
 				9227A38324D7B3D0004F7952 /* AppCoordinator+Firebase.swift */,
+				9227A74324D9509E004F7952 /* AppCoordinator+GoogleSDK.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -481,6 +490,8 @@
 			isa = PBXGroup;
 			children = (
 				9227A34024D293D5004F7952 /* FirebaseHandler.swift */,
+				9227A64024D7F230004F7952 /* GoogleSDKHandler.swift */,
+				920C23C424DAA37F00047D14 /* FacebookSDKHandler.swift */,
 			);
 			path = Handler;
 			sourceTree = "<group>";
@@ -509,6 +520,7 @@
 				9232499524C03E0A00FDFC3E /* Fonts */,
 				92D79E892483E534004C4701 /* AppDelegate.swift */,
 				92D79E8B2483E534004C4701 /* SceneDelegate.swift */,
+				920C23C624DAB1DD00047D14 /* GoogleService-Info.plist */,
 				92D79E972483E535004C4701 /* Info.plist */,
 				92D79E922483E535004C4701 /* Main.xcassets */,
 			);
@@ -1043,6 +1055,7 @@
 				92D79E842483E534004C4701 /* Resources */,
 				92D79F1E2483F35E004C4701 /* Embed Frameworks */,
 				B0850ECFC788B5219A15B095 /* [CP] Embed Pods Frameworks */,
+				624B087B2EC050529B1D64E3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1200,6 +1213,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		624B087B2EC050529B1D64E3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MainApp/Pods-MainApp-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MainApp/Pods-MainApp-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MainApp/Pods-MainApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		9ED6F66CD0810BB2E0305C01 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1279,6 +1309,7 @@
 				8AA7015624DBEDD100EEAADE /* LoginSubPath.swift in Sources */,
 				92913BEA248D13A3002D961D /* NetworkService.swift in Sources */,
 				920A35062499D61E00F2EABB /* Coordinator.swift in Sources */,
+				9227A74424D9509E004F7952 /* AppCoordinator+GoogleSDK.swift in Sources */,
 				1E4A4AD424DDD815004795AB /* ProfileCoordinatorConstant.swift in Sources */,
 				92D79F3124842E49004C4701 /* HomeNetwork.swift in Sources */,
 				8A76A34424CED46F00F02AD9 /* InitialScreenCoordinator.swift in Sources */,
@@ -1297,6 +1328,7 @@
 				8A76A34124CECC1E00F02AD9 /* InitialScreenCoordinatorProtocol.swift in Sources */,
 				92C77CA5249760DF004C1D86 /* AppContext.swift in Sources */,
 				92D79F3324842E7A004C4701 /* SampleHomeDetailProtocol.swift in Sources */,
+				920C23C524DAA37F00047D14 /* FacebookSDKHandler.swift in Sources */,
 				F5293EB624D9AB7E00CA7E87 /* RegisterCoordinatorProtocol.swift in Sources */,
 				1EB0168224DC828E00C76109 /* ProfileResponse.swift in Sources */,
 				8AA7014C24DBE89F00EEAADE /* LoginModel.swift in Sources */,
@@ -1336,6 +1368,7 @@
 				8A7D861D24D02BCE00C87610 /* LoginProtocol.swift in Sources */,
 				8AA7015024DBE8DF00EEAADE /* LoginResponse.swift in Sources */,
 				9227A34124D293D5004F7952 /* FirebaseHandler.swift in Sources */,
+				9227A64124D7F230004F7952 /* GoogleSDKHandler.swift in Sources */,
 				9227A38424D7B3D0004F7952 /* AppCoordinator+Firebase.swift in Sources */,
 				F5758BD124DFA1F2007E2517 /* RegisterModel.swift in Sources */,
 				F5758BDE24DFA7D8007E2517 /* RegisterNetwork.swift in Sources */,
@@ -1525,7 +1558,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = inx.MainApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.famili.userLaundron;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1544,7 +1577,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = inx.MainApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.famili.userLaundron;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

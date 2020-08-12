@@ -12,6 +12,8 @@ def mainModule
   pod "Alamofire"
   pod "RxSwift"
   pod "RxCocoa"
+  pod "GoogleSignIn"
+  pod "FBSDKLoginKit"
 end
 
 # Target
