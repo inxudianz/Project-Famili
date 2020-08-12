@@ -56,6 +56,7 @@
 		920C23C524DAA37F00047D14 /* FacebookSDKHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C23C424DAA37F00047D14 /* FacebookSDKHandler.swift */; };
 		920C25CD24E3A03000047D14 /* RegisterSubPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C25CC24E3A03000047D14 /* RegisterSubPath.swift */; };
 		920C25CF24E3A19D00047D14 /* RegisterNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C25CE24E3A19D00047D14 /* RegisterNetwork.swift */; };
+		920C25D124E3A56A00047D14 /* RemoteConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C25D024E3A56A00047D14 /* RemoteConfig.swift */; };
 		920C3F6524A7D00800AF75AE /* SampleHomeCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C3F6424A7D00800AF75AE /* SampleHomeCoordinatorProtocol.swift */; };
 		920C3F6724A7D23900AF75AE /* SampleProfileCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C3F6624A7D23900AF75AE /* SampleProfileCoordinatorProtocol.swift */; };
 		9227A24224CFE474004F7952 /* Inter-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9227A23A24CFE46E004F7952 /* Inter-Black.ttf */; };
@@ -222,6 +223,7 @@
 		920C23C624DAB1DD00047D14 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		920C25CC24E3A03000047D14 /* RegisterSubPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterSubPath.swift; sourceTree = "<group>"; };
 		920C25CE24E3A19D00047D14 /* RegisterNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterNetwork.swift; sourceTree = "<group>"; };
+		920C25D024E3A56A00047D14 /* RemoteConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteConfig.swift; sourceTree = "<group>"; };
 		920C3F6424A7D00800AF75AE /* SampleHomeCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleHomeCoordinatorProtocol.swift; sourceTree = "<group>"; };
 		920C3F6624A7D23900AF75AE /* SampleProfileCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleProfileCoordinatorProtocol.swift; sourceTree = "<group>"; };
 		9227A23924CFE46E004F7952 /* Inter-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Light.ttf"; sourceTree = "<group>"; };
@@ -679,6 +681,7 @@
 			isa = PBXGroup;
 			children = (
 				92C77CA4249760DF004C1D86 /* AppContext.swift */,
+				920C25D024E3A56A00047D14 /* RemoteConfig.swift */,
 			);
 			path = Context;
 			sourceTree = "<group>";
@@ -1331,6 +1334,7 @@
 				920A35B1249B4D0900F2EABB /* SampleHomeViewModel+Network.swift in Sources */,
 				92D79F382484DB3E004C4701 /* ProfileNetwork.swift in Sources */,
 				92B90E582486C72700C59DDF /* MainApp+String.swift in Sources */,
+				920C25D124E3A56A00047D14 /* RemoteConfig.swift in Sources */,
 				92D79F2924841936004C4701 /* SampleHomeCoordinator.swift in Sources */,
 				1EBF014A24D1E5450098C24A /* ProfileLandingCell.swift in Sources */,
 				92D79F402484DB87004C4701 /* SampleProfileViewModel.swift in Sources */,
