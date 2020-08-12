@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct SampleModel: Encodable {
+struct SampleModel {
     struct Test: Encodable {
         let name: String?
         let age: Int?

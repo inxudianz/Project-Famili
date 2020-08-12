@@ -8,8 +8,15 @@
 
 import Foundation
 
-struct LoginModel: Encodable {
-    struct LoginInfo: Encodable {
+struct AuthModel {
+    struct Login: Encodable {
+        let email: String?
+        let password: String?
+    }
+    
+    struct Register: Encodable {
+        let name: String?
+        let phone: String?
         let email: String?
         let password: String?
     }

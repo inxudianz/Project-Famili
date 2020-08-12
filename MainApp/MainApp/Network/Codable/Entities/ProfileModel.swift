@@ -1,4 +1,3 @@
-
 //
 //  ProfileModel.swift
 //  MainApp
@@ -9,7 +8,7 @@
 
 import Foundation
 
-struct ProfileModel: Encodable {
+struct ProfileModel {
     struct Profile: Encodable {
         let name: String?
         let phoneNumber: String?

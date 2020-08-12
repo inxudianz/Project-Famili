@@ -39,7 +39,7 @@
 		8A7D861D24D02BCE00C87610 /* LoginProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7D861C24D02BCE00C87610 /* LoginProtocol.swift */; };
 		8A7D862024D02C2800C87610 /* LoginCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7D861F24D02C2800C87610 /* LoginCoordinatorProtocol.swift */; };
 		8A7D862224D02D7D00C87610 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7D862124D02D7D00C87610 /* LoginCoordinator.swift */; };
-		8AA7014C24DBE89F00EEAADE /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA7014B24DBE89F00EEAADE /* LoginModel.swift */; };
+		8AA7014C24DBE89F00EEAADE /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA7014B24DBE89F00EEAADE /* AuthModel.swift */; };
 		8AA7015024DBE8DF00EEAADE /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA7014F24DBE8DF00EEAADE /* LoginResponse.swift */; };
 		8AA7015224DBEA9A00EEAADE /* AuthPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA7015124DBEA9A00EEAADE /* AuthPath.swift */; };
 		8AA7015424DBEADE00EEAADE /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA7015324DBEADE00EEAADE /* LoginService.swift */; };
@@ -124,8 +124,6 @@
 		F5293EB024D9AA8F00CA7E87 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5293EAF24D9AA8F00CA7E87 /* RegisterViewModel.swift */; };
 		F5293EB424D9AB6700CA7E87 /* RegisterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5293EB324D9AB6700CA7E87 /* RegisterCoordinator.swift */; };
 		F5293EB624D9AB7E00CA7E87 /* RegisterCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5293EB524D9AB7E00CA7E87 /* RegisterCoordinatorProtocol.swift */; };
-		F5758BD124DFA1F2007E2517 /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5758BD024DFA1F2007E2517 /* RegisterModel.swift */; };
-		F5758BD524DFA258007E2517 /* RegisterResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5758BD424DFA258007E2517 /* RegisterResponse.swift */; };
 		F5758BDA24DFA385007E2517 /* RegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5758BD924DFA385007E2517 /* RegisterService.swift */; };
 		F595D9EC24E280CA006DD353 /* RegisterViewModel+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = F595D9EB24E280CA006DD353 /* RegisterViewModel+Network.swift */; };
 		F595D9F124E28286006DD353 /* RegisterPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F595D9EF24E28286006DD353 /* RegisterPopUpViewController.swift */; };
@@ -206,7 +204,7 @@
 		8A7D861C24D02BCE00C87610 /* LoginProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProtocol.swift; sourceTree = "<group>"; };
 		8A7D861F24D02C2800C87610 /* LoginCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinatorProtocol.swift; sourceTree = "<group>"; };
 		8A7D862124D02D7D00C87610 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
-		8AA7014B24DBE89F00EEAADE /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		8AA7014B24DBE89F00EEAADE /* AuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModel.swift; sourceTree = "<group>"; };
 		8AA7014F24DBE8DF00EEAADE /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		8AA7015124DBEA9A00EEAADE /* AuthPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPath.swift; sourceTree = "<group>"; };
 		8AA7015324DBEADE00EEAADE /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
@@ -300,8 +298,6 @@
 		F5293EAF24D9AA8F00CA7E87 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		F5293EB324D9AB6700CA7E87 /* RegisterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCoordinator.swift; sourceTree = "<group>"; };
 		F5293EB524D9AB7E00CA7E87 /* RegisterCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCoordinatorProtocol.swift; sourceTree = "<group>"; };
-		F5758BD024DFA1F2007E2517 /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
-		F5758BD424DFA258007E2517 /* RegisterResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterResponse.swift; sourceTree = "<group>"; };
 		F5758BD924DFA385007E2517 /* RegisterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterService.swift; sourceTree = "<group>"; };
 		F595D9EB24E280CA006DD353 /* RegisterViewModel+Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RegisterViewModel+Network.swift"; sourceTree = "<group>"; };
 		F595D9EF24E28286006DD353 /* RegisterPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPopUpViewController.swift; sourceTree = "<group>"; };
@@ -701,7 +697,6 @@
 			children = (
 				92913BCD248D0B8A002D961D /* EmptyResponse.swift */,
 				92C77BFB2493799B004C1D86 /* SampleResponse.swift */,
-				F5758BD424DFA258007E2517 /* RegisterResponse.swift */,
 				1EB0168124DC828E00C76109 /* ProfileResponse.swift */,
 				8AA7014F24DBE8DF00EEAADE /* LoginResponse.swift */,
 			);
@@ -713,9 +708,8 @@
 			children = (
 				92C77BF72493798F004C1D86 /* SampleModel.swift */,
 				9227A36024D42937004F7952 /* EmptyModel.swift */,
-				F5758BD024DFA1F2007E2517 /* RegisterModel.swift */,
 				1EB0167F24DC820E00C76109 /* ProfileModel.swift */,
-				8AA7014B24DBE89F00EEAADE /* LoginModel.swift */,
+				8AA7014B24DBE89F00EEAADE /* AuthModel.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -1288,7 +1282,6 @@
 				8A7D862224D02D7D00C87610 /* LoginCoordinator.swift in Sources */,
 				920C3F6724A7D23900AF75AE /* SampleProfileCoordinatorProtocol.swift in Sources */,
 				9201315124B4E3BC002303D0 /* BuildConfiguration.swift in Sources */,
-				F5758BD524DFA258007E2517 /* RegisterResponse.swift in Sources */,
 				8AA7015624DBEDD100EEAADE /* LoginSubPath.swift in Sources */,
 				92913BEA248D13A3002D961D /* NetworkService.swift in Sources */,
 				920A35062499D61E00F2EABB /* Coordinator.swift in Sources */,
@@ -1313,7 +1306,7 @@
 				920C23C524DAA37F00047D14 /* FacebookSDKHandler.swift in Sources */,
 				F5293EB624D9AB7E00CA7E87 /* RegisterCoordinatorProtocol.swift in Sources */,
 				1EB0168224DC828E00C76109 /* ProfileResponse.swift in Sources */,
-				8AA7014C24DBE89F00EEAADE /* LoginModel.swift in Sources */,
+				8AA7014C24DBE89F00EEAADE /* AuthModel.swift in Sources */,
 				92D79E8C2483E534004C4701 /* SceneDelegate.swift in Sources */,
 				1EB0168624DC860300C76109 /* ProfilePath.swift in Sources */,
 				920C25CD24E3A03000047D14 /* RegisterSubPath.swift in Sources */,
@@ -1354,7 +1347,6 @@
 				9227A34124D293D5004F7952 /* FirebaseHandler.swift in Sources */,
 				9227A64124D7F230004F7952 /* GoogleSDKHandler.swift in Sources */,
 				9227A38424D7B3D0004F7952 /* AppCoordinator+Firebase.swift in Sources */,
-				F5758BD124DFA1F2007E2517 /* RegisterModel.swift in Sources */,
 				8AA7015224DBEA9A00EEAADE /* AuthPath.swift in Sources */,
 				92D79F0A2483E87D004C4701 /* SampleHomeViewModel.swift in Sources */,
 				8A76A33D24CECB7300F02AD9 /* InitialScreenViewModel.swift in Sources */,

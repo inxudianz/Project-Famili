@@ -10,10 +10,10 @@ import Foundation
 
 protocol ProfileNetworkDelegate: class {
     
-    func didSuccessRetrieveProfile(response: GetProfileResponse)
+    func didSuccessRetrieveProfile(response: ProfileResponse.GetProfileResponse)
     func didFailedRetrieveProfile(error: Error)
     
-    func didSuccessEditProfile(response: EditProfileResponse)
+    func didSuccessEditProfile(response: ProfileResponse.EditProfileResponse)
     func didFailedEditProfile(error: Error)
 }
 
@@ -36,7 +36,7 @@ class ProfileLandingNetwork: ProfileNetworkProtocol {
     }
     
     func profileGet() {
-        networkService.request(ProfileService.getProfileRequest, EmptyModel(), GetProfileResponse.self) { [weak self] (result) in
+        networkService.request(ProfileService.getProfileRequest, EmptyModel(), ProfileResponse.GetProfileResponse.self) { [weak self] (result) in
             switch result {
             case .success(let response):
                 self?.profileNetworkDelegate?.didSuccessRetrieveProfile(response: response)
@@ -49,7 +49,7 @@ class ProfileLandingNetwork: ProfileNetworkProtocol {
     func profileEditPost() {
         // Get the edited profile from controller to update to database
         let profileModel = ProfileModel.Profile(name: "AAA", phoneNumber: "081230129310", email: "aaa@gmail.com")
-        networkService.request(ProfileService.saveProfileRequest, profileModel, EditProfileResponse.self) { [weak self] (result) in
+        networkService.request(ProfileService.saveProfileRequest, profileModel, ProfileResponse.EditProfileResponse.self) { [weak self] (result) in
             switch result {
             case .success(let response):
                 self?.profileNetworkDelegate?.didSuccessEditProfile(response: response)

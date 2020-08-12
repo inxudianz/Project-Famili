@@ -27,7 +27,7 @@ class EditProfileViewModel: EditProfileViewModelProtocol {
 
 extension EditProfileViewModel: ProfileNetworkDelegate {
     
-    func didSuccessRetrieveProfile(response: GetProfileResponse) {
+    func didSuccessRetrieveProfile(response: ProfileResponse.GetProfileResponse) {
         Log.info(message: response)
     }
     
@@ -35,7 +35,7 @@ extension EditProfileViewModel: ProfileNetworkDelegate {
         Log.info(message: "Error retrieving Profile")
     }
     
-    func didSuccessEditProfile(response: EditProfileResponse) {
+    func didSuccessEditProfile(response: ProfileResponse.EditProfileResponse) {
         Log.info(message: response)
     }
     

@@ -9,7 +9,7 @@
 import Foundation
 
 protocol LoginNetworkDelegate: class {
-    func didSuccessLogin(response: LoginResponse)
+    func didSuccessLogin(response: AuthResponse.Login)
     func didFailedLogin(error: Error)
 }
 
@@ -29,8 +29,8 @@ class LoginNetwork: LoginNetworkProtocol{
     }
     
     func loginPost() {
-        let loginModelLoginInfo = LoginModel.LoginInfo(email: "asdasd@gmail.com", password: "11113333")
-        networkService.request(LoginService.loginRequest, loginModelLoginInfo, LoginResponse.self) { [weak self] (result) in
+        let loginModelLoginInfo = AuthModel.Login(email: "asdasd@gmail.com", password: "11113333")
+        networkService.request(LoginService.loginRequest, loginModelLoginInfo, AuthResponse.Login.self) { [weak self] (result) in
             switch result {
             case .success(let response):
                 self?.loginNetworkDelegate?.didSuccessLogin(response: response)
