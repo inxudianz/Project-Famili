@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		920C25C724E392B100047D14 /* FamiliButtonConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C25C624E392B100047D14 /* FamiliButtonConstant.swift */; };
+		920C25C924E39D9B00047D14 /* CircularProgressConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C25C824E39D9B00047D14 /* CircularProgressConstant.swift */; };
 		9227A16C24CDC521004F7952 /* FamiliTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9227A16B24CDC521004F7952 /* FamiliTextField.swift */; };
 		9227A16E24CDC7E5004F7952 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9227A16D24CDC7E5004F7952 /* UIColor.swift */; };
 		9227A17024CDC9B1004F7952 /* FamiliTextFieldConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9227A16F24CDC9B1004F7952 /* FamiliTextFieldConstant.swift */; };
@@ -33,6 +34,7 @@
 
 /* Begin PBXFileReference section */
 		920C25C624E392B100047D14 /* FamiliButtonConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamiliButtonConstant.swift; sourceTree = "<group>"; };
+		920C25C824E39D9B00047D14 /* CircularProgressConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressConstant.swift; sourceTree = "<group>"; };
 		9227A16B24CDC521004F7952 /* FamiliTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamiliTextField.swift; sourceTree = "<group>"; };
 		9227A16D24CDC7E5004F7952 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		9227A16F24CDC9B1004F7952 /* FamiliTextFieldConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamiliTextFieldConstant.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				92C77C09249383CB004C1D86 /* CircularProgressView.swift */,
+				920C25C824E39D9B00047D14 /* CircularProgressConstant.swift */,
 			);
 			path = Graph;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F50316DE24D08AF100F78288 /* FamiliButton.swift in Sources */,
+				920C25C924E39D9B00047D14 /* CircularProgressConstant.swift in Sources */,
 				92D79F032483E85F004C4701 /* MasterViewController.swift in Sources */,
 				92C77C0A249383CB004C1D86 /* CircularProgressView.swift in Sources */,
 				92C77C0524937EA1004C1D86 /* DualButton.swift in Sources */,
