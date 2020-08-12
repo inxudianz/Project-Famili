@@ -29,6 +29,7 @@ class AppCoordinator<build: BuildConfiguration>: Coordinator {
     let coordinatorId: [String:Coordinator] = [
         "sampleHome" : SampleHomeCoordinator(navigationController: UINavigationController()),
         "sampleProfile" : SampleProfileCoordinator(navigationController: UINavigationController()),
+        "register" : RegisterCoordinator(navigationController: UINavigationController()),
     ]
     
     // MARK: - Initializer
