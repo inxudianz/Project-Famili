@@ -53,8 +53,8 @@ import UIKit
      
      Provide parameters required for the button such as style & title
      
-     - parameters:
-     - style: A style corresponding the enum ButtonStyle
+    - parameters:
+        - style : A style corresponding the enum ButtonStyle
      
      */
     init(style: ButtonStyle = .primary) {
