@@ -14,13 +14,13 @@ class LoginViewModel: LoginViewModelProtocol {
     var network: AuthNetworkProtocol?
     
     init() {
+        self.network = AuthNetwork()
         self.network?.authLoginDelegate = self
     }
     
     func login(email: String, password: String) {
-        coordinator?.navigateToHome()
         let data = AuthModel.Login(email: email, password: password)
-        //network?.login(data: data)
+        network?.login(data: data)
     }
     
     func register() {
