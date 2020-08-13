@@ -26,7 +26,7 @@ class ProfileLandingController: MasterViewController, ProfileLandingViewProtocol
         self.setupView()
         
         self.profileTableView.delegate = self
-        self.profileTableView.dataSource = viewModel as? UITableViewDataSource
+        self.profileTableView.dataSource = viewModel?.dataSource
 
         let nib = UINib(nibName: "ProfileLandingCell", bundle: Bundle(for: ProfileLandingCell.self))
         self.profileTableView.register(nib, forCellReuseIdentifier: "profileLandingCell")

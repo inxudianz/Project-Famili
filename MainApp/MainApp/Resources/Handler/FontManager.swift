@@ -21,7 +21,7 @@ struct FontManager {
         case thin = "-Thin"
     }
     
-    static enum FontSize: CGFloat {
+    enum FontSize: CGFloat {
         case button = 16
     }
     

@@ -26,7 +26,6 @@
 		1EBF014A24D1E5450098C24A /* ProfileLandingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBF014924D1E5450098C24A /* ProfileLandingCell.swift */; };
 		1EC5105624E2A87B00A00759 /* ProfileLandingController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EBF012324D0A6130098C24A /* ProfileLandingController.xib */; };
 		1EC5105924E2A8A400A00759 /* ProfileLandingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EBF014B24D1E5510098C24A /* ProfileLandingCell.xib */; };
-		1EC5105B24E31EFF00A00759 /* ProfileTableViewSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC5105A24E31EFF00A00759 /* ProfileTableViewSection.swift */; };
 		8A76A33424CEB3EB00F02AD9 /* InitialScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A76A33224CEB3EB00F02AD9 /* InitialScreenViewController.swift */; };
 		8A76A33524CEB3EB00F02AD9 /* InitialScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A76A33324CEB3EB00F02AD9 /* InitialScreenViewController.xib */; };
 		8A76A33D24CECB7300F02AD9 /* InitialScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A76A33C24CECB7300F02AD9 /* InitialScreenViewModel.swift */; };
@@ -70,6 +69,9 @@
 		920C3F6724A7D23900AF75AE /* SampleProfileCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C3F6624A7D23900AF75AE /* SampleProfileCoordinatorProtocol.swift */; };
 		921D1F6C24E4EFEC007C3261 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921D1F6B24E4EFEC007C3261 /* HomeCoordinator.swift */; };
 		921D1F6E24E4EFF4007C3261 /* HomeCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921D1F6D24E4EFF4007C3261 /* HomeCoordinatorProtocol.swift */; };
+		921D1F7024E4F711007C3261 /* ProfileConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921D1F6F24E4F711007C3261 /* ProfileConstant.swift */; };
+		921D1F7224E4F7C8007C3261 /* ProfileLandingDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921D1F7124E4F7C8007C3261 /* ProfileLandingDataSource.swift */; };
+		921D1F7424E505D8007C3261 /* ProfileLanding+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921D1F7324E505D8007C3261 /* ProfileLanding+Network.swift */; };
 		9227A24224CFE474004F7952 /* Inter-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9227A23A24CFE46E004F7952 /* Inter-Black.ttf */; };
 		9227A24324CFE479004F7952 /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9227A23D24CFE46E004F7952 /* Inter-Bold.ttf */; };
 		9227A24424CFE479004F7952 /* Inter-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9227A24024CFE46E004F7952 /* Inter-ExtraBold.ttf */; };
@@ -198,7 +200,6 @@
 		1EBF013324D0A7690098C24A /* ProfileCoordinatorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileCoordinatorProtocol.swift; sourceTree = "<group>"; };
 		1EBF014924D1E5450098C24A /* ProfileLandingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileLandingCell.swift; sourceTree = "<group>"; };
 		1EBF014B24D1E5510098C24A /* ProfileLandingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileLandingCell.xib; sourceTree = "<group>"; };
-		1EC5105A24E31EFF00A00759 /* ProfileTableViewSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewSection.swift; sourceTree = "<group>"; };
 		3304A088087BD629641C29A2 /* Pods_MainAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MainAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		890F374CBAEFBDEFACC50A10 /* Pods-MainApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MainApp.debug.xcconfig"; path = "Target Support Files/Pods-MainApp/Pods-MainApp.debug.xcconfig"; sourceTree = "<group>"; };
 		8A76A33224CEB3EB00F02AD9 /* InitialScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialScreenViewController.swift; sourceTree = "<group>"; };
@@ -245,6 +246,9 @@
 		920C3F6624A7D23900AF75AE /* SampleProfileCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleProfileCoordinatorProtocol.swift; sourceTree = "<group>"; };
 		921D1F6B24E4EFEC007C3261 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		921D1F6D24E4EFF4007C3261 /* HomeCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		921D1F6F24E4F711007C3261 /* ProfileConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileConstant.swift; sourceTree = "<group>"; };
+		921D1F7124E4F7C8007C3261 /* ProfileLandingDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileLandingDataSource.swift; sourceTree = "<group>"; };
+		921D1F7324E505D8007C3261 /* ProfileLanding+Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileLanding+Network.swift"; sourceTree = "<group>"; };
 		9227A23924CFE46E004F7952 /* Inter-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Light.ttf"; sourceTree = "<group>"; };
 		9227A23A24CFE46E004F7952 /* Inter-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Black.ttf"; sourceTree = "<group>"; };
 		9227A23B24CFE46E004F7952 /* Inter-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Thin.ttf"; sourceTree = "<group>"; };
@@ -352,7 +356,8 @@
 				1EBF012924D0A65F0098C24A /* ProfileLandingController.swift */,
 				1EBF012B24D0A6A00098C24A /* ProfileLandingViewModel.swift */,
 				1EBF012D24D0A6B00098C24A /* ProfileLandingProtocol.swift */,
-				1EC5105A24E31EFF00A00759 /* ProfileTableViewSection.swift */,
+				921D1F7124E4F7C8007C3261 /* ProfileLandingDataSource.swift */,
+				921D1F7324E505D8007C3261 /* ProfileLanding+Network.swift */,
 				1EB0167C24DC7DCF00C76109 /* ProfileLandingCell */,
 			);
 			path = ProfileLanding;
@@ -646,6 +651,7 @@
 			isa = PBXGroup;
 			children = (
 				1E13ABB224D29384005AF3BD /* ProfileAsset.xcassets */,
+				921D1F6F24E4F711007C3261 /* ProfileConstant.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -1302,6 +1308,7 @@
 				920C25F924E3B7A500047D14 /* AuthNetwork+Delegate.swift in Sources */,
 				1E44DC5224D855C600025AE8 /* EditProfileController.swift in Sources */,
 				92D79F432484DB93004C4701 /* SampleProfileViewController.swift in Sources */,
+				921D1F7424E505D8007C3261 /* ProfileLanding+Network.swift in Sources */,
 				92D79E8A2483E534004C4701 /* AppDelegate.swift in Sources */,
 				1EBF012E24D0A6B00098C24A /* ProfileLandingProtocol.swift in Sources */,
 				1EBF012A24D0A65F0098C24A /* ProfileLandingController.swift in Sources */,
@@ -1324,6 +1331,7 @@
 				8AA7015924DBEFD200EEAADE /* AuthNetwork.swift in Sources */,
 				92C77CA3249754AD004C1D86 /* HTTPTask.swift in Sources */,
 				1EB0168424DC843E00C76109 /* ProfileService.swift in Sources */,
+				921D1F7224E4F7C8007C3261 /* ProfileLandingDataSource.swift in Sources */,
 				92C77C63249718CE004C1D86 /* SamplePath.swift in Sources */,
 				92D79F2624841755004C4701 /* AppCoordinator.swift in Sources */,
 				920C25F724E3B78700047D14 /* ProfileNetwork+Delegate.swift in Sources */,
@@ -1331,7 +1339,6 @@
 				F5293EAA24D9941F00CA7E87 /* RegisterViewController.swift in Sources */,
 				920A35082499D63F00F2EABB /* CoordinatorState.swift in Sources */,
 				F595D9EC24E280CA006DD353 /* RegisterViewModel+Network.swift in Sources */,
-				1EC5105B24E31EFF00A00759 /* ProfileTableViewSection.swift in Sources */,
 				92C77C0124937E4F004C1D86 /* MainApp+NavigationBar.swift in Sources */,
 				920A35B1249B4D0900F2EABB /* SampleHomeViewModel+Network.swift in Sources */,
 				92D79F382484DB3E004C4701 /* ProfileNetwork.swift in Sources */,
@@ -1341,6 +1348,7 @@
 				1EBF014A24D1E5450098C24A /* ProfileLandingCell.swift in Sources */,
 				920C262324E3BC2600047D14 /* AuthCoordinatorProtocol.swift in Sources */,
 				921D1F6C24E4EFEC007C3261 /* HomeCoordinator.swift in Sources */,
+				921D1F7024E4F711007C3261 /* ProfileConstant.swift in Sources */,
 				920C277F24E4290600047D14 /* HomeLandingViewController.swift in Sources */,
 				92D79F402484DB87004C4701 /* SampleProfileViewModel.swift in Sources */,
 				9201314F24B4E368002303D0 /* Appcoordinator+BuildConfiguration.swift in Sources */,

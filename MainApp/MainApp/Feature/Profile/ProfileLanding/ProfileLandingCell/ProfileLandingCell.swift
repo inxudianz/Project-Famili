@@ -14,7 +14,7 @@ class ProfileLandingCell: UITableViewCell {
     @IBOutlet weak var cellIcon: UIImageView!
     @IBOutlet weak var cellLabel: UILabel!
     
-    public func cellContent(cellImage image: String, cellText text: String) {
+    public func setCellContent(cellImage image: String, cellText text: String) {
         cellIcon.image = UIImage(named: image)
         cellLabel.text = text
     }
