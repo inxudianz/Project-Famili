@@ -45,7 +45,9 @@ class RegisterViewController: UIViewController, RegisterViewProtocol {
         present(popUpVC, animated: true)
     }
     
-    @IBAction func actionButtonLoginHere(_ sender: Any) {}
+    @IBAction func actionButtonLoginHere(_ sender: Any) {
+        viewModel?.navigateToLogin()
+    }
     
     @IBAction func actionSignUpWithGoogle(_ sender: Any) {}
     

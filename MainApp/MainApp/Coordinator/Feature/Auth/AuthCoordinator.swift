@@ -10,34 +10,36 @@ import UIKit
 
 class AuthCoordinator: AuthCoordinatorProtocol {
     weak var parentCoordinator: Coordinator?
-    var isRegistered: Bool
     var childCoordinators: [Coordinator] = [Coordinator]()
     var navigationController: UINavigationController?
     
-    required init(navigationController: UINavigationController, isRegistered: Bool) {
-        self.isRegistered = isRegistered
+    required init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
     
     func start() {
-        if isRegistered {
-            navigateToLogin()
-        } else {
-            navigateToRegister()
-        }
+        navigateToLogin()
     }
     
     func navigateToHome() {
-        Log.info(message: "Sprint 2 Feature")
+        let tabBar = UITabBarController()
+        self.buildTabBar(with: [.sampleHome, .sampleProfile], tabBar: tabBar)
+        navigationController?.pushViewController(tabBar, animated: true)
     }
     
     func navigateToLogin() {
-        let vc = LoginViewController()
-        let vm = LoginViewModel()
-        vm.coordinator = self
-        vm.view = vc
-        vc.viewModel = vm
-        navigationController?.pushViewController(vc, animated: false)
+        let loginView = navigationController?.viewControllers.first(where: {$0.nibName == String(describing: LoginViewController.self)})
+        
+        if loginView != nil {
+            navigationController?.popViewController(animated: true)
+        } else {
+            let vc = LoginViewController()
+            let vm = LoginViewModel()
+            vm.coordinator = self
+            vm.view = vc
+            vc.viewModel = vm
+            navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     func navigateToRegister() {
@@ -46,6 +48,6 @@ class AuthCoordinator: AuthCoordinatorProtocol {
         vm.coordinator = self
         vm.view = vc
         vc.viewModel = vm
-        navigationController?.pushViewController(vc, animated: false)
+        navigationController?.pushViewController(vc, animated: true)
     }
 }

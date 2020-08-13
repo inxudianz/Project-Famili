@@ -15,6 +15,7 @@ protocol RegisterViewModelProtocol: class {
     func isValidPhone(_ phone: String) -> Bool
     func isValidEmail(_ email: String) -> Bool
     func isValidPassword(_ password: String) -> Bool
+    func navigateToLogin()
 }
 
 protocol RegisterViewProtocol: class {

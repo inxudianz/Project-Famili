@@ -20,8 +20,8 @@ extension AppCoordinator where build == TabBar {
     ///     - screens: Initial screens to be displayed
     func screens(_ screens: [CoordinatorFeature]) -> Self {
         for screen in screens {
-            if coordinatorId.keys.contains(screen.rawValue) {
-                guard let coordinator = coordinatorId[screen.rawValue] else {return self}
+            if CoordinatorId.id.keys.contains(screen.rawValue) {
+                guard let coordinator = CoordinatorId.id[screen.rawValue] else {return self}
                 
                 coordinator.parentCoordinator = self
                 childCoordinators.append(coordinator)
@@ -47,8 +47,8 @@ extension AppCoordinator where build == NavBar {
     /// - Parameters:
     ///     - screen: Initial screen to be displayed
     func screen(_ screen: CoordinatorFeature) -> Self {
-        if coordinatorId.keys.contains(screen.rawValue) {
-            guard let coordinator = coordinatorId[screen.rawValue] else {return self}
+        if CoordinatorId.id.keys.contains(screen.rawValue) {
+            guard let coordinator = CoordinatorId.id[screen.rawValue] else {return self}
             
             coordinator.navigationController = navigationController
             coordinator.parentCoordinator = self

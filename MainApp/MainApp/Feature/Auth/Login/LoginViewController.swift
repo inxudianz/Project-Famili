@@ -11,9 +11,21 @@ import Component
 
 class LoginViewController: MasterViewController, LoginViewProtocol {
     // MARK: - Outlet
-    @IBOutlet weak var passwordTextField: FamiliTextField!
-    @IBOutlet weak var emailTextField: FamiliTextField!
-    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var passwordTextField: FamiliTextField! {
+        didSet {
+            passwordTextField.font = FontManager.getFont(for: .regular, size: 16)
+        }
+    }
+    @IBOutlet weak var emailTextField: FamiliTextField! {
+        didSet {
+            emailTextField.font = FontManager.getFont(for: .regular, size: 16)
+        }
+    }
+    @IBOutlet weak var loginButton: UIButton! {
+        didSet {
+            loginButton.titleLabel?.font = FontManager.getFont(for: .medium, size: 16)
+        }
+    }
     @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var googleLoginButton: UIButton!
     @IBOutlet weak var facebookLoginButton: UIButton!
@@ -33,7 +45,7 @@ class LoginViewController: MasterViewController, LoginViewProtocol {
     // MARK: - Init
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setupView()
     }
     
     // MARK: - Handler
@@ -45,9 +57,14 @@ class LoginViewController: MasterViewController, LoginViewProtocol {
         }
     }
     
+    @objc func registerTapped() {
+        viewModel?.register()
+    }
+    
     // MARK: - Function
     func setupView() {
-        passwordTextField.addTarget(self, action: #selector(editingDidEnd(sender:)), for: .editingDidEnd)
-        emailTextField.addTarget(self, action: #selector(editingDidEnd(sender:)), for: .editingDidEnd)
+        passwordTextField.addTarget(self, action: #selector(editingDidEnd(sender:)), for: .editingChanged)
+        emailTextField.addTarget(self, action: #selector(editingDidEnd(sender:)), for: .editingChanged)
+        registerButton.addTarget(self, action: #selector(registerTapped), for: .touchDown)
     }
 }

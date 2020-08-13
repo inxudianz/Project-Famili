@@ -8,9 +8,7 @@
 
 import Foundation
 
-protocol AuthCoordinatorProtocol: Coordinator {
-    var isRegistered: Bool { get set }
-    
+protocol AuthCoordinatorProtocol: Coordinator {    
     func navigateToHome()
     func navigateToLogin()
     func navigateToRegister()

@@ -25,16 +25,6 @@ class AppCoordinator<build: BuildConfiguration>: Coordinator {
     
     let window: UIWindow?
     
-    // MARK: - Coordinator ID
-    let coordinatorId: [String:Coordinator] = [
-        "sampleHome" : SampleHomeCoordinator(navigationController: UINavigationController()),
-        "sampleProfile" : SampleProfileCoordinator(navigationController: UINavigationController()),
-        "splash" : InitialScreenCoordinator(navigationController: UINavigationController()),
-        "profile" : ProfileCoordinator(navigationController: UINavigationController()),
-        "login" : AuthCoordinator(navigationController: UINavigationController(), isRegistered: true),
-        "register" : AuthCoordinator(navigationController: UINavigationController(), isRegistered: false),
-    ]
-    
     // MARK: - Initializer
     init(window: UIWindow?) {
         self.window = window

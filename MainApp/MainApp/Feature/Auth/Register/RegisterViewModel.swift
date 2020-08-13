@@ -32,4 +32,8 @@ class RegisterViewModel: RegisterViewModelProtocol {
         let passwordPred = NSPredicate(format:"SELF MATCHES %@", PasswordRegEx)
         return passwordPred.evaluate(with: password)
     }
+    
+    func navigateToLogin() {
+        coordinator?.navigateToLogin()
+    }
 }

@@ -12,7 +12,7 @@ class InitialScreenCoordinator: InitialScreenCoordinatorProtocol {
     weak var parentCoordinator: Coordinator?
     
     var childCoordinators: [Coordinator] = [Coordinator]()
-    var navigationController: UINavigationController?
+    var navigationController: UINavigationController?    
     
     required init(navigationController: UINavigationController) {
         self.navigationController = navigationController
@@ -24,11 +24,12 @@ class InitialScreenCoordinator: InitialScreenCoordinatorProtocol {
         vm.coordinator = self
         vm.view = vc
         vc.viewModel = vm
-        navigationController?.pushViewController(vc, animated: false)
+        navigationController?.setNavigationBarHidden(true, animated: false)
+        navigationController?.show(vc, sender: self)
     }
     
     func navigateToAuth() {
-        let authCoordinator = AuthCoordinator(navigationController: UINavigationController(),isRegistered: AppContext.Splash.isRegistered)
+        let authCoordinator = AuthCoordinator(navigationController: UINavigationController())
         authCoordinator.navigationController = navigationController
         authCoordinator.parentCoordinator = self
         childCoordinators.append(authCoordinator)

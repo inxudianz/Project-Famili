@@ -14,6 +14,7 @@ protocol LoginViewModelProtocol: class {
     var network: AuthNetworkProtocol? { get set }
     
     func login(email: String, password: String)
+    func register()
 }
 
 protocol LoginViewProtocol: class {
