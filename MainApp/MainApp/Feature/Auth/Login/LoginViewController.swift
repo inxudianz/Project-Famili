@@ -13,17 +13,17 @@ class LoginViewController: MasterViewController, LoginViewProtocol {
     // MARK: - Outlet
     @IBOutlet weak var passwordTextField: FamiliTextField! {
         didSet {
-            passwordTextField.font = FontManager.getFont(for: .regular, size: 16)
+            passwordTextField.font = FontManager.getFont(for: .regular, size: FontManager.FontSize.button.rawValue)
         }
     }
     @IBOutlet weak var emailTextField: FamiliTextField! {
         didSet {
-            emailTextField.font = FontManager.getFont(for: .regular, size: 16)
+            emailTextField.font = FontManager.getFont(for: .regular, size: FontManager.FontSize.button.rawValue)
         }
     }
     @IBOutlet weak var loginButton: UIButton! {
         didSet {
-            loginButton.titleLabel?.font = FontManager.getFont(for: .medium, size: 16)
+            loginButton.titleLabel?.font = FontManager.getFont(for: .medium, size: FontManager.FontSize.button.rawValue)
         }
     }
     @IBOutlet weak var registerButton: UIButton!

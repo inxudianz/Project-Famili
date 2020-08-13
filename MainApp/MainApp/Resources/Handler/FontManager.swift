@@ -21,6 +21,10 @@ struct FontManager {
         case thin = "-Thin"
     }
     
+    static enum FontSize: CGFloat {
+        case button = 16
+    }
+    
     static func getFont(name: String = "Inter",
                         for type: FontWeight,
                         size: CGFloat) -> UIFont {
