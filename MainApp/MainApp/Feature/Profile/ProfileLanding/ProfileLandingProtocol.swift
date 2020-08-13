@@ -21,7 +21,6 @@ protocol ProfileLandingViewModelProtocol: class {
     func navigateToRate()
     
     func getProfile()
-    func updateProfileDataLabel()
 }
 
 protocol ProfileLandingViewProtocol: class {

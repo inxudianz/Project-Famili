@@ -67,9 +67,4 @@ class ProfileLandingViewModel: ProfileLandingViewModelProtocol {
     func getProfile() {
         network?.profileGet()
     }
-    
-    func updateProfileDataLabel() {
-        // Take response and put the name, phone, and email
-        view?.updateView(name: "asa", phone: "012931039", email: "aaa@gmail.com")
-    }
 }
