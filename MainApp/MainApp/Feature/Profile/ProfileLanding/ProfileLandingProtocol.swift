@@ -19,13 +19,13 @@ protocol ProfileLandingViewModelProtocol: class {
     func navigateToTOS()
     func navigateToPrivacy()
     func navigateToRate()
+    func didSelectforRow(at: IndexPath)
     
     func getProfile()
 }
 
 protocol ProfileLandingViewProtocol: class {
     var viewModel: ProfileLandingViewModelProtocol? { get set }
-    
     func updateView(name: String, phone: String, email: String)
 }
 

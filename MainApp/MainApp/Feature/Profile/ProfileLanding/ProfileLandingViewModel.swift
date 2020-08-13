@@ -6,7 +6,7 @@
 //  Copyright © 2020 William Inx. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 class ProfileLandingViewModel: ProfileLandingViewModelProtocol {
     // MARK: - Property
@@ -62,6 +62,42 @@ class ProfileLandingViewModel: ProfileLandingViewModelProtocol {
     
     func navigateToRate() {
         coordinator?.navigateToRate()
+    }
+    
+    func didSelectforRow(at indexPath: IndexPath) {
+        let headerSection = ProfileLandingConstant.HeaderIndex(rawValue: indexPath.section)
+        switch headerSection {
+        case .account:
+            guard let accountIndex = ProfileLandingConstant.AccountIndex(rawValue: indexPath.row) else { return }
+            didSelectAccountSection(accountIndex)
+            
+        case .general:
+            guard let generalIndex = ProfileLandingConstant.GeneralIndex(rawValue: indexPath.row) else { return }
+            didSelectGeneralSection(generalIndex)
+        default:
+            return
+        }
+        
+    }
+    
+    private func didSelectAccountSection(_ index: ProfileLandingConstant.AccountIndex) {
+        switch index {
+        case .edit:
+            navigateToEditProfile()
+        case .help:
+            navigateToHelp()
+        }
+    }
+    
+    private func didSelectGeneralSection(_ index: ProfileLandingConstant.GeneralIndex) {
+        switch index {
+        case .privacy:
+            navigateToPrivacy()
+        case .tos:
+            navigateToTOS()
+        case .rate:
+            navigateToRate()
+        }
     }
     
     func getProfile() {
