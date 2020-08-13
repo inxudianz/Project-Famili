@@ -11,7 +11,6 @@ import Foundation
 extension ProfileLandingViewModel: RetrieveProfileDelegate {
     func didSuccessRetrieveProfile(response: ProfileResponse.GetProfileResponse) {
         Log.info(message: response)
-        updateProfileDataLabel()
     }
     
     func didFailedRetrieveProfile(error: Error) {
