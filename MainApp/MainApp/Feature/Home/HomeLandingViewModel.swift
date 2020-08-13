@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+class HomeLandingViewModel: HomeLandingViewModelProtocol {
+    weak var view: HomeLandingViewProtocol?
+    weak var coordinator: HomeCoordinatorProtocol?
+    
+    
+}

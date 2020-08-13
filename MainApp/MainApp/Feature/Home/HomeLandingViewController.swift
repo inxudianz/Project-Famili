@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import Component
 
-class HomeLandingViewController: UIViewController {
+class HomeLandingViewController: MasterViewController, HomeLandingViewProtocol {
+    var viewModel: HomeLandingViewModelProtocol?
 
     override func viewDidLoad() {
         super.viewDidLoad()

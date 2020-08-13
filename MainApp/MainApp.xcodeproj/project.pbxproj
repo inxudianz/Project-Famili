@@ -68,6 +68,8 @@
 		920C278224E43DF200047D14 /* CoordinatorId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C278124E43DF200047D14 /* CoordinatorId.swift */; };
 		920C3F6524A7D00800AF75AE /* SampleHomeCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C3F6424A7D00800AF75AE /* SampleHomeCoordinatorProtocol.swift */; };
 		920C3F6724A7D23900AF75AE /* SampleProfileCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C3F6624A7D23900AF75AE /* SampleProfileCoordinatorProtocol.swift */; };
+		921D1F6C24E4EFEC007C3261 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921D1F6B24E4EFEC007C3261 /* HomeCoordinator.swift */; };
+		921D1F6E24E4EFF4007C3261 /* HomeCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921D1F6D24E4EFF4007C3261 /* HomeCoordinatorProtocol.swift */; };
 		9227A24224CFE474004F7952 /* Inter-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9227A23A24CFE46E004F7952 /* Inter-Black.ttf */; };
 		9227A24324CFE479004F7952 /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9227A23D24CFE46E004F7952 /* Inter-Bold.ttf */; };
 		9227A24424CFE479004F7952 /* Inter-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9227A24024CFE46E004F7952 /* Inter-ExtraBold.ttf */; };
@@ -241,6 +243,8 @@
 		920C278124E43DF200047D14 /* CoordinatorId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorId.swift; sourceTree = "<group>"; };
 		920C3F6424A7D00800AF75AE /* SampleHomeCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleHomeCoordinatorProtocol.swift; sourceTree = "<group>"; };
 		920C3F6624A7D23900AF75AE /* SampleProfileCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleProfileCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		921D1F6B24E4EFEC007C3261 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		921D1F6D24E4EFF4007C3261 /* HomeCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinatorProtocol.swift; sourceTree = "<group>"; };
 		9227A23924CFE46E004F7952 /* Inter-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Light.ttf"; sourceTree = "<group>"; };
 		9227A23A24CFE46E004F7952 /* Inter-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Black.ttf"; sourceTree = "<group>"; };
 		9227A23B24CFE46E004F7952 /* Inter-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Thin.ttf"; sourceTree = "<group>"; };
@@ -435,6 +439,7 @@
 		9201315324B4E3E5002303D0 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				921D1F6824E4EFD9007C3261 /* Home */,
 				8A76A34724CEF60200F02AD9 /* Splash */,
 				923249A224C03FEF00FDFC3E /* Profile */,
 				9232499624C03F0100FDFC3E /* Auth */,
@@ -475,6 +480,15 @@
 			children = (
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		921D1F6824E4EFD9007C3261 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				921D1F6B24E4EFEC007C3261 /* HomeCoordinator.swift */,
+				921D1F6D24E4EFF4007C3261 /* HomeCoordinatorProtocol.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		9227A33F24D293BE004F7952 /* Handler */ = {
@@ -1275,6 +1289,7 @@
 				8AA7015624DBEDD100EEAADE /* LoginSubPath.swift in Sources */,
 				92913BEA248D13A3002D961D /* NetworkService.swift in Sources */,
 				920A35062499D61E00F2EABB /* Coordinator.swift in Sources */,
+				921D1F6E24E4EFF4007C3261 /* HomeCoordinatorProtocol.swift in Sources */,
 				9227A74424D9509E004F7952 /* AppCoordinator+GoogleSDK.swift in Sources */,
 				1E4A4AD424DDD815004795AB /* ProfileCoordinatorConstant.swift in Sources */,
 				92D79F3124842E49004C4701 /* HomeNetwork.swift in Sources */,
@@ -1325,6 +1340,7 @@
 				92D79F2924841936004C4701 /* SampleHomeCoordinator.swift in Sources */,
 				1EBF014A24D1E5450098C24A /* ProfileLandingCell.swift in Sources */,
 				920C262324E3BC2600047D14 /* AuthCoordinatorProtocol.swift in Sources */,
+				921D1F6C24E4EFEC007C3261 /* HomeCoordinator.swift in Sources */,
 				920C277F24E4290600047D14 /* HomeLandingViewController.swift in Sources */,
 				92D79F402484DB87004C4701 /* SampleProfileViewModel.swift in Sources */,
 				9201314F24B4E368002303D0 /* Appcoordinator+BuildConfiguration.swift in Sources */,

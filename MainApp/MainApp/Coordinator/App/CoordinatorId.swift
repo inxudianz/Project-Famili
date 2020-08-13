@@ -14,6 +14,7 @@ struct CoordinatorId {
         "sampleProfile" : SampleProfileCoordinator(navigationController: UINavigationController()),
         "splash" : InitialScreenCoordinator(navigationController: UINavigationController()),
         "profile" : ProfileCoordinator(navigationController: UINavigationController()),
-        "auth" : AuthCoordinator(navigationController: UINavigationController())
+        "auth" : AuthCoordinator(navigationController: UINavigationController()),
+        "home" : HomeCoordinator(navigationController: UINavigationController())
     ]
 }

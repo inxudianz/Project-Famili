@@ -7,3 +7,12 @@
 //
 
 import Foundation
+
+protocol HomeLandingViewModelProtocol: class {
+    var view: HomeLandingViewProtocol? { get set }
+    var coordinator: HomeCoordinatorProtocol? { get set }
+}
+
+protocol HomeLandingViewProtocol: class {
+    var viewModel: HomeLandingViewModelProtocol? { get set }
+}
