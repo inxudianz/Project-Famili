@@ -58,7 +58,7 @@ class RegisterViewController: MasterViewController, RegisterViewProtocol {
     @objc func handlePassword() {
         guard let password = tfPassword.text else { return }
         guard let confirmPassword = tfConfirmPassword.text else { return }
-        handleField()
+        
         if confirmPassword.contains(password) {
             tfConfirmPassword.isValid = true
             viewLabelError.isHidden = true
@@ -67,6 +67,7 @@ class RegisterViewController: MasterViewController, RegisterViewProtocol {
             buttonRegister.isEnabled = false
             updateTextError(for: .confirmPassword)
         }
+        handleField()
     }
     
     @objc func handleField() {
