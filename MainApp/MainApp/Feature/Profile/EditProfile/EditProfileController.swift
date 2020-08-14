@@ -6,21 +6,24 @@
 //  Copyright © 2020 William Inx. All rights reserved.
 //
 
-import Foundation
 import UIKit
 import Component
 
 class EditProfileController: MasterViewController, EditProfileProtocol {
-    var viewModel: EditProfileViewModelProtocol?
-    
+    // MARK: - Outlet
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var phoneNumberTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     
+    // MARK: - Property
+    var viewModel: EditProfileViewModelProtocol?
+    
+    // MARK: - Handler
     @IBAction func saveButtonTapped(_ sender: Any) {
         viewModel?.navigateToProfile()
     }
     
+    // MARK: - Initialization
     override func viewDidLoad() {
         super.viewDidLoad()
     }
