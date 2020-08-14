@@ -13,6 +13,11 @@ class RegisterViewModel: RegisterViewModelProtocol {
     weak var coordinator: AuthCoordinatorProtocol?
     var network: AuthNetworkProtocol?
     
+    init() {
+        network = AuthNetwork()
+        network?.authRegisterDelegate = self
+    }
+    
     func isValidPhone(_ phone: String) -> Bool {
         let phoneRegex = "^[0-9+]{0,1}+[0-9]{5,16}$"
         let phoneTest = NSPredicate(format: "SELF MATCHES %@", phoneRegex)

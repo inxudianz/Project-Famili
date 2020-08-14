@@ -142,8 +142,6 @@
 		F5293EB024D9AA8F00CA7E87 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5293EAF24D9AA8F00CA7E87 /* RegisterViewModel.swift */; };
 		F5758BDA24DFA385007E2517 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5758BD924DFA385007E2517 /* AuthService.swift */; };
 		F595D9EC24E280CA006DD353 /* RegisterViewModel+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = F595D9EB24E280CA006DD353 /* RegisterViewModel+Network.swift */; };
-		F595D9F124E28286006DD353 /* RegisterPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F595D9EF24E28286006DD353 /* RegisterPopUpViewController.swift */; };
-		F595D9F224E28286006DD353 /* RegisterPopUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F595D9F024E28286006DD353 /* RegisterPopUpViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -331,8 +329,6 @@
 		F5293EAF24D9AA8F00CA7E87 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		F5758BD924DFA385007E2517 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		F595D9EB24E280CA006DD353 /* RegisterViewModel+Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RegisterViewModel+Network.swift"; sourceTree = "<group>"; };
-		F595D9EF24E28286006DD353 /* RegisterPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPopUpViewController.swift; sourceTree = "<group>"; };
-		F595D9F024E28286006DD353 /* RegisterPopUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterPopUpViewController.xib; sourceTree = "<group>"; };
 		FD3077CE7FF8C7A3449D06CF /* Pods-MainAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MainAppTests.release.xcconfig"; path = "Target Support Files/Pods-MainAppTests/Pods-MainAppTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1034,8 +1030,6 @@
 				F5293EAD24D9AA8000CA7E87 /* RegisterProtocol.swift */,
 				F5293EAF24D9AA8F00CA7E87 /* RegisterViewModel.swift */,
 				F595D9EB24E280CA006DD353 /* RegisterViewModel+Network.swift */,
-				F595D9EF24E28286006DD353 /* RegisterPopUpViewController.swift */,
-				F595D9F024E28286006DD353 /* RegisterPopUpViewController.xib */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -1172,7 +1166,6 @@
 				920C277324E419D500047D14 /* Auth.xcassets in Resources */,
 				9227A24524CFE479004F7952 /* Inter-ExtraLight.ttf in Resources */,
 				92D79F4D24850166004C4701 /* SampleProfileDetailViewController.xib in Resources */,
-				F595D9F224E28286006DD353 /* RegisterPopUpViewController.xib in Resources */,
 				9227A24A24CFE479004F7952 /* Inter-Thin.ttf in Resources */,
 				9227A24724CFE479004F7952 /* Inter-Medium.ttf in Resources */,
 				9227A24624CFE479004F7952 /* Inter-Light.ttf in Resources */,
@@ -1316,7 +1309,6 @@
 				92C77C5E24971765004C1D86 /* BasePath.swift in Sources */,
 				92C77BFE24937CFC004C1D86 /* MainApp+NavigationItem.swift in Sources */,
 				920539BB249BA31300AF938C /* Undefined.swift in Sources */,
-				F595D9F124E28286006DD353 /* RegisterPopUpViewController.swift in Sources */,
 				920C25F924E3B7A500047D14 /* AuthNetwork+Delegate.swift in Sources */,
 				1E44DC5224D855C600025AE8 /* EditProfileController.swift in Sources */,
 				92D79F432484DB93004C4701 /* SampleProfileViewController.swift in Sources */,

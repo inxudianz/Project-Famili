@@ -10,10 +10,10 @@ import Foundation
 
 extension RegisterViewModel: AuthRegisterDelegate {
     func didSuccessRegister(response: AuthResponse.Register) {
-        Log.info(message: response)
+        Log.progress(message: response)
     }
     
     func didFailedRegister(error: Error) {
-        Log.info(message: error.localizedDescription)
+        Log.info(message: error)
     }
 }
