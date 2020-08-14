@@ -27,8 +27,8 @@ class LoginViewController: MasterViewController, LoginViewProtocol {
         }
     }
     @IBOutlet weak var registerButton: UIButton!
-    @IBOutlet weak var googleLoginButton: UIButton!
-    @IBOutlet weak var facebookLoginButton: UIButton!
+    @IBOutlet weak var googleLoginButton: LoginButton!
+    @IBOutlet weak var facebookLoginButton: LoginButton!
     
     // MARK: - Property
     var viewModel: LoginViewModelProtocol?
@@ -66,5 +66,15 @@ class LoginViewController: MasterViewController, LoginViewProtocol {
         passwordTextField.addTarget(self, action: #selector(editingDidEnd(sender:)), for: .editingChanged)
         emailTextField.addTarget(self, action: #selector(editingDidEnd(sender:)), for: .editingChanged)
         registerButton.addTarget(self, action: #selector(registerTapped), for: .touchDown)
+        
+        googleLoginButton.loginButtonDelegate = self
+        facebookLoginButton.loginButtonDelegate = self
+    }
+}
+
+extension LoginViewController: LoginButtonDelegate {
+    func buttonDidTapped(sender: LoginButton?) {
+        guard let identifier = sender?.getIdentifier() else { return }
+        viewModel?.handleLoginButton(id: AuthConstantLogin.ButtonIdentifier(rawValue: identifier))
     }
 }

@@ -26,4 +26,14 @@ class LoginViewModel: LoginViewModelProtocol {
     func register() {
         coordinator?.navigateToRegister()
     }
+    
+    func handleLoginButton(id: AuthConstantLogin.ButtonIdentifier?) {
+        guard let id = id else { return }
+        switch id {
+        case .google:
+            Log.info(message: "Login with Google")
+        case .facebook:
+            Log.info(message: "Login with Facebook")
+        }
+    }
 }

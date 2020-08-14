@@ -13,7 +13,7 @@ import UIKit
  Create textfield with custom attributes and design
  How to use:
  * Using XIB
-    * Drag and drop a UIView and change the class using CircularProgressView
+    * Drag and drop a UIView and change the class using FamiliTextField
  * Programatically
     * Init using the custom initializer to set all the required value
  */

@@ -9,8 +9,10 @@
 /* Begin PBXBuildFile section */
 		920C25C724E392B100047D14 /* FamiliButtonConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C25C624E392B100047D14 /* FamiliButtonConstant.swift */; };
 		920C25C924E39D9B00047D14 /* CircularProgressConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C25C824E39D9B00047D14 /* CircularProgressConstant.swift */; };
+		921D202F24E63646007C3261 /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921D202E24E63646007C3261 /* LoginButton.swift */; };
+		921D20C124E63E58007C3261 /* Component+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921D20C024E63E58007C3261 /* Component+UIView.swift */; };
 		9227A16C24CDC521004F7952 /* FamiliTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9227A16B24CDC521004F7952 /* FamiliTextField.swift */; };
-		9227A16E24CDC7E5004F7952 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9227A16D24CDC7E5004F7952 /* UIColor.swift */; };
+		9227A16E24CDC7E5004F7952 /* Component+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9227A16D24CDC7E5004F7952 /* Component+UIColor.swift */; };
 		9227A17024CDC9B1004F7952 /* FamiliTextFieldConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9227A16F24CDC9B1004F7952 /* FamiliTextFieldConstant.swift */; };
 		92C77C0524937EA1004C1D86 /* DualButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C77C0424937EA1004C1D86 /* DualButton.swift */; };
 		92C77C0A249383CB004C1D86 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C77C09249383CB004C1D86 /* CircularProgressView.swift */; };
@@ -35,8 +37,10 @@
 /* Begin PBXFileReference section */
 		920C25C624E392B100047D14 /* FamiliButtonConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamiliButtonConstant.swift; sourceTree = "<group>"; };
 		920C25C824E39D9B00047D14 /* CircularProgressConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressConstant.swift; sourceTree = "<group>"; };
+		921D202E24E63646007C3261 /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
+		921D20C024E63E58007C3261 /* Component+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Component+UIView.swift"; sourceTree = "<group>"; };
 		9227A16B24CDC521004F7952 /* FamiliTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamiliTextField.swift; sourceTree = "<group>"; };
-		9227A16D24CDC7E5004F7952 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		9227A16D24CDC7E5004F7952 /* Component+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Component+UIColor.swift"; sourceTree = "<group>"; };
 		9227A16F24CDC9B1004F7952 /* FamiliTextFieldConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamiliTextFieldConstant.swift; sourceTree = "<group>"; };
 		92C77C0424937EA1004C1D86 /* DualButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DualButton.swift; sourceTree = "<group>"; };
 		92C77C09249383CB004C1D86 /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
@@ -71,6 +75,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		921D202D24E6361B007C3261 /* LoginButton */ = {
+			isa = PBXGroup;
+			children = (
+				921D202E24E63646007C3261 /* LoginButton.swift */,
+			);
+			path = LoginButton;
+			sourceTree = "<group>";
+		};
 		9227A16A24CDC501004F7952 /* Textfield */ = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +103,7 @@
 		92C77C0224937E7B004C1D86 /* Button */ = {
 			isa = PBXGroup;
 			children = (
+				921D202D24E6361B007C3261 /* LoginButton */,
 				F50316DC24D08ADF00F78288 /* FamiliButton */,
 				92C77C0324937E82004C1D86 /* DualButton */,
 			);
@@ -176,7 +189,8 @@
 		92D79F1F2483F3F0004C4701 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				9227A16D24CDC7E5004F7952 /* UIColor.swift */,
+				9227A16D24CDC7E5004F7952 /* Component+UIColor.swift */,
+				921D20C024E63E58007C3261 /* Component+UIView.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -303,13 +317,15 @@
 			files = (
 				F50316DE24D08AF100F78288 /* FamiliButton.swift in Sources */,
 				920C25C924E39D9B00047D14 /* CircularProgressConstant.swift in Sources */,
+				921D20C124E63E58007C3261 /* Component+UIView.swift in Sources */,
 				92D79F032483E85F004C4701 /* MasterViewController.swift in Sources */,
 				92C77C0A249383CB004C1D86 /* CircularProgressView.swift in Sources */,
 				92C77C0524937EA1004C1D86 /* DualButton.swift in Sources */,
+				921D202F24E63646007C3261 /* LoginButton.swift in Sources */,
 				9227A17024CDC9B1004F7952 /* FamiliTextFieldConstant.swift in Sources */,
 				920C25C724E392B100047D14 /* FamiliButtonConstant.swift in Sources */,
 				9227A16C24CDC521004F7952 /* FamiliTextField.swift in Sources */,
-				9227A16E24CDC7E5004F7952 /* UIColor.swift in Sources */,
+				9227A16E24CDC7E5004F7952 /* Component+UIColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

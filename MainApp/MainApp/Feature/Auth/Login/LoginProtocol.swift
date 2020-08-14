@@ -15,6 +15,7 @@ protocol LoginViewModelProtocol: class {
     
     func login(email: String, password: String)
     func register()
+    func handleLoginButton(id: AuthConstantLogin.ButtonIdentifier?)
 }
 
 protocol LoginViewProtocol: class {

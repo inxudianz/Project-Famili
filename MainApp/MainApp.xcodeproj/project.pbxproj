@@ -73,6 +73,7 @@
 		921D1F7424E505D8007C3261 /* ProfileLanding+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921D1F7324E505D8007C3261 /* ProfileLanding+Network.swift */; };
 		921D202A24E52E7D007C3261 /* MainApp+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921D202924E52E7D007C3261 /* MainApp+UIColor.swift */; };
 		921D202C24E63324007C3261 /* SplashAsset.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 921D202B24E63324007C3261 /* SplashAsset.xcassets */; };
+		921D211024E67356007C3261 /* AuthConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921D210F24E67356007C3261 /* AuthConstant.swift */; };
 		9227A24224CFE474004F7952 /* Inter-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9227A23A24CFE46E004F7952 /* Inter-Black.ttf */; };
 		9227A24324CFE479004F7952 /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9227A23D24CFE46E004F7952 /* Inter-Bold.ttf */; };
 		9227A24424CFE479004F7952 /* Inter-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9227A24024CFE46E004F7952 /* Inter-ExtraBold.ttf */; };
@@ -251,6 +252,7 @@
 		921D1F7324E505D8007C3261 /* ProfileLanding+Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileLanding+Network.swift"; sourceTree = "<group>"; };
 		921D202924E52E7D007C3261 /* MainApp+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainApp+UIColor.swift"; sourceTree = "<group>"; };
 		921D202B24E63324007C3261 /* SplashAsset.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = SplashAsset.xcassets; sourceTree = "<group>"; };
+		921D210F24E67356007C3261 /* AuthConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthConstant.swift; sourceTree = "<group>"; };
 		9227A23924CFE46E004F7952 /* Inter-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Light.ttf"; sourceTree = "<group>"; };
 		9227A23A24CFE46E004F7952 /* Inter-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Black.ttf"; sourceTree = "<group>"; };
 		9227A23B24CFE46E004F7952 /* Inter-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Thin.ttf"; sourceTree = "<group>"; };
@@ -662,6 +664,7 @@
 			isa = PBXGroup;
 			children = (
 				920C277224E419D500047D14 /* Auth.xcassets */,
+				921D210F24E67356007C3261 /* AuthConstant.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -1350,6 +1353,7 @@
 				92D79F2924841936004C4701 /* SampleHomeCoordinator.swift in Sources */,
 				1EBF014A24D1E5450098C24A /* ProfileLandingCell.swift in Sources */,
 				920C262324E3BC2600047D14 /* AuthCoordinatorProtocol.swift in Sources */,
+				921D211024E67356007C3261 /* AuthConstant.swift in Sources */,
 				921D1F6C24E4EFEC007C3261 /* HomeCoordinator.swift in Sources */,
 				921D1F7024E4F711007C3261 /* ProfileConstant.swift in Sources */,
 				920C277F24E4290600047D14 /* HomeLandingViewController.swift in Sources */,

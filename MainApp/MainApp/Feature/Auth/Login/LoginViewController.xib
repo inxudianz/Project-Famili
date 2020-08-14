@@ -10,8 +10,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="MainApp" customModuleProvider="target">
             <connections>
                 <outlet property="emailTextField" destination="IrI-95-FL8" id="DXL-d3-DO9"/>
-                <outlet property="facebookLoginButton" destination="pGt-BA-iPf" id="26f-cz-yzF"/>
-                <outlet property="googleLoginButton" destination="cJx-B3-YLa" id="p3c-dG-wxY"/>
+                <outlet property="facebookLoginButton" destination="fA7-gE-JGI" id="ZpF-El-tZ2"/>
+                <outlet property="googleLoginButton" destination="Dhh-Kf-cG1" id="ca7-81-HD2"/>
                 <outlet property="loginButton" destination="xGC-dd-FBr" id="gYx-U6-csn"/>
                 <outlet property="passwordTextField" destination="njQ-dP-dN7" id="Md6-A6-lFP"/>
                 <outlet property="registerButton" destination="rlS-jX-Wch" id="uuf-Be-WSY"/>
@@ -90,46 +90,70 @@
                         <constraint firstAttribute="height" constant="52" id="KeU-Od-bTb"/>
                     </constraints>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cJx-B3-YLa">
-                    <rect key="frame" x="32" y="466" width="350" height="30"/>
-                    <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <state key="normal" title="Login Google">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </state>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pGt-BA-iPf">
-                    <rect key="frame" x="32" y="527" width="350" height="30"/>
-                    <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <state key="normal" title="Login Facebook">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </state>
-                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="euU-QA-aXz" userLabel="Google Login Container">
+                    <rect key="frame" x="32" y="455" width="349" height="49"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dhh-Kf-cG1" userLabel="Google Button" customClass="LoginButton" customModule="Component">
+                            <rect key="frame" x="0.0" y="0.0" width="349" height="49"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="title" value="Login with Google"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="iconName" value="icon_google"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="identifier" value="google"/>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="49" id="RvE-7Z-RHz"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SVz-yP-ZJp" userLabel="Facebook Login Container">
+                    <rect key="frame" x="33" y="516" width="349" height="49"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fA7-gE-JGI" userLabel="Facebook Button" customClass="LoginButton" customModule="Component">
+                            <rect key="frame" x="0.0" y="0.0" width="349" height="49"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="title" value="Login with Facebook"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="iconName" value="icon_fb"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="identifier" value="facebook"/>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="49" id="IuE-ff-hNa"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="euU-QA-aXz" secondAttribute="trailing" constant="33" id="4XV-W5-Whf"/>
                 <constraint firstItem="rlS-jX-Wch" firstAttribute="top" secondItem="xGC-dd-FBr" secondAttribute="bottom" constant="14" id="75C-rN-6ue"/>
                 <constraint firstItem="IrI-95-FL8" firstAttribute="top" secondItem="BLW-s8-MOx" secondAttribute="bottom" constant="24" id="7ZQ-mm-24R"/>
                 <constraint firstItem="ABp-H2-4kT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="9FU-2e-XbC"/>
                 <constraint firstItem="rlS-jX-Wch" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="75" id="A1d-17-230"/>
-                <constraint firstItem="pGt-BA-iPf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="GOZ-mw-1KJ"/>
+                <constraint firstItem="SVz-yP-ZJp" firstAttribute="top" secondItem="euU-QA-aXz" secondAttribute="bottom" constant="12" id="DDm-Xv-78s"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xGC-dd-FBr" secondAttribute="trailing" constant="32" id="H9v-uR-IQK"/>
                 <constraint firstItem="BLW-s8-MOx" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="HQy-Ib-c7f"/>
                 <constraint firstItem="njQ-dP-dN7" firstAttribute="top" secondItem="IrI-95-FL8" secondAttribute="bottom" constant="16" id="Jfw-OS-bhO"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="rlS-jX-Wch" secondAttribute="trailing" constant="74" id="Jzb-JE-sh5"/>
                 <constraint firstItem="BLW-s8-MOx" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="24" id="KLs-Ou-kQw"/>
                 <constraint firstItem="IrI-95-FL8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="LOi-W3-7dh"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pGt-BA-iPf" secondAttribute="trailing" constant="32" id="Llg-10-CKE"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ABp-H2-4kT" secondAttribute="trailing" constant="20" id="M1L-nb-FBf"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="SVz-yP-ZJp" secondAttribute="trailing" constant="32" id="Mn0-Nm-8NT"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="BLW-s8-MOx" secondAttribute="trailing" constant="311" id="N8F-o5-Grc"/>
-                <constraint firstItem="pGt-BA-iPf" firstAttribute="top" secondItem="cJx-B3-YLa" secondAttribute="bottom" constant="31" id="RhT-gL-hbR"/>
-                <constraint firstItem="cJx-B3-YLa" firstAttribute="top" secondItem="ABp-H2-4kT" secondAttribute="bottom" constant="23" id="SiE-Ff-SHv"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="cJx-B3-YLa" secondAttribute="trailing" constant="32" id="WC2-xJ-dYB"/>
+                <constraint firstItem="euU-QA-aXz" firstAttribute="top" secondItem="ABp-H2-4kT" secondAttribute="bottom" constant="12" id="Zb8-3Q-yuB"/>
                 <constraint firstItem="njQ-dP-dN7" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="dAy-7M-mvt"/>
                 <constraint firstItem="xGC-dd-FBr" firstAttribute="top" secondItem="njQ-dP-dN7" secondAttribute="bottom" constant="36" id="dCz-lZ-QIx"/>
+                <constraint firstItem="euU-QA-aXz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="gF9-Dm-Nf8"/>
+                <constraint firstItem="SVz-yP-ZJp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="33" id="lyi-Xh-dbd"/>
                 <constraint firstItem="xGC-dd-FBr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="qyh-by-Njk"/>
                 <constraint firstItem="ABp-H2-4kT" firstAttribute="top" secondItem="rlS-jX-Wch" secondAttribute="bottom" constant="18" id="rjk-y2-tG5"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="IrI-95-FL8" secondAttribute="trailing" constant="33" id="sZU-Lf-SDh"/>
-                <constraint firstItem="cJx-B3-YLa" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="u3n-oY-EfC"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="njQ-dP-dN7" secondAttribute="trailing" constant="32" id="z9n-KL-cxa"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
