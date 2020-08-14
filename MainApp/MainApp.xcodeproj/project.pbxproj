@@ -12,7 +12,6 @@
 		1E44DC5624D8560400025AE8 /* EditProfileController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E44DC5524D8560400025AE8 /* EditProfileController.xib */; };
 		1E44DC5824D8562D00025AE8 /* EditProfileProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E44DC5724D8562D00025AE8 /* EditProfileProtocol.swift */; };
 		1E44DC5A24D8563C00025AE8 /* EditProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E44DC5924D8563C00025AE8 /* EditProfileViewModel.swift */; };
-		1E4A4AD424DDD815004795AB /* ProfileCoordinatorConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4A4AD324DDD815004795AB /* ProfileCoordinatorConstant.swift */; };
 		1EB0168024DC820E00C76109 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB0167F24DC820E00C76109 /* ProfileModel.swift */; };
 		1EB0168224DC828E00C76109 /* ProfileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB0168124DC828E00C76109 /* ProfileResponse.swift */; };
 		1EB0168424DC843E00C76109 /* ProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB0168324DC843E00C76109 /* ProfileService.swift */; };
@@ -72,6 +71,7 @@
 		921D1F7024E4F711007C3261 /* ProfileConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921D1F6F24E4F711007C3261 /* ProfileConstant.swift */; };
 		921D1F7224E4F7C8007C3261 /* ProfileLandingDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921D1F7124E4F7C8007C3261 /* ProfileLandingDataSource.swift */; };
 		921D1F7424E505D8007C3261 /* ProfileLanding+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921D1F7324E505D8007C3261 /* ProfileLanding+Network.swift */; };
+		921D202A24E52E7D007C3261 /* MainApp+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921D202924E52E7D007C3261 /* MainApp+UIColor.swift */; };
 		9227A24224CFE474004F7952 /* Inter-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9227A23A24CFE46E004F7952 /* Inter-Black.ttf */; };
 		9227A24324CFE479004F7952 /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9227A23D24CFE46E004F7952 /* Inter-Bold.ttf */; };
 		9227A24424CFE479004F7952 /* Inter-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9227A24024CFE46E004F7952 /* Inter-ExtraBold.ttf */; };
@@ -186,7 +186,6 @@
 		1E44DC5524D8560400025AE8 /* EditProfileController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditProfileController.xib; sourceTree = "<group>"; };
 		1E44DC5724D8562D00025AE8 /* EditProfileProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileProtocol.swift; sourceTree = "<group>"; };
 		1E44DC5924D8563C00025AE8 /* EditProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewModel.swift; sourceTree = "<group>"; };
-		1E4A4AD324DDD815004795AB /* ProfileCoordinatorConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinatorConstant.swift; sourceTree = "<group>"; };
 		1EB0167F24DC820E00C76109 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		1EB0168124DC828E00C76109 /* ProfileResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileResponse.swift; sourceTree = "<group>"; };
 		1EB0168324DC843E00C76109 /* ProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileService.swift; sourceTree = "<group>"; };
@@ -249,6 +248,7 @@
 		921D1F6F24E4F711007C3261 /* ProfileConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileConstant.swift; sourceTree = "<group>"; };
 		921D1F7124E4F7C8007C3261 /* ProfileLandingDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileLandingDataSource.swift; sourceTree = "<group>"; };
 		921D1F7324E505D8007C3261 /* ProfileLanding+Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileLanding+Network.swift"; sourceTree = "<group>"; };
+		921D202924E52E7D007C3261 /* MainApp+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainApp+UIColor.swift"; sourceTree = "<group>"; };
 		9227A23924CFE46E004F7952 /* Inter-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Light.ttf"; sourceTree = "<group>"; };
 		9227A23A24CFE46E004F7952 /* Inter-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Black.ttf"; sourceTree = "<group>"; };
 		9227A23B24CFE46E004F7952 /* Inter-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Thin.ttf"; sourceTree = "<group>"; };
@@ -577,7 +577,6 @@
 			isa = PBXGroup;
 			children = (
 				1EBF013024D0A7690098C24A /* ProfileCoordinator.swift */,
-				1E4A4AD324DDD815004795AB /* ProfileCoordinatorConstant.swift */,
 				1EBF013324D0A7690098C24A /* ProfileCoordinatorProtocol.swift */,
 			);
 			path = Profile;
@@ -755,6 +754,7 @@
 			children = (
 				92C77BFF24937D9E004C1D86 /* Navigation */,
 				92B90E572486C72700C59DDF /* MainApp+String.swift */,
+				921D202924E52E7D007C3261 /* MainApp+UIColor.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -1297,7 +1297,6 @@
 				920A35062499D61E00F2EABB /* Coordinator.swift in Sources */,
 				921D1F6E24E4EFF4007C3261 /* HomeCoordinatorProtocol.swift in Sources */,
 				9227A74424D9509E004F7952 /* AppCoordinator+GoogleSDK.swift in Sources */,
-				1E4A4AD424DDD815004795AB /* ProfileCoordinatorConstant.swift in Sources */,
 				92D79F3124842E49004C4701 /* HomeNetwork.swift in Sources */,
 				8A76A34424CED46F00F02AD9 /* InitialScreenCoordinator.swift in Sources */,
 				9227A36124D42937004F7952 /* EmptyModel.swift in Sources */,
@@ -1351,6 +1350,7 @@
 				921D1F7024E4F711007C3261 /* ProfileConstant.swift in Sources */,
 				920C277F24E4290600047D14 /* HomeLandingViewController.swift in Sources */,
 				92D79F402484DB87004C4701 /* SampleProfileViewModel.swift in Sources */,
+				921D202A24E52E7D007C3261 /* MainApp+UIColor.swift in Sources */,
 				9201314F24B4E368002303D0 /* Appcoordinator+BuildConfiguration.swift in Sources */,
 				1EB0168024DC820E00C76109 /* ProfileModel.swift in Sources */,
 				1E44DC5A24D8563C00025AE8 /* EditProfileViewModel.swift in Sources */,

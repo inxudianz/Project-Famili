@@ -21,13 +21,13 @@ class ProfileCoordinator: ProfileCoordinatorProtocol {
     func start() {
         let vc = ProfileLandingController()
         let vm = ProfileLandingViewModel()
-        vc.navigationController?.navigationBar.prefersLargeTitles = true
-        vc.navigationItem.largeTitleDisplayMode = .always
-        vc.navigationItem.title = ProfileCoordinatorConstant.Title.normal.rawValue
         vc.tabBarItem = UITabBarItem(tabBarSystemItem: .mostRecent, tag: 0)
         vm.coordinator = self
         vm.view = vc
         vc.viewModel = vm
+        navigationController?.navigationBar.prefersLargeTitles = true
+        vc.navigationItem.largeTitleDisplayMode = .always
+        vc.navigationItem.title = "Welcome "
         navigationController?.pushViewController(vc, animated: false)
     }
     

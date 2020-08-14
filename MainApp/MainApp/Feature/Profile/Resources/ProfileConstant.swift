@@ -55,5 +55,7 @@ enum ProfileConstant {
         }
         
         static let cellName = "profileLandingCell"
+        static let navigationTitle = "Welcome"
+        static let dividerColor = "#E8E8E8FF"
     }
 }
