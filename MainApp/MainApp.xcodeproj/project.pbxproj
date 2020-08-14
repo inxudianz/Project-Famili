@@ -75,6 +75,7 @@
 		921D202C24E63324007C3261 /* SplashAsset.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 921D202B24E63324007C3261 /* SplashAsset.xcassets */; };
 		921D211024E67356007C3261 /* AuthConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921D210F24E67356007C3261 /* AuthConstant.swift */; };
 		921D211424E68A12007C3261 /* MainApp+NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921D211324E68A12007C3261 /* MainApp+NavigationController.swift */; };
+		921D211624E69647007C3261 /* EditProfileViewModel+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921D211524E69647007C3261 /* EditProfileViewModel+Network.swift */; };
 		9227A24224CFE474004F7952 /* Inter-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9227A23A24CFE46E004F7952 /* Inter-Black.ttf */; };
 		9227A24324CFE479004F7952 /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9227A23D24CFE46E004F7952 /* Inter-Bold.ttf */; };
 		9227A24424CFE479004F7952 /* Inter-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9227A24024CFE46E004F7952 /* Inter-ExtraBold.ttf */; };
@@ -255,6 +256,7 @@
 		921D202B24E63324007C3261 /* SplashAsset.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = SplashAsset.xcassets; sourceTree = "<group>"; };
 		921D210F24E67356007C3261 /* AuthConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthConstant.swift; sourceTree = "<group>"; };
 		921D211324E68A12007C3261 /* MainApp+NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainApp+NavigationController.swift"; sourceTree = "<group>"; };
+		921D211524E69647007C3261 /* EditProfileViewModel+Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EditProfileViewModel+Network.swift"; sourceTree = "<group>"; };
 		9227A23924CFE46E004F7952 /* Inter-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Light.ttf"; sourceTree = "<group>"; };
 		9227A23A24CFE46E004F7952 /* Inter-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Black.ttf"; sourceTree = "<group>"; };
 		9227A23B24CFE46E004F7952 /* Inter-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Thin.ttf"; sourceTree = "<group>"; };
@@ -376,6 +378,7 @@
 				1E44DC5524D8560400025AE8 /* EditProfileController.xib */,
 				1E44DC5724D8562D00025AE8 /* EditProfileProtocol.swift */,
 				1E44DC5924D8563C00025AE8 /* EditProfileViewModel.swift */,
+				921D211524E69647007C3261 /* EditProfileViewModel+Network.swift */,
 			);
 			path = EditProfile;
 			sourceTree = "<group>";
@@ -1376,6 +1379,7 @@
 				8AA7015024DBE8DF00EEAADE /* LoginResponse.swift in Sources */,
 				920C277524E41BAE00047D14 /* FontManager.swift in Sources */,
 				9227A34124D293D5004F7952 /* FirebaseHandler.swift in Sources */,
+				921D211624E69647007C3261 /* EditProfileViewModel+Network.swift in Sources */,
 				9227A64124D7F230004F7952 /* GoogleSDKHandler.swift in Sources */,
 				9227A38424D7B3D0004F7952 /* AppCoordinator+Firebase.swift in Sources */,
 				8AA7015224DBEA9A00EEAADE /* AuthPath.swift in Sources */,

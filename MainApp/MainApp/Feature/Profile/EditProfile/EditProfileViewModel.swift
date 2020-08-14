@@ -9,28 +9,25 @@
 import Foundation
 
 class EditProfileViewModel: EditProfileViewModelProtocol {
-    
+    // MARK: - Property
     weak var view: EditProfileProtocol?
-    
     weak var coordinator: ProfileCoordinatorProtocol?
     
     var network: ProfileNetworkProtocol?
     
-    func saveNewProfile(data: ProfileModel.EditProfile) {
+    // MARK: - Initialization
+    init() {
+        network = ProfileLandingNetwork()
+        network?.editProfileDelegate = self
+    }
+    
+    // MARK: - Function
+    func updateProfile(name: String?, phone: String?, email: String?) {
+        let data = ProfileModel.EditProfile(name: name, phoneNumber: phone, email: email)
         network?.profileEditPost(data: data)
     }
     
     func navigateToProfile() {
         coordinator?.saveEditProfile()
-    }
-}
-
-extension EditProfileViewModel: EditProfileDelegate {
-    func didSuccessEditProfile(response: ProfileResponse.EditProfileResponse) {
-        Log.info(message: response)
-    }
-    
-    func didFailedEditProfile(error: Error) {
-        Log.info(message: "Error edit profile")
     }
 }

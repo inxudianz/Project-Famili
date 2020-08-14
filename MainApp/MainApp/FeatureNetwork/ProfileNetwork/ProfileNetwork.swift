@@ -43,10 +43,10 @@ class ProfileLandingNetwork: ProfileNetworkProtocol {
         // Get the edited profile from controller to update to database
         networkService.request(ProfileService.saveProfileRequest,
                                data,
-                               ProfileResponse.EditProfileResponse.self) { [weak self] (result) in
+                               EmptyResponse.self) { [weak self] (result) in
                                 switch result {
-                                case .success(let response):
-                                    self?.editProfileDelegate?.didSuccessEditProfile(response: response)
+                                case .success:
+                                    self?.editProfileDelegate?.didSuccessEditProfile()
                                 case .failure(let error):
                                     self?.editProfileDelegate?.didFailedEditProfile(error: error)
                                 }

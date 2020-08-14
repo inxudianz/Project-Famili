@@ -14,8 +14,4 @@ struct ProfileResponse {
         let phone: String?
         let email: String?
     }
-    
-    struct EditProfileResponse: Codable {
-        let status: String?
-    }
 }

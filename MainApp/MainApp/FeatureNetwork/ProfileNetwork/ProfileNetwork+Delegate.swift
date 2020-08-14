@@ -16,6 +16,6 @@ protocol RetrieveProfileDelegate: class {
 
 protocol EditProfileDelegate: class {
     // MARK: - Edit Profile
-    func didSuccessEditProfile(response: ProfileResponse.EditProfileResponse)
+    func didSuccessEditProfile()
     func didFailedEditProfile(error: Error)
 }

@@ -24,7 +24,7 @@ extension ProfileService: NetworkType {
         case .getProfileRequest(let userId):
             return ProfilePath.profile.rawValue + ProfileSubPath.detail.rawValue + String(userId)
         case .saveProfileRequest:
-            return ProfilePath.profile.rawValue + ProfileSubPath.detail.rawValue
+            return ProfilePath.profile.rawValue + ProfileSubPath.save.rawValue
         }
     }
     
@@ -33,7 +33,7 @@ extension ProfileService: NetworkType {
         case .getProfileRequest:
             return .get
         case .saveProfileRequest:
-            return .post
+            return .put
         }
     }
     
