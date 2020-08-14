@@ -9,5 +9,5 @@
 import Foundation
 
 enum ProfilePath: String {
-    case profile = "profile/v1"
+    case profile = "profile/v1/"
 }

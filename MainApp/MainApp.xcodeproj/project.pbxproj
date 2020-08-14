@@ -74,6 +74,7 @@
 		921D202A24E52E7D007C3261 /* MainApp+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921D202924E52E7D007C3261 /* MainApp+UIColor.swift */; };
 		921D202C24E63324007C3261 /* SplashAsset.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 921D202B24E63324007C3261 /* SplashAsset.xcassets */; };
 		921D211024E67356007C3261 /* AuthConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921D210F24E67356007C3261 /* AuthConstant.swift */; };
+		921D211424E68A12007C3261 /* MainApp+NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921D211324E68A12007C3261 /* MainApp+NavigationController.swift */; };
 		9227A24224CFE474004F7952 /* Inter-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9227A23A24CFE46E004F7952 /* Inter-Black.ttf */; };
 		9227A24324CFE479004F7952 /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9227A23D24CFE46E004F7952 /* Inter-Bold.ttf */; };
 		9227A24424CFE479004F7952 /* Inter-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9227A24024CFE46E004F7952 /* Inter-ExtraBold.ttf */; };
@@ -253,6 +254,7 @@
 		921D202924E52E7D007C3261 /* MainApp+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainApp+UIColor.swift"; sourceTree = "<group>"; };
 		921D202B24E63324007C3261 /* SplashAsset.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = SplashAsset.xcassets; sourceTree = "<group>"; };
 		921D210F24E67356007C3261 /* AuthConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthConstant.swift; sourceTree = "<group>"; };
+		921D211324E68A12007C3261 /* MainApp+NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainApp+NavigationController.swift"; sourceTree = "<group>"; };
 		9227A23924CFE46E004F7952 /* Inter-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Light.ttf"; sourceTree = "<group>"; };
 		9227A23A24CFE46E004F7952 /* Inter-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Black.ttf"; sourceTree = "<group>"; };
 		9227A23B24CFE46E004F7952 /* Inter-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Thin.ttf"; sourceTree = "<group>"; };
@@ -783,6 +785,7 @@
 			children = (
 				92C77BFD24937CFC004C1D86 /* MainApp+NavigationItem.swift */,
 				92C77C0024937E4F004C1D86 /* MainApp+NavigationBar.swift */,
+				921D211324E68A12007C3261 /* MainApp+NavigationController.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -1329,6 +1332,7 @@
 				92D79E8C2483E534004C4701 /* SceneDelegate.swift in Sources */,
 				1EB0168624DC860300C76109 /* ProfilePath.swift in Sources */,
 				920C25CD24E3A03000047D14 /* RegisterSubPath.swift in Sources */,
+				921D211424E68A12007C3261 /* MainApp+NavigationController.swift in Sources */,
 				92913BCE248D0B8A002D961D /* EmptyResponse.swift in Sources */,
 				1EBF013524D0A7690098C24A /* ProfileCoordinatorProtocol.swift in Sources */,
 				1EBF012C24D0A6A00098C24A /* ProfileLandingViewModel.swift in Sources */,

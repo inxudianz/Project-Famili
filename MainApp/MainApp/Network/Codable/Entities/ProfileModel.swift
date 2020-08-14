@@ -9,7 +9,7 @@
 import Foundation
 
 struct ProfileModel {
-    struct Profile: Encodable {
+    struct EditProfile: Encodable {
         let name: String?
         let phoneNumber: String?
         let email: String?

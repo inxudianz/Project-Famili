@@ -9,5 +9,5 @@
 import Foundation
 
 enum ProfileSubPath: String {
-    case detail = "detail"
+    case detail = "detail/"
 }

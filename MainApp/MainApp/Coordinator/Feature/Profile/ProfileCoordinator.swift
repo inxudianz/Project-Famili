@@ -27,7 +27,7 @@ class ProfileCoordinator: ProfileCoordinatorProtocol {
         vc.viewModel = vm
         navigationController?.navigationBar.prefersLargeTitles = true
         vc.navigationItem.largeTitleDisplayMode = .always
-        vc.navigationItem.title = "Welcome "
+        vc.navigationItem.title = ProfileLandingConstant.navigationTitle
         navigationController?.pushViewController(vc, animated: false)
     }
     

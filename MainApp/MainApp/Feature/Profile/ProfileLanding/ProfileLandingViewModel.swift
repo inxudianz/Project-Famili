@@ -18,6 +18,8 @@ class ProfileLandingViewModel: ProfileLandingViewModelProtocol {
     
     // MARK: - Initialization
     init() {
+        network = ProfileLandingNetwork()
+        network?.retrieveProfileDelegate = self
         self.dataSource = ProfileLandingDataSource()
         populateData()
     }
@@ -100,7 +102,12 @@ class ProfileLandingViewModel: ProfileLandingViewModelProtocol {
         }
     }
     
-    func getProfile() {
-        network?.profileGet()
+    func getProfile(userId: Int) {
+        network?.profileGet(userId: userId)
+    }
+    
+    func viewDidLoad() {
+        // Need to be changed based on user
+        getProfile(userId: 1)
     }
 }

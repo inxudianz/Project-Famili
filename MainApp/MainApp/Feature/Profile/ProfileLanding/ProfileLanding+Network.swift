@@ -10,11 +10,14 @@ import Foundation
 
 extension ProfileLandingViewModel: RetrieveProfileDelegate {
     func didSuccessRetrieveProfile(response: ProfileResponse.GetProfileResponse) {
-        Log.info(message: response)
+        guard let name = response.name else { return }
+        guard let phone = response.phone else { return }
+        guard let email = response.email else { return }
+        view?.updateView(name: name, phone: phone, email: email)
     }
     
     func didFailedRetrieveProfile(error: Error) {
-        Log.info(message: "Error retrieving Profile")
+        Log.info(message: error)
     }
 }
 

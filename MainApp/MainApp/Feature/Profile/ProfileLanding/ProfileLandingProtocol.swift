@@ -21,7 +21,8 @@ protocol ProfileLandingViewModelProtocol: class {
     func navigateToRate()
     func didSelectforRow(at: IndexPath)
     
-    func getProfile()
+    func getProfile(userId: Int)
+    func viewDidLoad()
 }
 
 protocol ProfileLandingViewProtocol: class {

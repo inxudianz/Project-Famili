@@ -11,7 +11,7 @@ import Foundation
 struct ProfileResponse {
     struct GetProfileResponse: Codable {
         let name: String?
-        let phoneNumber: Int?
+        let phone: String?
         let email: String?
     }
     

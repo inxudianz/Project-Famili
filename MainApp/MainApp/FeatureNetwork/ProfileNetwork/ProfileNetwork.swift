@@ -12,8 +12,8 @@ protocol ProfileNetworkProtocol {
     var retrieveProfileDelegate: RetrieveProfileDelegate? { get set }
     var editProfileDelegate: EditProfileDelegate? { get set }
     
-    func profileGet()
-    func profileEditPost(data: ProfileModel.Profile)
+    func profileGet(userId: Int)
+    func profileEditPost(data: ProfileModel.EditProfile)
 }
 
 class ProfileLandingNetwork: ProfileNetworkProtocol {
@@ -26,8 +26,8 @@ class ProfileLandingNetwork: ProfileNetworkProtocol {
         self.networkService = NetworkService()
     }
     
-    func profileGet() {
-        networkService.request(ProfileService.getProfileRequest,
+    func profileGet(userId: Int) {
+        networkService.request(ProfileService.getProfileRequest(userId: userId),
                                EmptyModel(),
                                ProfileResponse.GetProfileResponse.self) { [weak self] (result) in
                                 switch result {
@@ -39,7 +39,7 @@ class ProfileLandingNetwork: ProfileNetworkProtocol {
         }
     }
     
-    func profileEditPost(data: ProfileModel.Profile) {
+    func profileEditPost(data: ProfileModel.EditProfile) {
         // Get the edited profile from controller to update to database
         networkService.request(ProfileService.saveProfileRequest,
                                data,

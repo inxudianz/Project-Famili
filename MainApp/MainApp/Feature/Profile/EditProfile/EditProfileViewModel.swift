@@ -16,7 +16,7 @@ class EditProfileViewModel: EditProfileViewModelProtocol {
     
     var network: ProfileNetworkProtocol?
     
-    func saveNewProfile(data: ProfileModel.Profile) {
+    func saveNewProfile(data: ProfileModel.EditProfile) {
         network?.profileEditPost(data: data)
     }
     

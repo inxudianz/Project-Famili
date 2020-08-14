@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 
 enum ProfileService {
-    case getProfileRequest
+    case getProfileRequest(userId: Int)
     case saveProfileRequest
 }
 
@@ -21,8 +21,8 @@ extension ProfileService: NetworkType {
     
     var path: String {
         switch self {
-        case .getProfileRequest:
-            return ProfilePath.profile.rawValue + ProfileSubPath.detail.rawValue
+        case .getProfileRequest(let userId):
+            return ProfilePath.profile.rawValue + ProfileSubPath.detail.rawValue + String(userId)
         case .saveProfileRequest:
             return ProfilePath.profile.rawValue + ProfileSubPath.detail.rawValue
         }

@@ -9,5 +9,5 @@
 import Foundation
 
 enum RegisterSubPath: String {
-    case register = "register"
+    case register = "register/"
 }

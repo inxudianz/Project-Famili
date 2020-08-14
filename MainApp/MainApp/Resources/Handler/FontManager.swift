@@ -23,6 +23,7 @@ struct FontManager {
     
     enum FontSize: CGFloat {
         case button = 16
+        case navigationLarge = 28
     }
     
     static func getFont(name: String = "Inter",

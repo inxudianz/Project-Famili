@@ -25,6 +25,7 @@ class ProfileLandingController: MasterViewController, ProfileLandingViewProtocol
     // MARK: - Initialization
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel?.viewDidLoad()
         setupView()
     }
     
@@ -32,6 +33,8 @@ class ProfileLandingController: MasterViewController, ProfileLandingViewProtocol
     func setupView() {
         phoneIcon.image = UIImage(named: ProfileLandingConstant.ImageName.call.rawValue)
         emailIcon.image = UIImage(named: ProfileLandingConstant.ImageName.mail.rawValue)
+        
+        navigationController?.applyCustomFont(style: .regular, size: .navigationLarge)
         
         profileTableView.delegate = self
         profileTableView.dataSource = viewModel?.dataSource
