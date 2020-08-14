@@ -21,8 +21,9 @@ class LoginViewController: MasterViewController, LoginViewProtocol {
             emailTextField.font = FontManager.getFont(for: .regular, size: FontManager.FontSize.button.rawValue)
         }
     }
-    @IBOutlet weak var loginButton: UIButton! {
+    @IBOutlet weak var loginButton: FamiliButton! {
         didSet {
+            loginButton.isEnabled = false
             loginButton.titleLabel?.font = FontManager.getFont(for: .medium, size: FontManager.FontSize.button.rawValue)
         }
     }
@@ -32,13 +33,11 @@ class LoginViewController: MasterViewController, LoginViewProtocol {
     
     // MARK: - Property
     var viewModel: LoginViewModelProtocol?
-    var email: String?
-    var password: String?
     
     // MARK: - IBAction
     @IBAction func loginTapped(_ sender: Any) {
-        guard let email = email else { return }
-        guard let password = password else { return }
+        guard let email = emailTextField.text else { return }
+        guard let password = passwordTextField.text else { return }
         viewModel?.login(email: email, password: password)
     }
     
@@ -50,10 +49,14 @@ class LoginViewController: MasterViewController, LoginViewProtocol {
     
     // MARK: - Handler
     @objc func editingDidEnd(sender: FamiliTextField) {
-        if sender.isDescendant(of: passwordTextField) {
-            password = sender.text
-        } else if sender.isDescendant(of: emailTextField) {
-            email = sender.text
+        guard let email = emailTextField.text else { return }
+        guard let password = passwordTextField.text else { return }
+        guard let isTextsEmpty = viewModel?.isTextsEmpty(texts: [email, password]) else { return }
+        
+        if isTextsEmpty {
+            loginButton.isEnabled = false
+        } else {
+            loginButton.isEnabled = true
         }
     }
     

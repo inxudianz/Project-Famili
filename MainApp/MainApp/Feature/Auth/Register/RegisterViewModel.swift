@@ -18,27 +18,38 @@ class RegisterViewModel: RegisterViewModelProtocol {
         network?.authRegisterDelegate = self
     }
     
-    func isValidPhone(_ phone: String) -> Bool {
-        let phoneRegex = "^[0-9+]{0,1}+[0-9]{5,16}$"
-        let phoneTest = NSPredicate(format: "SELF MATCHES %@", phoneRegex)
-        return phoneTest.evaluate(with: phone)
-    }
-    
-    func isValidEmail(_ email: String) -> Bool {
-        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-        
-        let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
-        return emailPred.evaluate(with: email)
-    }
-    
-    func isValidPassword(_ password: String) -> Bool {
-        let PasswordRegEx = "^(?=.*[A-Z].*[A-Z])(?=.*[!@#$&*])(?=.*[0-9].*[0-9])(?=.*[a-z].*[a-z].*[a-z]).{8}$"
-        
-        let passwordPred = NSPredicate(format:"SELF MATCHES %@", PasswordRegEx)
-        return passwordPred.evaluate(with: password)
-    }
-    
     func navigateToLogin() {
         coordinator?.navigateToLogin()
+    }
+    
+    func register(data: AuthModel.Register) {
+        network?.register(data: data)
+    }
+    
+    func handleField(text: String, with type: AuthConstantRegister.TextFieldIdentifier) -> AuthConstantRegister.TextFieldError {
+        if text.isEmpty {
+            return .empty
+        }
+        
+        switch type {
+        case .name:
+            return .success
+        case .phone:
+            if !text.isValid(with: AuthConstantRegister.Regex.phoneRegex.rawValue) {
+                return .invalid
+            }
+        case .email:
+            if !text.isValid(with: AuthConstantRegister.Regex.emailRegex.rawValue) {
+                return .invalid
+            }
+        case .password:
+            if text.count < 6 {
+                return .invalid
+            }
+        case .confirmPassword:
+            return .success
+        }
+        
+        return .success
     }
 }

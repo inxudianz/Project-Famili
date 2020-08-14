@@ -15,6 +15,7 @@ extension LoginViewModel: AuthLoginDelegate {
     }
     
     func didFailedLogin(error: Error) {
+        // Add error message to update in view
         Log.error(message: error)
     }
     

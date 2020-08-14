@@ -16,6 +16,7 @@ protocol LoginViewModelProtocol: class {
     func login(email: String, password: String)
     func register()
     func handleLoginButton(id: AuthConstantLogin.ButtonIdentifier?)
+    func isTextsEmpty(texts: [String]) -> Bool
 }
 
 protocol LoginViewProtocol: class {

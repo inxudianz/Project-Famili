@@ -39,6 +39,9 @@ import UIKit
         }
     }
     
+    /// To change state after finished editing
+    public var isValid: Bool = true
+    
     // MARK: - Initialization
     /// Default init
     public override init(frame: CGRect) {
@@ -119,6 +122,10 @@ extension FamiliTextField: UITextFieldDelegate {
     }
     
     public func textFieldDidEndEditing(_ textField: UITextField) {
-        self.setState(state: .normal)
+        if isValid {
+            self.setState(state: .normal)
+        } else {
+            self.setState(state: .error)
+        }
     }
 }

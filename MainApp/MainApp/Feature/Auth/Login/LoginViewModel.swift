@@ -36,4 +36,13 @@ class LoginViewModel: LoginViewModelProtocol {
             Log.info(message: "Login with Facebook")
         }
     }
+    
+    func isTextsEmpty(texts: [String]) -> Bool {
+        for text in texts {
+            if text.isEmpty {
+                return true
+            }
+        }
+        return false
+    }
 }

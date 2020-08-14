@@ -10,6 +10,7 @@ import Foundation
 
 extension RegisterViewModel: AuthRegisterDelegate {
     func didSuccessRegister(response: AuthResponse.Register) {
+        coordinator?.navigateToLogin()
         Log.progress(message: response)
     }
     

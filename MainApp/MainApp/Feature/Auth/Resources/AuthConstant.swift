@@ -9,12 +9,46 @@
 import Foundation
 
 typealias AuthConstantLogin = AuthConstant.Login
+typealias AuthConstantRegister = AuthConstant.Register
+typealias AuthRegisterLocalizedKey = AuthConstant.Register.LocalizedKey
 
 enum AuthConstant {
     enum Login {
         enum ButtonIdentifier: String {
             case google
             case facebook
+        }
+    }
+    
+    enum Register {
+        enum TextFieldIdentifier: Int {
+            case name
+            case phone
+            case email
+            case password
+            case confirmPassword
+        }
+        
+        enum TextFieldError {
+            case empty
+            case invalid
+            case success
+        }
+        
+        enum Regex: String {
+            case phoneRegex = "^[0-9+]{0,1}+[0-9]{5,16}$"
+            case emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        }
+        
+        enum LocalizedKey: String {
+            case phoneInvalid = "Your phone number is invalid"
+            case emailInvalid = "Your email is invalid"
+            case passwordInvalid = "Your password must be 6 characters or more"
+            case passwordNotMatch = "Password doesn't match"
+            
+            func localized() -> String {
+                return rawValue.localize()
+            }
         }
     }
 }

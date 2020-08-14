@@ -13,10 +13,9 @@ protocol RegisterViewModelProtocol: class {
     var coordinator: AuthCoordinatorProtocol? { get set }
     var network: AuthNetworkProtocol? { get set }
     
-    func isValidPhone(_ phone: String) -> Bool
-    func isValidEmail(_ email: String) -> Bool
-    func isValidPassword(_ password: String) -> Bool
     func navigateToLogin()
+    func register(data: AuthModel.Register)
+    func handleField(text: String, with type: AuthConstantRegister.TextFieldIdentifier) -> AuthConstantRegister.TextFieldError
 }
 
 protocol RegisterViewProtocol: class {
