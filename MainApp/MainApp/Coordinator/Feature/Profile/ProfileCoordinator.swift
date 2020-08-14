@@ -9,10 +9,9 @@
 import UIKit
 
 class ProfileCoordinator: ProfileCoordinatorProtocol {
-    
     weak var parentCoordinator: Coordinator?
+
     var childCoordinators: [Coordinator] = [Coordinator]()
-    
     var navigationController: UINavigationController?
     
     required init(navigationController: UINavigationController) {
@@ -22,31 +21,42 @@ class ProfileCoordinator: ProfileCoordinatorProtocol {
     func start() {
         let vc = ProfileLandingController()
         let vm = ProfileLandingViewModel()
-        vc.navigationController?.navigationBar.prefersLargeTitles = true
-        vc.navigationItem.largeTitleDisplayMode = .always
-        vc.navigationItem.title = ProfileCoordinatorConstant.Title.normal.rawValue
         vc.tabBarItem = UITabBarItem(tabBarSystemItem: .mostRecent, tag: 0)
         vm.coordinator = self
         vm.view = vc
         vc.viewModel = vm
+        navigationController?.navigationBar.prefersLargeTitles = true
+        vc.navigationItem.largeTitleDisplayMode = .always
+        vc.navigationItem.title = ProfileLandingConstant.navigationTitle
         navigationController?.pushViewController(vc, animated: false)
     }
     
-    func getEditProfile() {
+    func navigateToEditProfile() {
         let vc = EditProfileController()
         let vm = EditProfileViewModel()
         vm.coordinator = self
         vm.view = vc
         vc.viewModel = vm
-        navigationController?.pushViewController(vc, animated: false)
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     func saveEditProfile() {
-        let vc = ProfileLandingController()
-        let vm = ProfileLandingViewModel()
-        vm.coordinator = self
-        vm.view = vc
-        vc.viewModel = vm
-        navigationController?.pushViewController(vc, animated: false)
+        navigationController?.popViewController(animated: true)
+    }
+    
+    func navigateToHelpScreen() {
+        Log.info(message: "Upcoming")
+    }
+    
+    func navigateToTOS() {
+        Log.info(message: "Upcoming")
+    }
+    
+    func navigateToPrivacyPolicy() {
+        Log.info(message: "Upcoming")
+    }
+    
+    func navigateToRate() {
+        Log.info(message: "Upcoming")
     }
 }

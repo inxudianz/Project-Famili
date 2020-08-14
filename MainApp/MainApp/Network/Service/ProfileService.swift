@@ -10,12 +10,8 @@ import Foundation
 import Alamofire
 
 enum ProfileService {
-    case getProfileRequest
+    case getProfileRequest(userId: Int)
     case saveProfileRequest
-}
-
-struct ProfileData: Encodable {
-    let data: ProfileModel.Profile
 }
 
 extension ProfileService: NetworkType {
@@ -25,10 +21,10 @@ extension ProfileService: NetworkType {
     
     var path: String {
         switch self {
-        case .getProfileRequest:
-            return ProfilePath.profile.rawValue + ProfileSubPath.detail.rawValue
+        case .getProfileRequest(let userId):
+            return ProfilePath.profile.rawValue + ProfileSubPath.detail.rawValue + String(userId)
         case .saveProfileRequest:
-            return ProfilePath.profile.rawValue + ProfileSubPath.detail.rawValue
+            return ProfilePath.profile.rawValue + ProfileSubPath.save.rawValue
         }
     }
     
@@ -37,7 +33,7 @@ extension ProfileService: NetworkType {
         case .getProfileRequest:
             return .get
         case .saveProfileRequest:
-            return .post
+            return .put
         }
     }
     
@@ -53,6 +49,4 @@ extension ProfileService: NetworkType {
     var headers: HTTPHeaders {
         return .default
     }
-    
-    
 }

@@ -22,9 +22,9 @@ How to use:
     //MARK: - Property
     /// Style available for circular progress bar
     enum CircularProgressStyle: Int {
-        case normal = 1
-        case dark = 2
-        case withDetail = 3
+        case normal
+        case dark
+        case withDetail
     }
     
     /// Color for base circle
@@ -139,8 +139,8 @@ How to use:
         progressLayer.fillColor = UIColor.clear.cgColor
         progressLayer.strokeColor = progressColor.cgColor
         
-        trailingLayer.lineWidth = 15
-        progressLayer.lineWidth = 7
+        trailingLayer.lineWidth = CircularProgressConstant.Common.trailingWidth
+        progressLayer.lineWidth = CircularProgressConstant.Common.progressWidth
         
         progressLayer.lineCap = .round
         progressLayer.strokeEnd = 0
@@ -171,22 +171,22 @@ How to use:
             case .normal:
                 styleForProgressLabel(with: .normal)
                 styleForProgressDesc(with: .normal)
-                radius = 70
+                radius = CircularProgressConstant.Common.trailingWidth
             case .dark:
                 styleForProgressLabel(with: .dark)
                 styleForProgressDesc(with: .dark)
-                radius = 70
+                radius = CircularProgressConstant.Common.trailingWidth
             case .withDetail:
                 styleForProgressLabel(with: .withDetail)
                 styleForProgressDesc(with: .withDetail)
-                radius = 40
+                radius = CircularProgressConstant.Common.trailingWidth
             }
         }
     }
     
     /// Animate the value for strokeEnd
     private func animate(from initialScale: CGFloat = 0, to scale: CGFloat, with duration: TimeInterval = 1.5) {
-        let circularAnimation = CABasicAnimation(keyPath: "strokeEnd")
+        let circularAnimation = CABasicAnimation(keyPath: CircularProgressConstant.Animation.keyPath.rawValue)
         circularAnimation.fromValue = initialScale
         circularAnimation.toValue = scale
         circularAnimation.fillMode = .forwards
@@ -194,7 +194,7 @@ How to use:
         circularAnimation.duration = duration
         circularAnimation.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
         progressLayer.strokeEnd = scale
-        progressLayer.add(circularAnimation, forKey: "progressAnimation")
+        progressLayer.add(circularAnimation, forKey: CircularProgressConstant.Animation.animationName.rawValue)
     }
     
     /// Styling for Progress Label
@@ -205,13 +205,13 @@ How to use:
         
         switch style {
         case .normal:
-            progressLabel.font = progressLabel.font.withSize(24)
+            progressLabel.font = progressLabel.font.withSize(CircularProgressConstant.Common.fontSize)
             progressLabel.textColor = .blue
         case .dark:
-            progressLabel.font = progressLabel.font.withSize(24)
+            progressLabel.font = progressLabel.font.withSize(CircularProgressConstant.Common.fontSize)
             progressLabel.textColor = .black
         case .withDetail:
-            progressLabel.font = progressLabel.font.withSize(10)
+            progressLabel.font = progressLabel.font.withSize(CircularProgressConstant.Common.fontSizeSmall)
             progressLabel.textColor = .blue
         }
         progressLabel.sizeToFit()
@@ -226,14 +226,14 @@ How to use:
         
         switch style {
         case .normal:
-            progressDescLabel.font = progressDescLabel.font.withSize(24)
+            progressDescLabel.font = progressDescLabel.font.withSize(CircularProgressConstant.Common.fontSize)
             progressDescLabel.textColor = .blue
         case .dark:
-            progressDescLabel.font = progressDescLabel.font.withSize(24)
+            progressDescLabel.font = progressDescLabel.font.withSize(CircularProgressConstant.Common.fontSize)
             progressDescLabel.textColor = .black
         case .withDetail:
             progressDescLabel.isHidden = false
-            progressDescLabel.font = progressDescLabel.font.withSize(10)
+            progressDescLabel.font = progressDescLabel.font.withSize(CircularProgressConstant.Common.fontSizeSmall)
             progressDescLabel.textColor = .blue
         }
         progressDescLabel.sizeToFit()

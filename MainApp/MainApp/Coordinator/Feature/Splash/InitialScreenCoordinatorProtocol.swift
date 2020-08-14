@@ -9,5 +9,5 @@
 import Foundation
 
 protocol InitialScreenCoordinatorProtocol: Coordinator {
-    func gotoLogin()
+    func navigateToAuth()
 }

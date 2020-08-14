@@ -12,7 +12,7 @@ protocol EditProfileViewModelProtocol: class {
     var view: EditProfileProtocol? { get set }
     var coordinator: ProfileCoordinatorProtocol? { get set }
     
-    func saveNewProfile()
+    func updateProfile(name: String?, phone: String?, email: String?)
     func navigateToProfile()
 }
 

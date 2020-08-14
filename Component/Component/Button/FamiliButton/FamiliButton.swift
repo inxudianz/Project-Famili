@@ -9,24 +9,21 @@
 import UIKit
 
 /** Famili Button Template
-
-Create button with predefined style.
-How to use:
-* Using XIB
-   * Drag and drop a UIView and change the class using FamiliButton
-* Programatically
-   * Init using the custom initializer to set all the required value
-*/
-
+ 
+ Create button with predefined style.
+ How to use:
+ * Using XIB
+ * Drag and drop a UIButton  and change the class to FamiliButton
+ * Programatically
+ * Init using the custom initializer to set all the required value
+ */
 @IBDesignable public class FamiliButton: UIButton {
-    
     //MARK: - Property
     /// Style available for famili Button
-    public enum ButtonStyle: Int {
-        case primary = 1
-        case secondary = 2
-        case disabled = 3
-        case noBackground = 4
+    @objc public enum ButtonStyle: Int {
+        case primary
+        case secondary
+        case noBackground
     }
     
     /// Style preset for the button
@@ -36,32 +33,44 @@ How to use:
         }
     }
     
+    public override var isEnabled: Bool {
+        didSet {
+            if isEnabled {
+                self.isUserInteractionEnabled = true
+                setStyle()
+            } else {
+                self.isUserInteractionEnabled = false
+                setViewDisabled()
+            }
+        }
+    }
+    
     //MARK: - Initialization
     /// Default init value with 0 and empty string
     override init(frame: CGRect) {
-        self.style = 1
+        self.style = ButtonStyle.primary.rawValue
         super.init(frame: frame)
-        self.setupView()
+        setupView()
     }
     
     /// Default init value with 0 and empty string
     required init?(coder: NSCoder) {
-        self.style = 1
+        self.style = ButtonStyle.primary.rawValue
         super.init(coder: coder)
-        self.setupView()
+        setupView()
     }
     
     /** Programmatically initialize the button
-            
-    Provide parameters required for the button such as style & title
-            
+     
+     Provide parameters required for the button such as style & title
+     
     - parameters:
-        - style: A style corresponding the enum ButtonStyle
-
+        - style : A style corresponding the enum ButtonStyle
+     
      */
-    init(style: ButtonStyle = .primary) {
+    init(style: ButtonStyle = .primary, frame: CGRect) {
         self.style = style.rawValue
-        super.init(frame: .zero)
+        super.init(frame: frame)
         setupView()
     }
     
@@ -69,26 +78,25 @@ How to use:
     /// Update display for usage in Interface Builder
     public override func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
-        self.setupView()
+        setupView()
     }
     
     /// Setup the view
     private func setupView() {
-        let height = 51
-        self.frame.size.height = CGFloat(height)
+        self.frame.size.height = FamiliButtonConstant.CommonValue.buttonHeight
+        self.setComponentButton()
         self.setStyle()
     }
     
+    //MARK: - Function
     /// Set the style button
     private func setStyle() {
-        if let style = ButtonStyle(rawValue: self.style) {
+        if let style = ButtonStyle(rawValue: style) {
             switch style {
             case .primary:
                 setViewPrimary()
             case .secondary:
                 setViewSecondary()
-            case .disabled:
-                setViewDisabled()
             case .noBackground:
                 setViewNoBackground()
             }
@@ -97,48 +105,37 @@ How to use:
     
     /// Set primary view
     private func setViewPrimary() {
-        self.backgroundColor = #colorLiteral(red: 0, green: 0.7647058824, blue: 1, alpha: 1)
-        self.tintColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-        setComponentButton()
+        self.backgroundColor = UIColor(hex: FamiliButtonConstant.Color.primary.rawValue)
+        self.tintColor = UIColor(hex: FamiliButtonConstant.Color.secondary.rawValue)
     }
     
     /// Set secondary view
     private func setViewSecondary() {
-        self.backgroundColor = #colorLiteral(red: 0.9647058824, green: 0.9647058824, blue: 0.9647058824, alpha: 1)
-        self.tintColor = #colorLiteral(red: 0, green: 0.7647058824, blue: 1, alpha: 1)
-        setComponentButton()
+        self.backgroundColor = UIColor(hex: FamiliButtonConstant.Color.secondary.rawValue)
+        self.tintColor = UIColor(hex: FamiliButtonConstant.Color.primary.rawValue)
     }
     
     /// Set disable view and set user interaction to false
     private func setViewDisabled() {
-        self.backgroundColor = #colorLiteral(red: 0.9647058824, green: 0.9647058824, blue: 0.9647058824, alpha: 1)
-        self.tintColor = #colorLiteral(red: 0.7411764706, green: 0.7411764706, blue: 0.7411764706, alpha: 1)
-        self.isUserInteractionEnabled = false
-        setComponentButton()
+        self.backgroundColor = UIColor(hex: FamiliButtonConstant.Color.secondary.rawValue)
+        self.tintColor = UIColor(hex: FamiliButtonConstant.Color.disabled.rawValue)
     }
     
     /// set no background view
     private func setViewNoBackground() {
-        self.tintColor = #colorLiteral(red: 0, green: 0.7647058824, blue: 1, alpha: 1)
-        self.titleLabel?.font = .systemFont(ofSize: 16)
+        self.tintColor = UIColor(hex: FamiliButtonConstant.Color.primary.rawValue)
+        self.titleLabel?.font = .systemFont(ofSize: FamiliButtonConstant.CommonValue.fontSize)
     }
     
     /// set component button
     private func setComponentButton() {
-        self.titleLabel?.font = .systemFont(ofSize: 16)
-        self.layer.cornerRadius = 10
+        self.titleLabel?.font = UIFont(name: FamiliButtonConstant.CommonValue.fontName, size: FamiliButtonConstant.CommonValue.fontSize)
+        self.layer.cornerRadius = FamiliButtonConstant.CommonValue.buttonCornerRadius
         self.layer.masksToBounds = true
     }
-    
-    /// to set button enable or disable
-    public func setButtonDisable(type: ButtonStyle, isDisable: Bool) {
-        if isDisable == false && type.rawValue == 1 {
-            setViewPrimary()
-        } else if isDisable == false && type.rawValue == 2 {
-            setViewSecondary()
-        } else if isDisable == true && (type.rawValue == 1 || type.rawValue == 2) {
-            setViewDisabled()
-        }
+    /// set the view style for public usage
+    public func setButtonView(with style: ButtonStyle) {
+        self.style = style.rawValue
+        setStyle()
     }
 }
-

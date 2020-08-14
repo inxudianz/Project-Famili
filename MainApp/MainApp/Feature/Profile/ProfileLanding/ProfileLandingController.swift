@@ -10,9 +10,7 @@ import UIKit
 import Component
 
 class ProfileLandingController: MasterViewController, ProfileLandingViewProtocol {
-    
-    var viewModel: ProfileLandingViewModelProtocol?
- 
+    // MARK: - Outlet
     @IBOutlet var phoneIcon: UIImageView!
     @IBOutlet var phoneNumberLabel: UILabel!
     
@@ -21,20 +19,28 @@ class ProfileLandingController: MasterViewController, ProfileLandingViewProtocol
     
     @IBOutlet var profileTableView: UITableView!
     
+    // MARK: - Property
+    var viewModel: ProfileLandingViewModelProtocol?
+
+    // MARK: - Initialization
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setupView()
-        
-        self.profileTableView.delegate = self
-        self.profileTableView.dataSource = viewModel as? UITableViewDataSource
-
-        let nib = UINib(nibName: "ProfileLandingCell", bundle: Bundle(for: ProfileLandingCell.self))
-        self.profileTableView.register(nib, forCellReuseIdentifier: "profileLandingCell")
+        viewModel?.viewDidLoad()
+        setupView()
     }
     
+    // MARK: - Function
     func setupView() {
-        self.phoneIcon.image = UIImage(named: "Call")
-        self.emailIcon.image = UIImage(named: "Mail")
+        phoneIcon.image = UIImage(named: ProfileLandingConstant.ImageName.call.rawValue)
+        emailIcon.image = UIImage(named: ProfileLandingConstant.ImageName.mail.rawValue)
+        
+        navigationController?.applyCustomFont(style: .regular, size: .navigationLarge)
+        
+        profileTableView.delegate = self
+        profileTableView.dataSource = viewModel?.dataSource
+
+        let nib = UINib(nibName: String(describing: ProfileLandingCell.self), bundle: Bundle(for: ProfileLandingCell.self))
+        self.profileTableView.register(nib, forCellReuseIdentifier: ProfileLandingConstant.cellName)
     }
     
     func updateView(name: String, phone: String, email: String) {
@@ -55,16 +61,6 @@ extension ProfileLandingController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        switch indexPath.section {
-        case 0:
-            switch indexPath.row {
-            case 0:
-                viewModel?.navigateToEditProfile()
-            default:
-                break
-            }
-        default:
-            break
-        }
+        viewModel?.didSelectforRow(at: indexPath)
     }
 }

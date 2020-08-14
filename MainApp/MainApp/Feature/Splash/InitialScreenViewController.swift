@@ -7,18 +7,24 @@
 //
 
 import UIKit
+import Component
 
-class InitialScreenViewController: UIViewController, InitialScreenViewProtocol {
-    var viewModel: InitialScreenViewModelProtocol?
+class InitialScreenViewController: MasterViewController, InitialScreenViewProtocol {
+    // MARK: - Outlet
     @IBOutlet weak var initialScreenImageView: UIImageView!
     @IBOutlet weak var initialScreenLabel: UILabel!
     @IBOutlet weak var initialScreenArrowButton: UIButton!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
+    // MARK: - Property
+    var viewModel: InitialScreenViewModelProtocol?
     
+    // MARK: - IBAction
     @IBAction func gotoLogin(_ sender: Any) {
         viewModel?.gotoLogin()
+    }
+    
+    // MARK: - Init
+    override func viewDidLoad() {
+        super.viewDidLoad()
     }
 }

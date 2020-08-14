@@ -9,17 +9,6 @@
 import Foundation
 import RxSwift
 
-protocol SampleNetworkDelegate: class {
-    func didSuccessRetrieveID(response: SampleResponse)
-    func didFailedRetrieveID(error: Error)
-    
-    func didSuccessSamplePost()
-    func didFailedSamplePost(error: Error)
-    
-    func didSuccessSampleGet(response: TestResponse)
-    func didFailedSampleGet(error: Error)
-}
-
 protocol SampleNetworkProtocol {
     var sampleNetworkDelegate: SampleNetworkDelegate? { get set }
     

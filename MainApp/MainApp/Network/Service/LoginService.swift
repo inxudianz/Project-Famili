@@ -13,10 +13,6 @@ enum LoginService {
     case loginRequest
 }
 
-struct LoginData: Encodable {
-    let loginInfo: LoginModel.LoginInfo
-}
-
 extension LoginService: NetworkType {
     var baseURL: URL {
         return URL(string: BasePath.mock.rawValue)!
@@ -25,7 +21,7 @@ extension LoginService: NetworkType {
     var path: String {
         switch self {
         case .loginRequest:
-            return LoginPath.login.rawValue + LoginSubPath.login.rawValue
+            return AuthPath.auth.rawValue + LoginSubPath.login.rawValue
         }
     }
     
@@ -46,6 +42,4 @@ extension LoginService: NetworkType {
     var headers: HTTPHeaders {
         .default
     }
-    
-    
 }

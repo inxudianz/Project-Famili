@@ -8,12 +8,10 @@
 
 import Foundation
 
-struct GetProfileResponse: Codable {
-    let name: String?
-    let phoneNumber: Int?
-    let email: String?
-}
-
-struct EditProfileResponse: Codable {
-    let status: String?
+struct ProfileResponse {
+    struct GetProfileResponse: Codable {
+        let name: String?
+        let phone: String?
+        let email: String?
+    }
 }

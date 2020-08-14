@@ -12,7 +12,7 @@ enum FamiliTextFieldConstant {
     enum BorderColor: String {
         case normal = "#E8E8E8FF"
         case focused = "#00C3FFFF"
-        case error = "#FF0F00"
+        case error = "#FF0F00FF"
     }
     
     enum CommonColor: String {

@@ -13,7 +13,7 @@ import UIKit
  Create textfield with custom attributes and design
  How to use:
  * Using XIB
-    * Drag and drop a UIView and change the class using CircularProgressView
+    * Drag and drop a UIView and change the class using FamiliTextField
  * Programatically
     * Init using the custom initializer to set all the required value
  */
@@ -38,6 +38,9 @@ import UIKit
             self.layer.borderColor = borderColor?.cgColor
         }
     }
+    
+    /// To change state after finished editing
+    public var isValid: Bool = true
     
     // MARK: - Initialization
     /// Default init
@@ -119,6 +122,10 @@ extension FamiliTextField: UITextFieldDelegate {
     }
     
     public func textFieldDidEndEditing(_ textField: UITextField) {
-        self.setState(state: .normal)
+        if isValid {
+            self.setState(state: .normal)
+        } else {
+            self.setState(state: .error)
+        }
     }
 }

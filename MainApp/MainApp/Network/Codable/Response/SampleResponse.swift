@@ -9,8 +9,8 @@
 import Foundation
 
 struct SampleResponse: Codable {
-    var name: String?
-    var id: Int?
+    let name: String?
+    let id: Int?
 }
 
 struct TestResponse: Codable {

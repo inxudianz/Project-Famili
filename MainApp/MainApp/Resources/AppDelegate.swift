@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import FBSDKCoreKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

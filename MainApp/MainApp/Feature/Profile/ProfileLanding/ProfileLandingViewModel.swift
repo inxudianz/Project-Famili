@@ -7,78 +7,107 @@
 //
 
 import Foundation
-import UIKit
 
-class ProfileLandingViewModel: NSObject, ProfileLandingViewModelProtocol {
-
+class ProfileLandingViewModel: ProfileLandingViewModelProtocol {
+    // MARK: - Property
     weak var view: ProfileLandingViewProtocol?
-    
     weak var coordinator: ProfileCoordinatorProtocol?
+    var dataSource: ProfileLandingDataSource?
     
     var network: ProfileNetworkProtocol?
     
-    var tableViewSection: [ProfileTableViewSectionProtocol]? = [AccountSectionModel(), GeneralSectionModel()]
+    // MARK: - Initialization
+    init() {
+        network = ProfileLandingNetwork()
+        network?.retrieveProfileDelegate = self
+        self.dataSource = ProfileLandingDataSource()
+        populateData()
+    }
+    
+    // MARK: - Function
+    private func populateData() {
+        let sectionNames = [ProfileLandingConstant.HeaderName.account.rawValue,
+                            ProfileLandingConstant.HeaderName.general.rawValue]
+        let accountContent = [ProfileLandingData.SectionContent(name: ProfileLandingConstant.AccountContent.edit.rawValue,
+                                                                imageName: ProfileLandingConstant.ImageName.edit.rawValue),
+                              ProfileLandingData.SectionContent(name: ProfileLandingConstant.AccountContent.help.rawValue,
+                                                                imageName: ProfileLandingConstant.ImageName.help.rawValue)]
+        let generalContent = [ProfileLandingData.SectionContent(name: ProfileLandingConstant.GeneralContent.tos.rawValue,
+                                                                imageName: ProfileLandingConstant.ImageName.tos.rawValue),
+                              ProfileLandingData.SectionContent(name: ProfileLandingConstant.GeneralContent.privacy.rawValue,
+                                                                imageName: ProfileLandingConstant.ImageName.privacy.rawValue),
+                              ProfileLandingData.SectionContent(name: ProfileLandingConstant.GeneralContent.rate.rawValue,
+                                                                imageName: ProfileLandingConstant.ImageName.rate.rawValue)]
+        
+        let datas = [ProfileLandingData(sectionName: sectionNames[0],
+                                        sectionContent: accountContent),
+                     ProfileLandingData(sectionName: sectionNames[1],
+                                        sectionContent: generalContent)]
+        dataSource?.setData(datas: datas)
+    }
     
     func navigateToEditProfile() {
-        coordinator?.getEditProfile()
+        coordinator?.navigateToEditProfile()
     }
     
     func navigateToHelp() {
-         // Call coordinator to Help
-     }
-     
-     func navigateToFreqAskedQuestion() {
-         // Call coordinator to FAQ
-     }
-    
-    func getProfile() {
-        network?.profileGet()
+        coordinator?.navigateToHelpScreen()
     }
     
-    func updateProfileDataLabel() {
-        // Take response and put the name, phone, and email
-        view?.updateView(name: "asa", phone: "012931039", email: "aaa@gmail.com")
-       }
-}
-
-extension ProfileLandingViewModel: UITableViewDataSource {
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return tableViewSection!.count
+    func navigateToTOS() {
+        coordinator?.navigateToTOS()
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tableViewSection![section].sectionCell.count
+    func navigateToPrivacy() {
+        coordinator?.navigateToPrivacyPolicy()
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return tableViewSection![section].sectionName
+    func navigateToRate() {
+        coordinator?.navigateToRate()
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "profileLandingCell") as! ProfileLandingCell
-        let rowInSection = tableViewSection![indexPath.section].sectionCell[indexPath.row]
-        cell.cellContent(cellImage: rowInSection, cellText: rowInSection)
-        return cell
-    }
-}
-
-extension ProfileLandingViewModel: ProfileNetworkDelegate {
-    
-    func didSuccessRetrieveProfile(response: GetProfileResponse) {
-        Log.info(message: response)
-        updateProfileDataLabel()
-    }
-    
-    func didFailedRetrieveProfile(error: Error) {
-        Log.info(message: "Error retrieving Profile")
+    func didSelectforRow(at indexPath: IndexPath) {
+        let headerSection = ProfileLandingConstant.HeaderIndex(rawValue: indexPath.section)
+        switch headerSection {
+        case .account:
+            guard let accountIndex = ProfileLandingConstant.AccountIndex(rawValue: indexPath.row) else { return }
+            didSelectAccountSection(accountIndex)
+            
+        case .general:
+            guard let generalIndex = ProfileLandingConstant.GeneralIndex(rawValue: indexPath.row) else { return }
+            didSelectGeneralSection(generalIndex)
+        default:
+            return
+        }
+        
     }
     
-    func didSuccessEditProfile(response: EditProfileResponse) {
-        Log.info(message: response)
+    private func didSelectAccountSection(_ index: ProfileLandingConstant.AccountIndex) {
+        switch index {
+        case .edit:
+            navigateToEditProfile()
+        case .help:
+            navigateToHelp()
+        }
     }
     
-    func didFailedEditProfile(error: Error) {
-        Log.info(message: "Error edit profile")
+    private func didSelectGeneralSection(_ index: ProfileLandingConstant.GeneralIndex) {
+        switch index {
+        case .privacy:
+            navigateToPrivacy()
+        case .tos:
+            navigateToTOS()
+        case .rate:
+            navigateToRate()
+        }
+    }
+    
+    func getProfile(userId: Int) {
+        network?.profileGet(userId: userId)
+    }
+    
+    func viewDidLoad() {
+        // Need to be changed based on user
+        getProfile(userId: 1)
     }
 }

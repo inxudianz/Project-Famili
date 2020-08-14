@@ -13,6 +13,6 @@ class InitialScreenViewModel: InitialScreenViewModelProtocol {
     weak var coordinator: InitialScreenCoordinatorProtocol?
     
     func gotoLogin() {
-        coordinator?.gotoLogin()
+        coordinator?.navigateToAuth()
     }
 }

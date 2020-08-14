@@ -29,4 +29,20 @@ extension Coordinator {
             }
         }
     }
+    
+    func buildTabBar(with screens:[CoordinatorFeature], tabBar: UITabBarController) {
+        for screen in screens {
+            if CoordinatorId.id.keys.contains(screen.rawValue) {
+                guard let coordinator = CoordinatorId.id[screen.rawValue] else {return}
+                
+                coordinator.parentCoordinator = self
+                self.childCoordinators.append(coordinator)
+                coordinator.start()
+                
+                guard let coordinatorController = coordinator.navigationController else {return}
+                
+                tabBar.addChild(coordinatorController)
+            }
+        }
+    }
 }

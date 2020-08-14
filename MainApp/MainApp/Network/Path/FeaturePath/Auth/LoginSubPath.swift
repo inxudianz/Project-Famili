@@ -9,5 +9,5 @@
 import Foundation
 
 enum LoginSubPath: String {
-    case login = "login"
+    case login = "login/"
 }

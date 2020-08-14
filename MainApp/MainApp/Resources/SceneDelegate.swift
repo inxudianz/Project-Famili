@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             window = UIWindow(windowScene: windowScene)
             coordinator = AppCoordinator(window: window)
             coordinator?.initializeWindow()
-                .screen(.register)
+                .screen(.splash)
                 .start()
         }
     }
