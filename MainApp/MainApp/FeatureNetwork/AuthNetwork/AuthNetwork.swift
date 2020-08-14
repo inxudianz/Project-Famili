@@ -29,10 +29,10 @@ class AuthNetwork: AuthNetworkProtocol{
     func login(data: AuthModel.Login) {
         networkService.request(AuthService.login,
                                data,
-                               AuthResponse.Login.self) { [weak self] (result) in
+                               EmptyResponse.self) { [weak self] (result) in
             switch result {
-            case .success(let response):
-                self?.authLoginDelegate?.didSuccessLogin(response: response)
+            case .success:
+                self?.authLoginDelegate?.didSuccessLogin()
             case .failure(let error):
                 self?.authLoginDelegate?.didFailedLogin(error: error)
             }
@@ -42,10 +42,10 @@ class AuthNetwork: AuthNetworkProtocol{
     func register(data: AuthModel.Register) {
         networkService.request(AuthService.register,
                                data,
-                               AuthResponse.Register.self) { [weak self] (result) in
+                               EmptyResponse.self) { [weak self] (result) in
             switch result {
-            case .success(let response):
-                self?.authRegisterDelegate?.didSuccessRegister(response: response)
+            case .success:
+                self?.authRegisterDelegate?.didSuccessRegister()
             case .failure(let error):
                 self?.authRegisterDelegate?.didFailedRegister(error: error)
             }

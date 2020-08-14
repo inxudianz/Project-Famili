@@ -10,12 +10,12 @@ import Foundation
 
 protocol AuthLoginDelegate: class {
     // MARK: - Login
-    func didSuccessLogin(response: AuthResponse.Login)
+    func didSuccessLogin()
     func didFailedLogin(error: Error)
 }
 
 protocol AuthRegisterDelegate: class {
     // MARK: - Register
-    func didSuccessRegister(response: AuthResponse.Register)
+    func didSuccessRegister()
     func didFailedRegister(error: Error)
 }

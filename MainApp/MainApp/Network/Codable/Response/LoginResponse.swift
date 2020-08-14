@@ -9,11 +9,4 @@
 import Foundation
 
 struct AuthResponse {
-    struct Login: Codable {
-        let status: String?
-    }
-    
-    struct Register: Codable {
-        let status: String?
-    }
 }

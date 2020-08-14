@@ -9,8 +9,8 @@
 import Foundation
 
 extension LoginViewModel: AuthLoginDelegate {
-    func didSuccessLogin(response: AuthResponse.Login) {
-        Log.progress(message: response)
+    func didSuccessLogin() {
+        Log.progress(message: "Success")
         coordinator?.navigateToHome()
     }
     
