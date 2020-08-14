@@ -72,6 +72,7 @@
 		921D1F7224E4F7C8007C3261 /* ProfileLandingDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921D1F7124E4F7C8007C3261 /* ProfileLandingDataSource.swift */; };
 		921D1F7424E505D8007C3261 /* ProfileLanding+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921D1F7324E505D8007C3261 /* ProfileLanding+Network.swift */; };
 		921D202A24E52E7D007C3261 /* MainApp+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921D202924E52E7D007C3261 /* MainApp+UIColor.swift */; };
+		921D202C24E63324007C3261 /* SplashAsset.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 921D202B24E63324007C3261 /* SplashAsset.xcassets */; };
 		9227A24224CFE474004F7952 /* Inter-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9227A23A24CFE46E004F7952 /* Inter-Black.ttf */; };
 		9227A24324CFE479004F7952 /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9227A23D24CFE46E004F7952 /* Inter-Bold.ttf */; };
 		9227A24424CFE479004F7952 /* Inter-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9227A24024CFE46E004F7952 /* Inter-ExtraBold.ttf */; };
@@ -249,6 +250,7 @@
 		921D1F7124E4F7C8007C3261 /* ProfileLandingDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileLandingDataSource.swift; sourceTree = "<group>"; };
 		921D1F7324E505D8007C3261 /* ProfileLanding+Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileLanding+Network.swift"; sourceTree = "<group>"; };
 		921D202924E52E7D007C3261 /* MainApp+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainApp+UIColor.swift"; sourceTree = "<group>"; };
+		921D202B24E63324007C3261 /* SplashAsset.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = SplashAsset.xcassets; sourceTree = "<group>"; };
 		9227A23924CFE46E004F7952 /* Inter-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Light.ttf"; sourceTree = "<group>"; };
 		9227A23A24CFE46E004F7952 /* Inter-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Black.ttf"; sourceTree = "<group>"; };
 		9227A23B24CFE46E004F7952 /* Inter-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Thin.ttf"; sourceTree = "<group>"; };
@@ -402,6 +404,7 @@
 				8A76A33324CEB3EB00F02AD9 /* InitialScreenViewController.xib */,
 				8A76A33C24CECB7300F02AD9 /* InitialScreenViewModel.swift */,
 				8A76A33E24CECBAE00F02AD9 /* InitialScreenProtocol.swift */,
+				921D202B24E63324007C3261 /* SplashAsset.xcassets */,
 			);
 			path = Splash;
 			sourceTree = "<group>";
@@ -1153,6 +1156,7 @@
 				1EC5105624E2A87B00A00759 /* ProfileLandingController.xib in Resources */,
 				8A7D861324D0178D00C87610 /* LoginViewController.xib in Resources */,
 				9227A24824CFE479004F7952 /* Inter-Regular.ttf in Resources */,
+				921D202C24E63324007C3261 /* SplashAsset.xcassets in Resources */,
 				92D79F442484DB93004C4701 /* SampleProfileViewController.xib in Resources */,
 				920C278024E4290600047D14 /* HomeLandingViewController.xib in Resources */,
 				92D79F082483E873004C4701 /* SampleHomeViewController.xib in Resources */,
