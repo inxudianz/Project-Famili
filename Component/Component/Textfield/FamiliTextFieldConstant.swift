@@ -27,5 +27,8 @@ enum FamiliTextFieldConstant {
         static let fontSize = 16
         static let fontFamily = "Inter-Medium"
         static let textLeading = 16
+        static let animationType = "borderColor"
+        static let animationName = "borderChangeColor"
+        static let closeButton = "icon_close"
     }
 }
