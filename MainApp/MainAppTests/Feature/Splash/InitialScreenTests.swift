@@ -8,7 +8,6 @@
 
 import Quick
 import Nimble
-import RxSwift
 
 @testable import MainApp
 
