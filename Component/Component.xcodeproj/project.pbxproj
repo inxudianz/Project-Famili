@@ -11,6 +11,7 @@
 		920C25C924E39D9B00047D14 /* CircularProgressConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C25C824E39D9B00047D14 /* CircularProgressConstant.swift */; };
 		921D202F24E63646007C3261 /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921D202E24E63646007C3261 /* LoginButton.swift */; };
 		921D20C124E63E58007C3261 /* Component+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921D20C024E63E58007C3261 /* Component+UIView.swift */; };
+		921D226424EBF638007C3261 /* Component.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 921D226324EBF638007C3261 /* Component.xcassets */; };
 		9227A16C24CDC521004F7952 /* FamiliTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9227A16B24CDC521004F7952 /* FamiliTextField.swift */; };
 		9227A16E24CDC7E5004F7952 /* Component+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9227A16D24CDC7E5004F7952 /* Component+UIColor.swift */; };
 		9227A17024CDC9B1004F7952 /* FamiliTextFieldConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9227A16F24CDC9B1004F7952 /* FamiliTextFieldConstant.swift */; };
@@ -39,6 +40,7 @@
 		920C25C824E39D9B00047D14 /* CircularProgressConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressConstant.swift; sourceTree = "<group>"; };
 		921D202E24E63646007C3261 /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
 		921D20C024E63E58007C3261 /* Component+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Component+UIView.swift"; sourceTree = "<group>"; };
+		921D226324EBF638007C3261 /* Component.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Component.xcassets; sourceTree = "<group>"; };
 		9227A16B24CDC521004F7952 /* FamiliTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamiliTextField.swift; sourceTree = "<group>"; };
 		9227A16D24CDC7E5004F7952 /* Component+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Component+UIColor.swift"; sourceTree = "<group>"; };
 		9227A16F24CDC9B1004F7952 /* FamiliTextFieldConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamiliTextFieldConstant.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				92D79F1F2483F3F0004C4701 /* Extension */,
 				92D79EB82483E553004C4701 /* Component.h */,
 				92D79EB92483E553004C4701 /* Info.plist */,
+				921D226324EBF638007C3261 /* Component.xcassets */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				92D79F042483E85F004C4701 /* MasterViewController.xib in Resources */,
+				921D226424EBF638007C3261 /* Component.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
