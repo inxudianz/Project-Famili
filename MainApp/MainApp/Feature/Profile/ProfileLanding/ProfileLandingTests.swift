@@ -85,6 +85,23 @@ class ProfileLandingCoordinatorMock: ProfileCoordinatorProtocol {
     }
 }
 
+class ProfileLandingNetworkMock: ProfileNetworkProtocol {
+    
+    var retrieveProfileDelegate: RetrieveProfileDelegate?
+    
+    var editProfileDelegate: EditProfileDelegate?
+    
+    var isProfileGet = false
+    func profileGet(userId: Int) {
+        isProfileGet = true
+    }
+    
+    var isProfileEditPost = false
+    func profileEditPost(data: ProfileModel.EditProfile) {
+        isProfileEditPost = true
+    }
+}
+
 class ProfileLandingTests: QuickSpec {
     override func spec() {
         describe("ViewModel") {
@@ -92,14 +109,17 @@ class ProfileLandingTests: QuickSpec {
             var sut: ProfileLandingViewModel!
             var view: ProfileLandingMock!
             var coordinator: ProfileLandingCoordinatorMock!
+            var network: ProfileLandingNetworkMock!
             
             beforeEach {
                 view = ProfileLandingMock()
                 coordinator = ProfileLandingCoordinatorMock()
+                network = ProfileLandingNetworkMock()
                 
                 sut = ProfileLandingViewModel()
                 sut.view = view
                 sut.coordinator = coordinator
+                sut.network = network
             }
             
             context("Function navigateToEditProfile is called") {
@@ -137,9 +157,17 @@ class ProfileLandingTests: QuickSpec {
                 }
             }
             
-            context("Function updateView is called") {
+            context("Function getProfile is called") {
                 it("Without error") {
                     sut.getProfile(userId: 1)
+                    expect(network.isProfileGet).to(beTrue())
+                }
+            }
+            
+            context("Function updateView is called") {
+                it("Without error") {
+                    sut.view?.updateView(name: "Irene", phone: "08123019201", email: "irene@gmail.com")
+                    expect(view.isUpdateView).to(beTrue())
                 }
             }
         }
