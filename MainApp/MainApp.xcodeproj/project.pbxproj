@@ -143,6 +143,7 @@
 		F5293EB024D9AA8F00CA7E87 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5293EAF24D9AA8F00CA7E87 /* RegisterViewModel.swift */; };
 		F5758BDA24DFA385007E2517 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5758BD924DFA385007E2517 /* AuthService.swift */; };
 		F595D9EC24E280CA006DD353 /* RegisterViewModel+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = F595D9EB24E280CA006DD353 /* RegisterViewModel+Network.swift */; };
+		F5A0448324ED6C060020D729 /* RegisterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A0448224ED6C060020D729 /* RegisterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -331,6 +332,7 @@
 		F5293EAF24D9AA8F00CA7E87 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		F5758BD924DFA385007E2517 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		F595D9EB24E280CA006DD353 /* RegisterViewModel+Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RegisterViewModel+Network.swift"; sourceTree = "<group>"; };
+		F5A0448224ED6C060020D729 /* RegisterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegisterTests.swift; path = MainApp/Feature/Auth/Register/RegisterTests.swift; sourceTree = SOURCE_ROOT; };
 		FD3077CE7FF8C7A3449D06CF /* Pods-MainAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MainAppTests.release.xcconfig"; path = "Target Support Files/Pods-MainAppTests/Pods-MainAppTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -698,6 +700,7 @@
 		923249AF24C0408500FDFC3E /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				F5A0448224ED6C060020D729 /* RegisterTests.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -1410,6 +1413,7 @@
 			files = (
 				8AA7016624EBD3CD00EEAADE /* InitialScreenTests.swift in Sources */,
 				92053BE224A1F83A00AF938C /* SampleHomeTests.swift in Sources */,
+				F5A0448324ED6C060020D729 /* RegisterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
