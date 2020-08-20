@@ -25,6 +25,7 @@
 		1EBF014A24D1E5450098C24A /* ProfileLandingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBF014924D1E5450098C24A /* ProfileLandingCell.swift */; };
 		1EC5105624E2A87B00A00759 /* ProfileLandingController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EBF012324D0A6130098C24A /* ProfileLandingController.xib */; };
 		1EC5105924E2A8A400A00759 /* ProfileLandingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EBF014B24D1E5510098C24A /* ProfileLandingCell.xib */; };
+		1EFA020F24EDB14F00063DB6 /* ProfileLandingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFA020E24EDB14F00063DB6 /* ProfileLandingTests.swift */; };
 		1EFA021524EDBFFA00063DB6 /* EditProfileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFA021424EDBFFA00063DB6 /* EditProfileTests.swift */; };
 		8A76A33424CEB3EB00F02AD9 /* InitialScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A76A33224CEB3EB00F02AD9 /* InitialScreenViewController.swift */; };
 		8A76A33524CEB3EB00F02AD9 /* InitialScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A76A33324CEB3EB00F02AD9 /* InitialScreenViewController.xib */; };
@@ -204,6 +205,7 @@
 		1EBF013324D0A7690098C24A /* ProfileCoordinatorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileCoordinatorProtocol.swift; sourceTree = "<group>"; };
 		1EBF014924D1E5450098C24A /* ProfileLandingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileLandingCell.swift; sourceTree = "<group>"; };
 		1EBF014B24D1E5510098C24A /* ProfileLandingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileLandingCell.xib; sourceTree = "<group>"; };
+		1EFA020E24EDB14F00063DB6 /* ProfileLandingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileLandingTests.swift; path = MainApp/Feature/Profile/ProfileLanding/ProfileLandingTests.swift; sourceTree = SOURCE_ROOT; };
 		1EFA021424EDBFFA00063DB6 /* EditProfileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EditProfileTests.swift; path = MainApp/Feature/Profile/ProfileLanding/EditProfileTests.swift; sourceTree = SOURCE_ROOT; };
 		3304A088087BD629641C29A2 /* Pods_MainAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MainAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		890F374CBAEFBDEFACC50A10 /* Pods-MainApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MainApp.debug.xcconfig"; path = "Target Support Files/Pods-MainApp/Pods-MainApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -695,6 +697,7 @@
 		923249AE24C0408000FDFC3E /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				1EFA020E24EDB14F00063DB6 /* ProfileLandingTests.swift */,
 				1EFA021424EDBFFA00063DB6 /* EditProfileTests.swift */,
 			);
 			path = Profile;
@@ -1414,6 +1417,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EFA020F24EDB14F00063DB6 /* ProfileLandingTests.swift in Sources */,
 				8AA7017324ECF6DF00EEAADE /* LoginTests.swift in Sources */,
 				8AA7016624EBD3CD00EEAADE /* InitialScreenTests.swift in Sources */,
 				92053BE224A1F83A00AF938C /* SampleHomeTests.swift in Sources */,
