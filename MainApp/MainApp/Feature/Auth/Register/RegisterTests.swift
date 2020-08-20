@@ -121,6 +121,76 @@ class RegisterTests: QuickSpec {
                     expect(coordinator.isNavigatetoLogin).to(beTrue())
                 }
             }
+            
+            context("Empty name") {
+                it("Without error") {
+                    let testData = sut.handleField(text: "", with: .name)
+                    expect(testData) == .empty
+                }
+            }
+            
+            context("Correct name") {
+                it("Without error") {
+                    let testData = sut.handleField(text: "Budi", with: .name)
+                    expect(testData) == .success
+                }
+            }
+            
+            context("Wrong email") {
+                it("Without error") {
+                    let testData = sut.handleField(text: "Budi", with: .email)
+                    expect(testData) == .invalid
+                }
+            }
+            
+            context("Correct email") {
+                it("Without error") {
+                    let testData = sut.handleField(text: "budi123@gmail.com", with: .email)
+                    expect(testData) == .success
+                }
+            }
+            
+            context("Wrong phone") {
+                it("Without error") {
+                    let testData = sut.handleField(text: "budi123@gmail.com", with: .phone)
+                    expect(testData) == .invalid
+                }
+            }
+            
+            context("Correct phone") {
+                it("Without error") {
+                    let testData = sut.handleField(text: "081245577", with: .phone)
+                    expect(testData) == .success
+                }
+            }
+            
+            context("Wrong password") {
+                it("Without error") {
+                    let testData = sut.handleField(text: "12", with: .password)
+                    expect(testData) == .invalid
+                }
+            }
+            
+            context("Correct phone") {
+                it("Without error") {
+                    let testData = sut.handleField(text: "budi123", with: .password)
+                    expect(testData) == .success
+                }
+            }
+            
+            context("Empty confirm password") {
+                it("Without error") {
+                    let testData = sut.handleField(text: "", with: .confirmPassword)
+                    expect(testData) == .empty
+                }
+            }
+            
+            context("Correct confirm password") {
+                it("Without error") {
+                    let testData = sut.handleField(text: "budi123", with: .confirmPassword)
+                    expect(testData) == .success
+                }
+            }
         }
     }
 }
