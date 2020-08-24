@@ -28,6 +28,8 @@ class ProfileCoordinator: ProfileCoordinatorProtocol {
         navigationController?.navigationBar.prefersLargeTitles = true
         vc.navigationItem.largeTitleDisplayMode = .always
         vc.navigationItem.title = ProfileLandingConstant.navigationTitle
+        
+        navigationController?.navigationBar.configure()
         navigationController?.pushViewController(vc, animated: false)
     }
     
@@ -37,6 +39,8 @@ class ProfileCoordinator: ProfileCoordinatorProtocol {
         vm.coordinator = self
         vm.view = vc
         vc.viewModel = vm
+        
+        navigationController?.navigationBar.configure()
         navigationController?.pushViewController(vc, animated: true)
     }
     
