@@ -24,6 +24,7 @@ class AuthCoordinator: AuthCoordinatorProtocol {
     func navigateToHome() {
         let tabBar = UITabBarController()
         self.buildTabBar(with: [.home, .profile], tabBar: tabBar)
+        tabBar.tabBar.configure()
         navigationController?.pushViewController(tabBar, animated: true)
     }
     
