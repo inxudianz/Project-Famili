@@ -91,7 +91,7 @@ public protocol FamiliTextFieldProtocol: class {
     
     /// Setup right view clear custom button
     private func setupClearButton() {
-        self.clearButtonMode = .always
+        self.clearButtonMode = .whileEditing
         self.rightViewMode = .whileEditing
         let clearButton = UIButton(frame: CGRect(origin: .zero,
                                                  size: .init(width: 20, height: 20)))
