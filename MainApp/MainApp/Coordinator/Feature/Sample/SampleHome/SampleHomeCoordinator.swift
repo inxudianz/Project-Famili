@@ -21,7 +21,6 @@ class SampleHomeCoordinator: SampleHomeCoordinatorProtocol {
     func start() {
         let vc = SampleHomeViewController()
         let vm = SampleHomeViewModel()
-        vc.navigationItem.configure()
         vc.tabBarItem = UITabBarItem(tabBarSystemItem: .mostRecent, tag: 0)
         vm.coordinator = self
         vm.view = vc

@@ -1,16 +1,15 @@
 //
-//  MainApp+NavigationBar.swift
+//  MainApp+TabBar.swift
 //  MainApp
 //
-//  Created by William Inx on 12/06/20.
+//  Created by William Inx on 24/08/20.
 //  Copyright © 2020 William Inx. All rights reserved.
 //
 
 import UIKit
 
-extension UINavigationBar {
+extension UITabBar {
     func configure() {
         self.tintColor = UIColor(hex: "#00C3FFFF")
-        self.backgroundColor = .clear
     }
 }
