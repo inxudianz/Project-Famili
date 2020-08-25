@@ -29,6 +29,8 @@ class EditProfileController: MasterViewController, EditProfileProtocol {
     var phone: String?
     var email: String?
     
+    var validTextField: [Bool]?
+    
     // MARK: - Handler
     @IBAction func saveButtonTapped(_ sender: Any) {
         viewModel?.updateProfile(name: name, phone: phone, email: email)
@@ -49,15 +51,17 @@ class EditProfileController: MasterViewController, EditProfileProtocol {
             case .invalid:
                 updateTextError(for: type)
                 saveButton.isEnabled = false
+                validTextField?[index] = false
             case .success:
                 textField?.isValid = true
-                errorLabel.isHidden = true
-                saveButton.isEnabled = true
+                validTextField?[index] = true
                 
                 guard let isFocused = textField?.isFocused else { return }
                 isFocused ? textField?.setState(state: .focused) : textField?.setState(state: .normal)
             }
         }
+        
+        setupButton()
     }
     
     // MARK: - Initialization
@@ -72,6 +76,8 @@ class EditProfileController: MasterViewController, EditProfileProtocol {
         saveButton.isEnabled = false
         
         let textFields = [nameTextField, phoneNumberTextField, emailTextField]
+        validTextField = [false, false, false]
+        
         for textfield in textFields {
             textfield?.addTarget(self, action: #selector(textDidChange(sender:)), for: .editingChanged)
             textfield?.addTarget(self, action: #selector(handleField), for: .editingDidEnd)
@@ -100,6 +106,29 @@ class EditProfileController: MasterViewController, EditProfileProtocol {
     func enablehideKeyboard() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tap)
+    }
+    
+    func setupButton() {
+        var isAllFieldsValid = false
+        
+        guard let isValidTextField = validTextField else { return }
+        for validation in isValidTextField {
+            if validation == false {
+                isAllFieldsValid = false
+                break
+            }
+            else {
+                isAllFieldsValid = true
+            }
+        }
+        
+        switch isAllFieldsValid {
+        case true:
+            saveButton.isEnabled = true
+            errorLabel.isHidden = true
+        case false:
+            saveButton.isEnabled = false
+        }
     }
     
     @objc func textDidChange(sender: FamiliTextField) {
