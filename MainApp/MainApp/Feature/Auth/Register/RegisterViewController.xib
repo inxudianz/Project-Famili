@@ -11,7 +11,6 @@
             <connections>
                 <outlet property="btnLoginHere" destination="OJU-2z-mo1" id="Abw-Bn-3vf"/>
                 <outlet property="buttonRegister" destination="uuD-bW-mjq" id="JCh-lT-K6y"/>
-                <outlet property="labelAlreadyHaveAccount" destination="jR0-Iu-Ogd" id="FGQ-T2-7dp"/>
                 <outlet property="labelError" destination="73f-0N-gSS" id="EKY-zc-893"/>
                 <outlet property="labelRegister" destination="SqR-Tp-Shc" id="iGi-ea-jqY"/>
                 <outlet property="tfConfirmPassword" destination="cwI-Dx-b2g" id="HIy-xq-zaG"/>
@@ -197,17 +196,11 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XEf-cb-VLt">
                                             <rect key="frame" x="70" y="87" width="274" height="32"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already have an account? " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jR0-Iu-Ogd">
-                                                    <rect key="frame" x="0.0" y="0.0" width="190" height="32"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" red="0.0" green="0.76470588235294112" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OJU-2z-mo1">
-                                                    <rect key="frame" x="190" y="0.0" width="84" height="32"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="274" height="32"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="tintColor" red="0.0" green="0.76470588235294112" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <state key="normal" title="Login Here!"/>
+                                                    <state key="normal" title="Already have an account? Login Here!"/>
                                                     <connections>
                                                         <action selector="actionButtonLoginHere:" destination="-1" eventType="touchUpInside" id="QV7-4R-kLK"/>
                                                     </connections>
