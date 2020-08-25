@@ -15,6 +15,14 @@ class EditProfileController: MasterViewController, EditProfileProtocol {
     @IBOutlet weak var phoneNumberTextField: FamiliTextField!
     @IBOutlet weak var emailTextField: FamiliTextField!
     
+    @IBOutlet weak var errorLabel: UILabel!
+    
+    @IBOutlet weak var saveButton: FamiliButton! {
+        didSet {
+            saveButton.isEnabled = false
+        }
+    }
+    
     // MARK: - Property
     var viewModel: EditProfileViewModelProtocol?
     var name: String?
@@ -24,6 +32,32 @@ class EditProfileController: MasterViewController, EditProfileProtocol {
     // MARK: - Handler
     @IBAction func saveButtonTapped(_ sender: Any) {
         viewModel?.updateProfile(name: name, phone: phone, email: email)
+        viewModel?.navigateToProfile()
+    }
+    
+    @objc func handleField() {
+        let textFields = [nameTextField, phoneNumberTextField, emailTextField]
+        
+        for (index, textField) in textFields.enumerated() {
+            guard let text = textField?.text else { return }
+            guard let type = EditProfileConstant.TextFieldIdentifier(rawValue: index) else { return }
+            guard let handleFieldValidator = viewModel?.handleField(text: text, with: type) else { return }
+            
+            switch handleFieldValidator {
+            case .empty:
+                saveButton.isEnabled = false
+            case .invalid:
+                updateTextError(for: type)
+                saveButton.isEnabled = false
+            case .success:
+                textField?.isValid = true
+                errorLabel.isHidden = true
+                saveButton.isEnabled = true
+                
+                guard let isFocused = textField?.isFocused else { return }
+                isFocused ? textField?.setState(state: .focused) : textField?.setState(state: .normal)
+            }
+        }
     }
     
     // MARK: - Initialization
@@ -34,7 +68,38 @@ class EditProfileController: MasterViewController, EditProfileProtocol {
     
     // MARK: - Function
     func setupView() {
-        nameTextField.addTarget(self, action: #selector(textDidChange(sender:)), for: .editingChanged)
+        errorLabel.isHidden = true
+        saveButton.isEnabled = false
+        
+        let textFields = [nameTextField, phoneNumberTextField, emailTextField]
+        for textfield in textFields {
+            textfield?.addTarget(self, action: #selector(textDidChange(sender:)), for: .editingChanged)
+            textfield?.addTarget(self, action: #selector(handleField), for: .editingDidEnd)
+        }
+        
+        enablehideKeyboard()
+    }
+    
+    func updateTextError(for type: EditProfileConstant.TextFieldIdentifier) {
+        errorLabel.isHidden = false
+        
+        switch type {
+        case .name:
+            nameTextField.setState(state: .error)
+        case .phone:
+            errorLabel.text = EditProfileConstant.LocalizedKey.phoneInvalid.localized()
+            phoneNumberTextField.isValid = false
+            phoneNumberTextField.setState(state: .error)
+        case .email:
+            errorLabel.text = EditProfileConstant.LocalizedKey.emailInvalid.localized()
+            emailTextField.isValid = false
+            emailTextField.setState(state: .error)
+        }
+    }
+    
+    func enablehideKeyboard() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tap)
     }
     
     @objc func textDidChange(sender: FamiliTextField) {
@@ -45,5 +110,9 @@ class EditProfileController: MasterViewController, EditProfileProtocol {
         } else if sender.isDescendant(of: emailTextField) {
             email = sender.text
         }
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
 }

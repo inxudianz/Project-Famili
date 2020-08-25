@@ -9,6 +9,7 @@
 import Foundation
 
 class EditProfileViewModel: EditProfileViewModelProtocol {
+    
     // MARK: - Property
     weak var view: EditProfileProtocol?
     weak var coordinator: ProfileCoordinatorProtocol?
@@ -29,5 +30,26 @@ class EditProfileViewModel: EditProfileViewModelProtocol {
     
     func navigateToProfile() {
         coordinator?.saveEditProfile()
+    }
+    
+    func handleField(text: String, with type: EditProfileConstant.TextFieldIdentifier) -> EditProfileConstant.TextFieldError {
+        if text.isEmpty {
+            return .empty
+        }
+        
+        switch type {
+        case .name:
+            return .success
+        case .phone:
+            if !text.isValid(with: EditProfileConstant.Regex.phoneRegex.rawValue) {
+                return .invalid
+            }
+        case .email:
+            if !text.isValid(with: EditProfileConstant.Regex.emailRegex.rawValue) {
+                return .invalid
+            }
+        }
+        
+        return .success
     }
 }
