@@ -51,9 +51,7 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="51" id="9cl-7j-MYM"/>
                     </constraints>
-                    <state key="normal" title="Login">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </state>
+                    <state key="normal" title="Login"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="style">
                             <integer key="value" value="0"/>
