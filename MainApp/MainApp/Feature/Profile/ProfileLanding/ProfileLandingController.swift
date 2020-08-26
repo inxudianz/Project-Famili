@@ -29,6 +29,14 @@ class ProfileLandingController: MasterViewController, ProfileLandingViewProtocol
         setupView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if let selectedIndexPath = self.profileTableView.indexPathForSelectedRow {
+            profileTableView.deselectRow(at: selectedIndexPath, animated: true)
+        }
+    }
+    
     // MARK: - Function
     func setupView() {
         phoneIcon.image = UIImage(named: ProfileLandingConstant.ImageName.call.rawValue)
