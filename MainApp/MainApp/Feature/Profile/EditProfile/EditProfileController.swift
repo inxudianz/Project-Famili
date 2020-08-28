@@ -36,7 +36,7 @@ class EditProfileController: MasterViewController, EditProfileProtocol {
         viewModel?.updateProfile(name: name, phone: phone, email: email)
     }
     
-    @objc func handleField() {
+    @objc func setupField() {
         let textFields = [nameTextField, phoneNumberTextField, emailTextField]
         
         for (index, textField) in textFields.enumerated() {
@@ -79,10 +79,10 @@ class EditProfileController: MasterViewController, EditProfileProtocol {
         
         for textfield in textFields {
             textfield?.addTarget(self, action: #selector(textDidChange(sender:)), for: .editingChanged)
-            textfield?.addTarget(self, action: #selector(handleField), for: .editingDidEnd)
+            textfield?.addTarget(self, action: #selector(setupField), for: .editingDidEnd)
         }
         
-        enablehideKeyboard()
+        enableHideKeyboard()
     }
     
     func updateTextError(for type: EditProfileConstant.TextFieldIdentifier) {
@@ -102,7 +102,7 @@ class EditProfileController: MasterViewController, EditProfileProtocol {
         }
     }
     
-    func enablehideKeyboard() {
+    func enableHideKeyboard() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tap)
     }
