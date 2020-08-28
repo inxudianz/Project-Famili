@@ -26,6 +26,7 @@ class EditProfileViewModel: EditProfileViewModelProtocol {
     func updateProfile(name: String?, phone: String?, email: String?) {
         let data = ProfileModel.EditProfile(name: name, phoneNumber: phone, email: email)
         network?.profileEditPost(data: data)
+        navigateToProfile()
     }
     
     func navigateToProfile() {

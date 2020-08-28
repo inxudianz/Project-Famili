@@ -34,7 +34,6 @@ class EditProfileController: MasterViewController, EditProfileProtocol {
     // MARK: - Handler
     @IBAction func saveButtonTapped(_ sender: Any) {
         viewModel?.updateProfile(name: name, phone: phone, email: email)
-        viewModel?.navigateToProfile()
     }
     
     @objc func handleField() {
