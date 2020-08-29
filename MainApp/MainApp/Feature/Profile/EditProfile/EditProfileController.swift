@@ -11,9 +11,21 @@ import Component
 
 class EditProfileController: MasterViewController, EditProfileProtocol {
     // MARK: - Outlet
-    @IBOutlet weak var nameTextField: FamiliTextField!
-    @IBOutlet weak var phoneNumberTextField: FamiliTextField!
-    @IBOutlet weak var emailTextField: FamiliTextField!
+    @IBOutlet weak var nameTextField: FamiliTextField! {
+        didSet {
+            nameTextField.font = FontManager.getFont(for: .regular, size: FontManager.FontSize.button.rawValue)
+        }
+    }
+    @IBOutlet weak var phoneNumberTextField: FamiliTextField! {
+        didSet {
+            phoneNumberTextField.font = FontManager.getFont(for: .regular, size: FontManager.FontSize.button.rawValue)
+        }
+    }
+    @IBOutlet weak var emailTextField: FamiliTextField! {
+        didSet {
+            emailTextField.font = FontManager.getFont(for: .regular, size: FontManager.FontSize.button.rawValue)
+        }
+    }
     
     // MARK: - Property
     var viewModel: EditProfileViewModelProtocol?
