@@ -14,6 +14,7 @@ protocol EditProfileViewModelProtocol: class {
     
     func updateProfile(name: String?, phone: String?, email: String?)
     func navigateToProfile()
+    func handleField(text: String, with type: EditProfileConstant.TextFieldIdentifier) -> EditProfileConstant.TextFieldError
 }
 
 protocol EditProfileProtocol: class {

@@ -147,8 +147,10 @@ class RegisterViewController: MasterViewController, RegisterViewProtocol {
                           tfConfirmPassword]
         for textfield in textFields {
             textfield?.addTarget(self, action: #selector(handleField), for: .editingDidEnd)
+            textfield?.addTarget(nil, action: Selector(("firstResponderAction:")), for: .editingDidEndOnExit)
         }
         tfConfirmPassword.addTarget(self, action: #selector(handlePassword), for: .editingChanged)
+        hideKeyboard()
     }
     
     func updateTextError(for type: AuthConstantRegister.TextFieldIdentifier) {
@@ -173,5 +175,14 @@ class RegisterViewController: MasterViewController, RegisterViewProtocol {
             tfConfirmPassword.isValid = false
             tfConfirmPassword.setState(state: .error)
         }
+    }
+    
+    func hideKeyboard() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
 }
