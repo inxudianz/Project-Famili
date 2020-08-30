@@ -12,7 +12,11 @@ import Component
 class InitialScreenViewController: MasterViewController, InitialScreenViewProtocol {
     // MARK: - Outlet
     @IBOutlet weak var initialScreenImageView: UIImageView!
-    @IBOutlet weak var initialScreenLabel: UILabel!
+    @IBOutlet weak var initialScreenLabel: UILabel! {
+        didSet {
+            initialScreenLabel.font = FontManager.getFont(for: .semibold, size: FontManager.FontSize.navigationLarge.rawValue)
+        }
+    }
     @IBOutlet weak var initialScreenArrowButton: UIButton!
     
     // MARK: - Property

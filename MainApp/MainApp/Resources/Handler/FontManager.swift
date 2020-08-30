@@ -22,7 +22,9 @@ struct FontManager {
     }
     
     enum FontSize: CGFloat {
+        case regularText = 13
         case button = 16
+        case header2 = 18
         case navigationLarge = 28
     }
     

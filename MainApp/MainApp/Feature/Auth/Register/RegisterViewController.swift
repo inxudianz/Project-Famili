@@ -11,18 +11,54 @@ import Component
 
 class RegisterViewController: MasterViewController, RegisterViewProtocol {
     // MARK: - Outlet
-    @IBOutlet weak var tfName: FamiliTextField!
-    @IBOutlet weak var tfPhone: FamiliTextField!
-    @IBOutlet weak var tfEmail: FamiliTextField!
-    @IBOutlet weak var tfPassword: FamiliTextField!
-    @IBOutlet weak var tfConfirmPassword: FamiliTextField!
+    @IBOutlet weak var tfName: FamiliTextField! {
+        didSet {
+            tfName.font = FontManager.getFont(for: .regular, size: FontManager.FontSize.button.rawValue)
+        }
+    }
+    @IBOutlet weak var tfPhone: FamiliTextField! {
+           didSet {
+               tfPhone.font = FontManager.getFont(for: .regular, size: FontManager.FontSize.button.rawValue)
+           }
+       }
+    @IBOutlet weak var tfEmail: FamiliTextField! {
+           didSet {
+               tfEmail.font = FontManager.getFont(for: .regular, size: FontManager.FontSize.button.rawValue)
+           }
+       }
+    @IBOutlet weak var tfPassword: FamiliTextField! {
+           didSet {
+               tfPassword.font = FontManager.getFont(for: .regular, size: FontManager.FontSize.button.rawValue)
+           }
+       }
+    @IBOutlet weak var tfConfirmPassword: FamiliTextField! {
+           didSet {
+               tfConfirmPassword.font = FontManager.getFont(for: .regular, size: FontManager.FontSize.button.rawValue)
+           }
+       }
     
     @IBOutlet weak var viewLabelError: UIView!
     
-    @IBOutlet weak var labelRegister: UILabel!
-    @IBOutlet weak var labelError: UILabel!
-    @IBOutlet weak var labelAlreadyHaveAccount: UILabel!
-    @IBOutlet weak var btnLoginHere: UIButton!
+    @IBOutlet weak var labelRegister: UILabel! {
+           didSet {
+               labelRegister.font = FontManager.getFont(for: .regular, size: FontManager.FontSize.regularText.rawValue)
+           }
+       }
+    @IBOutlet weak var labelError: UILabel! {
+        didSet {
+            labelError.font = FontManager.getFont(for: .regular, size: FontManager.FontSize.regularText.rawValue)
+        }
+    }
+    @IBOutlet weak var labelAlreadyHaveAccount: UILabel! {
+        didSet {
+            labelRegister.font = FontManager.getFont(for: .semibold, size: FontManager.FontSize.button.rawValue)
+        }
+    }
+    @IBOutlet weak var btnLoginHere: UIButton! {
+        didSet {
+            labelRegister.font = FontManager.getFont(for: .semibold, size: FontManager.FontSize.button.rawValue)
+        }
+    }
     
     @IBOutlet weak var buttonRegister: FamiliButton! {
         didSet {
