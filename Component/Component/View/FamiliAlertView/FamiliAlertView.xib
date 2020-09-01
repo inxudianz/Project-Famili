@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FamiliAlertView" customModule="Component" customModuleProvider="target">
+            <connections>
+                <outlet property="actionButton1" destination="i7y-S3-2hr" id="dPw-ap-yHX"/>
+                <outlet property="actionButton2" destination="zNr-eo-kiB" id="3ks-j3-Doa"/>
+                <outlet property="backgroundView" destination="4gf-kQ-O2b" id="xiz-ZP-9Az"/>
+                <outlet property="baseView" destination="iN0-l3-epB" id="1KR-x0-dKO"/>
+                <outlet property="containerView" destination="fPV-77-Npm" id="ugM-g7-wXc"/>
+                <outlet property="descriptionLabel" destination="CF8-hI-ioz" id="mtZ-pQ-wUY"/>
+                <outlet property="titleLabel" destination="f5s-fr-upe" id="Gkd-Yi-05M"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4gf-kQ-O2b" userLabel="Background">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fPV-77-Npm" userLabel="Container View">
+                    <rect key="frame" x="57" y="358" width="300" height="180"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f5s-fr-upe" userLabel="Title">
+                            <rect key="frame" x="80" y="30" width="140" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CF8-hI-ioz" userLabel="Description">
+                            <rect key="frame" x="20" y="68.5" width="260" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="cFy-ww-olx">
+                            <rect key="frame" x="20" y="130" width="260" height="30"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="749" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i7y-S3-2hr" userLabel="Action Button 1">
+                                    <rect key="frame" x="0.0" y="0.0" width="130" height="30"/>
+                                    <state key="normal" title="Button"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="style">
+                                            <integer key="value" value="0"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zNr-eo-kiB" userLabel="Action Button 2">
+                                    <rect key="frame" x="130" y="0.0" width="130" height="30"/>
+                                    <state key="normal" title="Button"/>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="CF8-hI-ioz" firstAttribute="top" secondItem="f5s-fr-upe" secondAttribute="bottom" constant="18" id="6lF-vO-icu"/>
+                        <constraint firstAttribute="bottom" secondItem="cFy-ww-olx" secondAttribute="bottom" constant="20" id="Ims-gd-hp3"/>
+                        <constraint firstItem="f5s-fr-upe" firstAttribute="top" secondItem="fPV-77-Npm" secondAttribute="top" constant="30" id="JTS-59-PFj"/>
+                        <constraint firstItem="f5s-fr-upe" firstAttribute="leading" secondItem="fPV-77-Npm" secondAttribute="leading" constant="80" id="KhR-fn-Ki4"/>
+                        <constraint firstItem="cFy-ww-olx" firstAttribute="leading" secondItem="fPV-77-Npm" secondAttribute="leading" constant="20" id="LKD-ej-lDi"/>
+                        <constraint firstAttribute="trailing" secondItem="f5s-fr-upe" secondAttribute="trailing" constant="80" id="Yer-Q6-HlA"/>
+                        <constraint firstAttribute="trailing" secondItem="cFy-ww-olx" secondAttribute="trailing" constant="20" id="Zf0-Rb-Z3V"/>
+                        <constraint firstAttribute="trailing" secondItem="CF8-hI-ioz" secondAttribute="trailing" constant="20" id="bpL-Jr-ueB"/>
+                        <constraint firstAttribute="height" constant="180" id="fJh-Xe-IGW"/>
+                        <constraint firstAttribute="width" constant="300" id="slL-Qc-L1q"/>
+                        <constraint firstItem="CF8-hI-ioz" firstAttribute="leading" secondItem="fPV-77-Npm" secondAttribute="leading" constant="20" id="vmT-1d-Vu5"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fPV-77-Npm" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Q1a-dU-xZc"/>
+                <constraint firstAttribute="bottom" secondItem="4gf-kQ-O2b" secondAttribute="bottom" id="Yea-Hj-ckn"/>
+                <constraint firstItem="4gf-kQ-O2b" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="k7f-kJ-OJq"/>
+                <constraint firstItem="fPV-77-Npm" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="kJa-hv-MKj"/>
+                <constraint firstAttribute="trailing" secondItem="4gf-kQ-O2b" secondAttribute="trailing" id="prp-5h-TG3"/>
+                <constraint firstAttribute="top" secondItem="4gf-kQ-O2b" secondAttribute="top" id="wBv-zD-aKs"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="128"/>
+        </view>
+    </objects>
+</document>
