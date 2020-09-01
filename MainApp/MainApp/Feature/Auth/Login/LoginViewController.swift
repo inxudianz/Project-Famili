@@ -32,6 +32,13 @@ class LoginViewController: MasterViewController, LoginViewProtocol {
             registerButton.titleLabel?.font = FontManager.getFont(for: .semibold, size: FontManager.FontSize.button.rawValue)
         }
     }
+    @IBOutlet weak var loginErrorLabel: UILabel! {
+        didSet {
+            loginErrorLabel.font = FontManager.getFont(for: .regular, size: FontManager.FontSize.regularText.rawValue)
+            loginErrorLabel.textColor = UIColor(hex: "#FF1100FF")
+            loginErrorLabel.isHidden = true
+        }
+    }
     @IBOutlet weak var googleLoginButton: LoginButton!
     @IBOutlet weak var facebookLoginButton: LoginButton!
     
@@ -40,6 +47,7 @@ class LoginViewController: MasterViewController, LoginViewProtocol {
     
     // MARK: - IBAction
     @IBAction func loginTapped(_ sender: Any) {
+        didErrorLogin(false)
         guard let email = emailTextField.text else { return }
         guard let password = passwordTextField.text else { return }
         viewModel?.login(email: email, password: password)
@@ -52,7 +60,7 @@ class LoginViewController: MasterViewController, LoginViewProtocol {
     }
     
     // MARK: - Handler
-    @objc func editingDidEnd(sender: FamiliTextField) {
+    @objc func editingDidChange(sender: FamiliTextField) {
         guard let email = emailTextField.text else { return }
         guard let password = passwordTextField.text else { return }
         guard let isTextsEmpty = viewModel?.isTextsEmpty(texts: [email, password]) else { return }
@@ -64,19 +72,47 @@ class LoginViewController: MasterViewController, LoginViewProtocol {
         }
     }
     
+    @objc func editingDidEnd(sender: FamiliTextField) {
+        if sender === emailTextField {
+            passwordTextField.becomeFirstResponder()
+        } else if sender === passwordTextField {
+            passwordTextField.resignFirstResponder()
+        }
+    }
+    
     @objc func registerTapped() {
         viewModel?.register()
     }
     
+    
     // MARK: - Function
     func setupView() {
-        passwordTextField.addTarget(self, action: #selector(editingDidEnd(sender:)), for: .editingChanged)
-        emailTextField.addTarget(self, action: #selector(editingDidEnd(sender:)), for: .editingChanged)
+        passwordTextField.addTarget(self, action: #selector(editingDidChange(sender:)), for: .editingChanged)
+        passwordTextField.addTarget(self, action: #selector(editingDidEnd(sender:)), for: .editingDidEndOnExit)
+        emailTextField.addTarget(self, action: #selector(editingDidChange(sender:)), for: .editingChanged)
+        emailTextField.addTarget(self, action: #selector(editingDidEnd(sender:)), for: .editingDidEndOnExit)
         registerButton.addTarget(self, action: #selector(registerTapped), for: .touchDown)
         
         googleLoginButton.loginButtonDelegate = self
         facebookLoginButton.loginButtonDelegate = self
     }
+    
+    func errorLogin() {
+        didErrorLogin(true)
+    }
+    
+    func didErrorLogin(_ isError: Bool) {
+        if isError {
+            loginErrorLabel.isHidden = false
+            emailTextField.setState(state: .error)
+            passwordTextField.setState(state: .error)
+        } else {
+            loginErrorLabel.isHidden = true
+            emailTextField.setState(state: .normal)
+            passwordTextField.setState(state: .normal)
+        }
+    }
+    
 }
 
 extension LoginViewController: LoginButtonDelegate {
