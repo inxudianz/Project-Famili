@@ -11,6 +11,11 @@ import Component
 
 class LoginViewController: MasterViewController, LoginViewProtocol {
     // MARK: - Outlet
+    @IBOutlet weak var loginLabel: UILabel! {
+        didSet {
+            loginLabel.font = FontManager.getFont(for: .semibold, size: FontManager.FontSize.navigationLarge.rawValue)
+        }
+    }
     @IBOutlet weak var passwordTextField: FamiliTextField! {
         didSet {
             passwordTextField.font = FontManager.getFont(for: .regular, size: FontManager.FontSize.button.rawValue)
@@ -32,6 +37,11 @@ class LoginViewController: MasterViewController, LoginViewProtocol {
             registerButton.titleLabel?.font = FontManager.getFont(for: .semibold, size: FontManager.FontSize.button.rawValue)
         }
     }
+    @IBOutlet weak var orLabel: UILabel! {
+        didSet {
+            orLabel.font = FontManager.getFont(for: .regular, size: FontManager.FontSize.button.rawValue)
+        }
+    }
     @IBOutlet weak var loginErrorLabel: UILabel! {
         didSet {
             loginErrorLabel.font = FontManager.getFont(for: .regular, size: FontManager.FontSize.regularText.rawValue)
@@ -41,6 +51,8 @@ class LoginViewController: MasterViewController, LoginViewProtocol {
     }
     @IBOutlet weak var googleLoginButton: LoginButton!
     @IBOutlet weak var facebookLoginButton: LoginButton!
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var contentHeight: NSLayoutConstraint!
     
     // MARK: - Property
     var viewModel: LoginViewModelProtocol?
@@ -84,6 +96,23 @@ class LoginViewController: MasterViewController, LoginViewProtocol {
         viewModel?.register()
     }
     
+    @objc func handleKeyboardChange(_ notification: Notification) {
+        if notification.name == UIResponder.keyboardDidShowNotification {
+            contentHeight.constant += 40
+            UIView.animate(withDuration: 0.3) {
+                self.scrollView.contentOffset = .init(x: self.scrollView.contentOffset.x, y: self.scrollView.contentOffset.y + 40)
+            }
+        } else {
+            contentHeight.constant = 0
+            UIView.animate(withDuration: 0.3) {
+                self.scrollView.contentOffset = .init(x: self.scrollView.contentOffset.x, y: self.scrollView.contentOffset.y - 40)
+            }
+        }
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
     
     // MARK: - Function
     func setupView() {
@@ -91,10 +120,15 @@ class LoginViewController: MasterViewController, LoginViewProtocol {
         passwordTextField.addTarget(self, action: #selector(editingDidEnd(sender:)), for: .editingDidEndOnExit)
         emailTextField.addTarget(self, action: #selector(editingDidChange(sender:)), for: .editingChanged)
         emailTextField.addTarget(self, action: #selector(editingDidEnd(sender:)), for: .editingDidEndOnExit)
-        registerButton.addTarget(self, action: #selector(registerTapped), for: .touchDown)
+        registerButton.addTarget(self, action: #selector(registerTapped), for: .touchUpInside)
         
+        NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardChange(_:)), name: UIResponder.keyboardDidShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardChange(_:)), name: UIResponder.keyboardDidHideNotification, object: nil)
+
         googleLoginButton.loginButtonDelegate = self
         facebookLoginButton.loginButtonDelegate = self
+        
+        addHideKeyboardRecognizer()
     }
     
     func errorLogin() {
@@ -113,6 +147,10 @@ class LoginViewController: MasterViewController, LoginViewProtocol {
         }
     }
     
+    func addHideKeyboardRecognizer() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tap)
+    }
 }
 
 extension LoginViewController: LoginButtonDelegate {
