@@ -25,13 +25,13 @@ public class FamiliLoadingView: UIView {
     private var loadingIndicator: UIActivityIndicatorView?
     
     //MARK: - Initialization
-    /// Default init value with 0 and empty string
+    /// Default init 
     public override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
     }
     
-    /// Default init value with 0 and empty string
+    /// Default init
     public required init?(coder: NSCoder) {
         super.init(coder: coder)
         setupView()
