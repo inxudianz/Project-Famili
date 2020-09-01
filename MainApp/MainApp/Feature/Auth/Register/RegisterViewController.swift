@@ -136,6 +136,10 @@ class RegisterViewController: MasterViewController, RegisterViewProtocol {
         }
     }
     
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
     // MARK: - Function
     func setInitialView() {
         viewLabelError.isHidden = true
@@ -150,7 +154,7 @@ class RegisterViewController: MasterViewController, RegisterViewProtocol {
             textfield?.addTarget(nil, action: Selector(("firstResponderAction:")), for: .editingDidEndOnExit)
         }
         tfConfirmPassword.addTarget(self, action: #selector(handlePassword), for: .editingChanged)
-        hideKeyboard()
+        addHideKeyboardRecognizer()
     }
     
     func updateTextError(for type: AuthConstantRegister.TextFieldIdentifier) {
@@ -177,12 +181,8 @@ class RegisterViewController: MasterViewController, RegisterViewProtocol {
         }
     }
     
-    func hideKeyboard() {
+    func addHideKeyboardRecognizer() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tap)
-    }
-    
-    @objc func dismissKeyboard() {
-        view.endEditing(true)
     }
 }
