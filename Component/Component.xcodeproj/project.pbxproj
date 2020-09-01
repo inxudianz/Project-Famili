@@ -28,6 +28,7 @@
 		92D79F032483E85F004C4701 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D79F012483E85F004C4701 /* MasterViewController.swift */; };
 		92D79F042483E85F004C4701 /* MasterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92D79F022483E85F004C4701 /* MasterViewController.xib */; };
 		F50316DE24D08AF100F78288 /* FamiliButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50316DD24D08AF100F78288 /* FamiliButton.swift */; };
+		F527924724FEA0C9005F0B8F /* AlertViewConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F527924624FEA0C9005F0B8F /* AlertViewConstant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		92D79F022483E85F004C4701 /* MasterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MasterViewController.xib; sourceTree = "<group>"; };
 		92D79F162483E98D004C4701 /* Coordinator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Coordinator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F50316DD24D08AF100F78288 /* FamiliButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamiliButton.swift; sourceTree = "<group>"; };
+		F527924624FEA0C9005F0B8F /* AlertViewConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewConstant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 			children = (
 				9248C7DC24FE2162001E41A3 /* FamiliAlertView.swift */,
 				9248C7DE24FE40B8001E41A3 /* FamiliAlertView.xib */,
+				F527924624FEA0C9005F0B8F /* AlertViewConstant.swift */,
 			);
 			path = FamiliAlertView;
 			sourceTree = "<group>";
@@ -365,6 +368,7 @@
 				920C25C924E39D9B00047D14 /* CircularProgressConstant.swift in Sources */,
 				921D20C124E63E58007C3261 /* Component+UIView.swift in Sources */,
 				92D79F032483E85F004C4701 /* MasterViewController.swift in Sources */,
+				F527924724FEA0C9005F0B8F /* AlertViewConstant.swift in Sources */,
 				92C77C0A249383CB004C1D86 /* CircularProgressView.swift in Sources */,
 				92C77C0524937EA1004C1D86 /* FamiliDualButton.swift in Sources */,
 				9248C78E24FDE719001E41A3 /* FamiliLoadingView.swift in Sources */,
