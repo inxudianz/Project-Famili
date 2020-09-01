@@ -47,6 +47,7 @@ class LoginViewController: MasterViewController, LoginViewProtocol {
             loginErrorLabel.font = FontManager.getFont(for: .regular, size: FontManager.FontSize.regularText.rawValue)
             loginErrorLabel.textColor = UIColor(hex: "#FF1100FF")
             loginErrorLabel.isHidden = true
+            loginErrorLabel.text = "Your e-mail or password is incorrect"
         }
     }
     @IBOutlet weak var googleLoginButton: LoginButton!
@@ -62,6 +63,8 @@ class LoginViewController: MasterViewController, LoginViewProtocol {
         didErrorLogin(false)
         guard let email = emailTextField.text else { return }
         guard let password = passwordTextField.text else { return }
+        emailTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
         viewModel?.login(email: email, password: password)
     }
     
