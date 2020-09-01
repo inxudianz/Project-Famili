@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E9C426624FE76ED00F35604 /* FamiliDualButtonConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9C426524FE76ED00F35604 /* FamiliDualButtonConstant.swift */; };
 		920C25C724E392B100047D14 /* FamiliButtonConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C25C624E392B100047D14 /* FamiliButtonConstant.swift */; };
 		920C25C924E39D9B00047D14 /* CircularProgressConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C25C824E39D9B00047D14 /* CircularProgressConstant.swift */; };
 		921D202F24E63646007C3261 /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921D202E24E63646007C3261 /* LoginButton.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E9C426524FE76ED00F35604 /* FamiliDualButtonConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamiliDualButtonConstant.swift; sourceTree = "<group>"; };
 		920C25C624E392B100047D14 /* FamiliButtonConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamiliButtonConstant.swift; sourceTree = "<group>"; };
 		920C25C824E39D9B00047D14 /* CircularProgressConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressConstant.swift; sourceTree = "<group>"; };
 		921D202E24E63646007C3261 /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				92C77C0424937EA1004C1D86 /* FamiliDualButton.swift */,
+				1E9C426524FE76ED00F35604 /* FamiliDualButtonConstant.swift */,
 			);
 			path = DualButton;
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 				920C25C724E392B100047D14 /* FamiliButtonConstant.swift in Sources */,
 				9227A16C24CDC521004F7952 /* FamiliTextField.swift in Sources */,
 				9227A16E24CDC7E5004F7952 /* Component+UIColor.swift in Sources */,
+				1E9C426624FE76ED00F35604 /* FamiliDualButtonConstant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
