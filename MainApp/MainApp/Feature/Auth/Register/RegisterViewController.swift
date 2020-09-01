@@ -41,7 +41,7 @@ class RegisterViewController: MasterViewController, RegisterViewProtocol {
     
     @IBOutlet weak var labelRegister: UILabel! {
            didSet {
-               labelRegister.font = FontManager.getFont(for: .regular, size: FontManager.FontSize.regularText.rawValue)
+               labelRegister.font = FontManager.getFont(for: .semibold, size: FontManager.FontSize.navigationLarge.rawValue)
            }
        }
     @IBOutlet weak var labelError: UILabel! {
@@ -56,7 +56,7 @@ class RegisterViewController: MasterViewController, RegisterViewProtocol {
     }
     @IBOutlet weak var btnLoginHere: UIButton! {
         didSet {
-            labelRegister.font = FontManager.getFont(for: .semibold, size: FontManager.FontSize.button.rawValue)
+            btnLoginHere.titleLabel?.font = FontManager.getFont(for: .semibold, size: FontManager.FontSize.button.rawValue)
         }
     }
     
