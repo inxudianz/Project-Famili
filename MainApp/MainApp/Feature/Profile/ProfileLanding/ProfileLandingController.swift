@@ -12,10 +12,18 @@ import Component
 class ProfileLandingController: MasterViewController, ProfileLandingViewProtocol {
     // MARK: - Outlet
     @IBOutlet var phoneIcon: UIImageView!
-    @IBOutlet var phoneNumberLabel: UILabel!
+    @IBOutlet var phoneNumberLabel: UILabel! {
+        didSet {
+            phoneNumberLabel.font = FontManager.getFont(for: .regular, size: FontManager.FontSize.regularText.rawValue)
+        }
+    }
     
     @IBOutlet var emailIcon: UIImageView!
-    @IBOutlet var emailLabel: UILabel!
+    @IBOutlet var emailLabel: UILabel! {
+        didSet {
+            emailLabel.font = FontManager.getFont(for: .regular, size: FontManager.FontSize.regularText.rawValue)
+        }
+    }
     
     @IBOutlet var profileTableView: UITableView!
     
@@ -61,11 +69,16 @@ class ProfileLandingController: MasterViewController, ProfileLandingViewProtocol
 extension ProfileLandingController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        tableView.headerView(forSection: section)?.textLabel?.font = FontManager.getFont(for: .bold, size: FontManager.FontSize.header2.rawValue)
         view.tintColor = UIColor.white
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return tableView.sectionHeaderHeight * 2
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.textLabel?.font = FontManager.getFont(for: .semibold, size: FontManager.FontSize.regularText.rawValue)
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
