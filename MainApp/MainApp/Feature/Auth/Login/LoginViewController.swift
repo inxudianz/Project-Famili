@@ -24,10 +24,14 @@ class LoginViewController: MasterViewController, LoginViewProtocol {
     @IBOutlet weak var loginButton: FamiliButton! {
         didSet {
             loginButton.isEnabled = false
-            loginButton.titleLabel?.font = FontManager.getFont(for: .medium, size: FontManager.FontSize.button.rawValue)
+            loginButton.titleLabel?.font = FontManager.getFont(for: .semibold, size: FontManager.FontSize.button.rawValue)
         }
     }
-    @IBOutlet weak var registerButton: UIButton!
+    @IBOutlet weak var registerButton: UIButton! {
+        didSet {
+            registerButton.titleLabel?.font = FontManager.getFont(for: .semibold, size: FontManager.FontSize.button.rawValue)
+        }
+    }
     @IBOutlet weak var googleLoginButton: LoginButton!
     @IBOutlet weak var facebookLoginButton: LoginButton!
     

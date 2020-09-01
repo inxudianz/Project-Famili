@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -10,8 +10,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditProfileController" customModule="MainApp" customModuleProvider="target">
             <connections>
                 <outlet property="emailTextField" destination="c1T-G1-krR" id="GUs-X2-lwk"/>
+                <outlet property="errorLabel" destination="0GL-ca-kNS" id="Kv8-Ze-XiZ"/>
                 <outlet property="nameTextField" destination="IYy-4b-ybK" id="Giu-w8-lFH"/>
                 <outlet property="phoneNumberTextField" destination="ZBD-MK-RIM" id="M9a-Xa-pt3"/>
+                <outlet property="saveButton" destination="h7R-DM-cYt" id="Q9O-qh-DtM"/>
                 <outlet property="view" destination="iN0-l3-epB" id="pC0-rM-AHa"/>
             </connections>
         </placeholder>
@@ -54,13 +56,25 @@
                         <action selector="saveButtonTapped:" destination="-1" eventType="touchUpInside" id="tQY-U4-fwt"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0GL-ca-kNS">
+                    <rect key="frame" x="33" y="251" width="348" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="s9Z-RW-hwk"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" red="1" green="0.066666666669999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="ZBD-MK-RIM" firstAttribute="top" secondItem="IYy-4b-ybK" secondAttribute="bottom" constant="15" id="7eI-9P-OWK"/>
                 <constraint firstItem="IYy-4b-ybK" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="31" id="8e1-4H-wRX"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="0GL-ca-kNS" secondAttribute="trailing" constant="33" id="9iI-MH-Uu8"/>
                 <constraint firstItem="IYy-4b-ybK" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="15" id="B2X-HW-vud"/>
+                <constraint firstItem="0GL-ca-kNS" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="33" id="C3Z-p9-1WZ"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="c1T-G1-krR" secondAttribute="trailing" constant="31" id="GDW-cH-Fua"/>
+                <constraint firstItem="0GL-ca-kNS" firstAttribute="top" secondItem="c1T-G1-krR" secondAttribute="bottom" constant="12" id="Kex-FO-Foy"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="h7R-DM-cYt" secondAttribute="trailing" constant="34" id="MHB-Zn-edf"/>
                 <constraint firstItem="c1T-G1-krR" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="31" id="Mx9-JR-3zr"/>
                 <constraint firstItem="ZBD-MK-RIM" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="31" id="P8L-LF-Y1c"/>
