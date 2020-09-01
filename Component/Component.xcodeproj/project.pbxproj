@@ -15,7 +15,7 @@
 		9227A16C24CDC521004F7952 /* FamiliTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9227A16B24CDC521004F7952 /* FamiliTextField.swift */; };
 		9227A16E24CDC7E5004F7952 /* Component+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9227A16D24CDC7E5004F7952 /* Component+UIColor.swift */; };
 		9227A17024CDC9B1004F7952 /* FamiliTextFieldConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9227A16F24CDC9B1004F7952 /* FamiliTextFieldConstant.swift */; };
-		92C77C0524937EA1004C1D86 /* DualButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C77C0424937EA1004C1D86 /* DualButton.swift */; };
+		92C77C0524937EA1004C1D86 /* FamiliDualButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C77C0424937EA1004C1D86 /* FamiliDualButton.swift */; };
 		92C77C0A249383CB004C1D86 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C77C09249383CB004C1D86 /* CircularProgressView.swift */; };
 		92D79EBF2483E553004C4701 /* Component.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92D79EB52483E553004C4701 /* Component.framework */; };
 		92D79EC42483E553004C4701 /* ComponentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D79EC32483E553004C4701 /* ComponentTests.swift */; };
@@ -44,7 +44,7 @@
 		9227A16B24CDC521004F7952 /* FamiliTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamiliTextField.swift; sourceTree = "<group>"; };
 		9227A16D24CDC7E5004F7952 /* Component+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Component+UIColor.swift"; sourceTree = "<group>"; };
 		9227A16F24CDC9B1004F7952 /* FamiliTextFieldConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamiliTextFieldConstant.swift; sourceTree = "<group>"; };
-		92C77C0424937EA1004C1D86 /* DualButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DualButton.swift; sourceTree = "<group>"; };
+		92C77C0424937EA1004C1D86 /* FamiliDualButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamiliDualButton.swift; sourceTree = "<group>"; };
 		92C77C09249383CB004C1D86 /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		92D79EB52483E553004C4701 /* Component.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Component.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		92D79EB82483E553004C4701 /* Component.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Component.h; sourceTree = "<group>"; };
@@ -115,7 +115,7 @@
 		92C77C0324937E82004C1D86 /* DualButton */ = {
 			isa = PBXGroup;
 			children = (
-				92C77C0424937EA1004C1D86 /* DualButton.swift */,
+				92C77C0424937EA1004C1D86 /* FamiliDualButton.swift */,
 			);
 			path = DualButton;
 			sourceTree = "<group>";
@@ -324,7 +324,7 @@
 				921D20C124E63E58007C3261 /* Component+UIView.swift in Sources */,
 				92D79F032483E85F004C4701 /* MasterViewController.swift in Sources */,
 				92C77C0A249383CB004C1D86 /* CircularProgressView.swift in Sources */,
-				92C77C0524937EA1004C1D86 /* DualButton.swift in Sources */,
+				92C77C0524937EA1004C1D86 /* FamiliDualButton.swift in Sources */,
 				921D202F24E63646007C3261 /* LoginButton.swift in Sources */,
 				9227A17024CDC9B1004F7952 /* FamiliTextFieldConstant.swift in Sources */,
 				920C25C724E392B100047D14 /* FamiliButtonConstant.swift in Sources */,
