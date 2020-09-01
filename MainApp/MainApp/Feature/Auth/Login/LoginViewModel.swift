@@ -19,6 +19,7 @@ class LoginViewModel: LoginViewModelProtocol {
     }
     
     func login(email: String, password: String) {
+        view?.showLoading()
         let data = AuthModel.Login(email: email, password: password)
         network?.login(data: data)
     }

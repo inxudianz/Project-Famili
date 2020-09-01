@@ -15,6 +15,8 @@
 		9227A16C24CDC521004F7952 /* FamiliTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9227A16B24CDC521004F7952 /* FamiliTextField.swift */; };
 		9227A16E24CDC7E5004F7952 /* Component+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9227A16D24CDC7E5004F7952 /* Component+UIColor.swift */; };
 		9227A17024CDC9B1004F7952 /* FamiliTextFieldConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9227A16F24CDC9B1004F7952 /* FamiliTextFieldConstant.swift */; };
+		9248C78E24FDE719001E41A3 /* FamiliLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9248C78D24FDE719001E41A3 /* FamiliLoadingView.swift */; };
+		9248C7B524FDED02001E41A3 /* FamiliLoadingViewConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9248C7B424FDED02001E41A3 /* FamiliLoadingViewConstant.swift */; };
 		92C77C0524937EA1004C1D86 /* DualButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C77C0424937EA1004C1D86 /* DualButton.swift */; };
 		92C77C0A249383CB004C1D86 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C77C09249383CB004C1D86 /* CircularProgressView.swift */; };
 		92D79EBF2483E553004C4701 /* Component.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92D79EB52483E553004C4701 /* Component.framework */; };
@@ -44,6 +46,8 @@
 		9227A16B24CDC521004F7952 /* FamiliTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamiliTextField.swift; sourceTree = "<group>"; };
 		9227A16D24CDC7E5004F7952 /* Component+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Component+UIColor.swift"; sourceTree = "<group>"; };
 		9227A16F24CDC9B1004F7952 /* FamiliTextFieldConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamiliTextFieldConstant.swift; sourceTree = "<group>"; };
+		9248C78D24FDE719001E41A3 /* FamiliLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamiliLoadingView.swift; sourceTree = "<group>"; };
+		9248C7B424FDED02001E41A3 /* FamiliLoadingViewConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamiliLoadingViewConstant.swift; sourceTree = "<group>"; };
 		92C77C0424937EA1004C1D86 /* DualButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DualButton.swift; sourceTree = "<group>"; };
 		92C77C09249383CB004C1D86 /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		92D79EB52483E553004C4701 /* Component.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Component.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,6 +96,23 @@
 				9227A16F24CDC9B1004F7952 /* FamiliTextFieldConstant.swift */,
 			);
 			path = Textfield;
+			sourceTree = "<group>";
+		};
+		9248C78B24FDE6F2001E41A3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9248C78C24FDE701001E41A3 /* LoadingView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9248C78C24FDE701001E41A3 /* LoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				9248C78D24FDE719001E41A3 /* FamiliLoadingView.swift */,
+				9248C7B424FDED02001E41A3 /* FamiliLoadingViewConstant.swift */,
+			);
+			path = LoadingView;
 			sourceTree = "<group>";
 		};
 		92B90E4B2486BA4400C59DDF /* Master */ = {
@@ -151,6 +172,7 @@
 		92D79EB72483E553004C4701 /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				9248C78B24FDE6F2001E41A3 /* View */,
 				9227A16A24CDC501004F7952 /* Textfield */,
 				92C77C08249383B7004C1D86 /* Graph */,
 				92C77C0224937E7B004C1D86 /* Button */,
@@ -320,10 +342,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F50316DE24D08AF100F78288 /* FamiliButton.swift in Sources */,
+				9248C7B524FDED02001E41A3 /* FamiliLoadingViewConstant.swift in Sources */,
 				920C25C924E39D9B00047D14 /* CircularProgressConstant.swift in Sources */,
 				921D20C124E63E58007C3261 /* Component+UIView.swift in Sources */,
 				92D79F032483E85F004C4701 /* MasterViewController.swift in Sources */,
 				92C77C0A249383CB004C1D86 /* CircularProgressView.swift in Sources */,
+				9248C78E24FDE719001E41A3 /* FamiliLoadingView.swift in Sources */,
 				92C77C0524937EA1004C1D86 /* DualButton.swift in Sources */,
 				921D202F24E63646007C3261 /* LoginButton.swift in Sources */,
 				9227A17024CDC9B1004F7952 /* FamiliTextFieldConstant.swift in Sources */,

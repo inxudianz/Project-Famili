@@ -33,6 +33,7 @@ class LoginViewController: MasterViewController, LoginViewProtocol {
     
     // MARK: - Property
     var viewModel: LoginViewModelProtocol?
+    lazy var loadingView = FamiliLoadingView(frame: self.view.frame)
     
     // MARK: - IBAction
     @IBAction func loginTapped(_ sender: Any) {
@@ -72,6 +73,14 @@ class LoginViewController: MasterViewController, LoginViewProtocol {
         
         googleLoginButton.loginButtonDelegate = self
         facebookLoginButton.loginButtonDelegate = self
+    }
+    
+    func showLoading() {
+        loadingView.showLoading(to: self.view)
+    }
+    
+    func stopLoading() {
+        loadingView.stopLoading(to: self.view)
     }
 }
 
