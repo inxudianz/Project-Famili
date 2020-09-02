@@ -33,6 +33,11 @@ class LoginViewMock: LoginViewProtocol {
     func setNavigationTitle(title: String) {
         isSetNavigationTitle = true
     }
+    
+    var loadingViewStoppedLoading = false
+    func stopLoading() {
+        loadingViewStoppedLoading = true
+    }
 }
 
 class LoginCoordinatorMock: AuthCoordinatorProtocol {

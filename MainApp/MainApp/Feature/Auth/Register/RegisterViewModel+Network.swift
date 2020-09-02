@@ -10,11 +10,13 @@ import Foundation
 
 extension RegisterViewModel: AuthRegisterDelegate {
     func didSuccessRegister() {
+        view?.stopLoading()
         coordinator?.navigateToLogin()
         Log.progress(message: "Success")
     }
     
     func didFailedRegister(error: Error) {
+        view?.stopLoading()
         Log.info(message: error)
     }
 }

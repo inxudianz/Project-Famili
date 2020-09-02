@@ -20,4 +20,6 @@ protocol RegisterViewModelProtocol: class {
 
 protocol RegisterViewProtocol: class {
     var viewModel: RegisterViewModelProtocol? { get set }
+    func showLoading()
+    func stopLoading()
 }

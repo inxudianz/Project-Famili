@@ -21,4 +21,7 @@ protocol LoginViewModelProtocol: class {
 
 protocol LoginViewProtocol: class {
     var viewModel: LoginViewModelProtocol? { get set }
+    
+    func showLoading()
+    func stopLoading()
 }

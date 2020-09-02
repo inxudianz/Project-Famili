@@ -68,6 +68,7 @@ class RegisterViewController: MasterViewController, RegisterViewProtocol {
     
     // MARK: - Property
     var viewModel: RegisterViewModelProtocol?
+    lazy var loadingView = FamiliLoadingView(frame: self.view.frame)
     
     // MARK: - Initialization
     override func viewDidLoad() {
@@ -184,5 +185,13 @@ class RegisterViewController: MasterViewController, RegisterViewProtocol {
     
     @objc func dismissKeyboard() {
         view.endEditing(true)
+    }
+    
+    func showLoading() {
+        loadingView.showLoading(to: self.view)
+    }
+    
+    func stopLoading() {
+        loadingView.stopLoading(to: self.view)
     }
 }

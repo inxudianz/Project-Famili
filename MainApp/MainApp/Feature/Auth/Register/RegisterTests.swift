@@ -35,7 +35,10 @@ class RegisterViewMock: RegisterViewProtocol {
         isSetNavigationTitle = true
     }
     
-    
+    var loadingViewStoppedLoading = false
+    func stopLoading() {
+        loadingViewStoppedLoading = true
+    }
 }
 
 class RegisterCoordinatorMock: AuthCoordinatorProtocol {

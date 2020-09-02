@@ -23,6 +23,7 @@ class RegisterViewModel: RegisterViewModelProtocol {
     }
     
     func register(data: AuthModel.Register) {
+        view?.showLoading()
         network?.register(data: data)
     }
     
