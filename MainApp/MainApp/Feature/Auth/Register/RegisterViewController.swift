@@ -137,10 +137,6 @@ class RegisterViewController: MasterViewController, RegisterViewProtocol {
         }
     }
     
-    @objc func dismissKeyboard() {
-        view.endEditing(true)
-    }
-    
     // MARK: - Function
     func setInitialView() {
         viewLabelError.isHidden = true
