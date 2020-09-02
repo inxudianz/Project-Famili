@@ -38,6 +38,11 @@ class LoginViewMock: LoginViewProtocol {
     func errorLogin() {
         isErrorLogin = true
     }
+  
+    var loadingViewStoppedLoading = false
+    func stopLoading() {
+        loadingViewStoppedLoading = true
+    }
 }
 
 class LoginCoordinatorMock: AuthCoordinatorProtocol {

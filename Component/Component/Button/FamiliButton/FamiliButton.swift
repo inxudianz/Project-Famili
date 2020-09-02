@@ -47,7 +47,7 @@ import UIKit
     
     //MARK: - Initialization
     /// Default init value with 0 and empty string
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         self.style = ButtonStyle.primary.rawValue
         super.init(frame: frame)
         setupView()

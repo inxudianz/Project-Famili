@@ -57,6 +57,7 @@ class LoginViewController: MasterViewController, LoginViewProtocol {
     
     // MARK: - Property
     var viewModel: LoginViewModelProtocol?
+    lazy var loadingView = FamiliLoadingView(frame: self.view.frame)
     
     // MARK: - IBAction
     @IBAction func loginTapped(_ sender: Any) {
@@ -153,6 +154,14 @@ class LoginViewController: MasterViewController, LoginViewProtocol {
     func addHideKeyboardRecognizer() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tap)
+    }
+    
+    func showLoading() {
+        loadingView.showLoading(to: self.view)
+    }
+    
+    func stopLoading() {
+        loadingView.stopLoading(to: self.view)
     }
 }
 

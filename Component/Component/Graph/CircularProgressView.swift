@@ -21,7 +21,7 @@ How to use:
  
     //MARK: - Property
     /// Style available for circular progress bar
-    enum CircularProgressStyle: Int {
+    public enum CircularProgressStyle: Int {
         case normal
         case dark
         case withDetail
@@ -70,7 +70,7 @@ How to use:
     
     //MARK: - Initialization
     /// Default init value with 0 and empty string
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         self.trailingColor = .black
         self.progressColor = .red
         self.style = 1
@@ -102,7 +102,7 @@ How to use:
         - initialValue: A initial value between 0 - 1 for the circle
         - frame: A frame required for creating the circle view
      */
-    init(color: (trailing: UIColor, progress: UIColor) = (.gray, .green),
+    public init(color: (trailing: UIColor, progress: UIColor) = (.gray, .green),
          style: CircularProgressStyle = .normal,
          textDescription: String = "",
          initialValue: CGFloat = 0,
