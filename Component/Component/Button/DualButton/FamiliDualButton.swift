@@ -13,7 +13,7 @@ import UIKit
 Create two buttons with predefined style.
 How to use:
  * Using XIB
-    * Drag and drop a UIView  and change the class to FamiliDualButton
+    * Drag and drop a UIView  and change the class to FamiliDualButton, put it inside a container view
  * Programatically
     * Init using the custom initializer to set all the required value
 */
@@ -28,7 +28,6 @@ public protocol FamiliDualButtonDelegate: class {
     
     typealias ButtonProperty = FamiliDualButtonConstant.CommonProperties
     typealias ButtonBackgroundColor = FamiliDualButtonConstant.BackgroundColor
-    typealias DividerProperty = FamiliDualButtonConstant.DividerProperties
     
     public enum ButtonSelection {
         case leftButton
@@ -121,7 +120,7 @@ public protocol FamiliDualButtonDelegate: class {
     
     /// Setup the two buttons' divider
     private func setupDivider() {
-        dividerView.frame = CGRect(x: self.frame.width - DividerProperty.dividerWidth / 2, y: ButtonProperty.initialPosition, width: DividerProperty.dividerWidth, height: self.frame.height)
+        dividerView.frame = CGRect(x: self.frame.width - ButtonProperty.dividerWidth / 2, y: ButtonProperty.initialPosition, width: ButtonProperty.dividerWidth, height: self.frame.height)
         dividerView.backgroundColor = .white
         addSubview(dividerView)
     }
