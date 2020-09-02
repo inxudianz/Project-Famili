@@ -26,7 +26,7 @@ public protocol FamiliDualButtonDelegate: class {
 @IBDesignable public class FamiliDualButton: UIView {
     // MARK: - Designable
     
-    typealias ButtonProperty = FamiliDualButtonConstant.CommonProperties
+    typealias CommonProperty = FamiliDualButtonConstant.CommonProperties
     typealias ButtonBackgroundColor = FamiliDualButtonConstant.BackgroundColor
     
     public enum ButtonSelection {
@@ -113,24 +113,24 @@ public protocol FamiliDualButtonDelegate: class {
     
     /// Setup the background view
     private func setupBackgroundView() {
-        self.frame = CGRect(x: ButtonProperty.initialPosition, y: ButtonProperty.initialPosition, width: self.frame.width, height: self.frame.height)
+        self.frame = CGRect(x: CommonProperty.initialPosition, y: CommonProperty.initialPosition, width: self.frame.width, height: self.frame.height)
         self.backgroundColor = UIColor(hex: ButtonBackgroundColor.normal.rawValue)
-        self.layer.cornerRadius = ButtonProperty.cornerRadius
+        self.layer.cornerRadius = CommonProperty.cornerRadius
     }
     
     /// Setup the two buttons' divider
     private func setupDivider() {
-        dividerView.frame = CGRect(x: self.frame.width - ButtonProperty.dividerWidth / 2, y: ButtonProperty.initialPosition, width: ButtonProperty.dividerWidth, height: self.frame.height)
+        dividerView.frame = CGRect(x: self.frame.width - CommonProperty.dividerWidth / 2, y: CommonProperty.initialPosition, width: CommonProperty.dividerWidth, height: self.frame.height)
         dividerView.backgroundColor = .white
         addSubview(dividerView)
     }
     
     /// Setup left button property
     private func setupLeftButton() {
-        leftButton.frame = CGRect(x: ButtonProperty.initialPosition, y: ButtonProperty.initialPosition, width: self.frame.width / 2, height: self.frame.height)
+        leftButton.frame = CGRect(x: CommonProperty.initialPosition, y: CommonProperty.initialPosition, width: self.frame.width / 2, height: self.frame.height)
         leftButton.tintColor = .white
         leftButton.setImage(.strokedCheckmark, for: .normal)
-        leftButton.layer.cornerRadius = ButtonProperty.cornerRadius
+        leftButton.layer.cornerRadius = CommonProperty.cornerRadius
         leftButton.isUserInteractionEnabled = true
         leftButton.addTarget(self, action: #selector(didTapLeftButton(_:)), for: .touchUpInside)
         addSubview(leftButton)
@@ -139,10 +139,10 @@ public protocol FamiliDualButtonDelegate: class {
     
     /// Setup right button property
     private func setupRightButton() {
-        rightButton.frame = CGRect(x: self.frame.width / 2, y: ButtonProperty.initialPosition, width: self.frame.width / 2, height: self.frame.height)
+        rightButton.frame = CGRect(x: self.frame.width / 2, y: CommonProperty.initialPosition, width: self.frame.width / 2, height: self.frame.height)
         rightButton.tintColor = .white
         rightButton.setImage(.strokedCheckmark, for: .normal)
-        rightButton.layer.cornerRadius = ButtonProperty.cornerRadius
+        rightButton.layer.cornerRadius = CommonProperty.cornerRadius
         rightButton.isUserInteractionEnabled = true
         rightButton.addTarget(self, action: #selector(didTapRightButton(_:)), for: .touchUpInside)
         addSubview(rightButton)
