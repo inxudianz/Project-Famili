@@ -33,6 +33,11 @@ class LoginViewMock: LoginViewProtocol {
     func setNavigationTitle(title: String) {
         isSetNavigationTitle = true
     }
+    
+    var isErrorLogin = false
+    func errorLogin() {
+        isErrorLogin = true
+    }
 }
 
 class LoginCoordinatorMock: AuthCoordinatorProtocol {
@@ -118,14 +123,6 @@ class LoginTests: QuickSpec {
                     expect(coordinator.isNavigateToRegister).to(beTrue())
                 }
             }
-            
-//            context("Function handleLoginButton is called") {
-//                it("Without error") {
-//                    sut.handleLoginButton(id: ))
-//                    expect()
-//                }
-//            }
-            
         }
     }
 }
