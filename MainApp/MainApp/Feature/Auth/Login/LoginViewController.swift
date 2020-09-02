@@ -45,9 +45,9 @@ class LoginViewController: MasterViewController, LoginViewProtocol {
     @IBOutlet weak var loginErrorLabel: UILabel! {
         didSet {
             loginErrorLabel.font = FontManager.getFont(for: .regular, size: FontManager.FontSize.regularText.rawValue)
-            loginErrorLabel.textColor = UIColor(hex: "#FF1100FF")
+            loginErrorLabel.textColor = UIColor(hex: AuthConstantLogin.Color.errorLabel.rawValue)
             loginErrorLabel.isHidden = true
-            loginErrorLabel.text = "Your e-mail or password is incorrect"
+            loginErrorLabel.text = AuthConstantLogin.LocalizedKey.emailOrPasswordIncorrect.localized()
         }
     }
     @IBOutlet weak var googleLoginButton: LoginButton!
@@ -101,14 +101,14 @@ class LoginViewController: MasterViewController, LoginViewProtocol {
     
     @objc func handleKeyboardChange(_ notification: Notification) {
         if notification.name == UIResponder.keyboardDidShowNotification {
-            contentHeight.constant += 40
+            contentHeight.constant += AuthConstantLogin.CommonValue.contentHeight
             UIView.animate(withDuration: 0.3) {
-                self.scrollView.contentOffset = .init(x: self.scrollView.contentOffset.x, y: self.scrollView.contentOffset.y + 40)
+                self.scrollView.contentOffset = .init(x: self.scrollView.contentOffset.x, y: self.scrollView.contentOffset.y + AuthConstantLogin.CommonValue.contentHeight)
             }
         } else {
             contentHeight.constant = 0
             UIView.animate(withDuration: 0.3) {
-                self.scrollView.contentOffset = .init(x: self.scrollView.contentOffset.x, y: self.scrollView.contentOffset.y - 40)
+                self.scrollView.contentOffset = .init(x: self.scrollView.contentOffset.x, y: self.scrollView.contentOffset.y - AuthConstantLogin.CommonValue.contentHeight)
             }
         }
     }

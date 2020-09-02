@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 typealias AuthConstantLogin = AuthConstant.Login
 typealias AuthConstantRegister = AuthConstant.Register
@@ -17,6 +18,22 @@ enum AuthConstant {
         enum ButtonIdentifier: String {
             case google
             case facebook
+        }
+        
+        enum Color: String {
+            case errorLabel = "#FF1100FF"
+        }
+        
+        enum LocalizedKey: String {
+            case emailOrPasswordIncorrect = "Your e-mail or password is incorrect"
+            
+            func localized() -> String {
+                return rawValue.localize()
+            }
+        }
+        
+        enum CommonValue {
+            static let contentHeight: CGFloat = 40
         }
     }
     
