@@ -10,22 +10,25 @@ import Foundation
 import UIKit
 
 enum AlertViewConstant {
-    enum Color: String {
-        case buttonColor = "#00C3FFFF"
+    enum ButtonColor: String {
+        case normal = "#00C3FFFF"
     }
     
-    enum Label {
-        static let titleCancelButton = "Cancel"
-        static let titleOkButton = "Ok"
-        static let nibAlertView = "FamiliAlertView"
+    enum Label: String {
+        case cancelButton = "Cancel"
+        case okButton = "Ok"
+    }
+    
+    enum NibName: String {
+        case alertView = "FamiliAlertView"
     }
     
     enum CommonValue {
-        static let fontFamilySemiBold = "Inter-Medium"
-        static let fontFamilyRegular = "Inter-Medium"
+        static let fontFamilySemiBold = "Inter-SemiBold"
+        static let fontFamilyRegular = "Inter-Regular"
+        static let fontSizeTitle: CGFloat = 16
+        static let fontSizeBody: CGFloat = 14
+        static let fontSizeButton: CGFloat = 16
         static let cornerRadius: CGFloat = 10
-        static let alpha: CGFloat = 1
-        static let shadowOpacity: Float = 1
-        static let backgroundViewAlpha: CGFloat = 0.8
     }
 }
