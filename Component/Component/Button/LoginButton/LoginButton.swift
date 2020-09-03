@@ -119,6 +119,7 @@ How to use:
     private func setupLabel() {
         buttonTitle.frame = .init(x: 0, y: 0, width: 0, height: 0)
         buttonTitle.frame = self.frame
+        buttonTitle.font = UIFont(name: "Inter-Regular", size: 15)
         buttonTitle.text = title
         buttonTitle.textAlignment = .center
         buttonTitle.sizeToFit()

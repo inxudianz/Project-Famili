@@ -19,6 +19,7 @@ extension LoginViewModel: AuthLoginDelegate {
         // Add error message to update in view
         view?.stopLoading()
         Log.error(message: error)
+        view?.errorLogin()
     }
     
     
