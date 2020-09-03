@@ -14,24 +14,9 @@ import Nimble
 class LoginViewMock: LoginViewProtocol {
     var viewModel: LoginViewModelProtocol?
     
-    var isUpdateView = false
-    func updateView(text: String) {
-        isUpdateView = true
-    }
-    
     var isShowLoading = false
     func showLoading() {
         isShowLoading = true
-    }
-    
-    var isDismissLoading = false
-    func dismissLoading() {
-        isDismissLoading = true
-    }
-    
-    var isSetNavigationTitle = false
-    func setNavigationTitle(title: String) {
-        isSetNavigationTitle = true
     }
     
     var isErrorLogin = false
@@ -39,15 +24,14 @@ class LoginViewMock: LoginViewProtocol {
         isErrorLogin = true
     }
   
-    var loadingViewStoppedLoading = false
+    var isStopLoading = false
     func stopLoading() {
-        loadingViewStoppedLoading = true
+        isStopLoading = true
     }
 }
 
 class LoginCoordinatorMock: AuthCoordinatorProtocol {
     var parentCoordinator: Coordinator?
-
     var childCoordinators: [Coordinator] = []
     
     var navigationController: UINavigationController? = UINavigationController()
@@ -56,12 +40,7 @@ class LoginCoordinatorMock: AuthCoordinatorProtocol {
     func start() {
         isStarted = true
     }
-    
-    var isStopped = false
-    func stop() {
-        isStopped = true
-    }
-    
+
     var isNavigateToHome = false
     func navigateToHome() {
         isNavigateToHome = true
@@ -101,31 +80,48 @@ class LoginTests: QuickSpec {
             var view: LoginViewMock!
             var coordinator: LoginCoordinatorMock!
             var network: LoginNetworkMock!
+            var emailMock: String!
+            var passwordMock: String!
             
             beforeEach {
                 view = LoginViewMock()
                 coordinator = LoginCoordinatorMock()
                 network = LoginNetworkMock()
+                emailMock = "mock@email.com"
+                passwordMock = "12345"
                 
                 sut = LoginViewModel()
                 sut?.view = view
                 sut?.coordinator = coordinator
                 sut?.network = network
             }
-            
-            let emailTest = "aaa"
-            let passwordTest = "www"
-            context("Login Network success") {
+
+            context("login function is called") {
                 it("Without error") {
-                    sut.login(email: emailTest, password: passwordTest)
+                    sut.login(email: emailMock, password: passwordMock)
+                    expect(view.isShowLoading).to(beTrue())
                     expect(network.isLogin).to(beTrue())
                 }
             }
             
-            context("Function register is called") {
+            context("register function is called") {
                 it("Without error") {
                     sut.register()
                     expect(coordinator.isNavigateToRegister).to(beTrue())
+                }
+            }
+            
+//             Function not yet implemented
+//            context("handleLoginButton function is called") {}
+            
+            context("isTextsEmpty function is called") {
+                it("return false") {
+                    let isEmpty = sut.isTextsEmpty(texts: ["string"])
+                    expect(isEmpty).to(beFalse())
+                }
+                it("return true") {
+                    let isEmpty = sut.isTextsEmpty(texts: [""])
+                    expect(isEmpty).to(beTrue())
                 }
             }
         }

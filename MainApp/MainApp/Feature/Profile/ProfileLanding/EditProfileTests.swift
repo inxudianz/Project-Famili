@@ -13,42 +13,10 @@ import Nimble
 
 class EditProfileViewMock: EditProfileProtocol {
     var viewModel: EditProfileViewModelProtocol?
-    
-    var isSetupField = false;
-    @objc func setupField() {
-        isSetupField = true
-    }
-    
-    var isUpdateView = false
-    func updateView(text: String) {
-        isUpdateView = true
-    }
-    
-    var isUpdateTextError = false
-    func updateTextError(for type: EditProfileConstant.TextFieldIdentifier) {
-        isUpdateTextError = true
-    }
-    
-    var isShowLoading = false
-    func showLoading() {
-        isShowLoading = true
-    }
-    
-    var isDismissLoading = false
-    func dismissLoading() {
-        isDismissLoading = true
-    }
-    
-    var isSetNavigationTitle = false
-    func setNavigationTitle(title: String) {
-        isSetNavigationTitle = true
-    }
 }
 
 class EditProfileCoordinatorMock: ProfileCoordinatorProtocol {
-    
     var parentCoordinator: Coordinator?
-    
     var childCoordinators: [Coordinator] = []
     
     var navigationController: UINavigationController? = UINavigationController()
@@ -131,57 +99,36 @@ class EditProfileTests: QuickSpec {
                 sut.network = network
             }
             
-            context("Function handleField is called and name is Empty") {
-                it("Without error") {
+            context("Function handleField is called") {
+                it("name is Empty") {
                     let testData = sut.handleField(text: "", with: .name)
                     expect(testData) == .empty
                 }
-            }
-            
-            context("Function handleField is called and name is Correct") {
-                it("Without error") {
+                it("name is Correct") {
                     let testData = sut.handleField(text: "Owen", with: .name)
                     expect(testData) == .success
                 }
-            }
-            
-            context("Function handleField is called and phone is Empty") {
-                it("Without error") {
+                it("phone is Empty") {
                     let testData = sut.handleField(text: "", with: .phone)
                     expect(testData) == .empty
                 }
-            }
-            
-            context("Function handleField is called and phone is Invalid") {
-                it("Without error") {
+                it("phone is Invalid") {
                     let testData = sut.handleField(text: "081231a0", with: .phone)
                     expect(testData) == .invalid
                 }
-            }
-            
-            context("Function handleField is called and phone is Correct") {
-                it("Without error") {
+                it("phone is Correct") {
                     let testData = sut.handleField(text: "081231239", with: .phone)
                     expect(testData) == .success
                 }
-            }
-            
-            context("Function handleField is called and email is Empty") {
-                it("Without error") {
+                it("email is Empty") {
                     let testData = sut.handleField(text: "", with: .email)
                     expect(testData) == .empty
                 }
-            }
-            
-            context("Function handleField is called and email is Invalid") {
-                it("Without error") {
+                it("email is Invalid") {
                     let testData = sut.handleField(text: "owen@owen", with: .email)
                     expect(testData) == .invalid
                 }
-            }
-            
-            context("Function handleField is called and email is Correct") {
-                it("Without error") {
+                it("email is Correct") {
                     let testData = sut.handleField(text: "Owen@owen.com", with: .email)
                     expect(testData) == .success
                 }

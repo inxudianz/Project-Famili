@@ -7,8 +7,6 @@
 //
 
 import UIKit
-
-///protocol to set function didTapPrimary and didTapSecondary
 public protocol FamiliAlertDelegate: class {
     func didTapPrimary(sender: UIButton)
     func didTapSecondary(sender: UIButton)
@@ -23,94 +21,79 @@ How to use:
    * use setButton function to to set text for alert view button
    * use dismissView function to dismiss alert view
 */
-
 public class FamiliAlertView: UIView {
-    
-    //MARK: - Property
-    /// type availbale for button option in alert view
+    // MARK: - Enum
     public enum ButtonOption {
         case primary
         case secondary
     }
     
-    /// initialization base and background view
+    // MARK: - IBOutlet
     @IBOutlet var baseView: UIView!
     @IBOutlet weak var backgroundView: UIView! {
         didSet {
             backgroundView.layer.backgroundColor = UIColor.black.cgColor
         }
     }
-    
-    ///initialization title & description label for alert view and set font label
     @IBOutlet weak var titleLabel: UILabel! {
         didSet {
-            titleLabel.font = UIFont(name: AlertViewConstant.CommonValue.fontFamilySemiBold, size: AlertViewConstant.CommonValue.fontSizeTitle)
+            titleLabel.font = UIFont(name: FamiliAlertViewConstant.CommonValue.fontFamilySemiBold, size: FamiliAlertViewConstant.CommonValue.fontSizeTitle)
         }
     }
     @IBOutlet weak var descriptionLabel: UILabel! {
         didSet {
-            descriptionLabel.font = UIFont(name: AlertViewConstant.CommonValue.fontFamilyRegular, size: AlertViewConstant.CommonValue.fontSizeBody)
+            descriptionLabel.font = UIFont(name: FamiliAlertViewConstant.CommonValue.fontFamilyRegular, size: FamiliAlertViewConstant.CommonValue.fontSizeBody)
         }
     }
-    
-    ///initialization container view
     @IBOutlet weak var containerView: UIView!
-    
-    ///initialization button and set attribute for button
     @IBOutlet weak var actionButton1: UIButton! {
         didSet {
-            actionButton1.titleLabel?.font = UIFont(name: AlertViewConstant.CommonValue.fontFamilySemiBold, size: AlertViewConstant.CommonValue.fontSizeButton)
-            actionButton1.tintColor = UIColor(hex: AlertViewConstant.CommonColor.primary.rawValue)
-            actionButton1.setTitle(AlertViewConstant.CommonString.cancelButton.rawValue, for: .normal)
+            actionButton1.titleLabel?.font = UIFont(name: FamiliAlertViewConstant.CommonValue.fontFamilySemiBold, size: FamiliAlertViewConstant.CommonValue.fontSizeButton)
+            actionButton1.tintColor = UIColor(hex: FamiliAlertViewConstant.CommonColor.primary.rawValue)
+            actionButton1.setTitle(FamiliAlertViewConstant.CommonString.cancelButton.rawValue, for: .normal)
         }
     }
     @IBOutlet weak var actionButton2: UIButton! {
         didSet {
-            actionButton2.backgroundColor = UIColor(hex: AlertViewConstant.CommonColor.primary.rawValue)
-            actionButton2.layer.cornerRadius = AlertViewConstant.CommonValue.cornerRadius
-            actionButton2.titleLabel?.font = UIFont(name: AlertViewConstant.CommonValue.fontFamilySemiBold, size: AlertViewConstant.CommonValue.fontSizeButton)
+            actionButton2.backgroundColor = UIColor(hex: FamiliAlertViewConstant.CommonColor.primary.rawValue)
+            actionButton2.layer.cornerRadius = FamiliAlertViewConstant.CommonValue.cornerRadius
+            actionButton2.titleLabel?.font = UIFont(name: FamiliAlertViewConstant.CommonValue.fontFamilySemiBold, size: FamiliAlertViewConstant.CommonValue.fontSizeButton)
             actionButton2.tintColor = .white
-            actionButton2.setTitle(AlertViewConstant.CommonString.okButton.rawValue, for: .normal)
+            actionButton2.setTitle(FamiliAlertViewConstant.CommonString.okButton.rawValue, for: .normal)
         }
     }
-    
-    ///initialization delegate
     weak public var familiAlertDelegate: FamiliAlertDelegate?
     
-    //MARK: - Initialization
-    
-    ///to initialization view
+    // MARK: - Initialization
     public override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
     }
-    
-    ///to initialization view
     public required init?(coder: NSCoder) {
         super.init(coder: coder)
         setupView()
     }
     
-    //function to add action if primary button is tapped
+    // MARK: - Handler
+    /// Calls the delegate to handle primary button tap
     @objc func primaryDidTap(_ sender: UIButton) {
         familiAlertDelegate?.didTapPrimary(sender: sender)
     }
     
-    //function to add action if secondary button is tapped
+    /// Calls the delegate to handle secondary button tap
     @objc func secondaryDidTap(_ sender: UIButton) {
         familiAlertDelegate?.didTapSecondary(sender: sender)
     }
     
-    //MARK: - Private Function
-    
-    ///to setup baseView, containerView & button
+    // MARK: - Function
+    /// setup the base, container, and button
     private func setupView() {
         baseViewSetup()
         setupContainerView()
         setupButton()
     }
     
-    ///to setup base view properties
+    /// setup base bundle and layer styling
     private func baseViewSetup() {
         let bundle = Bundle(for: FamiliAlertView.self)
         bundle.loadNibNamed(String(describing: FamiliAlertView.self), owner: self, options: nil)
@@ -120,37 +103,36 @@ public class FamiliAlertView: UIView {
         baseView.autoresizingMask = [.flexibleHeight, .flexibleHeight]
     }
     
-    ///to setup button target
+    /// setup button target action
     private func setupButton() {
         actionButton2.addTarget(self, action: #selector(primaryDidTap(_:)), for: .touchUpInside)
         actionButton1.addTarget(self, action: #selector(secondaryDidTap(_:)), for: .touchUpInside)
     }
     
-    ///to setup container view properties
+    /// setup container styling
     private func setupContainerView() {
         containerView.layer.backgroundColor = UIColor.white.cgColor
         containerView.layer.shadowOffset = .init(width: 0, height: 2)
         containerView.layer.shadowOpacity = 1
     }
     
-    ///to show animateView
+    /// animate the background of the view
     private func animateView() {
         backgroundView.alpha = 0
         UIView.animate(withDuration: 0.2) {
             self.backgroundView.alpha = 0.8
         }
     }
-    
-    //MARK: - Public Function
-    
+
+    // MARK: - Public Function
     /**
-    To display alert view
+    Provide alert view to the current controller that contains title, description, and button(s)
     
     - Parameters:
-        - title: set a string for title alert view
-        - description: set a string for description alert view
-        - isDualButton: is a boolean to select whether to use one button or dual button (if true will show dual button, if false will show only one button )
-        - toView: where the alert view is going to appear
+        - title: title of the alert
+        - description: small description of the alert
+        - isDualButton: boolean indicating alertView button style (will use dual or single button)
+        - view: the parent view for alertView
     */
     public func displayAlert(title: String, description: String, isDualButton: Bool, to view: UIView) {
         titleLabel.text = title
@@ -166,10 +148,10 @@ public class FamiliAlertView: UIView {
     }
     
     /**
-    To set title button
+    Set the button title attribute
     
     - Parameters:
-        - for button: to choose which button do you want to change the title
+        - button: to choose which button do you want to change the title
         - title: the string do you want for the title button
     */
     public func setButtonTitle(for button: ButtonOption, title: String) {
@@ -181,7 +163,7 @@ public class FamiliAlertView: UIView {
         }
     }
     
-    ///to dismiss the alert view
+    /// remove alertView from its parent
     public func dismissView() {
         self.removeFromSuperview()
     }

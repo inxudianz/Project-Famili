@@ -9,15 +9,18 @@
 import Foundation
 
 class LoginViewModel: LoginViewModelProtocol {
+    // MARK: - Property
     weak var view: LoginViewProtocol?
     weak var coordinator: AuthCoordinatorProtocol?
     var network: AuthNetworkProtocol?
     
+    // MARK: - Initialization
     init() {
         self.network = AuthNetwork()
         self.network?.authLoginDelegate = self
     }
     
+    // MARK: - Function
     func login(email: String, password: String) {
         view?.showLoading()
         let data = AuthModel.Login(email: email, password: password)

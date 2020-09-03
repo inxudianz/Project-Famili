@@ -1,5 +1,5 @@
 //
-//  AlertViewConstant.swift
+//  FamiliAlertViewConstant.swift
 //  Component
 //
 //  Created by Robby Awalul Meviansyah Abdillah on 01/09/20.
@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-enum AlertViewConstant {
+enum FamiliAlertViewConstant {
     enum CommonColor: String {
         case primary = "#00C3FFFF"
     }

@@ -22,8 +22,7 @@ public protocol FamiliTextFieldDelegate: class {
  * Init using the custom initializer to set all the required value
  */
 @IBDesignable public class FamiliTextField: UITextField {
-    
-    // MARK: - Property
+    // MARK: - Enum
     /// State of the current textfield
     ///
     /// Available state :
@@ -36,6 +35,7 @@ public protocol FamiliTextFieldDelegate: class {
         case error
     }
     
+    // MARK: - Property
     /// Border color for the textfield
     var borderColor: UIColor? {
         didSet {
@@ -50,19 +50,16 @@ public protocol FamiliTextFieldDelegate: class {
     weak public var familiTextFieldDelegate: FamiliTextFieldDelegate?
     
     // MARK: - Initialization
-    /// Default init
     public override init(frame: CGRect) {
         super.init(frame: frame)
         setupTextField()
     }
     
-    /// Default init
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         setupTextField()
     }
     
-    /// Update view for IB usage
     public override func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
         self.setupTextField()

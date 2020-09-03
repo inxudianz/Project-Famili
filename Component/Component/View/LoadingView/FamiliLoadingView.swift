@@ -19,25 +19,22 @@ import UIKit
        * Use stopLoading function when the task finishes.
 */
 public class FamiliLoadingView: UIView {
-    
-    //MARK: - Property
-    /// Activity Indicator
+    // MARK: - Property
     private var loadingIndicator: UIActivityIndicatorView?
     
-    //MARK: - Initialization
-    /// Default init 
+    // MARK: - Initialization
     public override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
     }
     
-    /// Default init
     public required init?(coder: NSCoder) {
         super.init(coder: coder)
         setupView()
     }
     
-    /// Setup the view
+    // MARK: - Private Function
+    /// Setup the view by adding loadingIndicator to this view and set its styling
     private func setupView() {
         setupLoadingIndicator()
         guard let loadingIndicator = loadingIndicator else { return }
@@ -45,7 +42,7 @@ public class FamiliLoadingView: UIView {
         self.backgroundColor = FamiliLoadingViewConstant.CommonColor.backgroundColor
     }
     
-    /// Setup the Activity Indicator
+    /// Setup the Activity Indicator styling
     private func setupLoadingIndicator() {
         let loadingIndicatorFrame = CGRect(x: (self.frame.width / 2 - (FamiliLoadingViewConstant.CommonValue.loadingWidth / 2)),
                                            y: (self.frame.height / 2 - (FamiliLoadingViewConstant.CommonValue.loadingHeight / 2)),
@@ -55,12 +52,12 @@ public class FamiliLoadingView: UIView {
         loadingIndicator?.color = UIColor(hex: FamiliLoadingViewConstant.CommonColor.loadingColor)
     }
     
-    //MARK: - Public Function
+    // MARK: - Public Function
     /**
-    To make loading view appear
+    Show loading view to the parent its attached to.
     
     - Parameters:
-       - view: where the loading view is going to appear
+       - view: the parent for loading view
     */
     public func showLoading(to view: UIView) {
         view.addSubview(self)
@@ -71,15 +68,9 @@ public class FamiliLoadingView: UIView {
         loadingIndicator?.startAnimating()
     }
     
-    /**
-    To make loading view disappear
-    
-    - Parameters:
-       - view: where the loading view is going to disappear
-    */
-    public func stopLoading(to view: UIView) {
+    /// Remove loading view from its parent
+    public func stopLoading() {
         loadingIndicator?.stopAnimating()
         self.removeFromSuperview()
     }
-
 }

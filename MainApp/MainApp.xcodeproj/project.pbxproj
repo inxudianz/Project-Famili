@@ -413,11 +413,11 @@
 		8A76A33124CEB15800F02AD9 /* Splash */ = {
 			isa = PBXGroup;
 			children = (
+				9248C8742500910B001E41A3 /* Resources */,
 				8A76A33224CEB3EB00F02AD9 /* InitialScreenViewController.swift */,
 				8A76A33324CEB3EB00F02AD9 /* InitialScreenViewController.xib */,
 				8A76A33C24CECB7300F02AD9 /* InitialScreenViewModel.swift */,
 				8A76A33E24CECBAE00F02AD9 /* InitialScreenProtocol.swift */,
-				921D202B24E63324007C3261 /* SplashAsset.xcassets */,
 			);
 			path = Splash;
 			sourceTree = "<group>";
@@ -720,6 +720,14 @@
 				92324BAE24C6D5E000FDFC3E /* Debug.xcconfig */,
 			);
 			path = Config;
+			sourceTree = "<group>";
+		};
+		9248C8742500910B001E41A3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				921D202B24E63324007C3261 /* SplashAsset.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		92913BB9248D07C8002D961D /* Products */ = {

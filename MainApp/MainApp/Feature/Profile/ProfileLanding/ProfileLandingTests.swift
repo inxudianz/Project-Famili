@@ -12,7 +12,6 @@ import Nimble
 @testable import MainApp
 
 class ProfileLandingMock: ProfileLandingViewProtocol {
-    
     var viewModel: ProfileLandingViewModelProtocol?
     
     var isUpdateView = false
@@ -25,21 +24,14 @@ class ProfileLandingMock: ProfileLandingViewProtocol {
         isShowLoading = true
     }
     
-    var isDismissLoading = false
-    func dismissLoading() {
-        isDismissLoading = true
-    }
-    
-    var isSetNavigationTitle = false
-    func setNavigationTitle(title: String) {
-        isSetNavigationTitle = true
+    var isStopLoading = false
+    func stopLoading() {
+        isStopLoading = true
     }
 }
 
 class ProfileLandingCoordinatorMock: ProfileCoordinatorProtocol {
-    
     var parentCoordinator: Coordinator?
-
     var childCoordinators: [Coordinator] = []
     
     var navigationController: UINavigationController? = UINavigationController()
@@ -47,11 +39,6 @@ class ProfileLandingCoordinatorMock: ProfileCoordinatorProtocol {
     var isStarted = false
     func start() {
         isStarted = true
-    }
-    
-    var isStopped = false
-    func stop() {
-        isStopped = true
     }
     
     var isSaveEditProfile = false
@@ -86,9 +73,7 @@ class ProfileLandingCoordinatorMock: ProfileCoordinatorProtocol {
 }
 
 class ProfileLandingNetworkMock: ProfileNetworkProtocol {
-    
     var retrieveProfileDelegate: RetrieveProfileDelegate?
-    
     var editProfileDelegate: EditProfileDelegate?
     
     var isProfileGet = false
@@ -105,7 +90,6 @@ class ProfileLandingNetworkMock: ProfileNetworkProtocol {
 class ProfileLandingTests: QuickSpec {
     override func spec() {
         describe("ViewModel") {
-            
             var sut: ProfileLandingViewModel!
             var view: ProfileLandingMock!
             var coordinator: ProfileLandingCoordinatorMock!
@@ -160,14 +144,38 @@ class ProfileLandingTests: QuickSpec {
             context("Function getProfile is called") {
                 it("Without error") {
                     sut.getProfile(userId: 1)
+                    expect(view.isShowLoading).to(beTrue())
+                    expect(network.isProfileGet).to(beTrue())
+                }
+            }
+            context("Function viewDidLoad is called") {
+                it("Without error") {
+                    sut.viewDidLoad()
+                    expect(view.isShowLoading).to(beTrue())
                     expect(network.isProfileGet).to(beTrue())
                 }
             }
             
-            context("Function updateView is called") {
-                it("Without error") {
-                    sut.view?.updateView(name: "Irene", phone: "08123019201", email: "irene@gmail.com")
-                    expect(view.isUpdateView).to(beTrue())
+            context("didSelectForRow function is called") {
+                it("headerSection is account, index is edit") {
+                    sut.didSelectforRow(at: .init(row: 0, section: 0))
+                    expect(coordinator.isNavigateToEditProfile).to(beTrue())
+                }
+                it("headerSection is account, index is help") {
+                    sut.didSelectforRow(at: .init(row: 1, section: 0))
+                    expect(coordinator.isNavigateToHelp).to(beTrue())
+                }
+                it("headerSection is general index is privacy") {
+                    sut.didSelectforRow(at: .init(row: 0, section: 1))
+                    expect(coordinator.isNavigateToPrivacyPolicy).to(beTrue())
+                }
+                it("headerSection is general index is tos") {
+                    sut.didSelectforRow(at: .init(row: 1, section: 1))
+                    expect(coordinator.isNavigateToTOS).to(beTrue())
+                }
+                it("headerSection is general index is rate") {
+                    sut.didSelectforRow(at: .init(row: 2, section: 1))
+                    expect(coordinator.isNavigateToRate).to(beTrue())
                 }
             }
         }

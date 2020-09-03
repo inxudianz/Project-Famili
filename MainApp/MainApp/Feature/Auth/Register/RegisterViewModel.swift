@@ -9,15 +9,18 @@
 import Foundation
 
 class RegisterViewModel: RegisterViewModelProtocol {
+    // MARK: - Property
     weak var view: RegisterViewProtocol?
     weak var coordinator: AuthCoordinatorProtocol?
     var network: AuthNetworkProtocol?
     
+    // MARK: - Initialization
     init() {
         network = AuthNetwork()
         network?.authRegisterDelegate = self
     }
     
+    // MARK: - Function
     func navigateToLogin() {
         coordinator?.navigateToLogin()
     }

@@ -39,8 +39,8 @@ enum ProfileConstant {
         }
         
         enum GeneralIndex: Int {
-            case tos
             case privacy
+            case tos
             case rate
         }
         

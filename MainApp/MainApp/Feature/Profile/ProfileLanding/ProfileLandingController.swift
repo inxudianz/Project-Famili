@@ -29,6 +29,7 @@ class ProfileLandingController: MasterViewController, ProfileLandingViewProtocol
     
     // MARK: - Property
     var viewModel: ProfileLandingViewModelProtocol?
+    lazy var loadingView = FamiliLoadingView(frame: self.view.frame)
 
     // MARK: - Initialization
     override func viewDidLoad() {
@@ -46,7 +47,7 @@ class ProfileLandingController: MasterViewController, ProfileLandingViewProtocol
     }
     
     // MARK: - Function
-    func setupView() {
+    private func setupView() {
         phoneIcon.image = UIImage(named: ProfileLandingConstant.ImageName.call.rawValue)
         emailIcon.image = UIImage(named: ProfileLandingConstant.ImageName.mail.rawValue)
         
@@ -63,6 +64,14 @@ class ProfileLandingController: MasterViewController, ProfileLandingViewProtocol
         self.navigationItem.title? += name
         self.phoneNumberLabel.text = phone
         self.emailLabel.text = email
+    }
+    
+    func showLoading() {
+        loadingView.showLoading(to: self.view)
+    }
+    
+    func stopLoading() {
+        loadingView.stopLoading()
     }
 }
 

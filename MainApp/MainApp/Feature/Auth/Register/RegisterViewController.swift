@@ -138,7 +138,7 @@ class RegisterViewController: MasterViewController, RegisterViewProtocol {
     }
     
     // MARK: - Function
-    func setInitialView() {
+    private func setInitialView() {
         viewLabelError.isHidden = true
         buttonRegister.isEnabled = false
         let textFields = [tfName,
@@ -154,7 +154,7 @@ class RegisterViewController: MasterViewController, RegisterViewProtocol {
         addHideKeyboardRecognizer()
     }
     
-    func updateTextError(for type: AuthConstantRegister.TextFieldIdentifier) {
+    private func updateTextError(for type: AuthConstantRegister.TextFieldIdentifier) {
         viewLabelError.isHidden = false
         switch type {
         case .name:
@@ -178,7 +178,7 @@ class RegisterViewController: MasterViewController, RegisterViewProtocol {
         }
     }
     
-    func addHideKeyboardRecognizer() {
+    private func addHideKeyboardRecognizer() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tap)
     }
@@ -192,7 +192,6 @@ class RegisterViewController: MasterViewController, RegisterViewProtocol {
     }
     
     func stopLoading() {
-        loadingView.stopLoading(to: self.view)
+        loadingView.stopLoading()
     }
-
 }

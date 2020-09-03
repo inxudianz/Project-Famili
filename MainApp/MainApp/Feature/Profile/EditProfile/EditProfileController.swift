@@ -81,8 +81,23 @@ class EditProfileController: MasterViewController, EditProfileProtocol {
         setupView()
     }
     
+    // MARK: - Handler
+    @objc func textDidChange(sender: FamiliTextField) {
+        if sender.isDescendant(of: nameTextField) {
+            name = sender.text
+        } else if sender.isDescendant(of: phoneNumberTextField) {
+            phone = sender.text
+        } else if sender.isDescendant(of: emailTextField) {
+            email = sender.text
+        }
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
     // MARK: - Function
-    func setupView() {
+    private func setupView() {
         errorLabel.isHidden = true
         saveButton.isEnabled = false
         
@@ -97,7 +112,7 @@ class EditProfileController: MasterViewController, EditProfileProtocol {
         enableHideKeyboard()
     }
     
-    func updateTextError(for type: EditProfileConstant.TextFieldIdentifier) {
+    private func updateTextError(for type: EditProfileConstant.TextFieldIdentifier) {
         errorLabel.isHidden = false
         
         switch type {
@@ -114,12 +129,12 @@ class EditProfileController: MasterViewController, EditProfileProtocol {
         }
     }
     
-    func enableHideKeyboard() {
+    private func enableHideKeyboard() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tap)
     }
     
-    func setupButton() {
+    private func setupButton() {
         var isAllFieldsValid = false
         
         guard let isValidTextField = validTextField else { return }
@@ -140,19 +155,5 @@ class EditProfileController: MasterViewController, EditProfileProtocol {
         case false:
             saveButton.isEnabled = false
         }
-    }
-    
-    @objc func textDidChange(sender: FamiliTextField) {
-        if sender.isDescendant(of: nameTextField) {
-            name = sender.text
-        } else if sender.isDescendant(of: phoneNumberTextField) {
-            phone = sender.text
-        } else if sender.isDescendant(of: emailTextField) {
-            email = sender.text
-        }
-    }
-    
-    @objc func dismissKeyboard() {
-        view.endEditing(true)
     }
 }

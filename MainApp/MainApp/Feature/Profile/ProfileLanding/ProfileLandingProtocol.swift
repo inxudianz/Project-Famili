@@ -28,5 +28,7 @@ protocol ProfileLandingViewModelProtocol: class {
 protocol ProfileLandingViewProtocol: class {
     var viewModel: ProfileLandingViewModelProtocol? { get set }
     func updateView(name: String, phone: String, email: String)
+    func showLoading()
+    func stopLoading()
 }
 

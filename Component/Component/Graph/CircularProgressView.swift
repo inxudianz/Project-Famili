@@ -18,8 +18,7 @@ How to use:
    * Init using the custom initializer to set all the required value
 */
 @IBDesignable public class CircularProgressView: UIView {
- 
-    //MARK: - Property
+    // MARK: - Enum
     /// Style available for circular progress bar
     public enum CircularProgressStyle: Int {
         case normal
@@ -27,6 +26,7 @@ How to use:
         case withDetail
     }
     
+    // MARK: - Property
     /// Color for base circle
     @IBInspectable var trailingColor: UIColor {
         didSet {
@@ -116,15 +116,13 @@ How to use:
         setupView()
     }
     
-    //MARK: - Interface Builder
-    /// Update display for usage in Interface Builder
     public override func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
         self.setupView()
     }
     
-    //MARK: - Private Function
-    /// Create the shape layer
+    // MARK: - Private Function
+    /// Create the shape layer trailing and progress
     private func createShapeLayer() {
         let circlePath = UIBezierPath(arcCenter: CGPoint(x: self.bounds.size.width / 2, y: self.bounds.size.height / 2), radius: radius, startAngle: -.pi / 2, endAngle: 3 * .pi / 2, clockwise: true)
         
@@ -149,7 +147,7 @@ How to use:
         layer.addSublayer(progressLayer)
     }
     
-    /// Setup the view
+    /// Setup the view for label, style, shape layer, and default progress
     private func setupView() {
         createLabel()
         setStyle()
@@ -157,7 +155,7 @@ How to use:
         setProgress(for: 0.5, animated: true)
     }
     
-    /// Create the label
+    /// Create the label to subview
     private func createLabel() {
         self.addSubview(progressLabel)
         self.addSubview(progressDescLabel)
@@ -239,7 +237,7 @@ How to use:
         progressDescLabel.sizeToFit()
     }
     
-    //MARK: - Public Function
+    // MARK: - Public Function
     /**
      Set the progress to a **'scale'** value, custom animatable.
      

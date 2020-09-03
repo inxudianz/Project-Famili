@@ -13,26 +13,6 @@ import Nimble
 
 class InitialScreenViewMock: InitialScreenViewProtocol {
     var viewModel: InitialScreenViewModelProtocol?
-    
-    var isUpdateView = false
-    func updateView(text: String) {
-        isUpdateView = true
-    }
-    
-    var isShowLoading = false
-    func showLoading() {
-        isShowLoading = true
-    }
-    
-    var isDismissLoading = false
-    func dismissLoading() {
-        isDismissLoading = true
-    }
-    
-    var isSetNavigationTitle = false
-    func setNavigationTitle(title: String) {
-        isSetNavigationTitle = true
-    }
 }
 
 class InitialScreenCoordinatorMock: InitialScreenCoordinatorProtocol {
@@ -45,11 +25,6 @@ class InitialScreenCoordinatorMock: InitialScreenCoordinatorProtocol {
     var isStarted = false
     func start() {
         isStarted = true
-    }
-    
-    var isStopped = false
-    func stop() {
-        isStopped = true
     }
     
     var isNavigateToAuth = false
@@ -75,7 +50,7 @@ class InitialScreenTests: QuickSpec {
                 sut?.coordinator = coordinator
             }
                 
-            context("Function gotoLogin is called") {
+            context("gotoLogin function is called") {
                 it("Without error") {
                     sut.gotoLogin()
                     expect(coordinator.isNavigateToAuth).to(beTrue())

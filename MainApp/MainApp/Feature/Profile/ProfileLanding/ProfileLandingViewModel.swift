@@ -103,6 +103,7 @@ class ProfileLandingViewModel: ProfileLandingViewModelProtocol {
     }
     
     func getProfile(userId: Int) {
+        view?.showLoading()
         network?.profileGet(userId: userId)
     }
     

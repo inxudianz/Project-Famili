@@ -8,24 +8,22 @@
 
 import UIKit
 
+public protocol FamiliDualButtonDelegate: class {
+    func didTapLeftButton(sender: UIButton)
+    func didTapRightButton(sender: UIButton)
+}
+
 /** Famili Dual Button Template
 
-Create two buttons with predefined style.
+Create view with dual button
 How to use:
  * Using XIB
     * Drag and drop a UIView  and change the class to FamiliDualButton, put it inside a container view
  * Programatically
     * Init using the custom initializer to set all the required value
 */
-
-public protocol FamiliDualButtonDelegate: class {
-    func didTapLeftButton(sender: UIButton)
-    func didTapRightButton(sender: UIButton)
-}
-
 @IBDesignable public class FamiliDualButton: UIView {
-    // MARK: - Designable
-    
+    // MARK: - Enum
     typealias CommonProperty = FamiliDualButtonConstant.CommonProperties
     typealias ButtonBackgroundColor = FamiliDualButtonConstant.BackgroundColor
     
@@ -34,6 +32,7 @@ public protocol FamiliDualButtonDelegate: class {
         case rightButton
     }
     
+    // MARK: - Property
     /// Set the left button icon
     @IBInspectable var leftIcon: String = "" {
         didSet {
@@ -48,7 +47,6 @@ public protocol FamiliDualButtonDelegate: class {
         }
     }
     
-    // MARK: - Property
     private var dividerView = UIView()
     private var leftButton = UIButton()
     private var rightButton = UIButton()
@@ -66,22 +64,13 @@ public protocol FamiliDualButtonDelegate: class {
         setupView()
     }
     
-    //MARK: - Interface Builder
     /// Update display for usage in Interface Builder
     public override func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
         setupView()
     }
     
-    /// Setup the view
-    private func setupView() {
-        setupBackgroundView()
-        setupLeftButton()
-        setupRightButton()
-        setupDivider()
-    }
-    
-    // MARK: - Function
+    // MARK: - Handler
     /// Set left button tapped action
     @objc func didTapLeftButton(_ sender: UIButton) {
         familiDualButtonDelegate?.didTapLeftButton(sender: sender)
@@ -94,6 +83,14 @@ public protocol FamiliDualButtonDelegate: class {
         animateRightButton()
     }
     
+    // MARK: - Private Function
+    /// Setup the view for background, left button, right button, and divider
+    private func setupView() {
+        setupBackgroundView()
+        setupLeftButton()
+        setupRightButton()
+        setupDivider()
+    }
     
     /// Set left button style when clicked
     private func animateLeftButton() {
@@ -111,14 +108,14 @@ public protocol FamiliDualButtonDelegate: class {
         }
     }
     
-    /// Setup the background view
+    /// Setup the background view styling
     private func setupBackgroundView() {
         self.frame = CGRect(x: CommonProperty.initialPosition, y: CommonProperty.initialPosition, width: self.frame.width, height: self.frame.height)
         self.backgroundColor = UIColor(hex: ButtonBackgroundColor.normal.rawValue)
         self.layer.cornerRadius = CommonProperty.cornerRadius
     }
     
-    /// Setup the two buttons' divider
+    /// Setup the two buttons' divider styling
     private func setupDivider() {
         dividerView.frame = CGRect(x: self.frame.width - CommonProperty.dividerWidth / 2, y: CommonProperty.initialPosition, width: CommonProperty.dividerWidth, height: self.frame.height)
         dividerView.backgroundColor = .white
@@ -148,7 +145,10 @@ public protocol FamiliDualButtonDelegate: class {
         addSubview(rightButton)
     }
     
-    /// Set buttons to disabled
+    // MARK: - Public Function
+    /// disable button interactability
+    /// - parameters:
+    ///     - button : button that you would like to be disabled
     public func disableButton(for button: ButtonSelection) {
         switch button {
         case .leftButton:

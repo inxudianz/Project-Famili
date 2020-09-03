@@ -119,7 +119,7 @@ class LoginViewController: MasterViewController, LoginViewProtocol {
     }
     
     // MARK: - Function
-    func setupView() {
+    private func setupView() {
         passwordTextField.addTarget(self, action: #selector(editingDidChange(sender:)), for: .editingChanged)
         passwordTextField.addTarget(self, action: #selector(editingDidEnd(sender:)), for: .editingDidEndOnExit)
         emailTextField.addTarget(self, action: #selector(editingDidChange(sender:)), for: .editingChanged)
@@ -139,7 +139,7 @@ class LoginViewController: MasterViewController, LoginViewProtocol {
         didErrorLogin(true)
     }
     
-    func didErrorLogin(_ isError: Bool) {
+    private func didErrorLogin(_ isError: Bool) {
         if isError {
             loginErrorLabel.isHidden = false
             emailTextField.setState(state: .error)
@@ -151,7 +151,7 @@ class LoginViewController: MasterViewController, LoginViewProtocol {
         }
     }
     
-    func addHideKeyboardRecognizer() {
+    private func addHideKeyboardRecognizer() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tap)
     }
@@ -161,7 +161,7 @@ class LoginViewController: MasterViewController, LoginViewProtocol {
     }
     
     func stopLoading() {
-        loadingView.stopLoading(to: self.view)
+        loadingView.stopLoading()
     }
 }
 

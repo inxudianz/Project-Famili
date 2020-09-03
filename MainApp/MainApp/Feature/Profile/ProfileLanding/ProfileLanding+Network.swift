@@ -10,6 +10,7 @@ import Foundation
 
 extension ProfileLandingViewModel: RetrieveProfileDelegate {
     func didSuccessRetrieveProfile(response: ProfileResponse.GetProfileResponse) {
+        view?.stopLoading()
         guard let name = response.name else { return }
         guard let phone = response.phone else { return }
         guard let email = response.email else { return }
@@ -17,6 +18,7 @@ extension ProfileLandingViewModel: RetrieveProfileDelegate {
     }
     
     func didFailedRetrieveProfile(error: Error) {
+        view?.stopLoading()
         Log.info(message: error)
     }
 }

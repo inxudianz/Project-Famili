@@ -22,7 +22,7 @@ How to use:
    * Init using the custom initializer to set all the required value
 */
 @IBDesignable public class LoginButton: UIView {
-    // MARK: - Designable
+    // MARK: - Property
     /// Name of the icon that you are going to use in the button.
     @IBInspectable var iconName: String = "" {
         didSet {
@@ -44,16 +44,13 @@ How to use:
     
     /// Identifier for detecting multiple loginButton
     @IBInspectable var identifier: String = ""
-    
-    // MARK: Outlet's property
     let buttonIcon = UIImageView()
     let button = UIButton()
     let buttonTitle = UILabel()
     
-    // MARK: Delegate
     weak public var loginButtonDelegate: LoginButtonDelegate?
     
-    // MARK: Initialization
+    // MARK: - Initialization
     public override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
@@ -79,19 +76,20 @@ How to use:
         setupView()
     }
     
-    // MARK: - Interface Builder
     public override func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
         setupView()
     }
     
     // MARK: - Handler
+    /// calls delegate to handle tap function
     @objc private func handleTap() {
         animateButton()
         loginButtonDelegate?.buttonDidTapped(sender: self)
     }
     
     // MARK: - Private Function
+    /// setup view styling and other components (button, label) with constraint
     private func setupView() {
         self.frame = CGRect(x: 0, y: 0, width: 350, height: 45)
         self.layer.shadowOffset = .init(width: 0, height: 2)
@@ -104,18 +102,21 @@ How to use:
         setupConstraint()
     }
     
+    /// setup button frame and target action
     private func setupButton() {
         button.frame = self.frame
         button.addTarget(self, action: #selector(handleTap), for: .touchDown)
         self.addSubview(button)
     }
     
+    /// setup button icon frame and image
     private func setupButtonIcon() {
         buttonIcon.frame = .init(x: 0, y: 0, width: 0, height: 0)
         buttonIcon.image = UIImage(named: iconName)
         self.addSubview(buttonIcon)
     }
     
+    /// setup label frame and styling
     private func setupLabel() {
         buttonTitle.frame = .init(x: 0, y: 0, width: 0, height: 0)
         buttonTitle.frame = self.frame
@@ -126,6 +127,7 @@ How to use:
         addSubview(buttonTitle)
     }
     
+    /// set constraint for button icon and title
     private func setupConstraint() {
         buttonIcon.addConstraint(top: self.topAnchor,
                                  leading: self.leadingAnchor,
@@ -140,6 +142,7 @@ How to use:
                                    padding: .init(top: 13, left: -32, bottom: 0, right: 45))
     }
     
+    /// animate the button for tap action
     private func animateButton() {
         self.layer.shadowOpacity = 0
         buttonTitle.layer.opacity = 0.5
