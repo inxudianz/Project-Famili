@@ -10,17 +10,13 @@ import Foundation
 import UIKit
 
 enum AlertViewConstant {
-    enum ButtonColor: String {
-        case normal = "#00C3FFFF"
+    enum CommonColor: String {
+        case primary = "#00C3FFFF"
     }
     
-    enum Label: String {
+    enum CommonString: String {
         case cancelButton = "Cancel"
         case okButton = "Ok"
-    }
-    
-    enum NibName: String {
-        case alertView = "FamiliAlertView"
     }
     
     enum CommonValue {

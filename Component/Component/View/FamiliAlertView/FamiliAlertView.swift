@@ -60,17 +60,17 @@ public class FamiliAlertView: UIView {
     @IBOutlet weak var actionButton1: UIButton! {
         didSet {
             actionButton1.titleLabel?.font = UIFont(name: AlertViewConstant.CommonValue.fontFamilySemiBold, size: AlertViewConstant.CommonValue.fontSizeButton)
-            actionButton1.tintColor = UIColor(hex: AlertViewConstant.ButtonColor.normal.rawValue)
-            actionButton1.setTitle(AlertViewConstant.Label.cancelButton.rawValue, for: .normal)
+            actionButton1.tintColor = UIColor(hex: AlertViewConstant.CommonColor.primary.rawValue)
+            actionButton1.setTitle(AlertViewConstant.CommonString.cancelButton.rawValue, for: .normal)
         }
     }
     @IBOutlet weak var actionButton2: UIButton! {
         didSet {
-            actionButton2.backgroundColor = UIColor(hex: AlertViewConstant.ButtonColor.normal.rawValue)
+            actionButton2.backgroundColor = UIColor(hex: AlertViewConstant.CommonColor.primary.rawValue)
             actionButton2.layer.cornerRadius = AlertViewConstant.CommonValue.cornerRadius
             actionButton2.titleLabel?.font = UIFont(name: AlertViewConstant.CommonValue.fontFamilySemiBold, size: AlertViewConstant.CommonValue.fontSizeButton)
             actionButton2.tintColor = .white
-            actionButton2.setTitle(AlertViewConstant.Label.okButton.rawValue, for: .normal)
+            actionButton2.setTitle(AlertViewConstant.CommonString.okButton.rawValue, for: .normal)
         }
     }
     
@@ -113,7 +113,7 @@ public class FamiliAlertView: UIView {
     ///to setup base view properties
     private func baseViewSetup() {
         let bundle = Bundle(for: FamiliAlertView.self)
-        bundle.loadNibNamed(AlertViewConstant.NibName.alertView.rawValue, owner: self, options: nil)
+        bundle.loadNibNamed(String(describing: FamiliAlertView.self), owner: self, options: nil)
         baseView.frame = self.bounds
         baseView.alpha = 1
         baseView.backgroundColor = .clear
