@@ -8,7 +8,7 @@
 
 import UIKit
 
-public protocol FamiliTextFieldProtocol: class {
+public protocol FamiliTextFieldDelegate: class {
     func didTapClear(sender: UIButton)
 }
 
@@ -47,7 +47,7 @@ public protocol FamiliTextFieldProtocol: class {
     public var isValid: Bool = true
     
     /// Delegation for Famili text field
-    weak public var familiTextFieldDelegate: FamiliTextFieldProtocol?
+    weak public var familiTextFieldDelegate: FamiliTextFieldDelegate?
     
     // MARK: - Initialization
     /// Default init
