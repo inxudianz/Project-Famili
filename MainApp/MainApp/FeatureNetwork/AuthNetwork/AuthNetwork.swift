@@ -27,16 +27,24 @@ class AuthNetwork: AuthNetworkProtocol{
     }
     
     func login(data: AuthModel.Login) {
-        networkService.request(AuthService.login,
-                               data,
-                               EmptyResponse.self) { [weak self] (result) in
-            switch result {
-            case .success:
-                self?.authLoginDelegate?.didSuccessLogin()
-            case .failure(let error):
+        FirebaseHandler.AuthenticationHandler.signIn(email: data.email ?? "", password: data.password ?? "") { [weak self] (result, error) in
+            if let error = error {
                 self?.authLoginDelegate?.didFailedLogin(error: error)
+            } else {
+                self?.authLoginDelegate?.didSuccessLogin()
             }
         }
+        // This function is not used at the moment.
+//        networkService.request(AuthService.login,
+//                               data,
+//                               EmptyResponse.self) { [weak self] (result) in
+//            switch result {
+//            case .success:
+//                self?.authLoginDelegate?.didSuccessLogin()
+//            case .failure(let error):
+//                self?.authLoginDelegate?.didFailedLogin(error: error)
+//            }
+//        }
     }
     
     func register(data: AuthModel.Register) {
