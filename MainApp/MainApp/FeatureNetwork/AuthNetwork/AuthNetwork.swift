@@ -48,15 +48,23 @@ class AuthNetwork: AuthNetworkProtocol{
     }
     
     func register(data: AuthModel.Register) {
-        networkService.request(AuthService.register,
-                               data,
-                               EmptyResponse.self) { [weak self] (result) in
-            switch result {
-            case .success:
-                self?.authRegisterDelegate?.didSuccessRegister()
-            case .failure(let error):
-                self?.authRegisterDelegate?.didFailedRegister(error: error)
+        FirebaseHandler.AuthenticationHandler.signUp(email: data.email ?? "", password: data.password ?? "") { (result, error) in
+            if let error = error {
+                self.authRegisterDelegate?.didFailedRegister(error: error)
+            } else {
+                self.authRegisterDelegate?.didSuccessRegister()
             }
         }
+        // This function is not used at the moment.
+//        networkService.request(AuthService.register,
+//                               data,
+//                               EmptyResponse.self) { [weak self] (result) in
+//            switch result {
+//            case .success:
+//                self?.authRegisterDelegate?.didSuccessRegister()
+//            case .failure(let error):
+//                self?.authRegisterDelegate?.didFailedRegister(error: error)
+//            }
+//        }
     }
 }
