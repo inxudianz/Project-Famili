@@ -24,4 +24,6 @@ protocol LoginViewProtocol: class {
     func errorLogin()
     func showLoading()
     func stopLoading()
+    func showGoogleSignIn()
+    func showFacebookSignIn()
 }

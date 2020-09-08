@@ -24,10 +24,11 @@ class GoogleSDKHandler {
             GIDSignIn.sharedInstance().handle(url)
         }
         
-        public static func present(vc: UIViewController, isSigning: Bool = false) {
+        public static func present(vc: UIViewController, isSigning: Bool = false, completion: (() -> Void)? = nil) {
             GIDSignIn.sharedInstance()?.presentingViewController = vc
             if isSigning {
                 GIDSignIn.sharedInstance().signIn()
+                completion?()
             }
         }
     }

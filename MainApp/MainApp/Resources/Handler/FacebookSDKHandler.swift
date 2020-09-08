@@ -26,6 +26,11 @@ class FacebookSDKHandler {
                 // handle token ( User loggedIn)
             }
         }
+        
+        public static func signIn(with view: UIViewController, completion: LoginResultBlock?) {
+            let loginManager = LoginManager()
+            loginManager.logIn(permissions: [.publicProfile, .email], viewController: view, completion: completion)
+        }
     }
     
     // MARK: - Function
