@@ -10,9 +10,12 @@ import UIKit
 import Component
 
 class TermsOfServiceViewController: MasterViewController, TermsOfServiceViewProtocol {
+    
+    var viewModel: TermsOfServiceViewModelProtocol?
 
     // MARK: - Outlet
-    
+    @IBOutlet weak var TOSScrollView: UIScrollView!
+    @IBOutlet weak var TOSLabel: UILabel!
     
     // MARK: - Property
     

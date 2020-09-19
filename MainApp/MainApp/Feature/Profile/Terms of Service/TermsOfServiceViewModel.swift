@@ -7,3 +7,14 @@
 //
 
 import Foundation
+
+class TermsOfServiceViewModel: TermsOfServiceViewModelProtocol {
+    
+    var view: TermsOfServiceViewProtocol?
+    
+    var coordinator: ProfileCoordinatorProtocol?
+    
+    func getTermsOfService() {
+        print("a")
+    }
+}
