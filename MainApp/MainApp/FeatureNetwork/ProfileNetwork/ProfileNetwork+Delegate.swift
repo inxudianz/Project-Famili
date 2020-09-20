@@ -19,3 +19,9 @@ protocol EditProfileDelegate: class {
     func didSuccessEditProfile()
     func didFailedEditProfile(error: Error)
 }
+
+protocol RetrievePrivacyPolicyDelegate: class {
+    // MARK: - Edit Profile
+    func didSuccessRetrievePrivacyPolicy(response: ProfileResponse.GetPrivacyPolicyResponse)
+    func didFailedRetrievePrivacyPolicy(error: Error)
+}

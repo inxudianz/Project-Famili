@@ -25,6 +25,11 @@
 		1EBF014A24D1E5450098C24A /* ProfileLandingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBF014924D1E5450098C24A /* ProfileLandingCell.swift */; };
 		1EC5105624E2A87B00A00759 /* ProfileLandingController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EBF012324D0A6130098C24A /* ProfileLandingController.xib */; };
 		1EC5105924E2A8A400A00759 /* ProfileLandingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EBF014B24D1E5510098C24A /* ProfileLandingCell.xib */; };
+		1ED8FE652517E72700E3FC0B /* PrivacyPolicyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED8FE642517E72700E3FC0B /* PrivacyPolicyProtocol.swift */; };
+		1ED8FE672517E74400E3FC0B /* PrivacyPolicyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED8FE662517E74400E3FC0B /* PrivacyPolicyViewModel.swift */; };
+		1ED8FE6A2517E79300E3FC0B /* PrivacyPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED8FE682517E79300E3FC0B /* PrivacyPolicyViewController.swift */; };
+		1ED8FE6B2517E79300E3FC0B /* PrivacyPolicyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ED8FE692517E79300E3FC0B /* PrivacyPolicyViewController.xib */; };
+		1ED8FE6E2517EA1700E3FC0B /* PrivacyPolicyViewModel+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED8FE6D2517EA1700E3FC0B /* PrivacyPolicyViewModel+Network.swift */; };
 		1EFA020F24EDB14F00063DB6 /* ProfileLandingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFA020E24EDB14F00063DB6 /* ProfileLandingTests.swift */; };
 		1EFA021524EDBFFA00063DB6 /* EditProfileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFA021424EDBFFA00063DB6 /* EditProfileTests.swift */; };
 		8A76A33424CEB3EB00F02AD9 /* InitialScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A76A33224CEB3EB00F02AD9 /* InitialScreenViewController.swift */; };
@@ -206,6 +211,11 @@
 		1EBF013324D0A7690098C24A /* ProfileCoordinatorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileCoordinatorProtocol.swift; sourceTree = "<group>"; };
 		1EBF014924D1E5450098C24A /* ProfileLandingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileLandingCell.swift; sourceTree = "<group>"; };
 		1EBF014B24D1E5510098C24A /* ProfileLandingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileLandingCell.xib; sourceTree = "<group>"; };
+		1ED8FE642517E72700E3FC0B /* PrivacyPolicyProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyProtocol.swift; sourceTree = "<group>"; };
+		1ED8FE662517E74400E3FC0B /* PrivacyPolicyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyViewModel.swift; sourceTree = "<group>"; };
+		1ED8FE682517E79300E3FC0B /* PrivacyPolicyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyViewController.swift; sourceTree = "<group>"; };
+		1ED8FE692517E79300E3FC0B /* PrivacyPolicyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PrivacyPolicyViewController.xib; sourceTree = "<group>"; };
+		1ED8FE6D2517EA1700E3FC0B /* PrivacyPolicyViewModel+Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PrivacyPolicyViewModel+Network.swift"; sourceTree = "<group>"; };
 		1EFA020E24EDB14F00063DB6 /* ProfileLandingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileLandingTests.swift; path = MainApp/Feature/Profile/ProfileLanding/ProfileLandingTests.swift; sourceTree = SOURCE_ROOT; };
 		1EFA021424EDBFFA00063DB6 /* EditProfileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EditProfileTests.swift; path = MainApp/Feature/Profile/ProfileLanding/EditProfileTests.swift; sourceTree = SOURCE_ROOT; };
 		3304A088087BD629641C29A2 /* Pods_MainAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MainAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -396,6 +406,18 @@
 				1EBF014B24D1E5510098C24A /* ProfileLandingCell.xib */,
 			);
 			path = ProfileLandingCell;
+			sourceTree = "<group>";
+		};
+		1ED8FE612517E71000E3FC0B /* PrivacyPolicy */ = {
+			isa = PBXGroup;
+			children = (
+				1ED8FE642517E72700E3FC0B /* PrivacyPolicyProtocol.swift */,
+				1ED8FE662517E74400E3FC0B /* PrivacyPolicyViewModel.swift */,
+				1ED8FE682517E79300E3FC0B /* PrivacyPolicyViewController.swift */,
+				1ED8FE692517E79300E3FC0B /* PrivacyPolicyViewController.xib */,
+				1ED8FE6D2517EA1700E3FC0B /* PrivacyPolicyViewModel+Network.swift */,
+			);
+			path = PrivacyPolicy;
 			sourceTree = "<group>";
 		};
 		76F9B2BBC29537A10464E1F6 /* Pods */ = {
@@ -610,6 +632,7 @@
 		923249A324C03FF600FDFC3E /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				1ED8FE612517E71000E3FC0B /* PrivacyPolicy */,
 				923249AB24C0406B00FDFC3E /* Resources */,
 				1EB0167724DC7AD200C76109 /* ProfileLanding */,
 				1EB0167A24DC7AF500C76109 /* EditProfile */,
@@ -1193,6 +1216,7 @@
 				921D202C24E63324007C3261 /* SplashAsset.xcassets in Resources */,
 				92D79F442484DB93004C4701 /* SampleProfileViewController.xib in Resources */,
 				920C278024E4290600047D14 /* HomeLandingViewController.xib in Resources */,
+				1ED8FE6B2517E79300E3FC0B /* PrivacyPolicyViewController.xib in Resources */,
 				92D79F082483E873004C4701 /* SampleHomeViewController.xib in Resources */,
 				920C277324E419D500047D14 /* Auth.xcassets in Resources */,
 				9227A24524CFE479004F7952 /* Inter-ExtraLight.ttf in Resources */,
@@ -1331,6 +1355,7 @@
 				9201315124B4E3BC002303D0 /* BuildConfiguration.swift in Sources */,
 				8AA7015624DBEDD100EEAADE /* LoginSubPath.swift in Sources */,
 				92913BEA248D13A3002D961D /* NetworkService.swift in Sources */,
+				1ED8FE6E2517EA1700E3FC0B /* PrivacyPolicyViewModel+Network.swift in Sources */,
 				920A35062499D61E00F2EABB /* Coordinator.swift in Sources */,
 				921D1F6E24E4EFF4007C3261 /* HomeCoordinatorProtocol.swift in Sources */,
 				9227A74424D9509E004F7952 /* AppCoordinator+GoogleSDK.swift in Sources */,
@@ -1339,9 +1364,11 @@
 				9227A36124D42937004F7952 /* EmptyModel.swift in Sources */,
 				92C77C5E24971765004C1D86 /* BasePath.swift in Sources */,
 				920539BB249BA31300AF938C /* Undefined.swift in Sources */,
+				1ED8FE652517E72700E3FC0B /* PrivacyPolicyProtocol.swift in Sources */,
 				920C25F924E3B7A500047D14 /* AuthNetwork+Delegate.swift in Sources */,
 				1E44DC5224D855C600025AE8 /* EditProfileController.swift in Sources */,
 				92D79F432484DB93004C4701 /* SampleProfileViewController.swift in Sources */,
+				1ED8FE6A2517E79300E3FC0B /* PrivacyPolicyViewController.swift in Sources */,
 				921D1F7424E505D8007C3261 /* ProfileLanding+Network.swift in Sources */,
 				92D79E8A2483E534004C4701 /* AppDelegate.swift in Sources */,
 				1EBF012E24D0A6B00098C24A /* ProfileLandingProtocol.swift in Sources */,
@@ -1391,6 +1418,7 @@
 				9201314F24B4E368002303D0 /* Appcoordinator+BuildConfiguration.swift in Sources */,
 				1EB0168024DC820E00C76109 /* ProfileModel.swift in Sources */,
 				1E44DC5A24D8563C00025AE8 /* EditProfileViewModel.swift in Sources */,
+				1ED8FE672517E74400E3FC0B /* PrivacyPolicyViewModel.swift in Sources */,
 				92C77BF82493798F004C1D86 /* SampleModel.swift in Sources */,
 				92C77BFC2493799B004C1D86 /* SampleResponse.swift in Sources */,
 				9248C4B024F3CA01001E41A3 /* MainApp+TabBar.swift in Sources */,

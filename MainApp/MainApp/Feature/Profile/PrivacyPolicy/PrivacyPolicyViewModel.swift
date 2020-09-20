@@ -1,0 +1,30 @@
+//
+//  PrivacyPolicyViewModel.swift
+//  MainApp
+//
+//  Created by Owen Prasetya on 21/09/20.
+//  Copyright © 2020 William Inx. All rights reserved.
+//
+
+import Foundation
+
+class PrivacyPolicyViewModel: PrivacyPolicyViewModelProtocol {
+    
+    // MARK: - Property
+    weak var view: PrivacyPolicyViewProtocol?
+    weak var coordinator: ProfileCoordinatorProtocol?
+    
+    var network: ProfileNetworkProtocol?
+    
+    // MARK: - Function
+    func getPrivacyPolicy() {
+        view?.showLoading()
+        network?.privacyPolicyGet()
+    }
+    
+    func viewDidLoad() {
+        getPrivacyPolicy()
+    }
+    
+    
+}

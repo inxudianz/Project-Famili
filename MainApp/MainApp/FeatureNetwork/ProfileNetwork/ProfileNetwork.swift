@@ -11,14 +11,17 @@ import Foundation
 protocol ProfileNetworkProtocol {
     var retrieveProfileDelegate: RetrieveProfileDelegate? { get set }
     var editProfileDelegate: EditProfileDelegate? { get set }
+    var retrievePrivacyPolicyDelegate: RetrievePrivacyPolicyDelegate? { get set }
     
     func profileGet(userId: Int)
     func profileEditPost(data: ProfileModel.EditProfile)
+    func privacyPolicyGet()
 }
 
 class ProfileLandingNetwork: ProfileNetworkProtocol {
     weak var retrieveProfileDelegate: RetrieveProfileDelegate?
     weak var editProfileDelegate: EditProfileDelegate?
+    weak var retrievePrivacyPolicyDelegate: RetrievePrivacyPolicyDelegate?
     
     private var networkService: NetworkService
     
@@ -50,6 +53,18 @@ class ProfileLandingNetwork: ProfileNetworkProtocol {
                                 case .failure(let error):
                                     self?.editProfileDelegate?.didFailedEditProfile(error: error)
                                 }
+        }
+    }
+    
+    func privacyPolicyGet() {
+        // Get the privacy policy to show to the user
+        networkService.request(ProfileService.getPrivacyPolicyRequest, EmptyModel(), ProfileResponse.GetPrivacyPolicyResponse.self) { [weak self] (result) in
+            switch result {
+            case .success(let response):
+                self?.retrievePrivacyPolicyDelegate?.didSuccessRetrievePrivacyPolicy(response: response)
+            case .failure(let error):
+                self?.retrievePrivacyPolicyDelegate?.didFailedRetrievePrivacyPolicy(error: error)
+            }
         }
     }
 }
