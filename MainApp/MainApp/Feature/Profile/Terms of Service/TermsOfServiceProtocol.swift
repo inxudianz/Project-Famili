@@ -15,8 +15,12 @@ protocol TermsOfServiceViewModelProtocol: class {
     //var dataSource: ProfileLandingDataSource? { get set }
     
     func getTermsOfService()
+    func viewDidLoad()
 }
 
 protocol TermsOfServiceViewProtocol: class {
     var viewModel: TermsOfServiceViewModelProtocol? { get set }
+    func updateTermsOfServiceText(text tos: String)
+    func showLoading()
+    func stopLoading()
 }

@@ -11,14 +11,17 @@ import Foundation
 protocol ProfileNetworkProtocol {
     var retrieveProfileDelegate: RetrieveProfileDelegate? { get set }
     var editProfileDelegate: EditProfileDelegate? { get set }
+    var retrieveTermsOfServiceDelegate: RetrieveTermsOfServiceDelegate? { get set }
     
     func profileGet(userId: Int)
     func profileEditPost(data: ProfileModel.EditProfile)
+    func termsOfServiceGet()
 }
 
 class ProfileLandingNetwork: ProfileNetworkProtocol {
     weak var retrieveProfileDelegate: RetrieveProfileDelegate?
     weak var editProfileDelegate: EditProfileDelegate?
+    weak var retrieveTermsOfServiceDelegate: RetrieveTermsOfServiceDelegate?
     
     private var networkService: NetworkService
     
@@ -27,6 +30,7 @@ class ProfileLandingNetwork: ProfileNetworkProtocol {
     }
     
     func profileGet(userId: Int) {
+        // Get the profile of the authenticated user to show in the profile page
         networkService.request(ProfileService.getProfileRequest(userId: userId),
                                EmptyModel(),
                                ProfileResponse.GetProfileResponse.self) { [weak self] (result) in
@@ -50,6 +54,19 @@ class ProfileLandingNetwork: ProfileNetworkProtocol {
                                 case .failure(let error):
                                     self?.editProfileDelegate?.didFailedEditProfile(error: error)
                                 }
+        }
+    }
+    
+    func termsOfServiceGet() {
+        // Get the terms of service to show to the user
+        
+        networkService.request(ProfileService.getTermsOfServiceRequest, EmptyModel(), ProfileResponse.GetTermsOfServiceResponse.self) { [weak self] (result) in
+            switch result {
+            case .success(let response):
+                self?.retrieveTermsOfServiceDelegate?.didSuccessRetrieveTermsOfService(response: response)
+            case .failure(let error):
+                self?.retrieveTermsOfServiceDelegate?.didFailedRetrieveTermsOfService(error: error)
+            }
         }
     }
 }

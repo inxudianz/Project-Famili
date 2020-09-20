@@ -29,6 +29,7 @@
 		1EBF014A24D1E5450098C24A /* ProfileLandingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBF014924D1E5450098C24A /* ProfileLandingCell.swift */; };
 		1EC5105624E2A87B00A00759 /* ProfileLandingController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EBF012324D0A6130098C24A /* ProfileLandingController.xib */; };
 		1EC5105924E2A8A400A00759 /* ProfileLandingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EBF014B24D1E5510098C24A /* ProfileLandingCell.xib */; };
+		1ED8FE5D2517611200E3FC0B /* TermsOfServiceViewModel+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED8FE5C2517611200E3FC0B /* TermsOfServiceViewModel+Network.swift */; };
 		1EFA020F24EDB14F00063DB6 /* ProfileLandingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFA020E24EDB14F00063DB6 /* ProfileLandingTests.swift */; };
 		1EFA021524EDBFFA00063DB6 /* EditProfileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFA021424EDBFFA00063DB6 /* EditProfileTests.swift */; };
 		8A76A33424CEB3EB00F02AD9 /* InitialScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A76A33224CEB3EB00F02AD9 /* InitialScreenViewController.swift */; };
@@ -214,6 +215,7 @@
 		1EBF013324D0A7690098C24A /* ProfileCoordinatorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileCoordinatorProtocol.swift; sourceTree = "<group>"; };
 		1EBF014924D1E5450098C24A /* ProfileLandingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileLandingCell.swift; sourceTree = "<group>"; };
 		1EBF014B24D1E5510098C24A /* ProfileLandingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileLandingCell.xib; sourceTree = "<group>"; };
+		1ED8FE5C2517611200E3FC0B /* TermsOfServiceViewModel+Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TermsOfServiceViewModel+Network.swift"; sourceTree = "<group>"; };
 		1EFA020E24EDB14F00063DB6 /* ProfileLandingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileLandingTests.swift; path = MainApp/Feature/Profile/ProfileLanding/ProfileLandingTests.swift; sourceTree = SOURCE_ROOT; };
 		1EFA021424EDBFFA00063DB6 /* EditProfileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EditProfileTests.swift; path = MainApp/Feature/Profile/ProfileLanding/EditProfileTests.swift; sourceTree = SOURCE_ROOT; };
 		3304A088087BD629641C29A2 /* Pods_MainAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MainAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -378,6 +380,7 @@
 				1E008C7A2513D7B4001E984D /* TermsOfServiceController.swift */,
 				1E008C7B2513D7B4001E984D /* TermsOfServiceViewController.xib */,
 				1E008C7E2513D8BD001E984D /* TermsOfServiceViewModel.swift */,
+				1ED8FE5C2517611200E3FC0B /* TermsOfServiceViewModel+Network.swift */,
 			);
 			path = "Terms of Service";
 			sourceTree = "<group>";
@@ -1360,6 +1363,7 @@
 				9227A36124D42937004F7952 /* EmptyModel.swift in Sources */,
 				92C77C5E24971765004C1D86 /* BasePath.swift in Sources */,
 				920539BB249BA31300AF938C /* Undefined.swift in Sources */,
+				1ED8FE5D2517611200E3FC0B /* TermsOfServiceViewModel+Network.swift in Sources */,
 				920C25F924E3B7A500047D14 /* AuthNetwork+Delegate.swift in Sources */,
 				1E44DC5224D855C600025AE8 /* EditProfileController.swift in Sources */,
 				92D79F432484DB93004C4701 /* SampleProfileViewController.swift in Sources */,

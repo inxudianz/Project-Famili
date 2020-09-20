@@ -14,4 +14,8 @@ struct ProfileResponse {
         let phone: String?
         let email: String?
     }
+    
+    struct GetTermsOfServiceResponse: Codable {
+        let tos: String?
+    }
 }

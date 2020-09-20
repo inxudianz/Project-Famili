@@ -11,20 +11,34 @@ import Component
 
 class TermsOfServiceViewController: MasterViewController, TermsOfServiceViewProtocol {
     
-    var viewModel: TermsOfServiceViewModelProtocol?
-
     // MARK: - Outlet
     @IBOutlet weak var TOSScrollView: UIScrollView!
-    @IBOutlet weak var TOSLabel: UILabel!
+    @IBOutlet weak var TOSLabel: UILabel! {
+        didSet {
+            TOSLabel.font = FontManager.getFont(for: .regular, size: FontManager.FontSize.button.rawValue)
+        }
+    }
     
     // MARK: - Property
+    var viewModel: TermsOfServiceViewModelProtocol?
+    lazy var loadingView = FamiliLoadingView(frame: self.view.frame)
     
     // MARK: - Initialization
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel?.viewDidLoad()
     }
 
-
     // MARK: - Function
-
+    func updateTermsOfServiceText(text tos: String) {
+        TOSLabel.text = tos
+    }
+    
+    func showLoading() {
+        loadingView.showLoading(to: self.view)
+    }
+    
+    func stopLoading() {
+        loadingView.stopLoading()
+    }
 }
