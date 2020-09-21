@@ -16,6 +16,12 @@ class PrivacyPolicyViewModel: PrivacyPolicyViewModelProtocol {
     
     var network: ProfileNetworkProtocol?
     
+    // MARK: - Initialization
+    init() {
+        network = ProfileLandingNetwork()
+        network?.retrievePrivacyPolicyDelegate = self
+    }
+    
     // MARK: - Function
     func getPrivacyPolicy() {
         view?.showLoading()
