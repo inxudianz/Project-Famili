@@ -75,6 +75,7 @@ class ProfileLandingCoordinatorMock: ProfileCoordinatorProtocol {
 class ProfileLandingNetworkMock: ProfileNetworkProtocol {
     var retrieveProfileDelegate: RetrieveProfileDelegate?
     var editProfileDelegate: EditProfileDelegate?
+    var retrieveTermsOfServiceDelegate: RetrieveTermsOfServiceDelegate?
     
     var isProfileGet = false
     func profileGet(userId: Int) {
@@ -84,6 +85,11 @@ class ProfileLandingNetworkMock: ProfileNetworkProtocol {
     var isProfileEditPost = false
     func profileEditPost(data: ProfileModel.EditProfile) {
         isProfileEditPost = true
+    }
+    
+    var isTermsOfServiceGet = false
+    func termsOfServiceGet() {
+        isTermsOfServiceGet = true
     }
 }
 
