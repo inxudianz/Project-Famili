@@ -57,7 +57,14 @@ class ProfileCoordinator: ProfileCoordinatorProtocol {
     }
     
     func navigateToPrivacyPolicy() {
-        Log.info(message: "Upcoming")
+        let vc = PrivacyPolicyViewController()
+        let vm = PrivacyPolicyViewModel()
+        vm.coordinator = self
+        vm.view = vc
+        vc.viewModel = vm
+        
+        navigationController?.navigationBar.configure()
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     func navigateToRate() {
