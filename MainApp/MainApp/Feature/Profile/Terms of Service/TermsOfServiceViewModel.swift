@@ -10,11 +10,19 @@ import Foundation
 
 class TermsOfServiceViewModel: TermsOfServiceViewModelProtocol {
     
+    // MARK: - Property
     weak var view: TermsOfServiceViewProtocol?
     weak var coordinator: ProfileCoordinatorProtocol?
     
     var network: ProfileNetworkProtocol?
     
+    // MARK: - Initialization
+    init() {
+        network = ProfileLandingNetwork()
+        network?.retrieveTermsOfServiceDelegate = self
+    }
+    
+    // MARK: - Function
     func getTermsOfService() {
         view?.showLoading()
         network?.termsOfServiceGet()

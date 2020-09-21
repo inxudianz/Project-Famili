@@ -11,8 +11,7 @@ import Foundation
 protocol TermsOfServiceViewModelProtocol: class {
     var view: TermsOfServiceViewProtocol? { get set }
     var coordinator: ProfileCoordinatorProtocol? { get set }
-    //var network: ProfileNetworkProtocol? { get set }
-    //var dataSource: ProfileLandingDataSource? { get set }
+    var network: ProfileNetworkProtocol? { get set }
     
     func getTermsOfService()
     func viewDidLoad()
