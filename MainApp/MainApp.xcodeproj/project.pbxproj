@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1E13ABB324D29384005AF3BD /* ProfileAsset.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E13ABB224D29384005AF3BD /* ProfileAsset.xcassets */; };
+		1E17A26225184AB300D51233 /* PrivacyPolicyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E17A26125184AB300D51233 /* PrivacyPolicyTests.swift */; };
 		1E44DC5224D855C600025AE8 /* EditProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E44DC5124D855C600025AE8 /* EditProfileController.swift */; };
 		1E44DC5624D8560400025AE8 /* EditProfileController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E44DC5524D8560400025AE8 /* EditProfileController.xib */; };
 		1E44DC5824D8562D00025AE8 /* EditProfileProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E44DC5724D8562D00025AE8 /* EditProfileProtocol.swift */; };
@@ -194,6 +195,7 @@
 
 /* Begin PBXFileReference section */
 		1E13ABB224D29384005AF3BD /* ProfileAsset.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ProfileAsset.xcassets; sourceTree = "<group>"; };
+		1E17A26125184AB300D51233 /* PrivacyPolicyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PrivacyPolicyTests.swift; path = MainApp/Feature/Profile/PrivacyPolicy/PrivacyPolicyTests.swift; sourceTree = SOURCE_ROOT; };
 		1E44DC5124D855C600025AE8 /* EditProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileController.swift; sourceTree = "<group>"; };
 		1E44DC5524D8560400025AE8 /* EditProfileController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditProfileController.xib; sourceTree = "<group>"; };
 		1E44DC5724D8562D00025AE8 /* EditProfileProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileProtocol.swift; sourceTree = "<group>"; };
@@ -724,6 +726,7 @@
 			children = (
 				1EFA020E24EDB14F00063DB6 /* ProfileLandingTests.swift */,
 				1EFA021424EDBFFA00063DB6 /* EditProfileTests.swift */,
+				1E17A26125184AB300D51233 /* PrivacyPolicyTests.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -1462,6 +1465,7 @@
 				92053BE224A1F83A00AF938C /* SampleHomeTests.swift in Sources */,
 				F5A0448324ED6C060020D729 /* RegisterTests.swift in Sources */,
 				1EFA021524EDBFFA00063DB6 /* EditProfileTests.swift in Sources */,
+				1E17A26225184AB300D51233 /* PrivacyPolicyTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

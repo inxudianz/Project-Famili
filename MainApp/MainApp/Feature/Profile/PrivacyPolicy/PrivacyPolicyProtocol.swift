@@ -11,7 +11,7 @@ import Foundation
 protocol PrivacyPolicyViewModelProtocol: class {
     var view: PrivacyPolicyViewProtocol? { get set }
     var coordinator: ProfileCoordinatorProtocol? { get set }
-    //var network: ProfileNetworkProtocol? { get set }
+    var network: ProfileNetworkProtocol? { get set }
     
     func getPrivacyPolicy()
     func viewDidLoad()
