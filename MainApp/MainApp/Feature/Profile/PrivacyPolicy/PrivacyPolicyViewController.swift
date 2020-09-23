@@ -13,7 +13,11 @@ class PrivacyPolicyViewController: MasterViewController, PrivacyPolicyViewProtoc
     
     // MARK: - Outlet
     @IBOutlet weak var PrivacyPolicyScrollView: UIScrollView!
-    @IBOutlet weak var PrivacyPolicyLabel: UILabel!
+    @IBOutlet weak var PrivacyPolicyLabel: UILabel! {
+        didSet {
+            PrivacyPolicyLabel.font = FontManager.getFont(for: .regular, size: FontManager.FontSize.button.rawValue)
+        }
+    }
     
     // MARK: - Property
     var viewModel: PrivacyPolicyViewModelProtocol?

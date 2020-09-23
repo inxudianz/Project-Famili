@@ -11,7 +11,7 @@ import Foundation
 extension PrivacyPolicyViewModel: RetrievePrivacyPolicyDelegate {
     func didSuccessRetrievePrivacyPolicy(response: ProfileResponse.GetPrivacyPolicyResponse) {
         view?.stopLoading()
-        guard let policy = response.text else { return }
+        guard let policy = response.message else { return }
         view?.updatePrivacyPolicyText(policy: policy)
     }
     
