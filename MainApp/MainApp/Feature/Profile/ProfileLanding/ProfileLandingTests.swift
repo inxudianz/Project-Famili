@@ -171,13 +171,13 @@ class ProfileLandingTests: QuickSpec {
                     sut.didSelectforRow(at: .init(row: 1, section: 0))
                     expect(coordinator.isNavigateToHelp).to(beTrue())
                 }
-                it("headerSection is general index is privacy") {
-                    sut.didSelectforRow(at: .init(row: 0, section: 1))
-                    expect(coordinator.isNavigateToPrivacyPolicy).to(beTrue())
-                }
                 it("headerSection is general index is tos") {
-                    sut.didSelectforRow(at: .init(row: 1, section: 1))
+                    sut.didSelectforRow(at: .init(row: 0, section: 1))
                     expect(coordinator.isNavigateToTOS).to(beTrue())
+                }
+                it("headerSection is general index is privacy") {
+                    sut.didSelectforRow(at: .init(row: 1, section: 1))
+                    expect(coordinator.isNavigateToPrivacyPolicy).to(beTrue())
                 }
                 it("headerSection is general index is rate") {
                     sut.didSelectforRow(at: .init(row: 2, section: 1))
