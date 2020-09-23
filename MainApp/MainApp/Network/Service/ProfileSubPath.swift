@@ -11,4 +11,5 @@ import Foundation
 enum ProfileSubPath: String {
     case detail = "detail/"
     case save = "save/"
+    case tos = "tos/"
 }

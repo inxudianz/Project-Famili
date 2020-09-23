@@ -19,3 +19,9 @@ protocol EditProfileDelegate: class {
     func didSuccessEditProfile()
     func didFailedEditProfile(error: Error)
 }
+
+protocol RetrieveTermsOfServiceDelegate: class {
+    // MARK: - Get Terms of Service (TOS)
+    func didSuccessRetrieveTermsOfService(response: ProfileResponse.GetTermsOfServiceResponse)
+    func didFailedRetrieveTermsOfService(error: Error)
+}

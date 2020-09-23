@@ -7,7 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E008C792513D23B001E984D /* TermsOfServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E008C782513D23B001E984D /* TermsOfServiceProtocol.swift */; };
+		1E008C7C2513D7B4001E984D /* TermsOfServiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E008C7A2513D7B4001E984D /* TermsOfServiceController.swift */; };
+		1E008C7D2513D7B4001E984D /* TermsOfServiceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E008C7B2513D7B4001E984D /* TermsOfServiceViewController.xib */; };
+		1E008C7F2513D8BD001E984D /* TermsOfServiceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E008C7E2513D8BD001E984D /* TermsOfServiceViewModel.swift */; };
 		1E13ABB324D29384005AF3BD /* ProfileAsset.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E13ABB224D29384005AF3BD /* ProfileAsset.xcassets */; };
+		1E17A2852518611C00D51233 /* TermsOfServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E17A2842518611C00D51233 /* TermsOfServiceTests.swift */; };
 		1E44DC5224D855C600025AE8 /* EditProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E44DC5124D855C600025AE8 /* EditProfileController.swift */; };
 		1E44DC5624D8560400025AE8 /* EditProfileController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E44DC5524D8560400025AE8 /* EditProfileController.xib */; };
 		1E44DC5824D8562D00025AE8 /* EditProfileProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E44DC5724D8562D00025AE8 /* EditProfileProtocol.swift */; };
@@ -20,6 +25,7 @@
 		1EBF014A24D1E5450098C24A /* ProfileLandingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBF014924D1E5450098C24A /* ProfileLandingCell.swift */; };
 		1EC5105624E2A87B00A00759 /* ProfileLandingController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EBF012324D0A6130098C24A /* ProfileLandingController.xib */; };
 		1EC5105924E2A8A400A00759 /* ProfileLandingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EBF014B24D1E5510098C24A /* ProfileLandingCell.xib */; };
+		1ED8FE5D2517611200E3FC0B /* TermsOfServiceViewModel+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED8FE5C2517611200E3FC0B /* TermsOfServiceViewModel+Network.swift */; };
 		1EFA020F24EDB14F00063DB6 /* ProfileLandingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFA020E24EDB14F00063DB6 /* ProfileLandingTests.swift */; };
 		1EFA021524EDBFFA00063DB6 /* EditProfileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFA021424EDBFFA00063DB6 /* EditProfileTests.swift */; };
 		8A76A33424CEB3EB00F02AD9 /* InitialScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A76A33224CEB3EB00F02AD9 /* InitialScreenViewController.swift */; };
@@ -190,7 +196,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1E008C782513D23B001E984D /* TermsOfServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsOfServiceProtocol.swift; sourceTree = "<group>"; };
+		1E008C7A2513D7B4001E984D /* TermsOfServiceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsOfServiceController.swift; sourceTree = "<group>"; };
+		1E008C7B2513D7B4001E984D /* TermsOfServiceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TermsOfServiceViewController.xib; sourceTree = "<group>"; };
+		1E008C7E2513D8BD001E984D /* TermsOfServiceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsOfServiceViewModel.swift; sourceTree = "<group>"; };
 		1E13ABB224D29384005AF3BD /* ProfileAsset.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ProfileAsset.xcassets; sourceTree = "<group>"; };
+		1E17A2842518611C00D51233 /* TermsOfServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsOfServiceTests.swift; sourceTree = "<group>"; };
 		1E44DC5124D855C600025AE8 /* EditProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileController.swift; sourceTree = "<group>"; };
 		1E44DC5524D8560400025AE8 /* EditProfileController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditProfileController.xib; sourceTree = "<group>"; };
 		1E44DC5724D8562D00025AE8 /* EditProfileProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileProtocol.swift; sourceTree = "<group>"; };
@@ -203,6 +214,7 @@
 		1EBF013324D0A7690098C24A /* ProfileCoordinatorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileCoordinatorProtocol.swift; sourceTree = "<group>"; };
 		1EBF014924D1E5450098C24A /* ProfileLandingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileLandingCell.swift; sourceTree = "<group>"; };
 		1EBF014B24D1E5510098C24A /* ProfileLandingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileLandingCell.xib; sourceTree = "<group>"; };
+		1ED8FE5C2517611200E3FC0B /* TermsOfServiceViewModel+Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TermsOfServiceViewModel+Network.swift"; sourceTree = "<group>"; };
 		1EFA020E24EDB14F00063DB6 /* ProfileLandingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileLandingTests.swift; path = MainApp/Feature/Profile/ProfileLanding/ProfileLandingTests.swift; sourceTree = SOURCE_ROOT; };
 		1EFA021424EDBFFA00063DB6 /* EditProfileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EditProfileTests.swift; path = MainApp/Feature/Profile/ProfileLanding/EditProfileTests.swift; sourceTree = SOURCE_ROOT; };
 		3304A088087BD629641C29A2 /* Pods_MainAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MainAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -367,6 +379,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E008C752513D217001E984D /* Terms of Service */ = {
+			isa = PBXGroup;
+			children = (
+				1E008C782513D23B001E984D /* TermsOfServiceProtocol.swift */,
+				1E008C7A2513D7B4001E984D /* TermsOfServiceController.swift */,
+				1E008C7B2513D7B4001E984D /* TermsOfServiceViewController.xib */,
+				1E008C7E2513D8BD001E984D /* TermsOfServiceViewModel.swift */,
+				1ED8FE5C2517611200E3FC0B /* TermsOfServiceViewModel+Network.swift */,
+			);
+			path = "Terms of Service";
+			sourceTree = "<group>";
+		};
 		1EB0167724DC7AD200C76109 /* ProfileLanding */ = {
 			isa = PBXGroup;
 			children = (
@@ -614,6 +638,7 @@
 		923249A324C03FF600FDFC3E /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				1E008C752513D217001E984D /* Terms of Service */,
 				923249AB24C0406B00FDFC3E /* Resources */,
 				1EB0167724DC7AD200C76109 /* ProfileLanding */,
 				1EB0167A24DC7AF500C76109 /* EditProfile */,
@@ -679,6 +704,7 @@
 			children = (
 				1EFA020E24EDB14F00063DB6 /* ProfileLandingTests.swift */,
 				1EFA021424EDBFFA00063DB6 /* EditProfileTests.swift */,
+				1E17A2842518611C00D51233 /* TermsOfServiceTests.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -1192,6 +1218,7 @@
 				92D79F442484DB93004C4701 /* SampleProfileViewController.xib in Resources */,
 				920C278024E4290600047D14 /* HomeLandingViewController.xib in Resources */,
 				92D79F082483E873004C4701 /* SampleHomeViewController.xib in Resources */,
+				1E008C7D2513D7B4001E984D /* TermsOfServiceViewController.xib in Resources */,
 				920C277324E419D500047D14 /* Auth.xcassets in Resources */,
 				9227A24524CFE479004F7952 /* Inter-ExtraLight.ttf in Resources */,
 				92D79F4D24850166004C4701 /* SampleProfileDetailViewController.xib in Resources */,
@@ -1333,6 +1360,7 @@
 				92D79F3124842E49004C4701 /* HomeNetwork.swift in Sources */,
 				8A76A34424CED46F00F02AD9 /* InitialScreenCoordinator.swift in Sources */,
 				920539BB249BA31300AF938C /* Undefined.swift in Sources */,
+				1ED8FE5D2517611200E3FC0B /* TermsOfServiceViewModel+Network.swift in Sources */,
 				920C25F924E3B7A500047D14 /* AuthNetwork+Delegate.swift in Sources */,
 				1E44DC5224D855C600025AE8 /* EditProfileController.swift in Sources */,
 				92CA205E251B4EE900920B21 /* ProfileModel.swift in Sources */,
@@ -1357,6 +1385,9 @@
 				92D79F492485015C004C4701 /* SampleProfileDetailViewModel.swift in Sources */,
 				920C277C24E428F600047D14 /* HomeLandingProtocol.swift in Sources */,
 				8AA7015924DBEFD200EEAADE /* AuthNetwork.swift in Sources */,
+				1E008C7F2513D8BD001E984D /* TermsOfServiceViewModel.swift in Sources */,
+				92C77CA3249754AD004C1D86 /* HTTPTask.swift in Sources */,
+				1EB0168424DC843E00C76109 /* ProfileService.swift in Sources */,
 				92CA2056251B4EE900920B21 /* EmptyResponse.swift in Sources */,
 				921D1F7224E4F7C8007C3261 /* ProfileLandingDataSource.swift in Sources */,
 				92D79F2624841755004C4701 /* AppCoordinator.swift in Sources */,
@@ -1367,6 +1398,7 @@
 				920A35082499D63F00F2EABB /* CoordinatorState.swift in Sources */,
 				F595D9EC24E280CA006DD353 /* RegisterViewModel+Network.swift in Sources */,
 				92C77C0124937E4F004C1D86 /* MainApp+NavigationBar.swift in Sources */,
+				1E008C7C2513D7B4001E984D /* TermsOfServiceController.swift in Sources */,
 				920A35B1249B4D0900F2EABB /* SampleHomeViewModel+Network.swift in Sources */,
 				92CA2063251B4EE900920B21 /* ProfilePath.swift in Sources */,
 				92D79F382484DB3E004C4701 /* ProfileNetwork.swift in Sources */,
@@ -1418,6 +1450,9 @@
 				8A76A33F24CECBAE00F02AD9 /* InitialScreenProtocol.swift in Sources */,
 				92C77CA124974A83004C1D86 /* SampleNetwork.swift in Sources */,
 				F5293EAE24D9AA8000CA7E87 /* RegisterProtocol.swift in Sources */,
+				1E008C792513D23B001E984D /* TermsOfServiceProtocol.swift in Sources */,
+				F5758BDA24DFA385007E2517 /* AuthService.swift in Sources */,
+				92C77C9E249744CC004C1D86 /* SampleService.swift in Sources */,
 				92CA2055251B4EE900920B21 /* NetworkType.swift in Sources */,
 				92CA205C251B4EE900920B21 /* AuthModel.swift in Sources */,
 				92CA2064251B4EE900920B21 /* ProfileSubPath.swift in Sources */,
@@ -1430,6 +1465,7 @@
 			files = (
 				1EFA020F24EDB14F00063DB6 /* ProfileLandingTests.swift in Sources */,
 				8AA7017324ECF6DF00EEAADE /* LoginTests.swift in Sources */,
+				1E17A2852518611C00D51233 /* TermsOfServiceTests.swift in Sources */,
 				8AA7016624EBD3CD00EEAADE /* InitialScreenTests.swift in Sources */,
 				92053BE224A1F83A00AF938C /* SampleHomeTests.swift in Sources */,
 				F5A0448324ED6C060020D729 /* RegisterTests.swift in Sources */,
