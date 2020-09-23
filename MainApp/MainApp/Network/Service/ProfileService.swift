@@ -12,6 +12,7 @@ import Alamofire
 enum ProfileService {
     case getProfileRequest(userId: Int)
     case saveProfileRequest
+    case getPrivacyPolicyRequest
     case getTermsOfServiceRequest
 }
 
@@ -26,6 +27,8 @@ extension ProfileService: NetworkType {
             return ProfilePath.profile.rawValue + ProfileSubPath.detail.rawValue + String(userId)
         case .saveProfileRequest:
             return ProfilePath.profile.rawValue + ProfileSubPath.save.rawValue
+        case .getPrivacyPolicyRequest:
+            return ProfilePath.profile.rawValue + ProfileSubPath.policy.rawValue
         case .getTermsOfServiceRequest:
             return ProfilePath.profile.rawValue + ProfileSubPath.tos.rawValue
         }
@@ -37,6 +40,8 @@ extension ProfileService: NetworkType {
             return .get
         case .saveProfileRequest:
             return .put
+        case .getPrivacyPolicyRequest:
+            return .get
         case .getTermsOfServiceRequest:
             return .get
         }
@@ -48,6 +53,8 @@ extension ProfileService: NetworkType {
             return .plainRequest
         case .saveProfileRequest:
             return .parameterRequest
+        case .getPrivacyPolicyRequest:
+            return .plainRequest
         case .getTermsOfServiceRequest:
             return .plainRequest
         }

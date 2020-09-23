@@ -20,6 +20,12 @@ protocol EditProfileDelegate: class {
     func didFailedEditProfile(error: Error)
 }
 
+protocol RetrievePrivacyPolicyDelegate: class {
+    // MARK: - Edit Profile
+    func didSuccessRetrievePrivacyPolicy(response: ProfileResponse.GetPrivacyPolicyResponse)
+    func didFailedRetrievePrivacyPolicy(error: Error)
+}
+
 protocol RetrieveTermsOfServiceDelegate: class {
     // MARK: - Get Terms of Service (TOS)
     func didSuccessRetrieveTermsOfService(response: ProfileResponse.GetTermsOfServiceResponse)
