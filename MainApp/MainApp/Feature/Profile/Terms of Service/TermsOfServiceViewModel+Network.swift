@@ -11,7 +11,7 @@ import Foundation
 extension TermsOfServiceViewModel: RetrieveTermsOfServiceDelegate {
     func didSuccessRetrieveTermsOfService(response: ProfileResponse.GetTermsOfServiceResponse) {
         view?.stopLoading()
-        guard let tos = response.tos else { return }
+        guard let tos = response.message else { return }
         view?.updateTermsOfServiceText(text: tos)
     }
     

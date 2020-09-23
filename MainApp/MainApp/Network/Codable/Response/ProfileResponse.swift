@@ -16,6 +16,6 @@ struct ProfileResponse {
     }
     
     struct GetTermsOfServiceResponse: Codable {
-        let tos: String?
+        let message: String?
     }
 }
