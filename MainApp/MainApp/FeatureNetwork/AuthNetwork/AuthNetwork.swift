@@ -1,5 +1,5 @@
 //
-//  LoginNetwork.swift
+//  AuthNetwork.swift
 //  MainApp
 //
 //  Created by Evan Christian on 06/08/20.
