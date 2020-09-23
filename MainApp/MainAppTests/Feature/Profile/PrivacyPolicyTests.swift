@@ -78,10 +78,9 @@ class PrivacyPolicyCoordinatorMock: ProfileCoordinatorProtocol {
 }
 
 class PrivacyPolicyNetworkMock: ProfileNetworkProtocol {
+    var retrieveTermsOfServiceDelegate: RetrieveTermsOfServiceDelegate?
     var retrievePrivacyPolicyDelegate: RetrievePrivacyPolicyDelegate?
-    
     var retrieveProfileDelegate: RetrieveProfileDelegate?
-    
     var editProfileDelegate: EditProfileDelegate?
     
     var isProfileGet = false
@@ -99,6 +98,10 @@ class PrivacyPolicyNetworkMock: ProfileNetworkProtocol {
         isPrivacyPolicyGet = true
     }
     
+    var isTermsOfServiceGet = false
+    func termsOfServiceGet() {
+        isTermsOfServiceGet = true
+    }
 }
 
 class PrivacyPolicyTests: QuickSpec {

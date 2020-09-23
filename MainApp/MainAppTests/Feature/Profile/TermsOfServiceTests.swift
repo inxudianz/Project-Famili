@@ -76,7 +76,8 @@ class TermsOfServiceNetworkMock: ProfileNetworkProtocol {
     var retrieveProfileDelegate: RetrieveProfileDelegate?
     var editProfileDelegate: EditProfileDelegate?
     var retrieveTermsOfServiceDelegate: RetrieveTermsOfServiceDelegate?
-    
+    var retrievePrivacyPolicyDelegate: RetrievePrivacyPolicyDelegate?
+
     var isProfileGet = false
     func profileGet(userId: Int) {
         isProfileGet = true
@@ -90,6 +91,11 @@ class TermsOfServiceNetworkMock: ProfileNetworkProtocol {
     var isTermsOfServiceGet = false
     func termsOfServiceGet() {
         isTermsOfServiceGet = true
+    }
+    
+    var isPrivacyPolicyGet = false
+    func privacyPolicyGet() {
+        isPrivacyPolicyGet = true
     }
 }
 

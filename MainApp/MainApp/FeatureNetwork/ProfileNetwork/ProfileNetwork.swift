@@ -13,14 +13,10 @@ protocol ProfileNetworkProtocol {
     var editProfileDelegate: EditProfileDelegate? { get set }
     var retrievePrivacyPolicyDelegate: RetrievePrivacyPolicyDelegate? { get set }
     var retrieveTermsOfServiceDelegate: RetrieveTermsOfServiceDelegate? { get set }
-
-    func profileGet(userId: Int)
-    func profileEditPost(data: ProfileModel.EditProfile)
-    func privacyPolicyGet()
-    
     func profileGet(userId: Int)
     func profileEditPost(data: ProfileModel.EditProfile)
     func termsOfServiceGet()
+    func privacyPolicyGet()
 }
 
 class ProfileLandingNetwork: ProfileNetworkProtocol {
