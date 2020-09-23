@@ -25,3 +25,9 @@ protocol RetrievePrivacyPolicyDelegate: class {
     func didSuccessRetrievePrivacyPolicy(response: ProfileResponse.GetPrivacyPolicyResponse)
     func didFailedRetrievePrivacyPolicy(error: Error)
 }
+
+protocol RetrieveTermsOfServiceDelegate: class {
+    // MARK: - Get Terms of Service (TOS)
+    func didSuccessRetrieveTermsOfService(response: ProfileResponse.GetTermsOfServiceResponse)
+    func didFailedRetrieveTermsOfService(error: Error)
+}

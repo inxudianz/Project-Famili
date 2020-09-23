@@ -17,4 +17,8 @@ struct ProfileResponse {
     struct GetPrivacyPolicyResponse: Codable {
         let message: String?
     }
+  
+    struct GetTermsOfServiceResponse: Codable {
+        let message: String?
+    }
 }
