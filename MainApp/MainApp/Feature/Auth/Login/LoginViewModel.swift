@@ -35,9 +35,9 @@ class LoginViewModel: LoginViewModelProtocol {
         guard let id = id else { return }
         switch id {
         case .google:
-            Log.info(message: "Login with Google")
+            view?.showGoogleSignIn()
         case .facebook:
-            Log.info(message: "Login with Facebook")
+            view?.showFacebookSignIn()
         }
     }
     
