@@ -12,10 +12,10 @@ import Component
 class TermsOfServiceViewController: MasterViewController, TermsOfServiceViewProtocol {
     
     // MARK: - Outlet
-    @IBOutlet weak var TOSScrollView: UIScrollView!
-    @IBOutlet weak var TOSLabel: UILabel! {
+    @IBOutlet weak var tosScrollView: UIScrollView!
+    @IBOutlet weak var tosLabel: UILabel! {
         didSet {
-            TOSLabel.font = FontManager.getFont(for: .regular, size: FontManager.FontSize.button.rawValue)
+            tosLabel.font = FontManager.getFont(for: .regular, size: FontManager.FontSize.button.rawValue)
         }
     }
     
@@ -31,7 +31,7 @@ class TermsOfServiceViewController: MasterViewController, TermsOfServiceViewProt
 
     // MARK: - Function
     func updateTermsOfServiceText(text tos: String) {
-        TOSLabel.text = tos
+        tosLabel.text = tos
     }
     
     func showLoading() {
