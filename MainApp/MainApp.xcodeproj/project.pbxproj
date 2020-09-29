@@ -140,6 +140,10 @@
 		92D79F5024852CC2004C4701 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D79F4F24852CC2004C4701 /* Log.swift */; };
 		9D2C8C6C95637BB845218937 /* Pods_MainAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3304A088087BD629641C29A2 /* Pods_MainAppTests.framework */; };
 		EDEADF9DEA3999ED2C0252E7 /* Pods_MainApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B48764ED1D23C52D13F00E17 /* Pods_MainApp.framework */; };
+		F51D7A6A2523A02F003AF4EB /* HomeServicesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51D7A682523A02F003AF4EB /* HomeServicesCollectionViewCell.swift */; };
+		F51D7A6B2523A02F003AF4EB /* HomeServicesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F51D7A692523A02F003AF4EB /* HomeServicesCollectionViewCell.xib */; };
+		F51D7A712523B5F2003AF4EB /* ChooseServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51D7A6F2523B5F2003AF4EB /* ChooseServiceViewController.swift */; };
+		F51D7A722523B5F2003AF4EB /* ChooseServiceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F51D7A702523B5F2003AF4EB /* ChooseServiceViewController.xib */; };
 		F5293EAA24D9941F00CA7E87 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5293EA824D9941F00CA7E87 /* RegisterViewController.swift */; };
 		F5293EAB24D9941F00CA7E87 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5293EA924D9941F00CA7E87 /* RegisterViewController.xib */; };
 		F5293EAE24D9AA8000CA7E87 /* RegisterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5293EAD24D9AA8000CA7E87 /* RegisterProtocol.swift */; };
@@ -335,6 +339,10 @@
 		AE2BE8FE29B4275EF2FB889F /* Pods-MainAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MainAppTests.debug.xcconfig"; path = "Target Support Files/Pods-MainAppTests/Pods-MainAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B48764ED1D23C52D13F00E17 /* Pods_MainApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MainApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC0E518FA3EDC1935792999D /* Pods-MainApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MainApp.release.xcconfig"; path = "Target Support Files/Pods-MainApp/Pods-MainApp.release.xcconfig"; sourceTree = "<group>"; };
+		F51D7A682523A02F003AF4EB /* HomeServicesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeServicesCollectionViewCell.swift; sourceTree = "<group>"; };
+		F51D7A692523A02F003AF4EB /* HomeServicesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeServicesCollectionViewCell.xib; sourceTree = "<group>"; };
+		F51D7A6F2523B5F2003AF4EB /* ChooseServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseServiceViewController.swift; sourceTree = "<group>"; };
+		F51D7A702523B5F2003AF4EB /* ChooseServiceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChooseServiceViewController.xib; sourceTree = "<group>"; };
 		F5293EA824D9941F00CA7E87 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		F5293EA924D9941F00CA7E87 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		F5293EAD24D9AA8000CA7E87 /* RegisterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterProtocol.swift; sourceTree = "<group>"; };
@@ -633,6 +641,10 @@
 				920C277E24E4290600047D14 /* HomeLandingViewController.xib */,
 				F564EC5B25166EE40064B13E /* HomeBannerCollectionViewCell.swift */,
 				F564EC5C25166EE40064B13E /* HomeBannerCollectionViewCell.xib */,
+				F51D7A682523A02F003AF4EB /* HomeServicesCollectionViewCell.swift */,
+				F51D7A692523A02F003AF4EB /* HomeServicesCollectionViewCell.xib */,
+				F51D7A6F2523B5F2003AF4EB /* ChooseServiceViewController.swift */,
+				F51D7A702523B5F2003AF4EB /* ChooseServiceViewController.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -1208,11 +1220,13 @@
 				92D79F4D24850166004C4701 /* SampleProfileDetailViewController.xib in Resources */,
 				9227A24A24CFE479004F7952 /* Inter-Thin.ttf in Resources */,
 				F564EC5E25166EE40064B13E /* HomeBannerCollectionViewCell.xib in Resources */,
+				F51D7A722523B5F2003AF4EB /* ChooseServiceViewController.xib in Resources */,
 				9227A24724CFE479004F7952 /* Inter-Medium.ttf in Resources */,
 				9227A24624CFE479004F7952 /* Inter-Light.ttf in Resources */,
 				F5293EAB24D9941F00CA7E87 /* RegisterViewController.xib in Resources */,
 				9227A24224CFE474004F7952 /* Inter-Black.ttf in Resources */,
 				F564EC5525166A120064B13E /* HomeAsset.xcassets in Resources */,
+				F51D7A6B2523A02F003AF4EB /* HomeServicesCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1337,6 +1351,7 @@
 				92D79F5024852CC2004C4701 /* Log.swift in Sources */,
 				1EB0168824DC871600C76109 /* ProfileSubPath.swift in Sources */,
 				92D79F0E2483E88C004C4701 /* SampleHomeDetailViewController.swift in Sources */,
+				F51D7A712523B5F2003AF4EB /* ChooseServiceViewController.swift in Sources */,
 				92D79F3E2484DB7F004C4701 /* SampleProfileProtocol.swift in Sources */,
 				920C3F6724A7D23900AF75AE /* SampleProfileCoordinatorProtocol.swift in Sources */,
 				9201315124B4E3BC002303D0 /* BuildConfiguration.swift in Sources */,
@@ -1409,6 +1424,7 @@
 				8A7D861224D0178D00C87610 /* LoginViewController.swift in Sources */,
 				92C77C6824971985004C1D86 /* NetworkType.swift in Sources */,
 				8A76A33424CEB3EB00F02AD9 /* InitialScreenViewController.swift in Sources */,
+				F51D7A6A2523A02F003AF4EB /* HomeServicesCollectionViewCell.swift in Sources */,
 				8A7D861D24D02BCE00C87610 /* LoginProtocol.swift in Sources */,
 				F564EC5D25166EE40064B13E /* HomeBannerCollectionViewCell.swift in Sources */,
 				8AA7015024DBE8DF00EEAADE /* LoginResponse.swift in Sources */,
