@@ -144,6 +144,9 @@
 		F5293EAB24D9941F00CA7E87 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5293EA924D9941F00CA7E87 /* RegisterViewController.xib */; };
 		F5293EAE24D9AA8000CA7E87 /* RegisterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5293EAD24D9AA8000CA7E87 /* RegisterProtocol.swift */; };
 		F5293EB024D9AA8F00CA7E87 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5293EAF24D9AA8F00CA7E87 /* RegisterViewModel.swift */; };
+		F564EC5525166A120064B13E /* HomeAsset.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F564EC5425166A120064B13E /* HomeAsset.xcassets */; };
+		F564EC5D25166EE40064B13E /* HomeBannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F564EC5B25166EE40064B13E /* HomeBannerCollectionViewCell.swift */; };
+		F564EC5E25166EE40064B13E /* HomeBannerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F564EC5C25166EE40064B13E /* HomeBannerCollectionViewCell.xib */; };
 		F5758BDA24DFA385007E2517 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5758BD924DFA385007E2517 /* AuthService.swift */; };
 		F595D9EC24E280CA006DD353 /* RegisterViewModel+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = F595D9EB24E280CA006DD353 /* RegisterViewModel+Network.swift */; };
 		F5A0448324ED6C060020D729 /* RegisterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A0448224ED6C060020D729 /* RegisterTests.swift */; };
@@ -336,6 +339,9 @@
 		F5293EA924D9941F00CA7E87 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		F5293EAD24D9AA8000CA7E87 /* RegisterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterProtocol.swift; sourceTree = "<group>"; };
 		F5293EAF24D9AA8F00CA7E87 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		F564EC5425166A120064B13E /* HomeAsset.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = HomeAsset.xcassets; sourceTree = "<group>"; };
+		F564EC5B25166EE40064B13E /* HomeBannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBannerCollectionViewCell.swift; sourceTree = "<group>"; };
+		F564EC5C25166EE40064B13E /* HomeBannerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeBannerCollectionViewCell.xib; sourceTree = "<group>"; };
 		F5758BD924DFA385007E2517 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		F595D9EB24E280CA006DD353 /* RegisterViewModel+Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RegisterViewModel+Network.swift"; sourceTree = "<group>"; };
 		F5A0448224ED6C060020D729 /* RegisterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegisterTests.swift; path = MainApp/Feature/Auth/Register/RegisterTests.swift; sourceTree = SOURCE_ROOT; };
@@ -620,11 +626,13 @@
 		923249A524C0400000FDFC3E /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				923249AA24C0406500FDFC3E /* Resources */,
+				F564EC53251669EF0064B13E /* Resources */,
 				920C277724E428ED00047D14 /* HomeLandingViewModel.swift */,
 				920C277B24E428F600047D14 /* HomeLandingProtocol.swift */,
 				920C277D24E4290600047D14 /* HomeLandingViewController.swift */,
 				920C277E24E4290600047D14 /* HomeLandingViewController.xib */,
+				F564EC5B25166EE40064B13E /* HomeBannerCollectionViewCell.swift */,
+				F564EC5C25166EE40064B13E /* HomeBannerCollectionViewCell.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -662,13 +670,6 @@
 				920C25CC24E3A03000047D14 /* RegisterSubPath.swift */,
 			);
 			path = Auth;
-			sourceTree = "<group>";
-		};
-		923249AA24C0406500FDFC3E /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 		923249AB24C0406B00FDFC3E /* Resources */ = {
@@ -1065,6 +1066,14 @@
 			path = Register;
 			sourceTree = "<group>";
 		};
+		F564EC53251669EF0064B13E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F564EC5425166A120064B13E /* HomeAsset.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1198,10 +1207,12 @@
 				9227A24524CFE479004F7952 /* Inter-ExtraLight.ttf in Resources */,
 				92D79F4D24850166004C4701 /* SampleProfileDetailViewController.xib in Resources */,
 				9227A24A24CFE479004F7952 /* Inter-Thin.ttf in Resources */,
+				F564EC5E25166EE40064B13E /* HomeBannerCollectionViewCell.xib in Resources */,
 				9227A24724CFE479004F7952 /* Inter-Medium.ttf in Resources */,
 				9227A24624CFE479004F7952 /* Inter-Light.ttf in Resources */,
 				F5293EAB24D9941F00CA7E87 /* RegisterViewController.xib in Resources */,
 				9227A24224CFE474004F7952 /* Inter-Black.ttf in Resources */,
+				F564EC5525166A120064B13E /* HomeAsset.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1399,6 +1410,7 @@
 				92C77C6824971985004C1D86 /* NetworkType.swift in Sources */,
 				8A76A33424CEB3EB00F02AD9 /* InitialScreenViewController.swift in Sources */,
 				8A7D861D24D02BCE00C87610 /* LoginProtocol.swift in Sources */,
+				F564EC5D25166EE40064B13E /* HomeBannerCollectionViewCell.swift in Sources */,
 				8AA7015024DBE8DF00EEAADE /* LoginResponse.swift in Sources */,
 				920C277524E41BAE00047D14 /* FontManager.swift in Sources */,
 				9227A34124D293D5004F7952 /* FirebaseHandler.swift in Sources */,
@@ -1591,7 +1603,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WPQ9HAVPNV;
+				DEVELOPMENT_TEAM = H8N3YN4QX8;
 				INFOPLIST_FILE = MainApp/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1610,7 +1622,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WPQ9HAVPNV;
+				DEVELOPMENT_TEAM = H8N3YN4QX8;
 				INFOPLIST_FILE = MainApp/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1630,7 +1642,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WPQ9HAVPNV;
+				DEVELOPMENT_TEAM = H8N3YN4QX8;
 				INFOPLIST_FILE = MainAppTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1653,7 +1665,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WPQ9HAVPNV;
+				DEVELOPMENT_TEAM = H8N3YN4QX8;
 				INFOPLIST_FILE = MainAppTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
