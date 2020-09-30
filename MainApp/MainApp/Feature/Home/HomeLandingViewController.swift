@@ -38,7 +38,7 @@ class HomeLandingViewController: MasterViewController, HomeLandingViewProtocol {
         setPageControl()
         setBannerCollectionView()
         setServiceCollectionView()
-        //setLocationManager()
+        setLocationManager()
     }
     
     @IBAction func chooseServiceBtn(_ sender: Any) {
