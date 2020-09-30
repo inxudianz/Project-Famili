@@ -14,6 +14,8 @@ enum ProfileService {
     case saveProfileRequest
     case getPrivacyPolicyRequest
     case getTermsOfServiceRequest
+    case getHelpCenterRequest
+    case getHelpCenterDetailRequest
 }
 
 extension ProfileService: NetworkType {
@@ -31,7 +33,12 @@ extension ProfileService: NetworkType {
             return ProfilePath.profile.rawValue + ProfileSubPath.policy.rawValue
         case .getTermsOfServiceRequest:
             return ProfilePath.profile.rawValue + ProfileSubPath.tos.rawValue
+        case .getHelpCenterRequest:
+            return ProfilePath.profile.rawValue + ProfileSubPath.help.rawValue
+        case .getHelpCenterDetailRequest:
+            return ProfilePath.profile.rawValue + ProfileSubPath.helpDetail.rawValue
         }
+       
     }
     
     var method: HTTPMethod {
@@ -43,6 +50,10 @@ extension ProfileService: NetworkType {
         case .getPrivacyPolicyRequest:
             return .get
         case .getTermsOfServiceRequest:
+            return .get
+        case .getHelpCenterRequest:
+            return .get
+        case .getHelpCenterDetailRequest:
             return .get
         }
     }
@@ -57,7 +68,12 @@ extension ProfileService: NetworkType {
             return .plainRequest
         case .getTermsOfServiceRequest:
             return .plainRequest
+        case .getHelpCenterRequest:
+            return .plainRequest
+        case .getHelpCenterDetailRequest:
+            return .plainRequest
         }
+        
     }
     
     var headers: HTTPHeaders {

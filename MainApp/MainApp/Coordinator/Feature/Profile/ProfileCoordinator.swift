@@ -49,7 +49,25 @@ class ProfileCoordinator: ProfileCoordinatorProtocol {
     }
     
     func navigateToHelpScreen() {
-        Log.info(message: "Upcoming")
+        let vc = HelpCenterViewController()
+        let vm = HelpCenterViewModel()
+        vm.coordinator = self
+        vm.view = vc
+        vc.viewModel = vm
+        
+        navigationController?.navigationBar.configure()
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func navigateToHelpCenterDetail(){
+        let vc = HelpCenterDetailViewController()
+        let vm = HelpCenterDetailViewModel()
+        vm.coordinator = self
+        vm.view = vc
+        vc.viewModel = vm
+        
+        navigationController?.navigationBar.configure()
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     func navigateToTOS() {

@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A15428425208AED007245AB /* HelpCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A15428225208AED007245AB /* HelpCenterViewController.swift */; };
+		8A15428525208AED007245AB /* HelpCenterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A15428325208AED007245AB /* HelpCenterViewController.xib */; };
+		8A15428725208B68007245AB /* HelpCenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A15428625208B68007245AB /* HelpCenterProtocol.swift */; };
+		8A15428925208B72007245AB /* HelpCenterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A15428825208B72007245AB /* HelpCenterViewModel.swift */; };
+		8A15428B25208B85007245AB /* HelpCenterDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A15428A25208B85007245AB /* HelpCenterDataSource.swift */; };
+		8A15428F25208C21007245AB /* HelpCenterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A15428D25208C21007245AB /* HelpCenterDetailViewController.swift */; };
+		8A15429025208C21007245AB /* HelpCenterDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A15428E25208C21007245AB /* HelpCenterDetailViewController.xib */; };
+		8A15429225208C79007245AB /* HelpCenterDetailProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A15429125208C79007245AB /* HelpCenterDetailProtocol.swift */; };
+		8A15429525208C8B007245AB /* HelpCenterDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A15429425208C8B007245AB /* HelpCenterDetailViewModel.swift */; };
+		8A15429725208CB8007245AB /* HelpCenterDetailNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A15429625208CB8007245AB /* HelpCenterDetailNetwork.swift */; };
+		8A15429925208CCC007245AB /* HelpCenterNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A15429825208CCC007245AB /* HelpCenterNetwork.swift */; };
+		8A326E6F2524CEBB00C6D352 /* HelpCenterDetailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A326E6E2524CEBA00C6D352 /* HelpCenterDetailTests.swift */; };
 		92CA2AAD251B715800920B21 /* AppCoordinator+FeatureCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CA29CC251B715700920B21 /* AppCoordinator+FeatureCoordinator.swift */; };
 		92CA2AAE251B715800920B21 /* BuildConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CA29CD251B715700920B21 /* BuildConfiguration.swift */; };
 		92CA2AAF251B715800920B21 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CA29CE251B715700920B21 /* AppCoordinator.swift */; };
@@ -208,6 +220,18 @@
 /* Begin PBXFileReference section */
 		3304A088087BD629641C29A2 /* Pods_MainAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MainAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		890F374CBAEFBDEFACC50A10 /* Pods-MainApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MainApp.debug.xcconfig"; path = "Target Support Files/Pods-MainApp/Pods-MainApp.debug.xcconfig"; sourceTree = "<group>"; };
+		8A15428225208AED007245AB /* HelpCenterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCenterViewController.swift; sourceTree = "<group>"; };
+		8A15428325208AED007245AB /* HelpCenterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HelpCenterViewController.xib; sourceTree = "<group>"; };
+		8A15428625208B68007245AB /* HelpCenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCenterProtocol.swift; sourceTree = "<group>"; };
+		8A15428825208B72007245AB /* HelpCenterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCenterViewModel.swift; sourceTree = "<group>"; };
+		8A15428A25208B85007245AB /* HelpCenterDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCenterDataSource.swift; sourceTree = "<group>"; };
+		8A15428D25208C21007245AB /* HelpCenterDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCenterDetailViewController.swift; sourceTree = "<group>"; };
+		8A15428E25208C21007245AB /* HelpCenterDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HelpCenterDetailViewController.xib; sourceTree = "<group>"; };
+		8A15429125208C79007245AB /* HelpCenterDetailProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCenterDetailProtocol.swift; sourceTree = "<group>"; };
+		8A15429425208C8B007245AB /* HelpCenterDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCenterDetailViewModel.swift; sourceTree = "<group>"; };
+		8A15429625208CB8007245AB /* HelpCenterDetailNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCenterDetailNetwork.swift; sourceTree = "<group>"; };
+		8A15429825208CCC007245AB /* HelpCenterNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCenterNetwork.swift; sourceTree = "<group>"; };
+		8A326E6E2524CEBA00C6D352 /* HelpCenterDetailTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCenterDetailTests.swift; sourceTree = "<group>"; };
 		92913BB8248D07C8002D961D /* Component.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Component.xcodeproj; path = ../Component/Component.xcodeproj; sourceTree = "<group>"; };
 		92CA29CC251B715700920B21 /* AppCoordinator+FeatureCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppCoordinator+FeatureCoordinator.swift"; sourceTree = "<group>"; };
 		92CA29CD251B715700920B21 /* BuildConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildConfiguration.swift; sourceTree = "<group>"; };
@@ -408,6 +432,32 @@
 			);
 			name = Pods;
 			path = ../Pods;
+			sourceTree = "<group>";
+		};
+		8A15427D25208ABB007245AB /* HelpCenter */ = {
+			isa = PBXGroup;
+			children = (
+				8A15428C25208C0F007245AB /* HelpCenterDetail */,
+				8A15428225208AED007245AB /* HelpCenterViewController.swift */,
+				8A15428325208AED007245AB /* HelpCenterViewController.xib */,
+				8A15428625208B68007245AB /* HelpCenterProtocol.swift */,
+				8A15428825208B72007245AB /* HelpCenterViewModel.swift */,
+				8A15428A25208B85007245AB /* HelpCenterDataSource.swift */,
+				8A15429825208CCC007245AB /* HelpCenterNetwork.swift */,
+			);
+			path = HelpCenter;
+			sourceTree = "<group>";
+		};
+		8A15428C25208C0F007245AB /* HelpCenterDetail */ = {
+			isa = PBXGroup;
+			children = (
+				8A15428D25208C21007245AB /* HelpCenterDetailViewController.swift */,
+				8A15428E25208C21007245AB /* HelpCenterDetailViewController.xib */,
+				8A15429125208C79007245AB /* HelpCenterDetailProtocol.swift */,
+				8A15429425208C8B007245AB /* HelpCenterDetailViewModel.swift */,
+				8A15429625208CB8007245AB /* HelpCenterDetailNetwork.swift */,
+			);
+			path = HelpCenterDetail;
 			sourceTree = "<group>";
 		};
 		92913BB9248D07C8002D961D /* Products */ = {
@@ -854,6 +904,7 @@
 		92CA2A60251B715800920B21 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				8A15427D25208ABB007245AB /* HelpCenter */,
 				92CA2A61251B715800920B21 /* EditProfile */,
 				92CA2A67251B715800920B21 /* Terms of Service */,
 				92CA2A6D251B715800920B21 /* Resources */,
@@ -1049,6 +1100,7 @@
 				92CA2AA6251B715800920B21 /* PrivacyPolicyTests.swift */,
 				92CA2AA8251B715800920B21 /* EditProfileTests.swift */,
 				92CA2AA9251B715800920B21 /* ProfileLandingTests.swift */,
+				8A326E6E2524CEBA00C6D352 /* HelpCenterDetailTests.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -1218,10 +1270,12 @@
 				92CA2AD7251B715800920B21 /* Inter-Thin.ttf in Resources */,
 				92CA2B05251B715800920B21 /* HomeLandingViewController.xib in Resources */,
 				92CA2B0B251B715800920B21 /* Auth.xcassets in Resources */,
+				8A15428525208AED007245AB /* HelpCenterViewController.xib in Resources */,
 				92CA2AD5251B715800920B21 /* Inter-Medium.ttf in Resources */,
 				92CA2ADC251B715800920B21 /* Inter-Black.ttf in Resources */,
 				92CA2B42251B715800920B21 /* Localizable.strings in Resources */,
 				92CA2B22251B715800920B21 /* ProfileAsset.xcassets in Resources */,
+				8A15429025208C21007245AB /* HelpCenterDetailViewController.xib in Resources */,
 				92CA2B07251B715800920B21 /* SplashAsset.xcassets in Resources */,
 				92CA2ADB251B715800920B21 /* Inter-ExtraLight.ttf in Resources */,
 				92CA2B3F251B715800920B21 /* SampleHomeViewController.xib in Resources */,
@@ -1352,6 +1406,7 @@
 			files = (
 				92CA2B41251B715800920B21 /* SampleHomeViewController.swift in Sources */,
 				92CA2B3D251B715800920B21 /* SampleHomeDetailViewController.swift in Sources */,
+				8A15428425208AED007245AB /* HelpCenterViewController.swift in Sources */,
 				92CA2B10251B715800920B21 /* RegisterViewController.swift in Sources */,
 				92CA2AEC251B715800920B21 /* AuthPath.swift in Sources */,
 				92CA2AF6251B715800920B21 /* AuthService.swift in Sources */,
@@ -1359,6 +1414,7 @@
 				92CA2AEB251B715800920B21 /* HTTPTask.swift in Sources */,
 				92CA2AC7251B715800920B21 /* RemoteConfig.swift in Sources */,
 				92CA2AD4251B715800920B21 /* AppDelegate.swift in Sources */,
+				8A15428925208B72007245AB /* HelpCenterViewModel.swift in Sources */,
 				92CA2AC3251B715800920B21 /* SampleProfileCoordinator.swift in Sources */,
 				92CA2B1D251B715800920B21 /* TermsOfServiceViewModel.swift in Sources */,
 				92CA2AC6251B715800920B21 /* Coordinator.swift in Sources */,
@@ -1370,7 +1426,9 @@
 				92CA2B3A251B715800920B21 /* SampleHomeDetailViewModel.swift in Sources */,
 				92CA2AF4251B715800920B21 /* NetworkService.swift in Sources */,
 				92CA2B39251B715800920B21 /* SampleHomeViewModel.swift in Sources */,
+				8A15429525208C8B007245AB /* HelpCenterDetailViewModel.swift in Sources */,
 				92CA2B1E251B715800920B21 /* TermsOfServiceViewModel+Network.swift in Sources */,
+				8A15429925208CCC007245AB /* HelpCenterNetwork.swift in Sources */,
 				92CA2B0A251B715800920B21 /* InitialScreenProtocol.swift in Sources */,
 				92CA2AB9251B715800920B21 /* AuthCoordinator.swift in Sources */,
 				92CA2AF7251B715800920B21 /* LoginService.swift in Sources */,
@@ -1385,6 +1443,7 @@
 				92CA2B09251B715800920B21 /* InitialScreenViewController.swift in Sources */,
 				92CA2B2F251B715800920B21 /* PrivacyPolicyViewModel+Network.swift in Sources */,
 				92CA2AEF251B715800920B21 /* ProfilePath.swift in Sources */,
+				8A15428F25208C21007245AB /* HelpCenterDetailViewController.swift in Sources */,
 				92CA2B02251B715800920B21 /* HomeLandingProtocol.swift in Sources */,
 				92CA2B3E251B715800920B21 /* SampleHomeProtocol.swift in Sources */,
 				92CA2AB5251B715800920B21 /* HomeCoordinator.swift in Sources */,
@@ -1439,6 +1498,7 @@
 				92CA2B11251B715800920B21 /* RegisterViewModel.swift in Sources */,
 				92CA2AFD251B715800920B21 /* AuthNetwork.swift in Sources */,
 				92CA2AE6251B715800920B21 /* EmptyModel.swift in Sources */,
+				8A15428B25208B85007245AB /* HelpCenterDataSource.swift in Sources */,
 				92CA2B00251B715800920B21 /* ProfileNetwork.swift in Sources */,
 				92CA2AB8251B715800920B21 /* InitialScreenCoordinatorProtocol.swift in Sources */,
 				92CA2B03251B715800920B21 /* HomeLandingViewController.swift in Sources */,
@@ -1451,6 +1511,7 @@
 				92CA2AB0251B715800920B21 /* Appcoordinator+BuildConfiguration.swift in Sources */,
 				92CA2AB6251B715800920B21 /* HomeCoordinatorProtocol.swift in Sources */,
 				92CA2AE1251B715800920B21 /* EmptyResponse.swift in Sources */,
+				8A15429725208CB8007245AB /* HelpCenterDetailNetwork.swift in Sources */,
 				92CA2AB1251B715800920B21 /* AppCoordinator+Firebase.swift in Sources */,
 				92CA2B01251B715800920B21 /* HomeNetwork.swift in Sources */,
 				92CA2AAE251B715800920B21 /* BuildConfiguration.swift in Sources */,
@@ -1458,6 +1519,8 @@
 				92CA2AB4251B715800920B21 /* CoordinatorState.swift in Sources */,
 				92CA2B14251B715800920B21 /* LoginViewModel+Network.swift in Sources */,
 				92CA2B0C251B715800920B21 /* AuthConstant.swift in Sources */,
+				8A15428725208B68007245AB /* HelpCenterProtocol.swift in Sources */,
+				8A15429225208C79007245AB /* HelpCenterDetailProtocol.swift in Sources */,
 				92CA2B34251B715800920B21 /* SampleProfileViewController.swift in Sources */,
 				92CA2B38251B715800920B21 /* SampleProfileDetailViewController.swift in Sources */,
 				92CA2AE2251B715800920B21 /* RegisterResponse.swift in Sources */,
@@ -1482,6 +1545,7 @@
 				92CA2C85251B746C00920B21 /* TermsOfServiceTests.swift in Sources */,
 				92CA2C91251B748900920B21 /* LoginTests.swift in Sources */,
 				92CA2C8A251B747B00920B21 /* EditProfileTests.swift in Sources */,
+				8A326E6F2524CEBB00C6D352 /* HelpCenterDetailTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

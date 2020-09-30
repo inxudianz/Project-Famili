@@ -1,8 +1,8 @@
 //
-//  PrivacyPolicyTests.swift
+//  HelpCenterDetailTests.swift
 //  MainAppTests
 //
-//  Created by Owen Prasetya on 21/09/20.
+//  Created by Evan Christian on 30/09/20.
 //  Copyright © 2020 William Inx. All rights reserved.
 //
 
@@ -11,12 +11,12 @@ import Nimble
 
 @testable import MainApp
 
-class PrivacyPolicyViewMock: PrivacyPolicyViewProtocol {
-    var viewModel: PrivacyPolicyViewModelProtocol?
+class HelpCenterDetailMock: HelpCenterDetailViewProtocol {
+    var viewModel: HelpCenterDetailViewModelProtocol?
     
-    var isUpdatePrivacyPolicyText = false
-    func updatePrivacyPolicyText(policy text: String) {
-        isUpdatePrivacyPolicyText = true
+    var isUpdateHelpCenterDetailBodyText = false
+    func updateHelpCenterDetailBodyText(text body: String) {
+        isUpdateHelpCenterDetailBodyText = true
     }
     
     var isShowLoading = false
@@ -30,7 +30,7 @@ class PrivacyPolicyViewMock: PrivacyPolicyViewProtocol {
     }
 }
 
-class PrivacyPolicyCoordinatorMock: ProfileCoordinatorProtocol {
+class HelpCenterDetailCoordinatorMock: ProfileCoordinatorProtocol {
     var parentCoordinator: Coordinator?
     var childCoordinators: [Coordinator] = []
     
@@ -38,12 +38,7 @@ class PrivacyPolicyCoordinatorMock: ProfileCoordinatorProtocol {
     
     var isStarted = false
     func start() {
-       isStarted = true
-    }
-
-    var isStopped = false
-    func stop() {
-       isStopped = true
+        isStarted = true
     }
     
     var isSaveEditProfile = false
@@ -55,22 +50,22 @@ class PrivacyPolicyCoordinatorMock: ProfileCoordinatorProtocol {
     func navigateToEditProfile() {
         isNavigateToEditProfile = true
     }
-
+    
     var isNavigateToHelp = false
     func navigateToHelpScreen() {
         isNavigateToHelp = true
     }
-
+    
     var isNavigateToTOS = false
     func navigateToTOS() {
         isNavigateToTOS = true
     }
-
+    
     var isNavigateToPrivacyPolicy = false
     func navigateToPrivacyPolicy() {
         isNavigateToPrivacyPolicy = true
     }
-
+    
     var isNavigateToRate = false
     func navigateToRate() {
         isNavigateToRate = true
@@ -82,11 +77,12 @@ class PrivacyPolicyCoordinatorMock: ProfileCoordinatorProtocol {
     }
 }
 
-class PrivacyPolicyNetworkMock: ProfileNetworkProtocol {
-    var retrieveTermsOfServiceDelegate: RetrieveTermsOfServiceDelegate?
-    var retrievePrivacyPolicyDelegate: RetrievePrivacyPolicyDelegate?
+class HelpCenterDetailNetworkMock: ProfileNetworkProtocol {
+    
     var retrieveProfileDelegate: RetrieveProfileDelegate?
     var editProfileDelegate: EditProfileDelegate?
+    var retrieveTermsOfServiceDelegate: RetrieveTermsOfServiceDelegate?
+    var retrievePrivacyPolicyDelegate: RetrievePrivacyPolicyDelegate?
     var retrieveHelpCenterDetailDelegate: RetrieveHelpCenterDetailDelegate?
     
     var isProfileGet = false
@@ -99,14 +95,14 @@ class PrivacyPolicyNetworkMock: ProfileNetworkProtocol {
         isProfileEditPost = true
     }
     
-    var isPrivacyPolicyGet = false
-    func privacyPolicyGet() {
-        isPrivacyPolicyGet = true
-    }
-    
     var isTermsOfServiceGet = false
     func termsOfServiceGet() {
         isTermsOfServiceGet = true
+    }
+    
+    var isPrivacyPolicyGet = false
+    func privacyPolicyGet() {
+        isPrivacyPolicyGet = true
     }
     
     var isHelpCenterGet = false
@@ -120,41 +116,41 @@ class PrivacyPolicyNetworkMock: ProfileNetworkProtocol {
     }
 }
 
-class PrivacyPolicyTests: QuickSpec {
+class HelpCenterDetailTests: QuickSpec {
     override func spec() {
         describe("ViewModel") {
-            var sut: PrivacyPolicyViewModel!
-            var view: PrivacyPolicyViewMock!
-            var coordinator: PrivacyPolicyCoordinatorMock!
-            var network: PrivacyPolicyNetworkMock!
-
+            var sut: HelpCenterDetailViewModel!
+            var view: HelpCenterDetailMock!
+            var coordinator: HelpCenterDetailCoordinatorMock!
+            var network: HelpCenterDetailNetworkMock!
+            
             beforeEach {
-                view = PrivacyPolicyViewMock()
-                coordinator = PrivacyPolicyCoordinatorMock()
-                network = PrivacyPolicyNetworkMock()
-
-                sut = PrivacyPolicyViewModel()
+                view = HelpCenterDetailMock()
+                coordinator = HelpCenterDetailCoordinatorMock()
+                network = HelpCenterDetailNetworkMock()
+                
+                sut = HelpCenterDetailViewModel()
                 sut.view = view
                 sut.coordinator = coordinator
                 sut.network = network
             }
             
-            context("Function getPrivacyPolicy is called") {
-                it("without error") {
-                    sut.getPrivacyPolicy()
+            context("Function getHelpCenterDetail is called") {
+                it("Without error") {
+                    sut.getHelpCenterDetail()
                     expect(view.isShowLoading).to(beTrue())
-                    expect(network.isPrivacyPolicyGet).to(beTrue())
+                    expect(network.isHelpCenterDetailGet).to(beTrue())
                 }
             }
-            
             context("Function viewDidLoad is called") {
                 it("Without error") {
                     sut.viewDidLoad()
                     expect(view.isShowLoading).to(beTrue())
-                    expect(network.isPrivacyPolicyGet).to(beTrue())
+                    expect(network.isHelpCenterDetailGet).to(beTrue())
                 }
             }
         }
     }
 }
+
 
