@@ -22,24 +22,32 @@
                 <outlet property="acceptedArrowImg" destination="qJr-4s-X76" id="12u-WW-HGM"/>
                 <outlet property="acceptedContentView" destination="Y6d-ue-JkQ" id="VJ4-gN-PuC"/>
                 <outlet property="acceptedEmptyView" destination="U1d-5W-tvh" id="bi7-ap-ueZ"/>
+                <outlet property="acceptedHeaderView" destination="fTA-JZ-ldq" id="JV0-8N-OZe"/>
                 <outlet property="acceptedHeightTableViewConstraint" destination="aYZ-iZ-699" id="d6h-u8-uzW"/>
                 <outlet property="acceptedRoundedImg" destination="S5M-BR-bGL" id="hsd-ul-rcY"/>
                 <outlet property="acceptedTableView" destination="tnJ-rQ-FdM" id="upl-fY-1YB"/>
                 <outlet property="doneArrowImg" destination="jPj-1b-QDo" id="rCa-y3-W3p"/>
                 <outlet property="doneContentView" destination="Zc3-zk-eC2" id="jFP-Jg-Pjw"/>
                 <outlet property="doneEmptyView" destination="O4k-De-acj" id="MrC-ml-7Sx"/>
+                <outlet property="doneHeaderView" destination="faH-dL-lmD" id="84d-QB-xXH"/>
                 <outlet property="doneHeightTableViewConstraint" destination="jHS-Jq-tiW" id="KsR-fa-afQ"/>
                 <outlet property="doneRoundedImg" destination="psb-Wu-eAG" id="fOa-Jb-0bO"/>
                 <outlet property="doneTableView" destination="lD9-bf-aLH" id="ksW-BK-YnC"/>
+                <outlet property="historyEmptyView" destination="rWW-ad-J2Y" id="3Yj-Kb-q3z"/>
+                <outlet property="historyHeightTableViewConstraint" destination="blY-FB-IDf" id="SDs-HO-k9E"/>
+                <outlet property="historyTableView" destination="KU4-1T-hMv" id="tzV-Gd-xrY"/>
+                <outlet property="historyView" destination="u6n-hz-DIK" id="aQ5-Gg-4Jy"/>
                 <outlet property="processingArrowImg" destination="vr2-fF-afR" id="Gqg-8l-MI2"/>
                 <outlet property="processingContentView" destination="sdJ-Jb-IHD" id="3LI-YB-sI3"/>
                 <outlet property="processingEmptyView" destination="Kwn-FX-a3R" id="Z6v-KY-Jaz"/>
+                <outlet property="processingHeaderView" destination="bfG-Pr-6no" id="rmf-Ae-RJu"/>
                 <outlet property="processingHeightTableViewConstraint" destination="7u3-Mo-6RE" id="TyH-VD-uGH"/>
                 <outlet property="processingRoundedImg" destination="UcE-p7-c0H" id="ExZ-2B-VCS"/>
                 <outlet property="processingTableView" destination="pWQ-iV-b6i" id="Cod-9a-UhJ"/>
                 <outlet property="readyToPickArrowImg" destination="kwR-Ih-Ggw" id="Jfi-bM-xZx"/>
                 <outlet property="readyToPickContentView" destination="0lm-m9-adZ" id="wnR-lg-DdL"/>
                 <outlet property="readyToPickEmptyView" destination="cEE-h7-Bvf" id="2Sh-25-9Hr"/>
+                <outlet property="readyToPickHeaderView" destination="UQV-Q2-BrT" id="21D-W4-0xh"/>
                 <outlet property="readyToPickHeightTableViewConstraint" destination="hto-4P-XFz" id="XTd-Xs-Zal"/>
                 <outlet property="readyToPickRoundedImg" destination="NSa-vG-ngM" id="Iby-1x-wDE"/>
                 <outlet property="readyToPickTableView" destination="OLP-iy-5JV" id="8TF-yK-XJg"/>
@@ -81,6 +89,9 @@
                                                 <segment title="On Going"/>
                                                 <segment title="History"/>
                                             </segments>
+                                            <connections>
+                                                <action selector="segmentedControllerChanged:" destination="-1" eventType="valueChanged" id="2bv-zZ-AOo"/>
+                                            </connections>
                                         </segmentedControl>
                                     </subviews>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -149,7 +160,7 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y6d-ue-JkQ" userLabel="Accepted Content View">
                                     <rect key="frame" x="0.0" y="200" width="414" height="200"/>
                                     <subviews>
-                                        <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tnJ-rQ-FdM">
+                                        <tableView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tnJ-rQ-FdM">
                                             <rect key="frame" x="16" y="16" width="382" height="168"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         </tableView>
@@ -237,7 +248,7 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sdJ-Jb-IHD" userLabel="Processing Content View">
                                     <rect key="frame" x="0.0" y="500" width="414" height="200"/>
                                     <subviews>
-                                        <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pWQ-iV-b6i">
+                                        <tableView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pWQ-iV-b6i">
                                             <rect key="frame" x="16" y="16" width="382" height="168"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         </tableView>
@@ -325,7 +336,7 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0lm-m9-adZ" userLabel="Ready to Pick Content View">
                                     <rect key="frame" x="0.0" y="800" width="414" height="200"/>
                                     <subviews>
-                                        <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OLP-iy-5JV">
+                                        <tableView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OLP-iy-5JV">
                                             <rect key="frame" x="16" y="16" width="382" height="168"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         </tableView>
@@ -413,7 +424,7 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zc3-zk-eC2" userLabel="Done Content View">
                                     <rect key="frame" x="0.0" y="1100" width="414" height="200"/>
                                     <subviews>
-                                        <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lD9-bf-aLH">
+                                        <tableView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lD9-bf-aLH">
                                             <rect key="frame" x="16" y="16" width="382" height="168"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         </tableView>
@@ -427,7 +438,7 @@
                                         <constraint firstAttribute="trailing" secondItem="lD9-bf-aLH" secondAttribute="trailing" constant="16" id="jHn-Zh-RLO"/>
                                     </constraints>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O4k-De-acj" userLabel="Done Content Empty">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O4k-De-acj" userLabel="Done Content Empty View">
                                     <rect key="frame" x="0.0" y="1300" width="414" height="50"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You don’t have item." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U5G-AF-Aeq">
@@ -443,6 +454,50 @@
                                         <constraint firstAttribute="trailing" secondItem="U5G-AF-Aeq" secondAttribute="trailing" constant="33" id="MIK-GB-YRc"/>
                                         <constraint firstItem="U5G-AF-Aeq" firstAttribute="centerY" secondItem="O4k-De-acj" secondAttribute="centerY" id="ief-Rq-dFZ"/>
                                         <constraint firstAttribute="height" constant="50" id="jAC-sa-qDs"/>
+                                    </constraints>
+                                </view>
+                                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u6n-hz-DIK" userLabel="History View">
+                                    <rect key="frame" x="0.0" y="1350" width="414" height="300"/>
+                                    <subviews>
+                                        <tableView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KU4-1T-hMv">
+                                            <rect key="frame" x="16" y="16" width="382" height="268"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        </tableView>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="KU4-1T-hMv" firstAttribute="leading" secondItem="u6n-hz-DIK" secondAttribute="leading" constant="16" id="RxO-Jf-2as"/>
+                                        <constraint firstAttribute="trailing" secondItem="KU4-1T-hMv" secondAttribute="trailing" constant="16" id="Vbk-db-Jh5"/>
+                                        <constraint firstItem="KU4-1T-hMv" firstAttribute="top" secondItem="u6n-hz-DIK" secondAttribute="top" constant="16" id="aqc-i4-Dzf"/>
+                                        <constraint firstAttribute="height" constant="300" id="blY-FB-IDf"/>
+                                        <constraint firstAttribute="bottom" secondItem="KU4-1T-hMv" secondAttribute="bottom" constant="16" id="r9U-ws-Y1K"/>
+                                    </constraints>
+                                </view>
+                                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rWW-ad-J2Y" userLabel="History Empty View">
+                                    <rect key="frame" x="0.0" y="1350" width="414" height="400"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_history_empty" translatesAutoresizingMaskIntoConstraints="NO" id="tea-Rg-r8J">
+                                            <rect key="frame" x="171" y="164" width="72" height="72"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="72" id="Cz2-M5-Oly"/>
+                                                <constraint firstAttribute="height" constant="72" id="yBB-QR-6qX"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have no history order" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eXm-te-RgR">
+                                            <rect key="frame" x="16" y="252" width="382" height="22"/>
+                                            <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="18"/>
+                                            <color key="textColor" red="0.76862745098039209" green="0.76862745098039209" blue="0.76862745098039209" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" red="0.76862745098039209" green="0.76862745098039209" blue="0.76862745098039209" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="eXm-te-RgR" firstAttribute="top" secondItem="tea-Rg-r8J" secondAttribute="bottom" constant="16" id="16k-GP-y1A"/>
+                                        <constraint firstItem="eXm-te-RgR" firstAttribute="leading" secondItem="rWW-ad-J2Y" secondAttribute="leading" constant="16" id="NDw-Ti-BfO"/>
+                                        <constraint firstItem="tea-Rg-r8J" firstAttribute="centerY" secondItem="rWW-ad-J2Y" secondAttribute="centerY" id="kQ9-Th-pFg"/>
+                                        <constraint firstAttribute="trailing" secondItem="eXm-te-RgR" secondAttribute="trailing" constant="16" id="o7E-1Y-400"/>
+                                        <constraint firstItem="tea-Rg-r8J" firstAttribute="centerX" secondItem="rWW-ad-J2Y" secondAttribute="centerX" id="rxe-7Z-cqT"/>
+                                        <constraint firstAttribute="height" constant="400" id="vkW-L0-PeY"/>
                                     </constraints>
                                 </view>
                             </subviews>
@@ -473,6 +528,7 @@
     </objects>
     <resources>
         <image name="ic_arrow_up" width="14.5" height="14.5"/>
+        <image name="ic_history_empty" width="72" height="72"/>
         <image name="ic_rounded_gray" width="20" height="20"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

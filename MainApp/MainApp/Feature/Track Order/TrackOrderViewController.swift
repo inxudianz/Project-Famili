@@ -21,6 +21,7 @@ class TrackOrderViewController: MasterViewController, TrackOrderViewProtocol {
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     
     //Accepted
+    @IBOutlet weak var acceptedHeaderView: UIView!
     @IBOutlet weak var acceptedRoundedImg: UIImageView!
     @IBOutlet weak var totalAcceptedListLbl: UILabel!
     @IBOutlet weak var acceptedArrowImg: UIImageView!
@@ -31,6 +32,7 @@ class TrackOrderViewController: MasterViewController, TrackOrderViewProtocol {
     
     
     //Processing
+    @IBOutlet weak var processingHeaderView: UIView!
     @IBOutlet weak var processingRoundedImg: UIImageView!
     @IBOutlet weak var totalProcessingListLbl: UILabel!
     @IBOutlet weak var processingArrowImg: UIImageView!
@@ -41,6 +43,7 @@ class TrackOrderViewController: MasterViewController, TrackOrderViewProtocol {
     
     
     //Ready To Pick
+    @IBOutlet weak var readyToPickHeaderView: UIView!
     @IBOutlet weak var readyToPickRoundedImg: UIImageView!
     @IBOutlet weak var totalReadyToPickListLbl: UILabel!
     @IBOutlet weak var readyToPickArrowImg: UIImageView!
@@ -50,6 +53,7 @@ class TrackOrderViewController: MasterViewController, TrackOrderViewProtocol {
     @IBOutlet weak var readyToPickHeightTableViewConstraint: NSLayoutConstraint!
     
     //Done
+    @IBOutlet weak var doneHeaderView: UIView!
     @IBOutlet weak var doneRoundedImg: UIImageView!
     @IBOutlet weak var totalDoneListLbl: UILabel!
     @IBOutlet weak var doneArrowImg: UIImageView!
@@ -58,7 +62,11 @@ class TrackOrderViewController: MasterViewController, TrackOrderViewProtocol {
     @IBOutlet weak var doneEmptyView: UIView!
     @IBOutlet weak var doneHeightTableViewConstraint: NSLayoutConstraint!
     
-    
+    //History View
+    @IBOutlet weak var historyView: UIView!
+    @IBOutlet weak var historyEmptyView: UIView!
+    @IBOutlet weak var historyTableView: UITableView!
+    @IBOutlet weak var historyHeightTableViewConstraint: NSLayoutConstraint!
     
     var viewModel: TrackOrderViewModelProtocol?
     
@@ -68,7 +76,9 @@ class TrackOrderViewController: MasterViewController, TrackOrderViewProtocol {
     
     var readyToPickData = [TrackOrderData(laundryName: "Ready To Pick Test 1", laundryAddress: "Jl. Test Ready To Pick 1", date: "JUL 22"), TrackOrderData(laundryName: "Ready To Pick Test 2", laundryAddress: "Jl. Test Ready To Pick 1", date: "MAY 23")]
     
-    var doneData =  [TrackOrderData(laundryName: "Done Test 1", laundryAddress: "Jl. Test Done 1", date: "OCT 20")]
+    var doneData = [TrackOrderData(laundryName: "Done Test 1", laundryAddress: "Jl. Test Done 1", date: "OCT 20")]
+    
+    var historyData = [TrackOrderData(laundryName: "History Test 1", laundryAddress: "Jl. History Done 1", date: "OCT 20"), TrackOrderData(laundryName: "History Test 2", laundryAddress: "Jl. History Done 2", date: "OCT 21"), TrackOrderData(laundryName: "History Test 3", laundryAddress: "Jl. History Done 3", date: "OCT 22")]
     
     
     private var acceptedClicked = false
@@ -81,10 +91,60 @@ class TrackOrderViewController: MasterViewController, TrackOrderViewProtocol {
         
         //deleted soon, to show the view if data == 0
         processingData.removeAll()
+        //historyData.removeAll()
         
         setSegmentedControlView()
         registerCell()
         setTableViewHeightConstraint()
+        
+        historyView.isHidden = true
+        historyEmptyView.isHidden = true
+    }
+    
+    @IBAction func segmentedControllerChanged(_ sender: Any) {
+        switch segmentedControl.selectedSegmentIndex {
+        case 0:
+            historyView.isHidden = true
+            historyEmptyView.isHidden = true
+            
+            acceptedHeaderView.isHidden = false
+            processingHeaderView.isHidden = false
+            readyToPickHeaderView.isHidden = false
+            doneHeaderView.isHidden = false
+            
+            setContentAccepted()
+            setContentProcessing()
+            setContentReadyToPick()
+            setContentDone()
+            
+            acceptedClicked = false
+            acceptedArrowImg.image = UIImage(named: "ic_arrow_up")
+            processingClicked = false
+            processingArrowImg.image = UIImage(named: "ic_arrow_up")
+            readyToPickClicked = false
+            readyToPickArrowImg.image = UIImage(named: "ic_arrow_up")
+            doneClicked = false
+            doneArrowImg.image = UIImage(named: "ic_arrow_up")
+        case 1:
+            acceptedHeaderView.isHidden = true
+            processingHeaderView.isHidden = true
+            readyToPickHeaderView.isHidden = true
+            doneHeaderView.isHidden = true
+            
+            acceptedContentView.isHidden = true
+            processingContentView.isHidden = true
+            readyToPickContentView.isHidden = true
+            doneContentView.isHidden = true
+            
+            acceptedEmptyView.isHidden = true
+            processingEmptyView.isHidden = true
+            readyToPickEmptyView.isHidden = true
+            doneEmptyView.isHidden = true
+            
+            setContentHistory()
+        default:
+            break
+        }
     }
     
     @IBAction func actionAcceptedBtnClicked(_ sender: Any) {
@@ -187,11 +247,14 @@ class TrackOrderViewController: MasterViewController, TrackOrderViewProtocol {
         processingHeightTableViewConstraint.constant = CGFloat(170 * processingData.count)
         readyToPickHeightTableViewConstraint.constant = CGFloat(170 * readyToPickData.count)
         doneHeightTableViewConstraint.constant = CGFloat(170 * doneData.count)
+        historyHeightTableViewConstraint.constant = CGFloat(170 * historyData.count)
+        
         
         acceptedTableView.layoutIfNeeded()
         processingTableView.layoutIfNeeded()
         readyToPickTableView.layoutIfNeeded()
         doneTableView.layoutIfNeeded()
+        historyTableView.layoutIfNeeded()
     }
     
     private func setContentAccepted() {
@@ -219,7 +282,7 @@ class TrackOrderViewController: MasterViewController, TrackOrderViewProtocol {
             processingRoundedImg.image = UIImage(named: "ic_rounded_orange")
         }
         
-        totalProcessingListLbl.text = "\(acceptedData.count)"
+        totalProcessingListLbl.text = "\(processingData.count)"
     }
     
     private func setContentReadyToPick() {
@@ -233,7 +296,7 @@ class TrackOrderViewController: MasterViewController, TrackOrderViewProtocol {
             readyToPickRoundedImg.image = UIImage(named: "ic_rounded_orange")
         }
         
-        totalReadyToPickListLbl.text = "\(acceptedData.count)"
+        totalReadyToPickListLbl.text = "\(readyToPickData.count)"
     }
     
     private func setContentDone() {
@@ -247,7 +310,17 @@ class TrackOrderViewController: MasterViewController, TrackOrderViewProtocol {
             doneRoundedImg.image = UIImage(named: "ic_rounded_orange")
         }
         
-        totalDoneListLbl.text = "\(acceptedData.count)"
+        totalDoneListLbl.text = "\(doneData.count)"
+    }
+    
+    private func setContentHistory() {
+        if historyData.count == 0 {
+            historyEmptyView.isHidden = false
+            historyView.isHidden = true
+        } else {
+            historyEmptyView.isHidden = true
+            historyView.isHidden = false
+        }
     }
 
 }
@@ -261,8 +334,10 @@ extension TrackOrderViewController: UITableViewDelegate, UITableViewDataSource {
             return processingData.count
         } else if tableView == readyToPickTableView {
             return readyToPickData.count
-        } else {
+        } else if tableView == doneTableView {
             return doneData.count
+        } else {
+            return historyData.count
         }
     }
     
@@ -291,6 +366,11 @@ extension TrackOrderViewController: UITableViewDelegate, UITableViewDataSource {
             cell?.laundryNameLbl.text = doneData[indexPath.row].laundryName
             cell?.addressLbl.text = doneData[indexPath.row].laundryAddress
             cell?.dateLbl.text = doneData[indexPath.row].date
+        } else if tableView == historyTableView {
+            setContentHistory()
+            cell?.laundryNameLbl.text = historyData[indexPath.row].laundryName
+            cell?.addressLbl.text = historyData[indexPath.row].laundryAddress
+            cell?.dateLbl.text = historyData[indexPath.row].date
         }
         
         return cell!
@@ -313,5 +393,9 @@ extension TrackOrderViewController: UITableViewDelegate, UITableViewDataSource {
         doneTableView.register(UINib(nibName: "TrackOrderTableViewCell", bundle: nil), forCellReuseIdentifier: "trackOrderCell")
         doneTableView.delegate = self
         doneTableView.dataSource = self
+        
+        historyTableView.register(UINib(nibName: "TrackOrderTableViewCell", bundle: nil), forCellReuseIdentifier: "trackOrderCell")
+        historyTableView.delegate = self
+        historyTableView.dataSource = self
     }
 }
