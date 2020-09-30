@@ -17,4 +17,5 @@ enum CoordinatorFeature: String {
     case splash
     case profile
     case auth
+    case trackOrder
 }

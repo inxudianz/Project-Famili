@@ -15,6 +15,7 @@ struct CoordinatorId {
         "splash" : InitialScreenCoordinator(navigationController: UINavigationController()),
         "profile" : ProfileCoordinator(navigationController: UINavigationController()),
         "auth" : AuthCoordinator(navigationController: UINavigationController()),
-        "home" : HomeCoordinator(navigationController: UINavigationController())
+        "home" : HomeCoordinator(navigationController: UINavigationController()),
+        "trackOrder" : TrackOrderCoordinator(navigationController: UINavigationController())
     ]
 }
