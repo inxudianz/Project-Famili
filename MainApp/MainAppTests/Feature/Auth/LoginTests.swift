@@ -28,6 +28,16 @@ class LoginViewMock: LoginViewProtocol {
     func stopLoading() {
         isStopLoading = true
     }
+    
+    var isShowGoogleSignIn = false
+    func showGoogleSignIn() {
+        isShowGoogleSignIn = true
+    }
+    
+    var isShowFacebookSign = false
+    func showFacebookSignIn() {
+        isShowFacebookSign = true
+    }
 }
 
 class LoginCoordinatorMock: AuthCoordinatorProtocol {
@@ -111,8 +121,16 @@ class LoginTests: QuickSpec {
                 }
             }
             
-//             Function not yet implemented
-//            context("handleLoginButton function is called") {}
+            context("handleLoginButton function is called") {
+                it("return google sign in") {
+                    sut.handleLoginButton(id: .google)
+                    expect(view.isShowGoogleSignIn).to(beTrue())
+                }
+                it("return facebook sign in") {
+                    sut.handleLoginButton(id: .facebook)
+                    expect(view.isShowFacebookSign).to(beTrue())
+                }
+            }
             
             context("isTextsEmpty function is called") {
                 it("return false") {
