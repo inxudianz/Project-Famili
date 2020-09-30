@@ -1942,4 +1942,4 @@
 /* End XCConfigurationList section */
 	};
 	rootObject = 92D79E7E2483E534004C4701 /* Project object */;
-}
+};
