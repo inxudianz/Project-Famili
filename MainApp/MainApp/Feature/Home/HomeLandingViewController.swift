@@ -42,8 +42,8 @@ class HomeLandingViewController: MasterViewController, HomeLandingViewProtocol {
     }
     
     @IBAction func chooseServiceBtn(_ sender: Any) {
-//        let vc = ChooseServiceViewController()
-//        navigationController?.pushViewController(vc, animated: true)
+        let vc = ChooseServiceViewController()
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     func setBannerCollectionView() {
