@@ -164,7 +164,6 @@
 		F5E9A312252651FF00559FDF /* HomeServicesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5E9A306252651FB00559FDF /* HomeServicesCollectionViewCell.xib */; };
 		F5E9A313252651FF00559FDF /* ChooseServiceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5E9A307252651FB00559FDF /* ChooseServiceViewController.xib */; };
 		F5E9A314252651FF00559FDF /* ChooseServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E9A308252651FB00559FDF /* ChooseServiceViewController.swift */; };
-		F5E9A315252651FF00559FDF /* HomeAsset.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5E9A30A252651FB00559FDF /* HomeAsset.xcassets */; };
 		F5E9A316252651FF00559FDF /* HomeLandingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E9A30B252651FC00559FDF /* HomeLandingViewModel.swift */; };
 		F5E9A317252651FF00559FDF /* HomeLandingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E9A30C252651FC00559FDF /* HomeLandingProtocol.swift */; };
 		F5E9A318252651FF00559FDF /* HomeServicesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E9A30D252651FD00559FDF /* HomeServicesCollectionViewCell.swift */; };
@@ -380,7 +379,6 @@
 		F5E9A306252651FB00559FDF /* HomeServicesCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeServicesCollectionViewCell.xib; sourceTree = "<group>"; };
 		F5E9A307252651FB00559FDF /* ChooseServiceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ChooseServiceViewController.xib; path = "../../../../../untitled folder/ChooseServiceViewController.xib"; sourceTree = "<group>"; };
 		F5E9A308252651FB00559FDF /* ChooseServiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChooseServiceViewController.swift; path = "../../../../../untitled folder/ChooseServiceViewController.swift"; sourceTree = "<group>"; };
-		F5E9A30A252651FB00559FDF /* HomeAsset.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = HomeAsset.xcassets; sourceTree = "<group>"; };
 		F5E9A30B252651FC00559FDF /* HomeLandingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeLandingViewModel.swift; sourceTree = "<group>"; };
 		F5E9A30C252651FC00559FDF /* HomeLandingProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeLandingProtocol.swift; sourceTree = "<group>"; };
 		F5E9A30D252651FD00559FDF /* HomeServicesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeServicesCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -804,7 +802,6 @@
 				F5E9A30B252651FC00559FDF /* HomeLandingViewModel.swift */,
 				F5E9A30D252651FD00559FDF /* HomeServicesCollectionViewCell.swift */,
 				F5E9A306252651FB00559FDF /* HomeServicesCollectionViewCell.xib */,
-				F5E9A309252651FB00559FDF /* Resources */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -1115,15 +1112,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F5E9A309252651FB00559FDF /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				F5E9A30A252651FB00559FDF /* HomeAsset.xcassets */,
-			);
-			name = Resources;
-			path = "../../../../../untitled folder/Resources";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1257,7 +1245,6 @@
 				92CA2B3F251B715800920B21 /* SampleHomeViewController.xib in Resources */,
 				92CA2AFA251B715800920B21 /* LaunchScreen.storyboard in Resources */,
 				F5E9A31B252651FF00559FDF /* HomeLandingViewController.xib in Resources */,
-				F5E9A315252651FF00559FDF /* HomeAsset.xcassets in Resources */,
 				92CA2B08251B715800920B21 /* InitialScreenViewController.xib in Resources */,
 				92CA2B2E251B715800920B21 /* PrivacyPolicyViewController.xib in Resources */,
 				92CA2B32251B715800920B21 /* SampleProfileViewController.xib in Resources */,
