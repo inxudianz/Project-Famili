@@ -73,8 +73,12 @@ class ProfileLandingCoordinatorMock: ProfileCoordinatorProtocol {
 }
 
 class ProfileLandingNetworkMock: ProfileNetworkProtocol {
+    var retrievePrivacyPolicyDelegate: RetrievePrivacyPolicyDelegate?
+    
     var retrieveProfileDelegate: RetrieveProfileDelegate?
+    
     var editProfileDelegate: EditProfileDelegate?
+    var retrieveTermsOfServiceDelegate: RetrieveTermsOfServiceDelegate?
     
     var isProfileGet = false
     func profileGet(userId: Int) {
@@ -84,6 +88,15 @@ class ProfileLandingNetworkMock: ProfileNetworkProtocol {
     var isProfileEditPost = false
     func profileEditPost(data: ProfileModel.EditProfile) {
         isProfileEditPost = true
+    }
+    
+    var isPrivacyPolicyGet = false
+    func privacyPolicyGet() {
+        isPrivacyPolicyGet = true
+    }
+    var isTermsOfServiceGet = false
+    func termsOfServiceGet() {
+        isTermsOfServiceGet = true
     }
 }
 
@@ -165,13 +178,13 @@ class ProfileLandingTests: QuickSpec {
                     sut.didSelectforRow(at: .init(row: 1, section: 0))
                     expect(coordinator.isNavigateToHelp).to(beTrue())
                 }
-                it("headerSection is general index is privacy") {
-                    sut.didSelectforRow(at: .init(row: 0, section: 1))
-                    expect(coordinator.isNavigateToPrivacyPolicy).to(beTrue())
-                }
                 it("headerSection is general index is tos") {
-                    sut.didSelectforRow(at: .init(row: 1, section: 1))
+                    sut.didSelectforRow(at: .init(row: 0, section: 1))
                     expect(coordinator.isNavigateToTOS).to(beTrue())
+                }
+                it("headerSection is general index is privacy") {
+                    sut.didSelectforRow(at: .init(row: 1, section: 1))
+                    expect(coordinator.isNavigateToPrivacyPolicy).to(beTrue())
                 }
                 it("headerSection is general index is rate") {
                     sut.didSelectforRow(at: .init(row: 2, section: 1))

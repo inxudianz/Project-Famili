@@ -63,9 +63,11 @@ class EditProfileCoordinatorMock: ProfileCoordinatorProtocol {
 }
 
 class EditProfileNetworkMock: ProfileNetworkProtocol {
-    var retrieveProfileDelegate: RetrieveProfileDelegate?
+    var retrievePrivacyPolicyDelegate: RetrievePrivacyPolicyDelegate?
     
+    var retrieveProfileDelegate: RetrieveProfileDelegate?
     var editProfileDelegate: EditProfileDelegate?
+    var retrieveTermsOfServiceDelegate: RetrieveTermsOfServiceDelegate?
     
     var isProfileGet = false
     func profileGet(userId: Int) {
@@ -77,7 +79,15 @@ class EditProfileNetworkMock: ProfileNetworkProtocol {
         isProfileEditPost = true
     }
     
+    var isPrivacyPolicyGet = false
+    func privacyPolicyGet() {
+        isPrivacyPolicyGet = true
+    }
     
+    var isTermsOfServiceGet = false
+    func termsOfServiceGet() {
+        isTermsOfServiceGet = true
+    }
 }
 
 class EditProfileTests: QuickSpec {

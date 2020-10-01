@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TermsOfServiceViewController" customModule="MainApp" customModuleProvider="target">
+            <connections>
+                <outlet property="tosLabel" destination="ojd-HB-lS7" id="fIz-kk-KGO"/>
+                <outlet property="tosScrollView" destination="bUL-6R-jDE" id="JlP-vt-2be"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bUL-6R-jDE">
+                    <rect key="frame" x="40" y="108" width="339" height="704"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ojd-HB-lS7">
+                            <rect key="frame" x="0.0" y="0.0" width="339" height="704"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="ojd-HB-lS7" firstAttribute="leading" secondItem="Yxg-UI-21E" secondAttribute="leading" id="7Y6-ST-30b"/>
+                        <constraint firstItem="ojd-HB-lS7" firstAttribute="top" secondItem="OrZ-R3-klC" secondAttribute="top" id="88g-bl-aQ9"/>
+                        <constraint firstItem="ojd-HB-lS7" firstAttribute="bottom" secondItem="Yxg-UI-21E" secondAttribute="bottom" id="BGk-3p-wfh"/>
+                        <constraint firstItem="ojd-HB-lS7" firstAttribute="centerX" secondItem="bUL-6R-jDE" secondAttribute="centerX" id="D5H-YY-Qzp"/>
+                        <constraint firstAttribute="trailing" secondItem="ojd-HB-lS7" secondAttribute="trailing" id="VaC-l4-aJT"/>
+                        <constraint firstAttribute="bottom" secondItem="ojd-HB-lS7" secondAttribute="bottom" id="y6d-XM-TlG"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="OrZ-R3-klC"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="Yxg-UI-21E"/>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="bUL-6R-jDE" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="64" id="Z6u-5Z-mnQ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bUL-6R-jDE" secondAttribute="trailing" constant="35" id="cYM-dq-xVX"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="bUL-6R-jDE" secondAttribute="bottom" constant="50" id="eeT-sf-jsy"/>
+                <constraint firstItem="bUL-6R-jDE" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="toG-GL-m8L"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="82.608695652173921" y="132.58928571428572"/>
+        </view>
+    </objects>
+</document>

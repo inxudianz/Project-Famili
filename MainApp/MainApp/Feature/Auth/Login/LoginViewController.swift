@@ -163,6 +163,18 @@ class LoginViewController: MasterViewController, LoginViewProtocol {
     func stopLoading() {
         loadingView.stopLoading()
     }
+    
+    func showGoogleSignIn() {
+        GoogleSDKHandler.Authentication.present(vc: self, isSigning: true, completion: {
+            
+        })
+    }
+    
+    func showFacebookSignIn() {
+        FacebookSDKHandler.Authentication.signIn(with: self) { (result) in
+            Log.debug(message: "Success")
+        }
+    }
 }
 
 extension LoginViewController: LoginButtonDelegate {
