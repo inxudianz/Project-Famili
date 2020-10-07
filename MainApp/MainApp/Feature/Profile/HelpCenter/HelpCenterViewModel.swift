@@ -19,21 +19,27 @@ class HelpCenterViewModel: HelpCenterViewModelProtocol {
     // MARK: - Initialization
     init() {
         self.dataSource = HelpCenterDataSource()
-        populateData()
+        network = ProfileLandingNetwork()
+        network?.retrieveHelpCenterDelegate = self
     }
     
+    // MARK: - Function
     func didSelectRow(at indexPath: IndexPath){
-        print("tapped at \(indexPath)")
-        navigateToHelpCenterDetail()
+        let title = dataSource?.datas?[indexPath.row].title ?? "Title Kosong"
+        let body = dataSource?.datas?[indexPath.row].message ?? "Body Kosong"
+        navigateToHelpCenterDetail(title: title, body: body)
     }
     
-    func navigateToHelpCenterDetail() {
-        coordinator?.navigateToHelpCenterDetail()
+    func navigateToHelpCenterDetail(title: String, body: String) {
+        coordinator?.navigateToHelpCenterDetail(title: title, body: body)
     }
     
-    private func populateData(){
-//        let titles = [HelpConstant.HelpTitle.RawValue.self]
-        let data = [HelpCenterData(title: "HELP 1"), HelpCenterData(title: "HELP 2")]
-        dataSource?.setData(datas: data)
+    func getHelpCenter() {
+        view?.showLoading()
+        network?.helpCenterGet()
+    }
+    
+    func viewDidLoad() {
+        getHelpCenter()
     }
 }

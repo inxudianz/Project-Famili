@@ -12,8 +12,6 @@ import Nimble
 @testable import MainApp
 
 class HelpCenterDetailMock: HelpCenterDetailViewProtocol {
-    var viewModel: HelpCenterDetailViewModelProtocol?
-    
     var isUpdateHelpCenterDetailBodyText = false
     func updateHelpCenterDetailBodyText(text body: String) {
         isUpdateHelpCenterDetailBodyText = true
@@ -72,7 +70,7 @@ class HelpCenterDetailCoordinatorMock: ProfileCoordinatorProtocol {
     }
     
     var isNavigateToHelpCenterDetail = false
-    func navigateToHelpCenterDetail() {
+    func navigateToHelpCenterDetail(title: String, body: String) {
         isNavigateToHelpCenterDetail = true
     }
 }
@@ -83,8 +81,8 @@ class HelpCenterDetailNetworkMock: ProfileNetworkProtocol {
     var editProfileDelegate: EditProfileDelegate?
     var retrieveTermsOfServiceDelegate: RetrieveTermsOfServiceDelegate?
     var retrievePrivacyPolicyDelegate: RetrievePrivacyPolicyDelegate?
-    var retrieveHelpCenterDetailDelegate: RetrieveHelpCenterDetailDelegate?
-    
+    var retrieveHelpCenterDelegate: RetrieveHelpCenterDelegate?
+
     var isProfileGet = false
     func profileGet(userId: Int) {
         isProfileGet = true
@@ -119,7 +117,6 @@ class HelpCenterDetailNetworkMock: ProfileNetworkProtocol {
 class HelpCenterDetailTests: QuickSpec {
     override func spec() {
         describe("ViewModel") {
-            var sut: HelpCenterDetailViewModel!
             var view: HelpCenterDetailMock!
             var coordinator: HelpCenterDetailCoordinatorMock!
             var network: HelpCenterDetailNetworkMock!
@@ -128,26 +125,6 @@ class HelpCenterDetailTests: QuickSpec {
                 view = HelpCenterDetailMock()
                 coordinator = HelpCenterDetailCoordinatorMock()
                 network = HelpCenterDetailNetworkMock()
-                
-                sut = HelpCenterDetailViewModel()
-                sut.view = view
-                sut.coordinator = coordinator
-                sut.network = network
-            }
-            
-            context("Function getHelpCenterDetail is called") {
-                it("Without error") {
-                    sut.getHelpCenterDetail()
-                    expect(view.isShowLoading).to(beTrue())
-                    expect(network.isHelpCenterDetailGet).to(beTrue())
-                }
-            }
-            context("Function viewDidLoad is called") {
-                it("Without error") {
-                    sut.viewDidLoad()
-                    expect(view.isShowLoading).to(beTrue())
-                    expect(network.isHelpCenterDetailGet).to(beTrue())
-                }
             }
         }
     }

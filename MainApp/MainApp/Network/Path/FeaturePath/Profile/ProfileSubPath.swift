@@ -14,5 +14,4 @@ enum ProfileSubPath: String {
     case policy = "policy/"
     case tos = "tos/"
     case help = "help/"
-    case helpDetail = "helpDetail/"
 }

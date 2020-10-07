@@ -13,13 +13,12 @@ protocol ProfileNetworkProtocol {
     var editProfileDelegate: EditProfileDelegate? { get set }
     var retrievePrivacyPolicyDelegate: RetrievePrivacyPolicyDelegate? { get set }
     var retrieveTermsOfServiceDelegate: RetrieveTermsOfServiceDelegate? { get set }
-    var retrieveHelpCenterDetailDelegate: RetrieveHelpCenterDetailDelegate? { get set }
+    var retrieveHelpCenterDelegate: RetrieveHelpCenterDelegate? { get set }
     func profileGet(userId: Int)
     func profileEditPost(data: ProfileModel.EditProfile)
     func termsOfServiceGet()
     func privacyPolicyGet()
     func helpCenterGet()
-    func helpCenterDetailGet()
 }
 
 class ProfileLandingNetwork: ProfileNetworkProtocol {
@@ -28,7 +27,6 @@ class ProfileLandingNetwork: ProfileNetworkProtocol {
     weak var retrievePrivacyPolicyDelegate: RetrievePrivacyPolicyDelegate?
     weak var retrieveTermsOfServiceDelegate: RetrieveTermsOfServiceDelegate?
     weak var retrieveHelpCenterDelegate: RetrieveHelpCenterDelegate?
-    weak var retrieveHelpCenterDetailDelegate: RetrieveHelpCenterDetailDelegate?
     
     private var networkService: NetworkService
     
@@ -88,24 +86,13 @@ class ProfileLandingNetwork: ProfileNetworkProtocol {
         }
     }
     
-    func helpCenterDetailGet(){
-        networkService.request(ProfileService.getHelpCenterDetailRequest, EmptyModel(), ProfileResponse.GetHelpCenterDetailResponse.self) { [weak self] (result) in
-            switch result {
-            case .success(let response):
-                self?.retrieveHelpCenterDetailDelegate?.didSuccessRetrieveHelpCenterDetail(response: response)
-            case .failure(let error):
-                self?.retrieveHelpCenterDetailDelegate?.didFailedRetrieveHelpCenterDetail(error: error)
-            }
-        }
-    }
-    
     func helpCenterGet() {
-        networkService.request(ProfileService.getHelpCenterDetailRequest, EmptyModel(), ProfileResponse.GetHelpCenterDetailResponse.self) { [weak self] (result) in
+        networkService.request(ProfileService.getHelpCenterRequest, EmptyModel(), ProfileResponse.GetHelpCenterResponse.self) { [weak self] (result) in
             switch result {
             case .success(let response):
-                self?.retrieveHelpCenterDetailDelegate?.didSuccessRetrieveHelpCenterDetail(response: response)
+                self?.retrieveHelpCenterDelegate?.didSuccessRetrieveHelpCenter(response: response)
             case .failure(let error):
-                self?.retrieveHelpCenterDetailDelegate?.didFailedRetrieveHelpCenterDetail(error: error)
+                self?.retrieveHelpCenterDelegate?.didFailedRetrieveHelpCenter(error: error)
             }
         }
     }

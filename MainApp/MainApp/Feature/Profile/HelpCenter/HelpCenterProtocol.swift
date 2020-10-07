@@ -14,12 +14,14 @@ protocol HelpCenterViewModelProtocol: class {
     var network: ProfileNetworkProtocol? { get set }
     var dataSource: HelpCenterDataSource? { get set }
     func didSelectRow(at: IndexPath)
-    func navigateToHelpCenterDetail()
+    func navigateToHelpCenterDetail(title: String, body: String)
+    func getHelpCenter()
+    func viewDidLoad()
 }
 
 protocol HelpCenterViewProtocol: class {
     var viewModel: HelpCenterViewModelProtocol? { get set }
-    func updateHelpCenterTitleText(text title: String)
+    func reloadTableData()
     func showLoading()
     func stopLoading()
 }

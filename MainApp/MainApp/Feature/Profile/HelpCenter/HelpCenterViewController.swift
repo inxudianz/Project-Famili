@@ -19,6 +19,7 @@ class HelpCenterViewController: MasterViewController, HelpCenterViewProtocol {
         override func viewDidLoad() {
             super.viewDidLoad()
             setupView()
+            viewModel?.viewDidLoad()
             // Do any additional setup after loading the view.
         }
         
@@ -34,10 +35,11 @@ class HelpCenterViewController: MasterViewController, HelpCenterViewProtocol {
             helpCenterTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
             helpCenterTableView.delegate = self
             helpCenterTableView.dataSource = viewModel?.dataSource
+            helpCenterTableView.tableFooterView = UIView()
         }
-
-        func updateHelpCenterTitleText(text title: String) {
-//            helpCenterTableView.
+        
+        func reloadTableData(){
+            helpCenterTableView.reloadData()
         }
     
         func showLoading() {
@@ -47,15 +49,6 @@ class HelpCenterViewController: MasterViewController, HelpCenterViewProtocol {
         func stopLoading() {
             loadingView.stopLoading()
         }
-        /*
-        // MARK: - Navigation
-
-        // In a storyboard-based application, you will often want to do a little preparation before navigation
-        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            // Get the new view controller using segue.destination.
-            // Pass the selected object to the new view controller.
-        }
-        */
 
     }
 

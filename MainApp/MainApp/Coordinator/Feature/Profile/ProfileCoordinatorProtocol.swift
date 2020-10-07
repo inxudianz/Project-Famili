@@ -12,7 +12,7 @@ protocol ProfileCoordinatorProtocol: Coordinator {
     func navigateToEditProfile()
     func saveEditProfile()
     func navigateToHelpScreen()
-    func navigateToHelpCenterDetail()
+    func navigateToHelpCenterDetail(title: String, body: String)
     func navigateToTOS()
     func navigateToPrivacyPolicy()
     func navigateToRate()

@@ -59,13 +59,11 @@ class ProfileCoordinator: ProfileCoordinatorProtocol {
         navigationController?.pushViewController(vc, animated: true)
     }
     
-    func navigateToHelpCenterDetail(){
+    func navigateToHelpCenterDetail(title: String, body: String){
         let vc = HelpCenterDetailViewController()
-        let vm = HelpCenterDetailViewModel()
-        vm.coordinator = self
-        vm.view = vc
-        vc.viewModel = vm
         
+        vc.helpCenterDetailTitle = title
+        vc.helpCenterDetailBody = body
         navigationController?.navigationBar.configure()
         navigationController?.pushViewController(vc, animated: true)
     }

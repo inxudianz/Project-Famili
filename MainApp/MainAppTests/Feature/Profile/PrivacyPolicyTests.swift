@@ -77,7 +77,7 @@ class PrivacyPolicyCoordinatorMock: ProfileCoordinatorProtocol {
     }
     
     var isNavigateToHelpCenterDetail = false
-    func navigateToHelpCenterDetail() {
+    func navigateToHelpCenterDetail(title: String, body: String) {
         isNavigateToHelpCenterDetail = true
     }
 }
@@ -87,8 +87,8 @@ class PrivacyPolicyNetworkMock: ProfileNetworkProtocol {
     var retrievePrivacyPolicyDelegate: RetrievePrivacyPolicyDelegate?
     var retrieveProfileDelegate: RetrieveProfileDelegate?
     var editProfileDelegate: EditProfileDelegate?
-    var retrieveHelpCenterDetailDelegate: RetrieveHelpCenterDetailDelegate?
-    
+    var retrieveHelpCenterDelegate: RetrieveHelpCenterDelegate?
+
     var isProfileGet = false
     func profileGet(userId: Int) {
         isProfileGet = true

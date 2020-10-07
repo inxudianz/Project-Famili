@@ -16,17 +16,14 @@ class HelpCenterDetailViewController: MasterViewController, HelpCenterDetailView
     @IBOutlet weak var helpCenterDetailYesButton: UIButton!
     @IBOutlet weak var helpCenterDetailNoButton: UIButton!
     
-    var viewModel: HelpCenterDetailViewModelProtocol?
     lazy var loadingView = FamiliLoadingView(frame: self.view.frame)
+    var helpCenterDetailTitle = ""
+    var helpCenterDetailBody = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    func updateHelpCenterDetailBodyText(text body: String) {
-        helpCenterDetailBodyLabel.text = body
+        helpCenterDetailTitleLabel.text = helpCenterDetailTitle
+        helpCenterDetailBodyLabel.text = helpCenterDetailBody
     }
     
     func showLoading() {
@@ -36,15 +33,4 @@ class HelpCenterDetailViewController: MasterViewController, HelpCenterDetailView
      func stopLoading() {
          loadingView.stopLoading()
      }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

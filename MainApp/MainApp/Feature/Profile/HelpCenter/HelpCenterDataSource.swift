@@ -18,6 +18,7 @@ class HelpCenterDataSource: NSObject {
 
 struct HelpCenterData {
     let title: String
+    let message: String
 }
 
 extension HelpCenterDataSource: UITableViewDataSource {

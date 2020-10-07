@@ -33,12 +33,7 @@ protocol RetrieveTermsOfServiceDelegate: class {
 }
 
 protocol RetrieveHelpCenterDelegate: class {
+    // MARK: - Get Help Center
     func didSuccessRetrieveHelpCenter(response: ProfileResponse.GetHelpCenterResponse)
     func didFailedRetrieveHelpCenter(error: Error)
-}
-
-protocol RetrieveHelpCenterDetailDelegate: class {
-    // MARK: - Get Help Center Detail
-    func didSuccessRetrieveHelpCenterDetail(response: ProfileResponse.GetHelpCenterDetailResponse)
-    func didFailedRetrieveHelpCenterDetail(error: Error)
 }
