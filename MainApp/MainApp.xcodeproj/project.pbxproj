@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A326E862530A4F300C6D352 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A326E842530A4F300C6D352 /* NotificationViewController.swift */; };
+		8A326E872530A4F300C6D352 /* NotificationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A326E852530A4F300C6D352 /* NotificationViewController.xib */; };
+		8A326E892530A96D00C6D352 /* NotificationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A326E882530A96D00C6D352 /* NotificationProtocol.swift */; };
+		8A326E8B2530A97F00C6D352 /* NotificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A326E8A2530A97F00C6D352 /* NotificationViewModel.swift */; };
+		8A326E922530AC0E00C6D352 /* NotificationNewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A326E902530AC0D00C6D352 /* NotificationNewsTableViewCell.swift */; };
+		8A326E932530AC0E00C6D352 /* NotificationNewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A326E912530AC0E00C6D352 /* NotificationNewsTableViewCell.xib */; };
+		8A326E962530AC2F00C6D352 /* NotificationMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A326E942530AC2E00C6D352 /* NotificationMessageTableViewCell.swift */; };
+		8A326E972530AC2F00C6D352 /* NotificationMessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A326E952530AC2F00C6D352 /* NotificationMessageTableViewCell.xib */; };
+		8A326EB92530B32000C6D352 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A326EB82530B32000C6D352 /* HomeService.swift */; };
+		8A326EBC2530B39300C6D352 /* HomePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A326EBB2530B39300C6D352 /* HomePath.swift */; };
+		8A326EBE2530B39D00C6D352 /* HomeSubPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A326EBD2530B39D00C6D352 /* HomeSubPath.swift */; };
+		8A326EC02530B57F00C6D352 /* HomeNetwork+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A326EBF2530B57F00C6D352 /* HomeNetwork+Delegate.swift */; };
+		8A326EC22530B5F200C6D352 /* HomeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A326EC12530B5F200C6D352 /* HomeResponse.swift */; };
 		92CA2AAD251B715800920B21 /* AppCoordinator+FeatureCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CA29CC251B715700920B21 /* AppCoordinator+FeatureCoordinator.swift */; };
 		92CA2AAE251B715800920B21 /* BuildConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CA29CD251B715700920B21 /* BuildConfiguration.swift */; };
 		92CA2AAF251B715800920B21 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CA29CE251B715700920B21 /* AppCoordinator.swift */; };
@@ -208,6 +221,19 @@
 /* Begin PBXFileReference section */
 		3304A088087BD629641C29A2 /* Pods_MainAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MainAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		890F374CBAEFBDEFACC50A10 /* Pods-MainApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MainApp.debug.xcconfig"; path = "Target Support Files/Pods-MainApp/Pods-MainApp.debug.xcconfig"; sourceTree = "<group>"; };
+		8A326E842530A4F300C6D352 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		8A326E852530A4F300C6D352 /* NotificationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationViewController.xib; sourceTree = "<group>"; };
+		8A326E882530A96D00C6D352 /* NotificationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationProtocol.swift; sourceTree = "<group>"; };
+		8A326E8A2530A97F00C6D352 /* NotificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewModel.swift; sourceTree = "<group>"; };
+		8A326E902530AC0D00C6D352 /* NotificationNewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationNewsTableViewCell.swift; sourceTree = "<group>"; };
+		8A326E912530AC0E00C6D352 /* NotificationNewsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationNewsTableViewCell.xib; sourceTree = "<group>"; };
+		8A326E942530AC2E00C6D352 /* NotificationMessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationMessageTableViewCell.swift; sourceTree = "<group>"; };
+		8A326E952530AC2F00C6D352 /* NotificationMessageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationMessageTableViewCell.xib; sourceTree = "<group>"; };
+		8A326EB82530B32000C6D352 /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
+		8A326EBB2530B39300C6D352 /* HomePath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePath.swift; sourceTree = "<group>"; };
+		8A326EBD2530B39D00C6D352 /* HomeSubPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSubPath.swift; sourceTree = "<group>"; };
+		8A326EBF2530B57F00C6D352 /* HomeNetwork+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeNetwork+Delegate.swift"; sourceTree = "<group>"; };
+		8A326EC12530B5F200C6D352 /* HomeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeResponse.swift; sourceTree = "<group>"; };
 		92913BB8248D07C8002D961D /* Component.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Component.xcodeproj; path = ../Component/Component.xcodeproj; sourceTree = "<group>"; };
 		92CA29CC251B715700920B21 /* AppCoordinator+FeatureCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppCoordinator+FeatureCoordinator.swift"; sourceTree = "<group>"; };
 		92CA29CD251B715700920B21 /* BuildConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildConfiguration.swift; sourceTree = "<group>"; };
@@ -408,6 +434,30 @@
 			);
 			name = Pods;
 			path = ../Pods;
+			sourceTree = "<group>";
+		};
+		8A326E812530A4D400C6D352 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				8A326E842530A4F300C6D352 /* NotificationViewController.swift */,
+				8A326E852530A4F300C6D352 /* NotificationViewController.xib */,
+				8A326E882530A96D00C6D352 /* NotificationProtocol.swift */,
+				8A326E8A2530A97F00C6D352 /* NotificationViewModel.swift */,
+				8A326E902530AC0D00C6D352 /* NotificationNewsTableViewCell.swift */,
+				8A326E912530AC0E00C6D352 /* NotificationNewsTableViewCell.xib */,
+				8A326E942530AC2E00C6D352 /* NotificationMessageTableViewCell.swift */,
+				8A326E952530AC2F00C6D352 /* NotificationMessageTableViewCell.xib */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
+		8A326EBA2530B38000C6D352 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				8A326EBB2530B39300C6D352 /* HomePath.swift */,
+				8A326EBD2530B39D00C6D352 /* HomeSubPath.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		92913BB9248D07C8002D961D /* Products */ = {
@@ -645,6 +695,7 @@
 				92CA2A16251B715800920B21 /* LoginResponse.swift */,
 				92CA2A17251B715800920B21 /* ProfileResponse.swift */,
 				92CA2A18251B715800920B21 /* SampleResponse.swift */,
+				8A326EC12530B5F200C6D352 /* HomeResponse.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -673,6 +724,7 @@
 		92CA2A21251B715800920B21 /* FeaturePath */ = {
 			isa = PBXGroup;
 			children = (
+				8A326EBA2530B38000C6D352 /* Home */,
 				92CA2A22251B715800920B21 /* Auth */,
 				92CA2A26251B715800920B21 /* Profile */,
 				92CA2A29251B715800920B21 /* Sample */,
@@ -715,6 +767,7 @@
 				92CA2A30251B715800920B21 /* AuthService.swift */,
 				92CA2A31251B715800920B21 /* LoginService.swift */,
 				92CA2A32251B715800920B21 /* SampleService.swift */,
+				8A326EB82530B32000C6D352 /* HomeService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -761,6 +814,7 @@
 			isa = PBXGroup;
 			children = (
 				92CA2A42251B715800920B21 /* HomeNetwork.swift */,
+				8A326EBF2530B57F00C6D352 /* HomeNetwork+Delegate.swift */,
 			);
 			path = HomeNetwork;
 			sourceTree = "<group>";
@@ -780,6 +834,7 @@
 		92CA2A44251B715800920B21 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				8A326E812530A4D400C6D352 /* Notification */,
 				92CA2A45251B715800920B21 /* HomeLandingProtocol.swift */,
 				92CA2A46251B715800920B21 /* HomeLandingViewController.swift */,
 				92CA2A47251B715800920B21 /* HomeLandingViewModel.swift */,
@@ -1210,17 +1265,20 @@
 				92CA2B19251B715800920B21 /* EditProfileController.xib in Resources */,
 				92CA2AD8251B715800920B21 /* Inter-Bold.ttf in Resources */,
 				92CA2ACE251B715800920B21 /* Debug.xcconfig in Resources */,
+				8A326E972530AC2F00C6D352 /* NotificationMessageTableViewCell.xib in Resources */,
 				92CA2B1C251B715800920B21 /* TermsOfServiceViewController.xib in Resources */,
 				92CA2B25251B715800920B21 /* ProfileLandingCell.xib in Resources */,
 				92CA2ADD251B715800920B21 /* Inter-SemiBold.ttf in Resources */,
 				92CA2ADA251B715800920B21 /* Inter-ExtraBold.ttf in Resources */,
 				92CA2AD6251B715800920B21 /* Inter-Light.ttf in Resources */,
 				92CA2AD7251B715800920B21 /* Inter-Thin.ttf in Resources */,
+				8A326E932530AC0E00C6D352 /* NotificationNewsTableViewCell.xib in Resources */,
 				92CA2B05251B715800920B21 /* HomeLandingViewController.xib in Resources */,
 				92CA2B0B251B715800920B21 /* Auth.xcassets in Resources */,
 				92CA2AD5251B715800920B21 /* Inter-Medium.ttf in Resources */,
 				92CA2ADC251B715800920B21 /* Inter-Black.ttf in Resources */,
 				92CA2B42251B715800920B21 /* Localizable.strings in Resources */,
+				8A326E872530A4F300C6D352 /* NotificationViewController.xib in Resources */,
 				92CA2B22251B715800920B21 /* ProfileAsset.xcassets in Resources */,
 				92CA2B07251B715800920B21 /* SplashAsset.xcassets in Resources */,
 				92CA2ADB251B715800920B21 /* Inter-ExtraLight.ttf in Resources */,
@@ -1362,11 +1420,14 @@
 				92CA2AC3251B715800920B21 /* SampleProfileCoordinator.swift in Sources */,
 				92CA2B1D251B715800920B21 /* TermsOfServiceViewModel.swift in Sources */,
 				92CA2AC6251B715800920B21 /* Coordinator.swift in Sources */,
+				8A326E862530A4F300C6D352 /* NotificationViewController.swift in Sources */,
 				92CA2B21251B715800920B21 /* ProfileConstant.swift in Sources */,
 				92CA2AEA251B715800920B21 /* ProfileModel.swift in Sources */,
 				92CA2AC9251B715800920B21 /* MainApp+String.swift in Sources */,
 				92CA2B1F251B715800920B21 /* TermsOfServiceController.swift in Sources */,
+				8A326E922530AC0E00C6D352 /* NotificationNewsTableViewCell.swift in Sources */,
 				92CA2AAF251B715800920B21 /* AppCoordinator.swift in Sources */,
+				8A326EBC2530B39300C6D352 /* HomePath.swift in Sources */,
 				92CA2B3A251B715800920B21 /* SampleHomeDetailViewModel.swift in Sources */,
 				92CA2AF4251B715800920B21 /* NetworkService.swift in Sources */,
 				92CA2B39251B715800920B21 /* SampleHomeViewModel.swift in Sources */,
@@ -1375,6 +1436,7 @@
 				92CA2AB9251B715800920B21 /* AuthCoordinator.swift in Sources */,
 				92CA2AF7251B715800920B21 /* LoginService.swift in Sources */,
 				92CA2B28251B715800920B21 /* ProfileLanding+Network.swift in Sources */,
+				8A326EB92530B32000C6D352 /* HomeService.swift in Sources */,
 				92CA2B27251B715800920B21 /* ProfileLandingDataSource.swift in Sources */,
 				92CA2ADE251B715800920B21 /* SceneDelegate.swift in Sources */,
 				92CA2AD1251B715800920B21 /* FirebaseHandler.swift in Sources */,
@@ -1385,11 +1447,13 @@
 				92CA2B09251B715800920B21 /* InitialScreenViewController.swift in Sources */,
 				92CA2B2F251B715800920B21 /* PrivacyPolicyViewModel+Network.swift in Sources */,
 				92CA2AEF251B715800920B21 /* ProfilePath.swift in Sources */,
+				8A326EC22530B5F200C6D352 /* HomeResponse.swift in Sources */,
 				92CA2B02251B715800920B21 /* HomeLandingProtocol.swift in Sources */,
 				92CA2B3E251B715800920B21 /* SampleHomeProtocol.swift in Sources */,
 				92CA2AB5251B715800920B21 /* HomeCoordinator.swift in Sources */,
 				92CA2B2C251B715800920B21 /* PrivacyPolicyProtocol.swift in Sources */,
 				92CA2B29251B715800920B21 /* ProfileLandingProtocol.swift in Sources */,
+				8A326E8B2530A97F00C6D352 /* NotificationViewModel.swift in Sources */,
 				92CA2AB3251B715800920B21 /* AppCoordinator+GoogleSDK.swift in Sources */,
 				92CA2AE9251B715800920B21 /* RegisterModel.swift in Sources */,
 				92CA2AFE251B715800920B21 /* AuthNetwork+Delegate.swift in Sources */,
@@ -1401,6 +1465,7 @@
 				92CA2AC5251B715800920B21 /* SampleHomeCoordinator.swift in Sources */,
 				92CA2B12251B715800920B21 /* LoginViewModel.swift in Sources */,
 				92CA2B16251B715800920B21 /* LoginViewController.swift in Sources */,
+				8A326EC02530B57F00C6D352 /* HomeNetwork+Delegate.swift in Sources */,
 				92CA2B33251B715800920B21 /* SampleProfileProtocol.swift in Sources */,
 				92CA2B3B251B715800920B21 /* SampleHomeDetailProtocol.swift in Sources */,
 				92CA2AFC251B715800920B21 /* SampleNetwork.swift in Sources */,
@@ -1454,6 +1519,8 @@
 				92CA2AB1251B715800920B21 /* AppCoordinator+Firebase.swift in Sources */,
 				92CA2B01251B715800920B21 /* HomeNetwork.swift in Sources */,
 				92CA2AAE251B715800920B21 /* BuildConfiguration.swift in Sources */,
+				8A326E892530A96D00C6D352 /* NotificationProtocol.swift in Sources */,
+				8A326E962530AC2F00C6D352 /* NotificationMessageTableViewCell.swift in Sources */,
 				92CA2AF3251B715800920B21 /* BasePath.swift in Sources */,
 				92CA2AB4251B715800920B21 /* CoordinatorState.swift in Sources */,
 				92CA2B14251B715800920B21 /* LoginViewModel+Network.swift in Sources */,
@@ -1464,6 +1531,7 @@
 				92CA2AED251B715800920B21 /* LoginSubPath.swift in Sources */,
 				92CA2AB2251B715800920B21 /* CoordinatorId.swift in Sources */,
 				92CA2B24251B715800920B21 /* ProfileLandingCell.swift in Sources */,
+				8A326EBE2530B39D00C6D352 /* HomeSubPath.swift in Sources */,
 				92CA2B30251B715800920B21 /* PrivacyPolicyViewController.swift in Sources */,
 				92CA2AE5251B715800920B21 /* SampleResponse.swift in Sources */,
 				92CA2AF0251B715800920B21 /* ProfileSubPath.swift in Sources */,
