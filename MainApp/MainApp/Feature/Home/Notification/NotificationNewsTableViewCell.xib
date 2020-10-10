@@ -16,31 +16,44 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="104"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u1h-0T-4oQ">
-                        <rect key="frame" x="16" y="16" width="288" height="20"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="News Body" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agj-Nz-o5p">
-                        <rect key="frame" x="16" y="41" width="288" height="47"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1aK-s1-6jJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="104"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u1h-0T-4oQ">
+                                <rect key="frame" x="16" y="16" width="288" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="News Body" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agj-Nz-o5p">
+                                <rect key="frame" x="16" y="41" width="288" height="47"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="agj-Nz-o5p" firstAttribute="top" secondItem="u1h-0T-4oQ" secondAttribute="bottom" constant="5" id="BLe-7q-fuB"/>
+                            <constraint firstItem="u1h-0T-4oQ" firstAttribute="leading" secondItem="1aK-s1-6jJ" secondAttribute="leading" constant="16" id="Ji4-VF-rdZ"/>
+                            <constraint firstAttribute="trailing" secondItem="u1h-0T-4oQ" secondAttribute="trailing" constant="16" id="Kxm-Pt-Yei"/>
+                            <constraint firstItem="agj-Nz-o5p" firstAttribute="leading" secondItem="1aK-s1-6jJ" secondAttribute="leading" constant="16" id="WDS-5s-IMj"/>
+                            <constraint firstItem="u1h-0T-4oQ" firstAttribute="top" secondItem="1aK-s1-6jJ" secondAttribute="top" constant="16" id="gfP-Yr-pgH"/>
+                            <constraint firstAttribute="trailing" secondItem="agj-Nz-o5p" secondAttribute="trailing" constant="16" id="rAn-K1-2Vp"/>
+                            <constraint firstAttribute="bottom" secondItem="agj-Nz-o5p" secondAttribute="bottom" constant="16" id="tIc-gM-WHG"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="agj-Nz-o5p" firstAttribute="top" secondItem="u1h-0T-4oQ" secondAttribute="bottom" constant="5" id="3Ed-cK-YLQ"/>
-                    <constraint firstItem="u1h-0T-4oQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="7mx-bm-bhs"/>
-                    <constraint firstAttribute="trailing" secondItem="agj-Nz-o5p" secondAttribute="trailing" constant="16" id="9Zr-9s-Diu"/>
-                    <constraint firstAttribute="trailing" secondItem="u1h-0T-4oQ" secondAttribute="trailing" constant="16" id="IRF-37-BWj"/>
-                    <constraint firstItem="u1h-0T-4oQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="Lr9-T6-TY4"/>
-                    <constraint firstItem="agj-Nz-o5p" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="a2G-6y-iWO"/>
-                    <constraint firstAttribute="bottom" secondItem="agj-Nz-o5p" secondAttribute="bottom" constant="16" id="cxa-mv-E1B"/>
+                    <constraint firstAttribute="trailing" secondItem="1aK-s1-6jJ" secondAttribute="trailing" id="5zu-Sj-HLB"/>
+                    <constraint firstItem="1aK-s1-6jJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="I6i-e0-bPg"/>
+                    <constraint firstAttribute="bottom" secondItem="1aK-s1-6jJ" secondAttribute="bottom" id="akl-CW-6Sk"/>
+                    <constraint firstItem="1aK-s1-6jJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="j2b-aD-jeK"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="contentBackgroundView" destination="u1h-0T-4oQ" id="twL-H2-9Jp"/>
                 <outlet property="notificationNewsBodyLabel" destination="agj-Nz-o5p" id="8wW-b8-w6H"/>
                 <outlet property="notificationNewsTitleLabel" destination="u1h-0T-4oQ" id="fS4-wb-uoS"/>
             </connections>

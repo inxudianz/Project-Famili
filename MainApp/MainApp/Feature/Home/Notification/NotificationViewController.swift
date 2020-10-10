@@ -7,9 +7,9 @@
 //
 
 import UIKit
+import Component
 
-class NotificationViewController: UIViewController {
-
+class NotificationViewController: MasterViewController, NotificationViewProtocol {
     @IBOutlet weak var notificationSegmentedControl: UISegmentedControl!
     
     //News Content
@@ -25,6 +25,9 @@ class NotificationViewController: UIViewController {
     
     //Message Empty
     @IBOutlet weak var messageEmptyView: UIView!
+    
+    var viewModel: NotificationViewModelProtocol?
+    lazy var loadingView = FamiliLoadingView(frame: self.view.frame)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,15 +45,25 @@ class NotificationViewController: UIViewController {
             
             messageContentView.isHidden = true
             messageEmptyView.isHidden = true
+            viewModel?.getNotificationNews(userId: 1)
         case 1 :
             newsContentView.isHidden = true
             newsEmptyView.isHidden = true
             
             messageContentView.isHidden = false
             messageEmptyView.isHidden = false
+            viewModel?.getNotificationMessage(userId: 1)
         default :
             break
         }
+    }
+    
+    func showLoading() {
+        loadingView.showLoading(to: self.view)
+    }
+    
+    func stopLoading() {
+        loadingView.stopLoading()
     }
     
     private func setSegmentedControlView() {
@@ -61,10 +74,21 @@ class NotificationViewController: UIViewController {
     private func registerCell(){
         newsContentTableView.register(UINib(nibName: "NotificationNewsTableViewCell", bundle: nil) , forCellReuseIdentifier: "NotificationNewsCell")
         newsContentTableView.delegate = self
-        
+        newsContentTableView.dataSource = viewModel?.notificationNewsDataSource
         
         messageContentTableView.register(UINib(nibName: "NotificationMessageTableViewCell", bundle: nil), forCellReuseIdentifier: "NotificationMessageCell")
         messageContentTableView.delegate = self
+        messageContentTableView.dataSource = viewModel?.notificationMessageDataSource
     }
 
+}
+
+extension NotificationViewController: UITableViewDelegate{
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if tableView == messageContentTableView{
+            //clicked on message table view
+        }else if tableView == newsContentTableView{
+            //clicked on news table view
+        }
+    }
 }

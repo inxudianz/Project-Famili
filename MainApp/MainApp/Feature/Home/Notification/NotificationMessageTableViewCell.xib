@@ -16,38 +16,51 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="92"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Laundry Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wrr-4Y-xLE">
-                        <rect key="frame" x="16" y="14" width="166" height="20"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mHt-Jh-xMs">
-                        <rect key="frame" x="16" y="47" width="288" height="16"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPR-60-n00">
-                        <rect key="frame" x="207" y="14" width="101" height="16"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5L4-JF-W0w">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="92"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPR-60-n00">
+                                <rect key="frame" x="190" y="14" width="116" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Laundry Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wrr-4Y-xLE">
+                                <rect key="frame" x="16" y="14" width="166" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mHt-Jh-xMs">
+                                <rect key="frame" x="16" y="47" width="288" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="gPR-60-n00" firstAttribute="top" secondItem="5L4-JF-W0w" secondAttribute="top" constant="14" id="8nx-IX-9uT"/>
+                            <constraint firstItem="Wrr-4Y-xLE" firstAttribute="leading" secondItem="5L4-JF-W0w" secondAttribute="leading" constant="16" id="NcE-UA-SxM"/>
+                            <constraint firstItem="mHt-Jh-xMs" firstAttribute="top" secondItem="Wrr-4Y-xLE" secondAttribute="bottom" constant="13" id="Qcg-Bb-Tuj"/>
+                            <constraint firstAttribute="trailing" secondItem="Wrr-4Y-xLE" secondAttribute="trailing" constant="138" id="ZYr-Zm-QmK"/>
+                            <constraint firstAttribute="trailing" secondItem="mHt-Jh-xMs" secondAttribute="trailing" constant="16" id="eek-Th-Qd1"/>
+                            <constraint firstItem="mHt-Jh-xMs" firstAttribute="leading" secondItem="5L4-JF-W0w" secondAttribute="leading" constant="16" id="f5Q-uC-3Df"/>
+                            <constraint firstAttribute="trailing" secondItem="gPR-60-n00" secondAttribute="trailing" constant="14" id="in8-u8-XXu"/>
+                            <constraint firstItem="Wrr-4Y-xLE" firstAttribute="top" secondItem="5L4-JF-W0w" secondAttribute="top" constant="14" id="pG7-d5-1ni"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="Wrr-4Y-xLE" secondAttribute="trailing" constant="138" id="5Hi-sP-I5i"/>
-                    <constraint firstItem="Wrr-4Y-xLE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="14" id="5bA-Md-j2k"/>
-                    <constraint firstItem="Wrr-4Y-xLE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="HkJ-JD-IP1"/>
-                    <constraint firstAttribute="trailing" secondItem="gPR-60-n00" secondAttribute="trailing" constant="12" id="Wb0-cv-qaZ"/>
-                    <constraint firstItem="mHt-Jh-xMs" firstAttribute="top" secondItem="Wrr-4Y-xLE" secondAttribute="bottom" constant="13" id="gyK-Nr-Tch"/>
-                    <constraint firstItem="mHt-Jh-xMs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="hTw-pH-1Rq"/>
-                    <constraint firstAttribute="trailing" secondItem="mHt-Jh-xMs" secondAttribute="trailing" constant="16" id="mne-gp-JXT"/>
-                    <constraint firstItem="gPR-60-n00" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="14" id="omq-Xi-Jal"/>
+                    <constraint firstItem="5L4-JF-W0w" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="69P-S4-vrQ"/>
+                    <constraint firstAttribute="trailing" secondItem="5L4-JF-W0w" secondAttribute="trailing" id="6Pd-n8-BGG"/>
+                    <constraint firstItem="5L4-JF-W0w" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="DvB-7j-64a"/>
+                    <constraint firstAttribute="bottom" secondItem="5L4-JF-W0w" secondAttribute="bottom" id="rda-Rm-iY2"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="contentBackgroundView" destination="5L4-JF-W0w" id="naY-Ki-nNl"/>
                 <outlet property="notificationMessageContentLabel" destination="mHt-Jh-xMs" id="ZAF-cw-ybX"/>
                 <outlet property="notificationMessageDateLabel" destination="gPR-60-n00" id="pIW-uF-onI"/>
                 <outlet property="notificationMessageLaundryNameLabel" destination="Wrr-4Y-xLE" id="Cpj-LN-UKj"/>

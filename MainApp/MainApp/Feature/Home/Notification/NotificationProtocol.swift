@@ -9,17 +9,16 @@
 protocol NotificationViewModelProtocol: class {
     var view: NotificationViewProtocol? { get set }
 //    var coordinator: ProfileCoordinatorProtocol? { get set }
-    var network: ProfileNetworkProtocol? { get set }
-    var dataSource: NotificationDataSource? { get set }
-    func didSelectRow(at: IndexPath)
-    func navigateToHelpCenterDetail(title: String, body: String)
-    func getHelpCenter()
-    func viewDidLoad()
+    var network: HomeNetworkProtocol? { get set }
+    var notificationMessageDataSource: NotificationMessageDataSource? { get set }
+    var notificationNewsDataSource: NotificationNewsDataSource? { get set }
+//    func didSelectRow(at: IndexPath)
+    func getNotificationMessage(userId: Int)
+    func getNotificationNews(userId: Int)
 }
 
 protocol NotificationViewProtocol: class {
     var viewModel: NotificationViewModelProtocol? { get set }
-    func reloadTableData()
     func showLoading()
     func stopLoading()
 }

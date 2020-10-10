@@ -9,12 +9,12 @@
 import Foundation
 import Alamofire
 
-enum LoginService {
+enum HomeService {
     case getMessageRequest(userId: Int)
     case getNotificationRequest(userId: Int)
 }
 
-extension LoginService: NetworkType {
+extension HomeService: NetworkType {
     var baseURL: URL {
         return URL(string: BasePath.mock.rawValue)!
     }

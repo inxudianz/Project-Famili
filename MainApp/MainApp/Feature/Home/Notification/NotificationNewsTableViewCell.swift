@@ -10,6 +10,7 @@ import UIKit
 
 class NotificationNewsTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var contentBackgroundView: UILabel!
     @IBOutlet weak var notificationNewsTitleLabel: UILabel!
     @IBOutlet weak var notificationNewsBodyLabel: UILabel!
     
