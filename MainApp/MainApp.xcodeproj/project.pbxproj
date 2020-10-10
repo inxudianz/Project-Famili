@@ -18,6 +18,7 @@
 		8A15429925208CCC007245AB /* HelpCenterNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A15429825208CCC007245AB /* HelpCenterNetwork.swift */; };
 		8A326E6F2524CEBB00C6D352 /* HelpCenterDetailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A326E6E2524CEBA00C6D352 /* HelpCenterDetailTests.swift */; };
 		8A326E7D252DDBAD00C6D352 /* HelpCenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A326E7C252DDBAD00C6D352 /* HelpCenterTests.swift */; };
+		8A326ED12531E34700C6D352 /* HelpCenterDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A326ED02531E34700C6D352 /* HelpCenterDetailViewModel.swift */; };
 		92CA2AAD251B715800920B21 /* AppCoordinator+FeatureCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CA29CC251B715700920B21 /* AppCoordinator+FeatureCoordinator.swift */; };
 		92CA2AAE251B715800920B21 /* BuildConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CA29CD251B715700920B21 /* BuildConfiguration.swift */; };
 		92CA2AAF251B715800920B21 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CA29CE251B715700920B21 /* AppCoordinator.swift */; };
@@ -230,6 +231,7 @@
 		8A15429825208CCC007245AB /* HelpCenterNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCenterNetwork.swift; sourceTree = "<group>"; };
 		8A326E6E2524CEBA00C6D352 /* HelpCenterDetailTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCenterDetailTests.swift; sourceTree = "<group>"; };
 		8A326E7C252DDBAD00C6D352 /* HelpCenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCenterTests.swift; sourceTree = "<group>"; };
+		8A326ED02531E34700C6D352 /* HelpCenterDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCenterDetailViewModel.swift; sourceTree = "<group>"; };
 		92913BB8248D07C8002D961D /* Component.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Component.xcodeproj; path = ../Component/Component.xcodeproj; sourceTree = "<group>"; };
 		92CA29CC251B715700920B21 /* AppCoordinator+FeatureCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppCoordinator+FeatureCoordinator.swift"; sourceTree = "<group>"; };
 		92CA29CD251B715700920B21 /* BuildConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildConfiguration.swift; sourceTree = "<group>"; };
@@ -452,6 +454,7 @@
 				8A15428D25208C21007245AB /* HelpCenterDetailViewController.swift */,
 				8A15428E25208C21007245AB /* HelpCenterDetailViewController.xib */,
 				8A15429125208C79007245AB /* HelpCenterDetailProtocol.swift */,
+				8A326ED02531E34700C6D352 /* HelpCenterDetailViewModel.swift */,
 			);
 			path = HelpCenterDetail;
 			sourceTree = "<group>";
@@ -1470,6 +1473,7 @@
 				92CA2B17251B715800920B21 /* EditProfileProtocol.swift in Sources */,
 				92CA2AD0251B715800920B21 /* GoogleSDKHandler.swift in Sources */,
 				92CA2ACF251B715800920B21 /* FontManager.swift in Sources */,
+				8A326ED12531E34700C6D352 /* HelpCenterDetailViewModel.swift in Sources */,
 				92CA2B20251B715800920B21 /* TermsOfServiceProtocol.swift in Sources */,
 				92CA2AB7251B715800920B21 /* InitialScreenCoordinator.swift in Sources */,
 				92CA2B13251B715800920B21 /* LoginProtocol.swift in Sources */,

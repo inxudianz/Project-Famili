@@ -10,20 +10,21 @@ import UIKit
 import Component
 
 class HelpCenterDetailViewController: MasterViewController, HelpCenterDetailViewProtocol {
-
     @IBOutlet weak var helpCenterDetailTitleLabel: UILabel!
     @IBOutlet weak var helpCenterDetailBodyLabel: UILabel!
     @IBOutlet weak var helpCenterDetailYesButton: UIButton!
     @IBOutlet weak var helpCenterDetailNoButton: UIButton!
     
+    var viewModel: HelpCenterDetailViewModelProtocol?
     lazy var loadingView = FamiliLoadingView(frame: self.view.frame)
-    var helpCenterDetailTitle = ""
-    var helpCenterDetailBody = ""
+    var helpCenterDetailViewTitle: String?
+    var helpCenterDetailViewBody: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        helpCenterDetailTitleLabel.text = helpCenterDetailTitle
-        helpCenterDetailBodyLabel.text = helpCenterDetailBody
+        viewModel?.viewDidLoad()
+        helpCenterDetailTitleLabel.text = helpCenterDetailViewTitle
+        helpCenterDetailBodyLabel.text = helpCenterDetailViewBody
     }
     
     func showLoading() {
