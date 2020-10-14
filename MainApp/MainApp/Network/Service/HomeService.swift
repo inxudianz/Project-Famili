@@ -30,18 +30,14 @@ extension HomeService: NetworkType {
     
     var method: HTTPMethod {
         switch self {
-        case .getMessageRequest:
-            return .get
-        case .getNotificationRequest:
+        case .getMessageRequest, .getNotificationRequest:
             return .get
         }
     }
     
     var task: HTTPTask {
         switch self {
-        case .getMessageRequest:
-            return .plainRequest
-        case .getNotificationRequest:
+        case .getMessageRequest, .getNotificationRequest:
             return .plainRequest
         }
     }
