@@ -12,6 +12,10 @@ import Nimble
 @testable import MainApp
 
 class HelpCenterDetailMock: HelpCenterDetailViewProtocol {
+    var viewModel: HelpCenterDetailViewModelProtocol?
+    var helpCenterDetailViewTitle: String?
+    var helpCenterDetailViewBody: String?
+    
     var isUpdateHelpCenterDetailBodyText = false
     func updateHelpCenterDetailBodyText(text body: String) {
         isUpdateHelpCenterDetailBodyText = true
