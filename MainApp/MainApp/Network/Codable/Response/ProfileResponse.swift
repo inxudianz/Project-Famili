@@ -21,4 +21,13 @@ struct ProfileResponse {
     struct GetTermsOfServiceResponse: Codable {
         let message: String?
     }
+    
+    struct GetHelpCenterResponse: Codable {
+        var helpList: [GetHelpCenterResponseDetail]
+    }
+    
+    struct GetHelpCenterResponseDetail: Codable {
+        let title: String?
+        let message: String?
+    }
 }

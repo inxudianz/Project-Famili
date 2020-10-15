@@ -1,8 +1,8 @@
 //
-//  TermsOfServiceTests.swift
+//  HelpCenterTests.swift
 //  MainAppTests
 //
-//  Created by Owen Prasetya on 21/09/20.
+//  Created by Evan Christian on 07/10/20.
 //  Copyright © 2020 William Inx. All rights reserved.
 //
 
@@ -11,12 +11,12 @@ import Nimble
 
 @testable import MainApp
 
-class TermsOfServiceMock: TermsOfServiceViewProtocol {
-    var viewModel: TermsOfServiceViewModelProtocol?
+class HelpCenterMock: HelpCenterViewProtocol {
+    var viewModel: HelpCenterViewModelProtocol?
     
-    var isUpdateTermsOfServiceText = false
-    func updateTermsOfServiceText(text tos: String) {
-        isUpdateTermsOfServiceText = true
+    var isUpdateHelpCenterDetailBodyText = false
+    func updateHelpCenterDetailBodyText(text body: String) {
+        isUpdateHelpCenterDetailBodyText = true
     }
     
     var isShowLoading = false
@@ -28,9 +28,14 @@ class TermsOfServiceMock: TermsOfServiceViewProtocol {
     func stopLoading() {
         isStopLoading = true
     }
+    
+    var isReloadTableData = false
+    func reloadTableData() {
+        isReloadTableData = true
+    }
 }
 
-class TermsOfServiceCoordinatorMock: ProfileCoordinatorProtocol {
+class HelpCenterCoordinatorMock: ProfileCoordinatorProtocol {
     var parentCoordinator: Coordinator?
     var childCoordinators: [Coordinator] = []
     
@@ -77,7 +82,7 @@ class TermsOfServiceCoordinatorMock: ProfileCoordinatorProtocol {
     }
 }
 
-class TermsOfServiceNetworkMock: ProfileNetworkProtocol {
+class HelpCenterNetworkMock: ProfileNetworkProtocol {
     var retrieveProfileDelegate: RetrieveProfileDelegate?
     var editProfileDelegate: EditProfileDelegate?
     var retrieveTermsOfServiceDelegate: RetrieveTermsOfServiceDelegate?
@@ -115,37 +120,37 @@ class TermsOfServiceNetworkMock: ProfileNetworkProtocol {
     }
 }
 
-class TermsOfServiceTests: QuickSpec {
+class HelpCenterTests: QuickSpec {
     override func spec() {
         describe("ViewModel") {
-            var sut: TermsOfServiceViewModel!
-            var view: TermsOfServiceMock!
-            var coordinator: TermsOfServiceCoordinatorMock!
-            var network: TermsOfServiceNetworkMock!
+            var sut: HelpCenterViewModel!
+            var view: HelpCenterMock!
+            var coordinator: HelpCenterCoordinatorMock!
+            var network: HelpCenterNetworkMock!
             
             beforeEach {
-                view = TermsOfServiceMock()
-                coordinator = TermsOfServiceCoordinatorMock()
-                network = TermsOfServiceNetworkMock()
+                view = HelpCenterMock()
+                coordinator = HelpCenterCoordinatorMock()
+                network = HelpCenterNetworkMock()
                 
-                sut = TermsOfServiceViewModel()
+                sut = HelpCenterViewModel()
                 sut.view = view
                 sut.coordinator = coordinator
                 sut.network = network
             }
             
-            context("Function getTermsOfService is called") {
+            context("function gethelpcenter is called") {
                 it("Without error") {
-                    sut.getTermsOfService()
+                    sut.getHelpCenter()
                     expect(view.isShowLoading).to(beTrue())
-                    expect(network.isTermsOfServiceGet).to(beTrue())
+                    expect(network.isHelpCenterGet).to(beTrue())
                 }
             }
-            context("Function viewDidLoad is called") {
+            context("function viewDidLoad is called") {
                 it("Without error") {
                     sut.viewDidLoad()
                     expect(view.isShowLoading).to(beTrue())
-                    expect(network.isTermsOfServiceGet).to(beTrue())
+                    expect(network.isHelpCenterGet).to(beTrue())
                 }
             }
         }

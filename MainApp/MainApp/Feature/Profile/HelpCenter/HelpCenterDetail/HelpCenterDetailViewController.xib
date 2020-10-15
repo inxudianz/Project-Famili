@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HelpCenterDetailViewController" customModule="MainApp" customModuleProvider="target">
+            <connections>
+                <outlet property="helpCenterDetailBodyLabel" destination="9dG-T1-udf" id="WVM-wF-qa9"/>
+                <outlet property="helpCenterDetailNoButton" destination="oeb-i0-tJ8" id="Elq-Q4-u88"/>
+                <outlet property="helpCenterDetailTitleLabel" destination="By8-pE-Pht" id="ZhV-v2-LSU"/>
+                <outlet property="helpCenterDetailYesButton" destination="P5J-ZI-QWI" id="7m0-Mh-xAo"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vQD-4C-ZGr" userLabel="Was this article helpful Container View">
+                    <rect key="frame" x="45" y="828" width="323" height="34"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Was this article helpful?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7yY-hK-97J">
+                            <rect key="frame" x="0.0" y="7" width="172.5" height="20"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lIu-5w-VTa" userLabel="Yes or No View">
+                            <rect key="frame" x="222" y="7" width="93" height="20"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P5J-ZI-QWI">
+                                    <rect key="frame" x="8" y="-5" width="30" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="Yes"/>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oeb-i0-tJ8">
+                                    <rect key="frame" x="64" y="-5" width="30" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="No">
+                                        <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="34" id="G5w-Bm-U16"/>
+                    </constraints>
+                </view>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K91-5m-ypU">
+                    <rect key="frame" x="40" y="108" width="339" height="703"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pBE-Wl-5A8" userLabel="Scroll View Container View">
+                            <rect key="frame" x="0.0" y="0.0" width="339" height="764.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="By8-pE-Pht">
+                                    <rect key="frame" x="8" y="0.0" width="323" height="42"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="42" id="jH2-wa-An4"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9dG-T1-udf">
+                                    <rect key="frame" x="8" y="50" width="323" height="706.5"/>
+                                    <mutableString key="text">BodyLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempus urna et pharetra pharetra. Adipiscing elit duis tristique sollicitudin nibh sit amet. Magna eget est lorem ipsum dolor sit. Faucibus ornare suspendisse sed nisi. Non curabitur gravida arcu ac tortor dignissim convallis aenean et. Eu sem integer vitae justo eget magna fermentum iaculis. Senectus et netus et malesuada fames ac turpis egestas sed. Sapien pellentesque habitant morbi tristique senectus et netus et malesuada. Nascetur ridiculus mus mauris vitae ultricies. Arcu felis bibendum ut tristique et. Nisi est sit amet facilisis magna etiam tempor orci.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempus urna et pharetra pharetra. Adipiscing elit duis tristique sollicitudin nibh sit amet. Magna eget est lorem ipsum dolor sit. Faucibus ornare suspendisse sed nisi. Non curabitur gravida arcu ac tortor dignissim convallis aenean et. Eu sem integer vitae justo eget magna fermentum iaculis. Senectus et netus et malesuada fames ac turpis egestas sed. Sapien pellentesque habitant morbi tristique senectus et netus et malesuada. Nascetur ridiculus mus mauris vitae ultricies. Arcu felis bibendum ut tristique et. Nisi est sit amet facilisis magna etiam tempor orci.  </mutableString>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstItem="By8-pE-Pht" firstAttribute="top" secondItem="pBE-Wl-5A8" secondAttribute="top" id="3Zp-Zu-vve"/>
+                                <constraint firstItem="9dG-T1-udf" firstAttribute="top" secondItem="By8-pE-Pht" secondAttribute="bottom" constant="8" id="HKH-6c-q6x"/>
+                                <constraint firstAttribute="trailing" secondItem="By8-pE-Pht" secondAttribute="trailing" constant="8" id="WJh-d0-mcV"/>
+                                <constraint firstAttribute="bottom" secondItem="9dG-T1-udf" secondAttribute="bottom" constant="8" id="Wyz-2y-rBw"/>
+                                <constraint firstAttribute="trailing" secondItem="9dG-T1-udf" secondAttribute="trailing" constant="8" id="b0l-a0-rFF"/>
+                                <constraint firstItem="9dG-T1-udf" firstAttribute="leading" secondItem="pBE-Wl-5A8" secondAttribute="leading" constant="8" id="vvZ-Ya-ulg"/>
+                                <constraint firstItem="By8-pE-Pht" firstAttribute="leading" secondItem="pBE-Wl-5A8" secondAttribute="leading" constant="8" id="wPN-fP-VlM"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="pBE-Wl-5A8" firstAttribute="top" secondItem="K91-5m-ypU" secondAttribute="top" id="1S8-rh-yfs"/>
+                        <constraint firstAttribute="bottom" secondItem="pBE-Wl-5A8" secondAttribute="bottom" id="6ls-QK-PE1"/>
+                        <constraint firstItem="pBE-Wl-5A8" firstAttribute="leading" secondItem="K91-5m-ypU" secondAttribute="leading" id="7Kx-8F-oQl"/>
+                        <constraint firstItem="pBE-Wl-5A8" firstAttribute="width" secondItem="K91-5m-ypU" secondAttribute="width" id="IXj-Gf-dpp"/>
+                        <constraint firstAttribute="trailing" secondItem="pBE-Wl-5A8" secondAttribute="trailing" id="vgn-IH-Pss"/>
+                        <constraint firstItem="pBE-Wl-5A8" firstAttribute="height" secondItem="K91-5m-ypU" secondAttribute="height" priority="250" id="y2e-8d-ssl"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="fRF-HC-WkQ"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="oNx-B0-zW2"/>
+                </scrollView>
+                <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nli-CL-3cc" userLabel="Divider View">
+                    <rect key="frame" x="-12" y="819" width="439" height="1"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="ZCT-1h-cYZ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="K91-5m-ypU" secondAttribute="trailing" constant="35" id="3MT-3E-JaG"/>
+                <constraint firstItem="vQD-4C-ZGr" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="Es8-LI-bOW"/>
+                <constraint firstItem="K91-5m-ypU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="HGH-t6-pH4"/>
+                <constraint firstItem="vQD-4C-ZGr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="45" id="R0B-dD-gUS"/>
+                <constraint firstItem="vQD-4C-ZGr" firstAttribute="top" secondItem="nli-CL-3cc" secondAttribute="bottom" constant="8" id="Ucr-v5-NjP"/>
+                <constraint firstAttribute="trailing" secondItem="nli-CL-3cc" secondAttribute="trailing" constant="-13" id="l7a-Sb-u7J"/>
+                <constraint firstItem="nli-CL-3cc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="-12" id="nrP-0h-lcP"/>
+                <constraint firstItem="K91-5m-ypU" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="64" id="qDz-2z-5ki"/>
+                <constraint firstItem="nli-CL-3cc" firstAttribute="top" secondItem="K91-5m-ypU" secondAttribute="bottom" constant="8" id="tD5-82-ZgH"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="vQD-4C-ZGr" secondAttribute="trailing" constant="46" id="zWE-EG-kQ5"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="120.53571428571428"/>
+        </view>
+    </objects>
+</document>
