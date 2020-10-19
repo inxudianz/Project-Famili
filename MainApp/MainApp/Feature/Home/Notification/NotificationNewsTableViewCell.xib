@@ -34,6 +34,7 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstAttribute="height" constant="104" id="332-pE-X0M"/>
                             <constraint firstItem="agj-Nz-o5p" firstAttribute="top" secondItem="u1h-0T-4oQ" secondAttribute="bottom" constant="5" id="BLe-7q-fuB"/>
                             <constraint firstItem="u1h-0T-4oQ" firstAttribute="leading" secondItem="1aK-s1-6jJ" secondAttribute="leading" constant="16" id="Ji4-VF-rdZ"/>
                             <constraint firstAttribute="trailing" secondItem="u1h-0T-4oQ" secondAttribute="trailing" constant="16" id="Kxm-Pt-Yei"/>
@@ -53,9 +54,9 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="contentBackgroundView" destination="u1h-0T-4oQ" id="twL-H2-9Jp"/>
-                <outlet property="notificationNewsBodyLabel" destination="agj-Nz-o5p" id="8wW-b8-w6H"/>
-                <outlet property="notificationNewsTitleLabel" destination="u1h-0T-4oQ" id="fS4-wb-uoS"/>
+                <outlet property="contentBackgroundView" destination="1aK-s1-6jJ" id="afn-Uu-ldz"/>
+                <outlet property="notificationNewsBodyLabel" destination="agj-Nz-o5p" id="FaW-fM-pHD"/>
+                <outlet property="notificationNewsTitleLabel" destination="u1h-0T-4oQ" id="Zve-xi-2nc"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="164.73214285714286"/>
         </tableViewCell>

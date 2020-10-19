@@ -11,14 +11,23 @@ import Foundation
 extension NotificationViewModel: RetrieveNotificationNewsDelegate {
     func didSuccessRetrieveNotificationNews(response: HomeResponse.GetNotificationNewsResponse) {
         var data = [NotificationNewsData]()
-        for news in response.newsList {
-            guard let newsContent = news.message else { return }
-            data.append(NotificationNewsData.init(message: newsContent))
+        print(response.newsList.count)
+        if response.newsList.count > 1 {
+            for news in response.newsList {
+                guard let newsContent = news.message else { return }
+                data.append(NotificationNewsData.init(message: newsContent))
+            }
+            notificationNewsDataSource?.setData(datas: data)
+            view?.reloadNewsTableData()
+        }else{
+            view?.newsTableContentIsEmpty = true
         }
-        notificationNewsDataSource?.setData(datas: data)
+        view?.stopLoading()
     }
     
     func didFailedRetrieveNotificationNews(error: Error) {
+        view?.newsTableContentIsEmpty = true
+        view?.newsTableIsEmpty()
         view?.stopLoading()
         Log.info(message: error)
     }

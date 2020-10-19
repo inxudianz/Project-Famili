@@ -44,6 +44,7 @@
                             <constraint firstItem="Wrr-4Y-xLE" firstAttribute="leading" secondItem="5L4-JF-W0w" secondAttribute="leading" constant="16" id="NcE-UA-SxM"/>
                             <constraint firstItem="mHt-Jh-xMs" firstAttribute="top" secondItem="Wrr-4Y-xLE" secondAttribute="bottom" constant="13" id="Qcg-Bb-Tuj"/>
                             <constraint firstAttribute="trailing" secondItem="Wrr-4Y-xLE" secondAttribute="trailing" constant="138" id="ZYr-Zm-QmK"/>
+                            <constraint firstAttribute="height" constant="92" id="eMc-AU-TyC"/>
                             <constraint firstAttribute="trailing" secondItem="mHt-Jh-xMs" secondAttribute="trailing" constant="16" id="eek-Th-Qd1"/>
                             <constraint firstItem="mHt-Jh-xMs" firstAttribute="leading" secondItem="5L4-JF-W0w" secondAttribute="leading" constant="16" id="f5Q-uC-3Df"/>
                             <constraint firstAttribute="trailing" secondItem="gPR-60-n00" secondAttribute="trailing" constant="14" id="in8-u8-XXu"/>
@@ -60,10 +61,10 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="contentBackgroundView" destination="5L4-JF-W0w" id="naY-Ki-nNl"/>
-                <outlet property="notificationMessageContentLabel" destination="mHt-Jh-xMs" id="ZAF-cw-ybX"/>
-                <outlet property="notificationMessageDateLabel" destination="gPR-60-n00" id="pIW-uF-onI"/>
-                <outlet property="notificationMessageLaundryNameLabel" destination="Wrr-4Y-xLE" id="Cpj-LN-UKj"/>
+                <outlet property="contentBackgroundView" destination="5L4-JF-W0w" id="gIQ-qA-651"/>
+                <outlet property="notificationMessageContentLabel" destination="mHt-Jh-xMs" id="kFd-9K-KBK"/>
+                <outlet property="notificationMessageDateLabel" destination="gPR-60-n00" id="9ri-V2-nrb"/>
+                <outlet property="notificationMessageLaundryNameLabel" destination="Wrr-4Y-xLE" id="zyn-F5-sAZ"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="160.04464285714286"/>
         </tableViewCell>

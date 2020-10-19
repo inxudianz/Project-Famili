@@ -10,19 +10,26 @@ import Foundation
 
 extension NotificationViewModel: RetrieveNotificationMessageDelegate {
     func didSuccessRetrieveNotificationMessage(response: HomeResponse.GetNotificationMessageResponse) {
-        view?.stopLoading()
         var data = [NotificationMessageData]()
-        for message in response.messageList {
-            guard let messageTitle = message.title else { return }
-            guard let messageContent = message.message else { return }
-            guard let messageTimeStamp = message.timeStamp else { return }
-            guard let messageLaundryName = message.laundryName else { return }
-            data.append(NotificationMessageData.init(timeStamp: messageTimeStamp, laundryName: messageLaundryName, title: messageTitle, message: messageContent))
+        if response.messageList.count > 1{
+            for message in response.messageList {
+                guard let messageTitle = message.title else { return }
+                guard let messageContent = message.message else { return }
+                guard let messageTimeStamp = message.timeStamp else { return }
+                guard let messageLaundryName = message.laundryName else { return }
+                data.append(NotificationMessageData.init(timeStamp: messageTimeStamp, laundryName: messageLaundryName, title: messageTitle, message: messageContent))
+            }
+            notificationMessageDataSource?.setData(datas: data)
+            view?.reloadMessageTableData()
+        }else{
+            view?.messageTableContentIsEmpty = true
         }
-        notificationMessageDataSource?.setData(datas: data)
+        view?.stopLoading()
     }
     
     func didFailedRetrieveNotificationMessage(error: Error) {
+        view?.messageTableContentIsEmpty = true
+        view?.messageTableIsEmpty()
         view?.stopLoading()
         Log.info(message: error)
     }

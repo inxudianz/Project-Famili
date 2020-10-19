@@ -28,36 +28,75 @@ class NotificationViewController: MasterViewController, NotificationViewProtocol
     
     var viewModel: NotificationViewModelProtocol?
     lazy var loadingView = FamiliLoadingView(frame: self.view.frame)
-    var newsContentSegmentControl = 0
-    var messageContentSegmentControl = 1
+    let messageContentSegmentControl = 1
+    let newsContentSegmentControl = 0
+    var messageTableContentIsEmpty: Bool?
+    var newsTableContentIsEmpty: Bool?
     
-    override func viewDidLoad() {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewDidLoad()
         setSegmentedControlView()
         registerCell()
-        messageContentView.isHidden = true
-        messageEmptyView.isHidden = true
+//        messageContentView.isHidden = true
+//        messageEmptyView.isHidden = true
+        showLoading()
+        notificationSegmentedControlChanged(newsContentSegmentControl)
+        reloadNewsTableData()
+//        viewModel?.getNotificationNews(userId: 1)
+//        if newsTableContentIsEmpty == true{
+//            newsContentView.isHidden = true
+//            newsEmptyView.isHidden = false
+//        }else{
+//            newsContentView.isHidden = false
+//            newsEmptyView.isHidden = true
+//        }
     }
 
     @IBAction func notificationSegmentedControlChanged(_ sender: Any) {
         switch notificationSegmentedControl.selectedSegmentIndex{
         case newsContentSegmentControl :
-            newsContentView.isHidden = false
-            newsEmptyView.isHidden = false
-            
             messageContentView.isHidden = true
             messageEmptyView.isHidden = true
             viewModel?.getNotificationNews(userId: 1)
+            if newsTableContentIsEmpty == true{
+                newsContentView.isHidden = true
+                newsEmptyView.isHidden = false
+            }else{
+                newsContentView.isHidden = false
+                newsEmptyView.isHidden = true
+            }
         case messageContentSegmentControl :
             newsContentView.isHidden = true
             newsEmptyView.isHidden = true
-            
-            messageContentView.isHidden = false
-            messageEmptyView.isHidden = false
             viewModel?.getNotificationMessage(userId: 1)
+            if messageTableContentIsEmpty == true{
+                messageContentView.isHidden = true
+                messageEmptyView.isHidden = false
+            }else{
+                messageContentView.isHidden = false
+                messageEmptyView.isHidden = true
+            }
         default :
             break
         }
+    }
+    
+    func messageTableIsEmpty(){
+        messageContentView.isHidden = true
+        messageEmptyView.isHidden = false
+    }
+    
+    func newsTableIsEmpty(){
+        newsContentView.isHidden = true
+        newsEmptyView.isHidden = false
+    }
+    
+    func reloadMessageTableData(){
+        messageContentTableView.reloadData()
+    }
+    
+    func reloadNewsTableData(){
+        newsContentTableView.reloadData()
     }
     
     func showLoading() {
@@ -80,13 +119,15 @@ class NotificationViewController: MasterViewController, NotificationViewProtocol
         let messageContentTableViewNib = "NotificationMessageTableViewCell"
         let messageContentTableViewCellIdentifier = "NotificationMessageCell"
         
-        newsContentTableView.register(UINib(nibName: String(describing: newsContentTableViewNib), bundle: nil) , forCellReuseIdentifier: String(describing: newsContentTableViewCellIdentifier))
+        newsContentTableView.register(UINib(nibName: String(describing: newsContentTableViewNib.self), bundle: nil) , forCellReuseIdentifier: String(describing: newsContentTableViewCellIdentifier))
         newsContentTableView.delegate = self
         newsContentTableView.dataSource = viewModel?.notificationNewsDataSource
+        newsContentTableView.tableFooterView = UIView()
         
-        messageContentTableView.register(UINib(nibName: String(describing: messageContentTableViewNib), bundle: nil), forCellReuseIdentifier: String(describing: messageContentTableViewCellIdentifier))
+        messageContentTableView.register(UINib(nibName: String(describing: messageContentTableViewNib.self), bundle: nil), forCellReuseIdentifier: String(describing: messageContentTableViewCellIdentifier))
         messageContentTableView.delegate = self
         messageContentTableView.dataSource = viewModel?.notificationMessageDataSource
+        messageContentTableView.tableFooterView = UIView()
     }
 
 }

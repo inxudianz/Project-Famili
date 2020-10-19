@@ -11,7 +11,7 @@ import Foundation
 class NotificationViewModel: NotificationViewModelProtocol {
     // MARK: - Property
     weak var view: NotificationViewProtocol?
-//    weak var coordinator: NotificationCoordinatorProtocol?
+    weak var coordinator: HomeCoordinatorProtocol?
     var notificationMessageDataSource: NotificationMessageDataSource?
     var notificationNewsDataSource: NotificationNewsDataSource?
     var network: HomeNetworkProtocol?
@@ -35,4 +35,13 @@ class NotificationViewModel: NotificationViewModelProtocol {
         view?.showLoading()
         network?.notificationNewsGet(userId: userId)
     }
+    
+    func messageTableDidSelectRow(at: IndexPath){
+        //func when user select a cell on message table
+    }
+    
+    func newsTableDidSelectRow(at: IndexPath){
+        //func when user select a cell on news table
+    }
+    
 }

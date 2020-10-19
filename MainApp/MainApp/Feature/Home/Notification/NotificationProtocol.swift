@@ -10,7 +10,7 @@ import Foundation
 
 protocol NotificationViewModelProtocol: class {
     var view: NotificationViewProtocol? { get set }
-//    var coordinator: ProfileCoordinatorProtocol? { get set }
+    var coordinator: HomeCoordinatorProtocol? { get set }
     var network: HomeNetworkProtocol? { get set }
     var notificationMessageDataSource: NotificationMessageDataSource? { get set }
     var notificationNewsDataSource: NotificationNewsDataSource? { get set }
@@ -22,6 +22,12 @@ protocol NotificationViewModelProtocol: class {
 
 protocol NotificationViewProtocol: class {
     var viewModel: NotificationViewModelProtocol? { get set }
+    var messageTableContentIsEmpty: Bool? { get set }
+    var newsTableContentIsEmpty: Bool? { get set }
+    func messageTableIsEmpty()
+    func newsTableIsEmpty()
+    func reloadMessageTableData()
+    func reloadNewsTableData()
     func showLoading()
     func stopLoading()
 }

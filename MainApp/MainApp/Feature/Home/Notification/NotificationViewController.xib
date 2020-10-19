@@ -16,6 +16,7 @@
                 <outlet property="newsContentView" destination="gx3-0L-VWE" id="7Ix-0z-ubI"/>
                 <outlet property="newsEmptyView" destination="khr-6m-GPt" id="xCd-rv-mA1"/>
                 <outlet property="notificationSegmentedControl" destination="MYy-zW-2su" id="lpM-Gp-NhN"/>
+                <outlet property="view" destination="9oL-Dr-5E6" id="eJL-gp-5Sg"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
