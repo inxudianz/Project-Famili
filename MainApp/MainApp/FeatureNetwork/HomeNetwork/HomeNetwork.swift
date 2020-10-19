@@ -8,6 +8,26 @@
 
 import Foundation
 
-class HomeNetwork {
+protocol HomeNetworkProtocol {
+    var homeBannersDelegate: HomeBannersProtocol? { get set }
+    func getBanners()
+}
+class HomeNetwork: HomeNetworkProtocol {
+    weak var homeBannersDelegate: HomeBannersProtocol?
     
+    private var networkService: NetworkService
+    
+    init() {
+        self.networkService = NetworkService()
+    }
+    func getBanners() {
+        networkService.request(HomeService.getBanners, EmptyModel(), HomeResponse.Banners.self) { [weak self] (result) in
+            switch result {
+            case .success(let result):
+                self?.homeBannersDelegate?.didSuccessGetBanners(response: result)
+            case .failure(let error):
+                self?.homeBannersDelegate?.didFailedGetBanners(error: error)
+            }
+        }
+    }
 }

@@ -176,6 +176,11 @@
 		92CA2C93251B748C00920B21 /* RegisterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CA2AA3251B715800920B21 /* RegisterTests.swift */; };
 		92CA2C96251B749200920B21 /* SampleHomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CA2AAB251B715800920B21 /* SampleHomeTests.swift */; };
 		92CA2C99251B749600920B21 /* InitialScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CA2AA1251B715800920B21 /* InitialScreenTests.swift */; };
+		92D51652253D30E9001850A4 /* HomeNetwork+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D51651253D30E9001850A4 /* HomeNetwork+Delegate.swift */; };
+		92D51657253D3197001850A4 /* HomeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D51656253D3197001850A4 /* HomeResponse.swift */; };
+		92D5165A253D3261001850A4 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D51659253D3261001850A4 /* HomeService.swift */; };
+		92D5165E253D32B9001850A4 /* HomePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D5165D253D32B9001850A4 /* HomePath.swift */; };
+		92D51661253D32C3001850A4 /* HomeSubPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D51660253D32C3001850A4 /* HomeSubPath.swift */; };
 		9D2C8C6C95637BB845218937 /* Pods_MainAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3304A088087BD629641C29A2 /* Pods_MainAppTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -392,6 +397,11 @@
 		92CA2BB3251B72F700920B21 /* Pods_MainApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_MainApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		92CA2BFB251B731700920B21 /* Pods_MainApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_MainApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		92CA2C84251B746C00920B21 /* TermsOfServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsOfServiceTests.swift; sourceTree = "<group>"; };
+		92D51651253D30E9001850A4 /* HomeNetwork+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeNetwork+Delegate.swift"; sourceTree = "<group>"; };
+		92D51656253D3197001850A4 /* HomeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeResponse.swift; sourceTree = "<group>"; };
+		92D51659253D3261001850A4 /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
+		92D5165D253D32B9001850A4 /* HomePath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePath.swift; sourceTree = "<group>"; };
+		92D51660253D32C3001850A4 /* HomeSubPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSubPath.swift; sourceTree = "<group>"; };
 		92D79E862483E534004C4701 /* MainApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MainApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92D79E9C2483E535004C4701 /* MainAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MainAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		92D79F1B2483F35D004C4701 /* Component.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Component.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -694,6 +704,7 @@
 				92CA2A16251B715800920B21 /* LoginResponse.swift */,
 				92CA2A17251B715800920B21 /* ProfileResponse.swift */,
 				92CA2A18251B715800920B21 /* SampleResponse.swift */,
+				92D51656253D3197001850A4 /* HomeResponse.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -722,6 +733,7 @@
 		92CA2A21251B715800920B21 /* FeaturePath */ = {
 			isa = PBXGroup;
 			children = (
+				92D5165C253D32A9001850A4 /* Home */,
 				92CA2A22251B715800920B21 /* Auth */,
 				92CA2A26251B715800920B21 /* Profile */,
 				92CA2A29251B715800920B21 /* Sample */,
@@ -764,6 +776,7 @@
 				92CA2A30251B715800920B21 /* AuthService.swift */,
 				92CA2A31251B715800920B21 /* LoginService.swift */,
 				92CA2A32251B715800920B21 /* SampleService.swift */,
+				92D51659253D3261001850A4 /* HomeService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -810,6 +823,7 @@
 			isa = PBXGroup;
 			children = (
 				92CA2A42251B715800920B21 /* HomeNetwork.swift */,
+				92D51651253D30E9001850A4 /* HomeNetwork+Delegate.swift */,
 			);
 			path = HomeNetwork;
 			sourceTree = "<group>";
@@ -1111,6 +1125,15 @@
 				92CA2AAB251B715800920B21 /* SampleHomeTests.swift */,
 			);
 			path = Sample;
+			sourceTree = "<group>";
+		};
+		92D5165C253D32A9001850A4 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				92D5165D253D32B9001850A4 /* HomePath.swift */,
+				92D51660253D32C3001850A4 /* HomeSubPath.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		92D79E7D2483E534004C4701 = {
@@ -1430,6 +1453,7 @@
 				8A15429925208CCC007245AB /* HelpCenterNetwork.swift in Sources */,
 				92CA2B0A251B715800920B21 /* InitialScreenProtocol.swift in Sources */,
 				92CA2AB9251B715800920B21 /* AuthCoordinator.swift in Sources */,
+				92D51661253D32C3001850A4 /* HomeSubPath.swift in Sources */,
 				92CA2AF7251B715800920B21 /* LoginService.swift in Sources */,
 				92CA2B28251B715800920B21 /* ProfileLanding+Network.swift in Sources */,
 				92CA2B27251B715800920B21 /* ProfileLandingDataSource.swift in Sources */,
@@ -1443,6 +1467,7 @@
 				92CA2B2F251B715800920B21 /* PrivacyPolicyViewModel+Network.swift in Sources */,
 				92CA2AEF251B715800920B21 /* ProfilePath.swift in Sources */,
 				8A15428F25208C21007245AB /* HelpCenterDetailViewController.swift in Sources */,
+				92D51657253D3197001850A4 /* HomeResponse.swift in Sources */,
 				92CA2B02251B715800920B21 /* HomeLandingProtocol.swift in Sources */,
 				92CA2B3E251B715800920B21 /* SampleHomeProtocol.swift in Sources */,
 				92CA2AB5251B715800920B21 /* HomeCoordinator.swift in Sources */,
@@ -1460,6 +1485,7 @@
 				92CA2B12251B715800920B21 /* LoginViewModel.swift in Sources */,
 				92CA2B16251B715800920B21 /* LoginViewController.swift in Sources */,
 				92CA2B33251B715800920B21 /* SampleProfileProtocol.swift in Sources */,
+				92D51652253D30E9001850A4 /* HomeNetwork+Delegate.swift in Sources */,
 				92CA2B3B251B715800920B21 /* SampleHomeDetailProtocol.swift in Sources */,
 				92CA2AFC251B715800920B21 /* SampleNetwork.swift in Sources */,
 				92CA2ACB251B715800920B21 /* MainApp+NavigationBar.swift in Sources */,
@@ -1472,6 +1498,7 @@
 				92CA2AF8251B715800920B21 /* SampleService.swift in Sources */,
 				92CA2B17251B715800920B21 /* EditProfileProtocol.swift in Sources */,
 				92CA2AD0251B715800920B21 /* GoogleSDKHandler.swift in Sources */,
+				92D5165A253D3261001850A4 /* HomeService.swift in Sources */,
 				92CA2ACF251B715800920B21 /* FontManager.swift in Sources */,
 				8A326ED12531E34700C6D352 /* HelpCenterDetailViewModel.swift in Sources */,
 				92CA2B20251B715800920B21 /* TermsOfServiceProtocol.swift in Sources */,
@@ -1497,6 +1524,7 @@
 				92CA2ABF251B715800920B21 /* ProfileCoordinator.swift in Sources */,
 				92CA2B11251B715800920B21 /* RegisterViewModel.swift in Sources */,
 				92CA2AFD251B715800920B21 /* AuthNetwork.swift in Sources */,
+				92D5165E253D32B9001850A4 /* HomePath.swift in Sources */,
 				92CA2AE6251B715800920B21 /* EmptyModel.swift in Sources */,
 				8A15428B25208B85007245AB /* HelpCenterDataSource.swift in Sources */,
 				92CA2B00251B715800920B21 /* ProfileNetwork.swift in Sources */,
