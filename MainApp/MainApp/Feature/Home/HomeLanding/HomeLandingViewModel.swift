@@ -11,14 +11,37 @@ import Foundation
 class HomeLandingViewModel: HomeLandingViewModelProtocol {
     weak var view: HomeLandingViewProtocol?
     weak var coordinator: HomeCoordinatorProtocol?
-    var dataSource: HomeLandingDataSource?
+    var bannerDataSource: HomeLandingBannerDataSource?
+    var serviceDataSource: HomeLandingServiceDataSource?
+    var bannerDelegate: HomeLandingBannerDelegate?
+    var serviceDelegate: HomeLandingServiceDelegate?
     
     init() {
-        self.dataSource = HomeLandingDataSource()
-        self.dataSource?.setData(with: ["image","image2","image3","image"])
+        self.bannerDataSource = HomeLandingBannerDataSource()
+        self.bannerDataSource?.setDatas(with: ["image","image2","image3","image"])
+        
+        self.serviceDataSource = HomeLandingServiceDataSource()
+        self.serviceDataSource?.setDatas(with: ["icon","icon2","icon3","icon","icon3"])
+        
+        self.serviceDataSource?.serviceHeaderDelegate = self
     }
     
-    public func getDatas() -> [String]? {
-        return dataSource?.getData()
+    public func getBannerDatas() -> [String]? {
+        return bannerDataSource?.getDatas()
+    }
+    
+    public func getServiceDatas() -> [String]? {
+        return serviceDataSource?.getDatas()
+    }
+    
+    public func navigateToNotification() {
+        coordinator?.navigateToNotification()
+    }
+}
+ 
+extension HomeLandingViewModel: ServiceHeaderProtocol {
+    func headerButtonDidTapped() {
+        guard let selectedDatas = serviceDelegate?.selectedDatas else { return }
+        coordinator?.navigateToService(with: selectedDatas)
     }
 }

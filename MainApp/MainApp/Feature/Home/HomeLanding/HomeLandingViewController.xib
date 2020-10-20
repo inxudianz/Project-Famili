@@ -13,7 +13,7 @@
             <connections>
                 <outlet property="bannerCollectionView" destination="Rcm-Ek-bU3" id="AVT-oz-2BY"/>
                 <outlet property="bannerPageControl" destination="8WF-1w-cxk" id="kxd-Gj-dAK"/>
-                <outlet property="bellImage" destination="bEr-cI-pZL" id="Tn1-XF-GU2"/>
+                <outlet property="bellButton" destination="Uhc-zg-7YT" id="6bw-fu-9rz"/>
                 <outlet property="downImage" destination="S7d-0y-gs4" id="uGo-c3-qUa"/>
                 <outlet property="homeContentView" destination="vOm-T1-DEd" id="ybt-oq-tSg"/>
                 <outlet property="homeScrollView" destination="khx-9V-O70" id="w1H-8p-3w0"/>
@@ -51,25 +51,26 @@
                                 <constraint firstAttribute="width" constant="15" id="Ahb-4V-mnp"/>
                             </constraints>
                         </imageView>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bell" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="bEr-cI-pZL" userLabel="Bell Icon">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uhc-zg-7YT" userLabel="Bell Button">
                             <rect key="frame" x="355" y="20" width="20" height="19.5"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="20" id="cRA-W6-wHY"/>
-                                <constraint firstAttribute="width" constant="20" id="iq1-5b-fa5"/>
+                                <constraint firstAttribute="width" constant="20" id="8fw-km-9JF"/>
+                                <constraint firstAttribute="height" constant="20" id="Iuu-cy-2x6"/>
                             </constraints>
-                        </imageView>
+                            <state key="normal" backgroundImage="bell" catalog="system"/>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstItem="S7d-0y-gs4" firstAttribute="leading" secondItem="kNi-aH-Bie" secondAttribute="trailing" constant="16" id="18e-aL-1k5"/>
+                        <constraint firstItem="Uhc-zg-7YT" firstAttribute="centerY" secondItem="NiN-g4-U4N" secondAttribute="centerY" id="359-6Q-cvP"/>
+                        <constraint firstAttribute="trailing" secondItem="Uhc-zg-7YT" secondAttribute="trailing" id="7NR-cn-kuR"/>
                         <constraint firstItem="kNi-aH-Bie" firstAttribute="leading" secondItem="NiN-g4-U4N" secondAttribute="leading" id="BAf-zy-MJG"/>
                         <constraint firstAttribute="trailing" secondItem="54Q-ZU-xck" secondAttribute="trailing" constant="55" id="XwR-hr-cNB"/>
                         <constraint firstItem="kNi-aH-Bie" firstAttribute="top" secondItem="NiN-g4-U4N" secondAttribute="top" id="Yde-OB-g7k"/>
                         <constraint firstItem="S7d-0y-gs4" firstAttribute="top" secondItem="NiN-g4-U4N" secondAttribute="top" id="ZaM-Vc-Bp3"/>
                         <constraint firstItem="54Q-ZU-xck" firstAttribute="top" secondItem="kNi-aH-Bie" secondAttribute="bottom" constant="4" id="c9U-DB-208"/>
-                        <constraint firstItem="bEr-cI-pZL" firstAttribute="centerY" secondItem="NiN-g4-U4N" secondAttribute="centerY" id="cVj-bT-ftp"/>
                         <constraint firstAttribute="height" constant="60" id="hkx-sq-qZo"/>
-                        <constraint firstAttribute="trailing" secondItem="bEr-cI-pZL" secondAttribute="trailing" id="lzT-ZA-sh6"/>
                         <constraint firstItem="54Q-ZU-xck" firstAttribute="leading" secondItem="NiN-g4-U4N" secondAttribute="leading" id="ybK-3h-Pnd"/>
                     </constraints>
                 </view>
@@ -96,17 +97,17 @@
                                 <pageControl hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" hidesForSinglePage="YES" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="8WF-1w-cxk">
                                     <rect key="frame" x="16" y="180" width="382" height="27.5"/>
                                 </pageControl>
-                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="7SS-cG-7IY" userLabel="Service Collection View">
+                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="none" prefetchingEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7SS-cG-7IY" userLabel="Service Collection View">
                                     <rect key="frame" x="16" y="230" width="382" height="200"/>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <color key="backgroundColor" systemColor="systemBlueColor"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="200" id="Xt8-uc-ypF"/>
                                     </constraints>
                                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="8f3-R8-UnL">
-                                        <size key="itemSize" width="128" height="128"/>
-                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                        <size key="itemSize" width="70" height="70"/>
+                                        <size key="headerReferenceSize" width="50" height="50"/>
                                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                     </collectionViewFlowLayout>
                                 </collectionView>
                             </subviews>
@@ -155,6 +156,9 @@
         <image name="chevron.down" catalog="system" width="128" height="72"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

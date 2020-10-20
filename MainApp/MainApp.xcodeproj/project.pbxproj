@@ -19,6 +19,9 @@
 		8A326E6F2524CEBB00C6D352 /* HelpCenterDetailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A326E6E2524CEBA00C6D352 /* HelpCenterDetailTests.swift */; };
 		8A326E7D252DDBAD00C6D352 /* HelpCenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A326E7C252DDBAD00C6D352 /* HelpCenterTests.swift */; };
 		8A326ED12531E34700C6D352 /* HelpCenterDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A326ED02531E34700C6D352 /* HelpCenterDetailViewModel.swift */; };
+		926D1920253EB30300466810 /* HomeLanding+UICollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926D191F253EB30300466810 /* HomeLanding+UICollectionViewDelegate.swift */; };
+		926D1926253EC2B500466810 /* ServiceHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926D1924253EC2B500466810 /* ServiceHeaderCollectionReusableView.swift */; };
+		926D1927253EC2B500466810 /* ServiceHeaderCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 926D1925253EC2B500466810 /* ServiceHeaderCollectionReusableView.xib */; };
 		92CA2AAD251B715800920B21 /* AppCoordinator+FeatureCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CA29CC251B715700920B21 /* AppCoordinator+FeatureCoordinator.swift */; };
 		92CA2AAE251B715800920B21 /* BuildConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CA29CD251B715700920B21 /* BuildConfiguration.swift */; };
 		92CA2AAF251B715800920B21 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CA29CE251B715700920B21 /* AppCoordinator.swift */; };
@@ -243,6 +246,9 @@
 		8A326E6E2524CEBA00C6D352 /* HelpCenterDetailTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCenterDetailTests.swift; sourceTree = "<group>"; };
 		8A326E7C252DDBAD00C6D352 /* HelpCenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCenterTests.swift; sourceTree = "<group>"; };
 		8A326ED02531E34700C6D352 /* HelpCenterDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCenterDetailViewModel.swift; sourceTree = "<group>"; };
+		926D191F253EB30300466810 /* HomeLanding+UICollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeLanding+UICollectionViewDelegate.swift"; sourceTree = "<group>"; };
+		926D1924253EC2B500466810 /* ServiceHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
+		926D1925253EC2B500466810 /* ServiceHeaderCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceHeaderCollectionReusableView.xib; sourceTree = "<group>"; };
 		92913BB8248D07C8002D961D /* Component.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Component.xcodeproj; path = ../Component/Component.xcodeproj; sourceTree = "<group>"; };
 		92CA29CC251B715700920B21 /* AppCoordinator+FeatureCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppCoordinator+FeatureCoordinator.swift"; sourceTree = "<group>"; };
 		92CA29CD251B715700920B21 /* BuildConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildConfiguration.swift; sourceTree = "<group>"; };
@@ -1161,6 +1167,7 @@
 				92D516B2253D4266001850A4 /* Banner Cell */,
 				92CA2A45251B715800920B21 /* HomeLandingProtocol.swift */,
 				92CA2A46251B715800920B21 /* HomeLandingViewController.swift */,
+				926D191F253EB30300466810 /* HomeLanding+UICollectionViewDelegate.swift */,
 				92D516C0253D6022001850A4 /* HomeLandingDataSource.swift */,
 				92CA2A47251B715800920B21 /* HomeLandingViewModel.swift */,
 				92CA2A48251B715800920B21 /* HomeLandingViewController.xib */,
@@ -1181,6 +1188,8 @@
 			isa = PBXGroup;
 			children = (
 				92D516BA253D4297001850A4 /* ServiceCollectionViewCell.swift */,
+				926D1924253EC2B500466810 /* ServiceHeaderCollectionReusableView.swift */,
+				926D1925253EC2B500466810 /* ServiceHeaderCollectionReusableView.xib */,
 				92D516BB253D4297001850A4 /* ServiceCollectionViewCell.xib */,
 			);
 			path = "Service Cell";
@@ -1345,6 +1354,7 @@
 				92D516B7253D428B001850A4 /* BannerCollectionViewCell.xib in Resources */,
 				92CA2B05251B715800920B21 /* HomeLandingViewController.xib in Resources */,
 				92CA2B0B251B715800920B21 /* Auth.xcassets in Resources */,
+				926D1927253EC2B500466810 /* ServiceHeaderCollectionReusableView.xib in Resources */,
 				8A15428525208AED007245AB /* HelpCenterViewController.xib in Resources */,
 				92CA2AD5251B715800920B21 /* Inter-Medium.ttf in Resources */,
 				92CA2ADC251B715800920B21 /* Inter-Black.ttf in Resources */,
@@ -1498,6 +1508,7 @@
 				92CA2B21251B715800920B21 /* ProfileConstant.swift in Sources */,
 				92CA2AEA251B715800920B21 /* ProfileModel.swift in Sources */,
 				92CA2AC9251B715800920B21 /* MainApp+String.swift in Sources */,
+				926D1920253EB30300466810 /* HomeLanding+UICollectionViewDelegate.swift in Sources */,
 				92CA2B1F251B715800920B21 /* TermsOfServiceController.swift in Sources */,
 				92CA2AAF251B715800920B21 /* AppCoordinator.swift in Sources */,
 				92CA2B3A251B715800920B21 /* SampleHomeDetailViewModel.swift in Sources */,
@@ -1582,6 +1593,7 @@
 				92CA2AFD251B715800920B21 /* AuthNetwork.swift in Sources */,
 				92D5165E253D32B9001850A4 /* HomePath.swift in Sources */,
 				92CA2AE6251B715800920B21 /* EmptyModel.swift in Sources */,
+				926D1926253EC2B500466810 /* ServiceHeaderCollectionReusableView.swift in Sources */,
 				8A15428B25208B85007245AB /* HelpCenterDataSource.swift in Sources */,
 				92CA2B00251B715800920B21 /* ProfileNetwork.swift in Sources */,
 				92CA2AB8251B715800920B21 /* InitialScreenCoordinatorProtocol.swift in Sources */,

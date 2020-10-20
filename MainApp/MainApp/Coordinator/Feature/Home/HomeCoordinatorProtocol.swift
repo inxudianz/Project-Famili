@@ -9,5 +9,6 @@
 import Foundation
 
 protocol HomeCoordinatorProtocol: Coordinator {
-    
+    func navigateToService(with services: [String])
+    func navigateToNotification()
 }

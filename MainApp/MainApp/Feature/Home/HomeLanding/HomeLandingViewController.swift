@@ -18,18 +18,22 @@ class HomeLandingViewController: MasterViewController, HomeLandingViewProtocol {
     @IBOutlet weak var mapTitleLabel: UILabel! {
         didSet {
             mapTitleLabel.text = "Your Location"
-            mapTitleLabel.font = FontManager.getFont(for: .regular, size: 13)
-            mapTitleLabel.textColor = UIColor(hex: "#BDBDBD")
+            mapTitleLabel.font = FontManager.getFont(for: .medium, size: 13)
+            mapTitleLabel.textColor = UIColor(hex: "#BDBDBDFF")
         }
     }
     @IBOutlet weak var mapLocationLabel: UILabel! {
         didSet {
-            mapLocationLabel.font = FontManager.getFont(for: .regular, size: 13)
+            mapLocationLabel.font = FontManager.getFont(for: .medium, size: 13)
             mapLocationLabel.textColor = .black
         }
     }
     @IBOutlet weak var downImage: UIImageView!
-    @IBOutlet weak var bellImage: UIImageView!
+    @IBOutlet weak var bellButton: UIButton! {
+        didSet {
+            bellButton.addTarget(self, action: #selector(bellButtonDidTapped), for: .touchUpInside)
+        }
+    }
     @IBOutlet weak var homeScrollView: UIScrollView! {
         didSet {
             
@@ -43,12 +47,13 @@ class HomeLandingViewController: MasterViewController, HomeLandingViewProtocol {
     }
     @IBOutlet weak var bannerPageControl: UIPageControl! {
         didSet {
-            bannerPageControl.numberOfPages = viewModel?.getDatas()?.count ?? 1
+            bannerPageControl.numberOfPages = viewModel?.getBannerDatas()?.count ?? 1
         }
     }
     @IBOutlet weak var serviceCollectionView: UICollectionView! {
         didSet {
             serviceCollectionView.layer.cornerRadius = 22
+            serviceCollectionView.layer.backgroundColor = UIColor(hex: "#67C2FFFF")?.cgColor
         }
     }
     
@@ -57,13 +62,19 @@ class HomeLandingViewController: MasterViewController, HomeLandingViewProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         setBannerCollectionView()
+        setServiceCollectionView()
+    }
+    
+    @objc func bellButtonDidTapped() {
+        viewModel?.navigateToNotification()
     }
     
     private func setBannerCollectionView() {
         let bannerCell = UINib(nibName: String(describing: BannerCollectionViewCell.self), bundle: Bundle(for: BannerCollectionViewCell.self))
+        viewModel?.bannerDelegate = HomeLandingBannerDelegate(bannerCollectionView: bannerCollectionView, bannerPageControl: bannerPageControl)
         bannerCollectionView.register(bannerCell, forCellWithReuseIdentifier: "bannerCell")
-        bannerCollectionView.dataSource = viewModel?.dataSource
-        bannerCollectionView.delegate = self
+        bannerCollectionView.dataSource = viewModel?.bannerDataSource
+        bannerCollectionView.delegate = viewModel?.bannerDelegate
         
         bannerCollectionView.collectionViewLayout = getBannerCollectionFlow()
     }
@@ -77,12 +88,14 @@ class HomeLandingViewController: MasterViewController, HomeLandingViewProtocol {
         
         return collectionFlow
     }
-}
-
-extension HomeLandingViewController: UICollectionViewDelegate {
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        guard let visibleCell = bannerCollectionView.visibleCells.first else { return }
-        let bannerIndex = bannerCollectionView.indexPath(for: visibleCell)
-        bannerPageControl.currentPage = bannerIndex?.row ?? 0
+    
+    private func setServiceCollectionView() {
+        let serviceCell = UINib(nibName: String(describing: ServiceCollectionViewCell.self), bundle: Bundle(for: ServiceCollectionViewCell.self))
+        let serviceHeaderCell = UINib(nibName: String(describing: ServiceHeaderCollectionReusableView.self), bundle: Bundle(for: ServiceHeaderCollectionReusableView.self))
+        viewModel?.serviceDelegate = HomeLandingServiceDelegate(serviceCollectionView: serviceCollectionView)
+        serviceCollectionView.register(serviceCell, forCellWithReuseIdentifier: "serviceCell")
+        serviceCollectionView.dataSource = viewModel?.serviceDataSource
+        serviceCollectionView.delegate = viewModel?.serviceDelegate
+        serviceCollectionView.register(serviceHeaderCell, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "serviceHeaderCell")
     }
 }

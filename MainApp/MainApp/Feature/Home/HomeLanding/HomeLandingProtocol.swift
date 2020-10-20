@@ -11,9 +11,14 @@ import Foundation
 protocol HomeLandingViewModelProtocol: class {
     var view: HomeLandingViewProtocol? { get set }
     var coordinator: HomeCoordinatorProtocol? { get set }
-    var dataSource: HomeLandingDataSource? { get set }
+    var bannerDataSource: HomeLandingBannerDataSource? { get set }
+    var serviceDataSource: HomeLandingServiceDataSource? { get set }
+    var bannerDelegate: HomeLandingBannerDelegate? { get set }
+    var serviceDelegate: HomeLandingServiceDelegate? { get set }
     
-    func getDatas() -> [String]?
+    func getBannerDatas() -> [String]?
+    func getServiceDatas() -> [String]?
+    func navigateToNotification()
 }
 
 protocol HomeLandingViewProtocol: class {

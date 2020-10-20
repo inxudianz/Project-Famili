@@ -28,5 +28,11 @@ class HomeCoordinator: HomeCoordinatorProtocol {
         navigationController?.pushViewController(vc, animated: false)
     }
     
+    func navigateToService(with services: [String]) {
+        // Navigate to Service
+    }
     
+    func navigateToNotification() {
+        // Navigate to notification
+    }
 }
