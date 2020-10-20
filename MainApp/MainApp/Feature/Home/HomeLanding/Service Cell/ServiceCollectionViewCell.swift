@@ -9,6 +9,7 @@
 import UIKit
 
 class ServiceCollectionViewCell: UICollectionViewCell {
+    // MARK: - Outlet
     @IBOutlet weak var backgroundLayer: UIView!
     @IBOutlet weak var serviceIcon: UIImageView!
     @IBOutlet weak var checkmarkIcon: UIImageView! {
@@ -17,12 +18,15 @@ class ServiceCollectionViewCell: UICollectionViewCell {
         }
     }
     
+    // MARK: - Variable
     public var serviceId: String?
     
+    // MARK: - Initialization
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
+    // MARK: - Function
     public func toggleSelected() {
         checkmarkIcon.isHidden = !checkmarkIcon.isHidden
     }

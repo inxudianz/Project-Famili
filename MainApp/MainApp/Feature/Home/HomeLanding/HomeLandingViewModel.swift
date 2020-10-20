@@ -28,17 +28,6 @@ class HomeLandingViewModel: HomeLandingViewModelProtocol {
         setServiceData()
         view?.setupView()
     }
-    private func setBannerData() {
-        view?.showLoading()
-        network?.getBanners()
-        self.bannerDataSource = HomeLandingBannerDataSource()
-    }
-    private func setServiceData() {
-        self.serviceDataSource = HomeLandingServiceDataSource()
-        self.serviceDataSource?.setDatas(with: ["icon","icon2","icon3","icon","icon3"])
-        
-        self.serviceDataSource?.serviceHeaderDelegate = self
-    }
     
     public func getBannerDatas() -> [String]? {
         return bannerDataSource?.getDatas()
@@ -50,6 +39,19 @@ class HomeLandingViewModel: HomeLandingViewModelProtocol {
     
     public func navigateToNotification() {
         coordinator?.navigateToNotification()
+    }
+    
+    private func setBannerData() {
+        view?.showLoading()
+        network?.getBanners()
+        self.bannerDataSource = HomeLandingBannerDataSource()
+    }
+    
+    private func setServiceData() {
+        self.serviceDataSource = HomeLandingServiceDataSource()
+        self.serviceDataSource?.setDatas(with: ["icon","icon2","icon3","icon","icon3"])
+        
+        self.serviceDataSource?.serviceHeaderDelegate = self
     }
 }
  

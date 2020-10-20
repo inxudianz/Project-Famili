@@ -10,11 +10,8 @@ import UIKit
 import Component
 
 class HomeLandingViewController: MasterViewController, HomeLandingViewProtocol {
-    @IBOutlet weak var mapView: UIView! {
-        didSet {
-            
-        }
-    }
+    // MARK: - Outlet
+    @IBOutlet weak var mapView: UIView!
     @IBOutlet weak var mapTitleLabel: UILabel! {
         didSet {
             mapTitleLabel.text = HomeLandingConstant.LocalizationKey.mapTitle
@@ -34,11 +31,7 @@ class HomeLandingViewController: MasterViewController, HomeLandingViewProtocol {
             bellButton.addTarget(self, action: #selector(bellButtonDidTapped), for: .touchUpInside)
         }
     }
-    @IBOutlet weak var homeScrollView: UIScrollView! {
-        didSet {
-            
-        }
-    }
+    @IBOutlet weak var homeScrollView: UIScrollView!
     @IBOutlet weak var homeContentView: UIView!
     @IBOutlet weak var bannerCollectionView: UICollectionView! {
         didSet {
@@ -54,18 +47,22 @@ class HomeLandingViewController: MasterViewController, HomeLandingViewProtocol {
         }
     }
     
+    // MARK: - Variable
     var viewModel: HomeLandingViewModelProtocol?
     lazy var loadingView = FamiliLoadingView(frame: self.view.frame)
 
+    // MARK: - Initialization
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel?.viewDidLoad()
     }
     
+    // MARK: - Handler
     @objc func bellButtonDidTapped() {
         viewModel?.navigateToNotification()
     }
     
+    // MARK: - Public Function
     public func setupView() {
         setBannerCollectionView()
         setServiceCollectionView()
@@ -76,6 +73,15 @@ class HomeLandingViewController: MasterViewController, HomeLandingViewProtocol {
         bannerCollectionView.reloadData()
     }
     
+    public func showLoading() {
+        loadingView.showLoading(to: self.view)
+    }
+    
+    public func hideLoading() {
+        loadingView.stopLoading()
+    }
+    
+    // MARK: - Private Function
     private func setBannerCollectionView() {
         let bannerCell = UINib(nibName: String(describing: BannerCollectionViewCell.self), bundle: Bundle(for: BannerCollectionViewCell.self))
         viewModel?.bannerDelegate = HomeLandingBannerDelegate(bannerCollectionView: bannerCollectionView, bannerPageControl: bannerPageControl)
@@ -104,13 +110,5 @@ class HomeLandingViewController: MasterViewController, HomeLandingViewProtocol {
         serviceCollectionView.dataSource = viewModel?.serviceDataSource
         serviceCollectionView.delegate = viewModel?.serviceDelegate
         serviceCollectionView.register(serviceHeaderCell, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HomeLandingConstant.HeaderServiceCell.cellID)
-    }
-    
-    public func showLoading() {
-        loadingView.showLoading(to: self.view)
-    }
-    
-    public func hideLoading() {
-        loadingView.stopLoading()
     }
 }

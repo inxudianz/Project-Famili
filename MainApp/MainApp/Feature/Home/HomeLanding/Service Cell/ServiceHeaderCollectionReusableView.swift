@@ -9,6 +9,7 @@
 import UIKit
 
 class ServiceHeaderCollectionReusableView: UICollectionReusableView {
+    // MARK: - Outlet
     @IBOutlet weak var headerTitle: UILabel! {
         didSet {
             headerTitle.font = FontManager.getFont(for: .medium, size: HomeLandingConstant.HeaderServiceCell.cellTitleSize)
@@ -21,13 +22,16 @@ class ServiceHeaderCollectionReusableView: UICollectionReusableView {
         }
     }
     
+    // MARK: - Variable
     public weak var serviceHeaderDelegate: ServiceHeaderProtocol?
     
+    // MARK: - Initialization
     override func awakeFromNib() {
         super.awakeFromNib()
         
     }
     
+    // MARK: - Handler
     @objc func headerDidTapped() {
         serviceHeaderDelegate?.headerButtonDidTapped()
     }
