@@ -11,15 +11,29 @@ import Foundation
 class HomeLandingViewModel: HomeLandingViewModelProtocol {
     weak var view: HomeLandingViewProtocol?
     weak var coordinator: HomeCoordinatorProtocol?
+    
+    var network: HomeNetworkProtocol?
     var bannerDataSource: HomeLandingBannerDataSource?
     var serviceDataSource: HomeLandingServiceDataSource?
     var bannerDelegate: HomeLandingBannerDelegate?
     var serviceDelegate: HomeLandingServiceDelegate?
     
     init() {
+        network = HomeNetwork()
+        network?.homeBannersDelegate = self
+    }
+    
+    public func viewDidLoad() {
+        setBannerData()
+        setServiceData()
+        view?.setupView()
+    }
+    private func setBannerData() {
+        view?.showLoading()
+        network?.getBanners()
         self.bannerDataSource = HomeLandingBannerDataSource()
-        self.bannerDataSource?.setDatas(with: ["image","image2","image3","image"])
-        
+    }
+    private func setServiceData() {
         self.serviceDataSource = HomeLandingServiceDataSource()
         self.serviceDataSource?.setDatas(with: ["icon","icon2","icon3","icon","icon3"])
         

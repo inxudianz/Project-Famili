@@ -43,30 +43,37 @@ class HomeLandingViewController: MasterViewController, HomeLandingViewProtocol {
     @IBOutlet weak var bannerCollectionView: UICollectionView! {
         didSet {
             bannerCollectionView.layer.cornerRadius = HomeLandingConstant.Common.viewCornerRadius
+            bannerCollectionView.layer.backgroundColor = UIColor(hex: HomeLandingConstant.Common.collectionViewColor)?.cgColor
         }
     }
-    @IBOutlet weak var bannerPageControl: UIPageControl! {
-        didSet {
-            bannerPageControl.numberOfPages = viewModel?.getBannerDatas()?.count ?? 1
-        }
-    }
+    @IBOutlet weak var bannerPageControl: UIPageControl!
     @IBOutlet weak var serviceCollectionView: UICollectionView! {
         didSet {
             serviceCollectionView.layer.cornerRadius = HomeLandingConstant.Common.viewCornerRadius
-            serviceCollectionView.layer.backgroundColor = UIColor(hex: HomeLandingConstant.Common.serviceViewColor)?.cgColor
+            serviceCollectionView.layer.backgroundColor = UIColor(hex: HomeLandingConstant.Common.collectionViewColor)?.cgColor
         }
     }
     
     var viewModel: HomeLandingViewModelProtocol?
+    lazy var loadingView = FamiliLoadingView(frame: self.view.frame)
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setBannerCollectionView()
-        setServiceCollectionView()
+        viewModel?.viewDidLoad()
     }
     
     @objc func bellButtonDidTapped() {
         viewModel?.navigateToNotification()
+    }
+    
+    public func setupView() {
+        setBannerCollectionView()
+        setServiceCollectionView()
+    }
+    
+    public func reloadBanner() {
+        bannerPageControl.numberOfPages = viewModel?.getBannerDatas()?.count ?? 1
+        bannerCollectionView.reloadData()
     }
     
     private func setBannerCollectionView() {
@@ -97,5 +104,13 @@ class HomeLandingViewController: MasterViewController, HomeLandingViewProtocol {
         serviceCollectionView.dataSource = viewModel?.serviceDataSource
         serviceCollectionView.delegate = viewModel?.serviceDelegate
         serviceCollectionView.register(serviceHeaderCell, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HomeLandingConstant.HeaderServiceCell.cellID)
+    }
+    
+    public func showLoading() {
+        loadingView.showLoading(to: self.view)
+    }
+    
+    public func hideLoading() {
+        loadingView.stopLoading()
     }
 }

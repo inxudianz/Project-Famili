@@ -20,6 +20,7 @@
 		8A326E7D252DDBAD00C6D352 /* HelpCenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A326E7C252DDBAD00C6D352 /* HelpCenterTests.swift */; };
 		8A326ED12531E34700C6D352 /* HelpCenterDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A326ED02531E34700C6D352 /* HelpCenterDetailViewModel.swift */; };
 		922FC6D3253ED20A003288BF /* HomeLandingConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FC6D2253ED20A003288BF /* HomeLandingConstant.swift */; };
+		922FC6D8253ED618003288BF /* HomeLanding+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FC6D7253ED618003288BF /* HomeLanding+Network.swift */; };
 		926D1920253EB30300466810 /* HomeLanding+UICollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926D191F253EB30300466810 /* HomeLanding+UICollectionViewDelegate.swift */; };
 		926D1926253EC2B500466810 /* ServiceHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926D1924253EC2B500466810 /* ServiceHeaderCollectionReusableView.swift */; };
 		926D1927253EC2B500466810 /* ServiceHeaderCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 926D1925253EC2B500466810 /* ServiceHeaderCollectionReusableView.xib */; };
@@ -248,6 +249,7 @@
 		8A326E7C252DDBAD00C6D352 /* HelpCenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCenterTests.swift; sourceTree = "<group>"; };
 		8A326ED02531E34700C6D352 /* HelpCenterDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCenterDetailViewModel.swift; sourceTree = "<group>"; };
 		922FC6D2253ED20A003288BF /* HomeLandingConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeLandingConstant.swift; sourceTree = "<group>"; };
+		922FC6D7253ED618003288BF /* HomeLanding+Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeLanding+Network.swift"; sourceTree = "<group>"; };
 		926D191F253EB30300466810 /* HomeLanding+UICollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeLanding+UICollectionViewDelegate.swift"; sourceTree = "<group>"; };
 		926D1924253EC2B500466810 /* ServiceHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		926D1925253EC2B500466810 /* ServiceHeaderCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceHeaderCollectionReusableView.xib; sourceTree = "<group>"; };
@@ -1173,6 +1175,7 @@
 				926D191F253EB30300466810 /* HomeLanding+UICollectionViewDelegate.swift */,
 				92D516C0253D6022001850A4 /* HomeLandingDataSource.swift */,
 				92CA2A47251B715800920B21 /* HomeLandingViewModel.swift */,
+				922FC6D7253ED618003288BF /* HomeLanding+Network.swift */,
 				92CA2A48251B715800920B21 /* HomeLandingViewController.xib */,
 			);
 			path = HomeLanding;
@@ -1518,6 +1521,7 @@
 				92CA2AF4251B715800920B21 /* NetworkService.swift in Sources */,
 				92D516BC253D4297001850A4 /* ServiceCollectionViewCell.swift in Sources */,
 				92CA2B39251B715800920B21 /* SampleHomeViewModel.swift in Sources */,
+				922FC6D8253ED618003288BF /* HomeLanding+Network.swift in Sources */,
 				92CA2B1E251B715800920B21 /* TermsOfServiceViewModel+Network.swift in Sources */,
 				8A15429925208CCC007245AB /* HelpCenterNetwork.swift in Sources */,
 				92CA2B0A251B715800920B21 /* InitialScreenProtocol.swift in Sources */,

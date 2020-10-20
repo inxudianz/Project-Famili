@@ -29,7 +29,7 @@ enum HomeLandingConstant {
     
     enum Common {
         static let titleColor = "#BDBDBDFF"
-        static let serviceViewColor = "#67C2FFFF"
+        static let collectionViewColor = "#67C2FFFF"
         static let viewCornerRadius: CGFloat = 22
     }
 }
