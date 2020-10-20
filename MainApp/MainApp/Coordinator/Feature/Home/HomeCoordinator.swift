@@ -24,6 +24,7 @@ class HomeCoordinator: HomeCoordinatorProtocol {
         vm.coordinator = self
         vm.view = vc
         vc.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 0)
+        navigationController?.setNavigationBarHidden(true, animated: false)
         navigationController?.pushViewController(vc, animated: false)
     }
     

@@ -181,6 +181,12 @@
 		92D5165A253D3261001850A4 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D51659253D3261001850A4 /* HomeService.swift */; };
 		92D5165E253D32B9001850A4 /* HomePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D5165D253D32B9001850A4 /* HomePath.swift */; };
 		92D51661253D32C3001850A4 /* HomeSubPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D51660253D32C3001850A4 /* HomeSubPath.swift */; };
+		92D516B6253D428B001850A4 /* BannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D516B4253D428B001850A4 /* BannerCollectionViewCell.swift */; };
+		92D516B7253D428B001850A4 /* BannerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92D516B5253D428B001850A4 /* BannerCollectionViewCell.xib */; };
+		92D516BC253D4297001850A4 /* ServiceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D516BA253D4297001850A4 /* ServiceCollectionViewCell.swift */; };
+		92D516BD253D4297001850A4 /* ServiceCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92D516BB253D4297001850A4 /* ServiceCollectionViewCell.xib */; };
+		92D516C1253D6022001850A4 /* HomeLandingDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D516C0253D6022001850A4 /* HomeLandingDataSource.swift */; };
+		92D516C6253D608C001850A4 /* Home.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92D516C5253D608C001850A4 /* Home.xcassets */; };
 		9D2C8C6C95637BB845218937 /* Pods_MainAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3304A088087BD629641C29A2 /* Pods_MainAppTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -402,6 +408,12 @@
 		92D51659253D3261001850A4 /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
 		92D5165D253D32B9001850A4 /* HomePath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePath.swift; sourceTree = "<group>"; };
 		92D51660253D32C3001850A4 /* HomeSubPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSubPath.swift; sourceTree = "<group>"; };
+		92D516B4253D428B001850A4 /* BannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCollectionViewCell.swift; sourceTree = "<group>"; };
+		92D516B5253D428B001850A4 /* BannerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BannerCollectionViewCell.xib; sourceTree = "<group>"; };
+		92D516BA253D4297001850A4 /* ServiceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCollectionViewCell.swift; sourceTree = "<group>"; };
+		92D516BB253D4297001850A4 /* ServiceCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceCollectionViewCell.xib; sourceTree = "<group>"; };
+		92D516C0253D6022001850A4 /* HomeLandingDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeLandingDataSource.swift; sourceTree = "<group>"; };
+		92D516C5253D608C001850A4 /* Home.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Home.xcassets; sourceTree = "<group>"; };
 		92D79E862483E534004C4701 /* MainApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MainApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92D79E9C2483E535004C4701 /* MainAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MainAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		92D79F1B2483F35D004C4701 /* Component.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Component.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -843,10 +855,8 @@
 		92CA2A44251B715800920B21 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				92CA2A45251B715800920B21 /* HomeLandingProtocol.swift */,
-				92CA2A46251B715800920B21 /* HomeLandingViewController.swift */,
-				92CA2A47251B715800920B21 /* HomeLandingViewModel.swift */,
-				92CA2A48251B715800920B21 /* HomeLandingViewController.xib */,
+				92D51685253D37D8001850A4 /* Resources */,
+				92D51686253D37E9001850A4 /* HomeLanding */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -963,8 +973,8 @@
 		92CA2A70251B715800920B21 /* ProfileLanding */ = {
 			isa = PBXGroup;
 			children = (
-				92CA2A71251B715800920B21 /* ProfileLandingController.swift */,
 				92CA2A72251B715800920B21 /* ProfileLandingCell */,
+				92CA2A71251B715800920B21 /* ProfileLandingController.swift */,
 				92CA2A75251B715800920B21 /* ProfileLandingController.xib */,
 				92CA2A76251B715800920B21 /* ProfileLandingDataSource.swift */,
 				92CA2A77251B715800920B21 /* ProfileLanding+Network.swift */,
@@ -1136,6 +1146,46 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		92D51685253D37D8001850A4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				92D516C5253D608C001850A4 /* Home.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		92D51686253D37E9001850A4 /* HomeLanding */ = {
+			isa = PBXGroup;
+			children = (
+				92D516B3253D426E001850A4 /* Service Cell */,
+				92D516B2253D4266001850A4 /* Banner Cell */,
+				92CA2A45251B715800920B21 /* HomeLandingProtocol.swift */,
+				92CA2A46251B715800920B21 /* HomeLandingViewController.swift */,
+				92D516C0253D6022001850A4 /* HomeLandingDataSource.swift */,
+				92CA2A47251B715800920B21 /* HomeLandingViewModel.swift */,
+				92CA2A48251B715800920B21 /* HomeLandingViewController.xib */,
+			);
+			path = HomeLanding;
+			sourceTree = "<group>";
+		};
+		92D516B2253D4266001850A4 /* Banner Cell */ = {
+			isa = PBXGroup;
+			children = (
+				92D516B4253D428B001850A4 /* BannerCollectionViewCell.swift */,
+				92D516B5253D428B001850A4 /* BannerCollectionViewCell.xib */,
+			);
+			path = "Banner Cell";
+			sourceTree = "<group>";
+		};
+		92D516B3253D426E001850A4 /* Service Cell */ = {
+			isa = PBXGroup;
+			children = (
+				92D516BA253D4297001850A4 /* ServiceCollectionViewCell.swift */,
+				92D516BB253D4297001850A4 /* ServiceCollectionViewCell.xib */,
+			);
+			path = "Service Cell";
+			sourceTree = "<group>";
+		};
 		92D79E7D2483E534004C4701 = {
 			isa = PBXGroup;
 			children = (
@@ -1287,10 +1337,12 @@
 				92CA2ACE251B715800920B21 /* Debug.xcconfig in Resources */,
 				92CA2B1C251B715800920B21 /* TermsOfServiceViewController.xib in Resources */,
 				92CA2B25251B715800920B21 /* ProfileLandingCell.xib in Resources */,
+				92D516BD253D4297001850A4 /* ServiceCollectionViewCell.xib in Resources */,
 				92CA2ADD251B715800920B21 /* Inter-SemiBold.ttf in Resources */,
 				92CA2ADA251B715800920B21 /* Inter-ExtraBold.ttf in Resources */,
 				92CA2AD6251B715800920B21 /* Inter-Light.ttf in Resources */,
 				92CA2AD7251B715800920B21 /* Inter-Thin.ttf in Resources */,
+				92D516B7253D428B001850A4 /* BannerCollectionViewCell.xib in Resources */,
 				92CA2B05251B715800920B21 /* HomeLandingViewController.xib in Resources */,
 				92CA2B0B251B715800920B21 /* Auth.xcassets in Resources */,
 				8A15428525208AED007245AB /* HelpCenterViewController.xib in Resources */,
@@ -1312,6 +1364,7 @@
 				92CA2B3C251B715800920B21 /* SampleHomeDetailViewController.xib in Resources */,
 				92CA2ADF251B715800920B21 /* Main.xcassets in Resources */,
 				92CA2AD9251B715800920B21 /* Inter-Regular.ttf in Resources */,
+				92D516C6253D608C001850A4 /* Home.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1439,6 +1492,7 @@
 				92CA2AD4251B715800920B21 /* AppDelegate.swift in Sources */,
 				8A15428925208B72007245AB /* HelpCenterViewModel.swift in Sources */,
 				92CA2AC3251B715800920B21 /* SampleProfileCoordinator.swift in Sources */,
+				92D516B6253D428B001850A4 /* BannerCollectionViewCell.swift in Sources */,
 				92CA2B1D251B715800920B21 /* TermsOfServiceViewModel.swift in Sources */,
 				92CA2AC6251B715800920B21 /* Coordinator.swift in Sources */,
 				92CA2B21251B715800920B21 /* ProfileConstant.swift in Sources */,
@@ -1448,6 +1502,7 @@
 				92CA2AAF251B715800920B21 /* AppCoordinator.swift in Sources */,
 				92CA2B3A251B715800920B21 /* SampleHomeDetailViewModel.swift in Sources */,
 				92CA2AF4251B715800920B21 /* NetworkService.swift in Sources */,
+				92D516BC253D4297001850A4 /* ServiceCollectionViewCell.swift in Sources */,
 				92CA2B39251B715800920B21 /* SampleHomeViewModel.swift in Sources */,
 				92CA2B1E251B715800920B21 /* TermsOfServiceViewModel+Network.swift in Sources */,
 				8A15429925208CCC007245AB /* HelpCenterNetwork.swift in Sources */,
@@ -1459,6 +1514,7 @@
 				92CA2B27251B715800920B21 /* ProfileLandingDataSource.swift in Sources */,
 				92CA2ADE251B715800920B21 /* SceneDelegate.swift in Sources */,
 				92CA2AD1251B715800920B21 /* FirebaseHandler.swift in Sources */,
+				92D516C1253D6022001850A4 /* HomeLandingDataSource.swift in Sources */,
 				92CA2B40251B715800920B21 /* SampleHomeViewModel+Network.swift in Sources */,
 				92CA2AAD251B715800920B21 /* AppCoordinator+FeatureCoordinator.swift in Sources */,
 				92CA2ACA251B715800920B21 /* MainApp+NavigationController.swift in Sources */,

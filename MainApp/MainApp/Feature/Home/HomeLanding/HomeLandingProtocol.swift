@@ -11,6 +11,9 @@ import Foundation
 protocol HomeLandingViewModelProtocol: class {
     var view: HomeLandingViewProtocol? { get set }
     var coordinator: HomeCoordinatorProtocol? { get set }
+    var dataSource: HomeLandingDataSource? { get set }
+    
+    func getDatas() -> [String]?
 }
 
 protocol HomeLandingViewProtocol: class {
