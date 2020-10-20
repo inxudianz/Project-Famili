@@ -26,7 +26,7 @@ extension HomeLandingBannerDataSource: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "bannerCell", for: indexPath) as? BannerCollectionViewCell else { return UICollectionViewCell() }
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeLandingConstant.BannerCell.cellID, for: indexPath) as? BannerCollectionViewCell else { return UICollectionViewCell() }
         guard let datas = datas else { return UICollectionViewCell() }
         guard let image = UIImage(named: datas[indexPath.row]) else { return UICollectionViewCell() }
         
@@ -55,7 +55,7 @@ extension HomeLandingServiceDataSource: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "serviceCell", for: indexPath) as? ServiceCollectionViewCell else { return UICollectionViewCell() }
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeLandingConstant.ServiceCell.cellID, for: indexPath) as? ServiceCollectionViewCell else { return UICollectionViewCell() }
         guard let datas = datas else { return UICollectionViewCell() }
         guard let image = UIImage(named: datas[indexPath.row]) else { return UICollectionViewCell() }
         
@@ -67,9 +67,9 @@ extension HomeLandingServiceDataSource: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         switch kind {
         case UICollectionView.elementKindSectionHeader:
-            guard let headerReusable = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "serviceHeaderCell", for: indexPath) as? ServiceHeaderCollectionReusableView else { return UICollectionReusableView() }
+            guard let headerReusable = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HomeLandingConstant.HeaderServiceCell.cellID, for: indexPath) as? ServiceHeaderCollectionReusableView else { return UICollectionReusableView() }
             
-            headerReusable.frame = .init(x: 0, y: 0, width: collectionView.bounds.width, height: 40)
+            headerReusable.frame = .init(x: 0, y: 0, width: collectionView.bounds.width, height: HomeLandingConstant.HeaderServiceCell.headerHeight)
             
             headerReusable.serviceHeaderDelegate = serviceHeaderDelegate
             return headerReusable

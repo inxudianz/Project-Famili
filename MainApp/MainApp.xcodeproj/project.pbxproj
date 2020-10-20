@@ -19,6 +19,7 @@
 		8A326E6F2524CEBB00C6D352 /* HelpCenterDetailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A326E6E2524CEBA00C6D352 /* HelpCenterDetailTests.swift */; };
 		8A326E7D252DDBAD00C6D352 /* HelpCenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A326E7C252DDBAD00C6D352 /* HelpCenterTests.swift */; };
 		8A326ED12531E34700C6D352 /* HelpCenterDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A326ED02531E34700C6D352 /* HelpCenterDetailViewModel.swift */; };
+		922FC6D3253ED20A003288BF /* HomeLandingConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FC6D2253ED20A003288BF /* HomeLandingConstant.swift */; };
 		926D1920253EB30300466810 /* HomeLanding+UICollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926D191F253EB30300466810 /* HomeLanding+UICollectionViewDelegate.swift */; };
 		926D1926253EC2B500466810 /* ServiceHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926D1924253EC2B500466810 /* ServiceHeaderCollectionReusableView.swift */; };
 		926D1927253EC2B500466810 /* ServiceHeaderCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 926D1925253EC2B500466810 /* ServiceHeaderCollectionReusableView.xib */; };
@@ -246,6 +247,7 @@
 		8A326E6E2524CEBA00C6D352 /* HelpCenterDetailTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCenterDetailTests.swift; sourceTree = "<group>"; };
 		8A326E7C252DDBAD00C6D352 /* HelpCenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCenterTests.swift; sourceTree = "<group>"; };
 		8A326ED02531E34700C6D352 /* HelpCenterDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCenterDetailViewModel.swift; sourceTree = "<group>"; };
+		922FC6D2253ED20A003288BF /* HomeLandingConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeLandingConstant.swift; sourceTree = "<group>"; };
 		926D191F253EB30300466810 /* HomeLanding+UICollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeLanding+UICollectionViewDelegate.swift"; sourceTree = "<group>"; };
 		926D1924253EC2B500466810 /* ServiceHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		926D1925253EC2B500466810 /* ServiceHeaderCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceHeaderCollectionReusableView.xib; sourceTree = "<group>"; };
@@ -1156,6 +1158,7 @@
 			isa = PBXGroup;
 			children = (
 				92D516C5253D608C001850A4 /* Home.xcassets */,
+				922FC6D2253ED20A003288BF /* HomeLandingConstant.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -1590,6 +1593,7 @@
 				92CA2AE8251B715800920B21 /* SampleModel.swift in Sources */,
 				92CA2ABF251B715800920B21 /* ProfileCoordinator.swift in Sources */,
 				92CA2B11251B715800920B21 /* RegisterViewModel.swift in Sources */,
+				922FC6D3253ED20A003288BF /* HomeLandingConstant.swift in Sources */,
 				92CA2AFD251B715800920B21 /* AuthNetwork.swift in Sources */,
 				92D5165E253D32B9001850A4 /* HomePath.swift in Sources */,
 				92CA2AE6251B715800920B21 /* EmptyModel.swift in Sources */,

@@ -17,9 +17,9 @@ class HomeLandingViewController: MasterViewController, HomeLandingViewProtocol {
     }
     @IBOutlet weak var mapTitleLabel: UILabel! {
         didSet {
-            mapTitleLabel.text = "Your Location"
+            mapTitleLabel.text = HomeLandingConstant.LocalizationKey.mapTitle
             mapTitleLabel.font = FontManager.getFont(for: .medium, size: 13)
-            mapTitleLabel.textColor = UIColor(hex: "#BDBDBDFF")
+            mapTitleLabel.textColor = UIColor(hex: HomeLandingConstant.Common.titleColor)
         }
     }
     @IBOutlet weak var mapLocationLabel: UILabel! {
@@ -42,7 +42,7 @@ class HomeLandingViewController: MasterViewController, HomeLandingViewProtocol {
     @IBOutlet weak var homeContentView: UIView!
     @IBOutlet weak var bannerCollectionView: UICollectionView! {
         didSet {
-            bannerCollectionView.layer.cornerRadius = 22
+            bannerCollectionView.layer.cornerRadius = HomeLandingConstant.Common.viewCornerRadius
         }
     }
     @IBOutlet weak var bannerPageControl: UIPageControl! {
@@ -52,8 +52,8 @@ class HomeLandingViewController: MasterViewController, HomeLandingViewProtocol {
     }
     @IBOutlet weak var serviceCollectionView: UICollectionView! {
         didSet {
-            serviceCollectionView.layer.cornerRadius = 22
-            serviceCollectionView.layer.backgroundColor = UIColor(hex: "#67C2FFFF")?.cgColor
+            serviceCollectionView.layer.cornerRadius = HomeLandingConstant.Common.viewCornerRadius
+            serviceCollectionView.layer.backgroundColor = UIColor(hex: HomeLandingConstant.Common.serviceViewColor)?.cgColor
         }
     }
     
@@ -72,7 +72,7 @@ class HomeLandingViewController: MasterViewController, HomeLandingViewProtocol {
     private func setBannerCollectionView() {
         let bannerCell = UINib(nibName: String(describing: BannerCollectionViewCell.self), bundle: Bundle(for: BannerCollectionViewCell.self))
         viewModel?.bannerDelegate = HomeLandingBannerDelegate(bannerCollectionView: bannerCollectionView, bannerPageControl: bannerPageControl)
-        bannerCollectionView.register(bannerCell, forCellWithReuseIdentifier: "bannerCell")
+        bannerCollectionView.register(bannerCell, forCellWithReuseIdentifier: HomeLandingConstant.BannerCell.cellID)
         bannerCollectionView.dataSource = viewModel?.bannerDataSource
         bannerCollectionView.delegate = viewModel?.bannerDelegate
         
@@ -93,9 +93,9 @@ class HomeLandingViewController: MasterViewController, HomeLandingViewProtocol {
         let serviceCell = UINib(nibName: String(describing: ServiceCollectionViewCell.self), bundle: Bundle(for: ServiceCollectionViewCell.self))
         let serviceHeaderCell = UINib(nibName: String(describing: ServiceHeaderCollectionReusableView.self), bundle: Bundle(for: ServiceHeaderCollectionReusableView.self))
         viewModel?.serviceDelegate = HomeLandingServiceDelegate(serviceCollectionView: serviceCollectionView)
-        serviceCollectionView.register(serviceCell, forCellWithReuseIdentifier: "serviceCell")
+        serviceCollectionView.register(serviceCell, forCellWithReuseIdentifier: HomeLandingConstant.ServiceCell.cellID)
         serviceCollectionView.dataSource = viewModel?.serviceDataSource
         serviceCollectionView.delegate = viewModel?.serviceDelegate
-        serviceCollectionView.register(serviceHeaderCell, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "serviceHeaderCell")
+        serviceCollectionView.register(serviceHeaderCell, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HomeLandingConstant.HeaderServiceCell.cellID)
     }
 }

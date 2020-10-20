@@ -11,7 +11,7 @@ import UIKit
 class ServiceHeaderCollectionReusableView: UICollectionReusableView {
     @IBOutlet weak var headerTitle: UILabel! {
         didSet {
-            headerTitle.font = FontManager.getFont(for: .medium, size: 18)
+            headerTitle.font = FontManager.getFont(for: .medium, size: HomeLandingConstant.HeaderServiceCell.cellTitleSize)
             headerTitle.textColor = .white
         }
     }
