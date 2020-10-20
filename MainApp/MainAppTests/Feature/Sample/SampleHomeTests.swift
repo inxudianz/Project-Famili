@@ -38,7 +38,7 @@ class SampleHomeViewMock: SampleHomeViewProtocol {
     
 }
 
-class HomeCoordinatorMock: SampleHomeCoordinatorProtocol {
+class SampleHomeCoordinatorMock: SampleHomeCoordinatorProtocol {
     var parentCoordinator: Coordinator?
 
     var childCoordinators: [Coordinator] = []
@@ -98,12 +98,12 @@ class HomeTests: QuickSpec {
             
             var sut: SampleHomeViewModel!
             var view: SampleHomeViewMock!
-            var coordinator: HomeCoordinatorMock!
+            var coordinator: SampleHomeCoordinatorMock!
             var network: SampleNetworkMock!
             
             beforeEach {
                 view = SampleHomeViewMock()
-                coordinator = HomeCoordinatorMock()
+                coordinator = SampleHomeCoordinatorMock()
                 network = SampleNetworkMock()
                 
                 sut = SampleHomeViewModel()
