@@ -21,6 +21,7 @@
 		8A326ED12531E34700C6D352 /* HelpCenterDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A326ED02531E34700C6D352 /* HelpCenterDetailViewModel.swift */; };
 		922FC6D3253ED20A003288BF /* HomeLandingConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FC6D2253ED20A003288BF /* HomeLandingConstant.swift */; };
 		922FC6D8253ED618003288BF /* HomeLanding+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FC6D7253ED618003288BF /* HomeLanding+Network.swift */; };
+		922FC6DC253EDAF8003288BF /* HomeLandingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FC6DB253EDAF8003288BF /* HomeLandingTests.swift */; };
 		926D1920253EB30300466810 /* HomeLanding+UICollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926D191F253EB30300466810 /* HomeLanding+UICollectionViewDelegate.swift */; };
 		926D1926253EC2B500466810 /* ServiceHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926D1924253EC2B500466810 /* ServiceHeaderCollectionReusableView.swift */; };
 		926D1927253EC2B500466810 /* ServiceHeaderCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 926D1925253EC2B500466810 /* ServiceHeaderCollectionReusableView.xib */; };
@@ -250,6 +251,7 @@
 		8A326ED02531E34700C6D352 /* HelpCenterDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCenterDetailViewModel.swift; sourceTree = "<group>"; };
 		922FC6D2253ED20A003288BF /* HomeLandingConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeLandingConstant.swift; sourceTree = "<group>"; };
 		922FC6D7253ED618003288BF /* HomeLanding+Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeLanding+Network.swift"; sourceTree = "<group>"; };
+		922FC6DB253EDAF8003288BF /* HomeLandingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeLandingTests.swift; sourceTree = "<group>"; };
 		926D191F253EB30300466810 /* HomeLanding+UICollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeLanding+UICollectionViewDelegate.swift"; sourceTree = "<group>"; };
 		926D1924253EC2B500466810 /* ServiceHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		926D1925253EC2B500466810 /* ServiceHeaderCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceHeaderCollectionReusableView.xib; sourceTree = "<group>"; };
@@ -489,6 +491,14 @@
 				8A326ED02531E34700C6D352 /* HelpCenterDetailViewModel.swift */,
 			);
 			path = HelpCenterDetail;
+			sourceTree = "<group>";
+		};
+		922FC6DA253EDAED003288BF /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				922FC6DB253EDAF8003288BF /* HomeLandingTests.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		92913BB9248D07C8002D961D /* Products */ = {
@@ -1101,6 +1111,7 @@
 		92CA2A9F251B715800920B21 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				922FC6DA253EDAED003288BF /* Home */,
 				92CA2AA0251B715800920B21 /* Splash */,
 				92CA2AA2251B715800920B21 /* Auth */,
 				92CA2AA5251B715800920B21 /* Profile */,
@@ -1640,6 +1651,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				922FC6DC253EDAF8003288BF /* HomeLandingTests.swift in Sources */,
 				92CA2C99251B749600920B21 /* InitialScreenTests.swift in Sources */,
 				8A326E7D252DDBAD00C6D352 /* HelpCenterTests.swift in Sources */,
 				92CA2C88251B747700920B21 /* PrivacyPolicyTests.swift in Sources */,
