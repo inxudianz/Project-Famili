@@ -13,6 +13,8 @@ import Nimble
 
 class NotificationMock: NotificationViewProtocol {
     var viewModel: NotificationViewModelProtocol?
+    var messageTableContentIsEmpty: Bool?
+    var newsTableContentIsEmpty: Bool?
     
     var isShowLoading = false
     func showLoading() {
@@ -22,6 +24,26 @@ class NotificationMock: NotificationViewProtocol {
     var isStopLoading = false
     func stopLoading() {
         isStopLoading = true
+    }
+    
+    var isMessageTableIsEmpty = false
+    func messageTableIsEmpty() {
+        isMessageTableIsEmpty = true
+    }
+       
+    var isNewsTableIsEmpty = false
+    func newsTableIsEmpty() {
+        isNewsTableIsEmpty = true
+    }
+       
+    var isReloadMessageTableData = false
+    func reloadMessageTableData() {
+        isReloadMessageTableData = true
+    }
+       
+    var isReloadNewsTableData = false
+    func reloadNewsTableData() {
+        isReloadNewsTableData = true
     }
 }
 
