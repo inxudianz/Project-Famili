@@ -24,13 +24,13 @@ struct OrderResponse {
     }
     
     struct History: Codable {
-        var data: OngoingData?
+        var data: HistoryData?
         
-        struct OngoingData: Codable {
+        struct HistoryData: Codable {
             var status: String?
-            var detail: [OngoingDetail]
+            var detail: [HistoryDetail]
         }
-        struct OngoingDetail: Codable {
+        struct HistoryDetail: Codable {
             var laundryName: String?
             var timeStamp: String?
             var address: String?

@@ -9,6 +9,11 @@
 import Foundation
 
 class OrderLandingViewModel: OrderLandingViewModelProtocol {
+    enum SegmentType: Int {
+        case ongoing
+        case history
+    }
+    
     weak var view: OrderLandingViewProtocol?
     weak var coordinator: OrderCoordinatorProtocol?
     var network: OrderNetworkProtocol?
@@ -18,10 +23,13 @@ class OrderLandingViewModel: OrderLandingViewModelProtocol {
     init() {
         network = OrderNetwork()
         network?.ongoingOrderDelegate = self
+        network?.historyOrderDelegate = self
     }
     
     public func viewDidLoad() {
+        setDataSource()
         getOngoingData()
+        getHistoryData()
     }
     
     public func getOngoingData() {
@@ -30,12 +38,19 @@ class OrderLandingViewModel: OrderLandingViewModelProtocol {
     }
     
     func getHistoryData() {
-        
+        view?.showLoading()
+        network?.getHistoryOrder(userId: "1")
     }
     
-    func setDataSource(datas: [OrderResponse.Ongoing.OngoingData]) {
+    func setDataSource() {
         dataSource = OrderLandingDataSource()
-        dataSource?.setDatas(datas: datas)
+    }
+    
+    func setOngoingData(ongoingDatas: [OrderResponse.Ongoing.OngoingData]) {
+        dataSource?.setOngoingDatas(ongoingDatas: ongoingDatas)
+    }
+    func setHistoryData(historyDatas: OrderResponse.History.HistoryData) {
+        dataSource?.setHistoryDatas(historyDatas: historyDatas)
     }
     
     func setOngoingDelegate() {
@@ -44,9 +59,16 @@ class OrderLandingViewModel: OrderLandingViewModelProtocol {
         }
     }
     
+    func updateOrderView(with type: Int) {
+        guard let type = SegmentType.init(rawValue: type) else { return }
+        
+        dataSource?.dataType = type.rawValue
+        delegate?.dataType = type.rawValue            
+    }
+    
     func updateCellType() {
         var isDatasEmpty: [Bool] = .init(repeating: true, count: 4)
-        guard let datas = dataSource?.getDatas() else { return }
+        guard let datas = dataSource?.getOngoingDatas() else { return }
         for (index,data) in datas.enumerated() where !data.detail.isEmpty {
             isDatasEmpty[index] = false
         }

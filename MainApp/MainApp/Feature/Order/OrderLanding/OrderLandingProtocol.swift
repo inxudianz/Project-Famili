@@ -16,6 +16,7 @@ protocol OrderLandingViewModelProtocol: class {
     var delegate: OrderLandingDelegate? { get set }
     
     func viewDidLoad()
+    func updateOrderView(with type: Int)
     func getOngoingData()
     func getHistoryData()
 }
@@ -26,5 +27,6 @@ protocol OrderLandingViewProtocol: class {
     func showLoading()
     func hideLoading()
     func setupOrderView()
+    func setupHistoryView()
     func reloadOrder()
 }

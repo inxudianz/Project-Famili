@@ -10,14 +10,14 @@ import UIKit
 import Component
 
 class OrderLandingViewController: UIViewController, OrderLandingViewProtocol {
-    private enum SegmentType: Int {
+    enum SegmentType: Int {
         case ongoing
         case history
     }
     
     @IBOutlet weak var orderSegment: UISegmentedControl! {
         didSet {
-            orderSegment.addTarget(self, action: #selector(updateSegment(_:)), for: .touchUpInside)
+            orderSegment.addTarget(self, action: #selector(updateSegment(_:)), for: .valueChanged)
         }
     }
     @IBOutlet weak var orderView: UITableView!
@@ -46,11 +46,16 @@ class OrderLandingViewController: UIViewController, OrderLandingViewProtocol {
         orderView.dataSource = viewModel?.dataSource
     }
     
+    func setupHistoryView() {
+        let orderCell = UINib(nibName: String(describing: OrderLandingTableViewCell.self), bundle: Bundle(for: OrderLandingTableViewCell.self))
+        orderView.register(orderCell, forCellReuseIdentifier: "orderLandingCell")
+        orderView.delegate = viewModel?.delegate
+        orderView.dataSource = viewModel?.dataSource
+    }
+    
     private func updateOrderView(for type: SegmentType) {
-        if type == .ongoing {
-            
-        } else if type == .history {
-        }
+        viewModel?.updateOrderView(with: type.rawValue)
+        reloadOrder()
     }
     
     func showLoading() {

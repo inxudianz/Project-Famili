@@ -10,6 +10,7 @@ import UIKit
 
 class OrderLandingDelegate: NSObject {
     var orderView: UITableView?
+    var dataType = 0
     var isSectionsClosed: [Bool] = .init(repeating: false, count: 4)
     var isSectionsEmpty: [Bool] = .init(repeating: false, count: 4)
     var cellTapped: (() -> Void)?
@@ -30,28 +31,41 @@ class OrderLandingDelegate: NSObject {
 
 extension OrderLandingDelegate: UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = OrderLandingHeaderView(frame: .init(x: 0, y: 0, width: tableView.frame.width, height: 40))
-        
-        headerView.updateNotificationAmount(to: getNotificationAmount(section: section))
-        headerView.setTitle(for: OrderLandingHeaderView.HeaderType.allCases[section])
-        headerView.delegate = self
-        headerView.updateHeader(isOpened: isSectionsClosed[section])
-        return headerView
+        if dataType == 0 {
+            let headerView = OrderLandingHeaderView(frame: .init(x: 0, y: 0, width: tableView.frame.width, height: 40))
+            
+            headerView.updateNotificationAmount(to: getNotificationAmount(section: section))
+            headerView.setTitle(for: OrderLandingHeaderView.HeaderType.allCases[section])
+            headerView.delegate = self
+            headerView.updateHeader(isOpened: isSectionsClosed[section])
+            return headerView
+        } else {
+            return UIView()
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 40
+        if dataType == 0 {
+            return 40
+        } else {
+            return 0
+        }
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if isSectionsClosed[indexPath.section] {
-            return 0
-        } else {
-            if isSectionsEmpty[indexPath.section] {
-                return 50
+        if dataType == 0 {
+            if isSectionsClosed[indexPath.section] {
+                return 0
             } else {
-                return 150
+                if isSectionsEmpty[indexPath.section] {
+                    return 50
+                } else {
+                    return 170
+                }
             }
+        } else {
+            return 170
         }
+
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

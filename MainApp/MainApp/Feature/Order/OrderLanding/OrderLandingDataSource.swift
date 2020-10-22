@@ -15,26 +15,32 @@ class OrderLandingDataSource: NSObject {
         case readyToPick
         case done
     }
-    var datas: [OrderResponse.Ongoing.OngoingData]?
+    var dataType = 0
+    var ongoingDatas: [OrderResponse.Ongoing.OngoingData]?
+    var historyDatas: OrderResponse.History.HistoryData?
     
-    public func setDatas(datas: [OrderResponse.Ongoing.OngoingData]) {
-        self.datas = datas
+    public func setOngoingDatas(ongoingDatas: [OrderResponse.Ongoing.OngoingData]) {
+        self.ongoingDatas = ongoingDatas
     }
     
-    public func getDatas() -> [OrderResponse.Ongoing.OngoingData]? {
-        return datas
+    public func setHistoryDatas(historyDatas: OrderResponse.History.HistoryData) {
+        self.historyDatas = historyDatas
     }
     
-    public func getNumberOfSection() -> Int {
-        guard let datas = datas else { return 0 }
+    public func getOngoingDatas() -> [OrderResponse.Ongoing.OngoingData]? {
+        return ongoingDatas
+    }
+    
+    public func getOngoingNumberOfSection() -> Int {
+        guard let datas = ongoingDatas else { return 0 }
         let statusAvailable = datas.map { (data) -> String? in
             return data.status
         }
         return statusAvailable.count
     }
     
-    public func getNumberOfItemInSection(for type: String) -> Int {
-        guard let datas = datas else { return 0 }
+    public func getOngoingNumberOfItemInSection(for type: String) -> Int {
+        guard let datas = ongoingDatas else { return 0 }
         var itemCount = 0
         for data in datas {
             if data.status?.lowercased() == type {
@@ -48,15 +54,23 @@ class OrderLandingDataSource: NSObject {
 
 extension OrderLandingDataSource: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 4
+        if dataType == 0 {
+            return 4
+        } else {
+            return 1
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let type = StatusType.allCases[section]
-        if getNumberOfItemInSection(for: type.rawValue) > 0 {
-            return getNumberOfItemInSection(for: type.rawValue)
+        if dataType == 0 {
+            let type = StatusType.allCases[section]
+            if getOngoingNumberOfItemInSection(for: type.rawValue) > 0 {
+                return getOngoingNumberOfItemInSection(for: type.rawValue)
+            } else {
+                return 1
+            }
         } else {
-            return 1
+            return historyDatas?.detail.count ?? 0
         }
     }
     
@@ -64,17 +78,26 @@ extension OrderLandingDataSource: UITableViewDataSource {
         guard let landingCell = tableView.dequeueReusableCell(withIdentifier: "orderLandingCell") as? OrderLandingTableViewCell else { return UITableViewCell() }
         guard let emptyCell = tableView.dequeueReusableCell(withIdentifier: "orderLandingEmptyCell") as? OrderEmptyTableViewCell else { return UITableViewCell() }
         
-        let filteredDatas = datas?.filter({ (data) -> Bool in
-            data.status?.lowercased() == StatusType.allCases[indexPath.section].rawValue
-        })
-        
-        if filteredDatas?.count == 0 {
-            return emptyCell
+        if dataType == 0 {
+            let filteredDatas = ongoingDatas?.filter({ (data) -> Bool in
+                data.status?.lowercased() == StatusType.allCases[indexPath.section].rawValue
+            })
+            
+            if filteredDatas?.count == 0 {
+                return emptyCell
+            } else {
+                let title = filteredDatas?[0].detail[indexPath.row].laundryName
+                let address = filteredDatas?[0].detail[indexPath.row].address
+                let date = filteredDatas?[0].detail[indexPath.row].timeStamp
+                landingCell.setCell(title: title ?? "", address: address ?? "", date: date ?? "")
+                
+                return landingCell
+            }
         } else {
-            let title = filteredDatas?[0].detail[indexPath.row].laundryName
-            let address = filteredDatas?[0].detail[indexPath.row].address
-            let date = filteredDatas?[0].detail[indexPath.row].timeStamp
-            landingCell.setCell(title: title ?? "", address: address ?? "", date: date ?? "")
+            let title = historyDatas?.detail[indexPath.row].laundryName
+            let address = historyDatas?.detail[indexPath.row].address
+            let timeStamp = historyDatas?.detail[indexPath.row].timeStamp
+            landingCell.setCell(title: title ?? "", address: address ?? "", date: timeStamp ?? "")
             
             return landingCell
         }
