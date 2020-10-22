@@ -14,8 +14,8 @@ extension OrderLandingViewModel: OngoingOrderProtocol {
         guard let responseData = response?.data else { return }
         setDataSource(datas: responseData)
         view?.setupOrderView()
+        setOngoingDelegate()
         updateCellType()
-        view?.reloadOrder()
     }
     
     func didFailGetOngoingOrder(error: Error?) {

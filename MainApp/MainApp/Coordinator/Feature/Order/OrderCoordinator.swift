@@ -28,5 +28,7 @@ class OrderCoordinator: OrderCoordinatorProtocol {
         navigationController?.pushViewController(vc, animated: false)
     }
     
-    
+    func navigateToDetail() {
+        // Ongoing order detail
+    }
 }

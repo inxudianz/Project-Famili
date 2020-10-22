@@ -38,6 +38,12 @@ class OrderLandingViewModel: OrderLandingViewModelProtocol {
         dataSource?.setDatas(datas: datas)
     }
     
+    func setOngoingDelegate() {
+        delegate?.cellTapped = {
+            self.coordinator?.navigateToDetail()
+        }
+    }
+    
     func updateCellType() {
         var isDatasEmpty: [Bool] = .init(repeating: true, count: 4)
         guard let datas = dataSource?.getDatas() else { return }

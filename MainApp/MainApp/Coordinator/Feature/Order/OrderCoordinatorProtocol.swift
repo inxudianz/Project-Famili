@@ -9,5 +9,5 @@
 import Foundation
 
 protocol OrderCoordinatorProtocol: Coordinator {
-    
+    func navigateToDetail()
 }

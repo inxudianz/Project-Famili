@@ -12,6 +12,7 @@ class OrderLandingDelegate: NSObject {
     var orderView: UITableView?
     var isSectionsClosed: [Bool] = .init(repeating: false, count: 4)
     var isSectionsEmpty: [Bool] = .init(repeating: false, count: 4)
+    var cellTapped: (() -> Void)?
     
     init(orderView: UITableView) {
         self.orderView = orderView
@@ -51,6 +52,11 @@ extension OrderLandingDelegate: UITableViewDelegate {
                 return 150
             }
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let cellTapped = cellTapped else { return }
+        cellTapped()
     }
 }
 

@@ -47,7 +47,10 @@ class OrderLandingViewController: UIViewController, OrderLandingViewProtocol {
     }
     
     private func updateOrderView(for type: SegmentType) {
-        
+        if type == .ongoing {
+            
+        } else if type == .history {
+        }
     }
     
     func showLoading() {
