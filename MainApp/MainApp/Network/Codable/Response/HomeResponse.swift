@@ -9,6 +9,10 @@
 import Foundation
 
 struct HomeResponse {
+    struct Banners: Codable {
+        let banners: [String]
+    }
+    
     struct GetNotificationMessageResponse: Codable {
         var messageList: [GetNotificationMessageResponseDetail]
     }

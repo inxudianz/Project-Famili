@@ -8,6 +8,11 @@
 
 import Foundation
 
+protocol HomeBannersProtocol: class {
+    func didSuccessGetBanners(response: HomeResponse.Banners)
+    func didFailedGetBanners(error: Error)
+}
+
 protocol RetrieveNotificationMessageDelegate: class {
     // MARK: - Get Notification Message
     func didSuccessRetrieveNotificationMessage(response: HomeResponse.GetNotificationMessageResponse)

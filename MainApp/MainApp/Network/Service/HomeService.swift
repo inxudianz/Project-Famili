@@ -10,6 +10,7 @@ import Foundation
 import Alamofire
 
 enum HomeService {
+    case getBanners
     case getMessageRequest(userId: Int)
     case getNotificationRequest(userId: Int)
 }
@@ -21,6 +22,8 @@ extension HomeService: NetworkType {
     
     var path: String {
         switch self {
+        case .getBanners:
+            return HomePath.home.rawValue + HomeSubPath.banners.rawValue
         case .getMessageRequest(let userId):
             return HomePath.home.rawValue + HomeSubPath.message.rawValue + String(userId)
         case .getNotificationRequest(let userId):
@@ -30,14 +33,14 @@ extension HomeService: NetworkType {
     
     var method: HTTPMethod {
         switch self {
-        case .getMessageRequest, .getNotificationRequest:
+        case .getBanners, .getMessageRequest, .getNotificationRequest:
             return .get
         }
     }
     
     var task: HTTPTask {
         switch self {
-        case .getMessageRequest, .getNotificationRequest:
+        case .getBanners, .getMessageRequest, .getNotificationRequest:
             return .plainRequest
         }
     }
