@@ -8,3 +8,17 @@
 
 import Foundation
 
+extension OrderLandingViewModel: OngoingOrderProtocol {
+    func didSuccessGetOngoingOrder(response: OrderResponse.Ongoing?) {
+        view?.hideLoading()
+        guard let responseData = response?.data else { return }
+        setDataSource(datas: responseData)
+        view?.setupOrderView()
+        view?.reloadOrder()
+    }
+    
+    func didFailGetOngoingOrder(error: Error?) {
+        view?.hideLoading()
+        Log.info(message: error)
+    }
+}

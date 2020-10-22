@@ -8,16 +8,6 @@
 
 import UIKit
 
-struct OrderData {
-    var status: String
-    var detail: [OrderDataDetail]
-}
-
-struct OrderDataDetail {
-    var name: String
-    var timeStamp: String
-    var description: String
-}
 class OrderLandingDataSource: NSObject {
     enum StatusType: String, CaseIterable {
         case accepted
@@ -25,15 +15,15 @@ class OrderLandingDataSource: NSObject {
         case readyToPick
         case done
     }
-    var datas: [OrderData]?
+    var datas: [OrderResponse.Ongoing.OngoingData]?
     
-    public func setDatas(datas: [OrderData]) {
+    public func setDatas(datas: [OrderResponse.Ongoing.OngoingData]) {
         self.datas = datas
     }
     
     public func getNumberOfSection() -> Int {
         guard let datas = datas else { return 0 }
-        let statusAvailable = datas.map { (data) -> String in
+        let statusAvailable = datas.map { (data) -> String? in
             return data.status
         }
         return statusAvailable.count
@@ -43,7 +33,7 @@ class OrderLandingDataSource: NSObject {
         guard let datas = datas else { return 0 }
         var itemCount = 0
         for data in datas {
-            if data.status.lowercased() == type {
+            if data.status?.lowercased() == type {
                 itemCount += data.detail.count
                 break
             }
@@ -72,14 +62,14 @@ extension OrderLandingDataSource: UITableViewDataSource {
         guard let emptyCell = tableView.dequeueReusableCell(withIdentifier: "orderLandingEmptyCell") as? OrderEmptyTableViewCell else { return UITableViewCell() }
         
         let filteredDatas = datas?.filter({ (data) -> Bool in
-            data.status.lowercased() == StatusType.allCases[indexPath.section].rawValue
+            data.status?.lowercased() == StatusType.allCases[indexPath.section].rawValue
         })
         
         if filteredDatas?.count == 0 {
             return emptyCell
         } else {
-            let title = filteredDatas?[0].detail[indexPath.row].name
-            let address = filteredDatas?[0].detail[indexPath.row].description
+            let title = filteredDatas?[0].detail[indexPath.row].laundryName
+            let address = filteredDatas?[0].detail[indexPath.row].address
             let date = filteredDatas?[0].detail[indexPath.row].timeStamp
             landingCell.setCell(title: title ?? "", address: address ?? "", date: date ?? "")
             

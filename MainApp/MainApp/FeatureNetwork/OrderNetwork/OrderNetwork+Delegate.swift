@@ -7,3 +7,8 @@
 //
 
 import Foundation
+
+protocol OngoingOrderProtocol: class {
+    func didSuccessGetOngoingOrder(response: OrderResponse.Ongoing?)
+    func didFailGetOngoingOrder(error: Error?)
+}

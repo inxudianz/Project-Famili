@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Component
 
 class OrderLandingViewController: UIViewController, OrderLandingViewProtocol {
     private enum SegmentType: Int {
@@ -22,11 +23,11 @@ class OrderLandingViewController: UIViewController, OrderLandingViewProtocol {
     @IBOutlet weak var orderView: UITableView!
     
     var viewModel: OrderLandingViewModelProtocol?
-
+    lazy var loadingView = FamiliLoadingView(frame: self.view.frame)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel?.viewDidLoad()
-        setupOrderView()
     }
     
     @objc func updateSegment(_ sender: UISegmentedControl) {
@@ -34,7 +35,7 @@ class OrderLandingViewController: UIViewController, OrderLandingViewProtocol {
         updateOrderView(for: segmentType)
     }
     
-    private func setupOrderView() {
+    public func setupOrderView() {
         let orderCell = UINib(nibName: String(describing: OrderLandingTableViewCell.self), bundle: Bundle(for: OrderLandingTableViewCell.self))
         let emptyCell = UINib(nibName: String(describing: OrderEmptyTableViewCell.self), bundle: Bundle(for: OrderEmptyTableViewCell.self))
         viewModel?.delegate = OrderLandingDelegate(orderView: orderView)
@@ -47,5 +48,17 @@ class OrderLandingViewController: UIViewController, OrderLandingViewProtocol {
     
     private func updateOrderView(for type: SegmentType) {
         
+    }
+    
+    func showLoading() {
+        loadingView.showLoading(to: self.view)
+    }
+    
+    func hideLoading() {
+        loadingView.stopLoading()
+    }
+    
+    func reloadOrder() {
+        orderView.reloadData()
     }
 }

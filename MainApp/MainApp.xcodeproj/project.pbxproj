@@ -42,6 +42,9 @@
 		922FC838253FED80003288BF /* OrderEmptyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 922FC836253FED80003288BF /* OrderEmptyTableViewCell.xib */; };
 		922FC83B2540144F003288BF /* OrderLandingHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 922FC83A2540144F003288BF /* OrderLandingHeaderView.xib */; };
 		922FC83E254022FA003288BF /* OrderLanding+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FC83D254022FA003288BF /* OrderLanding+UITableView.swift */; };
+		922FC86D25414612003288BF /* OrderResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FC86C25414612003288BF /* OrderResponse.swift */; };
+		922FC870254146DE003288BF /* OrderPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FC86F254146DE003288BF /* OrderPath.swift */; };
+		922FC873254146E4003288BF /* OrderSubPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FC872254146E4003288BF /* OrderSubPath.swift */; };
 		926D1920253EB30300466810 /* HomeLanding+UICollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926D191F253EB30300466810 /* HomeLanding+UICollectionViewDelegate.swift */; };
 		926D1926253EC2B500466810 /* ServiceHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926D1924253EC2B500466810 /* ServiceHeaderCollectionReusableView.swift */; };
 		926D1927253EC2B500466810 /* ServiceHeaderCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 926D1925253EC2B500466810 /* ServiceHeaderCollectionReusableView.xib */; };
@@ -292,6 +295,9 @@
 		922FC836253FED80003288BF /* OrderEmptyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderEmptyTableViewCell.xib; sourceTree = "<group>"; };
 		922FC83A2540144F003288BF /* OrderLandingHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderLandingHeaderView.xib; sourceTree = "<group>"; };
 		922FC83D254022FA003288BF /* OrderLanding+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OrderLanding+UITableView.swift"; sourceTree = "<group>"; };
+		922FC86C25414612003288BF /* OrderResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderResponse.swift; sourceTree = "<group>"; };
+		922FC86F254146DE003288BF /* OrderPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderPath.swift; sourceTree = "<group>"; };
+		922FC872254146E4003288BF /* OrderSubPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderSubPath.swift; sourceTree = "<group>"; };
 		926D191F253EB30300466810 /* HomeLanding+UICollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeLanding+UICollectionViewDelegate.swift"; sourceTree = "<group>"; };
 		926D1924253EC2B500466810 /* ServiceHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		926D1925253EC2B500466810 /* ServiceHeaderCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceHeaderCollectionReusableView.xib; sourceTree = "<group>"; };
@@ -577,6 +583,8 @@
 		922FC71D253FDFF0003288BF /* Order */ = {
 			isa = PBXGroup;
 			children = (
+				922FC86F254146DE003288BF /* OrderPath.swift */,
+				922FC872254146E4003288BF /* OrderSubPath.swift */,
 			);
 			path = Order;
 			sourceTree = "<group>";
@@ -849,6 +857,7 @@
 				92CA2A17251B715800920B21 /* ProfileResponse.swift */,
 				92CA2A18251B715800920B21 /* SampleResponse.swift */,
 				92D51656253D3197001850A4 /* HomeResponse.swift */,
+				922FC86C25414612003288BF /* OrderResponse.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -1677,6 +1686,7 @@
 				92CA2B40251B715800920B21 /* SampleHomeViewModel+Network.swift in Sources */,
 				92CA2AAD251B715800920B21 /* AppCoordinator+FeatureCoordinator.swift in Sources */,
 				92CA2ACA251B715800920B21 /* MainApp+NavigationController.swift in Sources */,
+				922FC86D25414612003288BF /* OrderResponse.swift in Sources */,
 				92CA2AE4251B715800920B21 /* ProfileResponse.swift in Sources */,
 				92CA2B09251B715800920B21 /* InitialScreenViewController.swift in Sources */,
 				92CA2B2F251B715800920B21 /* PrivacyPolicyViewModel+Network.swift in Sources */,
@@ -1734,6 +1744,7 @@
 				92CA2AFB251B715800920B21 /* SampleNetwork+Delegate.swift in Sources */,
 				92CA2B0F251B715800920B21 /* RegisterViewModel+Network.swift in Sources */,
 				92CA2ABA251B715800920B21 /* AuthCoordinatorProtocol.swift in Sources */,
+				922FC870254146DE003288BF /* OrderPath.swift in Sources */,
 				92CA2B44251B715800920B21 /* Undefined.swift in Sources */,
 				92CA2AC8251B715800920B21 /* AppContext.swift in Sources */,
 				92CA2ACD251B715800920B21 /* MainApp+UIColor.swift in Sources */,
@@ -1742,6 +1753,7 @@
 				92CA2AE8251B715800920B21 /* SampleModel.swift in Sources */,
 				922FC837253FED80003288BF /* OrderEmptyTableViewCell.swift in Sources */,
 				92CA2ABF251B715800920B21 /* ProfileCoordinator.swift in Sources */,
+				922FC873254146E4003288BF /* OrderSubPath.swift in Sources */,
 				92CA2B11251B715800920B21 /* RegisterViewModel.swift in Sources */,
 				922FC6D3253ED20A003288BF /* HomeLandingConstant.swift in Sources */,
 				92CA2AFD251B715800920B21 /* AuthNetwork.swift in Sources */,

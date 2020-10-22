@@ -13,6 +13,13 @@ protocol OrderLandingHeaderProtocol: class {
 }
 
 class OrderLandingHeaderView: UIView {
+    
+    enum HeaderType: String, CaseIterable {
+        case accepted = "Accepted"
+        case processing = "Processing"
+        case readyToPickup = "Ready to pickup"
+        case done = "Done"
+    }
     @IBOutlet var baseView: UIView!
     @IBOutlet weak var statusTitle: UILabel! {
         didSet {
@@ -81,5 +88,9 @@ class OrderLandingHeaderView: UIView {
         } else {
             notificationBadgeView.layer.backgroundColor = UIColor.lightGray.cgColor
         }
+    }
+    
+    public func setTitle(for type: HeaderType) {
+        statusTitle.text = type.rawValue
     }
 }

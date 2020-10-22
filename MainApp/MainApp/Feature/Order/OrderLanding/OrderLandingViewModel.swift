@@ -9,37 +9,32 @@
 import Foundation
 
 class OrderLandingViewModel: OrderLandingViewModelProtocol {
-    var view: OrderLandingViewProtocol?
-    var coordinator: OrderCoordinatorProtocol?
+    weak var view: OrderLandingViewProtocol?
+    weak var coordinator: OrderCoordinatorProtocol?
     var network: OrderNetworkProtocol?
     var dataSource: OrderLandingDataSource?
     var delegate: OrderLandingDelegate?
     
     init() {
         network = OrderNetwork()
+        network?.ongoingOrderDelegate = self
     }
     
     public func viewDidLoad() {
-        setDataSource()
+        getOngoingData()
     }
     
-    private func setDataSource() {
+    public func getOngoingData() {
+        view?.showLoading()
+        network?.getOngoingOrder(userId: "1")
+    }
+    
+    func getHistoryData() {
+        
+    }
+    
+    func setDataSource(datas: [OrderResponse.Ongoing.OngoingData]) {
         dataSource = OrderLandingDataSource()
-        dataSource?.setDatas(datas: [
-            .init(status: "Accepted", detail: [
-                .init(name: "Laundry 1", timeStamp: "Time", description: "Jl. Address"),
-                .init(name: "Laundry 2", timeStamp: "Time", description: "Jl. Address"),
-                .init(name: "Laundry 3", timeStamp: "Time", description: "Jl. Address")
-            ]),
-            .init(status: "processing", detail: [
-                .init(name: "Laundry 1", timeStamp: "Time", description: "Jl. Address"),
-                .init(name: "Laundry 2", timeStamp: "Time", description: "Jl. Address")
-            ]),
-            .init(status: "ReadyToPick", detail: [
-                .init(name: "Laundry 1", timeStamp: "Time", description: "Jl. Address"),
-                .init(name: "Laundry 2", timeStamp: "Time", description: "Jl. Address"),
-                .init(name: "Laundry 2", timeStamp: "Time", description: "Jl. Address")
-            ]),
-        ])
+        dataSource?.setDatas(datas: datas)
     }
 }

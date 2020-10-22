@@ -25,6 +25,7 @@ extension OrderLandingDelegate: UITableViewDelegate {
         let headerView = OrderLandingHeaderView(frame: .init(x: 0, y: 0, width: tableView.frame.width, height: 40))
         
         headerView.updateNotificationAmount(to: getNotificationAmount(section: section))
+        headerView.setTitle(for: OrderLandingHeaderView.HeaderType.allCases[section])
         return headerView
     }
     
