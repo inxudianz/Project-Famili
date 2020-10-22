@@ -10,11 +10,7 @@ import UIKit
 import Component
 
 class OrderLandingViewController: UIViewController, OrderLandingViewProtocol {
-    enum SegmentType: Int {
-        case ongoing
-        case history
-    }
-    
+    // MARK: - Outlet
     @IBOutlet weak var orderSegment: UISegmentedControl! {
         didSet {
             orderSegment.addTarget(self, action: #selector(updateSegment(_:)), for: .valueChanged)
@@ -22,6 +18,7 @@ class OrderLandingViewController: UIViewController, OrderLandingViewProtocol {
     }
     @IBOutlet weak var orderView: UITableView!
     
+    // MARK: - Variable
     var viewModel: OrderLandingViewModelProtocol?
     lazy var loadingView = FamiliLoadingView(frame: self.view.frame)
     
@@ -30,43 +27,46 @@ class OrderLandingViewController: UIViewController, OrderLandingViewProtocol {
         viewModel?.viewDidLoad()
     }
     
+    // MARK: - Handler
     @objc func updateSegment(_ sender: UISegmentedControl) {
-        guard let segmentType = SegmentType(rawValue: sender.selectedSegmentIndex) else { return }
+        guard let segmentType = OrderLandingConstant.SegmentType(rawValue: sender.selectedSegmentIndex) else { return }
         updateOrderView(for: segmentType)
     }
     
+    // MARK: - Public Function
     public func setupOrderView() {
         let orderCell = UINib(nibName: String(describing: OrderLandingTableViewCell.self), bundle: Bundle(for: OrderLandingTableViewCell.self))
         let emptyCell = UINib(nibName: String(describing: OrderEmptyTableViewCell.self), bundle: Bundle(for: OrderEmptyTableViewCell.self))
         viewModel?.delegate = OrderLandingDelegate(orderView: orderView)
         
-        orderView.register(orderCell, forCellReuseIdentifier: "orderLandingCell")
-        orderView.register(emptyCell, forCellReuseIdentifier: "orderLandingEmptyCell")
+        orderView.register(orderCell, forCellReuseIdentifier: OrderLandingConstant.Cell.landingCellId)
+        orderView.register(emptyCell, forCellReuseIdentifier: OrderLandingConstant.Cell.landingEmptyCellId)
         orderView.delegate = viewModel?.delegate
         orderView.dataSource = viewModel?.dataSource
     }
     
-    func setupHistoryView() {
+    public func setupHistoryView() {
         let orderCell = UINib(nibName: String(describing: OrderLandingTableViewCell.self), bundle: Bundle(for: OrderLandingTableViewCell.self))
-        orderView.register(orderCell, forCellReuseIdentifier: "orderLandingCell")
+        orderView.register(orderCell, forCellReuseIdentifier: OrderLandingConstant.Cell.landingCellId)
         orderView.delegate = viewModel?.delegate
         orderView.dataSource = viewModel?.dataSource
     }
     
-    private func updateOrderView(for type: SegmentType) {
-        viewModel?.updateOrderView(with: type.rawValue)
-        reloadOrder()
-    }
-    
-    func showLoading() {
+    public func showLoading() {
         loadingView.showLoading(to: self.view)
     }
     
-    func hideLoading() {
+    public func hideLoading() {
         loadingView.stopLoading()
     }
     
-    func reloadOrder() {
+    public func reloadOrder() {
         orderView.reloadData()
+    }
+    
+    // MARK: - Private Function
+    private func updateOrderView(for type: OrderLandingConstant.SegmentType) {
+        viewModel?.updateOrderView(with: type)
+        reloadOrder()
     }
 }

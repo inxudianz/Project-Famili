@@ -9,11 +9,6 @@
 import Foundation
 
 class OrderLandingViewModel: OrderLandingViewModelProtocol {
-    enum SegmentType: Int {
-        case ongoing
-        case history
-    }
-    
     weak var view: OrderLandingViewProtocol?
     weak var coordinator: OrderCoordinatorProtocol?
     var network: OrderNetworkProtocol?
@@ -37,9 +32,14 @@ class OrderLandingViewModel: OrderLandingViewModelProtocol {
         network?.getOngoingOrder(userId: "1")
     }
     
-    func getHistoryData() {
+    public func getHistoryData() {
         view?.showLoading()
         network?.getHistoryOrder(userId: "1")
+    }
+    
+    public func updateOrderView(with type: OrderLandingConstant.SegmentType) {        
+        dataSource?.dataType = type
+        delegate?.dataType = type            
     }
     
     func setDataSource() {
@@ -57,13 +57,6 @@ class OrderLandingViewModel: OrderLandingViewModelProtocol {
         delegate?.cellTapped = {
             self.coordinator?.navigateToDetail()
         }
-    }
-    
-    func updateOrderView(with type: Int) {
-        guard let type = SegmentType.init(rawValue: type) else { return }
-        
-        dataSource?.dataType = type.rawValue
-        delegate?.dataType = type.rawValue            
     }
     
     func updateCellType() {

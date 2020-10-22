@@ -10,9 +10,9 @@ import UIKit
 
 class OrderLandingDelegate: NSObject {
     var orderView: UITableView?
-    var dataType = 0
-    var isSectionsClosed: [Bool] = .init(repeating: false, count: 4)
-    var isSectionsEmpty: [Bool] = .init(repeating: false, count: 4)
+    var dataType = OrderLandingConstant.SegmentType.ongoing
+    var isSectionsClosed: [Bool] = .init(repeating: false, count: OrderLandingConstant.Cell.ongoingSectionCount)
+    var isSectionsEmpty: [Bool] = .init(repeating: false, count: OrderLandingConstant.Cell.ongoingSectionCount)
     var cellTapped: (() -> Void)?
     
     init(orderView: UITableView) {
@@ -35,8 +35,8 @@ class OrderLandingDelegate: NSObject {
 
 extension OrderLandingDelegate: UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        if dataType == 0 {
-            let headerView = OrderLandingHeaderView(frame: .init(x: 0, y: 0, width: tableView.frame.width, height: 40))
+        if dataType == .ongoing {
+            let headerView = OrderLandingHeaderView(frame: .init(x: 0, y: 0, width: tableView.frame.width, height: OrderLandingConstant.Cell.landingHeaderHeight))
             
             headerView.updateNotificationAmount(to: getNotificationAmount(section: section))
             headerView.setTitle(for: OrderLandingHeaderView.HeaderType.allCases[section])
@@ -49,25 +49,25 @@ extension OrderLandingDelegate: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        if dataType == 0 {
-            return 40
+        if dataType == .ongoing {
+            return OrderLandingConstant.Cell.landingHeaderHeight
         } else {
             return 0
         }
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if dataType == 0 {
+        if dataType == .ongoing {
             if isSectionsClosed[indexPath.section] {
                 return 0
             } else {
                 if isSectionsEmpty[indexPath.section] {
-                    return 50
+                    return OrderLandingConstant.Cell.landingEmptyCellHeight
                 } else {
-                    return 170
+                    return OrderLandingConstant.Cell.landingCellHeight
                 }
             }
         } else {
-            return 170
+            return OrderLandingConstant.Cell.landingCellHeight
         }
 
     }

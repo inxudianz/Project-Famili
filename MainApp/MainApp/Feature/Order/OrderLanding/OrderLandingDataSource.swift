@@ -15,7 +15,7 @@ class OrderLandingDataSource: NSObject {
         case readyToPick
         case done
     }
-    var dataType = 0
+    var dataType = OrderLandingConstant.SegmentType.ongoing
     var ongoingDatas: [OrderResponse.Ongoing.OngoingData]?
     var historyDatas: OrderResponse.History.HistoryData?
     
@@ -54,15 +54,15 @@ class OrderLandingDataSource: NSObject {
 
 extension OrderLandingDataSource: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        if dataType == 0 {
-            return 4
+        if dataType == .ongoing {
+            return OrderLandingConstant.Cell.ongoingSectionCount
         } else {
-            return 1
+            return OrderLandingConstant.Cell.historySectionCount
         }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if dataType == 0 {
+        if dataType == .ongoing {
             let type = StatusType.allCases[section]
             if getOngoingNumberOfItemInSection(for: type.rawValue) > 0 {
                 return getOngoingNumberOfItemInSection(for: type.rawValue)
@@ -75,10 +75,10 @@ extension OrderLandingDataSource: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let landingCell = tableView.dequeueReusableCell(withIdentifier: "orderLandingCell") as? OrderLandingTableViewCell else { return UITableViewCell() }
-        guard let emptyCell = tableView.dequeueReusableCell(withIdentifier: "orderLandingEmptyCell") as? OrderEmptyTableViewCell else { return UITableViewCell() }
+        guard let landingCell = tableView.dequeueReusableCell(withIdentifier: OrderLandingConstant.Cell.landingCellId) as? OrderLandingTableViewCell else { return UITableViewCell() }
+        guard let emptyCell = tableView.dequeueReusableCell(withIdentifier: OrderLandingConstant.Cell.landingEmptyCellId) as? OrderEmptyTableViewCell else { return UITableViewCell() }
         
-        if dataType == 0 {
+        if dataType == .ongoing {
             let filteredDatas = ongoingDatas?.filter({ (data) -> Bool in
                 data.status?.lowercased() == StatusType.allCases[indexPath.section].rawValue
             })

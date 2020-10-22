@@ -16,7 +16,7 @@ protocol OrderLandingViewModelProtocol: class {
     var delegate: OrderLandingDelegate? { get set }
     
     func viewDidLoad()
-    func updateOrderView(with type: Int)
+    func updateOrderView(with type: OrderLandingConstant.SegmentType)
     func getOngoingData()
     func getHistoryData()
 }
