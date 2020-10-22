@@ -9,7 +9,7 @@
 import UIKit
 
 protocol OrderLandingHeaderProtocol: class {
-    func buttonDidTapped()
+    func buttonDidTapped(text: String?)
 }
 
 class OrderLandingHeaderView: UIView {
@@ -44,13 +44,9 @@ class OrderLandingHeaderView: UIView {
     }
     
     public weak var delegate: OrderLandingHeaderProtocol?
-    var isOpened: Bool = false
     
     @objc func buttonDidTapped() {
-        self.isOpened = !isOpened
-        updateHeader()
-        print("TAP")
-        delegate?.buttonDidTapped()
+        delegate?.buttonDidTapped(text: statusTitle.text)
     }
     
     override init(frame: CGRect) {
@@ -72,7 +68,7 @@ class OrderLandingHeaderView: UIView {
         baseView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
     }
     
-    private func updateHeader() {
+    public func updateHeader(isOpened: Bool) {
         if isOpened {
             chevronIcon.image = UIImage(systemName: "chevron.up")
         } else {
