@@ -20,7 +20,11 @@ class OrderLandingDelegate: NSObject {
     }
     
     public func getNotificationAmount(section: Int) -> Int {
-        return orderView?.numberOfRows(inSection: section) ?? 0
+        if isSectionsEmpty[section] {
+            return 0
+        } else {
+            return orderView?.numberOfRows(inSection: section) ?? 0
+        }
     }
     
     public func updateSectionType(isSectionsEmpty: [Bool]) {
