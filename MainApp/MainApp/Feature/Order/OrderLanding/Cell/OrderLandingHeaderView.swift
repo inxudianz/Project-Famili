@@ -13,6 +13,7 @@ protocol OrderLandingHeaderProtocol: class {
 }
 
 class OrderLandingHeaderView: UIView {
+    @IBOutlet var baseView: UIView!
     @IBOutlet weak var statusTitle: UILabel! {
         didSet {
             statusTitle.font = FontManager.getFont(for: .semibold, size: 18)
@@ -41,10 +42,30 @@ class OrderLandingHeaderView: UIView {
     @objc func buttonDidTapped() {
         self.isOpened = !isOpened
         updateHeader()
+        print("TAP")
         delegate?.buttonDidTapped()
     }
     
-    func updateHeader() {
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupBaseView()
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        setupBaseView()
+    }
+    
+    private func setupBaseView() {
+        let bundle = Bundle(for: OrderLandingHeaderView.self)
+        bundle.loadNibNamed(String(describing: OrderLandingHeaderView.self), owner: self, options: nil)
+        addSubview(baseView)
+        baseView.frame = self.bounds
+        baseView.backgroundColor = .white
+        baseView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+    }
+    
+    private func updateHeader() {
         if isOpened {
             chevronIcon.image = UIImage(systemName: "chevron.up")
         } else {
@@ -52,4 +73,13 @@ class OrderLandingHeaderView: UIView {
         }
     }
     
+    public func updateNotificationAmount(to amount: Int) {
+        notificationNumber.text = String(amount)
+        
+        if amount > 0 {
+            notificationBadgeView.layer.backgroundColor = UIColor.systemYellow.cgColor
+        } else {
+            notificationBadgeView.layer.backgroundColor = UIColor.lightGray.cgColor
+        }
+    }
 }

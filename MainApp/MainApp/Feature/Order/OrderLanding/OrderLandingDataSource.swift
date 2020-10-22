@@ -67,10 +67,6 @@ extension OrderLandingDataSource: UITableViewDataSource {
         }
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "HEader"
-    }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let landingCell = tableView.dequeueReusableCell(withIdentifier: "orderLandingCell") as? OrderLandingTableViewCell else { return UITableViewCell() }
         guard let emptyCell = tableView.dequeueReusableCell(withIdentifier: "orderLandingEmptyCell") as? OrderEmptyTableViewCell else { return UITableViewCell() }

@@ -25,7 +25,6 @@ class OrderLandingViewModel: OrderLandingViewModelProtocol {
     
     private func setDataSource() {
         dataSource = OrderLandingDataSource()
-        delegate = OrderLandingDelegate()
         dataSource?.setDatas(datas: [
             .init(status: "Accepted", detail: [
                 .init(name: "Laundry 1", timeStamp: "Time", description: "Jl. Address"),

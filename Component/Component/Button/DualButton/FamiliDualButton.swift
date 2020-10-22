@@ -140,7 +140,7 @@ How to use:
     
     /// Setup the two buttons' divider styling
     private func setupDivider() {
-        dividerView.frame = CGRect(x: self.frame.width - CommonProperty.dividerWidth / 2, y: CommonProperty.initialPosition, width: CommonProperty.dividerWidth, height: self.frame.height)
+        dividerView.frame = CGRect(x: self.frame.width / 2, y: CommonProperty.initialPosition, width: CommonProperty.dividerWidth, height: self.frame.height)
         dividerView.backgroundColor = .white
         addSubview(dividerView)
     }

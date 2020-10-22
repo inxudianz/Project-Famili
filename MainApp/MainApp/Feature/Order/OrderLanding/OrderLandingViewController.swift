@@ -37,10 +37,11 @@ class OrderLandingViewController: UIViewController, OrderLandingViewProtocol {
     private func setupOrderView() {
         let orderCell = UINib(nibName: String(describing: OrderLandingTableViewCell.self), bundle: Bundle(for: OrderLandingTableViewCell.self))
         let emptyCell = UINib(nibName: String(describing: OrderEmptyTableViewCell.self), bundle: Bundle(for: OrderEmptyTableViewCell.self))
+        viewModel?.delegate = OrderLandingDelegate(orderView: orderView)
         
         orderView.register(orderCell, forCellReuseIdentifier: "orderLandingCell")
         orderView.register(emptyCell, forCellReuseIdentifier: "orderLandingEmptyCell")
-        //orderView.delegate = viewModel?.delegate
+        orderView.delegate = viewModel?.delegate
         orderView.dataSource = viewModel?.dataSource
     }
     
