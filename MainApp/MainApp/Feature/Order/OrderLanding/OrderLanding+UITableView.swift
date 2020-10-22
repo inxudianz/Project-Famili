@@ -10,7 +10,8 @@ import UIKit
 
 class OrderLandingDelegate: NSObject {
     var orderView: UITableView?
-    var isSectionClosed: [Bool] = .init(repeating: false, count: 4)
+    var isSectionsClosed: [Bool] = .init(repeating: false, count: 4)
+    var isSectionsEmpty: [Bool] = .init(repeating: false, count: 4)
     
     init(orderView: UITableView) {
         self.orderView = orderView
@@ -20,10 +21,8 @@ class OrderLandingDelegate: NSObject {
         return orderView?.numberOfRows(inSection: section) ?? 0
     }
     
-    func handleButtonTyped(text: String) {
-        for (index,type) in OrderLandingHeaderView.HeaderType.allCases.enumerated() where type.rawValue == text {
-            isSectionClosed[index] = !isSectionClosed[index]
-        }
+    public func updateSectionType(isSectionsEmpty: [Bool]) {
+        self.isSectionsEmpty = isSectionsEmpty
         orderView?.reloadData()
     }
 }
@@ -35,7 +34,7 @@ extension OrderLandingDelegate: UITableViewDelegate {
         headerView.updateNotificationAmount(to: getNotificationAmount(section: section))
         headerView.setTitle(for: OrderLandingHeaderView.HeaderType.allCases[section])
         headerView.delegate = self
-        headerView.updateHeader(isOpened: isSectionClosed[section])
+        headerView.updateHeader(isOpened: isSectionsClosed[section])
         return headerView
     }
     
@@ -43,17 +42,23 @@ extension OrderLandingDelegate: UITableViewDelegate {
         return 40
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if isSectionClosed[indexPath.section] {
+        if isSectionsClosed[indexPath.section] {
             return 0
         } else {
-            return 150
+            if isSectionsEmpty[indexPath.section] {
+                return 50
+            } else {
+                return 150
+            }
         }
     }
 }
 
 extension OrderLandingDelegate: OrderLandingHeaderProtocol {
     func buttonDidTapped(text: String?) {
-        guard let text = text else { return }
-        handleButtonTyped(text: text)
+        for (index,type) in OrderLandingHeaderView.HeaderType.allCases.enumerated() where type.rawValue == text {
+            isSectionsClosed[index] = !isSectionsClosed[index]
+        }
+        orderView?.reloadData()
     }
 }

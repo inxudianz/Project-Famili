@@ -21,6 +21,10 @@ class OrderLandingDataSource: NSObject {
         self.datas = datas
     }
     
+    public func getDatas() -> [OrderResponse.Ongoing.OngoingData]? {
+        return datas
+    }
+    
     public func getNumberOfSection() -> Int {
         guard let datas = datas else { return 0 }
         let statusAvailable = datas.map { (data) -> String? in
@@ -38,7 +42,6 @@ class OrderLandingDataSource: NSObject {
                 break
             }
         }
-        
         return itemCount
     }
 }

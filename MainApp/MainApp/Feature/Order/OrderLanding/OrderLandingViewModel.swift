@@ -37,4 +37,13 @@ class OrderLandingViewModel: OrderLandingViewModelProtocol {
         dataSource = OrderLandingDataSource()
         dataSource?.setDatas(datas: datas)
     }
+    
+    func updateCellType() {
+        var isDatasEmpty: [Bool] = .init(repeating: true, count: 4)
+        guard let datas = dataSource?.getDatas() else { return }
+        for (index,data) in datas.enumerated() where !data.detail.isEmpty {
+            isDatasEmpty[index] = false
+        }
+        delegate?.updateSectionType(isSectionsEmpty: isDatasEmpty)
+    }
 }
