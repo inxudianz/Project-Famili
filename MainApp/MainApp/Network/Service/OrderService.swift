@@ -11,6 +11,7 @@ import Alamofire
 
 enum OrderService {
     case getOngoing(userId: String)
+    case getHistory(userId: String)
 }
 
 extension OrderService: NetworkType {
@@ -22,19 +23,23 @@ extension OrderService: NetworkType {
         switch self {
         case .getOngoing(let userId):
             return OrderPath.order.rawValue + OrderSubPath.ongoing.rawValue + userId
+        case .getHistory(let userId):
+            return OrderPath.order.rawValue + OrderSubPath.history.rawValue + userId
         }
     }
     
     var method: HTTPMethod {
         switch self {
-        case .getOngoing:
+        case .getOngoing,
+             .getHistory:
             return .get
         }
     }
     
     var task: HTTPTask {
         switch self {
-        case .getOngoing:
+        case .getOngoing,
+             .getHistory:
             return .plainRequest
         }
     }

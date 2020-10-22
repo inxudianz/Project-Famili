@@ -22,4 +22,18 @@ struct OrderResponse {
             var address: String?
         }
     }
+    
+    struct History: Codable {
+        var data: OngoingData?
+        
+        struct OngoingData: Codable {
+            var status: String?
+            var detail: [OngoingDetail]
+        }
+        struct OngoingDetail: Codable {
+            var laundryName: String?
+            var timeStamp: String?
+            var address: String?
+        }
+    }
 }

@@ -10,4 +10,5 @@ import Foundation
 
 enum OrderSubPath: String {
     case ongoing = "ongoing/"
+    case history = "history/"
 }

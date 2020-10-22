@@ -12,3 +12,8 @@ protocol OngoingOrderProtocol: class {
     func didSuccessGetOngoingOrder(response: OrderResponse.Ongoing?)
     func didFailGetOngoingOrder(error: Error?)
 }
+
+protocol HistoryOrderProtocol: class {
+    func didSuccessGetHistoryOrder(response: OrderResponse.History?)
+    func didFailGetHistoryOrder(error: Error?)
+}
