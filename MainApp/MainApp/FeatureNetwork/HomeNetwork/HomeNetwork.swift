@@ -11,7 +11,8 @@ import Foundation
 protocol HomeNetworkProtocol {
     var retrieveNotificationMessageDelegate: RetrieveNotificationMessageDelegate? { get set }
     var retrieveNotificationNewsDelegate: RetrieveNotificationNewsDelegate? { get set }
-
+    var homeBannersDelegate: HomeBannersProtocol? { get set }
+    func getBanners()
     func notificationMessageGet(userId: Int)
     func notificationNewsGet(userId: Int)
 }
@@ -19,6 +20,7 @@ protocol HomeNetworkProtocol {
 class HomeNetwork: HomeNetworkProtocol {
     weak var retrieveNotificationMessageDelegate: RetrieveNotificationMessageDelegate?
     weak var retrieveNotificationNewsDelegate: RetrieveNotificationNewsDelegate?
+    weak var homeBannersDelegate: HomeBannersProtocol?
     
     private var networkService: NetworkService
     
@@ -50,6 +52,15 @@ class HomeNetwork: HomeNetworkProtocol {
         }
     }
 
-    
+    func getBanners() {
+        networkService.request(HomeService.getBanners, EmptyModel(), HomeResponse.Banners.self) { [weak self] (result) in
+            switch result {
+            case .success(let result):
+                self?.homeBannersDelegate?.didSuccessGetBanners(response: result)
+            case .failure(let error):
+                self?.homeBannersDelegate?.didFailedGetBanners(error: error)
+            }
+        }
+    }
     
 }
