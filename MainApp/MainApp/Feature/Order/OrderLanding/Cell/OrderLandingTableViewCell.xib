@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="orderLandingCell" rowHeight="150" id="KGk-i7-Jjw" customClass="OrderLandingTableViewCell" customModule="MainApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="389" height="150"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="389" height="150"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gvw-lg-KDN" userLabel="Background Layer">
+                        <rect key="frame" x="0.0" y="0.0" width="389" height="150"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Laundry X" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q5z-oj-E6T" userLabel="Laundry Title">
+                                <rect key="frame" x="16" y="16" width="223" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jl. Address Address" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ch8-Aa-q1G" userLabel="Laundry Address">
+                                <rect key="frame" x="16" y="41.5" width="223" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="May 21" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w4Q-zI-CTc" userLabel="Laundry Date">
+                                <rect key="frame" x="250" y="16" width="123" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sN0-2H-h4d" userLabel="Dual Button Container">
+                                <rect key="frame" x="0.0" y="100" width="389" height="50"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZQU-Bt-hgq" customClass="FamiliDualButton" customModule="Component">
+                                        <rect key="frame" x="0.0" y="0.0" width="389" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="style">
+                                                <integer key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="0bC-0t-ILg"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZQU-Bt-hgq" secondAttribute="bottom" id="0pR-US-0rN"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZQU-Bt-hgq" secondAttribute="trailing" id="DdO-NV-Ev5"/>
+                                    <constraint firstItem="ZQU-Bt-hgq" firstAttribute="leading" secondItem="sN0-2H-h4d" secondAttribute="leading" id="NDE-fh-ZIC"/>
+                                    <constraint firstItem="ZQU-Bt-hgq" firstAttribute="top" secondItem="sN0-2H-h4d" secondAttribute="top" id="yci-qM-mou"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                        <constraints>
+                            <constraint firstItem="sN0-2H-h4d" firstAttribute="leading" secondItem="Gvw-lg-KDN" secondAttribute="leading" id="1ox-rQ-ySs"/>
+                            <constraint firstAttribute="trailing" secondItem="sN0-2H-h4d" secondAttribute="trailing" id="34c-S0-x3X"/>
+                            <constraint firstAttribute="trailing" secondItem="w4Q-zI-CTc" secondAttribute="trailing" constant="16" id="3d2-cM-Ei7"/>
+                            <constraint firstItem="w4Q-zI-CTc" firstAttribute="top" secondItem="Gvw-lg-KDN" secondAttribute="top" constant="16" id="B17-km-5KO"/>
+                            <constraint firstItem="w4Q-zI-CTc" firstAttribute="leading" secondItem="Gvw-lg-KDN" secondAttribute="leading" constant="250" id="CaK-lO-Gpz"/>
+                            <constraint firstItem="Q5z-oj-E6T" firstAttribute="top" secondItem="Gvw-lg-KDN" secondAttribute="top" constant="16" id="J9N-jc-yot"/>
+                            <constraint firstAttribute="trailing" secondItem="Q5z-oj-E6T" secondAttribute="trailing" constant="150" id="NMI-ed-HsX"/>
+                            <constraint firstAttribute="trailing" secondItem="ch8-Aa-q1G" secondAttribute="trailing" constant="150" id="Wga-YU-oaR"/>
+                            <constraint firstItem="Q5z-oj-E6T" firstAttribute="leading" secondItem="Gvw-lg-KDN" secondAttribute="leading" constant="16" id="rjD-So-zDD"/>
+                            <constraint firstItem="ch8-Aa-q1G" firstAttribute="leading" secondItem="Gvw-lg-KDN" secondAttribute="leading" constant="16" id="sSX-jG-cCz"/>
+                            <constraint firstAttribute="bottom" secondItem="sN0-2H-h4d" secondAttribute="bottom" id="yTu-aV-W5z"/>
+                            <constraint firstItem="ch8-Aa-q1G" firstAttribute="top" secondItem="Q5z-oj-E6T" secondAttribute="bottom" constant="6" id="yZs-pF-A4P"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="Gvw-lg-KDN" secondAttribute="trailing" id="Dhv-mM-lIu"/>
+                    <constraint firstAttribute="bottom" secondItem="Gvw-lg-KDN" secondAttribute="bottom" id="Tr2-yR-uJu"/>
+                    <constraint firstItem="Gvw-lg-KDN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="WCh-Rd-a65"/>
+                    <constraint firstItem="Gvw-lg-KDN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="luB-Q7-vC9"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="backgroundLayer" destination="Gvw-lg-KDN" id="2Da-D9-DeQ"/>
+                <outlet property="dualButton" destination="ZQU-Bt-hgq" id="bfc-Uk-l37"/>
+                <outlet property="laundryAddress" destination="ch8-Aa-q1G" id="0vS-4s-WrA"/>
+                <outlet property="laundryDate" destination="w4Q-zI-CTc" id="Bsn-Pi-NkC"/>
+                <outlet property="laundryTitle" destination="Q5z-oj-E6T" id="6bh-CL-322"/>
+            </connections>
+            <point key="canvasLocation" x="187.68115942028987" y="135.9375"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -7,3 +7,16 @@
 //
 
 import Foundation
+
+protocol OrderNetworkProtocol {
+    
+}
+
+class OrderNetwork: OrderNetworkProtocol {
+    
+    private var networkService: NetworkService?
+    
+    init() {
+        self.networkService = NetworkService()
+    }
+}

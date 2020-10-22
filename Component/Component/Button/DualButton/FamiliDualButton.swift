@@ -32,6 +32,11 @@ How to use:
         case rightButton
     }
     
+    public enum FamiliDualButtonStyle: Int {
+        case normal
+        case inverted
+    }
+    
     // MARK: - Property
     /// Set the left button icon
     @IBInspectable var leftIcon: String = "" {
@@ -47,27 +52,40 @@ How to use:
         }
     }
     
+    @IBInspectable var style: Int = 0 {
+        didSet {
+            styleType = FamiliDualButton.FamiliDualButtonStyle(rawValue: style) ?? .normal
+            setupView(with: styleType ?? .normal)
+        }
+    }
+    
     private var dividerView = UIView()
     private var leftButton = UIButton()
     private var rightButton = UIButton()
+    private var styleType: FamiliDualButtonStyle?
     public weak var familiDualButtonDelegate: FamiliDualButtonDelegate?
     
     
     // MARK: - Initialization
     public override init(frame: CGRect) {
         super.init(frame: frame)
-        setupView()
+        setupView(with: self.styleType ?? .normal)
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        setupView()
+        setupView(with: self.styleType ?? .normal)
+    }
+    
+    init(frame: CGRect, style: FamiliDualButtonStyle) {
+        super.init(frame: frame)
+        setupView(with: style)
     }
     
     /// Update display for usage in Interface Builder
     public override func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
-        setupView()
+        setupView(with: self.styleType ?? .normal)
     }
     
     // MARK: - Handler
@@ -85,10 +103,10 @@ How to use:
     
     // MARK: - Private Function
     /// Setup the view for background, left button, right button, and divider
-    private func setupView() {
-        setupBackgroundView()
-        setupLeftButton()
-        setupRightButton()
+    private func setupView(with style: FamiliDualButtonStyle) {
+        setupBackgroundView(with: style)
+        setupLeftButton(with: style)
+        setupRightButton(with: style)
         setupDivider()
     }
     
@@ -109,10 +127,15 @@ How to use:
     }
     
     /// Setup the background view styling
-    private func setupBackgroundView() {
+    private func setupBackgroundView(with style: FamiliDualButtonStyle) {
         self.frame = CGRect(x: CommonProperty.initialPosition, y: CommonProperty.initialPosition, width: self.frame.width, height: self.frame.height)
-        self.backgroundColor = UIColor(hex: ButtonBackgroundColor.normal.rawValue)
         self.layer.cornerRadius = CommonProperty.cornerRadius
+        
+        if style == .inverted {
+            self.backgroundColor = .clear
+        } else {
+            self.backgroundColor = UIColor(hex: ButtonBackgroundColor.normal.rawValue)
+        }
     }
     
     /// Setup the two buttons' divider styling
@@ -123,25 +146,35 @@ How to use:
     }
     
     /// Setup left button property
-    private func setupLeftButton() {
+    private func setupLeftButton(with style: FamiliDualButtonStyle) {
         leftButton.frame = CGRect(x: CommonProperty.initialPosition, y: CommonProperty.initialPosition, width: self.frame.width / 2, height: self.frame.height)
-        leftButton.tintColor = .white
         leftButton.setImage(.strokedCheckmark, for: .normal)
         leftButton.layer.cornerRadius = CommonProperty.cornerRadius
         leftButton.isUserInteractionEnabled = true
         leftButton.addTarget(self, action: #selector(didTapLeftButton(_:)), for: .touchUpInside)
+        
+        if style == .inverted {
+            leftButton.tintColor = UIColor(hex: ButtonBackgroundColor.normal.rawValue)
+        } else {
+            leftButton.tintColor = .white
+        }
         addSubview(leftButton)
         
     }
     
     /// Setup right button property
-    private func setupRightButton() {
+    private func setupRightButton(with style: FamiliDualButtonStyle) {
         rightButton.frame = CGRect(x: self.frame.width / 2, y: CommonProperty.initialPosition, width: self.frame.width / 2, height: self.frame.height)
-        rightButton.tintColor = .white
         rightButton.setImage(.strokedCheckmark, for: .normal)
         rightButton.layer.cornerRadius = CommonProperty.cornerRadius
         rightButton.isUserInteractionEnabled = true
         rightButton.addTarget(self, action: #selector(didTapRightButton(_:)), for: .touchUpInside)
+        
+        if style == .inverted {
+            rightButton.tintColor = UIColor(hex: ButtonBackgroundColor.normal.rawValue)
+        } else {
+            rightButton.tintColor = .white
+        }
         addSubview(rightButton)
     }
     

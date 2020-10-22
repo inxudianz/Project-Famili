@@ -7,3 +7,17 @@
 //
 
 import Foundation
+
+protocol OrderLandingViewModelProtocol: class {
+    var view: OrderLandingViewProtocol? { get set }
+    var coordinator: OrderCoordinatorProtocol? { get set }
+    var network: OrderNetworkProtocol? { get set }
+    var dataSource: OrderLandingDataSource? { get set }
+    var delegate: OrderLandingDelegate? { get set }
+    
+    func viewDidLoad()
+}
+
+protocol OrderLandingViewProtocol: class {
+    var viewModel: OrderLandingViewModelProtocol? { get set }
+}
