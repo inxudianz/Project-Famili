@@ -56,6 +56,8 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="style">
                                                 <integer key="value" value="1"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="leftIcon" value="phone_icon"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="rightIcon" value="message_icon"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
