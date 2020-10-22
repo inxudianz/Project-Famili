@@ -36,6 +36,7 @@ class OrderLandingTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        dualButton.familiDualButtonDelegate = self
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -46,5 +47,15 @@ class OrderLandingTableViewCell: UITableViewCell {
         self.laundryTitle.text = title
         self.laundryAddress.text = address
         self.laundryDate.text = date
+    }
+}
+
+extension OrderLandingTableViewCell: FamiliDualButtonDelegate {
+    func didTapLeftButton(sender: UIButton) {
+        // Handle left button
+    }
+    
+    func didTapRightButton(sender: UIButton) {
+        // Handle right button
     }
 }
