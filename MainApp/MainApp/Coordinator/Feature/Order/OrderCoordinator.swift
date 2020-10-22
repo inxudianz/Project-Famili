@@ -24,7 +24,10 @@ class OrderCoordinator: OrderCoordinatorProtocol {
         vm.coordinator = self
         vm.view = vc
         vc.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 0)
-        navigationController?.setNavigationBarHidden(true, animated: false)
+        
+        navigationController?.navigationBar.prefersLargeTitles = true
+        vc.navigationItem.largeTitleDisplayMode = .always
+        vc.navigationItem.title = "Track Order"
         navigationController?.pushViewController(vc, animated: false)
     }
     
