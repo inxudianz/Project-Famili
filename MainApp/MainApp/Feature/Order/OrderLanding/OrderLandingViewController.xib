@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OrderLandingViewController" customModule="MainApp" customModuleProvider="target">
+            <connections>
+                <outlet property="orderSegment" destination="7ED-a2-bQ7" id="At4-ge-vYh"/>
+                <outlet property="orderView" destination="EpW-0I-D38" id="PyG-py-trJ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="7ED-a2-bQ7" userLabel="Segment Control">
+                    <rect key="frame" x="16" y="60" width="382" height="46"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="otF-FK-wJr"/>
+                    </constraints>
+                    <segments>
+                        <segment title="Ongoing"/>
+                        <segment title="History"/>
+                    </segments>
+                </segmentedControl>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="170" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EpW-0I-D38">
+                    <rect key="frame" x="16" y="125" width="382" height="737"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <inset key="scrollIndicatorInsets" minX="0.0" minY="16" maxX="0.0" maxY="0.0"/>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="EpW-0I-D38" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="2PW-cH-Tjl"/>
+                <constraint firstItem="7ED-a2-bQ7" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="5ei-UC-V9I"/>
+                <constraint firstItem="7ED-a2-bQ7" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="ElA-ps-S9s"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="EpW-0I-D38" secondAttribute="bottom" id="JX0-w5-jRq"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="EpW-0I-D38" secondAttribute="trailing" constant="16" id="ig4-jI-r2M"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="7ED-a2-bQ7" secondAttribute="trailing" constant="16" id="nnj-33-SK5"/>
+                <constraint firstItem="EpW-0I-D38" firstAttribute="top" secondItem="7ED-a2-bQ7" secondAttribute="bottom" constant="20" id="vzk-5a-ZSa"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="85"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

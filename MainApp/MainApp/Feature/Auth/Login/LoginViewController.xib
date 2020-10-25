@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -62,9 +64,9 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xGC-dd-FBr" customClass="FamiliButton" customModule="Component">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xGC-dd-FBr" customClass="FamiliButton" customModule="Component">
                                     <rect key="frame" x="32" y="246" width="350" height="51"/>
-                                    <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" systemColor="linkColor"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="51" id="32b-Sk-Oaw"/>
                                     </constraints>
@@ -78,7 +80,7 @@
                                         <action selector="loginTapped:" destination="-1" eventType="touchUpInside" id="gOO-oO-PRW"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rlS-jX-Wch">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rlS-jX-Wch">
                                     <rect key="frame" x="32" y="321" width="350" height="30"/>
                                     <state key="normal" title="Don’t have account yet? Register here!">
                                         <color key="titleColor" red="0.0" green="0.76500000000000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -130,7 +132,7 @@
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dhh-Kf-cG1" userLabel="Google Button" customClass="LoginButton" customModule="Component">
                                             <rect key="frame" x="32" y="0.0" width="350" height="49"/>
-                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="string" keyPath="title" value="Login with Google"/>
                                                 <userDefinedRuntimeAttribute type="string" keyPath="iconName" value="icon_google"/>
@@ -138,7 +140,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                     </subviews>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="49" id="YaQ-0V-Vyu"/>
                                         <constraint firstAttribute="bottom" secondItem="Dhh-Kf-cG1" secondAttribute="bottom" id="dWa-CF-NZY"/>
@@ -152,7 +154,7 @@
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fA7-gE-JGI" userLabel="Facebook Button" customClass="LoginButton" customModule="Component">
                                             <rect key="frame" x="32" y="0.0" width="350" height="49"/>
-                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="string" keyPath="title" value="Login with Facebook"/>
                                                 <userDefinedRuntimeAttribute type="string" keyPath="iconName" value="icon_fb"/>
@@ -160,7 +162,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                     </subviews>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="fA7-gE-JGI" secondAttribute="trailing" constant="32" id="0fo-3Q-grR"/>
                                         <constraint firstAttribute="bottom" secondItem="fA7-gE-JGI" secondAttribute="bottom" id="409-24-Oyy"/>
@@ -170,7 +172,7 @@
                                     </constraints>
                                 </view>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
                                 <constraint firstAttribute="trailing" secondItem="njQ-dP-dN7" secondAttribute="trailing" constant="32" id="4dO-4g-FkL"/>
                                 <constraint firstItem="BLW-s8-MOx" firstAttribute="top" secondItem="JYn-v0-v9q" secondAttribute="top" constant="32" id="6kv-zG-Bbu"/>
@@ -214,15 +216,34 @@
                     <viewLayoutGuide key="frameLayoutGuide" id="eKB-YB-yB3"/>
                 </scrollView>
             </subviews>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="top" secondItem="fbN-Z8-tOK" secondAttribute="top" id="9g7-Qv-kxg"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="fbN-Z8-tOK" secondAttribute="bottom" id="Ei6-uX-TdA"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fbN-Z8-tOK" secondAttribute="trailing" id="uuq-HP-Bji"/>
                 <constraint firstItem="fbN-Z8-tOK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="vW7-oX-mqU"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="137.68115942028987" y="134.59821428571428"/>
         </view>
     </objects>
+    <designables>
+        <designable name="IrI-95-FL8">
+            <size key="intrinsicContentSize" width="94.5" height="34"/>
+        </designable>
+        <designable name="njQ-dP-dN7">
+            <size key="intrinsicContentSize" width="119.5" height="34"/>
+        </designable>
+        <designable name="xGC-dd-FBr">
+            <size key="intrinsicContentSize" width="42" height="33"/>
+        </designable>
+    </designables>
+    <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
