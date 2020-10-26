@@ -13,10 +13,12 @@ protocol ProfileNetworkProtocol {
     var editProfileDelegate: EditProfileDelegate? { get set }
     var retrievePrivacyPolicyDelegate: RetrievePrivacyPolicyDelegate? { get set }
     var retrieveTermsOfServiceDelegate: RetrieveTermsOfServiceDelegate? { get set }
+    var retrieveHelpCenterDelegate: RetrieveHelpCenterDelegate? { get set }
     func profileGet(userId: Int)
     func profileEditPost(data: ProfileModel.EditProfile)
     func termsOfServiceGet()
     func privacyPolicyGet()
+    func helpCenterGet()
 }
 
 class ProfileLandingNetwork: ProfileNetworkProtocol {
@@ -24,6 +26,7 @@ class ProfileLandingNetwork: ProfileNetworkProtocol {
     weak var editProfileDelegate: EditProfileDelegate?
     weak var retrievePrivacyPolicyDelegate: RetrievePrivacyPolicyDelegate?
     weak var retrieveTermsOfServiceDelegate: RetrieveTermsOfServiceDelegate?
+    weak var retrieveHelpCenterDelegate: RetrieveHelpCenterDelegate?
     
     private var networkService: NetworkService
     
@@ -79,6 +82,17 @@ class ProfileLandingNetwork: ProfileNetworkProtocol {
                 self?.retrieveTermsOfServiceDelegate?.didSuccessRetrieveTermsOfService(response: response)
             case .failure(let error):
                 self?.retrieveTermsOfServiceDelegate?.didFailedRetrieveTermsOfService(error: error)
+            }
+        }
+    }
+    
+    func helpCenterGet() {
+        networkService.request(ProfileService.getHelpCenterRequest, EmptyModel(), ProfileResponse.GetHelpCenterResponse.self) { [weak self] (result) in
+            switch result {
+            case .success(let response):
+                self?.retrieveHelpCenterDelegate?.didSuccessRetrieveHelpCenter(response: response)
+            case .failure(let error):
+                self?.retrieveHelpCenterDelegate?.didFailedRetrieveHelpCenter(error: error)
             }
         }
     }

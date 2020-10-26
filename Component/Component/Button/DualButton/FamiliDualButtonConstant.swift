@@ -18,6 +18,6 @@ enum FamiliDualButtonConstant {
     enum CommonProperties {
         static let initialPosition: CGFloat = 0
         static let cornerRadius: CGFloat = 10
-        static let dividerWidth: CGFloat = 2
+        static let dividerWidth: CGFloat = 1
     }
 }
