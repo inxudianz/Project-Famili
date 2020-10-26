@@ -10,4 +10,6 @@ import Foundation
 
 enum HomeSubPath: String {
     case banners = "banners/"
+    case message = "message/"
+    case notification = "notification/"
 }
