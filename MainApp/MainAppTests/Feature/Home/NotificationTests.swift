@@ -48,6 +48,7 @@ class NotificationMock: NotificationViewProtocol {
 }
 
 class NotificationNetworkMock: HomeNetworkProtocol {
+    var homeBannersDelegate: HomeBannersProtocol?
     var retrieveNotificationMessageDelegate: RetrieveNotificationMessageDelegate?
     var retrieveNotificationNewsDelegate: RetrieveNotificationNewsDelegate?
     
@@ -59,6 +60,11 @@ class NotificationNetworkMock: HomeNetworkProtocol {
     var isNotificationNewsGet = false
     func notificationNewsGet(userId: Int) {
         isNotificationNewsGet = true
+    }
+    
+    var isGetBanners = false
+    func getBanners() {
+        isGetBanners = true
     }
 }
 
