@@ -33,6 +33,12 @@ class HomeCoordinator: HomeCoordinatorProtocol {
     }
     
     func navigateToNotification() {
-        // Navigate to notification
+        let vc = NotificationViewController()
+        let vm = NotificationViewModel()
+        vc.viewModel = vm
+        vm.coordinator = self
+        vm.view = vc
+        navigationController?.setNavigationBarHidden(false, animated: false)
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
