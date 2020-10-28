@@ -25,8 +25,6 @@
 		92D79EBF2483E553004C4701 /* Component.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92D79EB52483E553004C4701 /* Component.framework */; };
 		92D79EC42483E553004C4701 /* ComponentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D79EC32483E553004C4701 /* ComponentTests.swift */; };
 		92D79EC62483E553004C4701 /* Component.h in Headers */ = {isa = PBXBuildFile; fileRef = 92D79EB82483E553004C4701 /* Component.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		92D79F032483E85F004C4701 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D79F012483E85F004C4701 /* MasterViewController.swift */; };
-		92D79F042483E85F004C4701 /* MasterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92D79F022483E85F004C4701 /* MasterViewController.xib */; };
 		F50316DE24D08AF100F78288 /* FamiliButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50316DD24D08AF100F78288 /* FamiliButton.swift */; };
 		F527924724FEA0C9005F0B8F /* FamiliAlertViewConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F527924624FEA0C9005F0B8F /* FamiliAlertViewConstant.swift */; };
 /* End PBXBuildFile section */
@@ -63,8 +61,6 @@
 		92D79EBE2483E553004C4701 /* ComponentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ComponentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		92D79EC32483E553004C4701 /* ComponentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentTests.swift; sourceTree = "<group>"; };
 		92D79EC52483E553004C4701 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		92D79F012483E85F004C4701 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
-		92D79F022483E85F004C4701 /* MasterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MasterViewController.xib; sourceTree = "<group>"; };
 		92D79F162483E98D004C4701 /* Coordinator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Coordinator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F50316DD24D08AF100F78288 /* FamiliButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamiliButton.swift; sourceTree = "<group>"; };
 		F527924624FEA0C9005F0B8F /* FamiliAlertViewConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamiliAlertViewConstant.swift; sourceTree = "<group>"; };
@@ -134,14 +130,6 @@
 			path = FamiliAlertView;
 			sourceTree = "<group>";
 		};
-		92B90E4B2486BA4400C59DDF /* Master */ = {
-			isa = PBXGroup;
-			children = (
-				92D79F002483E850004C4701 /* MasterViewController */,
-			);
-			path = Master;
-			sourceTree = "<group>";
-		};
 		92C77C0224937E7B004C1D86 /* Button */ = {
 			isa = PBXGroup;
 			children = (
@@ -196,7 +184,6 @@
 				9227A16A24CDC501004F7952 /* Textfield */,
 				92C77C08249383B7004C1D86 /* Graph */,
 				92C77C0224937E7B004C1D86 /* Button */,
-				92B90E4B2486BA4400C59DDF /* Master */,
 				92D79F1F2483F3F0004C4701 /* Extension */,
 				92D79EB82483E553004C4701 /* Component.h */,
 				92D79EB92483E553004C4701 /* Info.plist */,
@@ -212,15 +199,6 @@
 				92D79EC52483E553004C4701 /* Info.plist */,
 			);
 			path = ComponentTests;
-			sourceTree = "<group>";
-		};
-		92D79F002483E850004C4701 /* MasterViewController */ = {
-			isa = PBXGroup;
-			children = (
-				92D79F012483E85F004C4701 /* MasterViewController.swift */,
-				92D79F022483E85F004C4701 /* MasterViewController.xib */,
-			);
-			path = MasterViewController;
 			sourceTree = "<group>";
 		};
 		92D79F152483E98D004C4701 /* Frameworks */ = {
@@ -306,7 +284,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "William Inx";
 				TargetAttributes = {
 					92D79EB42483E553004C4701 = {
@@ -342,7 +320,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92D79F042483E85F004C4701 /* MasterViewController.xib in Resources */,
 				921D226424EBF638007C3261 /* Component.xcassets in Resources */,
 				9248C7DF24FE40B8001E41A3 /* FamiliAlertView.xib in Resources */,
 			);
@@ -367,7 +344,6 @@
 				9248C7DD24FE2162001E41A3 /* FamiliAlertView.swift in Sources */,
 				920C25C924E39D9B00047D14 /* CircularProgressConstant.swift in Sources */,
 				921D20C124E63E58007C3261 /* Component+UIView.swift in Sources */,
-				92D79F032483E85F004C4701 /* MasterViewController.swift in Sources */,
 				F527924724FEA0C9005F0B8F /* FamiliAlertViewConstant.swift in Sources */,
 				92C77C0A249383CB004C1D86 /* CircularProgressView.swift in Sources */,
 				92C77C0524937EA1004C1D86 /* FamiliDualButton.swift in Sources */,
@@ -426,6 +402,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -451,7 +428,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -489,6 +466,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -508,7 +486,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

@@ -4,10 +4,69 @@
    <FileRef
       location = "group:Component/Component.xcodeproj">
    </FileRef>
-   <FileRef
-      location = "group:MainApp/MainApp.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Pods/Pods.xcodeproj">
-   </FileRef>
+   <Group
+      location = "group:Laundron-User"
+      name = "Laundron-User">
+      <FileRef
+         location = "group:LUCoordinatorBuilder/LUCoordinatorBuilder.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:LUAppCoordinator/LUAppCoordinator.xcodeproj">
+      </FileRef>
+      <Group
+         location = "group:LUFeature"
+         name = "LUFeature">
+         <Group
+            location = "container:"
+            name = "LUAuth">
+            <FileRef
+               location = "group:Laundron-User/LUFeature/LUAuth/LUAuthNetwork/LUAuthNetwork.xcodeproj">
+            </FileRef>
+            <FileRef
+               location = "group:Laundron-User/LUFeature/LUAuth/LUAuth/LUAuth.xcodeproj">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:LUSplash"
+            name = "LUSplash">
+            <FileRef
+               location = "group:LUSplash/LUSplash.xcodeproj">
+            </FileRef>
+            <FileRef
+               location = "group:LUSplashNetwork/LUSplashNetwork.xcodeproj">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:LUHome"
+            name = "LUHome">
+         </Group>
+         <Group
+            location = "group:LUProfile"
+            name = "LUProfile">
+         </Group>
+         <Group
+            location = "group:LUOrder"
+            name = "LUOrder">
+         </Group>
+         <Group
+            location = "group:LUSample"
+            name = "LUSample">
+         </Group>
+      </Group>
+      <FileRef
+         location = "group:LUCoordinator/LUCoordinator.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:LUMain/LUMain.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:LUCodable/LUCodable.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:LUHandler/LUHandler.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:LUNetwork/LUNetwork.xcodeproj">
+      </FileRef>
+   </Group>
 </Workspace>

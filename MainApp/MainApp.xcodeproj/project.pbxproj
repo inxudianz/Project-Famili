@@ -64,6 +64,8 @@
 		922FC870254146DE003288BF /* OrderPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FC86F254146DE003288BF /* OrderPath.swift */; };
 		922FC873254146E4003288BF /* OrderSubPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FC872254146E4003288BF /* OrderSubPath.swift */; };
 		922FC9F025428C01003288BF /* OrderLandingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FC9EF25428C01003288BF /* OrderLandingTests.swift */; };
+		922FDF8F254992BB003288BF /* LUAppCoordinator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 922FDF8E254992BB003288BF /* LUAppCoordinator.framework */; };
+		922FDF90254992BB003288BF /* LUAppCoordinator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 922FDF8E254992BB003288BF /* LUAppCoordinator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		926D1920253EB30300466810 /* HomeLanding+UICollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926D191F253EB30300466810 /* HomeLanding+UICollectionViewDelegate.swift */; };
 		926D1926253EC2B500466810 /* ServiceHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926D1924253EC2B500466810 /* ServiceHeaderCollectionReusableView.swift */; };
 		926D1927253EC2B500466810 /* ServiceHeaderCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 926D1925253EC2B500466810 /* ServiceHeaderCollectionReusableView.xib */; };
@@ -264,6 +266,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				922FDF90254992BB003288BF /* LUAppCoordinator.framework in Embed Frameworks */,
 				92CA2BF9251B731100920B21 /* Component.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -331,6 +334,9 @@
 		922FC86F254146DE003288BF /* OrderPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderPath.swift; sourceTree = "<group>"; };
 		922FC872254146E4003288BF /* OrderSubPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderSubPath.swift; sourceTree = "<group>"; };
 		922FC9EF25428C01003288BF /* OrderLandingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderLandingTests.swift; sourceTree = "<group>"; };
+		922FDF842549929B003288BF /* LUAppCoordinator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LUAppCoordinator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		922FDF8A254992B1003288BF /* LUAppCoordinator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LUAppCoordinator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		922FDF8E254992BB003288BF /* LUAppCoordinator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LUAppCoordinator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		926D191F253EB30300466810 /* HomeLanding+UICollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeLanding+UICollectionViewDelegate.swift"; sourceTree = "<group>"; };
 		926D1924253EC2B500466810 /* ServiceHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		926D1925253EC2B500466810 /* ServiceHeaderCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceHeaderCollectionReusableView.xib; sourceTree = "<group>"; };
@@ -515,6 +521,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				92CA2BF8251B731100920B21 /* Component.framework in Frameworks */,
+				922FDF8F254992BB003288BF /* LUAppCoordinator.framework in Frameworks */,
 				92CA2BFC251B731700920B21 /* Pods_MainApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1418,6 +1425,9 @@
 		92D79F1A2483F35D004C4701 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				922FDF8E254992BB003288BF /* LUAppCoordinator.framework */,
+				922FDF8A254992B1003288BF /* LUAppCoordinator.framework */,
+				922FDF842549929B003288BF /* LUAppCoordinator.framework */,
 				92CA2BFB251B731700920B21 /* Pods_MainApp.framework */,
 				92CA2BB3251B72F700920B21 /* Pods_MainApp.framework */,
 				92913BB8248D07C8002D961D /* Component.xcodeproj */,
@@ -2036,7 +2046,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 890F374CBAEFBDEFACC50A10 /* Pods-MainApp.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WPQ9HAVPNV;
 				INFOPLIST_FILE = MainApp/Resources/Info.plist;
@@ -2055,7 +2064,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EC0E518FA3EDC1935792999D /* Pods-MainApp.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WPQ9HAVPNV;
 				INFOPLIST_FILE = MainApp/Resources/Info.plist;
@@ -2089,7 +2097,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = inx.MainAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_INSTALL_OBJC_HEADER = NO;
-				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2116,7 +2123,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = inx.MainAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_INSTALL_OBJC_HEADER = NO;
-				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MainApp.app/MainApp";

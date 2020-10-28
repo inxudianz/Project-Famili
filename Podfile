@@ -1,35 +1,32 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+# platform :ios, '12.0'
 
 
 # Workspace
 workspace 'Project-Famili'
 
 def mainModule
-  pod "Firebase/Auth"
-  pod "Firebase/Analytics"
-  pod "Firebase/Messaging"
-  pod "Alamofire"
-  pod "RxSwift"
-  pod "RxCocoa"
-  pod "GoogleSignIn"
-  pod "FBSDKLoginKit"
+  pod "Firebase/Auth", '~> 7.0.0'
+  pod "Firebase/Analytics", '~> 7.0.0'
+  pod "Firebase/Messaging", '~> 7.0.0'
+  pod "Alamofire", '~> 5.3.0'
+  pod "RxSwift", '~> 5.1.1'
+  pod "RxCocoa", '~> 5.1.1'
+  pod "GoogleSignIn", '~> 5.0.2'
+  pod "FBSDKLoginKit", '~> 8.0.0'
+end
+
+def sdkModule
+  #pod "GoogleSignIn", '~> 5.0.2'
+  #pod "FBSDKLoginKit", '~> 8.0.0'
+  #pod "Firebase/Auth", '~> 7.0.0'
 end
 
 # Target
-target 'MainApp' do
-  project 'MainApp/MainApp.project'
 
-  # Comment the next line if you don't want to use dynamic frameworks
+target 'LUNetwork' do
+  project 'Laundron-User/LUNetwork/LUNetwork.project'
   use_frameworks!
-
-  # Pods for MainApp
-  mainModule
-  target 'MainAppTests' do
-    inherit! :search_paths
-    # Pods for testing
-    pod "Quick"
-    pod "Nimble"
-  end
-
+  pod 'Alamofire', '~> 5.3.0'
+  pod "RxSwift", '~> 5.1.1'
 end
