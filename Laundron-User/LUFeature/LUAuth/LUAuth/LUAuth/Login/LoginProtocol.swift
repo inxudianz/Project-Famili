@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import LUAuthNetwork
 
 protocol LoginViewModelProtocol: class {
     var view: LoginViewProtocol? { get set }

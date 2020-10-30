@@ -9,11 +9,11 @@
 import Foundation
 
 extension String {
-    func localize() -> String {
+    public func localize() -> String {
         return NSLocalizedString(self, comment: "")
     }
     
-    func isValid(with regex: String) -> Bool {
+    public func isValid(with regex: String) -> Bool {
         let regex = NSPredicate(format: "SELF MATCHES %@", regex)
         return regex.evaluate(with: self)
     }

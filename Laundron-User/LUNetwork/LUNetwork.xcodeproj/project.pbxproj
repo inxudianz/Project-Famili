@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		921BCFD53BA02183254EB5E1 /* Pods_LUNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DCE694CD5D86F43C01168F2 /* Pods_LUNetwork.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		922FD0C225480F88003288BF /* LUNetwork.h in Headers */ = {isa = PBXBuildFile; fileRef = 922FD0C025480F88003288BF /* LUNetwork.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		922FD4EB25490BEB003288BF /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FD4CE25490BEB003288BF /* HTTPTask.swift */; };
 		922FD4EC25490BEB003288BF /* OrderSubPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FD4D225490BEB003288BF /* OrderSubPath.swift */; };
@@ -33,6 +34,7 @@
 
 /* Begin PBXFileReference section */
 		1DCE694CD5D86F43C01168F2 /* Pods_LUNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LUNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		49ACA6153E222F1282374BA1 /* Pods-LUNetwork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LUNetwork.debug.xcconfig"; path = "Target Support Files/Pods-LUNetwork/Pods-LUNetwork.debug.xcconfig"; sourceTree = "<group>"; };
 		922FD0BD25480F88003288BF /* LUNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LUNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		922FD0C025480F88003288BF /* LUNetwork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LUNetwork.h; sourceTree = "<group>"; };
 		922FD0C125480F88003288BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 		922FD4E825490BEB003288BF /* HomeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
 		922FD4E925490BEB003288BF /* NetworkType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkType.swift; sourceTree = "<group>"; };
 		922FD4EA25490BEB003288BF /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		D60873828D7549E690CC1B21 /* Pods-LUNetwork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LUNetwork.release.xcconfig"; path = "Target Support Files/Pods-LUNetwork/Pods-LUNetwork.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				921BCFD53BA02183254EB5E1 /* Pods_LUNetwork.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +80,7 @@
 				922FD0BF25480F88003288BF /* LUNetwork */,
 				922FD0BE25480F88003288BF /* Products */,
 				BB9365CA142E7ABCBF2AAA4F /* Frameworks */,
+				F46CD5342FE69B055DE082D4 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -189,6 +194,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F46CD5342FE69B055DE082D4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				49ACA6153E222F1282374BA1 /* Pods-LUNetwork.debug.xcconfig */,
+				D60873828D7549E690CC1B21 /* Pods-LUNetwork.release.xcconfig */,
+			);
+			name = Pods;
+			path = ../../Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -207,11 +222,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 922FD0C525480F88003288BF /* Build configuration list for PBXNativeTarget "LUNetwork" */;
 			buildPhases = (
-				EC1BB3B78E63124742BFA00A /* [CP] Check Pods Manifest.lock */,
+				4A151A76C64405A9D48EE16D /* [CP] Check Pods Manifest.lock */,
 				922FD0B825480F88003288BF /* Headers */,
 				922FD0B925480F88003288BF /* Sources */,
 				922FD0BA25480F88003288BF /* Frameworks */,
 				922FD0BB25480F88003288BF /* Resources */,
+				8AC804F803421D2C143EE795 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -265,7 +281,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		EC1BB3B78E63124742BFA00A /* [CP] Check Pods Manifest.lock */ = {
+		4A151A76C64405A9D48EE16D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -285,6 +301,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8AC804F803421D2C143EE795 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LUNetwork/Pods-LUNetwork-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LUNetwork/Pods-LUNetwork-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LUNetwork/Pods-LUNetwork-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -445,6 +478,7 @@
 		};
 		922FD0C625480F88003288BF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49ACA6153E222F1282374BA1 /* Pods-LUNetwork.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -471,6 +505,7 @@
 		};
 		922FD0C725480F88003288BF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D60873828D7549E690CC1B21 /* Pods-LUNetwork.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;

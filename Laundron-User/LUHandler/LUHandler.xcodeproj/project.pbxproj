@@ -14,9 +14,18 @@
 		922FD53F25490D26003288BF /* MainApp+TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FD53425490D26003288BF /* MainApp+TabBar.swift */; };
 		922FD54025490D26003288BF /* MainApp+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FD53525490D26003288BF /* MainApp+UIColor.swift */; };
 		922FD54125490D26003288BF /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FD53725490D26003288BF /* FontManager.swift */; };
+		922FE589254A7FC4003288BF /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FE587254A7FC4003288BF /* Log.swift */; };
+		922FE58A254A7FC4003288BF /* Undefined.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FE588254A7FC4003288BF /* Undefined.swift */; };
+		922FE645254AC3FF003288BF /* GoogleSDKHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FE642254AC3FF003288BF /* GoogleSDKHandler.swift */; };
+		922FE646254AC3FF003288BF /* FirebaseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FE643254AC3FF003288BF /* FirebaseHandler.swift */; };
+		922FE647254AC3FF003288BF /* FacebookSDKHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FE644254AC3FF003288BF /* FacebookSDKHandler.swift */; };
+		AF83FE26AC891E6A1E056ED2 /* Pods_LUMain_LUHandler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9DEE3661FC0325EA42AF932 /* Pods_LUMain_LUHandler.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		077CD3DE2E1F0C0770D7AD08 /* Pods-LUHandler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LUHandler.release.xcconfig"; path = "Target Support Files/Pods-LUHandler/Pods-LUHandler.release.xcconfig"; sourceTree = "<group>"; };
+		2C6C70AC6884B8F26EFC1226 /* Pods-LUMain-LUHandler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LUMain-LUHandler.release.xcconfig"; path = "Target Support Files/Pods-LUMain-LUHandler/Pods-LUMain-LUHandler.release.xcconfig"; sourceTree = "<group>"; };
+		3BD65363D4ECB8CBB3F76A41 /* Pods-LUMain-LUHandler.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LUMain-LUHandler.debug.xcconfig"; path = "Target Support Files/Pods-LUMain-LUHandler/Pods-LUMain-LUHandler.debug.xcconfig"; sourceTree = "<group>"; };
 		922FD0D325480F95003288BF /* LUHandler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LUHandler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		922FD0D625480F95003288BF /* LUHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LUHandler.h; sourceTree = "<group>"; };
 		922FD0D725480F95003288BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -26,6 +35,13 @@
 		922FD53425490D26003288BF /* MainApp+TabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MainApp+TabBar.swift"; sourceTree = "<group>"; };
 		922FD53525490D26003288BF /* MainApp+UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MainApp+UIColor.swift"; sourceTree = "<group>"; };
 		922FD53725490D26003288BF /* FontManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
+		922FE587254A7FC4003288BF /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		922FE588254A7FC4003288BF /* Undefined.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Undefined.swift; sourceTree = "<group>"; };
+		922FE642254AC3FF003288BF /* GoogleSDKHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleSDKHandler.swift; sourceTree = "<group>"; };
+		922FE643254AC3FF003288BF /* FirebaseHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseHandler.swift; sourceTree = "<group>"; };
+		922FE644254AC3FF003288BF /* FacebookSDKHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookSDKHandler.swift; sourceTree = "<group>"; };
+		E9DEE3661FC0325EA42AF932 /* Pods_LUMain_LUHandler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LUMain_LUHandler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDD5823E3151036939F899A3 /* Pods-LUHandler.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LUHandler.debug.xcconfig"; path = "Target Support Files/Pods-LUHandler/Pods-LUHandler.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF83FE26AC891E6A1E056ED2 /* Pods_LUMain_LUHandler.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,6 +62,7 @@
 				922FD0D525480F95003288BF /* LUHandler */,
 				922FD0D425480F95003288BF /* Products */,
 				CE442214BB6DD64AFC02B684 /* Frameworks */,
+				AD97462070EBFF4C12EF3D81 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,6 +77,8 @@
 		922FD0D525480F95003288BF /* LUHandler */ = {
 			isa = PBXGroup;
 			children = (
+				922FE641254AC3FF003288BF /* SDKHandler */,
+				922FE586254A7FC4003288BF /* Debug */,
 				922FD52F25490D26003288BF /* Extension */,
 				922FD53625490D26003288BF /* FontManager */,
 				922FD0D625480F95003288BF /* LUHandler.h */,
@@ -70,8 +90,8 @@
 		922FD52F25490D26003288BF /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				922FD53025490D26003288BF /* MainApp+String.swift */,
 				922FD53125490D26003288BF /* Navigation */,
+				922FD53025490D26003288BF /* MainApp+String.swift */,
 				922FD53525490D26003288BF /* MainApp+UIColor.swift */,
 			);
 			path = Extension;
@@ -95,9 +115,41 @@
 			path = FontManager;
 			sourceTree = "<group>";
 		};
+		922FE586254A7FC4003288BF /* Debug */ = {
+			isa = PBXGroup;
+			children = (
+				922FE587254A7FC4003288BF /* Log.swift */,
+				922FE588254A7FC4003288BF /* Undefined.swift */,
+			);
+			path = Debug;
+			sourceTree = "<group>";
+		};
+		922FE641254AC3FF003288BF /* SDKHandler */ = {
+			isa = PBXGroup;
+			children = (
+				922FE642254AC3FF003288BF /* GoogleSDKHandler.swift */,
+				922FE643254AC3FF003288BF /* FirebaseHandler.swift */,
+				922FE644254AC3FF003288BF /* FacebookSDKHandler.swift */,
+			);
+			path = SDKHandler;
+			sourceTree = "<group>";
+		};
+		AD97462070EBFF4C12EF3D81 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EDD5823E3151036939F899A3 /* Pods-LUHandler.debug.xcconfig */,
+				077CD3DE2E1F0C0770D7AD08 /* Pods-LUHandler.release.xcconfig */,
+				3BD65363D4ECB8CBB3F76A41 /* Pods-LUMain-LUHandler.debug.xcconfig */,
+				2C6C70AC6884B8F26EFC1226 /* Pods-LUMain-LUHandler.release.xcconfig */,
+			);
+			name = Pods;
+			path = ../../Pods;
+			sourceTree = "<group>";
+		};
 		CE442214BB6DD64AFC02B684 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E9DEE3661FC0325EA42AF932 /* Pods_LUMain_LUHandler.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -120,10 +172,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 922FD0DB25480F95003288BF /* Build configuration list for PBXNativeTarget "LUHandler" */;
 			buildPhases = (
+				13CC3540C037AACF663F4D65 /* [CP] Check Pods Manifest.lock */,
 				922FD0CE25480F95003288BF /* Headers */,
 				922FD0CF25480F95003288BF /* Sources */,
 				922FD0D025480F95003288BF /* Frameworks */,
 				922FD0D125480F95003288BF /* Resources */,
+				A221EB8AA6D884ECE06C1AD3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -175,14 +229,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		13CC3540C037AACF663F4D65 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LUMain-LUHandler-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A221EB8AA6D884ECE06C1AD3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LUMain-LUHandler/Pods-LUMain-LUHandler-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LUMain-LUHandler/Pods-LUMain-LUHandler-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LUMain-LUHandler/Pods-LUMain-LUHandler-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		922FD0CF25480F95003288BF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				922FD54025490D26003288BF /* MainApp+UIColor.swift in Sources */,
+				922FE589254A7FC4003288BF /* Log.swift in Sources */,
+				922FE647254AC3FF003288BF /* FacebookSDKHandler.swift in Sources */,
 				922FD53F25490D26003288BF /* MainApp+TabBar.swift in Sources */,
 				922FD53D25490D26003288BF /* MainApp+NavigationController.swift in Sources */,
+				922FE58A254A7FC4003288BF /* Undefined.swift in Sources */,
+				922FE646254AC3FF003288BF /* FirebaseHandler.swift in Sources */,
+				922FE645254AC3FF003288BF /* GoogleSDKHandler.swift in Sources */,
 				922FD53E25490D26003288BF /* MainApp+NavigationBar.swift in Sources */,
 				922FD54125490D26003288BF /* FontManager.swift in Sources */,
 				922FD53C25490D26003288BF /* MainApp+String.swift in Sources */,
@@ -316,6 +417,7 @@
 		};
 		922FD0DC25480F95003288BF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BD65363D4ECB8CBB3F76A41 /* Pods-LUMain-LUHandler.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -325,11 +427,6 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = LUHandler/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = inx.LUHandler;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -340,6 +437,7 @@
 		};
 		922FD0DD25480F95003288BF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C6C70AC6884B8F26EFC1226 /* Pods-LUMain-LUHandler.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -349,11 +447,6 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = LUHandler/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = inx.LUHandler;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;

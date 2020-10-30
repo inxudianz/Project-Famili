@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -24,6 +24,19 @@
 		922FE2C62549A300003288BF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FE2B72549A300003288BF /* LoginViewController.swift */; };
 		922FE2C72549A300003288BF /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FE2B92549A300003288BF /* AuthCoordinator.swift */; };
 		922FE2C82549A300003288BF /* AuthCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FE2BA2549A300003288BF /* AuthCoordinatorProtocol.swift */; };
+		922FE580254A7F35003288BF /* LUCoordinator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 922FE57F254A7F35003288BF /* LUCoordinator.framework */; };
+		922FE581254A7F35003288BF /* LUCoordinator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 922FE57F254A7F35003288BF /* LUCoordinator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		922FE58D254A7FCF003288BF /* LUHandler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 922FE58C254A7FCF003288BF /* LUHandler.framework */; };
+		922FE58E254A7FCF003288BF /* LUHandler.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 922FE58C254A7FCF003288BF /* LUHandler.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		92349A7E254B41EE00BE3BA8 /* LUAuthNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92349A7D254B41EE00BE3BA8 /* LUAuthNetwork.framework */; };
+		92349A7F254B41EE00BE3BA8 /* LUAuthNetwork.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 92349A7D254B41EE00BE3BA8 /* LUAuthNetwork.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		92349CFF254C1E7E00BE3BA8 /* LUHome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92349CFE254C1E7E00BE3BA8 /* LUHome.framework */; };
+		92349D00254C1E7E00BE3BA8 /* LUHome.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 92349CFE254C1E7E00BE3BA8 /* LUHome.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		92349D03254C1EF900BE3BA8 /* LUOrder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92349D02254C1EF900BE3BA8 /* LUOrder.framework */; };
+		92349D04254C1EF900BE3BA8 /* LUOrder.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 92349D02254C1EF900BE3BA8 /* LUOrder.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		92349D07254C1F0E00BE3BA8 /* LUProfile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92349D06254C1F0E00BE3BA8 /* LUProfile.framework */; };
+		92349D08254C1F0E00BE3BA8 /* LUProfile.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 92349D06254C1F0E00BE3BA8 /* LUProfile.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DEA8BC494077D584B0390CFE /* Pods_LUAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 738A6297D8C6CA13897C9D0F /* Pods_LUAuth.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +49,28 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		922FE582254A7F35003288BF /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				92349D04254C1EF900BE3BA8 /* LUOrder.framework in Embed Frameworks */,
+				92349A7F254B41EE00BE3BA8 /* LUAuthNetwork.framework in Embed Frameworks */,
+				922FE58E254A7FCF003288BF /* LUHandler.framework in Embed Frameworks */,
+				92349D00254C1E7E00BE3BA8 /* LUHome.framework in Embed Frameworks */,
+				922FE581254A7F35003288BF /* LUCoordinator.framework in Embed Frameworks */,
+				92349D08254C1F0E00BE3BA8 /* LUProfile.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		702E40735456B02BEDFDEF37 /* Pods-LUMain-LUAuth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LUMain-LUAuth.release.xcconfig"; path = "Target Support Files/Pods-LUMain-LUAuth/Pods-LUMain-LUAuth.release.xcconfig"; sourceTree = "<group>"; };
+		738A6297D8C6CA13897C9D0F /* Pods_LUAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LUAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		922FE2772549A214003288BF /* LUAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LUAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		922FE27A2549A214003288BF /* LUAuth.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LUAuth.h; sourceTree = "<group>"; };
 		922FE27B2549A214003288BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -57,6 +91,15 @@
 		922FE2B72549A300003288BF /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		922FE2B92549A300003288BF /* AuthCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthCoordinator.swift; sourceTree = "<group>"; };
 		922FE2BA2549A300003288BF /* AuthCoordinatorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		922FE57F254A7F35003288BF /* LUCoordinator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LUCoordinator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		922FE58C254A7FCF003288BF /* LUHandler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LUHandler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		92349A7D254B41EE00BE3BA8 /* LUAuthNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LUAuthNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		92349CFE254C1E7E00BE3BA8 /* LUHome.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LUHome.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		92349D02254C1EF900BE3BA8 /* LUOrder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LUOrder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		92349D06254C1F0E00BE3BA8 /* LUProfile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LUProfile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4179174BDD0EA88B9E97BAA /* Pods-LUAuth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LUAuth.debug.xcconfig"; path = "Target Support Files/Pods-LUAuth/Pods-LUAuth.debug.xcconfig"; sourceTree = "<group>"; };
+		D6255656C1AD1612E8D28251 /* Pods-LUAuth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LUAuth.release.xcconfig"; path = "Target Support Files/Pods-LUAuth/Pods-LUAuth.release.xcconfig"; sourceTree = "<group>"; };
+		FF79ACAB691390FDE4631154 /* Pods-LUMain-LUAuth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LUMain-LUAuth.debug.xcconfig"; path = "Target Support Files/Pods-LUMain-LUAuth/Pods-LUMain-LUAuth.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +107,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92349A7E254B41EE00BE3BA8 /* LUAuthNetwork.framework in Frameworks */,
+				922FE58D254A7FCF003288BF /* LUHandler.framework in Frameworks */,
+				92349CFF254C1E7E00BE3BA8 /* LUHome.framework in Frameworks */,
+				922FE580254A7F35003288BF /* LUCoordinator.framework in Frameworks */,
+				92349D03254C1EF900BE3BA8 /* LUOrder.framework in Frameworks */,
+				92349D07254C1F0E00BE3BA8 /* LUProfile.framework in Frameworks */,
+				DEA8BC494077D584B0390CFE /* Pods_LUAuth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +134,8 @@
 				922FE2792549A214003288BF /* LUAuth */,
 				922FE2842549A214003288BF /* LUAuthTests */,
 				922FE2782549A214003288BF /* Products */,
+				922FE57E254A7F35003288BF /* Frameworks */,
+				9449C85E82ACA1F2BE645847 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -160,6 +212,32 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
+		922FE57E254A7F35003288BF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				92349D06254C1F0E00BE3BA8 /* LUProfile.framework */,
+				92349D02254C1EF900BE3BA8 /* LUOrder.framework */,
+				92349CFE254C1E7E00BE3BA8 /* LUHome.framework */,
+				92349A7D254B41EE00BE3BA8 /* LUAuthNetwork.framework */,
+				922FE58C254A7FCF003288BF /* LUHandler.framework */,
+				922FE57F254A7F35003288BF /* LUCoordinator.framework */,
+				738A6297D8C6CA13897C9D0F /* Pods_LUAuth.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9449C85E82ACA1F2BE645847 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FF79ACAB691390FDE4631154 /* Pods-LUMain-LUAuth.debug.xcconfig */,
+				702E40735456B02BEDFDEF37 /* Pods-LUMain-LUAuth.release.xcconfig */,
+				B4179174BDD0EA88B9E97BAA /* Pods-LUAuth.debug.xcconfig */,
+				D6255656C1AD1612E8D28251 /* Pods-LUAuth.release.xcconfig */,
+			);
+			name = Pods;
+			path = ../../../../Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -178,10 +256,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 922FE28B2549A214003288BF /* Build configuration list for PBXNativeTarget "LUAuth" */;
 			buildPhases = (
+				5E45C4061B3E9CF094F151A7 /* [CP] Check Pods Manifest.lock */,
 				922FE2722549A214003288BF /* Headers */,
 				922FE2732549A214003288BF /* Sources */,
 				922FE2742549A214003288BF /* Frameworks */,
 				922FE2752549A214003288BF /* Resources */,
+				922FE582254A7F35003288BF /* Embed Frameworks */,
+				123F62CC9D4AA0351A2F5567 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -265,6 +346,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		123F62CC9D4AA0351A2F5567 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LUAuth/Pods-LUAuth-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LUAuth/Pods-LUAuth-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LUAuth/Pods-LUAuth-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5E45C4061B3E9CF094F151A7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LUAuth-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		922FE2732549A214003288BF /* Sources */ = {
@@ -356,7 +479,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -414,7 +537,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -428,6 +551,7 @@
 		};
 		922FE28C2549A214003288BF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4179174BDD0EA88B9E97BAA /* Pods-LUAuth.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -452,6 +576,7 @@
 		};
 		922FE28D2549A214003288BF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6255656C1AD1612E8D28251 /* Pods-LUAuth.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;

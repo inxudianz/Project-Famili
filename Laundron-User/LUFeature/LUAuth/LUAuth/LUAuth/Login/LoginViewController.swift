@@ -8,8 +8,9 @@
 
 import UIKit
 import Component
+import LUHandler
 
-class LoginViewController: MasterViewController, LoginViewProtocol {
+class LoginViewController: UIViewController, LoginViewProtocol {
     // MARK: - Outlet
     @IBOutlet weak var loginLabel: UILabel! {
         didSet {
@@ -70,6 +71,14 @@ class LoginViewController: MasterViewController, LoginViewProtocol {
     }
     
     // MARK: - Init
+    init() {
+        super.init(nibName: String(describing: LoginViewController.self), bundle: Bundle(for: LoginViewController.self))
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()

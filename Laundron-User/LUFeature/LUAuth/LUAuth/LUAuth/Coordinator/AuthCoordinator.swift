@@ -7,23 +7,31 @@
 //
 
 import UIKit
+import LUCoordinator
+import LUHome
+import LUOrder
+import LUProfile
 
-class AuthCoordinator: AuthCoordinatorProtocol {
-    weak var parentCoordinator: Coordinator?
-    var childCoordinators: [Coordinator] = [Coordinator]()
-    var navigationController: UINavigationController?
+public class AuthCoordinator: AuthCoordinatorProtocol {
+    weak public var parentCoordinator: Coordinator?
+    public var childCoordinators: [Coordinator] = [Coordinator]()
+    public var navigationController: UINavigationController?
     
-    required init(navigationController: UINavigationController) {
+    required public init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
     
-    func start() {
+    public func start() {
         navigateToLogin()
     }
     
     func navigateToHome() {
         let tabBar = UITabBarController()
-        self.buildTabBar(with: [.home, .order, .profile], tabBar: tabBar)
+        self.buildTabBar(with: [
+                            HomeCoordinator.init(navigationController: UINavigationController()),
+                            OrderCoordinator.init(navigationController: UINavigationController()),
+                            ProfileCoordinator.init(navigationController: UINavigationController())
+                            ], tabBar: tabBar)
         tabBar.tabBar.configure()
         navigationController?.pushViewController(tabBar, animated: true)
     }
@@ -50,5 +58,20 @@ class AuthCoordinator: AuthCoordinatorProtocol {
         vm.view = vc
         vc.viewModel = vm
         navigationController?.pushViewController(vc, animated: true)
+    }
+}
+
+extension AuthCoordinator {
+    func buildTabBar(with screens:[Coordinator], tabBar: UITabBarController) {
+        for screen in screens {
+            
+            screen.parentCoordinator = self
+            self.childCoordinators.append(screen)
+            screen.start()
+            
+            guard let coordinatorController = screen.navigationController else {return}
+            
+            tabBar.addChild(coordinatorController)
+        }
     }
 }

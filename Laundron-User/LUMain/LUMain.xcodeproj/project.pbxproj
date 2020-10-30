@@ -3,16 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		51C01C96651521CF4EBFDC3E /* Pods_LUMain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF3CB931E969F28711B7B105 /* Pods_LUMain.framework */; };
 		922FD16A25481024003288BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FD16925481024003288BF /* AppDelegate.swift */; };
 		922FD16C25481024003288BF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FD16B25481024003288BF /* SceneDelegate.swift */; };
 		922FD17625481026003288BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 922FD17425481026003288BF /* LaunchScreen.storyboard */; };
 		922FD18125481026003288BF /* LUMainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FD18025481026003288BF /* LUMainTests.swift */; };
-		922FD50425490C2D003288BF /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FD50225490C2D003288BF /* Log.swift */; };
-		922FD50525490C2D003288BF /* Undefined.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FD50325490C2D003288BF /* Undefined.swift */; };
 		922FD50F25490C3F003288BF /* RemoteConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FD50C25490C3E003288BF /* RemoteConfig.swift */; };
 		922FD51025490C3F003288BF /* AppContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FD50D25490C3F003288BF /* AppContext.swift */; };
 		922FD51525490C74003288BF /* Main.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 922FD51425490C73003288BF /* Main.xcassets */; };
@@ -47,8 +46,6 @@
 		922FD17C25481026003288BF /* LUMainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LUMainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		922FD18025481026003288BF /* LUMainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LUMainTests.swift; sourceTree = "<group>"; };
 		922FD18225481026003288BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		922FD50225490C2D003288BF /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
-		922FD50325490C2D003288BF /* Undefined.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Undefined.swift; sourceTree = "<group>"; };
 		922FD50A25490C3E003288BF /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		922FD50C25490C3E003288BF /* RemoteConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteConfig.swift; sourceTree = "<group>"; };
 		922FD50D25490C3F003288BF /* AppContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppContext.swift; sourceTree = "<group>"; };
@@ -64,6 +61,9 @@
 		922FD52225490CA8003288BF /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
 		922FE4CA2549B1B6003288BF /* LUAppCoordinator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LUAppCoordinator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		922FE5332549B468003288BF /* LUAppCoordinator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LUAppCoordinator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9EB790B345F4BEE1BA657491 /* Pods-LUMain.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LUMain.release.xcconfig"; path = "Target Support Files/Pods-LUMain/Pods-LUMain.release.xcconfig"; sourceTree = "<group>"; };
+		DB3313E3C48B3CD869D79709 /* Pods-LUMain.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LUMain.debug.xcconfig"; path = "Target Support Files/Pods-LUMain/Pods-LUMain.debug.xcconfig"; sourceTree = "<group>"; };
+		EF3CB931E969F28711B7B105 /* Pods_LUMain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LUMain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +72,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				922FE5342549B468003288BF /* LUAppCoordinator.framework in Frameworks */,
+				51C01C96651521CF4EBFDC3E /* Pods_LUMain.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +93,7 @@
 				922FD17F25481026003288BF /* LUMainTests */,
 				922FD16725481024003288BF /* Products */,
 				F817919F16A6339778F04797 /* Frameworks */,
+				B51984D9638CDCFF4D63BB2B /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,7 +112,6 @@
 				922FD51925490CA8003288BF /* Fonts */,
 				922FD50925490C3E003288BF /* Config */,
 				922FD50B25490C3E003288BF /* Context */,
-				922FD50125490C2D003288BF /* Debug */,
 				922FD16925481024003288BF /* AppDelegate.swift */,
 				922FD51425490C73003288BF /* Main.xcassets */,
 				922FD16B25481024003288BF /* SceneDelegate.swift */,
@@ -127,15 +128,6 @@
 				922FD18225481026003288BF /* Info.plist */,
 			);
 			path = LUMainTests;
-			sourceTree = "<group>";
-		};
-		922FD50125490C2D003288BF /* Debug */ = {
-			isa = PBXGroup;
-			children = (
-				922FD50225490C2D003288BF /* Log.swift */,
-				922FD50325490C2D003288BF /* Undefined.swift */,
-			);
-			path = Debug;
 			sourceTree = "<group>";
 		};
 		922FD50925490C3E003288BF /* Config */ = {
@@ -171,11 +163,22 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		B51984D9638CDCFF4D63BB2B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DB3313E3C48B3CD869D79709 /* Pods-LUMain.debug.xcconfig */,
+				9EB790B345F4BEE1BA657491 /* Pods-LUMain.release.xcconfig */,
+			);
+			name = Pods;
+			path = ../../Pods;
+			sourceTree = "<group>";
+		};
 		F817919F16A6339778F04797 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				922FE5332549B468003288BF /* LUAppCoordinator.framework */,
 				922FE4CA2549B1B6003288BF /* LUAppCoordinator.framework */,
+				EF3CB931E969F28711B7B105 /* Pods_LUMain.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -187,9 +190,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 922FD19025481026003288BF /* Build configuration list for PBXNativeTarget "LUMain" */;
 			buildPhases = (
+				AC4EAE7938053258E4150F5A /* [CP] Check Pods Manifest.lock */,
 				922FD16225481024003288BF /* Sources */,
 				922FD16325481024003288BF /* Frameworks */,
 				922FD16425481024003288BF /* Resources */,
+				43BF2C860D26578E2F8B18E8 /* [CP] Embed Pods Frameworks */,
+				DB151D036109F0C3C02E017A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -283,6 +289,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		43BF2C860D26578E2F8B18E8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LUMain/Pods-LUMain-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LUMain/Pods-LUMain-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LUMain/Pods-LUMain-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AC4EAE7938053258E4150F5A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LUMain-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB151D036109F0C3C02E017A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LUMain/Pods-LUMain-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LUMain/Pods-LUMain-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LUMain/Pods-LUMain-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		922FD16225481024003288BF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -291,8 +356,6 @@
 				922FD50F25490C3F003288BF /* RemoteConfig.swift in Sources */,
 				922FD16A25481024003288BF /* AppDelegate.swift in Sources */,
 				922FD51025490C3F003288BF /* AppContext.swift in Sources */,
-				922FD50425490C2D003288BF /* Log.swift in Sources */,
-				922FD50525490C2D003288BF /* Undefined.swift in Sources */,
 				922FD16C25481024003288BF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -445,12 +508,12 @@
 		};
 		922FD19125481026003288BF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB3313E3C48B3CD869D79709 /* Pods-LUMain.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WPQ9HAVPNV;
-				HEADER_SEARCH_PATHS = "${PODS_ROOT}/Firebase/CoreOnly/Sources";
 				INFOPLIST_FILE = LUMain/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -465,12 +528,12 @@
 		};
 		922FD19225481026003288BF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9EB790B345F4BEE1BA657491 /* Pods-LUMain.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WPQ9HAVPNV;
-				HEADER_SEARCH_PATHS = "${PODS_ROOT}/Firebase/CoreOnly/Sources";
 				INFOPLIST_FILE = LUMain/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

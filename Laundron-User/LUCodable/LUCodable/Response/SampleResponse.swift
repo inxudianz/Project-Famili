@@ -9,12 +9,12 @@
 import Foundation
 
 public struct SampleResponse: Codable {
-    let name: String?
-    let id: Int?
+    public let name: String?
+    public let id: Int?
 }
 
 public struct TestResponse: Codable {
-    let name: String?
-    let age: Int?
-    let desc: String?
+    public let name: String?
+    public let age: Int?
+    public let desc: String?
 }

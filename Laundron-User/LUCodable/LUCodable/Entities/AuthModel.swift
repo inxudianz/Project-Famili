@@ -12,6 +12,11 @@ public struct AuthModel {
     public struct Login: Encodable {
         let email: String?
         let password: String?
+        
+        public init(email: String, password: String) {
+            self.email = email
+            self.password = password
+        }
     }
     
     public struct Register: Encodable {
@@ -19,5 +24,12 @@ public struct AuthModel {
         let phone: String?
         let email: String?
         let password: String?
+        
+        public init(name: String, phone: String, email: String, password: String) {
+            self.name = name
+            self.phone = phone
+            self.email = email
+            self.password = password
+        }
     }
 }

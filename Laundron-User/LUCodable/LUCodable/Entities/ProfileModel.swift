@@ -13,5 +13,11 @@ public struct ProfileModel {
         let name: String?
         let phoneNumber: String?
         let email: String?
+        
+        public init(name: String?, phoneNumber: String?, email: String?) {
+            self.name = name
+            self.phoneNumber = phoneNumber
+            self.email = email
+        }
     }
 }

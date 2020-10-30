@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import LUCoordinator
 
 protocol AuthCoordinatorProtocol: Coordinator {    
     func navigateToHome()

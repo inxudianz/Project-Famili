@@ -10,30 +10,30 @@ import Foundation
 
 public struct OrderResponse {
     public struct Ongoing: Codable {
-        var data: [OngoingData]?
+        public var data: [OngoingData]?
         
-        struct OngoingData: Codable {
-            var status: String?
-            var detail: [OngoingDetail]
+        public struct OngoingData: Codable {
+            public var status: String?
+            public var detail: [OngoingDetail]
         }
-        struct OngoingDetail: Codable {
-            var laundryName: String?
-            var timeStamp: String?
-            var address: String?
+        public struct OngoingDetail: Codable {
+            public var laundryName: String?
+            public var timeStamp: String?
+            public var address: String?
         }
     }
     
     public struct History: Codable {
-        var data: HistoryData?
+        public var data: HistoryData?
         
-        struct HistoryData: Codable {
-            var status: String?
-            var detail: [HistoryDetail]
+        public struct HistoryData: Codable {
+            public var status: String?
+            public var detail: [HistoryDetail]
         }
-        struct HistoryDetail: Codable {
-            var laundryName: String?
-            var timeStamp: String?
-            var address: String?
+        public struct HistoryDetail: Codable {
+            public var laundryName: String?
+            public var timeStamp: String?
+            public var address: String?
         }
     }
 }

@@ -9,7 +9,7 @@
 import UIKit
 
 extension UITabBar {
-    func configure() {
+    public func configure() {
         self.tintColor = UIColor(hex: "#00C3FFFF")
     }
 }

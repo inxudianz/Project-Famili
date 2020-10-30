@@ -10,7 +10,7 @@ import Foundation
 import LUCodable
 import LUNetwork
 
-protocol AuthNetworkProtocol {
+public protocol AuthNetworkProtocol {
     var authLoginDelegate: AuthLoginDelegate? { get set }
     var authRegisterDelegate: AuthRegisterDelegate? { get set }
     
@@ -18,17 +18,17 @@ protocol AuthNetworkProtocol {
     func register(data: AuthModel.Register)
 }
 
-class AuthNetwork: AuthNetworkProtocol{
-    weak var authLoginDelegate: AuthLoginDelegate?
-    weak var authRegisterDelegate: AuthRegisterDelegate?
+public class AuthNetwork: AuthNetworkProtocol{
+    weak public var authLoginDelegate: AuthLoginDelegate?
+    weak public var authRegisterDelegate: AuthRegisterDelegate?
         
     private var networkService: NetworkService
     
-    init() {
+    public init() {
         self.networkService = NetworkService()
     }
     
-    func login(data: AuthModel.Login) {
+    public func login(data: AuthModel.Login) {
 //        FirebaseHandler.AuthenticationHandler.signIn(email: data.email ?? "", password: data.password ?? "") { [weak self] (result, error) in
 //            if let error = error {
 //                self?.authLoginDelegate?.didFailedLogin(error: error)
@@ -49,7 +49,7 @@ class AuthNetwork: AuthNetworkProtocol{
         }
     }
     
-    func register(data: AuthModel.Register) {
+    public func register(data: AuthModel.Register) {
 //        FirebaseHandler.AuthenticationHandler.signUp(email: data.email ?? "", password: data.password ?? "") { (result, error) in
 //            if let error = error {
 //                self.authRegisterDelegate?.didFailedRegister(error: error)

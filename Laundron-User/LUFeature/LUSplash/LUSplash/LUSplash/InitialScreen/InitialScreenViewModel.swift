@@ -14,6 +14,6 @@ public class InitialScreenViewModel: InitialScreenViewModelProtocol {
     
     public init() {}
     public func gotoLogin() {
-        //coordinator?.navigateToAuth()
+        coordinator?.navigateToAuth()
     }
 }

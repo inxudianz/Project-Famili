@@ -1,0 +1,446 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		922FD27125490566003288BF /* LUProfileNetwork.h in Headers */ = {isa = PBXBuildFile; fileRef = 922FD26F25490566003288BF /* LUProfileNetwork.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		922FD4A325490B5F003288BF /* ProfileNetwork+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FD4A125490B5F003288BF /* ProfileNetwork+Delegate.swift */; };
+		922FD4A425490B5F003288BF /* ProfileNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FD4A225490B5F003288BF /* ProfileNetwork.swift */; };
+		9234A156254C44C900BE3BA8 /* LUCodable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9234A155254C44C900BE3BA8 /* LUCodable.framework */; };
+		9234A157254C44C900BE3BA8 /* LUCodable.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9234A155254C44C900BE3BA8 /* LUCodable.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9234A15A254C44D000BE3BA8 /* LUNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9234A159254C44D000BE3BA8 /* LUNetwork.framework */; };
+		9234A15B254C44D000BE3BA8 /* LUNetwork.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9234A159254C44D000BE3BA8 /* LUNetwork.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EB4E9D4D07842E2562C35C45 /* Pods_LUProfileNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3F014956327F4D46DCC03BE /* Pods_LUProfileNetwork.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9234A158254C44CA00BE3BA8 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9234A15B254C44D000BE3BA8 /* LUNetwork.framework in Embed Frameworks */,
+				9234A157254C44C900BE3BA8 /* LUCodable.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		59372E89C586695560857F60 /* Pods-LUProfileNetwork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LUProfileNetwork.release.xcconfig"; path = "Target Support Files/Pods-LUProfileNetwork/Pods-LUProfileNetwork.release.xcconfig"; sourceTree = "<group>"; };
+		6526DE7247F8481661DC2239 /* Pods-LUMain-LUProfileNetwork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LUMain-LUProfileNetwork.debug.xcconfig"; path = "Target Support Files/Pods-LUMain-LUProfileNetwork/Pods-LUMain-LUProfileNetwork.debug.xcconfig"; sourceTree = "<group>"; };
+		922FD26C25490566003288BF /* LUProfileNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LUProfileNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		922FD26F25490566003288BF /* LUProfileNetwork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LUProfileNetwork.h; sourceTree = "<group>"; };
+		922FD27025490566003288BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		922FD4A125490B5F003288BF /* ProfileNetwork+Delegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ProfileNetwork+Delegate.swift"; sourceTree = "<group>"; };
+		922FD4A225490B5F003288BF /* ProfileNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileNetwork.swift; sourceTree = "<group>"; };
+		9234A155254C44C900BE3BA8 /* LUCodable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LUCodable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9234A159254C44D000BE3BA8 /* LUNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LUNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3F014956327F4D46DCC03BE /* Pods_LUProfileNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LUProfileNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E37AB9A40C665ACC8628CC02 /* Pods-LUProfileNetwork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LUProfileNetwork.debug.xcconfig"; path = "Target Support Files/Pods-LUProfileNetwork/Pods-LUProfileNetwork.debug.xcconfig"; sourceTree = "<group>"; };
+		E7CB354378F5FA8C38DDA097 /* Pods-LUMain-LUProfileNetwork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LUMain-LUProfileNetwork.release.xcconfig"; path = "Target Support Files/Pods-LUMain-LUProfileNetwork/Pods-LUMain-LUProfileNetwork.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		922FD26925490566003288BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9234A156254C44C900BE3BA8 /* LUCodable.framework in Frameworks */,
+				9234A15A254C44D000BE3BA8 /* LUNetwork.framework in Frameworks */,
+				EB4E9D4D07842E2562C35C45 /* Pods_LUProfileNetwork.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		27CD33F76A08037AC4855961 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6526DE7247F8481661DC2239 /* Pods-LUMain-LUProfileNetwork.debug.xcconfig */,
+				E7CB354378F5FA8C38DDA097 /* Pods-LUMain-LUProfileNetwork.release.xcconfig */,
+				E37AB9A40C665ACC8628CC02 /* Pods-LUProfileNetwork.debug.xcconfig */,
+				59372E89C586695560857F60 /* Pods-LUProfileNetwork.release.xcconfig */,
+			);
+			name = Pods;
+			path = ../../../../Pods;
+			sourceTree = "<group>";
+		};
+		922FD26225490566003288BF = {
+			isa = PBXGroup;
+			children = (
+				922FD26E25490566003288BF /* LUProfileNetwork */,
+				922FD26D25490566003288BF /* Products */,
+				27CD33F76A08037AC4855961 /* Pods */,
+				B87E33FFE4F00669146D041B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		922FD26D25490566003288BF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				922FD26C25490566003288BF /* LUProfileNetwork.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		922FD26E25490566003288BF /* LUProfileNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				922FD4A225490B5F003288BF /* ProfileNetwork.swift */,
+				922FD4A125490B5F003288BF /* ProfileNetwork+Delegate.swift */,
+				922FD26F25490566003288BF /* LUProfileNetwork.h */,
+				922FD27025490566003288BF /* Info.plist */,
+			);
+			path = LUProfileNetwork;
+			sourceTree = "<group>";
+		};
+		B87E33FFE4F00669146D041B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9234A159254C44D000BE3BA8 /* LUNetwork.framework */,
+				9234A155254C44C900BE3BA8 /* LUCodable.framework */,
+				A3F014956327F4D46DCC03BE /* Pods_LUProfileNetwork.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		922FD26725490566003288BF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				922FD27125490566003288BF /* LUProfileNetwork.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		922FD26B25490566003288BF /* LUProfileNetwork */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 922FD27425490566003288BF /* Build configuration list for PBXNativeTarget "LUProfileNetwork" */;
+			buildPhases = (
+				E3B7239EFCD5EAB556A2EE07 /* [CP] Check Pods Manifest.lock */,
+				922FD26725490566003288BF /* Headers */,
+				922FD26825490566003288BF /* Sources */,
+				922FD26925490566003288BF /* Frameworks */,
+				922FD26A25490566003288BF /* Resources */,
+				661F6DD4173F9F713B888438 /* [CP] Copy Pods Resources */,
+				9234A158254C44CA00BE3BA8 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LUProfileNetwork;
+			productName = LUProfileNetwork;
+			productReference = 922FD26C25490566003288BF /* LUProfileNetwork.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		922FD26325490566003288BF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					922FD26B25490566003288BF = {
+						CreatedOnToolsVersion = 12.0;
+						LastSwiftMigration = 1200;
+					};
+				};
+			};
+			buildConfigurationList = 922FD26625490566003288BF /* Build configuration list for PBXProject "LUProfileNetwork" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 922FD26225490566003288BF;
+			productRefGroup = 922FD26D25490566003288BF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				922FD26B25490566003288BF /* LUProfileNetwork */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		922FD26A25490566003288BF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		661F6DD4173F9F713B888438 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LUProfileNetwork/Pods-LUProfileNetwork-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LUProfileNetwork/Pods-LUProfileNetwork-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LUProfileNetwork/Pods-LUProfileNetwork-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3B7239EFCD5EAB556A2EE07 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LUProfileNetwork-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		922FD26825490566003288BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				922FD4A425490B5F003288BF /* ProfileNetwork.swift in Sources */,
+				922FD4A325490B5F003288BF /* ProfileNetwork+Delegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		922FD27225490566003288BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		922FD27325490566003288BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		922FD27525490566003288BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E37AB9A40C665ACC8628CC02 /* Pods-LUProfileNetwork.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = WPQ9HAVPNV;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = LUProfileNetwork/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = inx.LUProfileNetwork;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		922FD27625490566003288BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59372E89C586695560857F60 /* Pods-LUProfileNetwork.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = WPQ9HAVPNV;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = LUProfileNetwork/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = inx.LUProfileNetwork;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		922FD26625490566003288BF /* Build configuration list for PBXProject "LUProfileNetwork" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				922FD27225490566003288BF /* Debug */,
+				922FD27325490566003288BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		922FD27425490566003288BF /* Build configuration list for PBXNativeTarget "LUProfileNetwork" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				922FD27525490566003288BF /* Debug */,
+				922FD27625490566003288BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 922FD26325490566003288BF /* Project object */;
+}

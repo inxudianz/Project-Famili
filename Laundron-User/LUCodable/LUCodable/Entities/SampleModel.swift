@@ -13,5 +13,11 @@ public struct SampleModel {
         let name: String?
         let age: Int?
         let desc: String?
+        
+        public init(name: String?, age: Int?, desc: String?) {
+            self.name = name
+            self.age = age
+            self.desc = desc
+        }
     }
 }

@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import LUHandler
+import LUAuthNetwork
 
 extension RegisterViewModel: AuthRegisterDelegate {
     func didSuccessRegister() {

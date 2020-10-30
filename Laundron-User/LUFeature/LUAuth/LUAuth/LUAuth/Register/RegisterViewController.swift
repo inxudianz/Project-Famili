@@ -8,8 +8,10 @@
 
 import UIKit
 import Component
+import LUHandler
+import LUCodable
 
-class RegisterViewController: MasterViewController, RegisterViewProtocol {
+class RegisterViewController: UIViewController, RegisterViewProtocol {
     // MARK: - Outlet
     @IBOutlet weak var tfName: FamiliTextField! {
         didSet {
@@ -71,6 +73,13 @@ class RegisterViewController: MasterViewController, RegisterViewProtocol {
     lazy var loadingView = FamiliLoadingView(frame: self.view.frame)
     
     // MARK: - Initialization
+    init() {
+        super.init(nibName: String(describing: RegisterViewController.self), bundle: Bundle(for: RegisterViewController.self))
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         setInitialView()

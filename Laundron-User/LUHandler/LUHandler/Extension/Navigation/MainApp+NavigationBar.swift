@@ -9,7 +9,7 @@
 import UIKit
 
 extension UINavigationBar {
-    func configure() {
+    public func configure() {
         self.tintColor = UIColor(hex: "#00C3FFFF")
         self.backgroundColor = .clear
     }

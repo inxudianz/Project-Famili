@@ -8,13 +8,13 @@
 
 import Foundation
 
-protocol AuthLoginDelegate: class {
+public protocol AuthLoginDelegate: class {
     // MARK: - Login
     func didSuccessLogin()
     func didFailedLogin(error: Error)
 }
 
-protocol AuthRegisterDelegate: class {
+public protocol AuthRegisterDelegate: class {
     // MARK: - Register
     func didSuccessRegister()
     func didFailedRegister(error: Error)

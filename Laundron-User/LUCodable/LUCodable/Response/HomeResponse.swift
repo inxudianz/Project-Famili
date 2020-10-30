@@ -10,25 +10,25 @@ import Foundation
 
 public struct HomeResponse {
     public struct Banners: Codable {
-        let banners: [String]
+        public let banners: [String]
     }
     
     public struct GetNotificationMessageResponse: Codable {
-        var messageList: [GetNotificationMessageResponseDetail]
+        public var messageList: [GetNotificationMessageResponseDetail]
     }
     
     public struct GetNotificationMessageResponseDetail: Codable {
-        let timeStamp: String?
-        let laundryName: String?
-        let title: String?
-        let message: String?
+        public let timeStamp: String?
+        public let laundryName: String?
+        public let title: String?
+        public let message: String?
     }
     
     public struct GetNotificationNewsResponse: Codable {
-        var newsList: [GetNotificationNewsResponseDetail]
+        public var newsList: [GetNotificationNewsResponseDetail]
     }
     
     public struct GetNotificationNewsResponseDetail: Codable {
-        let message: String?
+        public let message: String?
     }
 }

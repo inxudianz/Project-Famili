@@ -10,24 +10,24 @@ import Foundation
 
 public struct ProfileResponse {
     public struct GetProfileResponse: Codable {
-        let name: String?
-        let phone: String?
-        let email: String?
+        public let name: String?
+        public let phone: String?
+        public let email: String?
     }
     public struct GetPrivacyPolicyResponse: Codable {
-        let message: String?
+        public let message: String?
     }
   
     public struct GetTermsOfServiceResponse: Codable {
-        let message: String?
+        public let message: String?
     }
     
     public struct GetHelpCenterResponse: Codable {
-        var helpList: [GetHelpCenterResponseDetail]
+        public var helpList: [GetHelpCenterResponseDetail]
     }
     
     public struct GetHelpCenterResponseDetail: Codable {
-        let title: String?
-        let message: String?
+        public let title: String?
+        public let message: String?
     }
 }

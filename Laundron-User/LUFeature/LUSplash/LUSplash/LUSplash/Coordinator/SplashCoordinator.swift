@@ -8,6 +8,7 @@
 
 import UIKit
 import LUCoordinator
+import LUAuth
 
 public class SplashCoordinator: SplashCoordinatorProtocol {
     weak public var parentCoordinator: Coordinator?
@@ -34,11 +35,10 @@ public class SplashCoordinator: SplashCoordinatorProtocol {
     }
     
     public func navigateToAuth() {
-//        let authCoordinator = AuthCoordinator(navigationController: UINavigationController())
-//        authCoordinator.navigationController = navigationController
-//        authCoordinator.parentCoordinator = self
-//        childCoordinators.append(authCoordinator)
-//        authCoordinator.start()
+        let authCoordinator = AuthCoordinator(navigationController: UINavigationController())
+        authCoordinator.navigationController = navigationController
+        authCoordinator.parentCoordinator = self
+        childCoordinators.append(authCoordinator)
+        authCoordinator.start()
     }
 }
-//

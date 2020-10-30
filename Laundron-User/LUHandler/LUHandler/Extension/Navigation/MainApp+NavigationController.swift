@@ -9,7 +9,7 @@
 import UIKit
 
 extension UINavigationController {
-    func applyCustomFont(style: FontManager.FontWeight, size: FontManager.FontSize) {
+    public func applyCustomFont(style: FontManager.FontWeight, size: FontManager.FontSize) {
         navigationBar.titleTextAttributes = [
             NSAttributedString.Key.font: FontManager.getFont(for: style, size: size.rawValue)
         ]

@@ -17,7 +17,6 @@
 		922FD4C725490BD1003288BF /* EmptyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FD4BB25490BD1003288BF /* EmptyModel.swift */; };
 		922FD4C825490BD1003288BF /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FD4BC25490BD1003288BF /* AuthModel.swift */; };
 		922FD4C925490BD1003288BF /* SampleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FD4BD25490BD1003288BF /* SampleModel.swift */; };
-		922FD4CA25490BD1003288BF /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FD4BE25490BD1003288BF /* RegisterModel.swift */; };
 		922FD4CB25490BD1003288BF /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FD4BF25490BD1003288BF /* ProfileModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -34,7 +33,6 @@
 		922FD4BB25490BD1003288BF /* EmptyModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyModel.swift; sourceTree = "<group>"; };
 		922FD4BC25490BD1003288BF /* AuthModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthModel.swift; sourceTree = "<group>"; };
 		922FD4BD25490BD1003288BF /* SampleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleModel.swift; sourceTree = "<group>"; };
-		922FD4BE25490BD1003288BF /* RegisterModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
 		922FD4BF25490BD1003288BF /* ProfileModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,7 +93,6 @@
 				922FD4BB25490BD1003288BF /* EmptyModel.swift */,
 				922FD4BC25490BD1003288BF /* AuthModel.swift */,
 				922FD4BD25490BD1003288BF /* SampleModel.swift */,
-				922FD4BE25490BD1003288BF /* RegisterModel.swift */,
 				922FD4BF25490BD1003288BF /* ProfileModel.swift */,
 			);
 			path = Entities;
@@ -185,7 +182,6 @@
 				922FD4CB25490BD1003288BF /* ProfileModel.swift in Sources */,
 				922FD4C225490BD1003288BF /* HomeResponse.swift in Sources */,
 				922FD4C725490BD1003288BF /* EmptyModel.swift in Sources */,
-				922FD4CA25490BD1003288BF /* RegisterModel.swift in Sources */,
 				922FD4C425490BD1003288BF /* ProfileResponse.swift in Sources */,
 				922FD4C125490BD1003288BF /* RegisterResponse.swift in Sources */,
 				922FD4C625490BD1003288BF /* SampleResponse.swift in Sources */,

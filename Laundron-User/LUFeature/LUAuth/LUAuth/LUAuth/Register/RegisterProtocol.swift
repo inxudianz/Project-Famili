@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import LUAuthNetwork
+import LUCodable
 
 protocol RegisterViewModelProtocol: class {
     var view: RegisterViewProtocol? { get set }

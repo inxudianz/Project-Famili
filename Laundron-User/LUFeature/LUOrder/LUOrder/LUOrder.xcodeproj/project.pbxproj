@@ -1,0 +1,665 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		12A3BAA3D8BAB162552CBF39 /* Pods_LUOrder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AD9EF891473DC7BDCF4BCA2 /* Pods_LUOrder.framework */; };
+		922FD28C254905EF003288BF /* LUOrder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 922FD282254905EF003288BF /* LUOrder.framework */; };
+		922FD291254905EF003288BF /* LUOrderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FD290254905EF003288BF /* LUOrderTests.swift */; };
+		922FD293254905EF003288BF /* LUOrder.h in Headers */ = {isa = PBXBuildFile; fileRef = 922FD285254905EF003288BF /* LUOrder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		922FD3F725490A87003288BF /* Order.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 922FD3E625490A87003288BF /* Order.xcassets */; };
+		922FD3F825490A87003288BF /* OrderLandingConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FD3E725490A87003288BF /* OrderLandingConstant.swift */; };
+		922FD3F925490A87003288BF /* OrderLandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FD3E925490A87003288BF /* OrderLandingViewController.swift */; };
+		922FD3FA25490A87003288BF /* OrderLandingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FD3EA25490A87003288BF /* OrderLandingViewModel.swift */; };
+		922FD3FB25490A87003288BF /* OrderLandingDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FD3EB25490A87003288BF /* OrderLandingDataSource.swift */; };
+		922FD3FC25490A87003288BF /* OrderLanding+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FD3EC25490A87003288BF /* OrderLanding+UITableView.swift */; };
+		922FD3FD25490A87003288BF /* OrderLandingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FD3EE25490A87003288BF /* OrderLandingTableViewCell.swift */; };
+		922FD3FE25490A87003288BF /* OrderEmptyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 922FD3EF25490A87003288BF /* OrderEmptyTableViewCell.xib */; };
+		922FD3FF25490A87003288BF /* OrderLandingHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FD3F025490A87003288BF /* OrderLandingHeaderView.swift */; };
+		922FD40025490A87003288BF /* OrderEmptyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FD3F125490A87003288BF /* OrderEmptyTableViewCell.swift */; };
+		922FD40125490A87003288BF /* OrderLandingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 922FD3F225490A87003288BF /* OrderLandingTableViewCell.xib */; };
+		922FD40225490A87003288BF /* OrderLandingHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 922FD3F325490A87003288BF /* OrderLandingHeaderView.xib */; };
+		922FD40325490A87003288BF /* OrderLandingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 922FD3F425490A87003288BF /* OrderLandingViewController.xib */; };
+		922FD40425490A87003288BF /* OrderLandingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FD3F525490A87003288BF /* OrderLandingProtocol.swift */; };
+		922FD40525490A87003288BF /* OrderLanding+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FD3F625490A87003288BF /* OrderLanding+Network.swift */; };
+		922FD55725490DD5003288BF /* OrderLandingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FD55625490DD5003288BF /* OrderLandingTests.swift */; };
+		92349BFD254B50B000BE3BA8 /* OrderCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92349BFB254B50B000BE3BA8 /* OrderCoordinator.swift */; };
+		92349BFE254B50B000BE3BA8 /* OrderCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92349BFC254B50B000BE3BA8 /* OrderCoordinatorProtocol.swift */; };
+		92349C9B254B526C00BE3BA8 /* LUHandler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92349C9A254B526C00BE3BA8 /* LUHandler.framework */; };
+		92349C9C254B526C00BE3BA8 /* LUHandler.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 92349C9A254B526C00BE3BA8 /* LUHandler.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		92349CAD254B52B900BE3BA8 /* LUOrderNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92349CAC254B52B900BE3BA8 /* LUOrderNetwork.framework */; };
+		92349CAE254B52B900BE3BA8 /* LUOrderNetwork.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 92349CAC254B52B900BE3BA8 /* LUOrderNetwork.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		922FD28D254905EF003288BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 922FD279254905EF003288BF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 922FD281254905EF003288BF;
+			remoteInfo = LUOrder;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		92349C9D254B526C00BE3BA8 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				92349C9C254B526C00BE3BA8 /* LUHandler.framework in Embed Frameworks */,
+				92349CAE254B52B900BE3BA8 /* LUOrderNetwork.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1AD9EF891473DC7BDCF4BCA2 /* Pods_LUOrder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LUOrder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		366C177C2CC0E26B19084B62 /* Pods-LUMain-LUOrder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LUMain-LUOrder.debug.xcconfig"; path = "Target Support Files/Pods-LUMain-LUOrder/Pods-LUMain-LUOrder.debug.xcconfig"; sourceTree = "<group>"; };
+		922FD282254905EF003288BF /* LUOrder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LUOrder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		922FD285254905EF003288BF /* LUOrder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LUOrder.h; sourceTree = "<group>"; };
+		922FD286254905EF003288BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		922FD28B254905EF003288BF /* LUOrderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LUOrderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		922FD290254905EF003288BF /* LUOrderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LUOrderTests.swift; sourceTree = "<group>"; };
+		922FD292254905EF003288BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		922FD3E625490A87003288BF /* Order.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Order.xcassets; sourceTree = "<group>"; };
+		922FD3E725490A87003288BF /* OrderLandingConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderLandingConstant.swift; sourceTree = "<group>"; };
+		922FD3E925490A87003288BF /* OrderLandingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderLandingViewController.swift; sourceTree = "<group>"; };
+		922FD3EA25490A87003288BF /* OrderLandingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderLandingViewModel.swift; sourceTree = "<group>"; };
+		922FD3EB25490A87003288BF /* OrderLandingDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderLandingDataSource.swift; sourceTree = "<group>"; };
+		922FD3EC25490A87003288BF /* OrderLanding+UITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OrderLanding+UITableView.swift"; sourceTree = "<group>"; };
+		922FD3EE25490A87003288BF /* OrderLandingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderLandingTableViewCell.swift; sourceTree = "<group>"; };
+		922FD3EF25490A87003288BF /* OrderEmptyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderEmptyTableViewCell.xib; sourceTree = "<group>"; };
+		922FD3F025490A87003288BF /* OrderLandingHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderLandingHeaderView.swift; sourceTree = "<group>"; };
+		922FD3F125490A87003288BF /* OrderEmptyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderEmptyTableViewCell.swift; sourceTree = "<group>"; };
+		922FD3F225490A87003288BF /* OrderLandingTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderLandingTableViewCell.xib; sourceTree = "<group>"; };
+		922FD3F325490A87003288BF /* OrderLandingHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderLandingHeaderView.xib; sourceTree = "<group>"; };
+		922FD3F425490A87003288BF /* OrderLandingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderLandingViewController.xib; sourceTree = "<group>"; };
+		922FD3F525490A87003288BF /* OrderLandingProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderLandingProtocol.swift; sourceTree = "<group>"; };
+		922FD3F625490A87003288BF /* OrderLanding+Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OrderLanding+Network.swift"; sourceTree = "<group>"; };
+		922FD55625490DD5003288BF /* OrderLandingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderLandingTests.swift; sourceTree = "<group>"; };
+		92349BFB254B50B000BE3BA8 /* OrderCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderCoordinator.swift; sourceTree = "<group>"; };
+		92349BFC254B50B000BE3BA8 /* OrderCoordinatorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		92349C9A254B526C00BE3BA8 /* LUHandler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LUHandler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		92349CAC254B52B900BE3BA8 /* LUOrderNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LUOrderNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		959554F0C56B32DED1EA8C97 /* Pods-LUOrder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LUOrder.debug.xcconfig"; path = "Target Support Files/Pods-LUOrder/Pods-LUOrder.debug.xcconfig"; sourceTree = "<group>"; };
+		D11F8F40D9B4B5F4CBCA19F1 /* Pods-LUMain-LUOrder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LUMain-LUOrder.release.xcconfig"; path = "Target Support Files/Pods-LUMain-LUOrder/Pods-LUMain-LUOrder.release.xcconfig"; sourceTree = "<group>"; };
+		D1D55E007FFC8DEDAFFA679C /* Pods-LUOrder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LUOrder.release.xcconfig"; path = "Target Support Files/Pods-LUOrder/Pods-LUOrder.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		922FD27F254905EF003288BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92349C9B254B526C00BE3BA8 /* LUHandler.framework in Frameworks */,
+				92349CAD254B52B900BE3BA8 /* LUOrderNetwork.framework in Frameworks */,
+				12A3BAA3D8BAB162552CBF39 /* Pods_LUOrder.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		922FD288254905EF003288BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				922FD28C254905EF003288BF /* LUOrder.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3B08D3FD048146CD6B9F7FBC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				366C177C2CC0E26B19084B62 /* Pods-LUMain-LUOrder.debug.xcconfig */,
+				D11F8F40D9B4B5F4CBCA19F1 /* Pods-LUMain-LUOrder.release.xcconfig */,
+				959554F0C56B32DED1EA8C97 /* Pods-LUOrder.debug.xcconfig */,
+				D1D55E007FFC8DEDAFFA679C /* Pods-LUOrder.release.xcconfig */,
+			);
+			name = Pods;
+			path = ../../../../Pods;
+			sourceTree = "<group>";
+		};
+		922FD278254905EF003288BF = {
+			isa = PBXGroup;
+			children = (
+				922FD284254905EF003288BF /* LUOrder */,
+				922FD28F254905EF003288BF /* LUOrderTests */,
+				922FD283254905EF003288BF /* Products */,
+				3B08D3FD048146CD6B9F7FBC /* Pods */,
+				C72E146C03998A382D68F0E9 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		922FD283254905EF003288BF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				922FD282254905EF003288BF /* LUOrder.framework */,
+				922FD28B254905EF003288BF /* LUOrderTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		922FD284254905EF003288BF /* LUOrder */ = {
+			isa = PBXGroup;
+			children = (
+				92349BFA254B50B000BE3BA8 /* Coordinator */,
+				922FD3E825490A87003288BF /* OrderLanding */,
+				922FD3E525490A87003288BF /* Resources */,
+				922FD285254905EF003288BF /* LUOrder.h */,
+				922FD286254905EF003288BF /* Info.plist */,
+			);
+			path = LUOrder;
+			sourceTree = "<group>";
+		};
+		922FD28F254905EF003288BF /* LUOrderTests */ = {
+			isa = PBXGroup;
+			children = (
+				922FD55625490DD5003288BF /* OrderLandingTests.swift */,
+				922FD290254905EF003288BF /* LUOrderTests.swift */,
+				922FD292254905EF003288BF /* Info.plist */,
+			);
+			path = LUOrderTests;
+			sourceTree = "<group>";
+		};
+		922FD3E525490A87003288BF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				922FD3E625490A87003288BF /* Order.xcassets */,
+				922FD3E725490A87003288BF /* OrderLandingConstant.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		922FD3E825490A87003288BF /* OrderLanding */ = {
+			isa = PBXGroup;
+			children = (
+				922FD3ED25490A87003288BF /* Cell */,
+				922FD3E925490A87003288BF /* OrderLandingViewController.swift */,
+				922FD3EA25490A87003288BF /* OrderLandingViewModel.swift */,
+				922FD3EB25490A87003288BF /* OrderLandingDataSource.swift */,
+				922FD3EC25490A87003288BF /* OrderLanding+UITableView.swift */,
+				922FD3F425490A87003288BF /* OrderLandingViewController.xib */,
+				922FD3F525490A87003288BF /* OrderLandingProtocol.swift */,
+				922FD3F625490A87003288BF /* OrderLanding+Network.swift */,
+			);
+			path = OrderLanding;
+			sourceTree = "<group>";
+		};
+		922FD3ED25490A87003288BF /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				922FD3EE25490A87003288BF /* OrderLandingTableViewCell.swift */,
+				922FD3EF25490A87003288BF /* OrderEmptyTableViewCell.xib */,
+				922FD3F025490A87003288BF /* OrderLandingHeaderView.swift */,
+				922FD3F125490A87003288BF /* OrderEmptyTableViewCell.swift */,
+				922FD3F225490A87003288BF /* OrderLandingTableViewCell.xib */,
+				922FD3F325490A87003288BF /* OrderLandingHeaderView.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		92349BFA254B50B000BE3BA8 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				92349BFB254B50B000BE3BA8 /* OrderCoordinator.swift */,
+				92349BFC254B50B000BE3BA8 /* OrderCoordinatorProtocol.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		C72E146C03998A382D68F0E9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				92349CAC254B52B900BE3BA8 /* LUOrderNetwork.framework */,
+				92349C9A254B526C00BE3BA8 /* LUHandler.framework */,
+				1AD9EF891473DC7BDCF4BCA2 /* Pods_LUOrder.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		922FD27D254905EF003288BF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				922FD293254905EF003288BF /* LUOrder.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		922FD281254905EF003288BF /* LUOrder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 922FD296254905EF003288BF /* Build configuration list for PBXNativeTarget "LUOrder" */;
+			buildPhases = (
+				A79ADDC16B75A94B228BD7C4 /* [CP] Check Pods Manifest.lock */,
+				922FD27D254905EF003288BF /* Headers */,
+				922FD27E254905EF003288BF /* Sources */,
+				922FD27F254905EF003288BF /* Frameworks */,
+				922FD280254905EF003288BF /* Resources */,
+				6601F5A2DDA499B3BA3D3E15 /* [CP] Copy Pods Resources */,
+				92349C9D254B526C00BE3BA8 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LUOrder;
+			productName = LUOrder;
+			productReference = 922FD282254905EF003288BF /* LUOrder.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		922FD28A254905EF003288BF /* LUOrderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 922FD299254905EF003288BF /* Build configuration list for PBXNativeTarget "LUOrderTests" */;
+			buildPhases = (
+				922FD287254905EF003288BF /* Sources */,
+				922FD288254905EF003288BF /* Frameworks */,
+				922FD289254905EF003288BF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				922FD28E254905EF003288BF /* PBXTargetDependency */,
+			);
+			name = LUOrderTests;
+			productName = LUOrderTests;
+			productReference = 922FD28B254905EF003288BF /* LUOrderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		922FD279254905EF003288BF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					922FD281254905EF003288BF = {
+						CreatedOnToolsVersion = 12.0;
+					};
+					922FD28A254905EF003288BF = {
+						CreatedOnToolsVersion = 12.0;
+					};
+				};
+			};
+			buildConfigurationList = 922FD27C254905EF003288BF /* Build configuration list for PBXProject "LUOrder" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 922FD278254905EF003288BF;
+			productRefGroup = 922FD283254905EF003288BF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				922FD281254905EF003288BF /* LUOrder */,
+				922FD28A254905EF003288BF /* LUOrderTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		922FD280254905EF003288BF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				922FD40325490A87003288BF /* OrderLandingViewController.xib in Resources */,
+				922FD40225490A87003288BF /* OrderLandingHeaderView.xib in Resources */,
+				922FD40125490A87003288BF /* OrderLandingTableViewCell.xib in Resources */,
+				922FD3FE25490A87003288BF /* OrderEmptyTableViewCell.xib in Resources */,
+				922FD3F725490A87003288BF /* Order.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		922FD289254905EF003288BF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6601F5A2DDA499B3BA3D3E15 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LUOrder/Pods-LUOrder-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LUOrder/Pods-LUOrder-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LUOrder/Pods-LUOrder-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A79ADDC16B75A94B228BD7C4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LUOrder-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		922FD27E254905EF003288BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				922FD3F925490A87003288BF /* OrderLandingViewController.swift in Sources */,
+				922FD3F825490A87003288BF /* OrderLandingConstant.swift in Sources */,
+				922FD3FD25490A87003288BF /* OrderLandingTableViewCell.swift in Sources */,
+				92349BFE254B50B000BE3BA8 /* OrderCoordinatorProtocol.swift in Sources */,
+				922FD40425490A87003288BF /* OrderLandingProtocol.swift in Sources */,
+				922FD3FA25490A87003288BF /* OrderLandingViewModel.swift in Sources */,
+				922FD3FB25490A87003288BF /* OrderLandingDataSource.swift in Sources */,
+				92349BFD254B50B000BE3BA8 /* OrderCoordinator.swift in Sources */,
+				922FD3FF25490A87003288BF /* OrderLandingHeaderView.swift in Sources */,
+				922FD40025490A87003288BF /* OrderEmptyTableViewCell.swift in Sources */,
+				922FD3FC25490A87003288BF /* OrderLanding+UITableView.swift in Sources */,
+				922FD40525490A87003288BF /* OrderLanding+Network.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		922FD287254905EF003288BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				922FD55725490DD5003288BF /* OrderLandingTests.swift in Sources */,
+				922FD291254905EF003288BF /* LUOrderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		922FD28E254905EF003288BF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 922FD281254905EF003288BF /* LUOrder */;
+			targetProxy = 922FD28D254905EF003288BF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		922FD294254905EF003288BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		922FD295254905EF003288BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		922FD297254905EF003288BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 959554F0C56B32DED1EA8C97 /* Pods-LUOrder.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = WPQ9HAVPNV;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = LUOrder/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = inx.LUOrder;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		922FD298254905EF003288BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1D55E007FFC8DEDAFFA679C /* Pods-LUOrder.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = WPQ9HAVPNV;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = LUOrder/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = inx.LUOrder;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		922FD29A254905EF003288BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WPQ9HAVPNV;
+				INFOPLIST_FILE = LUOrderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = inx.LUOrderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		922FD29B254905EF003288BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WPQ9HAVPNV;
+				INFOPLIST_FILE = LUOrderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = inx.LUOrderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		922FD27C254905EF003288BF /* Build configuration list for PBXProject "LUOrder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				922FD294254905EF003288BF /* Debug */,
+				922FD295254905EF003288BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		922FD296254905EF003288BF /* Build configuration list for PBXNativeTarget "LUOrder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				922FD297254905EF003288BF /* Debug */,
+				922FD298254905EF003288BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		922FD299254905EF003288BF /* Build configuration list for PBXNativeTarget "LUOrderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				922FD29A254905EF003288BF /* Debug */,
+				922FD29B254905EF003288BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 922FD279254905EF003288BF /* Project object */;
+}

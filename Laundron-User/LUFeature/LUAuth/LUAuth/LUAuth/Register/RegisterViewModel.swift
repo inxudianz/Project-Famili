@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import LUAuthNetwork
+import LUCodable
 
 class RegisterViewModel: RegisterViewModelProtocol {
     // MARK: - Property
