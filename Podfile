@@ -27,6 +27,11 @@ target "LUMain" do
   project 'Laundron-User/LUMain/LUMain.project'
   use_frameworks!
   mainModule
+    target 'LUMainTests' do
+      inherit! :search_paths
+      mainModule
+      testModule
+    end
 
 # --- || Common || ---
 # --- | Network | ---

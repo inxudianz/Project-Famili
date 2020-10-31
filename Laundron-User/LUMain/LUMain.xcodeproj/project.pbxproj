@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E873C43CF833B08A2EC41B9 /* Pods_LUMainTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B340B92BA74E289096B6F9D /* Pods_LUMainTests.framework */; };
 		51C01C96651521CF4EBFDC3E /* Pods_LUMain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF3CB931E969F28711B7B105 /* Pods_LUMain.framework */; };
 		922FD16A25481024003288BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FD16925481024003288BF /* AppDelegate.swift */; };
 		922FD16C25481024003288BF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FD16B25481024003288BF /* SceneDelegate.swift */; };
@@ -38,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5B340B92BA74E289096B6F9D /* Pods_LUMainTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LUMainTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		73BC4E12D0A806F087792EC7 /* Pods-LUMainTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LUMainTests.debug.xcconfig"; path = "Target Support Files/Pods-LUMainTests/Pods-LUMainTests.debug.xcconfig"; sourceTree = "<group>"; };
 		922FD16625481024003288BF /* LUMain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LUMain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		922FD16925481024003288BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		922FD16B25481024003288BF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +67,7 @@
 		9EB790B345F4BEE1BA657491 /* Pods-LUMain.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LUMain.release.xcconfig"; path = "Target Support Files/Pods-LUMain/Pods-LUMain.release.xcconfig"; sourceTree = "<group>"; };
 		DB3313E3C48B3CD869D79709 /* Pods-LUMain.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LUMain.debug.xcconfig"; path = "Target Support Files/Pods-LUMain/Pods-LUMain.debug.xcconfig"; sourceTree = "<group>"; };
 		EF3CB931E969F28711B7B105 /* Pods_LUMain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LUMain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF2CCC9DA466546493C3DC44 /* Pods-LUMainTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LUMainTests.release.xcconfig"; path = "Target Support Files/Pods-LUMainTests/Pods-LUMainTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E873C43CF833B08A2EC41B9 /* Pods_LUMainTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,6 +173,8 @@
 			children = (
 				DB3313E3C48B3CD869D79709 /* Pods-LUMain.debug.xcconfig */,
 				9EB790B345F4BEE1BA657491 /* Pods-LUMain.release.xcconfig */,
+				73BC4E12D0A806F087792EC7 /* Pods-LUMainTests.debug.xcconfig */,
+				FF2CCC9DA466546493C3DC44 /* Pods-LUMainTests.release.xcconfig */,
 			);
 			name = Pods;
 			path = ../../Pods;
@@ -179,6 +186,7 @@
 				922FE5332549B468003288BF /* LUAppCoordinator.framework */,
 				922FE4CA2549B1B6003288BF /* LUAppCoordinator.framework */,
 				EF3CB931E969F28711B7B105 /* Pods_LUMain.framework */,
+				5B340B92BA74E289096B6F9D /* Pods_LUMainTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -210,9 +218,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 922FD19325481026003288BF /* Build configuration list for PBXNativeTarget "LUMainTests" */;
 			buildPhases = (
+				83A56389D8924BF964C64F3B /* [CP] Check Pods Manifest.lock */,
 				922FD17825481026003288BF /* Sources */,
 				922FD17925481026003288BF /* Frameworks */,
 				922FD17A25481026003288BF /* Resources */,
+				851DF67FB8216B11DE5BAF88 /* [CP] Embed Pods Frameworks */,
+				E8F4C8BB3BDB7D67DDAB64BB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -307,6 +318,45 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LUMain/Pods-LUMain-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		83A56389D8924BF964C64F3B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LUMainTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		851DF67FB8216B11DE5BAF88 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LUMainTests/Pods-LUMainTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LUMainTests/Pods-LUMainTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LUMainTests/Pods-LUMainTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		AC4EAE7938053258E4150F5A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -344,6 +394,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LUMain/Pods-LUMain-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8F4C8BB3BDB7D67DDAB64BB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LUMainTests/Pods-LUMainTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LUMainTests/Pods-LUMainTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LUMainTests/Pods-LUMainTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -548,8 +615,8 @@
 		};
 		922FD19425481026003288BF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73BC4E12D0A806F087792EC7 /* Pods-LUMainTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WPQ9HAVPNV;
@@ -570,8 +637,8 @@
 		};
 		922FD19525481026003288BF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF2CCC9DA466546493C3DC44 /* Pods-LUMainTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WPQ9HAVPNV;
