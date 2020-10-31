@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2DCE688D5BCFCFEC2BB3B3E1 /* Pods_LUSplashTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3235A5AE4DF7E942D0D564BD /* Pods_LUSplashTests.framework */; };
 		922FD86A254942D1003288BF /* LUSplash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 922FD860254942D1003288BF /* LUSplash.framework */; };
 		922FD86F254942D1003288BF /* LUSplashTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FD86E254942D1003288BF /* LUSplashTests.swift */; };
 		922FD871254942D1003288BF /* LUSplash.h in Headers */ = {isa = PBXBuildFile; fileRef = 922FD863254942D1003288BF /* LUSplash.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -56,8 +57,10 @@
 /* Begin PBXFileReference section */
 		297F28946845FFBD1D7E3E14 /* Pods-LUMain-LUSplash.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LUMain-LUSplash.release.xcconfig"; path = "Target Support Files/Pods-LUMain-LUSplash/Pods-LUMain-LUSplash.release.xcconfig"; sourceTree = "<group>"; };
 		29FD4D06695B358E3B3019C0 /* libPods-LUSplash.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LUSplash.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3235A5AE4DF7E942D0D564BD /* Pods_LUSplashTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LUSplashTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A2C1404FFCD0BE9ACA0BC07 /* Pods-LUSplash.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LUSplash.release.xcconfig"; path = "Target Support Files/Pods-LUSplash/Pods-LUSplash.release.xcconfig"; sourceTree = "<group>"; };
 		52F28AED61B1B38C9B9DE170 /* Pods_LUSplash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LUSplash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		75E497304C5EE1C75C9A13B5 /* Pods-LUSplashTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LUSplashTests.release.xcconfig"; path = "Target Support Files/Pods-LUSplashTests/Pods-LUSplashTests.release.xcconfig"; sourceTree = "<group>"; };
 		922FD860254942D1003288BF /* LUSplash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LUSplash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		922FD863254942D1003288BF /* LUSplash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LUSplash.h; sourceTree = "<group>"; };
 		922FD864254942D1003288BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -89,6 +92,7 @@
 		922FE57A254A7F14003288BF /* LUAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LUAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A088F09B5F6595A92B83944C /* Pods-LUMain-LUSplash.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LUMain-LUSplash.debug.xcconfig"; path = "Target Support Files/Pods-LUMain-LUSplash/Pods-LUMain-LUSplash.debug.xcconfig"; sourceTree = "<group>"; };
 		D1BD712672A2B9AB707EAD4E /* Pods-LUSplash.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LUSplash.debug.xcconfig"; path = "Target Support Files/Pods-LUSplash/Pods-LUSplash.debug.xcconfig"; sourceTree = "<group>"; };
+		DBCF4A961C30B912EFD80847 /* Pods-LUSplashTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LUSplashTests.debug.xcconfig"; path = "Target Support Files/Pods-LUSplashTests/Pods-LUSplashTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +112,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				922FD86A254942D1003288BF /* LUSplash.framework in Frameworks */,
+				2DCE688D5BCFCFEC2BB3B3E1 /* Pods_LUSplashTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,6 +196,8 @@
 				297F28946845FFBD1D7E3E14 /* Pods-LUMain-LUSplash.release.xcconfig */,
 				D1BD712672A2B9AB707EAD4E /* Pods-LUSplash.debug.xcconfig */,
 				3A2C1404FFCD0BE9ACA0BC07 /* Pods-LUSplash.release.xcconfig */,
+				DBCF4A961C30B912EFD80847 /* Pods-LUSplashTests.debug.xcconfig */,
+				75E497304C5EE1C75C9A13B5 /* Pods-LUSplashTests.release.xcconfig */,
 			);
 			name = Pods;
 			path = ../../../../Pods;
@@ -216,6 +223,7 @@
 				922FDBC225497C89003288BF /* Component.framework */,
 				29FD4D06695B358E3B3019C0 /* libPods-LUSplash.a */,
 				52F28AED61B1B38C9B9DE170 /* Pods_LUSplash.framework */,
+				3235A5AE4DF7E942D0D564BD /* Pods_LUSplashTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -259,9 +267,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 922FD877254942D1003288BF /* Build configuration list for PBXNativeTarget "LUSplashTests" */;
 			buildPhases = (
+				6104BB1E54C76A3221E400BF /* [CP] Check Pods Manifest.lock */,
 				922FD865254942D1003288BF /* Sources */,
 				922FD866254942D1003288BF /* Frameworks */,
 				922FD867254942D1003288BF /* Resources */,
+				476443D556A1D76490E463A6 /* [CP] Embed Pods Frameworks */,
+				199B6C1B600C8BB9A55F22A2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -329,6 +340,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		199B6C1B600C8BB9A55F22A2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LUSplashTests/Pods-LUSplashTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LUSplashTests/Pods-LUSplashTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LUSplashTests/Pods-LUSplashTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		26B24E7853BFB08E23DA012A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -345,6 +373,45 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-LUSplash-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		476443D556A1D76490E463A6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LUSplashTests/Pods-LUSplashTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LUSplashTests/Pods-LUSplashTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LUSplashTests/Pods-LUSplashTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6104BB1E54C76A3221E400BF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LUSplashTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -577,8 +644,8 @@
 		};
 		922FD878254942D1003288BF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DBCF4A961C30B912EFD80847 /* Pods-LUSplashTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WPQ9HAVPNV;
 				INFOPLIST_FILE = LUSplashTests/Info.plist;
@@ -596,8 +663,8 @@
 		};
 		922FD879254942D1003288BF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75E497304C5EE1C75C9A13B5 /* Pods-LUSplashTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WPQ9HAVPNV;
 				INFOPLIST_FILE = LUSplashTests/Info.plist;

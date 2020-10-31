@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45F5385DCECFE918BAF8598B /* Pods_LUAuthTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2053C7007CF08CFDD5DC4B29 /* Pods_LUAuthTests.framework */; };
 		922FE2812549A214003288BF /* LUAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 922FE2772549A214003288BF /* LUAuth.framework */; };
 		922FE2862549A214003288BF /* LUAuthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FE2852549A214003288BF /* LUAuthTests.swift */; };
 		922FE2882549A214003288BF /* LUAuth.h in Headers */ = {isa = PBXBuildFile; fileRef = 922FE27A2549A214003288BF /* LUAuth.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -69,8 +70,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2053C7007CF08CFDD5DC4B29 /* Pods_LUAuthTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LUAuthTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		207B02A60DC18508206B69CC /* Pods-LUAuthTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LUAuthTests.debug.xcconfig"; path = "Target Support Files/Pods-LUAuthTests/Pods-LUAuthTests.debug.xcconfig"; sourceTree = "<group>"; };
 		702E40735456B02BEDFDEF37 /* Pods-LUMain-LUAuth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LUMain-LUAuth.release.xcconfig"; path = "Target Support Files/Pods-LUMain-LUAuth/Pods-LUMain-LUAuth.release.xcconfig"; sourceTree = "<group>"; };
 		738A6297D8C6CA13897C9D0F /* Pods_LUAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LUAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		866BA6589416791444AC77F7 /* Pods-LUAuthTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LUAuthTests.release.xcconfig"; path = "Target Support Files/Pods-LUAuthTests/Pods-LUAuthTests.release.xcconfig"; sourceTree = "<group>"; };
 		922FE2772549A214003288BF /* LUAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LUAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		922FE27A2549A214003288BF /* LUAuth.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LUAuth.h; sourceTree = "<group>"; };
 		922FE27B2549A214003288BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -122,6 +126,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				922FE2812549A214003288BF /* LUAuth.framework in Frameworks */,
+				45F5385DCECFE918BAF8598B /* Pods_LUAuthTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,6 +227,7 @@
 				922FE58C254A7FCF003288BF /* LUHandler.framework */,
 				922FE57F254A7F35003288BF /* LUCoordinator.framework */,
 				738A6297D8C6CA13897C9D0F /* Pods_LUAuth.framework */,
+				2053C7007CF08CFDD5DC4B29 /* Pods_LUAuthTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -233,6 +239,8 @@
 				702E40735456B02BEDFDEF37 /* Pods-LUMain-LUAuth.release.xcconfig */,
 				B4179174BDD0EA88B9E97BAA /* Pods-LUAuth.debug.xcconfig */,
 				D6255656C1AD1612E8D28251 /* Pods-LUAuth.release.xcconfig */,
+				207B02A60DC18508206B69CC /* Pods-LUAuthTests.debug.xcconfig */,
+				866BA6589416791444AC77F7 /* Pods-LUAuthTests.release.xcconfig */,
 			);
 			name = Pods;
 			path = ../../../../Pods;
@@ -277,9 +285,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 922FE28E2549A214003288BF /* Build configuration list for PBXNativeTarget "LUAuthTests" */;
 			buildPhases = (
+				2168FF3030C0472B16364CD5 /* [CP] Check Pods Manifest.lock */,
 				922FE27C2549A214003288BF /* Sources */,
 				922FE27D2549A214003288BF /* Frameworks */,
 				922FE27E2549A214003288BF /* Resources */,
+				73E037E0BB6A421471AE0716 /* [CP] Embed Pods Frameworks */,
+				4C661A22EE726ED4CB8F3E73 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -365,6 +376,45 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LUAuth/Pods-LUAuth-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		2168FF3030C0472B16364CD5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LUAuthTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4C661A22EE726ED4CB8F3E73 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LUAuthTests/Pods-LUAuthTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LUAuthTests/Pods-LUAuthTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LUAuthTests/Pods-LUAuthTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		5E45C4061B3E9CF094F151A7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -385,6 +435,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		73E037E0BB6A421471AE0716 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LUAuthTests/Pods-LUAuthTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LUAuthTests/Pods-LUAuthTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LUAuthTests/Pods-LUAuthTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -601,8 +668,8 @@
 		};
 		922FE28F2549A214003288BF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 207B02A60DC18508206B69CC /* Pods-LUAuthTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WPQ9HAVPNV;
 				INFOPLIST_FILE = LUAuthTests/Info.plist;
@@ -620,8 +687,8 @@
 		};
 		922FE2902549A214003288BF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 866BA6589416791444AC77F7 /* Pods-LUAuthTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WPQ9HAVPNV;
 				INFOPLIST_FILE = LUAuthTests/Info.plist;

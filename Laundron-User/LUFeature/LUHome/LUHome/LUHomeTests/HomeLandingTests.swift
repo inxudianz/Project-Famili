@@ -8,8 +8,11 @@
 
 import Quick
 import Nimble
+import LUCoordinator
 
-@testable import MainApp
+@testable import LUHome
+@testable import LUHomeNetwork
+@testable import LUCodable
 
 class HomeLandingViewMock: HomeLandingViewProtocol {
     var viewModel: HomeLandingViewModelProtocol?

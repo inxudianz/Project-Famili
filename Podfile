@@ -16,6 +16,11 @@ def mainModule
   pod "FBSDKLoginKit", '~> 8.0.0'
 end
 
+def testModule
+  pod "Quick", '~> 3.0.0'
+  pod "Nimble", '~> 9.0.0'
+end
+
 # Target
 
 target "LUMain" do
@@ -51,11 +56,16 @@ target "LUMain" do
 
 # --- || Feature || ---
 # --- | LUSample | ---
-   target 'LUSample' do
+  target 'LUSample' do
     project 'Laundron-User/LUFeature/LUSample/LUSample/LUSample.project'
     inherit! :search_paths
     use_frameworks!
     mainModule
+    target 'LUSampleTests' do
+      inherit! :search_paths
+      mainModule
+      testModule
+    end
   end
 
   target 'LUSampleNetwork' do
@@ -71,6 +81,11 @@ target "LUMain" do
     inherit! :search_paths
     use_frameworks!
     mainModule
+    target 'LUSplashTests' do
+      inherit! :search_paths
+      mainModule
+      testModule
+    end
   end
 
   target 'LUSplashNetwork' do
@@ -86,6 +101,11 @@ target "LUMain" do
     inherit! :search_paths
     use_frameworks!
     mainModule
+    target 'LUAuthTests' do
+      inherit! :search_paths
+      mainModule
+      testModule
+    end
   end
 
   target 'LUAuthNetwork' do
@@ -101,6 +121,11 @@ target "LUMain" do
     inherit! :search_paths
     use_frameworks!
     mainModule
+    target 'LUHomeTests' do
+      inherit! :search_paths
+      mainModule
+      testModule
+    end
   end
 
   target 'LUHomeNetwork' do
@@ -116,6 +141,11 @@ target "LUMain" do
     inherit! :search_paths
     use_frameworks!
     mainModule
+    target 'LUProfileTests' do
+      inherit! :search_paths
+      mainModule
+      testModule
+    end
   end
 
   target 'LUProfileNetwork' do
@@ -131,6 +161,11 @@ target "LUMain" do
     inherit! :search_paths
     use_frameworks!
     mainModule
+    target 'LUOrderTests' do
+      inherit! :search_paths
+      mainModule
+      testModule
+    end
   end
 
   target 'LUOrderNetwork' do

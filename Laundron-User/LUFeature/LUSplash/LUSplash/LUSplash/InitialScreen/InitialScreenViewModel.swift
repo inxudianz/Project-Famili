@@ -10,7 +10,7 @@ import Foundation
 
 public class InitialScreenViewModel: InitialScreenViewModelProtocol {
     weak public var view: InitialScreenViewProtocol?
-    weak public var coordinator: SplashCoordinator?
+    weak public var coordinator: SplashCoordinatorProtocol?
     
     public init() {}
     public func gotoLogin() {

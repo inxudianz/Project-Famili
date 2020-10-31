@@ -8,8 +8,11 @@
 
 import Quick
 import Nimble
+import LUCoordinator
 
-@testable import MainApp
+@testable import LUProfile
+@testable import LUProfileNetwork
+@testable import LUCodable
 
 class HelpCenterMock: HelpCenterViewProtocol {
     var viewModel: HelpCenterViewModelProtocol?

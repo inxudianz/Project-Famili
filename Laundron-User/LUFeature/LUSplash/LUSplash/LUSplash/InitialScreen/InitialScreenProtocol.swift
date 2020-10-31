@@ -10,7 +10,7 @@ import Foundation
 
 public protocol InitialScreenViewModelProtocol: class {
     var view: InitialScreenViewProtocol? { get set }
-    var coordinator: SplashCoordinator? { get set }
+    var coordinator: SplashCoordinatorProtocol? { get set }
     func gotoLogin()
 }
 

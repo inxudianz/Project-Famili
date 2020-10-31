@@ -9,7 +9,8 @@
 import Quick
 import Nimble
 
-@testable import MainApp
+@testable import LUHome
+@testable import LUHomeNetwork
 
 class NotificationMock: NotificationViewProtocol {
     var viewModel: NotificationViewModelProtocol?

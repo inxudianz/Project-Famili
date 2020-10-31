@@ -112,7 +112,9 @@ PODS:
     - nanopb/encode (= 2.30906.0)
   - nanopb/decode (2.30906.0)
   - nanopb/encode (2.30906.0)
+  - Nimble (9.0.0)
   - PromisesObjC (1.2.11)
+  - Quick (3.0.0)
   - RxCocoa (5.1.1):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
@@ -127,6 +129,8 @@ DEPENDENCIES:
   - Firebase/Auth (~> 7.0.0)
   - Firebase/Messaging (~> 7.0.0)
   - GoogleSignIn (~> 5.0.2)
+  - Nimble (~> 9.0.0)
+  - Quick (~> 3.0.0)
   - RxCocoa (~> 5.1.1)
   - RxSwift (~> 5.1.1)
 
@@ -151,7 +155,9 @@ SPEC REPOS:
     - GTMAppAuth
     - GTMSessionFetcher
     - nanopb
+    - Nimble
     - PromisesObjC
+    - Quick
     - RxCocoa
     - RxRelay
     - RxSwift
@@ -176,11 +182,13 @@ SPEC CHECKSUMS:
   GTMAppAuth: 197a8dabfea5d665224aa00d17f164fc2248dab9
   GTMSessionFetcher: b3503b20a988c4e20cc189aa798fd18220133f52
   nanopb: 1bf24dd71191072e120b83dd02d08f3da0d65e53
+  Nimble: 3b4ec3fd40f1dc178058e0981107721c615643d8
   PromisesObjC: 8c196f5a328c2cba3e74624585467a557dcb482f
+  Quick: 6d9559f40647bc4d510103842ef2fdd882d753e2
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
 
-PODFILE CHECKSUM: 1266ddf7192d4099176e225f89332ef753e56c8c
+PODFILE CHECKSUM: daa8f3af3cf491e3d487e88903debc246ac576b9
 
 COCOAPODS: 1.10.0

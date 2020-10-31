@@ -9,8 +9,11 @@
 import Quick
 import Nimble
 import RxSwift
+import LUCoordinator
+import LUCodable
 
-@testable import MainApp
+@testable import LUSample
+@testable import LUSampleNetwork
 
 class SampleHomeViewMock: SampleHomeViewProtocol {
     var viewModel: SampleHomeViewModelProtocol?

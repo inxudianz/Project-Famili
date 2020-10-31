@@ -9,8 +9,11 @@
 import Quick
 import Nimble
 import RxSwift
+import LUCoordinator
 
-@testable import MainApp
+@testable import LUOrder
+@testable import LUOrderNetwork
+@testable import LUCodable
 
 class OrderLandingViewMock: OrderLandingViewProtocol {
     var viewModel: OrderLandingViewModelProtocol?

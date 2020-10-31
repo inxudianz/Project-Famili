@@ -8,16 +8,16 @@
 
 import Quick
 import Nimble
+import LUCoordinator
 
-@testable import MainApp
+@testable import LUSplash
 
 class InitialScreenViewMock: InitialScreenViewProtocol {
     var viewModel: InitialScreenViewModelProtocol?
 }
 
-class InitialScreenCoordinatorMock: InitialScreenCoordinatorProtocol {
+class SplashCoordinatorMock: SplashCoordinatorProtocol {
     var parentCoordinator: Coordinator?
-
     var childCoordinators: [Coordinator] = []
     
     var navigationController: UINavigationController? = UINavigationController()
@@ -31,6 +31,10 @@ class InitialScreenCoordinatorMock: InitialScreenCoordinatorProtocol {
     func navigateToAuth() {
         isNavigateToAuth = true
     }
+    var isBuildInitialScreen = false
+    func buildInitialScreen() {
+        isBuildInitialScreen = true
+    }
 }
 
 class InitialScreenTests: QuickSpec {
@@ -39,11 +43,11 @@ class InitialScreenTests: QuickSpec {
             
             var sut: InitialScreenViewModel!
             var view: InitialScreenViewMock!
-            var coordinator: InitialScreenCoordinatorMock!
+            var coordinator: SplashCoordinatorMock!
             
             beforeEach {
                 view = InitialScreenViewMock()
-                coordinator = InitialScreenCoordinatorMock()
+                coordinator = SplashCoordinatorMock()
                 
                 sut = InitialScreenViewModel()
                 sut?.view = view
