@@ -4,9 +4,96 @@
    <FileRef
       location = "group:Component/Component.xcodeproj">
    </FileRef>
-   <FileRef
-      location = "group:MainApp/MainApp.xcodeproj">
-   </FileRef>
+   <Group
+      location = "group:Laundron-User"
+      name = "Laundron-User">
+      <Group
+         location = "group:LUCoordinatorHandler"
+         name = "LUCoordinatorHandler">
+         <FileRef
+            location = "group:LUCoordinator/LUCoordinator.xcodeproj">
+         </FileRef>
+         <FileRef
+            location = "group:LUAppCoordinator/LUAppCoordinator.xcodeproj">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:LUFeature"
+         name = "LUFeature">
+         <Group
+            location = "container:"
+            name = "LUAuth">
+            <FileRef
+               location = "group:Laundron-User/LUFeature/LUAuth/LUAuth/LUAuth.xcodeproj">
+            </FileRef>
+            <FileRef
+               location = "group:Laundron-User/LUFeature/LUAuth/LUAuthNetwork/LUAuthNetwork.xcodeproj">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:LUSplash"
+            name = "LUSplash">
+            <FileRef
+               location = "group:LUSplash/LUSplash.xcodeproj">
+            </FileRef>
+            <FileRef
+               location = "group:LUSplashNetwork/LUSplashNetwork.xcodeproj">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:LUHome"
+            name = "LUHome">
+            <FileRef
+               location = "group:LUHome/LUHome.xcodeproj">
+            </FileRef>
+            <FileRef
+               location = "group:LUHomeNetwork/LUHomeNetwork.xcodeproj">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:LUProfile"
+            name = "LUProfile">
+            <FileRef
+               location = "group:LUProfile/LUProfile.xcodeproj">
+            </FileRef>
+            <FileRef
+               location = "group:LUProfileNetwork/LUProfileNetwork.xcodeproj">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:LUOrder"
+            name = "LUOrder">
+            <FileRef
+               location = "group:LUOrder/LUOrder.xcodeproj">
+            </FileRef>
+            <FileRef
+               location = "group:LUOrderNetwork/LUOrderNetwork.xcodeproj">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:LUSample"
+            name = "LUSample">
+            <FileRef
+               location = "group:LUSample/LUSample.xcodeproj">
+            </FileRef>
+            <FileRef
+               location = "group:LUSampleNetwork/LUSampleNetwork.xcodeproj">
+            </FileRef>
+         </Group>
+      </Group>
+      <FileRef
+         location = "group:LUMain/LUMain.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:LUCodable/LUCodable.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:LUHandler/LUHandler.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:LUNetwork/LUNetwork.xcodeproj">
+      </FileRef>
+   </Group>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
