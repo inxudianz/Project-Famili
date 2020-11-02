@@ -1,0 +1,28 @@
+name: SwiftLint
+
+on:
+  push:
+    branches:
+    - develop
+    - feature/*
+    - bugfix/*
+    - component/*
+    
+  pull_request:
+    branches:
+    - develop
+    - feature/*
+    - bugfix/*
+    - component/*
+
+jobs:
+  build:
+  
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Dependencies
+      run: |
+        exec pod install
+    - name: SwiftLint Check
+      uses: norio-nomura/action-swiftlint@3.1.0
