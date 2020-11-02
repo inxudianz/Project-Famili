@@ -66,7 +66,9 @@ public class ProfileLandingNetwork: ProfileNetworkProtocol {
     
     public func privacyPolicyGet() {
         // Get the privacy policy to show to the user
-        networkService.request(ProfileService.getPrivacyPolicyRequest, EmptyModel(), ProfileResponse.GetPrivacyPolicyResponse.self) { [weak self] (result) in
+        networkService.request(ProfileService.getPrivacyPolicyRequest,
+                               EmptyModel(),
+                               ProfileResponse.GetPrivacyPolicyResponse.self) { [weak self] (result) in
             switch result {
             case .success(let response):
                 self?.retrievePrivacyPolicyDelegate?.didSuccessRetrievePrivacyPolicy(response: response)
@@ -78,7 +80,9 @@ public class ProfileLandingNetwork: ProfileNetworkProtocol {
     public func termsOfServiceGet() {
         // Get the terms of service to show to the user
         
-        networkService.request(ProfileService.getTermsOfServiceRequest, EmptyModel(), ProfileResponse.GetTermsOfServiceResponse.self) { [weak self] (result) in
+        networkService.request(ProfileService.getTermsOfServiceRequest,
+                               EmptyModel(),
+                               ProfileResponse.GetTermsOfServiceResponse.self) { [weak self] (result) in
             switch result {
             case .success(let response):
                 self?.retrieveTermsOfServiceDelegate?.didSuccessRetrieveTermsOfService(response: response)
@@ -89,7 +93,9 @@ public class ProfileLandingNetwork: ProfileNetworkProtocol {
     }
     
     public func helpCenterGet() {
-        networkService.request(ProfileService.getHelpCenterRequest, EmptyModel(), ProfileResponse.GetHelpCenterResponse.self) { [weak self] (result) in
+        networkService.request(ProfileService.getHelpCenterRequest,
+                               EmptyModel(),
+                               ProfileResponse.GetHelpCenterResponse.self) { [weak self] (result) in
             switch result {
             case .success(let response):
                 self?.retrieveHelpCenterDelegate?.didSuccessRetrieveHelpCenter(response: response)

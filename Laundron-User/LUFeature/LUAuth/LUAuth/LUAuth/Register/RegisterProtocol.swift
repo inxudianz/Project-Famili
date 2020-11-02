@@ -14,14 +14,16 @@ protocol RegisterViewModelProtocol: class {
     var view: RegisterViewProtocol? { get set }
     var coordinator: AuthCoordinatorProtocol? { get set }
     var network: AuthNetworkProtocol? { get set }
-    
+
     func navigateToLogin()
     func register(data: AuthModel.Register)
-    func handleField(text: String, with type: AuthConstantRegister.TextFieldIdentifier) -> AuthConstantRegister.TextFieldError
+    func handleField(text: String,
+                     with type: AuthConstantRegister.TextFieldIdentifier) -> AuthConstantRegister.TextFieldError
 }
 
 protocol RegisterViewProtocol: class {
     var viewModel: RegisterViewModelProtocol? { get set }
+
     func showLoading()
     func stopLoading()
 }

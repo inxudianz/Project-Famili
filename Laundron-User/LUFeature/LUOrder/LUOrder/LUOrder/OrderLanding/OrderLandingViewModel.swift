@@ -15,7 +15,7 @@ class OrderLandingViewModel: OrderLandingViewModelProtocol {
     weak var coordinator: OrderCoordinatorProtocol?
     var network: OrderNetworkProtocol?
     var dataSource: OrderLandingDataSource?
-    var delegate: OrderLandingDelegate?
+    weak var delegate: OrderLandingDelegate?
     
     init() {
         network = OrderNetwork()

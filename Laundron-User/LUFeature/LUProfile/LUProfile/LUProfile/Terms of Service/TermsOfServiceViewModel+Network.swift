@@ -22,6 +22,4 @@ extension TermsOfServiceViewModel: RetrieveTermsOfServiceDelegate {
         view?.stopLoading()
         Log.info(message: error)
     }
-    
-    
 }

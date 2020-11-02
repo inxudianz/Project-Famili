@@ -36,7 +36,10 @@ class OrderLandingDelegate: NSObject {
 extension OrderLandingDelegate: UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if dataType == .ongoing {
-            let headerView = OrderLandingHeaderView(frame: .init(x: 0, y: 0, width: tableView.frame.width, height: OrderLandingConstant.Cell.landingHeaderHeight))
+            let headerView = OrderLandingHeaderView(frame: .init(x: 0,
+                                                                 y: 0,
+                                                                 width: tableView.frame.width,
+                                                                 height: OrderLandingConstant.Cell.landingHeaderHeight))
             
             headerView.updateNotificationAmount(to: getNotificationAmount(section: section))
             headerView.setTitle(for: OrderLandingHeaderView.HeaderType.allCases[section])

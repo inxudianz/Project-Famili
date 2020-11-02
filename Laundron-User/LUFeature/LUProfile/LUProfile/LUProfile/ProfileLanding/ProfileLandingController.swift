@@ -34,7 +34,8 @@ class ProfileLandingController: UIViewController, ProfileLandingViewProtocol {
 
     // MARK: - Initialization
     init() {
-        super.init(nibName: String(describing: ProfileLandingController.self), bundle: Bundle(for: ProfileLandingController.self))
+        super.init(nibName: String(describing: ProfileLandingController.self),
+                   bundle: Bundle(for: ProfileLandingController.self))
     }
     
     required init?(coder: NSCoder) {
@@ -86,7 +87,8 @@ class ProfileLandingController: UIViewController, ProfileLandingViewProtocol {
 extension ProfileLandingController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-        tableView.headerView(forSection: section)?.textLabel?.font = FontManager.getFont(for: .bold, size: FontManager.FontSize.header2.rawValue)
+        tableView.headerView(forSection: section)?.textLabel?.font = FontManager.getFont(for: .bold,
+                                                                                         size: FontManager.FontSize.header2.rawValue)
         view.tintColor = UIColor.white
     }
     

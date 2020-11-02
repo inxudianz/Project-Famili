@@ -13,10 +13,10 @@ import LUHandler
 class PrivacyPolicyViewController: UIViewController, PrivacyPolicyViewProtocol {
     
     // MARK: - Outlet
-    @IBOutlet weak var PrivacyPolicyScrollView: UIScrollView!
-    @IBOutlet weak var PrivacyPolicyLabel: UILabel! {
+    @IBOutlet weak var privacyPolicyScrollView: UIScrollView!
+    @IBOutlet weak var privacyPolicyLabel: UILabel! {
         didSet {
-            PrivacyPolicyLabel.font = FontManager.getFont(for: .regular, size: FontManager.FontSize.button.rawValue)
+            privacyPolicyLabel.font = FontManager.getFont(for: .regular, size: FontManager.FontSize.button.rawValue)
         }
     }
     
@@ -39,7 +39,7 @@ class PrivacyPolicyViewController: UIViewController, PrivacyPolicyViewProtocol {
     
     // MARK: - Function
     func updatePrivacyPolicyText(policy text: String) {
-        PrivacyPolicyLabel.text = text
+        privacyPolicyLabel.text = text
     }
     
     func showLoading() {

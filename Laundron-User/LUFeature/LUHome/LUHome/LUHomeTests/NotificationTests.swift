@@ -49,9 +49,9 @@ class NotificationMock: NotificationViewProtocol {
 }
 
 class NotificationNetworkMock: HomeNetworkProtocol {
-    var homeBannersDelegate: HomeBannersProtocol?
-    var retrieveNotificationMessageDelegate: RetrieveNotificationMessageDelegate?
-    var retrieveNotificationNewsDelegate: RetrieveNotificationNewsDelegate?
+    weak var homeBannersDelegate: HomeBannersProtocol?
+    weak var retrieveNotificationMessageDelegate: RetrieveNotificationMessageDelegate?
+    weak var retrieveNotificationNewsDelegate: RetrieveNotificationNewsDelegate?
     
     var isNotificationMessageGet = false
     func notificationMessageGet(userId: Int) {

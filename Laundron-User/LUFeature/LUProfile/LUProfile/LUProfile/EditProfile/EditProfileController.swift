@@ -138,8 +138,8 @@ class EditProfileController: UIViewController, EditProfileProtocol {
     }
     
     private func enableHideKeyboard() {
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-        view.addGestureRecognizer(tap)
+        let tapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tapGesture)
     }
     
     private func setupButton() {
@@ -150,8 +150,7 @@ class EditProfileController: UIViewController, EditProfileProtocol {
             if validation == false {
                 isAllFieldsValid = false
                 break
-            }
-            else {
+            } else {
                 isAllFieldsValid = true
             }
         }

@@ -16,9 +16,9 @@ class HelpCenterViewController: UIViewController, HelpCenterViewProtocol {
     var viewModel: HelpCenterViewModelProtocol?
     lazy var loadingView = FamiliLoadingView(frame: self.view.frame)
     
-    
     init() {
-        super.init(nibName: String(describing: HelpCenterViewController.self), bundle: Bundle(for: HelpCenterViewController.self))
+        super.init(nibName: String(describing: HelpCenterViewController.self),
+                   bundle: Bundle(for: HelpCenterViewController.self))
     }
     
     required init?(coder: NSCoder) {
@@ -39,14 +39,14 @@ class HelpCenterViewController: UIViewController, HelpCenterViewProtocol {
         }
     }
     
-    private func setupView(){
+    private func setupView() {
         helpCenterTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         helpCenterTableView.delegate = self
         helpCenterTableView.dataSource = viewModel?.dataSource
         helpCenterTableView.tableFooterView = UIView()
     }
     
-    func reloadTableData(){
+    func reloadTableData() {
         helpCenterTableView.reloadData()
     }
     
@@ -60,7 +60,7 @@ class HelpCenterViewController: UIViewController, HelpCenterViewProtocol {
     
 }
 
-extension HelpCenterViewController: UITableViewDelegate{
+extension HelpCenterViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         viewModel?.didSelectRow(at: indexPath)
     }

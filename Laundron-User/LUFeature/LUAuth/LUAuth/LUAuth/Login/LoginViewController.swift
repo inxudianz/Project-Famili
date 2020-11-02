@@ -30,12 +30,14 @@ class LoginViewController: UIViewController, LoginViewProtocol {
     @IBOutlet weak var loginButton: FamiliButton! {
         didSet {
             loginButton.isEnabled = false
-            loginButton.titleLabel?.font = FontManager.getFont(for: .semibold, size: FontManager.FontSize.button.rawValue)
+            loginButton.titleLabel?.font = FontManager.getFont(for: .semibold,
+                                                               size: FontManager.FontSize.button.rawValue)
         }
     }
     @IBOutlet weak var registerButton: UIButton! {
         didSet {
-            registerButton.titleLabel?.font = FontManager.getFont(for: .semibold, size: FontManager.FontSize.button.rawValue)
+            registerButton.titleLabel?.font = FontManager.getFont(for: .semibold,
+                                                                  size: FontManager.FontSize.button.rawValue)
         }
     }
     @IBOutlet weak var orLabel: UILabel! {
@@ -113,12 +115,16 @@ class LoginViewController: UIViewController, LoginViewProtocol {
         if notification.name == UIResponder.keyboardDidShowNotification {
             contentHeight.constant += AuthConstantLogin.CommonValue.contentHeight
             UIView.animate(withDuration: 0.3) {
-                self.scrollView.contentOffset = .init(x: self.scrollView.contentOffset.x, y: self.scrollView.contentOffset.y + AuthConstantLogin.CommonValue.contentHeight)
+                self.scrollView.contentOffset = .init(x: self.scrollView.contentOffset.x,
+                                                      y: self.scrollView.contentOffset.y +
+                                                        AuthConstantLogin.CommonValue.contentHeight)
             }
         } else {
             contentHeight.constant = 0
             UIView.animate(withDuration: 0.3) {
-                self.scrollView.contentOffset = .init(x: self.scrollView.contentOffset.x, y: self.scrollView.contentOffset.y - AuthConstantLogin.CommonValue.contentHeight)
+                self.scrollView.contentOffset = .init(x: self.scrollView.contentOffset.x,
+                                                      y: self.scrollView.contentOffset.y -
+                                                        AuthConstantLogin.CommonValue.contentHeight)
             }
         }
     }
@@ -135,8 +141,10 @@ class LoginViewController: UIViewController, LoginViewProtocol {
         emailTextField.addTarget(self, action: #selector(editingDidEnd(sender:)), for: .editingDidEndOnExit)
         registerButton.addTarget(self, action: #selector(registerTapped), for: .touchUpInside)
         
-        NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardChange(_:)), name: UIResponder.keyboardDidShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardChange(_:)), name: UIResponder.keyboardDidHideNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardChange(_:)),
+                                               name: UIResponder.keyboardDidShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardChange(_:)),
+                                               name: UIResponder.keyboardDidHideNotification, object: nil)
 
         googleLoginButton.loginButtonDelegate = self
         facebookLoginButton.loginButtonDelegate = self
@@ -161,8 +169,9 @@ class LoginViewController: UIViewController, LoginViewProtocol {
     }
     
     private func addHideKeyboardRecognizer() {
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-        view.addGestureRecognizer(tap)
+        let tapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self,
+                                                                        action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tapGesture)
     }
     
     func showLoading() {
@@ -180,7 +189,7 @@ class LoginViewController: UIViewController, LoginViewProtocol {
     }
     
     func showFacebookSignIn() {
-        FacebookSDKHandler.Authentication.signIn(with: self) { (result) in
+        FacebookSDKHandler.Authentication.signIn(with: self) { (_) in
             Log.debug(message: "Success")
         }
     }

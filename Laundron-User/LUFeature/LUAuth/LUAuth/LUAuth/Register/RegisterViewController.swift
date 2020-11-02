@@ -43,7 +43,8 @@ class RegisterViewController: UIViewController, RegisterViewProtocol {
     
     @IBOutlet weak var labelRegister: UILabel! {
            didSet {
-               labelRegister.font = FontManager.getFont(for: .semibold, size: FontManager.FontSize.navigationLarge.rawValue)
+               labelRegister.font = FontManager.getFont(for: .semibold,
+                                                        size: FontManager.FontSize.navigationLarge.rawValue)
            }
        }
     @IBOutlet weak var labelError: UILabel! {
@@ -58,7 +59,8 @@ class RegisterViewController: UIViewController, RegisterViewProtocol {
     }
     @IBOutlet weak var btnLoginHere: UIButton! {
         didSet {
-            btnLoginHere.titleLabel?.font = FontManager.getFont(for: .semibold, size: FontManager.FontSize.button.rawValue)
+            btnLoginHere.titleLabel?.font = FontManager.getFont(for: .semibold,
+                                                                size: FontManager.FontSize.button.rawValue)
         }
     }
     
@@ -74,7 +76,8 @@ class RegisterViewController: UIViewController, RegisterViewProtocol {
     
     // MARK: - Initialization
     init() {
-        super.init(nibName: String(describing: RegisterViewController.self), bundle: Bundle(for: RegisterViewController.self))
+        super.init(nibName: String(describing: RegisterViewController.self),
+                   bundle: Bundle(for: RegisterViewController.self))
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -188,8 +191,9 @@ class RegisterViewController: UIViewController, RegisterViewProtocol {
     }
     
     private func addHideKeyboardRecognizer() {
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-        view.addGestureRecognizer(tap)
+        let tapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self,
+                                                                        action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tapGesture)
     }
 
     @objc func dismissKeyboard() {

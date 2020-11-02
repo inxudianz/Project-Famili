@@ -15,24 +15,24 @@ class LoginViewModel: LoginViewModelProtocol {
     weak var view: LoginViewProtocol?
     weak var coordinator: AuthCoordinatorProtocol?
     var network: AuthNetworkProtocol?
-    
+
     // MARK: - Initialization
     init() {
         self.network = AuthNetwork()
         self.network?.authLoginDelegate = self
     }
-    
+
     // MARK: - Function
     func login(email: String, password: String) {
         view?.showLoading()
         let data = AuthModel.Login(email: email, password: password)
         network?.login(data: data)
     }
-    
+
     func register() {
         coordinator?.navigateToRegister()
     }
-    
+
     func handleLoginButton(id: AuthConstantLogin.ButtonIdentifier?) {
         guard let id = id else { return }
         switch id {
@@ -42,12 +42,10 @@ class LoginViewModel: LoginViewModelProtocol {
             view?.showFacebookSignIn()
         }
     }
-    
+
     func isTextsEmpty(texts: [String]) -> Bool {
-        for text in texts {
-            if text.isEmpty {
-                return true
-            }
+        for text in texts where text.isEmpty {
+            return true
         }
         return false
     }

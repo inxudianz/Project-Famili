@@ -9,7 +9,7 @@
 import Foundation
 
 final public class Log {
-    public enum LogEvent: String{
+    public enum LogEvent: String {
         case error = "[‼️]"
         case info = "[📌]"
         case debug = "[🔍]"
@@ -31,7 +31,13 @@ final public class Log {
         return components.isEmpty ? "" : lastComponent
     }
     
-    public class func error(message: Any, taskRef: String = "", event: LogEvent = .error, fileName: String = #file, line: Int = #line, column: Int = #column, funcName: String = #function) {
+    public class func error(message: Any,
+                            taskRef: String = "",
+                            event: LogEvent = .error,
+                            fileName: String = #file,
+                            line: Int = #line,
+                            column: Int = #column,
+                            funcName: String = #function) {
         if isDebug {
             Swift.print(
                 #"""
@@ -47,7 +53,13 @@ final public class Log {
         }
     }
     
-    public class func info(message: Any, taskRef: String = "", event: LogEvent = .info, fileName: String = #file, line: Int = #line, column: Int = #column, funcName: String = #function) {
+    public class func info(message: Any,
+                           taskRef: String = "",
+                           event: LogEvent = .info,
+                           fileName: String = #file,
+                           line: Int = #line,
+                           column: Int = #column,
+                           funcName: String = #function) {
         if isDebug {
             Swift.print(
                 #"""
@@ -63,7 +75,13 @@ final public class Log {
         }
     }
     
-    public class func debug(message: Any, taskRef: String = "", event: LogEvent = .debug, fileName: String = #file, line: Int = #line, column: Int = #column, funcName: String = #function) {
+    public class func debug(message: Any,
+                            taskRef: String = "",
+                            event: LogEvent = .debug,
+                            fileName: String = #file,
+                            line: Int = #line,
+                            column: Int = #column,
+                            funcName: String = #function) {
         if isDebug {
             Swift.print(
                 #"""
@@ -79,7 +97,13 @@ final public class Log {
         }
     }
     
-    public class func warning(message: Any, taskRef: String = "", event: LogEvent = .warning, fileName: String = #file, line: Int = #line, column: Int = #column, funcName: String = #function) {
+    public class func warning(message: Any,
+                              taskRef: String = "",
+                              event: LogEvent = .warning,
+                              fileName: String = #file,
+                              line: Int = #line,
+                              column: Int = #column,
+                              funcName: String = #function) {
         if isDebug {
             Swift.print(
                 #"""
@@ -95,7 +119,13 @@ final public class Log {
         }
     }
     
-    public class func progress(message: Any, taskRef: String = "", event: LogEvent = .progress, fileName: String = #file, line: Int = #line, column: Int = #column, funcName: String = #function) {
+    public class func progress(message: Any,
+                               taskRef: String = "",
+                               event: LogEvent = .progress,
+                               fileName: String = #file,
+                               line: Int = #line,
+                               column: Int = #column,
+                               funcName: String = #function) {
         if isDebug {
             Swift.print(
                 #"""

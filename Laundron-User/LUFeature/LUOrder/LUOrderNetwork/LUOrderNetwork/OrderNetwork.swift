@@ -29,7 +29,9 @@ public class OrderNetwork: OrderNetworkProtocol {
     }
     
     public func getOngoingOrder(userId: String) {
-        networkService?.request(OrderService.getOngoing(userId: userId), EmptyModel(), OrderResponse.Ongoing.self, completion: { [weak self] (result) in
+        networkService?.request(OrderService.getOngoing(userId: userId),
+                                EmptyModel(),
+                                OrderResponse.Ongoing.self, completion: { [weak self] (result) in
             switch result {
             case .success(let response):
                 self?.ongoingOrderDelegate?.didSuccessGetOngoingOrder(response: response)
@@ -40,7 +42,9 @@ public class OrderNetwork: OrderNetworkProtocol {
     }
     
     public func getHistoryOrder(userId: String) {
-        networkService?.request(OrderService.getHistory(userId: userId), EmptyModel(), OrderResponse.History.self, completion: { [weak self] (result) in
+        networkService?.request(OrderService.getHistory(userId: userId),
+                                EmptyModel(),
+                                OrderResponse.History.self, completion: { [weak self] (result) in
             switch result {
             case .success(let response):
                 self?.historyOrderDelegate?.didSuccessGetHistoryOrder(response: response)

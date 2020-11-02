@@ -23,20 +23,16 @@ enum AuthConstant {
         enum Color: String {
             case errorLabel = "#FF1100FF"
         }
-        
         enum LocalizedKey: String {
             case emailOrPasswordIncorrect = "Your e-mail or password is incorrect"
-            
             func localized() -> String {
                 return rawValue.localize()
             }
         }
-        
         enum CommonValue {
             static let contentHeight: CGFloat = 40
         }
     }
-    
     enum Register {
         enum TextFieldIdentifier: Int {
             case name
@@ -45,7 +41,7 @@ enum AuthConstant {
             case password
             case confirmPassword
         }
-        
+
         enum TextFieldError {
             case empty
             case invalid

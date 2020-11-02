@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PrivacyPolicyViewController" customModule="MainApp" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PrivacyPolicyViewController" customModule="LUProfile" customModuleProvider="target">
             <connections>
-                <outlet property="PrivacyPolicyLabel" destination="ohU-aR-i8l" id="XBV-qj-U2T"/>
-                <outlet property="PrivacyPolicyScrollView" destination="9rz-L4-y9U" id="orr-zF-Jxv"/>
+                <outlet property="privacyPolicyLabel" destination="ohU-aR-i8l" id="WmL-Am-4Yg"/>
+                <outlet property="privacyPolicyScrollView" destination="9rz-L4-y9U" id="YX2-Uj-V8Q"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -41,6 +42,7 @@
                     <viewLayoutGuide key="frameLayoutGuide" id="y1n-Kn-ihD"/>
                 </scrollView>
             </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="9rz-L4-y9U" secondAttribute="bottom" constant="50" id="10q-fB-EfM"/>
@@ -48,7 +50,6 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="9rz-L4-y9U" secondAttribute="trailing" constant="35" id="Bta-xi-obW"/>
                 <constraint firstItem="9rz-L4-y9U" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="64" id="CM1-zx-GEu"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="86.956521739130437" y="99.776785714285708"/>
         </view>
     </objects>

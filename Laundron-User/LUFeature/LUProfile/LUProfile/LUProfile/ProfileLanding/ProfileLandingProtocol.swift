@@ -31,4 +31,3 @@ protocol ProfileLandingViewProtocol: class {
     func showLoading()
     func stopLoading()
 }
-

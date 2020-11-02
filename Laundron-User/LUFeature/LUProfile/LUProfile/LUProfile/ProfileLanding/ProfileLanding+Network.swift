@@ -25,4 +25,3 @@ extension ProfileLandingViewModel: RetrieveProfileDelegate {
         Log.info(message: error)
     }
 }
-

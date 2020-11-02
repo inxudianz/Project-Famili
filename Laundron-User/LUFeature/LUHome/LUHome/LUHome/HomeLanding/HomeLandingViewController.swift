@@ -37,14 +37,17 @@ class HomeLandingViewController: UIViewController, HomeLandingViewProtocol {
     @IBOutlet weak var bannerCollectionView: UICollectionView! {
         didSet {
             bannerCollectionView.layer.cornerRadius = HomeLandingConstant.Common.viewCornerRadius
-            bannerCollectionView.layer.backgroundColor = UIColor(hex: HomeLandingConstant.Common.collectionViewColor)?.cgColor
+            bannerCollectionView.layer.backgroundColor = UIColor(hex: HomeLandingConstant
+                                                                    .Common
+                                                                    .collectionViewColor)?.cgColor
         }
     }
     @IBOutlet weak var bannerPageControl: UIPageControl!
     @IBOutlet weak var serviceCollectionView: UICollectionView! {
         didSet {
             serviceCollectionView.layer.cornerRadius = HomeLandingConstant.Common.viewCornerRadius
-            serviceCollectionView.layer.backgroundColor = UIColor(hex: HomeLandingConstant.Common.collectionViewColor)?.cgColor
+            serviceCollectionView.layer.backgroundColor =
+                UIColor(hex: HomeLandingConstant.Common.collectionViewColor)?.cgColor
         }
     }
     
@@ -54,7 +57,8 @@ class HomeLandingViewController: UIViewController, HomeLandingViewProtocol {
 
     // MARK: - Initialization
     init() {
-        super.init(nibName: String(describing: HomeLandingViewController.self), bundle: Bundle(for: HomeLandingViewController.self))
+        super.init(nibName: String(describing: HomeLandingViewController.self),
+                   bundle: Bundle(for: HomeLandingViewController.self))
     }
     
     required init?(coder: NSCoder) {
@@ -91,8 +95,10 @@ class HomeLandingViewController: UIViewController, HomeLandingViewProtocol {
     
     // MARK: - Private Function
     private func setBannerCollectionView() {
-        let bannerCell = UINib(nibName: String(describing: BannerCollectionViewCell.self), bundle: Bundle(for: BannerCollectionViewCell.self))
-        viewModel?.bannerDelegate = HomeLandingBannerDelegate(bannerCollectionView: bannerCollectionView, bannerPageControl: bannerPageControl)
+        let bannerCell = UINib(nibName: String(describing: BannerCollectionViewCell.self),
+                               bundle: Bundle(for: BannerCollectionViewCell.self))
+        viewModel?.bannerDelegate = HomeLandingBannerDelegate(bannerCollectionView: bannerCollectionView,
+                                                              bannerPageControl: bannerPageControl)
         bannerCollectionView.register(bannerCell, forCellWithReuseIdentifier: HomeLandingConstant.BannerCell.cellID)
         bannerCollectionView.dataSource = viewModel?.bannerDataSource
         bannerCollectionView.delegate = viewModel?.bannerDelegate
@@ -104,19 +110,24 @@ class HomeLandingViewController: UIViewController, HomeLandingViewProtocol {
         let collectionFlow = UICollectionViewFlowLayout()
         collectionFlow.minimumLineSpacing = 0
         collectionFlow.minimumInteritemSpacing = 0
-        collectionFlow.itemSize = .init(width: bannerCollectionView.bounds.width, height: bannerCollectionView.bounds.height)
+        collectionFlow.itemSize = .init(width: bannerCollectionView.bounds.width,
+                                        height: bannerCollectionView.bounds.height)
         collectionFlow.scrollDirection = .horizontal
         
         return collectionFlow
     }
     
     private func setServiceCollectionView() {
-        let serviceCell = UINib(nibName: String(describing: ServiceCollectionViewCell.self), bundle: Bundle(for: ServiceCollectionViewCell.self))
-        let serviceHeaderCell = UINib(nibName: String(describing: ServiceHeaderCollectionReusableView.self), bundle: Bundle(for: ServiceHeaderCollectionReusableView.self))
+        let serviceCell = UINib(nibName: String(describing: ServiceCollectionViewCell.self),
+                                bundle: Bundle(for: ServiceCollectionViewCell.self))
+        let serviceHeaderCell = UINib(nibName: String(describing: ServiceHeaderCollectionReusableView.self),
+                                      bundle: Bundle(for: ServiceHeaderCollectionReusableView.self))
         viewModel?.serviceDelegate = HomeLandingServiceDelegate(serviceCollectionView: serviceCollectionView)
         serviceCollectionView.register(serviceCell, forCellWithReuseIdentifier: HomeLandingConstant.ServiceCell.cellID)
         serviceCollectionView.dataSource = viewModel?.serviceDataSource
         serviceCollectionView.delegate = viewModel?.serviceDelegate
-        serviceCollectionView.register(serviceHeaderCell, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HomeLandingConstant.HeaderServiceCell.cellID)
+        serviceCollectionView.register(serviceHeaderCell,
+                                       forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+                                       withReuseIdentifier: HomeLandingConstant.HeaderServiceCell.cellID)
     }
 }

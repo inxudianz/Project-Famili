@@ -22,6 +22,4 @@ extension LoginViewModel: AuthLoginDelegate {
         Log.error(message: error)
         view?.errorLogin()
     }
-    
-    
 }

@@ -37,6 +37,4 @@ public class SampleProfileCoordinator: SampleProfileCoordinatorProtocol {
         vm.view = vc
         navigationController?.pushViewController(vc, animated: true)
     }
-    
-    
 }

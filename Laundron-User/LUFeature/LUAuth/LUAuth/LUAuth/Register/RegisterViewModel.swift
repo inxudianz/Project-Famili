@@ -32,7 +32,8 @@ class RegisterViewModel: RegisterViewModelProtocol {
         network?.register(data: data)
     }
     
-    func handleField(text: String, with type: AuthConstantRegister.TextFieldIdentifier) -> AuthConstantRegister.TextFieldError {
+    func handleField(text: String,
+                     with type: AuthConstantRegister.TextFieldIdentifier) -> AuthConstantRegister.TextFieldError {
         if text.isEmpty {
             return .empty
         }

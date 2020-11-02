@@ -20,4 +20,3 @@ protocol HelpCenterDetailViewProtocol: class {
     func showLoading()
     func stopLoading()
 }
-

@@ -84,11 +84,11 @@ class HelpCenterDetailCoordinatorMock: ProfileCoordinatorProtocol {
 
 class HelpCenterDetailNetworkMock: ProfileNetworkProtocol {
     
-    var retrieveProfileDelegate: RetrieveProfileDelegate?
-    var editProfileDelegate: EditProfileDelegate?
-    var retrieveTermsOfServiceDelegate: RetrieveTermsOfServiceDelegate?
-    var retrievePrivacyPolicyDelegate: RetrievePrivacyPolicyDelegate?
-    var retrieveHelpCenterDelegate: RetrieveHelpCenterDelegate?
+    weak var retrieveProfileDelegate: RetrieveProfileDelegate?
+    weak var editProfileDelegate: EditProfileDelegate?
+    weak var retrieveTermsOfServiceDelegate: RetrieveTermsOfServiceDelegate?
+    weak var retrievePrivacyPolicyDelegate: RetrievePrivacyPolicyDelegate?
+    weak var retrieveHelpCenterDelegate: RetrieveHelpCenterDelegate?
 
     var isProfileGet = false
     func profileGet(userId: Int) {
@@ -136,5 +136,3 @@ class HelpCenterDetailTests: QuickSpec {
         }
     }
 }
-
-

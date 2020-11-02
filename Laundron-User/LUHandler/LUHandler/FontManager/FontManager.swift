@@ -29,8 +29,8 @@ public struct FontManager {
     }
     
     public static func getFont(name: String = "Inter",
-                        for type: FontWeight,
-                        size: CGFloat) -> UIFont {
+                               for type: FontWeight,
+                               size: CGFloat) -> UIFont {
         let fontWeight = type.rawValue
         guard let font = UIFont(name: name + fontWeight, size: size) else { return .systemFont(ofSize: size) }
         return font

@@ -81,11 +81,11 @@ class ProfileLandingCoordinatorMock: ProfileCoordinatorProtocol {
 }
 
 class ProfileLandingNetworkMock: ProfileNetworkProtocol {
-    var retrievePrivacyPolicyDelegate: RetrievePrivacyPolicyDelegate?
-    var retrieveProfileDelegate: RetrieveProfileDelegate?
-    var editProfileDelegate: EditProfileDelegate?
-    var retrieveTermsOfServiceDelegate: RetrieveTermsOfServiceDelegate?
-    var retrieveHelpCenterDelegate: RetrieveHelpCenterDelegate?
+    weak var retrievePrivacyPolicyDelegate: RetrievePrivacyPolicyDelegate?
+    weak var retrieveProfileDelegate: RetrieveProfileDelegate?
+    weak var editProfileDelegate: EditProfileDelegate?
+    weak var retrieveTermsOfServiceDelegate: RetrieveTermsOfServiceDelegate?
+    weak var retrieveHelpCenterDelegate: RetrieveHelpCenterDelegate?
 
     var isProfileGet = false
     func profileGet(userId: Int) {
@@ -118,6 +118,7 @@ class ProfileLandingNetworkMock: ProfileNetworkProtocol {
 }
 
 class ProfileLandingTests: QuickSpec {
+    // swiftlint:disable function_body_length
     override func spec() {
         describe("ViewModel") {
             var sut: ProfileLandingViewModel!
@@ -211,5 +212,3 @@ class ProfileLandingTests: QuickSpec {
         }
     }
 }
-
-

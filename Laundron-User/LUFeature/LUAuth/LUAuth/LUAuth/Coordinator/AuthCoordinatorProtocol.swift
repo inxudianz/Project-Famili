@@ -9,7 +9,7 @@
 import Foundation
 import LUCoordinator
 
-protocol AuthCoordinatorProtocol: Coordinator {    
+protocol AuthCoordinatorProtocol: Coordinator {
     func navigateToHome()
     func navigateToLogin()
     func navigateToRegister()

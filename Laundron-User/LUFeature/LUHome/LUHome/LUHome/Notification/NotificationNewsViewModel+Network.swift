@@ -22,7 +22,7 @@ extension NotificationViewModel: RetrieveNotificationNewsDelegate {
             }
             notificationNewsDataSource?.setData(datas: data)
             view?.reloadNewsTableData()
-        }else{
+        } else {
             view?.newsTableContentIsEmpty = true
         }
         view?.stopLoading()

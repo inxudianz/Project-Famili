@@ -15,13 +15,15 @@ public class InitialScreenViewController: UIViewController, InitialScreenViewPro
     @IBOutlet weak var initialScreenImageView: UIImageView!
     @IBOutlet weak var initialScreenLabel: UILabel! {
         didSet {
-            initialScreenLabel.font = FontManager.getFont(for: .semibold, size: FontManager.FontSize.navigationLarge.rawValue)
+            initialScreenLabel.font = FontManager.getFont(for: .semibold,
+                                                          size: FontManager.FontSize.navigationLarge.rawValue)
         }
     }
     @IBOutlet weak var initialScreenArrowButton: UIButton!
     
     init() {
-        super.init(nibName: String(describing: InitialScreenViewController.self), bundle: Bundle(for: InitialScreenViewController.self))
+        super.init(nibName: String(describing: InitialScreenViewController.self),
+                   bundle: Bundle(for: InitialScreenViewController.self))
     }
     
     required init?(coder aDecoder: NSCoder) {

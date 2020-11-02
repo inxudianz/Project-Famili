@@ -16,8 +16,8 @@ class HomeLandingViewModel: HomeLandingViewModelProtocol {
     var network: HomeNetworkProtocol?
     var bannerDataSource: HomeLandingBannerDataSource?
     var serviceDataSource: HomeLandingServiceDataSource?
-    var bannerDelegate: HomeLandingBannerDelegate?
-    var serviceDelegate: HomeLandingServiceDelegate?
+    weak var bannerDelegate: HomeLandingBannerDelegate?
+    weak var serviceDelegate: HomeLandingServiceDelegate?
     
     init() {
         network = HomeNetwork()
