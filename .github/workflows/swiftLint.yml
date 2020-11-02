@@ -4,7 +4,7 @@ on:
   push:
     paths:
     - '.github/workflows/swiftlint.yml'
-    - '.swiftlint.yml'
+    - 'Laundron-User/LUMain/.swiftlint.yml'
     - '**/*.swift'
     branches:
     - develop
