@@ -14,6 +14,7 @@ def mainModule
   pod "RxCocoa", '~> 5.1.1'
   pod "GoogleSignIn", '~> 5.0.2'
   pod "FBSDKLoginKit", '~> 8.0.0'
+  pod "SwiftLint"
 end
 
 def testModule
