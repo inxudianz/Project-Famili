@@ -1,0 +1,35 @@
+name: SwiftLint
+
+on:
+  push:
+    paths:
+    - '.github/workflows/swiftlint.yml'
+    - 'Laundron-User/LUMain/.swiftlint.yml'
+    - '**/*.swift'
+    branches:
+    - develop
+    - feature/*
+    - bugfix/*
+    - component/*
+    
+  pull_request:
+    paths:
+    - '.github/workflows/swiftlint.yml'
+    - 'Laundron-User/LUMain/.swiftlint.yml'
+    - '**/*.swift'
+    branches:
+    - develop
+    - feature/*
+    - bugfix/*
+    - component/*
+
+jobs:
+  build:
+  
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: SwiftLint Check
+      uses: norio-nomura/action-swiftlint@3.1.0
+      with:
+        args: --force-exclude --config Laundron-User/LUMain/.swiftlint.yml
