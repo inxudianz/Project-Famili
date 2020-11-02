@@ -21,8 +21,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Dependencies
-      run: |
-        exec pod install
     - name: SwiftLint Check
       uses: norio-nomura/action-swiftlint@3.1.0
