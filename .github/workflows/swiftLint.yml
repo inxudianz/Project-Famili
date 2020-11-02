@@ -32,4 +32,4 @@ jobs:
     - name: SwiftLint Check
       uses: norio-nomura/action-swiftlint@3.1.0
       with:
-        args: --force-exclude
+        args: --force-exclude --config Laundron-User/LUMain/.swiftlint.yml
