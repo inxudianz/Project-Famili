@@ -38,7 +38,6 @@ class SampleHomeViewMock: SampleHomeViewProtocol {
         isSetNavigationTitle = true
     }
     
-    
 }
 
 class SampleHomeCoordinatorMock: SampleHomeCoordinatorProtocol {
@@ -66,7 +65,7 @@ class SampleHomeCoordinatorMock: SampleHomeCoordinatorProtocol {
 }
 
 class SampleNetworkMock: SampleNetworkProtocol {
-    var sampleNetworkDelegate: SampleNetworkDelegate?
+    weak var sampleNetworkDelegate: SampleNetworkDelegate?
         
     var isIDRetrieved = false
     
@@ -77,7 +76,7 @@ class SampleNetworkMock: SampleNetworkProtocol {
     var isIDRetrievedObservable = false
     func retrieveIDObservable() -> Observable<SampleResponse> {
         isIDRetrievedObservable = true
-        let returnValue:Observable<SampleResponse> = Observable.create { (event) -> Disposable in
+        let returnValue:Observable<SampleResponse> = Observable.create { (_) -> Disposable in
             
             return Disposables.create()
         }

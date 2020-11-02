@@ -86,11 +86,11 @@ class PrivacyPolicyCoordinatorMock: ProfileCoordinatorProtocol {
 }
 
 class PrivacyPolicyNetworkMock: ProfileNetworkProtocol {
-    var retrieveTermsOfServiceDelegate: RetrieveTermsOfServiceDelegate?
-    var retrievePrivacyPolicyDelegate: RetrievePrivacyPolicyDelegate?
-    var retrieveProfileDelegate: RetrieveProfileDelegate?
-    var editProfileDelegate: EditProfileDelegate?
-    var retrieveHelpCenterDelegate: RetrieveHelpCenterDelegate?
+    weak var retrieveTermsOfServiceDelegate: RetrieveTermsOfServiceDelegate?
+    weak var retrievePrivacyPolicyDelegate: RetrievePrivacyPolicyDelegate?
+    weak var retrieveProfileDelegate: RetrieveProfileDelegate?
+    weak var editProfileDelegate: EditProfileDelegate?
+    weak var retrieveHelpCenterDelegate: RetrieveHelpCenterDelegate?
 
     var isProfileGet = false
     func profileGet(userId: Int) {
@@ -160,4 +160,3 @@ class PrivacyPolicyTests: QuickSpec {
         }
     }
 }
-

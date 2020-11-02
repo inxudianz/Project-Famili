@@ -33,11 +33,9 @@ public enum CoordinatorFeature: String {
 
 extension Coordinator {
     public func didChildFinish(_ child: Coordinator?) {
-        for (index, coordinator) in childCoordinators.enumerated() {
-            if coordinator === child {
-                childCoordinators.remove(at: index)
-                break
-            }
+        for (index, coordinator) in childCoordinators.enumerated() where coordinator === child {
+            childCoordinators.remove(at: index)
+            break
         }
     }
 }

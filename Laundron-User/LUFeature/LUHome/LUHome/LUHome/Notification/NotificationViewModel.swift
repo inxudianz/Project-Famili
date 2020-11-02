@@ -27,21 +27,21 @@ class NotificationViewModel: NotificationViewModelProtocol {
     }
     
     // MARK: - Function
-    func getNotificationMessage(userId: Int){
+    func getNotificationMessage(userId: Int) {
         view?.showLoading()
         network?.notificationMessageGet(userId: userId)
     }
     
-    func getNotificationNews(userId: Int){
+    func getNotificationNews(userId: Int) {
         view?.showLoading()
         network?.notificationNewsGet(userId: userId)
     }
     
-    func messageTableDidSelectRow(at: IndexPath){
+    func messageTableDidSelectRow(at: IndexPath) {
         //func when user select a cell on message table
     }
     
-    func newsTableDidSelectRow(at: IndexPath){
+    func newsTableDidSelectRow(at: IndexPath) {
         //func when user select a cell on news table
     }
     

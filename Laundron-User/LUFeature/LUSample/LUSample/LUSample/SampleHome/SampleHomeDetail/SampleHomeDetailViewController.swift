@@ -9,7 +9,7 @@
 import UIKit
 import Component
 
-class SampleHomeDetailViewController: UIViewController, SampleHomeDetailViewProtocol{
+class SampleHomeDetailViewController: UIViewController, SampleHomeDetailViewProtocol {
     
     var viewModel: SampleHomeDetailViewModelProtocol?
     

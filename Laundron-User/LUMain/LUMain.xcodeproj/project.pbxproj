@@ -204,6 +204,7 @@
 				922FD16425481024003288BF /* Resources */,
 				43BF2C860D26578E2F8B18E8 /* [CP] Embed Pods Frameworks */,
 				DB151D036109F0C3C02E017A /* [CP] Copy Pods Resources */,
+				9274C197254FA8D7008283DC /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -356,6 +357,24 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LUMainTests/Pods-LUMainTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		9274C197254FA8D7008283DC /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which \"${PODS_ROOT}/SwiftLint/swiftlint\" >/dev/null; then\n    ${PODS_ROOT}/SwiftLint/swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 		AC4EAE7938053258E4150F5A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -578,7 +597,6 @@
 			baseConfigurationReference = DB3313E3C48B3CD869D79709 /* Pods-LUMain.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WPQ9HAVPNV;
 				INFOPLIST_FILE = LUMain/Info.plist;
@@ -598,7 +616,6 @@
 			baseConfigurationReference = 9EB790B345F4BEE1BA657491 /* Pods-LUMain.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WPQ9HAVPNV;
 				INFOPLIST_FILE = LUMain/Info.plist;

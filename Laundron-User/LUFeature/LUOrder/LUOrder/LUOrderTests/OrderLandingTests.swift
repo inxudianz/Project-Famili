@@ -62,9 +62,8 @@ class OrderCoordinatorMock: OrderCoordinatorProtocol {
 }
 
 class OrderNetworkMock: OrderNetworkProtocol {
-    var ongoingOrderDelegate: OngoingOrderProtocol?
-    
-    var historyOrderDelegate: HistoryOrderProtocol?
+    weak var ongoingOrderDelegate: OngoingOrderProtocol?
+    weak var historyOrderDelegate: HistoryOrderProtocol?
     
     var isGetOngoingOrder = false
     func getOngoingOrder(userId: String) {
@@ -78,6 +77,7 @@ class OrderNetworkMock: OrderNetworkProtocol {
 }
 
 class OrderLandingTests: QuickSpec {
+    // swiftlint:disable function_body_length
     override func spec() {
         describe("ViewModel") {
             
@@ -96,8 +96,12 @@ class OrderLandingTests: QuickSpec {
                 dataSource = OrderLandingDataSource()
                 delegate = OrderLandingDelegate(orderView: UITableView())
                 
-                dataSource.setOngoingDatas(ongoingDatas: [.init(status: "Accepted", detail: [.init(laundryName: "Laundry", timeStamp: "123", address: "Address")])])
-                dataSource.setHistoryDatas(historyDatas: .init(status: "Done", detail: [.init(laundryName: "Laundry", timeStamp: "123", address: "Address")]))
+                dataSource
+                    .setOngoingDatas(ongoingDatas: [.init(status: "Accepted",
+                                                          detail: [.init(laundryName: "Laundry", timeStamp: "123", address: "Address")])])
+                dataSource
+                    .setHistoryDatas(historyDatas: .init(status: "Done",
+                                                         detail: [.init(laundryName: "Laundry", timeStamp: "123", address: "Address")]))
                 
                 sut = OrderLandingViewModel()
                 sut?.view = view
@@ -142,13 +146,15 @@ class OrderLandingTests: QuickSpec {
             }
             context("Function setOngoingData is called") {
                 it("Without error") {
-                    sut.setOngoingData(ongoingDatas: [.init(status: "Accepted", detail: [.init(laundryName: "Laundry", timeStamp: "123", address: "Address")])])
+                    sut.setOngoingData(ongoingDatas: [.init(status: "Accepted",
+                                                            detail: [.init(laundryName: "Laundry", timeStamp: "123", address: "Address")])])
                     expect(dataSource.ongoingDatas?.first?.status).to(equal("Accepted"))
                 }
             }
             context("Function setHistoryData is called") {
                 it("Without error") {
-                    sut.setHistoryData(historyDatas: .init(status: "Done", detail: [.init(laundryName: "Laundry", timeStamp: "123", address: "Address")]))
+                    sut.setHistoryData(historyDatas: .init(status: "Done",
+                                                           detail: [.init(laundryName: "Laundry", timeStamp: "123", address: "Address")]))
                     expect(dataSource.historyDatas?.status).to(equal("Done"))
                 }
             }
@@ -174,14 +180,18 @@ class OrderLandingTests: QuickSpec {
             }
             context("Function didSuccessGetOngoingOrder is called") {
                 it("Without error") {
-                    sut.didSuccessGetOngoingOrder(response: .init(data: [.init(status: "Accepted", detail: [.init(laundryName: "Laundry", timeStamp: "123", address: "Address")])]))
+                    sut.didSuccessGetOngoingOrder(response: .init(data: [.init(status: "Accepted",
+                                                                               detail: [.init(laundryName: "Laundry", timeStamp: "123",
+                                                                                              address: "Address")])]))
                     expect(view.isHideLoading).to(beTrue())
                     expect(view.isSetupOrderView).to(beTrue())
                 }
             }
             context("Function didSuccessGetHistoryOrder is called") {
                 it("Without error") {
-                    sut.didSuccessGetHistoryOrder(response: .init(data: .init(status: "Done", detail: [.init(laundryName: "Laundry", timeStamp: "123", address: "Address")])))
+                    sut.didSuccessGetHistoryOrder(response: .init(data: .init(status: "Done",
+                                                                              detail: [.init(laundryName: "Laundry", timeStamp: "123",
+                                                                                             address: "Address")])))
                     expect(view.isHideLoading).to(beTrue())
                     expect(view.isSetupHistoryView).to(beTrue())
                 }

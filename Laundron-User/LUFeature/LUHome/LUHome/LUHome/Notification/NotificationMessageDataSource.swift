@@ -29,7 +29,8 @@ extension NotificationMessageDataSource: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "NotificationMessageCell") as? NotificationMessageTableViewCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "NotificationMessageCell")
+                as? NotificationMessageTableViewCell else { return UITableViewCell() }
         cell.notificationMessageLaundryNameLabel.text = datas?[indexPath.row].laundryName
         cell.notificationMessageDateLabel.text = datas?[indexPath.row].timeStamp
         cell.notificationMessageContentLabel.text = datas?[indexPath.row].message

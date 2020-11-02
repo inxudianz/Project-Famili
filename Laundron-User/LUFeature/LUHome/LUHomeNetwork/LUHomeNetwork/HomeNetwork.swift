@@ -44,7 +44,9 @@ public class HomeNetwork: HomeNetworkProtocol {
     }
     
     public func notificationNewsGet(userId: Int) {
-        networkService.request(HomeService.getNotificationRequest(userId: userId), EmptyModel(), HomeResponse.GetNotificationNewsResponse.self) {  [weak self] (result) in
+        networkService.request(HomeService.getNotificationRequest(userId: userId),
+                               EmptyModel(),
+                               HomeResponse.GetNotificationNewsResponse.self) {  [weak self] (result) in
             switch result {
             case .success(let response):
                 self?.retrieveNotificationNewsDelegate?.didSuccessRetrieveNotificationNews(response: response)
@@ -55,7 +57,9 @@ public class HomeNetwork: HomeNetworkProtocol {
     }
 
     public func getBanners() {
-        networkService.request(HomeService.getBanners, EmptyModel(), HomeResponse.Banners.self) { [weak self] (result) in
+        networkService.request(HomeService.getBanners,
+                               EmptyModel(),
+                               HomeResponse.Banners.self) { [weak self] (result) in
             switch result {
             case .success(let result):
                 self?.homeBannersDelegate?.didSuccessGetBanners(response: result)

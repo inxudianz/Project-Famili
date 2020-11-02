@@ -9,8 +9,8 @@
 import Foundation
 
 enum Sections: String {
-    case Account = "Account"
-    case General = "General"
+    case account = "Account"
+    case general = "General"
 }
 
 protocol ProfileTableViewSectionProtocol: class {
@@ -22,15 +22,14 @@ protocol ProfileTableViewSectionProtocol: class {
 
 class AccountSectionModel: NSObject, ProfileTableViewSectionProtocol {
     
-    var sectionName: String = Sections.Account.rawValue
+    var sectionName: String = Sections.account.rawValue
     
     var sectionCell: [String] = ["Edit Profile", "Help Center"]
 }
 
 class GeneralSectionModel: NSObject, ProfileTableViewSectionProtocol {
     
-    var sectionName: String = Sections.General.rawValue
+    var sectionName: String = Sections.general.rawValue
     
     var sectionCell: [String] = ["Terms of Service", "Privacy Policy", "Rate Us"]
 }
-

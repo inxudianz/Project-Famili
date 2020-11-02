@@ -13,7 +13,8 @@ class ServiceHeaderCollectionReusableView: UICollectionReusableView {
     // MARK: - Outlet
     @IBOutlet weak var headerTitle: UILabel! {
         didSet {
-            headerTitle.font = FontManager.getFont(for: .medium, size: HomeLandingConstant.HeaderServiceCell.cellTitleSize)
+            headerTitle.font = FontManager.getFont(for: .medium,
+                                                   size: HomeLandingConstant.HeaderServiceCell.cellTitleSize)
             headerTitle.textColor = .white
         }
     }

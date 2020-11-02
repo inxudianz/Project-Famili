@@ -16,7 +16,7 @@ import LUCoordinator
     - **TabBar** = to display the app with tab bar
     - **NavBar** = to display the app with nav bar
  */
-public class AppCoordinator<build: BuildConfiguration>: Coordinator {
+public class AppCoordinator<Build: BuildConfiguration>: Coordinator {
     // MARK: - Property
     weak public var parentCoordinator: Coordinator?
     public var childCoordinators: [Coordinator] = [Coordinator]()

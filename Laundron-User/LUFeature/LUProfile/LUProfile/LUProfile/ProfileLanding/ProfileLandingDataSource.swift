@@ -41,8 +41,10 @@ extension ProfileLandingDataSource: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: ProfileLandingConstant.cellName) as? ProfileLandingCell else { return UITableViewCell() }
-        guard let rowInSection = datas?[indexPath.section].sectionContent?[indexPath.row] else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: ProfileLandingConstant.cellName)
+                as? ProfileLandingCell else { return UITableViewCell() }
+        guard let rowInSection = datas?[indexPath.section]
+                .sectionContent?[indexPath.row] else { return UITableViewCell() }
         cell.setCellContent(cellImage: rowInSection.imageName, cellText: rowInSection.name)
         
         return cell

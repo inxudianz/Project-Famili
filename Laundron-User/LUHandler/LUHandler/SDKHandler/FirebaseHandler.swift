@@ -50,7 +50,6 @@ public class FirebaseHandler {
         return FirebaseApp.app()?.options.clientID
     }
 
-
     public static func getGoogleCredential(idToken: String, accessToken: String) -> AuthCredential {
         return GoogleAuthProvider.credential(withIDToken: idToken, accessToken: accessToken)
     }

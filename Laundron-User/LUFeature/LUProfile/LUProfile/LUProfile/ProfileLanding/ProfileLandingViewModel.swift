@@ -29,15 +29,20 @@ class ProfileLandingViewModel: ProfileLandingViewModelProtocol {
     private func populateData() {
         let sectionNames = [ProfileLandingConstant.HeaderName.account.rawValue,
                             ProfileLandingConstant.HeaderName.general.rawValue]
-        let accountContent = [ProfileLandingData.SectionContent(name: ProfileLandingConstant.AccountContent.edit.rawValue,
+        let accountContent = [ProfileLandingData
+                                .SectionContent(name: ProfileLandingConstant.AccountContent.edit.rawValue,
                                                                 imageName: ProfileLandingConstant.ImageName.edit.rawValue),
-                              ProfileLandingData.SectionContent(name: ProfileLandingConstant.AccountContent.help.rawValue,
+                              ProfileLandingData
+                                .SectionContent(name: ProfileLandingConstant.AccountContent.help.rawValue,
                                                                 imageName: ProfileLandingConstant.ImageName.help.rawValue)]
-        let generalContent = [ProfileLandingData.SectionContent(name: ProfileLandingConstant.GeneralContent.tos.rawValue,
+        let generalContent = [ProfileLandingData
+                                .SectionContent(name: ProfileLandingConstant.GeneralContent.tos.rawValue,
                                                                 imageName: ProfileLandingConstant.ImageName.tos.rawValue),
-                              ProfileLandingData.SectionContent(name: ProfileLandingConstant.GeneralContent.privacy.rawValue,
+                              ProfileLandingData
+                                .SectionContent(name: ProfileLandingConstant.GeneralContent.privacy.rawValue,
                                                                 imageName: ProfileLandingConstant.ImageName.privacy.rawValue),
-                              ProfileLandingData.SectionContent(name: ProfileLandingConstant.GeneralContent.rate.rawValue,
+                              ProfileLandingData
+                                .SectionContent(name: ProfileLandingConstant.GeneralContent.rate.rawValue,
                                                                 imageName: ProfileLandingConstant.ImageName.rate.rawValue)]
         
         let datas = [ProfileLandingData(sectionName: sectionNames[0],

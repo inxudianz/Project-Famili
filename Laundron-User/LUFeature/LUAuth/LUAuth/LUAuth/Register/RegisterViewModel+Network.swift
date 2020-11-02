@@ -16,7 +16,7 @@ extension RegisterViewModel: AuthRegisterDelegate {
         coordinator?.navigateToLogin()
         Log.progress(message: "Success")
     }
-    
+
     func didFailedRegister(error: Error) {
         view?.stopLoading()
         Log.info(message: error)

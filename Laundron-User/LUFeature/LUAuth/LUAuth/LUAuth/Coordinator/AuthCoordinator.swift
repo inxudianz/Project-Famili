@@ -37,7 +37,8 @@ public class AuthCoordinator: AuthCoordinatorProtocol {
     }
     
     func navigateToLogin() {
-        let loginView = navigationController?.viewControllers.first(where: {$0.nibName == String(describing: LoginViewController.self)})
+        let loginView = navigationController?
+            .viewControllers.first(where: {$0.nibName == String(describing: LoginViewController.self)})
         
         if loginView != nil {
             navigationController?.popViewController(animated: true)

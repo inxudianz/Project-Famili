@@ -33,7 +33,6 @@ class SampleHomeViewController: UIViewController, SampleHomeViewProtocol {
         viewModel?.updateLabel()
     }
     
-    
     // MARK: - Initializer
     init() {
         super.init(nibName: String(describing: SampleHomeViewController.self), bundle: Bundle(for: SampleHomeViewController.self))
@@ -94,4 +93,3 @@ class SampleHomeViewController: UIViewController, SampleHomeViewProtocol {
         view.addSubview(button2)
     }
 }
-

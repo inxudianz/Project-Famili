@@ -32,6 +32,4 @@ class PrivacyPolicyViewModel: PrivacyPolicyViewModelProtocol {
     func viewDidLoad() {
         getPrivacyPolicy()
     }
-    
-    
 }

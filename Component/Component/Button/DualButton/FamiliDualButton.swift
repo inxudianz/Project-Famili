@@ -65,7 +65,6 @@ How to use:
     private var styleType: FamiliDualButtonStyle?
     public weak var familiDualButtonDelegate: FamiliDualButtonDelegate?
     
-    
     // MARK: - Initialization
     public override init(frame: CGRect) {
         super.init(frame: frame)
@@ -140,14 +139,20 @@ How to use:
     
     /// Setup the two buttons' divider styling
     private func setupDivider() {
-        dividerView.frame = CGRect(x: self.frame.width / 2, y: CommonProperty.initialPosition, width: CommonProperty.dividerWidth, height: self.frame.height)
+        dividerView.frame = CGRect(x: self.frame.width / 2,
+                                   y: CommonProperty.initialPosition,
+                                   width: CommonProperty.dividerWidth,
+                                   height: self.frame.height)
         dividerView.backgroundColor = .white
         addSubview(dividerView)
     }
     
     /// Setup left button property
     private func setupLeftButton(with style: FamiliDualButtonStyle) {
-        leftButton.frame = CGRect(x: CommonProperty.initialPosition, y: CommonProperty.initialPosition, width: self.frame.width / 2, height: self.frame.height)
+        leftButton.frame = CGRect(x: CommonProperty.initialPosition,
+                                  y: CommonProperty.initialPosition,
+                                  width: self.frame.width / 2,
+                                  height: self.frame.height)
         leftButton.setImage(.strokedCheckmark, for: .normal)
         leftButton.layer.cornerRadius = CommonProperty.cornerRadius
         leftButton.isUserInteractionEnabled = true

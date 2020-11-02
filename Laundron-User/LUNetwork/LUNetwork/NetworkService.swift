@@ -15,9 +15,9 @@ public struct NetworkService {
     public init() {}
     
     public func request<T: NetworkType, R: Decodable, E: Encodable>(_ type: T,
-                                                             _ entities: E,
-                                                             _ responseType: R.Type,
-                                                             completion: @escaping (Result<R, AFError>) -> Void ) {
+                                                                    _ entities: E,
+                                                                    _ responseType: R.Type,
+                                                                    completion: @escaping (Result<R, AFError>) -> Void ) {
         let combinedURL = type.baseURL.absoluteString + type.path
         switch type.task {
         case .plainRequest:
@@ -31,9 +31,13 @@ public struct NetworkService {
                     case .failure(let error):
                         completion(.failure(error))
                     }
-            }
+                }
         case .parameterRequest:
-            let request = AF.request(combinedURL, method: type.method, parameters: entities, encoder: JSONParameterEncoder.default, headers: type.headers)
+            let request = AF.request(combinedURL,
+                                     method: type.method,
+                                     parameters: entities,
+                                     encoder: JSONParameterEncoder.default,
+                                     headers: type.headers)
             request
                 .validate()
                 .responseDecodable(of: responseType) { (response) in
@@ -43,14 +47,14 @@ public struct NetworkService {
                     case .failure(let error):
                         completion(.failure(error))
                     }
-            }
+                }
         }
     }
     
     @discardableResult
     public func requestObservable<T: NetworkType, R: Decodable, E: Encodable>(_ type: T,
-                                                                       _ entities: E,
-                                                                       _ responseType: R.Type) -> Observable<R> {
+                                                                              _ entities: E,
+                                                                              _ responseType: R.Type) -> Observable<R> {
         let combinedURL = type.baseURL.absoluteString + type.path
         return Observable.create { (observer) -> Disposable in
             switch type.task {
@@ -66,9 +70,13 @@ public struct NetworkService {
                             observer.onError(error)
                         }
                         observer.onCompleted()
-                }
+                    }
             case .parameterRequest:
-                let request = AF.request(combinedURL, method: type.method, parameters: entities, encoder: JSONParameterEncoder.default, headers: type.headers)
+                let request = AF.request(combinedURL,
+                                         method: type.method,
+                                         parameters: entities,
+                                         encoder: JSONParameterEncoder.default,
+                                         headers: type.headers)
                 request
                     .validate()
                     .responseDecodable(of: responseType) { (response) in
@@ -79,7 +87,7 @@ public struct NetworkService {
                             observer.onError(error)
                         }
                         observer.onCompleted()
-                }
+                    }
             }
             return Disposables.create()
         }

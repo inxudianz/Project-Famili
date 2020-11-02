@@ -14,17 +14,19 @@ import LUHandler
 extension NotificationViewModel: RetrieveNotificationMessageDelegate {
     func didSuccessRetrieveNotificationMessage(response: HomeResponse.GetNotificationMessageResponse) {
         var data = [NotificationMessageData]()
-        if response.messageList.count > 1{
+        if response.messageList.count > 1 {
             for message in response.messageList {
                 guard let messageTitle = message.title else { return }
                 guard let messageContent = message.message else { return }
                 guard let messageTimeStamp = message.timeStamp else { return }
                 guard let messageLaundryName = message.laundryName else { return }
-                data.append(NotificationMessageData.init(timeStamp: messageTimeStamp, laundryName: messageLaundryName, title: messageTitle, message: messageContent))
+                data.append(NotificationMessageData.init(timeStamp: messageTimeStamp,
+                                                         laundryName: messageLaundryName,
+                                                         title: messageTitle, message: messageContent))
             }
             notificationMessageDataSource?.setData(datas: data)
             view?.reloadMessageTableData()
-        }else{
+        } else {
             view?.messageTableContentIsEmpty = true
         }
         view?.stopLoading()

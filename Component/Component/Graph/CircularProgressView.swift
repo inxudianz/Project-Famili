@@ -9,14 +9,14 @@
 import UIKit
 
 /** A circular progress bar
-
-Create circular progress bar with predefined style.
-How to use:
-* Using XIB
-   * Drag and drop a UIView and change the class using CircularProgressView
-* Programatically
-   * Init using the custom initializer to set all the required value
-*/
+ 
+ Create circular progress bar with predefined style.
+ How to use:
+ * Using XIB
+ * Drag and drop a UIView and change the class using CircularProgressView
+ * Programatically
+ * Init using the custom initializer to set all the required value
+ */
 @IBDesignable public class CircularProgressView: UIView {
     // MARK: - Enum
     /// Style available for circular progress bar
@@ -67,8 +67,7 @@ How to use:
     /// Radius for the circles
     private var radius = CGFloat(0)
     
-    
-    //MARK: - Initialization
+    // MARK: - Initialization
     /// Default init value with 0 and empty string
     public override init(frame: CGRect) {
         self.trailingColor = .black
@@ -92,21 +91,21 @@ How to use:
     }
     
     /** Programmatically initialize the circle
-            
-    Provide parameters required for the circle such as color, style, textDescription, initial value and the frame
-            
-    - parameters:
-        - color: A tuple containing color for both trailing and progress as UIColor
-        - style: A style corresponding the enum CircularProgressStyle for both the circle and the label
-        - textDescription: A string that will be displayed under the circle value
-        - initialValue: A initial value between 0 - 1 for the circle
-        - frame: A frame required for creating the circle view
+     
+     Provide parameters required for the circle such as color, style, textDescription, initial value and the frame
+     
+     - parameters:
+     - color: A tuple containing color for both trailing and progress as UIColor
+     - style: A style corresponding the enum CircularProgressStyle for both the circle and the label
+     - textDescription: A string that will be displayed under the circle value
+     - initialValue: A initial value between 0 - 1 for the circle
+     - frame: A frame required for creating the circle view
      */
     public init(color: (trailing: UIColor, progress: UIColor) = (.gray, .green),
-         style: CircularProgressStyle = .normal,
-         textDescription: String = "",
-         initialValue: CGFloat = 0,
-         frame: CGRect) {
+                style: CircularProgressStyle = .normal,
+                textDescription: String = "",
+                initialValue: CGFloat = 0,
+                frame: CGRect) {
         self.trailingColor = color.trailing
         self.progressColor = color.progress
         self.style = style.rawValue
@@ -124,7 +123,12 @@ How to use:
     // MARK: - Private Function
     /// Create the shape layer trailing and progress
     private func createShapeLayer() {
-        let circlePath = UIBezierPath(arcCenter: CGPoint(x: self.bounds.size.width / 2, y: self.bounds.size.height / 2), radius: radius, startAngle: -.pi / 2, endAngle: 3 * .pi / 2, clockwise: true)
+        let circlePath = UIBezierPath(arcCenter: CGPoint(x: self.bounds.size.width / 2,
+                                                         y: self.bounds.size.height / 2),
+                                      radius: radius,
+                                      startAngle: -.pi / 2,
+                                      endAngle: 3 * .pi / 2,
+                                      clockwise: true)
         
         trailingLayer.frame = self.bounds
         progressLayer.frame = self.bounds
@@ -242,8 +246,8 @@ How to use:
      Set the progress to a **'scale'** value, custom animatable.
      
      - Parameters:
-        - scale: value from 0 to 1 indicating the value for the progress in the circle
-        - animated: set custom animation. **'true'** if you want to use the custom animation
+     - scale: value from 0 to 1 indicating the value for the progress in the circle
+     - animated: set custom animation. **'true'** if you want to use the custom animation
      */
     public func setProgress(for scale: CGFloat, animated: Bool) {
         if animated {
@@ -257,13 +261,13 @@ How to use:
     }
     
     /**
-    Update existing progress to a **'scale'** value, custom animatable.
+     Update existing progress to a **'scale'** value, custom animatable.
      
      The progress will then adjust if the updated scale is more than 1
-    - Parameters:
-       - scale: value from 0 to 1 indicating the value for the progress in the circle
-       - animated: set custom animation. **'true'** if you want to use the custom animation
-    */
+     - Parameters:
+     - scale: value from 0 to 1 indicating the value for the progress in the circle
+     - animated: set custom animation. **'true'** if you want to use the custom animation
+     */
     public func updateProgress(for scale: CGFloat, animated: Bool) {
         var updatedScale = round((progressLayer.strokeEnd * 10)) / 10 + scale
         if updatedScale > 1 {
@@ -282,11 +286,11 @@ How to use:
     }
     
     /**
-    Reset the progress to 0 for the circle, custom animatable.
-    
-    - Parameters:
-       - animated: set custom animation. **'true'** if you want to use the custom animation
-    */
+     Reset the progress to 0 for the circle, custom animatable.
+     
+     - Parameters:
+     - animated: set custom animation. **'true'** if you want to use the custom animation
+     */
     public func resetProgress(animated: Bool) {
         if animated {
             animate(to: 0)
@@ -301,7 +305,7 @@ How to use:
     /**
      Set the text description in the bottom of the circle
      - Parameters:
-        - text: Text that will be displayed in the bottom of the circle
+     - text: Text that will be displayed in the bottom of the circle
      */
     public func setDescription(text: String) {
         progressDescLabel.text = text

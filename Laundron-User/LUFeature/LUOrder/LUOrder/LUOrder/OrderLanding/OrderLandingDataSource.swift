@@ -76,15 +76,18 @@ extension OrderLandingDataSource: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let landingCell = tableView.dequeueReusableCell(withIdentifier: OrderLandingConstant.Cell.landingCellId) as? OrderLandingTableViewCell else { return UITableViewCell() }
-        guard let emptyCell = tableView.dequeueReusableCell(withIdentifier: OrderLandingConstant.Cell.landingEmptyCellId) as? OrderEmptyTableViewCell else { return UITableViewCell() }
+        guard let landingCell = tableView.dequeueReusableCell(withIdentifier: OrderLandingConstant.Cell.landingCellId)
+                as? OrderLandingTableViewCell else { return UITableViewCell() }
+        guard let emptyCell = tableView.dequeueReusableCell(withIdentifier: OrderLandingConstant.Cell.landingEmptyCellId)
+                as? OrderEmptyTableViewCell else { return UITableViewCell() }
         
         if dataType == .ongoing {
             let filteredDatas = ongoingDatas?.filter({ (data) -> Bool in
                 data.status?.lowercased() == StatusType.allCases[indexPath.section].rawValue
             })
             
-            if filteredDatas?.count == 0 {
+            guard let isDatasEmpty = filteredDatas?.isEmpty else { return UITableViewCell() }
+            if isDatasEmpty {
                 return emptyCell
             } else {
                 let title = filteredDatas?[0].detail[indexPath.row].laundryName

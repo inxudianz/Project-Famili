@@ -12,7 +12,7 @@ import RxSwift
 import LUSampleNetwork
 import LUHandler
 
-class SampleHomeViewModel: SampleHomeViewModelProtocol{
+class SampleHomeViewModel: SampleHomeViewModelProtocol {
     weak var coordinator: SampleHomeCoordinatorProtocol?
     weak var view: SampleHomeViewProtocol?
     var network: SampleNetworkProtocol?
@@ -25,7 +25,7 @@ class SampleHomeViewModel: SampleHomeViewModelProtocol{
     }
     
     func navigateToDetail() {
-        coordinator?.getDetail({ (state, data) in
+        coordinator?.getDetail({ (state, _) in
             switch state {
             case .didFinish:
                 Log.debug(message: "ABC")

@@ -26,7 +26,8 @@ extension NotificationNewsDataSource: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "NotificationNewsCell") as? NotificationNewsTableViewCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "NotificationNewsCell")
+                as? NotificationNewsTableViewCell else { return UITableViewCell() }
         cell.notificationNewsTitleLabel.text = datas?[indexPath.row].message
         cell.notificationNewsBodyLabel.text = datas?[indexPath.row].message
         return cell

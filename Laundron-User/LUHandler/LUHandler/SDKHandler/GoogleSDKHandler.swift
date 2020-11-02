@@ -9,7 +9,6 @@
 import UIKit
 import GoogleSignIn
 
-
 public class GoogleSDKHandler {
     // MARK: - Component
     public class Component {

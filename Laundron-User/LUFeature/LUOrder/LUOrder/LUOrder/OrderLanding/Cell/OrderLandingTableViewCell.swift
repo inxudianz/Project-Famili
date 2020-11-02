@@ -34,7 +34,6 @@ class OrderLandingTableViewCell: UITableViewCell {
     }
     @IBOutlet weak var dualButton: FamiliDualButton!
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         dualButton.familiDualButtonDelegate = self

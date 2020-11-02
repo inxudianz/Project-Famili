@@ -9,7 +9,7 @@
 import Foundation
 import LUCoordinator
 
-extension AppCoordinator where build == TabBar {
+extension AppCoordinator where Build == TabBar {
     /// Builder for initializing root view for window
     public func initializeWindow() -> Self {
         window?.rootViewController = tabBarViewController
@@ -37,7 +37,7 @@ extension AppCoordinator where build == TabBar {
     }
 }
 
-extension AppCoordinator where build == NavBar {
+extension AppCoordinator where Build == NavBar {
     /// Builder for initializing root view for window
     public func initializeWindow() -> Self {
         window?.rootViewController = navigationController

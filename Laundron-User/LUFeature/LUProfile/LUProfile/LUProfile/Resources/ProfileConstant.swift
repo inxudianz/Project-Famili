@@ -60,7 +60,6 @@ enum ProfileConstant {
     }
 }
 
-
 enum EditProfileConstant {
     enum TextFieldIdentifier: Int {
         case name

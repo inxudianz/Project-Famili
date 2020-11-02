@@ -23,7 +23,7 @@ extension OrderLandingViewModel: OngoingOrderProtocol {
     
     func didFailGetOngoingOrder(error: Error?) {
         view?.hideLoading()
-        Log.info(message: error)
+        Log.info(message: error ?? "")
     }
 }
 
@@ -38,6 +38,6 @@ extension OrderLandingViewModel: HistoryOrderProtocol {
     
     func didFailGetHistoryOrder(error: Error?) {
         view?.hideLoading()
-        Log.info(message: error)
+        Log.info(message: error ?? "")
     }
 }

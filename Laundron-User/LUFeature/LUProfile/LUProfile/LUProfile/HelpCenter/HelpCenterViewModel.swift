@@ -25,7 +25,7 @@ class HelpCenterViewModel: HelpCenterViewModelProtocol {
     }
     
     // MARK: - Function
-    func didSelectRow(at indexPath: IndexPath){
+    func didSelectRow(at indexPath: IndexPath) {
         let title = dataSource?.datas?[indexPath.row].title ?? "Title Kosong"
         let body = dataSource?.datas?[indexPath.row].message ?? "Body Kosong"
         navigateToHelpCenterDetail(title: title, body: body)

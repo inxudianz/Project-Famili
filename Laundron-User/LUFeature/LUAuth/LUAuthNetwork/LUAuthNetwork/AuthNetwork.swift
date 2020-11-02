@@ -18,7 +18,7 @@ public protocol AuthNetworkProtocol {
     func register(data: AuthModel.Register)
 }
 
-public class AuthNetwork: AuthNetworkProtocol{
+public class AuthNetwork: AuthNetworkProtocol {
     weak public var authLoginDelegate: AuthLoginDelegate?
     weak public var authRegisterDelegate: AuthRegisterDelegate?
         
@@ -29,7 +29,8 @@ public class AuthNetwork: AuthNetworkProtocol{
     }
     
     public func login(data: AuthModel.Login) {
-//        FirebaseHandler.AuthenticationHandler.signIn(email: data.email ?? "", password: data.password ?? "") { [weak self] (result, error) in
+//        FirebaseHandler.AuthenticationHandler.signIn(email: data.email ?? "",
+//        password: data.password ?? "") { [weak self] (result, error) in
 //            if let error = error {
 //                self?.authLoginDelegate?.didFailedLogin(error: error)
 //            } else {
@@ -50,7 +51,8 @@ public class AuthNetwork: AuthNetworkProtocol{
     }
     
     public func register(data: AuthModel.Register) {
-//        FirebaseHandler.AuthenticationHandler.signUp(email: data.email ?? "", password: data.password ?? "") { (result, error) in
+//        FirebaseHandler.AuthenticationHandler.signUp(email: data.email ?? "",
+//        password: data.password ?? "") { (result, error) in
 //            if let error = error {
 //                self.authRegisterDelegate?.didFailedRegister(error: error)
 //            } else {

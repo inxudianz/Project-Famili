@@ -37,18 +37,21 @@ public class FamiliAlertView: UIView {
     }
     @IBOutlet weak var titleLabel: UILabel! {
         didSet {
-            titleLabel.font = UIFont(name: FamiliAlertViewConstant.CommonValue.fontFamilySemiBold, size: FamiliAlertViewConstant.CommonValue.fontSizeTitle)
+            titleLabel.font = UIFont(name: FamiliAlertViewConstant.CommonValue.fontFamilySemiBold,
+                                     size: FamiliAlertViewConstant.CommonValue.fontSizeTitle)
         }
     }
     @IBOutlet weak var descriptionLabel: UILabel! {
         didSet {
-            descriptionLabel.font = UIFont(name: FamiliAlertViewConstant.CommonValue.fontFamilyRegular, size: FamiliAlertViewConstant.CommonValue.fontSizeBody)
+            descriptionLabel.font = UIFont(name: FamiliAlertViewConstant.CommonValue.fontFamilyRegular,
+                                           size: FamiliAlertViewConstant.CommonValue.fontSizeBody)
         }
     }
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var actionButton1: UIButton! {
         didSet {
-            actionButton1.titleLabel?.font = UIFont(name: FamiliAlertViewConstant.CommonValue.fontFamilySemiBold, size: FamiliAlertViewConstant.CommonValue.fontSizeButton)
+            actionButton1.titleLabel?.font = UIFont(name: FamiliAlertViewConstant.CommonValue.fontFamilySemiBold,
+                                                    size: FamiliAlertViewConstant.CommonValue.fontSizeButton)
             actionButton1.tintColor = UIColor(hex: FamiliAlertViewConstant.CommonColor.primary.rawValue)
             actionButton1.setTitle(FamiliAlertViewConstant.CommonString.cancelButton.rawValue, for: .normal)
         }
@@ -57,7 +60,8 @@ public class FamiliAlertView: UIView {
         didSet {
             actionButton2.backgroundColor = UIColor(hex: FamiliAlertViewConstant.CommonColor.primary.rawValue)
             actionButton2.layer.cornerRadius = FamiliAlertViewConstant.CommonValue.cornerRadius
-            actionButton2.titleLabel?.font = UIFont(name: FamiliAlertViewConstant.CommonValue.fontFamilySemiBold, size: FamiliAlertViewConstant.CommonValue.fontSizeButton)
+            actionButton2.titleLabel?.font = UIFont(name: FamiliAlertViewConstant.CommonValue.fontFamilySemiBold,
+                                                    size: FamiliAlertViewConstant.CommonValue.fontSizeButton)
             actionButton2.tintColor = .white
             actionButton2.setTitle(FamiliAlertViewConstant.CommonString.okButton.rawValue, for: .normal)
         }
@@ -102,7 +106,6 @@ public class FamiliAlertView: UIView {
         baseView.backgroundColor = .clear
         baseView.autoresizingMask = [.flexibleHeight, .flexibleHeight]
     }
-    
     /// setup button target action
     private func setupButton() {
         actionButton2.addTarget(self, action: #selector(primaryDidTap(_:)), for: .touchUpInside)
