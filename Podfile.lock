@@ -68,6 +68,7 @@ PODS:
     - GoogleUtilities/Environment (~> 7.0)
     - GoogleUtilities/Reachability (~> 7.0)
     - GoogleUtilities/UserDefaults (~> 7.0)
+  - FLEX (4.2.1)
   - GoogleAppMeasurement (7.0.0):
     - GoogleUtilities/AppDelegateSwizzler (~> 7.0)
     - GoogleUtilities/MethodSwizzler (~> 7.0)
@@ -129,6 +130,7 @@ DEPENDENCIES:
   - Firebase/Analytics (~> 7.0.0)
   - Firebase/Auth (~> 7.0.0)
   - Firebase/Messaging (~> 7.0.0)
+  - FLEX
   - GoogleSignIn (~> 5.0.2)
   - Nimble (~> 9.0.0)
   - Quick (~> 3.0.0)
@@ -150,6 +152,7 @@ SPEC REPOS:
     - FirebaseInstallations
     - FirebaseInstanceID
     - FirebaseMessaging
+    - FLEX
     - GoogleAppMeasurement
     - GoogleDataTransport
     - GoogleSignIn
@@ -178,6 +181,7 @@ SPEC CHECKSUMS:
   FirebaseInstallations: c28d4bcbb5c6884d1a39afbc0bd7fc590e31e9b7
   FirebaseInstanceID: c03b49743725092f7eb9d4b96ff40efadd830426
   FirebaseMessaging: ecf9e04716b7ff1f1d92debab4d6f0e6bdb490aa
+  FLEX: 64f134947679a5eab867843aef1f125a5c7c7d77
   GoogleAppMeasurement: 7790ef975d1d463c8614cd949a847e612edf087a
   GoogleDataTransport: 6ce8004a961db1b905740d7be106c61ba7e89c21
   GoogleSignIn: 7137d297ddc022a7e0aa4619c86d72c909fa7213
@@ -193,6 +197,6 @@ SPEC CHECKSUMS:
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
   SwiftLint: dfd554ff0dff17288ee574814ccdd5cea85d76f7
 
-PODFILE CHECKSUM: f966a7453bbd9c233ad198d59156612ee0bfaf9b
+PODFILE CHECKSUM: 83ecf375b38964e0c76e21e6840013dd02d5c214
 
 COCOAPODS: 1.10.0

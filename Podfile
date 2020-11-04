@@ -17,6 +17,10 @@ def mainModule
   pod "SwiftLint"
 end
 
+def debugModule 
+  pod 'FLEX', :configurations => ['Debug']
+end
+
 def testModule
   pod "Quick", '~> 3.0.0'
   pod "Nimble", '~> 9.0.0'
@@ -28,6 +32,7 @@ target "LUMain" do
   project 'Laundron-User/LUMain/LUMain.project'
   use_frameworks!
   mainModule
+  debugModule
     target 'LUMainTests' do
       inherit! :search_paths
       mainModule
