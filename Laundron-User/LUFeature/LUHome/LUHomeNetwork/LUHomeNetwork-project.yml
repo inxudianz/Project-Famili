@@ -1,0 +1,13 @@
+name: LUHomeNetwork
+options:
+  bundleIdPrefix: inx.LUHomeNetwork
+  deploymentTarget:
+    iOS: 13.0
+targets:
+  LUHomeNetwork:
+    type: framework
+    platform: iOS
+    sources: 
+      - path: LUHomeNetwork
+    dependencies:
+      - framework: ${BUILT_PRODUCTS_DIR}/LUNetwork.framework

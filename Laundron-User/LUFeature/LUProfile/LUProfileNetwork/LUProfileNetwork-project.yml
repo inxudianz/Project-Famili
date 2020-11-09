@@ -1,0 +1,13 @@
+name: LUProfileNetwork
+options:
+  bundleIdPrefix: inx.LUProfileNetwork
+  deploymentTarget:
+    iOS: 13.0
+targets:
+  LUProfileNetwork:
+    type: framework
+    platform: iOS
+    sources: 
+      - path: LUProfileNetwork
+    dependencies:
+      - framework: ${BUILT_PRODUCTS_DIR}/LUNetwork.framework

@@ -1,0 +1,28 @@
+name: LUAuth
+options:
+  bundleIdPrefix: inx.LUAuth
+  deploymentTarget:
+    iOS: 13.0
+targets:
+  LUAuth:
+    type: framework
+    platform: iOS
+    sources: 
+      - path: LUAuth
+    scheme:
+      testTargets:
+        - LUAuthTests
+    dependencies:
+      - framework: ${BUILT_PRODUCTS_DIR}/Component.framework
+      - framework: ${BUILT_PRODUCTS_DIR}/LUCoordinator.framework
+      - framework: ${BUILT_PRODUCTS_DIR}/LUHandler.framework
+      - framework: ${BUILT_PRODUCTS_DIR}/LUCodable.framework
+      - framework: ${BUILT_PRODUCTS_DIR}/LUAuthNetwork.framework
+      - framework: ${BUILT_PRODUCTS_DIR}/LUHome.framework
+      - framework: ${BUILT_PRODUCTS_DIR}/LUOrder.framework
+      - framework: ${BUILT_PRODUCTS_DIR}/LUProfile.framework
+  LUAuthTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: LUAuthTests

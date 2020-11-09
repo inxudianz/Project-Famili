@@ -1,0 +1,13 @@
+name: LUSampleNetwork
+options:
+  bundleIdPrefix: inx.LUSampleNetwork
+  deploymentTarget:
+    iOS: 13.0
+targets:
+  LUSampleNetwork:
+    type: framework
+    platform: iOS
+    sources: 
+      - path: LUSampleNetwork
+    dependencies:
+      - framework: ${BUILT_PRODUCTS_DIR}/LUNetwork.framework

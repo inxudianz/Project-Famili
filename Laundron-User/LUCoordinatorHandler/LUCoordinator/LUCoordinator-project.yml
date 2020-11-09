@@ -1,0 +1,11 @@
+name: LUCoordinator
+options:
+  bundleIdPrefix: inx.LUCoordinator
+  deploymentTarget:
+    iOS: 13.0
+targets:
+  LUCoordinator:
+    type: framework
+    platform: iOS
+    sources: 
+      - path: ../LUCoordinator

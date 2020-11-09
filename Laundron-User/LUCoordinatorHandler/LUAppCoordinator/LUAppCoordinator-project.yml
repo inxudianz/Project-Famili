@@ -1,0 +1,20 @@
+name: LUAppCoordinator
+options:
+  bundleIdPrefix: inx.LUAppCoordinator
+  deploymentTarget:
+    iOS: 13.0
+targets:
+  LUAppCoordinator:
+    type: framework
+    platform: iOS
+    sources: 
+      - path: ../LUAppCoordinator
+    dependencies:
+      - framework: ${BUILT_PRODUCTS_DIR}/LUCoordinator.framework
+      - framework: ${BUILT_PRODUCTS_DIR}/LUHandler.framework
+      - framework: ${BUILT_PRODUCTS_DIR}/LUSplash.framework
+      - framework: ${BUILT_PRODUCTS_DIR}/LUSample.framework
+      - framework: ${BUILT_PRODUCTS_DIR}/LUProfile.framework
+      - framework: ${BUILT_PRODUCTS_DIR}/LUAuth.framework
+      - framework: ${BUILT_PRODUCTS_DIR}/LUHome.framework
+      - framework: ${BUILT_PRODUCTS_DIR}/LUOrder.framework

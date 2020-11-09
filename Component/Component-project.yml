@@ -1,0 +1,19 @@
+name: Component
+options:
+  bundleIdPrefix: inx.Component
+  deploymentTarget:
+    iOS: 13.0
+targets:
+  Component:
+    type: framework
+    platform: iOS
+    sources: 
+      - path: Component
+    scheme:
+      testTargets:
+        - ComponentTests
+  ComponentTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: ComponentTests
