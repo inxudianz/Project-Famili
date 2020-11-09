@@ -23,7 +23,9 @@ jobs:
     - uses: actions/checkout@v2
     - name: Xcodegen
       run: |
-        ./xcodegen.sh
+        for d in `find . -name "*project.yml"`; 
+        do (xcodegen generate --spec "$d"); 
+        done
     - name: Dependencies
       run: |
         exec pod install
