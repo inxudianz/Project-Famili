@@ -21,6 +21,9 @@ jobs:
     runs-on: macos-latest
     steps:
     - uses: actions/checkout@v2
+    - name: Xcodegen
+      run: |
+        ./xcodegen.sh
     - name: Dependencies
       run: |
         exec pod install
