@@ -1,6 +1,0 @@
-framework module Pods_LUProfile {
-  umbrella header "Pods-LUProfile-umbrella.h"
-
-  export *
-  module * { export * }
-}

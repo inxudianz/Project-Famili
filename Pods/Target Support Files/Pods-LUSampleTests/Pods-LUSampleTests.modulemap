@@ -1,6 +1,0 @@
-framework module Pods_LUSampleTests {
-  umbrella header "Pods-LUSampleTests-umbrella.h"
-
-  export *
-  module * { export * }
-}

@@ -1,6 +1,0 @@
-framework module Pods_LUAppCoordinator {
-  umbrella header "Pods-LUAppCoordinator-umbrella.h"
-
-  export *
-  module * { export * }
-}
