@@ -97,4 +97,7 @@
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:Laundron-User/LUFeature/LUSPlash/LUSplashNetwork/LUSplashNetwork.xcodeproj">
+   </FileRef>
 </Workspace>
