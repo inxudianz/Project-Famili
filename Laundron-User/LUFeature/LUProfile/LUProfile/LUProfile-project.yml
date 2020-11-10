@@ -1,0 +1,25 @@
+name: LUProfile
+options:
+  bundleIdPrefix: inx.LUProfile
+  deploymentTarget:
+    iOS: 13.0
+targets:
+  LUProfile:
+    type: framework
+    platform: iOS
+    sources: 
+      - path: LUProfile
+    scheme:
+      testTargets:
+        - LUProfileTests
+    dependencies:
+      - framework: ${BUILT_PRODUCTS_DIR}/Component.framework
+      - framework: ${BUILT_PRODUCTS_DIR}/LUCoordinator.framework
+      - framework: ${BUILT_PRODUCTS_DIR}/LUHandler.framework
+      - framework: ${BUILT_PRODUCTS_DIR}/LUCodable.framework
+      - framework: ${BUILT_PRODUCTS_DIR}/LUProfileNetwork.framework
+  LUProfileTests:
+      type: bundle.unit-test
+      platform: iOS
+      sources:
+        - path: LUProfileTests

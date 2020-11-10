@@ -1,0 +1,11 @@
+name: LUNetwork
+options:
+  bundleIdPrefix: inx.LUNetwork
+  deploymentTarget:
+    iOS: 13.0
+targets:
+  LUNetwork:
+    type: framework
+    platform: iOS
+    sources: 
+      - path: LUNetwork

@@ -1,0 +1,25 @@
+name: LUHome
+options:
+  bundleIdPrefix: inx.LUHome
+  deploymentTarget:
+    iOS: 13.0
+targets:
+  LUHome:
+    type: framework
+    platform: iOS
+    sources: 
+      - path: LUHome
+    scheme:
+      testTargets:
+        - LUHomeTests
+    dependencies:
+      - framework: ${BUILT_PRODUCTS_DIR}/Component.framework
+      - framework: ${BUILT_PRODUCTS_DIR}/LUCoordinator.framework
+      - framework: ${BUILT_PRODUCTS_DIR}/LUHandler.framework
+      - framework: ${BUILT_PRODUCTS_DIR}/LUCodable.framework
+      - framework: ${BUILT_PRODUCTS_DIR}/LUHomeNetwork.framework
+  LUHomeTests:
+      type: bundle.unit-test
+      platform: iOS
+      sources:
+        - path: LUHomeTests

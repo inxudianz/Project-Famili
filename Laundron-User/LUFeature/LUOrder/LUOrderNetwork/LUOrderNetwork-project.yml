@@ -1,0 +1,13 @@
+name: LUOrderNetwork
+options:
+  bundleIdPrefix: inx.LUOrderNetwork
+  deploymentTarget:
+    iOS: 13.0
+targets:
+  LUOrderNetwork:
+    type: framework
+    platform: iOS
+    sources: 
+      - path: LUOrderNetwork
+    dependencies:
+      - framework: ${BUILT_PRODUCTS_DIR}/LUNetwork.framework

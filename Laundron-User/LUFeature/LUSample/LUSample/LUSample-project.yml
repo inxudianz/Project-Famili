@@ -1,0 +1,25 @@
+name: LUSample
+options:
+  bundleIdPrefix: inx.LUSample
+  deploymentTarget:
+    iOS: 13.0
+targets:
+  LUSample:
+    type: framework
+    platform: iOS
+    sources: 
+      - path: LUSample
+    scheme:
+      testTargets:
+        - LUSampleTests
+    dependencies:
+      - framework: ${BUILT_PRODUCTS_DIR}/Component.framework
+      - framework: ${BUILT_PRODUCTS_DIR}/LUCoordinator.framework
+      - framework: ${BUILT_PRODUCTS_DIR}/LUHandler.framework
+      - framework: ${BUILT_PRODUCTS_DIR}/LUCodable.framework
+      - framework: ${BUILT_PRODUCTS_DIR}/LUSampleNetwork.framework
+  LUSampleTests:
+      type: bundle.unit-test
+      platform: iOS
+      sources:
+        - path: LUSampleTests

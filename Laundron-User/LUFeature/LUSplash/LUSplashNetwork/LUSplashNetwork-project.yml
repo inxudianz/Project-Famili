@@ -1,0 +1,13 @@
+name: LUSplashNetwork
+options:
+  bundleIdPrefix: inx.LUSplashNetwork
+  deploymentTarget:
+    iOS: 13.0
+targets:
+  LUSplashNetwork:
+    type: framework
+    platform: iOS
+    sources: 
+      - path: LUSplashNetwork
+    dependencies:
+      - framework: ${BUILT_PRODUCTS_DIR}/LUNetwork.framework

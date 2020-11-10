@@ -1,0 +1,11 @@
+name: LUCodable
+options:
+  bundleIdPrefix: inx.LUCodable
+  deploymentTarget:
+    iOS: 13.0
+targets:
+  LUCodable:
+    type: framework
+    platform: iOS
+    sources: 
+      - path: LUCodable

@@ -1,0 +1,60 @@
+name: LUMain
+projectReferences:
+  AuthProject:
+    path: ../LUFeature/LUAuth/LUAuth/LUAuth.xcodeproj
+  HomeProject:
+    path: ../LUFeature/LUHome/LUHome/LUHome.xcodeproj
+  OrderProject:
+    path: ../LUFeature/LUOrder/LUOrder/LUOrder.xcodeproj
+  ProfileProject:
+    path: ../LUFeature/LUProfile/LUProfile/LUProfile.xcodeproj
+  SampleProject:
+    path: ../LUFeature/LUSample/LUSample/LUSample.xcodeproj
+  SplashProject:
+    path: ../LUFeature/LUSplash/LUSplash/LUSplash.xcodeproj
+options:
+  bundleIdPrefix: inx.LUMain
+  deploymentTarget:
+    iOS: 13.0
+targets:
+  LUMain:
+    type: application
+    platform: iOS
+    sources: 
+      - path: LUMain
+    dependencies:
+      - framework: ${BUILT_PRODUCTS_DIR}/LUAppCoordinator.framework
+    preBuildScripts:
+      - name: SwiftLint
+        script: |
+                if which "${PODS_ROOT}/SwiftLint/swiftlint" >/dev/null; then
+                ${PODS_ROOT}/SwiftLint/swiftlint
+                else
+                echo "warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint"
+                fi
+  LUMainTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: LUMainTests
+schemes:
+  LUMain:
+    build:
+      targets:
+        LUMain: all
+    test:
+      gatherCoverageData: true
+      coverageTargets:
+        - AuthProject/LUAuth
+        - HomeProject/LUHome
+        - OrderProject/LUOrder
+        - ProfileProject/LUProfile
+        - SampleProject/LUSample
+        - SplashProject/LUSplash
+      targets:
+        - name: AuthProject/LUAuthTests
+        - name: HomeProject/LUHomeTests
+        - name: OrderProject/LUOrderTests
+        - name: ProfileProject/LUProfileTests
+        - name: SampleProject/LUSampleTests
+        - name: SplashProject/LUSplashTests

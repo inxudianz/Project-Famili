@@ -1,0 +1,13 @@
+name: LUAuthNetwork
+options:
+  bundleIdPrefix: inx.LUAuthNetwork
+  deploymentTarget:
+    iOS: 13.0
+targets:
+  LUAuthNetwork:
+    type: framework
+    platform: iOS
+    sources: 
+      - path: LUAuthNetwork
+    dependencies:
+      - framework: ${BUILT_PRODUCTS_DIR}/LUNetwork.framework

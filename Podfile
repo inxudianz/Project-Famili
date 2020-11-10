@@ -37,6 +37,7 @@ target "LUMain" do
       inherit! :search_paths
       mainModule
       testModule
+      debugModule
     end
 
 # --- || Common || ---
@@ -76,6 +77,7 @@ target "LUMain" do
       inherit! :search_paths
       mainModule
       testModule
+      debugModule
     end
   end
 
@@ -96,6 +98,7 @@ target "LUMain" do
       inherit! :search_paths
       mainModule
       testModule
+      debugModule
     end
   end
 
@@ -116,6 +119,7 @@ target "LUMain" do
       inherit! :search_paths
       mainModule
       testModule
+      debugModule
     end
   end
 
@@ -136,6 +140,7 @@ target "LUMain" do
       inherit! :search_paths
       mainModule
       testModule
+      debugModule
     end
   end
 
@@ -156,6 +161,7 @@ target "LUMain" do
       inherit! :search_paths
       mainModule
       testModule
+      debugModule
     end
   end
 
@@ -176,6 +182,7 @@ target "LUMain" do
       inherit! :search_paths
       mainModule
       testModule
+      debugModule
     end
   end
 
