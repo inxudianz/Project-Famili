@@ -21,6 +21,14 @@ jobs:
     runs-on: macos-latest
     steps:
     - uses: actions/checkout@v2
+    - name: Xcodegen
+      run: |
+        brew install xcodegen
+    - name: Generate XcodeProj
+      run: |
+        for d in `find . -name "*project.yml"`; 
+        do (xcodegen generate --spec "$d"); 
+        done
     - name: Dependencies
       run: |
         exec pod install
