@@ -70,9 +70,8 @@ class LoginCoordinatorMock: AuthCoordinatorProtocol {
 }
 
 class LoginNetworkMock: AuthNetworkProtocol {
-    var authLoginDelegate: AuthLoginDelegate?
-    
-    var authRegisterDelegate: AuthRegisterDelegate?
+    weak var authLoginDelegate: AuthLoginDelegate?
+    weak var authRegisterDelegate: AuthRegisterDelegate?
     
     var isLogin = false
     func login(data: AuthModel.Login) {
