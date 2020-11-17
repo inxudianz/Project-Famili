@@ -157,6 +157,13 @@ class PrivacyPolicyTests: QuickSpec {
                     expect(network.isPrivacyPolicyGet).to(beTrue())
                 }
             }
+            
+            context("Function didSuccessRetrievePrivacyPolicy is called") {
+                it("Without error") {
+                    sut.didSuccessRetrievePrivacyPolicy(response: .init(message: "Privacy Policy"))
+                    expect(view.isUpdatePrivacyPolicyText).to(beTrue())
+                }
+            }
         }
     }
 }
