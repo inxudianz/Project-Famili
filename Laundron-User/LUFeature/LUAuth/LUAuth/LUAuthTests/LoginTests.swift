@@ -143,6 +143,13 @@ class LoginTests: QuickSpec {
                     expect(isEmpty).to(beTrue())
                 }
             }
+            
+            context("didSuccessLogin function is called") {
+                it("Without error") {
+                    sut.didSuccessLogin()
+                    expect(coordinator.isNavigateToHome).to(beTrue())
+                }
+            }
         }
     }
 }

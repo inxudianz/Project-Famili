@@ -95,6 +95,7 @@ class RegisterTests: QuickSpec {
             checkRegisterFunction()
             checkNavigateToLogin()
             checkTextField()
+            didSuccessRegister()
         }
     }
     
@@ -154,6 +155,15 @@ class RegisterTests: QuickSpec {
             it("return success for confirm password") {
                 let testData = self.sut.handleField(text: "budi123", with: .confirmPassword)
                 expect(testData) == .success
+            }
+        }
+    }
+    
+    private func didSuccessRegister() {
+        context("didSuccessRegister function is called") {
+            it("Without error") {
+                self.sut.didSuccessRegister()
+                expect(self.coordinator.isNavigatetoLogin).to(beTrue())
             }
         }
     }
