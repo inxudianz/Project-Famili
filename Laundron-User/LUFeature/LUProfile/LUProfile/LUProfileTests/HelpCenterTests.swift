@@ -149,11 +149,26 @@ class HelpCenterTests: QuickSpec {
                     expect(network.isHelpCenterGet).to(beTrue())
                 }
             }
+            
             context("function viewDidLoad is called") {
                 it("Without error") {
                     sut.viewDidLoad()
                     expect(view.isShowLoading).to(beTrue())
                     expect(network.isHelpCenterGet).to(beTrue())
+                }
+            }
+            
+            context("function navigateToHelpCenterDetail is called") {
+                it("Without error") {
+                    sut.navigateToHelpCenterDetail(title: "Test Title", body: "Test Body")
+                    expect(coordinator.isNavigateToHelpCenterDetail).to(beTrue())
+                }
+            }
+            
+            context("function didSelectRow is called") {
+                it("Without error") {
+                    sut.didSelectRow(at: .init(row: 0, section: 0))
+                    expect(coordinator.isNavigateToHelpCenterDetail).to(beTrue())
                 }
             }
         }
