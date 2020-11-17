@@ -151,6 +151,12 @@ class TermsOfServiceTests: QuickSpec {
                     expect(network.isTermsOfServiceGet).to(beTrue())
                 }
             }
+            context("Function didSuccessRetrieveTermsOfService is called") {
+                it("Without error") {
+                    sut.didSuccessRetrieveTermsOfService(response: .init(message: "tos"))
+                    expect(view.isUpdateTermsOfServiceText).to(beTrue())
+                }
+            }
         }
     }
 }
