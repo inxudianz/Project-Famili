@@ -176,6 +176,12 @@ class EditProfileTests: QuickSpec {
                     expect(coordinator.isSaveEditProfile).to(beTrue())
                 }
             }
+            
+            context("Function didSuccessEditProfile is called") {
+                it("Without error") {
+                    sut.didSuccessEditProfile()
+                }
+            }
         }
     }
 }
