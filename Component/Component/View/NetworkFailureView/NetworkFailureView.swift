@@ -15,12 +15,19 @@ public class NetworkFailureView: UIView {
     @IBOutlet var networkFailureView: UIView!
     @IBOutlet weak var networkFailureViewContainer: UIView!
     @IBOutlet weak var imageViewContainer: UIView!
-    @IBOutlet weak var labelContainer: UIView!
+    @IBOutlet weak var titleLabelContainer: UIView!
+    @IBOutlet weak var descriptionLabelContainer: UIView!
     @IBOutlet weak var buttonContainer: UIView!
     @IBOutlet weak var networkFailureImageView: UIImageView!
-    @IBOutlet weak var networkFailureLabel: UILabel!{
+    @IBOutlet weak var networkFailureTitleLabel: UILabel!{
         didSet {
-            networkFailureLabel.font = UIFont(name: FamiliAlertViewConstant.CommonValue.fontFamilySemiBold,
+            networkFailureTitleLabel.font = UIFont(name: FamiliAlertViewConstant.CommonValue.fontFamilySemiBold,
+                                     size: FamiliAlertViewConstant.CommonValue.fontSizeTitle)
+        }
+    }
+    @IBOutlet weak var networkFailureDescriptionLabel: UILabel!{
+        didSet {
+            networkFailureDescriptionLabel.font = UIFont(name: FamiliAlertViewConstant.CommonValue.fontFamilySemiBold,
                                      size: FamiliAlertViewConstant.CommonValue.fontSizeTitle)
         }
     }
@@ -89,14 +96,22 @@ public class NetworkFailureView: UIView {
     
     - Parameters:
         - image: the file name of the image that you want to show. The default value is "" meaning no image.
+        - title: title of the alert
         - description: description of the alert
         - buttonTitle: title for action button
         - view: the parent view for alertView
     */
-    public func displayNetworkFailureView(image: UIImage? = nil, description: String, buttonTItle: String,to view: UIView) {
+    public func displayNetworkFailureView(image: UIImage? = nil, title: String, description: String, buttonTItle: String,to view: UIView) {
         networkFailureImageView.image = image
-        networkFailureLabel.text = description
+        if image == nil {
+            imageViewContainer.isHidden = true
+        }
+        networkFailureTitleLabel.text = title
+        networkFailureDescriptionLabel.text = description
         networkFailureButton.setTitle(buttonTItle, for: .normal)
+        networkFailureView.sizeToFit()
+//        networkFailureView.center = CGPoint(x: view.bounds.size.width / 2, y: view.bounds.size.height / 2)
+        networkFailureView.center = view.convert(view.center, from: view.superview)
         view.addSubview(networkFailureView)
     }
     
