@@ -85,74 +85,67 @@ class LoginNetworkMock: AuthNetworkProtocol {
 }
 
 class LoginTests: QuickSpec {
-    var sut: LoginViewModel!
-    var view: LoginViewMock!
-    var coordinator: LoginCoordinatorMock!
-    var network: LoginNetworkMock!
-    var emailMock: String!
-    var passwordMock: String!
-    
+    // swiftlint:disable function_body_length
     override func spec() {
         describe("ViewModel") {
+            var sut: LoginViewModel!
+            var view: LoginViewMock!
+            var coordinator: LoginCoordinatorMock!
+            var network: LoginNetworkMock!
+            var emailMock: String!
+            var passwordMock: String!
+            
             beforeEach {
-                self.view = LoginViewMock()
-                self.coordinator = LoginCoordinatorMock()
-                self.network = LoginNetworkMock()
-                self.emailMock = "mock@email.com"
-                self.passwordMock = "12345"
+                view = LoginViewMock()
+                coordinator = LoginCoordinatorMock()
+                network = LoginNetworkMock()
+                emailMock = "mock@email.com"
+                passwordMock = "12345"
                 
-                self.sut = LoginViewModel()
-                self.sut?.view = self.view
-                self.sut?.coordinator = self.coordinator
-                self.sut?.network = self.network
+                sut = LoginViewModel()
+                sut?.view = view
+                sut?.coordinator = coordinator
+                sut?.network = network
             }
 
-            checkTestCase()
-        }
-    }
-    
-    private func checkTestCase() {
-        context("login function is called") {
-            it("Without error") {
-                self.sut.login(email: self.emailMock, password: self.passwordMock)
-                expect(self.view.isShowLoading).to(beTrue())
-                expect(self.network.isLogin).to(beTrue())
+            context("login function is called") {
+                it("Without error") {
+                    sut.login(email: emailMock, password: passwordMock)
+                    expect(view.isShowLoading).to(beTrue())
+                    expect(network.isLogin).to(beTrue())
+                }
             }
-        }
-        
-        context("register function is called") {
-            it("Without error") {
-                self.sut.register()
-                expect(self.coordinator.isNavigateToRegister).to(beTrue())
+            context("register function is called") {
+                it("Without error") {
+                    sut.register()
+                    expect(coordinator.isNavigateToRegister).to(beTrue())
+                }
             }
-        }
-        
-        context("handleLoginButton function is called") {
-            it("return google sign in") {
-                self.sut.handleLoginButton(id: .google)
-                expect(self.view.isShowGoogleSignIn).to(beTrue())
+            context("handleLoginButton function is called") {
+                it("return google sign in") {
+                    sut.handleLoginButton(id: .google)
+                    expect(view.isShowGoogleSignIn).to(beTrue())
+                }
+                it("return facebook sign in") {
+                    sut.handleLoginButton(id: .facebook)
+                    expect(view.isShowFacebookSign).to(beTrue())
+                }
             }
-            it("return facebook sign in") {
-                self.sut.handleLoginButton(id: .facebook)
-                expect(self.view.isShowFacebookSign).to(beTrue())
+            context("isTextsEmpty function is called") {
+                it("return false") {
+                    let isEmpty = sut.isTextsEmpty(texts: ["string"])
+                    expect(isEmpty).to(beFalse())
+                }
+                it("return true") {
+                    let isEmpty = sut.isTextsEmpty(texts: [""])
+                    expect(isEmpty).to(beTrue())
+                }
             }
-        }
-        
-        context("isTextsEmpty function is called") {
-            it("return false") {
-                let isEmpty = self.sut.isTextsEmpty(texts: ["string"])
-                expect(isEmpty).to(beFalse())
-            }
-            it("return true") {
-                let isEmpty = self.sut.isTextsEmpty(texts: [""])
-                expect(isEmpty).to(beTrue())
-            }
-        }
-        
-        context("didSuccessLogin function is called") {
-            it("Without error") {
-                self.sut.didSuccessLogin()
-                expect(self.coordinator.isNavigateToHome).to(beTrue())
+            context("didSuccessLogin function is called") {
+                it("Without error") {
+                    sut.didSuccessLogin()
+                    expect(coordinator.isNavigateToHome).to(beTrue())
+                }
             }
         }
     }

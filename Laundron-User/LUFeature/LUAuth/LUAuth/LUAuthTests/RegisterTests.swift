@@ -71,99 +71,82 @@ class RegisterNetworkMock: AuthNetworkProtocol {
 }
 
 class RegisterTests: QuickSpec {
-    
-    var sut: RegisterViewModel!
-    var view: RegisterViewMock!
-    var coordinator: RegisterCoordinatorMock!
-    var network: RegisterNetworkMock!
-    var dataMock: AuthModel.Register!
-    
+    // swiftlint:disable function_body_length
     override func spec() {
         describe("ViewModel") {
+            var sut: RegisterViewModel!
+            var view: RegisterViewMock!
+            var coordinator: RegisterCoordinatorMock!
+            var network: RegisterNetworkMock!
+            var dataMock: AuthModel.Register!
             
             beforeEach {
-                self.view = RegisterViewMock()
-                self.coordinator = RegisterCoordinatorMock()
-                self.network = RegisterNetworkMock()
-                self.dataMock = AuthModel.Register(name: "Budi", phone: "081123478", email: "budidoremi@gmail.com", password: "budi123")
-                self.sut = RegisterViewModel()
-                self.sut?.view = self.view
-                self.sut?.coordinator = self.coordinator
-                self.sut?.network = self.network
+                view = RegisterViewMock()
+                coordinator = RegisterCoordinatorMock()
+                network = RegisterNetworkMock()
+                dataMock = AuthModel.Register(name: "Budi", phone: "081123478", email: "budidoremi@gmail.com", password: "budi123")
+                sut = RegisterViewModel()
+                sut?.view = view
+                sut?.coordinator = coordinator
+                sut?.network = network
             }
             
-            checkRegisterFunction()
-            checkNavigateToLogin()
-            checkTextField()
-            didSuccessRegister()
-        }
-    }
-    
-    private func checkRegisterFunction() {
-        context("register fuction is called") {
-            it("Without error") {
-                self.sut.register(data: self.dataMock)
-                expect(self.view.isShowLoading).to(beTrue())
-                expect(self.network.isRegister).to(beTrue())
+            context("register fuction is called") {
+                it("Without error") {
+                    sut.register(data: dataMock)
+                    expect(view.isShowLoading).to(beTrue())
+                    expect(network.isRegister).to(beTrue())
+                }
             }
-        }
-    }
-    
-    private func checkNavigateToLogin() {
-        context("navigateToLogin function is called") {
-            it("Without error") {
-                self.sut.navigateToLogin()
-                expect(self.coordinator.isNavigatetoLogin).to(beTrue())
+            context("navigateToLogin function is called") {
+                it("Without error") {
+                    sut.navigateToLogin()
+                    expect(coordinator.isNavigatetoLogin).to(beTrue())
+                }
             }
-        }
-    }
-    
-    private func checkTextField() {
-        context("handleField function is called") {
-            it("return empty") {
-                let testData = self.sut.handleField(text: "", with: .name)
-                expect(testData) == .empty
+            context("handleField function is called") {
+                it("return empty") {
+                    let testData = sut.handleField(text: "", with: .name)
+                    expect(testData) == .empty
+                }
+                it("return success for correct name") {
+                    let testData = sut.handleField(text: "Budi", with: .name)
+                    expect(testData) == .success
+                }
+                it("return invalid for wrong email") {
+                    let testData = sut.handleField(text: "Budi", with: .email)
+                    expect(testData) == .invalid
+                }
+                it("return success for correct email") {
+                    let testData = sut.handleField(text: "budi123@gmail.com", with: .email)
+                    expect(testData) == .success
+                }
+                it("return invalid for wrong phone") {
+                    let testData = sut.handleField(text: "budi123@gmail.com", with: .phone)
+                    expect(testData) == .invalid
+                }
+                it("return success for correct phone") {
+                    let testData = sut.handleField(text: "081245577", with: .phone)
+                    expect(testData) == .success
+                }
+                it("return invalid for wrong password") {
+                    let testData = sut.handleField(text: "12", with: .password)
+                    expect(testData) == .invalid
+                }
+                it("return success for correct password") {
+                    let testData = sut.handleField(text: "budi123", with: .password)
+                    expect(testData) == .success
+                }
+                it("return success for confirm password") {
+                    let testData = sut.handleField(text: "budi123", with: .confirmPassword)
+                    expect(testData) == .success
+                }
             }
-            it("return success for correct name") {
-                let testData = self.sut.handleField(text: "Budi", with: .name)
-                expect(testData) == .success
-            }
-            it("return invalid for wrong email") {
-                let testData = self.sut.handleField(text: "Budi", with: .email)
-                expect(testData) == .invalid
-            }
-            it("return success for correct email") {
-                let testData = self.sut.handleField(text: "budi123@gmail.com", with: .email)
-                expect(testData) == .success
-            }
-            it("return invalid for wrong phone") {
-                let testData = self.sut.handleField(text: "budi123@gmail.com", with: .phone)
-                expect(testData) == .invalid
-            }
-            it("return success for correct phone") {
-                let testData = self.sut.handleField(text: "081245577", with: .phone)
-                expect(testData) == .success
-            }
-            it("return invalid for wrong password") {
-                let testData = self.sut.handleField(text: "12", with: .password)
-                expect(testData) == .invalid
-            }
-            it("return success for correct password") {
-                let testData = self.sut.handleField(text: "budi123", with: .password)
-                expect(testData) == .success
-            }
-            it("return success for confirm password") {
-                let testData = self.sut.handleField(text: "budi123", with: .confirmPassword)
-                expect(testData) == .success
-            }
-        }
-    }
-    
-    private func didSuccessRegister() {
-        context("didSuccessRegister function is called") {
-            it("Without error") {
-                self.sut.didSuccessRegister()
-                expect(self.coordinator.isNavigatetoLogin).to(beTrue())
+            context("didSuccessRegister function is called") {
+                it("Without error") {
+                    sut.didSuccessRegister()
+                    expect(coordinator.isNavigatetoLogin).to(beTrue())
+                }
             }
         }
     }
