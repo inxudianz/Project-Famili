@@ -71,6 +71,12 @@ class RegisterNetworkMock: AuthNetworkProtocol {
 }
 
 class RegisterTests: QuickSpec {
+    enum Error: Swift.Error, Equatable {
+        case emptyText
+        case requestTimeOut
+        case failedFetchData
+    }
+    
     // swiftlint:disable function_body_length
     override func spec() {
         describe("ViewModel") {
@@ -145,7 +151,14 @@ class RegisterTests: QuickSpec {
             context("didSuccessRegister function is called") {
                 it("Without error") {
                     sut.didSuccessRegister()
+                    expect(view.isStopLoading).to(beTrue())
                     expect(coordinator.isNavigatetoLogin).to(beTrue())
+                }
+            }
+            context("didSuccessRegister function is called") {
+                it("Without error") {
+                    sut.didFailedRegister(error: Error.emptyText)
+                    expect(view.isStopLoading).to(beTrue())
                 }
             }
         }

@@ -172,7 +172,7 @@ class PrivacyPolicyTests: QuickSpec {
                 }
             }
             
-            context("Function didSuccessRetrievePrivacyPolicy is called") {
+            context("Function didFailedRetrievePrivacyPolicy is called") {
                 it("Without error") {
                     sut.didFailedRetrievePrivacyPolicy(error: Error.emptyText)
                     expect(view.isStopLoading).to(beTrue())

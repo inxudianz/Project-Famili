@@ -85,6 +85,12 @@ class LoginNetworkMock: AuthNetworkProtocol {
 }
 
 class LoginTests: QuickSpec {
+    enum Error: Swift.Error, Equatable {
+        case emptyText
+        case requestTimeOut
+        case failedFetchData
+    }
+    
     // swiftlint:disable function_body_length
     override func spec() {
         describe("ViewModel") {
@@ -144,7 +150,15 @@ class LoginTests: QuickSpec {
             context("didSuccessLogin function is called") {
                 it("Without error") {
                     sut.didSuccessLogin()
+                    expect(view.isStopLoading).to(beTrue())
                     expect(coordinator.isNavigateToHome).to(beTrue())
+                }
+            }
+            context("didFailedLogin function is called") {
+                it("Without error") {
+                    sut.didFailedLogin(error: Error.emptyText)
+                    expect(view.isStopLoading).to(beTrue())
+                    expect(view.isErrorLogin).to(beTrue())
                 }
             }
         }
