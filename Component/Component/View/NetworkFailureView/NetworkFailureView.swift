@@ -19,19 +19,19 @@ public class NetworkFailureView: UIView {
     @IBOutlet weak var descriptionLabelContainer: UIView!
     @IBOutlet weak var buttonContainer: UIView!
     @IBOutlet weak var networkFailureImageView: UIImageView!
-    @IBOutlet weak var networkFailureTitleLabel: UILabel!{
+    @IBOutlet weak var networkFailureTitleLabel: UILabel! {
         didSet {
             networkFailureTitleLabel.font = UIFont(name: FamiliAlertViewConstant.CommonValue.fontFamilySemiBold,
                                      size: FamiliAlertViewConstant.CommonValue.fontSizeTitle)
         }
     }
-    @IBOutlet weak var networkFailureDescriptionLabel: UILabel!{
+    @IBOutlet weak var networkFailureDescriptionLabel: UILabel! {
         didSet {
             networkFailureDescriptionLabel.font = UIFont(name: FamiliAlertViewConstant.CommonValue.fontFamilySemiBold,
                                      size: FamiliAlertViewConstant.CommonValue.fontSizeTitle)
         }
     }
-    @IBOutlet weak var networkFailureButton: UIButton!{
+    @IBOutlet weak var networkFailureButton: UIButton! {
         didSet {
             networkFailureButton.backgroundColor = UIColor(hex: FamiliAlertViewConstant.CommonColor.primary.rawValue)
             networkFailureButton.layer.cornerRadius = FamiliAlertViewConstant.CommonValue.cornerRadius
