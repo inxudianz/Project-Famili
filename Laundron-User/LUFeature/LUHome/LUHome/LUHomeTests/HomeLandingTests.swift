@@ -62,6 +62,12 @@ class HomeCoordinatorMock: HomeCoordinatorProtocol {
 }
 
 class HomeLandingTests: QuickSpec {
+    enum Error: Swift.Error, Equatable {
+        case emptyText
+        case requestTimeOut
+        case failedFetchData
+    }
+    
     override func spec() {
         describe("ViewModel") {
             
@@ -115,7 +121,15 @@ class HomeLandingTests: QuickSpec {
             context("Function didSuccessGetBanners is called") {
                 it("Without error") {
                     sut.didSuccessGetBanners(response: .init(banners: ["image"]))
+                    expect(view.isHideLoading).to(beTrue())
                     expect(view.isReloadBanner).to(beTrue())
+                }
+            }
+            
+            context("Function didFailedGetBanners is called") {
+                it("Without error") {
+                    sut.didFailedGetBanners(error: Error.emptyText)
+                    expect(view.isHideLoading).to(beTrue())
                 }
             }
             
