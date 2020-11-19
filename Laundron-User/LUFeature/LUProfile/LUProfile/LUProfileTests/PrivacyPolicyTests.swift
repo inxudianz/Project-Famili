@@ -124,6 +124,12 @@ class PrivacyPolicyNetworkMock: ProfileNetworkProtocol {
 }
 
 class PrivacyPolicyTests: QuickSpec {
+    enum Error: Swift.Error, Equatable {
+        case emptyText
+        case requestTimeOut
+        case failedFetchData
+    }
+    
     override func spec() {
         describe("ViewModel") {
             var sut: PrivacyPolicyViewModel!
@@ -161,7 +167,15 @@ class PrivacyPolicyTests: QuickSpec {
             context("Function didSuccessRetrievePrivacyPolicy is called") {
                 it("Without error") {
                     sut.didSuccessRetrievePrivacyPolicy(response: .init(message: "Privacy Policy"))
+                    expect(view.isStopLoading).to(beTrue())
                     expect(view.isUpdatePrivacyPolicyText).to(beTrue())
+                }
+            }
+            
+            context("Function didSuccessRetrievePrivacyPolicy is called") {
+                it("Without error") {
+                    sut.didFailedRetrievePrivacyPolicy(error: Error.emptyText)
+                    expect(view.isStopLoading).to(beTrue())
                 }
             }
         }
