@@ -34,8 +34,8 @@ public class HomeCoordinator: HomeCoordinatorProtocol {
     }
     
     func navigateToNotification() {
-        let vc = NotificationViewController()
-        let vm = NotificationViewModel()
+        let vc = HomeNotificationViewController()
+        let vm = HomeNotificationViewModel()
         vc.viewModel = vm
         vm.coordinator = self
         vm.view = vc

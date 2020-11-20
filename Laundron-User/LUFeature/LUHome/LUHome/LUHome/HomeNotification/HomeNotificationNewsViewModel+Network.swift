@@ -11,14 +11,13 @@ import LUHandler
 import LUCodable
 import LUHomeNetwork
 
-extension NotificationViewModel: RetrieveNotificationNewsDelegate {
+extension HomeNotificationViewModel: RetrieveNotificationNewsDelegate {
     func didSuccessRetrieveNotificationNews(response: HomeResponse.GetNotificationNewsResponse) {
-        var data = [NotificationNewsData]()
-        print(response.newsList.count)
+        var data = [HomeNotificationNewsData]()
         if response.newsList.count > 1 {
             for news in response.newsList {
                 guard let newsContent = news.message else { return }
-                data.append(NotificationNewsData.init(message: newsContent))
+                data.append(HomeNotificationNewsData.init(message: newsContent))
             }
             notificationNewsDataSource?.setData(datas: data)
             view?.reloadNewsTableData()

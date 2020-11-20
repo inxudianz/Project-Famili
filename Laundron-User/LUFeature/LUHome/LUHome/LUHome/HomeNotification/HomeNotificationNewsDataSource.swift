@@ -8,26 +8,26 @@
 
 import UIKit
 
-class NotificationNewsDataSource: NSObject {
-    var datas: [NotificationNewsData]?
+class HomeNotificationNewsDataSource: NSObject {
+    var datas: [HomeNotificationNewsData]?
     
-    public func setData(datas: [NotificationNewsData]) {
+    public func setData(datas: [HomeNotificationNewsData]) {
         self.datas = datas
     }
 }
 
-struct NotificationNewsData {
+struct HomeNotificationNewsData {
     let message: String?
 }
 
-extension NotificationNewsDataSource: UITableViewDataSource {
+extension HomeNotificationNewsDataSource: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return datas?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "NotificationNewsCell")
-                as? NotificationNewsTableViewCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: HomeNotificationNewsConstant.newsCellIdentifier.rawValue)
+                as? HomeNotificationNewsTableViewCell else { return UITableViewCell() }
         cell.notificationNewsTitleLabel.text = datas?[indexPath.row].message
         cell.notificationNewsBodyLabel.text = datas?[indexPath.row].message
         return cell

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NotificationMessageTableViewCell: UITableViewCell {
+class HomeNotificationMessageTableViewCell: UITableViewCell {
     @IBOutlet weak var contentBackgroundView: UIView!
     @IBOutlet weak var notificationMessageLaundryNameLabel: UILabel!
     @IBOutlet weak var notificationMessageDateLabel: UILabel!

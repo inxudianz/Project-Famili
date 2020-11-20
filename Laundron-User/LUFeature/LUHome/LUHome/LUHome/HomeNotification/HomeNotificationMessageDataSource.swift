@@ -8,29 +8,29 @@
 
 import UIKit
 
-class NotificationMessageDataSource: NSObject {
-    var datas: [NotificationMessageData]?
+class HomeNotificationMessageDataSource: NSObject {
+    var datas: [HomeNotificationMessageData]?
     
-    public func setData(datas: [NotificationMessageData]) {
+    public func setData(datas: [HomeNotificationMessageData]) {
         self.datas = datas
     }
 }
 
-struct NotificationMessageData {
+struct HomeNotificationMessageData {
     let timeStamp: String?
     let laundryName: String?
     let title: String?
     let message: String?
 }
 
-extension NotificationMessageDataSource: UITableViewDataSource {
+extension HomeNotificationMessageDataSource: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return datas?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "NotificationMessageCell")
-                as? NotificationMessageTableViewCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: HomeNotificationMessageConstant.messageCellIdentifier.rawValue)
+                as? HomeNotificationMessageTableViewCell else { return UITableViewCell() }
         cell.notificationMessageLaundryNameLabel.text = datas?[indexPath.row].laundryName
         cell.notificationMessageDateLabel.text = datas?[indexPath.row].timeStamp
         cell.notificationMessageContentLabel.text = datas?[indexPath.row].message
