@@ -16,14 +16,14 @@ class HomeNotificationMessageTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        setCornerRadius()
+        setBackgroundView()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
     
-    private func setCornerRadius() {
+    private func setBackgroundView() {
         contentBackgroundView.layer.cornerRadius = CGFloat(HomeNotificationCommonProperty.cornerRadius.rawValue)
         contentBackgroundView.layer.masksToBounds = true
     }
