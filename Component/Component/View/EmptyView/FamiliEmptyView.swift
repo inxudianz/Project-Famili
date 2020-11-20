@@ -16,7 +16,7 @@ import UIKit
     * Programatically
         * Init a new empty view, with functions to set the image name and label text of the view.
         * Use setLabel function to change the text into the desired text.
-        * Use setImage function to change the image into the desired image..
+        * Use setImage function to change the image into the desired image.
 */
 
 @IBDesignable public class FamiliEmptyView: UIView {
@@ -31,10 +31,9 @@ import UIKit
         }
     }
     
-    @IBInspectable var imageName: String = "" {
+    @IBInspectable var imageName: UIImage = UIImage() {
         didSet {
-            guard let image = UIImage(named: imageName) else { return }
-            emptyViewImage.image = image
+            emptyViewImage.image = imageName
             setupImage()
         }
     }
@@ -76,6 +75,7 @@ import UIKit
                                       y: CommonProperty.initialPosition,
                                       width: self.frame.width/2,
                                       height: self.frame.width/2)
+        emptyViewImage.contentMode = .scaleAspectFit
         addSubview(emptyViewImage)
     }
     
@@ -90,14 +90,26 @@ import UIKit
     }
     
     // MARK: - Public Function
-    /// Set the image of the empty view
-    public func setImage(imageName image: String) {
-        guard let image = UIImage(named: imageName) else { return }
+    /** Set Image
+    Set image for the empty view
+    
+    - Parameters:
+        - className: the parent for empty view
+        - image: the name of the image on the empty view
+    */
+    public func setImage(for className: AnyObject, withImage image: String) {
+        let bundle = Bundle(for: type(of: className))
+        guard let image = UIImage(named: image, in: bundle, compatibleWith: nil) else { return }
         emptyViewImage.image = image
         self.setupImage()
     }
     
-    /// Set the text of the empty view
+    /** Set Label
+    Set text for the empty view
+    
+    - Parameters:
+        - text: the text to be shown on the empty view
+    */
     public func setLabel(text: String) {
         emptyViewLabel.text = text
         self.setupLabel()
