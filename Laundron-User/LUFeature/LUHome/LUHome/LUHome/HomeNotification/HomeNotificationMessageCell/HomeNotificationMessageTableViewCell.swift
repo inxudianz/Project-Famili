@@ -24,7 +24,7 @@ class HomeNotificationMessageTableViewCell: UITableViewCell {
     }
     
     private func setCornerRadius() {
-        contentBackgroundView.layer.cornerRadius = 10
+        contentBackgroundView.layer.cornerRadius = CGFloat(HomeNotificationCommonProperty.cornerRadius.rawValue)
         contentBackgroundView.layer.masksToBounds = true
     }
 }

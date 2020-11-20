@@ -7,10 +7,15 @@
 
 import Foundation
 
+typealias HomeNotificationCommonProperty = HomeNotificationConstant.CommonProperties
 typealias HomeNotificationNewsConstant = HomeNotificationConstant.HomeNotificationNewsConstant
 typealias HomeNotificationMessageConstant = HomeNotificationConstant.HomeNotificationMessageConstant
 
 enum HomeNotificationConstant {
+    enum CommonProperties: Int {
+        case cornerRadius = 10
+    }
+    
     enum HomeNotificationNewsConstant: String {
         case newsCellNib = "HomeNotificationNewsTableViewCell"
         case newsCellIdentifier = "HomeNotificationNewsCell"
