@@ -15,7 +15,7 @@ public struct ColorManager {
         case red = "FF0000"
         case yellowPrimary = "FDE566"
         case orangeDark = "C68409"
-        case grayLight = "F2F2F2"
+        case grayLight = "F6F6F6"
         case grayNormal = "DADADA"
         case grayModerate = "BDBDBD"
         case grayDark = "828282"
