@@ -110,7 +110,6 @@ public class NetworkFailureView: UIView {
         networkFailureDescriptionLabel.text = description
         networkFailureButton.setTitle(buttonTItle, for: .normal)
         networkFailureView.sizeToFit()
-//        networkFailureView.center = CGPoint(x: view.bounds.size.width / 2, y: view.bounds.size.height / 2)
         networkFailureView.center = view.convert(view.center, from: view.superview)
         view.addSubview(networkFailureView)
     }
