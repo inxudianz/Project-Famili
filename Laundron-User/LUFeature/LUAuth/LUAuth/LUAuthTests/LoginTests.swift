@@ -142,6 +142,10 @@ class LoginTests: QuickSpec {
                     let isEmpty = sut.isTextsEmpty(texts: ["string"])
                     expect(isEmpty).to(beFalse())
                 }
+                it("return false") {
+                    let isEmpty = sut.isTextsEmpty(texts: [])
+                    expect(isEmpty).to(beFalse())
+                }
                 it("return true") {
                     let isEmpty = sut.isTextsEmpty(texts: [""])
                     expect(isEmpty).to(beTrue())
