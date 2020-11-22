@@ -179,11 +179,18 @@ class ProfileLandingTests: QuickSpec {
                     expect(network.isProfileGet).to(beTrue())
                 }
             }
+            
             context("Function viewDidLoad is called") {
                 it("Without error") {
                     sut.viewDidLoad()
                     expect(view.isShowLoading).to(beTrue())
                     expect(network.isProfileGet).to(beTrue())
+                }
+            }
+            
+            context("Function didSelectforRow is called") {
+                it("Without error") {
+                    sut.didSelectforRow(at: .init(row: 3, section: 3))
                 }
             }
             
