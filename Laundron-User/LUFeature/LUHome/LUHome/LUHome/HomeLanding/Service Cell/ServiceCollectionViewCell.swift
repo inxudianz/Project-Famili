@@ -14,6 +14,7 @@ class ServiceCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var serviceIcon: UIImageView!
     @IBOutlet weak var checkmarkIcon: UIImageView! {
         didSet {
+            checkmarkIcon.image = UIImage(systemName: "checkmark.circle.fill")
             checkmarkIcon.isHidden = true
         }
     }

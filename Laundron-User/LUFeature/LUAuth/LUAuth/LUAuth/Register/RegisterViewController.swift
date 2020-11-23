@@ -19,34 +19,34 @@ class RegisterViewController: UIViewController, RegisterViewProtocol {
         }
     }
     @IBOutlet weak var tfPhone: FamiliTextField! {
-           didSet {
-               tfPhone.font = FontManager.getFont(for: .regular, size: FontManager.FontSize.button.rawValue)
-           }
-       }
+        didSet {
+            tfPhone.font = FontManager.getFont(for: .regular, size: FontManager.FontSize.button.rawValue)
+        }
+    }
     @IBOutlet weak var tfEmail: FamiliTextField! {
-           didSet {
-               tfEmail.font = FontManager.getFont(for: .regular, size: FontManager.FontSize.button.rawValue)
-           }
-       }
+        didSet {
+            tfEmail.font = FontManager.getFont(for: .regular, size: FontManager.FontSize.button.rawValue)
+        }
+    }
     @IBOutlet weak var tfPassword: FamiliTextField! {
-           didSet {
-               tfPassword.font = FontManager.getFont(for: .regular, size: FontManager.FontSize.button.rawValue)
-           }
-       }
+        didSet {
+            tfPassword.font = FontManager.getFont(for: .regular, size: FontManager.FontSize.button.rawValue)
+        }
+    }
     @IBOutlet weak var tfConfirmPassword: FamiliTextField! {
-           didSet {
-               tfConfirmPassword.font = FontManager.getFont(for: .regular, size: FontManager.FontSize.button.rawValue)
-           }
-       }
+        didSet {
+            tfConfirmPassword.font = FontManager.getFont(for: .regular, size: FontManager.FontSize.button.rawValue)
+        }
+    }
     
     @IBOutlet weak var viewLabelError: UIView!
     
     @IBOutlet weak var labelRegister: UILabel! {
-           didSet {
-               labelRegister.font = FontManager.getFont(for: .semibold,
-                                                        size: FontManager.FontSize.navigationLarge.rawValue)
-           }
-       }
+        didSet {
+            labelRegister.font = FontManager.getFont(for: .semibold,
+                                                     size: FontManager.FontSize.navigationLarge.rawValue)
+        }
+    }
     @IBOutlet weak var labelError: UILabel! {
         didSet {
             labelError.font = FontManager.getFont(for: .regular, size: FontManager.FontSize.regularText.rawValue)
@@ -67,6 +67,20 @@ class RegisterViewController: UIViewController, RegisterViewProtocol {
     @IBOutlet weak var buttonRegister: FamiliButton! {
         didSet {
             buttonRegister.isEnabled = false
+        }
+    }
+    @IBOutlet weak var signUpGoogleButton: LoginButton! {
+        didSet {
+            signUpGoogleButton.setImage(image: UIImage(named: AuthConstant.Common.Icon.googleIcon.rawValue,
+                                                       in: Bundle(for: RegisterViewController.self),
+                                                       compatibleWith: nil))
+        }
+    }
+    @IBOutlet weak var signUpFacebookButton: LoginButton! {
+        didSet {
+            signUpFacebookButton.setImage(image: UIImage(named: AuthConstant.Common.Icon.facebookIcon.rawValue,
+                                                         in: Bundle(for: RegisterViewController.self),
+                                                         compatibleWith: nil))
         }
     }
     
@@ -195,7 +209,7 @@ class RegisterViewController: UIViewController, RegisterViewProtocol {
                                                                         action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tapGesture)
     }
-
+    
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }

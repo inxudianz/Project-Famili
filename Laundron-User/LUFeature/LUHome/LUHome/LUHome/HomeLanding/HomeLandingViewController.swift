@@ -97,11 +97,11 @@ class HomeLandingViewController: UIViewController, HomeLandingViewProtocol {
     private func setBannerCollectionView() {
         let bannerCell = UINib(nibName: String(describing: BannerCollectionViewCell.self),
                                bundle: Bundle(for: BannerCollectionViewCell.self))
-        viewModel?.bannerDelegate = HomeLandingBannerDelegate(bannerCollectionView: bannerCollectionView,
+        viewModel?.bannerDelegation = HomeLandingBannerDelegate(bannerCollectionView: bannerCollectionView,
                                                               bannerPageControl: bannerPageControl)
         bannerCollectionView.register(bannerCell, forCellWithReuseIdentifier: HomeLandingConstant.BannerCell.cellID)
         bannerCollectionView.dataSource = viewModel?.bannerDataSource
-        bannerCollectionView.delegate = viewModel?.bannerDelegate
+        bannerCollectionView.delegate = viewModel?.bannerDelegation
         
         bannerCollectionView.collectionViewLayout = getBannerCollectionFlow()
     }
@@ -122,10 +122,10 @@ class HomeLandingViewController: UIViewController, HomeLandingViewProtocol {
                                 bundle: Bundle(for: ServiceCollectionViewCell.self))
         let serviceHeaderCell = UINib(nibName: String(describing: ServiceHeaderCollectionReusableView.self),
                                       bundle: Bundle(for: ServiceHeaderCollectionReusableView.self))
-        viewModel?.serviceDelegate = HomeLandingServiceDelegate(serviceCollectionView: serviceCollectionView)
+        viewModel?.serviceDelegation = HomeLandingServiceDelegate(serviceCollectionView: serviceCollectionView)
         serviceCollectionView.register(serviceCell, forCellWithReuseIdentifier: HomeLandingConstant.ServiceCell.cellID)
         serviceCollectionView.dataSource = viewModel?.serviceDataSource
-        serviceCollectionView.delegate = viewModel?.serviceDelegate
+        serviceCollectionView.delegate = viewModel?.serviceDelegation
         serviceCollectionView.register(serviceHeaderCell,
                                        forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
                                        withReuseIdentifier: HomeLandingConstant.HeaderServiceCell.cellID)

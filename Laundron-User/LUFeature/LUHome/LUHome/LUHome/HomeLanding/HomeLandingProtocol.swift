@@ -15,8 +15,8 @@ protocol HomeLandingViewModelProtocol: class {
     var network: HomeNetworkProtocol? { get set }
     var bannerDataSource: HomeLandingBannerDataSource? { get set }
     var serviceDataSource: HomeLandingServiceDataSource? { get set }
-    var bannerDelegate: HomeLandingBannerDelegate? { get set }
-    var serviceDelegate: HomeLandingServiceDelegate? { get set }
+    var bannerDelegation: HomeLandingBannerDelegate? { get set }
+    var serviceDelegation: HomeLandingServiceDelegate? { get set }
     
     func viewDidLoad()
     func getBannerDatas() -> [String]?

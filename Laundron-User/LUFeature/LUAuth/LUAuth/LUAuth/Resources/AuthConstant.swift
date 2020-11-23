@@ -14,6 +14,13 @@ typealias AuthConstantRegister = AuthConstant.Register
 typealias AuthRegisterLocalizedKey = AuthConstant.Register.LocalizedKey
 
 enum AuthConstant {
+    enum Common {
+        enum Icon: String {
+            case facebookIcon = "icon_fb"
+            case googleIcon = "icon_google"
+        }
+    }
+    
     enum Login {
         enum ButtonIdentifier: String {
             case google
@@ -33,6 +40,7 @@ enum AuthConstant {
             static let contentHeight: CGFloat = 40
         }
     }
+    
     enum Register {
         enum TextFieldIdentifier: Int {
             case name
@@ -41,7 +49,7 @@ enum AuthConstant {
             case password
             case confirmPassword
         }
-
+        
         enum TextFieldError {
             case empty
             case invalid
