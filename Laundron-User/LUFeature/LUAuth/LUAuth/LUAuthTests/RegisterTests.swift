@@ -56,9 +56,8 @@ class RegisterCoordinatorMock: AuthCoordinatorProtocol {
 }
 
 class RegisterNetworkMock: AuthNetworkProtocol {
-    var authLoginDelegate: AuthLoginDelegate?
-    
-    var authRegisterDelegate: AuthRegisterDelegate?
+    weak var authLoginDelegate: AuthLoginDelegate?
+    weak var authRegisterDelegate: AuthRegisterDelegate?
     
     var isLogin = false
     func login(data: AuthModel.Login) {
@@ -72,9 +71,15 @@ class RegisterNetworkMock: AuthNetworkProtocol {
 }
 
 class RegisterTests: QuickSpec {
+    enum Error: Swift.Error, Equatable {
+        case emptyText
+        case requestTimeOut
+        case failedFetchData
+    }
+    
+    // swiftlint:disable function_body_length
     override func spec() {
         describe("ViewModel") {
-            
             var sut: RegisterViewModel!
             var view: RegisterViewMock!
             var coordinator: RegisterCoordinatorMock!
@@ -99,14 +104,12 @@ class RegisterTests: QuickSpec {
                     expect(network.isRegister).to(beTrue())
                 }
             }
-                
             context("navigateToLogin function is called") {
                 it("Without error") {
                     sut.navigateToLogin()
                     expect(coordinator.isNavigatetoLogin).to(beTrue())
                 }
             }
-            
             context("handleField function is called") {
                 it("return empty") {
                     let testData = sut.handleField(text: "", with: .name)
@@ -143,6 +146,19 @@ class RegisterTests: QuickSpec {
                 it("return success for confirm password") {
                     let testData = sut.handleField(text: "budi123", with: .confirmPassword)
                     expect(testData) == .success
+                }
+            }
+            context("didSuccessRegister function is called") {
+                it("Without error") {
+                    sut.didSuccessRegister()
+                    expect(view.isStopLoading).to(beTrue())
+                    expect(coordinator.isNavigatetoLogin).to(beTrue())
+                }
+            }
+            context("didSuccessRegister function is called") {
+                it("Without error") {
+                    sut.didFailedRegister(error: Error.emptyText)
+                    expect(view.isStopLoading).to(beTrue())
                 }
             }
         }

@@ -119,6 +119,12 @@ class TermsOfServiceNetworkMock: ProfileNetworkProtocol {
 }
 
 class TermsOfServiceTests: QuickSpec {
+    enum Error: Swift.Error, Equatable {
+        case emptyText
+        case requestTimeOut
+        case failedFetchData
+    }
+    
     override func spec() {
         describe("ViewModel") {
             var sut: TermsOfServiceViewModel!
@@ -149,6 +155,19 @@ class TermsOfServiceTests: QuickSpec {
                     sut.viewDidLoad()
                     expect(view.isShowLoading).to(beTrue())
                     expect(network.isTermsOfServiceGet).to(beTrue())
+                }
+            }
+            context("Function didSuccessRetrieveTermsOfService is called") {
+                it("Without error") {
+                    sut.didSuccessRetrieveTermsOfService(response: .init(message: "tos"))
+                    expect(view.isStopLoading).to(beTrue())
+                    expect(view.isUpdateTermsOfServiceText).to(beTrue())
+                }
+            }
+            context("Function didFailedRetrieveTermsOfService is called") {
+                it("Without error") {
+                    sut.didFailedRetrieveTermsOfService(error: Error.emptyText)
+                    expect(view.isStopLoading).to(beTrue())
                 }
             }
         }

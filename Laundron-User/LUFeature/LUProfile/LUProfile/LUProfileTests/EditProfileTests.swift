@@ -109,6 +109,12 @@ class EditProfileNetworkMock: ProfileNetworkProtocol {
 }
 
 class EditProfileTests: QuickSpec {
+    enum Error: Swift.Error, Equatable {
+        case emptyText
+        case requestTimeOut
+        case failedFetchData
+    }
+    
     // swiftlint:disable function_body_length
     override func spec() {
         describe("ViewModel") {
@@ -174,6 +180,19 @@ class EditProfileTests: QuickSpec {
                 it("Without error") {
                     sut.navigateToProfile()
                     expect(coordinator.isSaveEditProfile).to(beTrue())
+                }
+            }
+            
+            context("Function didSuccessEditProfile is called") {
+                it("Without error") {
+                    sut.didSuccessEditProfile()
+                    expect(coordinator.isSaveEditProfile).to(beTrue())
+                }
+            }
+            
+            context("Function didFailedEditProfile is called") {
+                it("Without error") {
+                    sut.didFailedEditProfile(error: Error.emptyText)
                 }
             }
         }
