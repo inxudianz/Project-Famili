@@ -92,11 +92,24 @@ class NotificationTests: QuickSpec {
                     expect(network.isNotificationMessageGet).to(beTrue())
                 }
             }
+            
             context("Function getNotificationNews is called") {
                 it("Without error") {
                     sut.getNotificationNews(userId: 1)
                     expect(view.isShowLoading).to(beTrue())
                     expect(network.isNotificationNewsGet).to(beTrue())
+                }
+            }
+            
+            context("Function newsTableDidSelectRow is called") {
+                it("Without error") {
+                    sut.newsTableDidSelectRow(at: .init(row: 0, section: 0))
+                }
+            }
+            
+            context("Function messageTableDidSelectRow is called") {
+                it("Without error") {
+                    sut.messageTableDidSelectRow(at: .init(row: 0, section: 0))
                 }
             }
         }
