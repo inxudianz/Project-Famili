@@ -71,9 +71,9 @@ class OrderLandingHeaderView: UIView {
     
     public func updateHeader(isOpened: Bool) {
         if isOpened {
-            chevronIcon.image = UIImage(systemName: "chevron.up")
+            chevronIcon.image = UIImage(named: "chevron.up", in: Bundle(for: OrderLandingHeaderView.self), compatibleWith: nil)
         } else {
-            chevronIcon.image = UIImage(systemName: "chevron.down")
+            chevronIcon.image = UIImage(named: "chevron.down", in: Bundle(for: OrderLandingHeaderView.self), compatibleWith: nil)
         }
     }
     

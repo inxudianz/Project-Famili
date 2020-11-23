@@ -70,9 +70,8 @@ class LoginCoordinatorMock: AuthCoordinatorProtocol {
 }
 
 class LoginNetworkMock: AuthNetworkProtocol {
-    var authLoginDelegate: AuthLoginDelegate?
-    
-    var authRegisterDelegate: AuthRegisterDelegate?
+    weak var authLoginDelegate: AuthLoginDelegate?
+    weak var authRegisterDelegate: AuthRegisterDelegate?
     
     var isLogin = false
     func login(data: AuthModel.Login) {
@@ -86,6 +85,13 @@ class LoginNetworkMock: AuthNetworkProtocol {
 }
 
 class LoginTests: QuickSpec {
+    enum Error: Swift.Error, Equatable {
+        case emptyText
+        case requestTimeOut
+        case failedFetchData
+    }
+    
+    // swiftlint:disable function_body_length
     override func spec() {
         describe("ViewModel") {
             var sut: LoginViewModel!
@@ -115,14 +121,12 @@ class LoginTests: QuickSpec {
                     expect(network.isLogin).to(beTrue())
                 }
             }
-            
             context("register function is called") {
                 it("Without error") {
                     sut.register()
                     expect(coordinator.isNavigateToRegister).to(beTrue())
                 }
             }
-            
             context("handleLoginButton function is called") {
                 it("return google sign in") {
                     sut.handleLoginButton(id: .google)
@@ -133,15 +137,32 @@ class LoginTests: QuickSpec {
                     expect(view.isShowFacebookSign).to(beTrue())
                 }
             }
-            
             context("isTextsEmpty function is called") {
                 it("return false") {
                     let isEmpty = sut.isTextsEmpty(texts: ["string"])
                     expect(isEmpty).to(beFalse())
                 }
+                it("return false") {
+                    let isEmpty = sut.isTextsEmpty(texts: [])
+                    expect(isEmpty).to(beFalse())
+                }
                 it("return true") {
                     let isEmpty = sut.isTextsEmpty(texts: [""])
                     expect(isEmpty).to(beTrue())
+                }
+            }
+            context("didSuccessLogin function is called") {
+                it("Without error") {
+                    sut.didSuccessLogin()
+                    expect(view.isStopLoading).to(beTrue())
+                    expect(coordinator.isNavigateToHome).to(beTrue())
+                }
+            }
+            context("didFailedLogin function is called") {
+                it("Without error") {
+                    sut.didFailedLogin(error: Error.emptyText)
+                    expect(view.isStopLoading).to(beTrue())
+                    expect(view.isErrorLogin).to(beTrue())
                 }
             }
         }

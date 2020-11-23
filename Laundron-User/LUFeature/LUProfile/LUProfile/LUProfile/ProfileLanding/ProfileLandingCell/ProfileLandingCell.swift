@@ -19,7 +19,7 @@ class ProfileLandingCell: UITableViewCell {
         divider.backgroundColor = UIColor(hex: ProfileLandingConstant.dividerColor)
     }
     public func setCellContent(cellImage image: String, cellText text: String) {
-        cellIcon.image = UIImage(named: image)
+        cellIcon.image = UIImage(named: image, in: Bundle(for: ProfileLandingCell.self), compatibleWith: nil)
         cellLabel.text = text
     }
 }

@@ -19,11 +19,6 @@ class HelpCenterDetailMock: HelpCenterDetailViewProtocol {
     var helpCenterDetailViewTitle: String?
     var helpCenterDetailViewBody: String?
     
-    var isUpdateHelpCenterDetailBodyText = false
-    func updateHelpCenterDetailBodyText(text body: String) {
-        isUpdateHelpCenterDetailBodyText = true
-    }
-    
     var isShowLoading = false
     func showLoading() {
         isShowLoading = true
@@ -124,6 +119,7 @@ class HelpCenterDetailNetworkMock: ProfileNetworkProtocol {
 class HelpCenterDetailTests: QuickSpec {
     override func spec() {
         describe("ViewModel") {
+            var sut: HelpCenterDetailViewModel!
             var view: HelpCenterDetailMock!
             var coordinator: HelpCenterDetailCoordinatorMock!
             var network: HelpCenterDetailNetworkMock!
@@ -132,6 +128,19 @@ class HelpCenterDetailTests: QuickSpec {
                 view = HelpCenterDetailMock()
                 coordinator = HelpCenterDetailCoordinatorMock()
                 network = HelpCenterDetailNetworkMock()
+                
+                sut = HelpCenterDetailViewModel()
+                sut.view = view
+            }
+            
+            context("Function viewDidLoad is called") {
+                it("Without error") {
+                    sut.viewDidLoad()
+                    view.helpCenterDetailViewTitle = "Test Title"
+                    view.helpCenterDetailViewBody = "Test Body"
+                    expect(view.helpCenterDetailViewTitle) == "Test Title"
+                    expect(view.helpCenterDetailViewBody) == "Test Body"
+                }
             }
         }
     }
