@@ -9,18 +9,18 @@
 import Foundation
 import LUHomeNetwork
 
-class NotificationViewModel: NotificationViewModelProtocol {
+class HomeNotificationViewModel: HomeNotificationViewModelProtocol {
     // MARK: - Property
-    weak var view: NotificationViewProtocol?
+    weak var view: HomeNotificationViewProtocol?
     weak var coordinator: HomeCoordinatorProtocol?
-    var notificationMessageDataSource: NotificationMessageDataSource?
-    var notificationNewsDataSource: NotificationNewsDataSource?
+    var notificationMessageDataSource: HomeNotificationMessageDataSource?
+    var notificationNewsDataSource: HomeNotificationNewsDataSource?
     var network: HomeNetworkProtocol?
     
     // MARK: - Initialization
     init() {
-        self.notificationMessageDataSource = NotificationMessageDataSource()
-        self.notificationNewsDataSource = NotificationNewsDataSource()
+        self.notificationMessageDataSource = HomeNotificationMessageDataSource()
+        self.notificationNewsDataSource = HomeNotificationNewsDataSource()
         network = HomeNetwork()
         network?.retrieveNotificationMessageDelegate = self
         network?.retrieveNotificationNewsDelegate = self
@@ -44,5 +44,4 @@ class NotificationViewModel: NotificationViewModelProtocol {
     func newsTableDidSelectRow(at: IndexPath) {
         //func when user select a cell on news table
     }
-    
 }

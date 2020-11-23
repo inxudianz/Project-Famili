@@ -9,7 +9,8 @@
 import UIKit
 import Component
 
-class NotificationViewController: UIViewController, NotificationViewProtocol {
+class HomeNotificationViewController: UIViewController, HomeNotificationViewProtocol {
+    // MARK: - Outlet
     @IBOutlet weak var notificationSegmentedControl: UISegmentedControl!
     
     //News Content
@@ -26,16 +27,18 @@ class NotificationViewController: UIViewController, NotificationViewProtocol {
     //Message Empty
     @IBOutlet weak var messageEmptyView: UIView!
     
-    var viewModel: NotificationViewModelProtocol?
+    // MARK: - Property
+    var viewModel: HomeNotificationViewModelProtocol?
     lazy var loadingView = FamiliLoadingView(frame: self.view.frame)
     let messageContentSegmentControl = 1
     let newsContentSegmentControl = 0
     var messageTableContentIsEmpty: Bool?
     var newsTableContentIsEmpty: Bool?
     
+    // MARK: - Initialization
     init() {
-        super.init(nibName: String(describing: NotificationViewController.self),
-                   bundle: Bundle(for: NotificationViewController.self))
+        super.init(nibName: String(describing: HomeNotificationViewController.self),
+                   bundle: Bundle(for: HomeNotificationViewController.self))
     }
     
     required init?(coder: NSCoder) {
@@ -46,24 +49,15 @@ class NotificationViewController: UIViewController, NotificationViewProtocol {
         super.viewDidLoad()
         setSegmentedControlView()
         registerCell()
-        //        messageContentView.isHidden = true
-        //        messageEmptyView.isHidden = true
         showLoading()
         notificationSegmentedControlChanged(newsContentSegmentControl)
         reloadNewsTableData()
-        //        viewModel?.getNotificationNews(userId: 1)
-        //        if newsTableContentIsEmpty == true{
-        //            newsContentView.isHidden = true
-        //            newsEmptyView.isHidden = false
-        //        }else{
-        //            newsContentView.isHidden = false
-        //            newsEmptyView.isHidden = true
-        //        }
     }
     
+    // MARK: - Function
     @IBAction func notificationSegmentedControlChanged(_ sender: Any) {
         switch notificationSegmentedControl.selectedSegmentIndex {
-        case newsContentSegmentControl :
+        case newsContentSegmentControl:
             messageContentView.isHidden = true
             messageEmptyView.isHidden = true
             viewModel?.getNotificationNews(userId: 1)
@@ -74,7 +68,7 @@ class NotificationViewController: UIViewController, NotificationViewProtocol {
                 newsContentView.isHidden = false
                 newsEmptyView.isHidden = true
             }
-        case messageContentSegmentControl :
+        case messageContentSegmentControl:
             newsContentView.isHidden = true
             newsEmptyView.isHidden = true
             viewModel?.getNotificationMessage(userId: 1)
@@ -88,6 +82,44 @@ class NotificationViewController: UIViewController, NotificationViewProtocol {
         default :
             break
         }
+    }
+    
+    private func setSegmentedControlView() {
+        notificationSegmentedControl
+            .setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.systemBlue], for: .selected)
+        notificationSegmentedControl
+            .setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.gray], for: .normal)
+    }
+    
+    private func registerCell() {
+        let newsContentTableViewNib = HomeNotificationNewsConstant.newsCellNib
+        let newsContentTableViewCellIdentifier = HomeNotificationNewsConstant.newsCellIdentifier
+        
+        let messageContentTableViewNib = HomeNotificationMessageConstant.messageCellNib
+        let messageContentTableViewCellIdentifier = HomeNotificationMessageConstant.messageCellIdentifier
+        
+        let newsContentNib = UINib(nibName: String(describing: newsContentTableViewNib.self),
+                                   bundle: Bundle(for: type(of: self)))
+        let messageContentNib = UINib(nibName: String(describing: messageContentTableViewNib.self),
+                                      bundle: Bundle(for: type(of: self)))
+        
+        newsContentTableView.register(newsContentNib,
+                                      forCellReuseIdentifier: String(describing: newsContentTableViewCellIdentifier))
+        newsContentTableView.delegate = self
+        newsContentTableView.dataSource = viewModel?.notificationNewsDataSource
+        
+        messageContentTableView.register(messageContentNib,
+                                         forCellReuseIdentifier: String(describing: messageContentTableViewCellIdentifier))
+        messageContentTableView.delegate = self
+        messageContentTableView.dataSource = viewModel?.notificationMessageDataSource
+        
+        setTableViewFooter()
+    }
+    
+    /// Setup the footer of the table view to stop overflowing empty cells
+    private func setTableViewFooter() {
+        newsContentTableView.tableFooterView = UIView()
+        messageContentTableView.tableFooterView = UIView()
     }
     
     func messageTableIsEmpty() {
@@ -115,45 +147,15 @@ class NotificationViewController: UIViewController, NotificationViewProtocol {
     func stopLoading() {
         loadingView.stopLoading()
     }
-    
-    private func setSegmentedControlView() {
-        notificationSegmentedControl
-            .setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.systemBlue], for: .selected)
-        notificationSegmentedControl
-            .setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.gray], for: .normal)
-    }
-    
-    private func registerCell() {
-        let newsContentTableViewNib = "NotificationNewsTableViewCell"
-        let newsContentTableViewCellIdentifier = "NotificationNewsCell"
-        
-        let messageContentTableViewNib = "NotificationMessageTableViewCell"
-        let messageContentTableViewCellIdentifier = "NotificationMessageCell"
-        
-        newsContentTableView.register(UINib(nibName: String(describing: newsContentTableViewNib.self),
-                                            bundle: nil),
-                                      forCellReuseIdentifier: String(describing: newsContentTableViewCellIdentifier))
-        newsContentTableView.delegate = self
-        newsContentTableView.dataSource = viewModel?.notificationNewsDataSource
-        newsContentTableView.tableFooterView = UIView()
-        
-        messageContentTableView.register(UINib(nibName: String(describing: messageContentTableViewNib.self),
-                                               bundle: nil),
-                                         forCellReuseIdentifier: String(describing: messageContentTableViewCellIdentifier))
-        messageContentTableView.delegate = self
-        messageContentTableView.dataSource = viewModel?.notificationMessageDataSource
-        messageContentTableView.tableFooterView = UIView()
-    }
-    
 }
 
-extension NotificationViewController: UITableViewDelegate {
+extension HomeNotificationViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if tableView == messageContentTableView {
-            //clicked on message table view
+            // Clicked on message table view
             viewModel?.messageTableDidSelectRow(at: indexPath)
         } else if tableView == newsContentTableView {
-            //clicked on news table view
+            // Clicked on news table view
             viewModel?.newsTableDidSelectRow(at: indexPath)
         }
     }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NotificationMessageTableViewCell: UITableViewCell {
+class HomeNotificationMessageTableViewCell: UITableViewCell {
     @IBOutlet weak var contentBackgroundView: UIView!
     @IBOutlet weak var notificationMessageLaundryNameLabel: UILabel!
     @IBOutlet weak var notificationMessageDateLabel: UILabel!
@@ -16,17 +16,15 @@ class NotificationMessageTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        setCornerRadius()
+        setBackgroundView()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
-    private func setCornerRadius() {
-        contentBackgroundView.layer.cornerRadius = 10
+    private func setBackgroundView() {
+        contentBackgroundView.layer.cornerRadius = CGFloat(HomeNotificationCommonProperty.cornerRadius.rawValue)
         contentBackgroundView.layer.masksToBounds = true
     }
 }

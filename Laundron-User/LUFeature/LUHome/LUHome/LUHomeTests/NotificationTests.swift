@@ -12,8 +12,8 @@ import Nimble
 @testable import LUHome
 @testable import LUHomeNetwork
 
-class NotificationMock: NotificationViewProtocol {
-    var viewModel: NotificationViewModelProtocol?
+class HomeNotificationMock: HomeNotificationViewProtocol {
+    var viewModel: HomeNotificationViewModelProtocol?
     var messageTableContentIsEmpty: Bool?
     var newsTableContentIsEmpty: Bool?
     
@@ -48,7 +48,7 @@ class NotificationMock: NotificationViewProtocol {
     }
 }
 
-class NotificationNetworkMock: HomeNetworkProtocol {
+class HomeNotificationNetworkMock: HomeNetworkProtocol {
     weak var homeBannersDelegate: HomeBannersProtocol?
     weak var retrieveNotificationMessageDelegate: RetrieveNotificationMessageDelegate?
     weak var retrieveNotificationNewsDelegate: RetrieveNotificationNewsDelegate?
@@ -69,18 +69,18 @@ class NotificationNetworkMock: HomeNetworkProtocol {
     }
 }
 
-class NotificationTests: QuickSpec {
+class HomeNotificationTests: QuickSpec {
     override func spec() {
         describe("ViewModel") {
-            var sut: NotificationViewModel!
-            var view: NotificationMock!
-            var network: NotificationNetworkMock!
+            var sut: HomeNotificationViewModel!
+            var view: HomeNotificationMock!
+            var network: HomeNotificationNetworkMock!
             
             beforeEach {
-                view = NotificationMock()
-                network = NotificationNetworkMock()
+                view = HomeNotificationMock()
+                network = HomeNotificationNetworkMock()
                 
-                sut = NotificationViewModel()
+                sut = HomeNotificationViewModel()
                 sut.view = view
                 sut.network = network
             }
