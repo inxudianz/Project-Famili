@@ -57,8 +57,10 @@ class ProfileLandingController: UIViewController, ProfileLandingViewProtocol {
     
     // MARK: - Function
     private func setupView() {
-        phoneIcon.image = UIImage(named: ProfileLandingConstant.ImageName.call.rawValue)
-        emailIcon.image = UIImage(named: ProfileLandingConstant.ImageName.mail.rawValue)
+        phoneIcon.image = UIImage(named: ProfileLandingConstant.ImageName.call.rawValue,
+        in: Bundle(for: ProfileLandingController.self), compatibleWith: nil)
+        emailIcon.image = UIImage(named: ProfileLandingConstant.ImageName.mail.rawValue,
+        in: Bundle(for: ProfileLandingController.self), compatibleWith: nil)
         
         navigationController?.applyCustomFont(style: .regular, size: .navigationLarge)
         

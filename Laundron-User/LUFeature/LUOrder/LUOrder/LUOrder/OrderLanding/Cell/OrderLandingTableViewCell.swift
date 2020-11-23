@@ -37,6 +37,10 @@ class OrderLandingTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         dualButton.familiDualButtonDelegate = self
+        dualButton.setupDualButtonImageView(for: .leftButton, image: UIImage(named: "phone_icon",
+                                                                             in: Bundle(for: OrderLandingTableViewCell.self), compatibleWith: nil))
+        dualButton.setupDualButtonImageView(for: .rightButton, image: UIImage(named: "message_icon",
+                                                                              in: Bundle(for: OrderLandingTableViewCell.self), compatibleWith: nil))
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
