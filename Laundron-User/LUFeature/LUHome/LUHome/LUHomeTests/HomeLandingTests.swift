@@ -87,7 +87,7 @@ class HomeLandingTests: QuickSpec {
                 sut.serviceDataSource = HomeLandingServiceDataSource()
                 serviceDelegate = HomeLandingServiceDelegate(serviceCollectionView: .init(frame: .zero, collectionViewLayout: .init()))
                 serviceDelegate.selectedDatas = [""]
-                sut.serviceDelegate = serviceDelegate
+                sut.serviceDelegation = serviceDelegate
                 sut?.coordinator = coordinator
             }
             

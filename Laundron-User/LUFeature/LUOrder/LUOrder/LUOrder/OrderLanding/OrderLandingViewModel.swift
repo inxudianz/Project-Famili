@@ -15,7 +15,7 @@ class OrderLandingViewModel: OrderLandingViewModelProtocol {
     weak var coordinator: OrderCoordinatorProtocol?
     var network: OrderNetworkProtocol?
     var dataSource: OrderLandingDataSource?
-    weak var delegate: OrderLandingDelegate?
+    var delegation: OrderLandingDelegate?
     
     init() {
         network = OrderNetwork()
@@ -41,7 +41,7 @@ class OrderLandingViewModel: OrderLandingViewModelProtocol {
     
     public func updateOrderView(with type: OrderLandingConstant.SegmentType) {        
         dataSource?.dataType = type
-        delegate?.dataType = type            
+        delegation?.dataType = type
     }
     
     func setDataSource() {
@@ -56,7 +56,7 @@ class OrderLandingViewModel: OrderLandingViewModelProtocol {
     }
     
     func setOngoingDelegate() {
-        delegate?.cellTapped = {
+        delegation?.cellTapped = {
             self.coordinator?.navigateToDetail()
         }
     }
@@ -67,6 +67,6 @@ class OrderLandingViewModel: OrderLandingViewModelProtocol {
         for (index,data) in datas.enumerated() where !data.detail.isEmpty {
             isDatasEmpty[index] = false
         }
-        delegate?.updateSectionType(isSectionsEmpty: isDatasEmpty)
+        delegation?.updateSectionType(isSectionsEmpty: isDatasEmpty)
     }
 }

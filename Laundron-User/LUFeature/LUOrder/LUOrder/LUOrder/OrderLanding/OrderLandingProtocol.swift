@@ -14,7 +14,7 @@ protocol OrderLandingViewModelProtocol: class {
     var coordinator: OrderCoordinatorProtocol? { get set }
     var network: OrderNetworkProtocol? { get set }
     var dataSource: OrderLandingDataSource? { get set }
-    var delegate: OrderLandingDelegate? { get set }
+    var delegation: OrderLandingDelegate? { get set }
     
     func viewDidLoad()
     func updateOrderView(with type: OrderLandingConstant.SegmentType)

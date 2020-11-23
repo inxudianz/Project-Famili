@@ -16,8 +16,8 @@ class HomeLandingViewModel: HomeLandingViewModelProtocol {
     var network: HomeNetworkProtocol?
     var bannerDataSource: HomeLandingBannerDataSource?
     var serviceDataSource: HomeLandingServiceDataSource?
-    weak var bannerDelegate: HomeLandingBannerDelegate?
-    weak var serviceDelegate: HomeLandingServiceDelegate?
+    var bannerDelegation: HomeLandingBannerDelegate?
+    var serviceDelegation: HomeLandingServiceDelegate?
     
     init() {
         network = HomeNetwork()
@@ -50,6 +50,7 @@ class HomeLandingViewModel: HomeLandingViewModelProtocol {
     
     private func setServiceData() {
         self.serviceDataSource = HomeLandingServiceDataSource()
+        // Service list pending
         self.serviceDataSource?.setDatas(with: ["icon","icon2","icon3","icon","icon3"])
         
         self.serviceDataSource?.serviceHeaderDelegate = self
@@ -58,7 +59,7 @@ class HomeLandingViewModel: HomeLandingViewModelProtocol {
  
 extension HomeLandingViewModel: ServiceHeaderProtocol {
     func headerButtonDidTapped() {
-        guard let selectedDatas = serviceDelegate?.selectedDatas else { return }
+        guard let selectedDatas = serviceDelegation?.selectedDatas else { return }
         coordinator?.navigateToService(with: selectedDatas)
     }
 }

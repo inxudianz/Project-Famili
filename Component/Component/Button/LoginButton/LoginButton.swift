@@ -161,4 +161,8 @@ How to use:
     public func getIdentifier() -> String {
         return identifier
     }
+    
+    public func setImage(image: UIImage?) {
+        buttonIcon.image = image
+    }
 }

@@ -53,8 +53,20 @@ class LoginViewController: UIViewController, LoginViewProtocol {
             loginErrorLabel.text = AuthConstantLogin.LocalizedKey.emailOrPasswordIncorrect.localized()
         }
     }
-    @IBOutlet weak var googleLoginButton: LoginButton!
-    @IBOutlet weak var facebookLoginButton: LoginButton!
+    @IBOutlet weak var googleLoginButton: LoginButton! {
+        didSet {
+            googleLoginButton.setImage(image: UIImage(named: AuthConstant.Common.Icon.googleIcon.rawValue,
+                                                      in: Bundle(for: LoginViewController.self),
+                                                      compatibleWith: nil))
+        }
+    }
+    @IBOutlet weak var facebookLoginButton: LoginButton! {
+        didSet {
+            facebookLoginButton.setImage(image: UIImage(named: AuthConstant.Common.Icon.facebookIcon.rawValue,
+                                                        in: Bundle(for: LoginViewController.self),
+                                                        compatibleWith: nil))
+        }
+    }
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var contentHeight: NSLayoutConstraint!
     
@@ -145,7 +157,7 @@ class LoginViewController: UIViewController, LoginViewProtocol {
                                                name: UIResponder.keyboardDidShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardChange(_:)),
                                                name: UIResponder.keyboardDidHideNotification, object: nil)
-
+        
         googleLoginButton.loginButtonDelegate = self
         facebookLoginButton.loginButtonDelegate = self
         

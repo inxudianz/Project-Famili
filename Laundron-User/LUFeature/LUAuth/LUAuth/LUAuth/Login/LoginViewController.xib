@@ -229,13 +229,13 @@
     </objects>
     <designables>
         <designable name="IrI-95-FL8">
-            <size key="intrinsicContentSize" width="94.5" height="34"/>
+            <size key="intrinsicContentSize" width="69" height="34"/>
         </designable>
         <designable name="njQ-dP-dN7">
-            <size key="intrinsicContentSize" width="119.5" height="34"/>
+            <size key="intrinsicContentSize" width="90.5" height="34"/>
         </designable>
         <designable name="xGC-dd-FBr">
-            <size key="intrinsicContentSize" width="42" height="33"/>
+            <size key="intrinsicContentSize" width="38" height="30"/>
         </designable>
     </designables>
     <resources>

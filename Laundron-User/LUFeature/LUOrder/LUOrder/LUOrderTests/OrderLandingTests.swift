@@ -106,7 +106,7 @@ class OrderLandingTests: QuickSpec {
                 sut = OrderLandingViewModel()
                 sut?.view = view
                 sut.dataSource = dataSource
-                sut.delegate = delegate
+                sut.delegation = delegate
                 sut?.coordinator = coordinator
                 sut?.network = network
             }
@@ -124,13 +124,13 @@ class OrderLandingTests: QuickSpec {
                 it("Without error for ongoing") {
                     sut.updateOrderView(with: .ongoing)
                     expect(sut.dataSource?.dataType) == .ongoing
-                    expect(sut.delegate?.dataType) == .ongoing
+                    expect(sut.delegation?.dataType) == .ongoing
 
                 }
                 it("Without error for history") {
                     sut.updateOrderView(with: .history)
                     expect(sut.dataSource?.dataType) == .history
-                    expect(sut.delegate?.dataType) == .history
+                    expect(sut.delegation?.dataType) == .history
                 }
             }
             context("Function updateCellType is called") {
