@@ -62,12 +62,20 @@ class HomeCoordinatorMock: HomeCoordinatorProtocol {
 }
 
 class HomeLandingTests: QuickSpec {
+    enum Error: Swift.Error, Equatable {
+        case emptyText
+        case requestTimeOut
+        case failedFetchData
+    }
+    
+    // swiftlint:disable function_body_length
     override func spec() {
         describe("ViewModel") {
             
             var sut: HomeLandingViewModel!
             var view: HomeLandingViewMock!
             var coordinator: HomeCoordinatorMock!
+            var serviceDelegate: HomeLandingServiceDelegate!
             
             beforeEach {
                 view = HomeLandingViewMock()
@@ -77,6 +85,9 @@ class HomeLandingTests: QuickSpec {
                 sut?.view = view
                 sut.bannerDataSource = HomeLandingBannerDataSource()
                 sut.serviceDataSource = HomeLandingServiceDataSource()
+                serviceDelegate = HomeLandingServiceDelegate(serviceCollectionView: .init(frame: .zero, collectionViewLayout: .init()))
+                serviceDelegate.selectedDatas = [""]
+                sut.serviceDelegate = serviceDelegate
                 sut?.coordinator = coordinator
             }
             
@@ -97,6 +108,7 @@ class HomeLandingTests: QuickSpec {
             context("Function headerButtonDidTapped is called") {
                 it("Without error") {
                     sut.headerButtonDidTapped()
+                    expect(coordinator.isNavigateToService).to(beTrue())
                 }
             }
             
@@ -115,7 +127,15 @@ class HomeLandingTests: QuickSpec {
             context("Function didSuccessGetBanners is called") {
                 it("Without error") {
                     sut.didSuccessGetBanners(response: .init(banners: ["image"]))
+                    expect(view.isHideLoading).to(beTrue())
                     expect(view.isReloadBanner).to(beTrue())
+                }
+            }
+            
+            context("Function didFailedGetBanners is called") {
+                it("Without error") {
+                    sut.didFailedGetBanners(error: Error.emptyText)
+                    expect(view.isHideLoading).to(beTrue())
                 }
             }
             
