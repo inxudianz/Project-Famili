@@ -195,4 +195,13 @@ How to use:
             rightButton.isEnabled = false
         }
     }
+    
+    public func setupDualButtonImageView(for button: ButtonSelection, image: UIImage? = nil) {
+        switch button {
+        case .leftButton:
+            leftButton.setImage(image, for: .normal)
+        case .rightButton:
+            rightButton.setImage(image, for: .normal)
+        }
+    }
 }
