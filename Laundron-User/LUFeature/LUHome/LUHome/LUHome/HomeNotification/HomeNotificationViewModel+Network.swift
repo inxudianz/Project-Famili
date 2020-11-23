@@ -1,5 +1,5 @@
 //
-//  NotificationNewsViewModel+Network.swift
+//  HomeNotificationViewModel+Network.swift
 //  MainApp
 //
 //  Created by Evan Christian on 10/10/20.
