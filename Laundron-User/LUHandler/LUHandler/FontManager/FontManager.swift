@@ -19,10 +19,12 @@ public struct FontManager {
         case regular = "-Regular"
         case semibold = "-SemiBold"
         case thin = "-Thin"
+        case normal = "-Normal"
     }
     
     public enum FontSize: CGFloat {
         case regularText = 13
+        case body = 14
         case button = 16
         case header2 = 18
         case navigationLarge = 28
@@ -34,5 +36,12 @@ public struct FontManager {
         let fontWeight = type.rawValue
         guard let font = UIFont(name: name + fontWeight, size: size) else { return .systemFont(ofSize: size) }
         return font
+    }
+    
+    public struct FontStyle {
+        let titleBar = FontManager.getFont(for: .semibold, size: FontManager.FontSize.navigationLarge.rawValue)
+        let navigationBar = FontManager.getFont(for: .semibold, size: FontManager.FontSize.button.rawValue)
+        let button = FontManager.getFont(for: .semibold, size: FontManager.FontSize.button.rawValue)
+        let body = FontManager.getFont(for: .medium, size: FontManager.FontSize.body.rawValue)
     }
 }
