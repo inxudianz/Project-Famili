@@ -24,4 +24,12 @@ extension String {
         dateFormatter.timeZone = NSTimeZone(name: "UTC") as TimeZone?
         return dateFormatter.date(from: self) ?? Date()
     }
+    
+    public func setAttributedString(sentence: String, firstCharacterIndex: Int, length: Int, fontWeight: FontManager.FontWeight, fontSize: FontManager.FontSize) -> NSMutableAttributedString {
+        let attributes = [NSAttributedString.Key.font: FontManager.getFont(for: fontWeight, size: fontSize.rawValue)]
+        let attributedString = NSMutableAttributedString(string: sentence, attributes: attributes)
+        
+        attributedString.setAttributes(attributes, range: NSRange(location: firstCharacterIndex, length: length))
+        return attributedString
+    }
 }
