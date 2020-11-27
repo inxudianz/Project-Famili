@@ -17,4 +17,11 @@ extension String {
         let regex = NSPredicate(format: "SELF MATCHES %@", regex)
         return regex.evaluate(with: self)
     }
+    
+    public func toDate(dateFormat format : String) -> Date {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = format
+        dateFormatter.timeZone = NSTimeZone(name: "UTC") as TimeZone?
+        return dateFormatter.date(from: self) ?? Date()
+    }
 }
