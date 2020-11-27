@@ -7,6 +7,15 @@
 
 import UIKit
 
+/** Famili Segmented Control Template
+
+Create view with segmented control
+How to use:
+ * Using XIB
+    * Drag and drop a UIView and change the class to FamiliSegmentedControl, put it inside a container view
+    * Connect an IBAction function to the view
+*/
+
 @IBDesignable
 public class FamiliSegmentedControl: UIControl {
     var buttons = [UIButton]()
@@ -14,12 +23,6 @@ public class FamiliSegmentedControl: UIControl {
     var selectedSegmentIndex = 0
     
     // MARK: - Property
-    @IBInspectable var viewBackgroundColor: UIColor = UIColor.clear {
-        didSet {
-            layer.backgroundColor = viewBackgroundColor.cgColor
-        }
-    }
-    
     /// Set the border width for the segmented control
     @IBInspectable var borderWidth: CGFloat = 0 {
         didSet {
@@ -67,31 +70,35 @@ public class FamiliSegmentedControl: UIControl {
     }
 
     // MARK: - Private Function
+    /// Function that updates the UIView everytime a value on IBInspectable is changed
     private func updateView() {
+        /// To reset the view and array of buttons (segments)
         buttons.removeAll()
         subviews.forEach { (view) in
             view.removeFromSuperview()
         }
         
+        /// To seperate the segment titles by comma and add it to an array of buttons (var buttons on line 21)
         let buttonTitles = commaSeperatedSegments.components(separatedBy: ",")
         for buttonTitle in buttonTitles {
             let button = UIButton(type: .system)
             button.setTitle(buttonTitle, for: .normal)
             button.setTitleColor(textColor, for: .normal)
             button.addTarget(self, action: #selector(buttonTapped(button:)), for: .touchUpInside)
-//            button.backgroundColor = UIColor.lightGray
-//            button.layer.cornerRadius = frame.height/2
             buttons.append(button)
         }
         
+        /// To change the default selected segment title color
         buttons[0].setTitleColor(selectedSegmentTextColor, for: .normal)
         
+        /// To create the view for the selected segment and add it to the view
         let selectorWidth = frame.width / CGFloat(buttonTitles.count)
         selector = UIView(frame: CGRect(x: 0, y: 0, width: selectorWidth, height: frame.height))
         selector.layer.cornerRadius = frame.height/2
         selector.backgroundColor = selectedSegmentColor
         addSubview(selector)
         
+        /// To constraint the buttons / segments in the view and add it to the view
         let buttonsStackView = UIStackView(arrangedSubviews: buttons)
         buttonsStackView.axis = .horizontal
         buttonsStackView.alignment = .fill
@@ -104,7 +111,9 @@ public class FamiliSegmentedControl: UIControl {
         buttonsStackView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
     }
     
+    /// Function that is called everytime a button / segment is tapped
     @objc private func buttonTapped(button: UIButton) {
+        /// To animate the selected button / segment when other button is tapped
         for (buttonIndex, bttn) in buttons.enumerated() {
             bttn.setTitleColor(textColor, for: .normal)
             if bttn == button {
@@ -116,7 +125,7 @@ public class FamiliSegmentedControl: UIControl {
                 bttn.setTitleColor(selectedSegmentTextColor, for: .normal)
             }
         }
+        /// Extension of UIControl to make IBAction usable for this view (value changed)
         sendActions(for: .valueChanged)
     }
 }
-
