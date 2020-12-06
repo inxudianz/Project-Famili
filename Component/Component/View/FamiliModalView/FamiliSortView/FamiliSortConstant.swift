@@ -24,18 +24,16 @@ enum FamiliSortConstant {
         static let collectionItemInset = 10.0
     }
     
-    struct SortItems {
-        let price = "Price"
-        let distance = "Distance"
+    enum SortItems {
+        static let price = "Price"
+        static let distance = "Distance"
     }
     
-    struct FilterItems {
-        let tShirt = "T-Shirt"
-        let shirt = "Shirt"
-        let trousers = "Trousers"
-        let bag = "Bag"
-        let shoes = "Shoes"
+    enum FilterItems {
+        static let tShirt = "T-Shirt"
+        static let shirt = "Shirt"
+        static let trousers = "Trousers"
+        static let bags = "Bags"
+        static let shoes = "Shoes"
     }
 }
-
-

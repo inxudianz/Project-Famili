@@ -17,4 +17,3 @@ class FamiliSortCell: UICollectionViewCell {
         super.init(coder: aDecoder)
     }
 }
-
