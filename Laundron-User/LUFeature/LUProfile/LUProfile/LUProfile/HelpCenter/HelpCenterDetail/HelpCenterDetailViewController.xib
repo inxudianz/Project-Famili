@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HelpCenterDetailViewController" customModule="MainApp" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HelpCenterDetailViewController" customModule="LUProfile" customModuleProvider="target">
             <connections>
                 <outlet property="helpCenterDetailBodyLabel" destination="9dG-T1-udf" id="WVM-wF-qa9"/>
                 <outlet property="helpCenterDetailNoButton" destination="oeb-i0-tJ8" id="Elq-Q4-u88"/>
@@ -38,12 +38,11 @@
                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P5J-ZI-QWI">
                                     <rect key="frame" x="8" y="-5" width="30" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" title="Yes"/>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oeb-i0-tJ8">
                                     <rect key="frame" x="64" y="-5" width="30" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" title="No">
+                                    <state key="normal">
                                         <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
                                 </button>
@@ -73,7 +72,7 @@
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9dG-T1-udf">
                                     <rect key="frame" x="8" y="50" width="323" height="706.5"/>
-                                    <mutableString key="text">BodyLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempus urna et pharetra pharetra. Adipiscing elit duis tristique sollicitudin nibh sit amet. Magna eget est lorem ipsum dolor sit. Faucibus ornare suspendisse sed nisi. Non curabitur gravida arcu ac tortor dignissim convallis aenean et. Eu sem integer vitae justo eget magna fermentum iaculis. Senectus et netus et malesuada fames ac turpis egestas sed. Sapien pellentesque habitant morbi tristique senectus et netus et malesuada. Nascetur ridiculus mus mauris vitae ultricies. Arcu felis bibendum ut tristique et. Nisi est sit amet facilisis magna etiam tempor orci.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempus urna et pharetra pharetra. Adipiscing elit duis tristique sollicitudin nibh sit amet. Magna eget est lorem ipsum dolor sit. Faucibus ornare suspendisse sed nisi. Non curabitur gravida arcu ac tortor dignissim convallis aenean et. Eu sem integer vitae justo eget magna fermentum iaculis. Senectus et netus et malesuada fames ac turpis egestas sed. Sapien pellentesque habitant morbi tristique senectus et netus et malesuada. Nascetur ridiculus mus mauris vitae ultricies. Arcu felis bibendum ut tristique et. Nisi est sit amet facilisis magna etiam tempor orci.  </mutableString>
+                                    <string key="text">BodyLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempus urna et pharetra pharetra. Adipiscing elit duis tristique sollicitudin nibh sit amet. Magna eget est lorem ipsum dolor sit. Faucibus ornare suspendisse sed nisi. Non curabitur gravida arcu ac tortor dignissim convallis aenean et. Eu sem integer vitae justo eget magna fermentum iaculis. Senectus et netus et malesuada fames ac turpis egestas sed. Sapien pellentesque habitant morbi tristique senectus et netus et malesuada. Nascetur ridiculus mus mauris vitae ultricies. Arcu felis bibendum ut tristique et. Nisi est sit amet facilisis magna etiam tempor orci.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempus urna et pharetra pharetra. Adipiscing elit duis tristique sollicitudin nibh sit amet. Magna eget est lorem ipsum dolor sit. Faucibus ornare suspendisse sed nisi. Non curabitur gravida arcu ac tortor dignissim convallis aenean et. Eu sem integer vitae justo eget magna fermentum iaculis. Senectus et netus et malesuada fames ac turpis egestas sed. Sapien pellentesque habitant morbi tristique senectus et netus et malesuada. Nascetur ridiculus mus mauris vitae ultricies. Arcu felis bibendum ut tristique et. Nisi est sit amet facilisis magna etiam tempor orci.  </string>
                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
