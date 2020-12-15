@@ -7,19 +7,29 @@
 
 import UIKit
 
-public class FamiliSortView: UIView {
+/** Sort View
+ 
+    Create a view for sort and filter lists.
+    How to use:
+    * Programatically
+        * Init a new sort view controller's view frame
+        * Use setLabel function to change the text into the desired text.
+        * Use setImage function to change the image into the desired image.
+*/
+
+public class FamiliSortView: UIViewController, UICollectionViewDelegate {
     // MARK: - Property
-    var sortCollection: UICollectionView?
-    var dataSource: FamiliSortDataSource?
+    private var sortCollection: UICollectionView?
+    var dataSource = FamiliSortDataSource()
     
     // MARK: - Initializer
-    required init?(coder: NSCoder) {
+    public required init?(coder: NSCoder) {
         super.init(coder: coder)
         setupView()
     }
     
-    public override init(frame: CGRect) {
-        super.init(frame: frame)
+    public init() {
+        super.init(nibName: nil, bundle: nil)
         setupView()
     }
     
@@ -30,24 +40,33 @@ public class FamiliSortView: UIView {
     
     // MARK: - Function
     private func setupView() {
-        print("COLLECTION IS HERE")
-        setSortCollectionView()
         populateData()
+        setSortCollectionView()
         sortCollection?.dataSource = self
+        sortCollection?.delegate = self
     }
     
     private func setSortCollectionView() {
-        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsets(top: CGFloat(FamiliSortCommonProperty.collectionItemInset),
-                                           left: CGFloat(FamiliSortCommonProperty.collectionItemInset),
-                                           bottom: CGFloat(FamiliSortCommonProperty.collectionItemInset),
-                                           right: CGFloat(FamiliSortCommonProperty.collectionItemInset))
+        let layout = UICollectionViewFlowLayout()
+//        layout.sectionInset = UIEdgeInsets(top: CGFloat(FamiliSortCommonProperty.collectionItemInset),
+//                                           left: CGFloat(FamiliSortCommonProperty.collectionItemInset),
+//                                           bottom: CGFloat(FamiliSortCommonProperty.collectionItemInset),
+//                                           right: CGFloat(FamiliSortCommonProperty.collectionItemInset))
+        layout.headerReferenceSize = CGSize(width: self.view.frame.width,
+                                            height: CGFloat(FamiliSortCommonProperty.collectionCellHeight))
+        layout.itemSize = CGSize(width: self.view.frame.width / 2,
+                                 height: CGFloat(FamiliSortCommonProperty.collectionCellHeight))
+        layout.scrollDirection = .vertical
         
-        sortCollection = UICollectionView(frame: frame, collectionViewLayout: layout)
+        sortCollection = UICollectionView(frame: view.frame, collectionViewLayout: layout)
+        sortCollection?.backgroundColor = .white
         sortCollection?.register(FamiliSortCell.self,
                                  forCellWithReuseIdentifier: FamiliSortCommonProperty.cellReuseIdentifier)
+        sortCollection?.register(FamiliSortCellSectionHeader.self,
+                                 forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+                                 withReuseIdentifier: FamiliSortCommonProperty.cellSectionHeaderReuseIdentifier)
         guard let sortCollectionView = sortCollection else { return }
-        self.addSubview(sortCollectionView)
+        self.view.addSubview(sortCollectionView)
     }
     
     private func populateData() {
@@ -71,10 +90,6 @@ public class FamiliSortView: UIView {
                                     sectionContent: sortContent),
                      FamiliSortData(sectionName: sectionNames[1],
                                     sectionContent: filterContent)]
-        dataSource?.setData(datas: datas)
-    }
-    
-    public func setDelegate(to view: Any) {
-        sortCollection?.delegate = view as? UICollectionViewDelegate
+        dataSource.setData(datas: datas)
     }
 }

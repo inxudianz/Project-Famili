@@ -26,15 +26,32 @@ struct FamiliSortData {
 }
 
 extension FamiliSortView: UICollectionViewDataSource {
+    public func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return dataSource.datas?.count ?? 0
+    }
+    
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return dataSource?.datas?.count ?? 0
+        return dataSource.datas?[section].sectionContent?.count ?? 0
+    }
+    
+    public func collectionView(_ collectionView: UICollectionView,
+                               viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        if let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind,
+                                                                               withReuseIdentifier: FamiliSortCommonProperty.cellSectionHeaderReuseIdentifier,
+                                                                               for: indexPath) as? FamiliSortCellSectionHeader {
+            sectionHeader.setSectionTitle(as: dataSource.datas?[indexPath.section].sectionName ?? "")
+            return sectionHeader
+        }
+        return UICollectionReusableView()
     }
     
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        print("asdasdasdasdas")
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FamiliSortCommonProperty.cellReuseIdentifier,
                                                             for: indexPath)
             as? FamiliSortCell else { return UICollectionViewCell() }
+        guard let rowInSection = dataSource.datas?[indexPath.section].sectionContent?[indexPath.row]
+            else { return UICollectionViewCell() }
+        cell.setCellContent(state: .radioButtonImageNormal, withText: rowInSection.name)
         return cell
     }
 }

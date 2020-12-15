@@ -55,7 +55,7 @@ class FamiliRadioButton: FamiliButton {
     }
     
     public func setRadioButtonText(as text: String) {
-        self.setTitle(text, for: [.normal, .selected])
+        self.setTitle(text, for: .normal)
     }
     
 }

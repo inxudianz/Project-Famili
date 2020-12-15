@@ -19,9 +19,12 @@ enum FamiliSortSections: String {
 enum FamiliSortConstant {
     enum CommonProperties {
         static let cellReuseIdentifier = "FamiliSortCell"
+        static let cellSectionHeaderReuseIdentifier = "FamiliSortCellSectionHeader"
         static let stackDistance = 16.0
         static let collectionItemDistance = 8.0
         static let collectionItemInset = 10.0
+        static let collectionCellHeight = 22
+        static let collectionCellWidth = 62
     }
     
     enum SortItems {
